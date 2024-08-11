@@ -35,6 +35,7 @@ namespace MidMarket.UI
             }
             catch (Exception ex)
             {
+
                 throw;
             }
         }
