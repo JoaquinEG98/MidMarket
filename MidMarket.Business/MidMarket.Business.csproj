@@ -55,8 +55,6 @@
     <Compile Include="DependencyResolver.cs" />
     <Compile Include="Interfaces\IUsuarioService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\DigitoVerificadorService.cs" />
-    <Compile Include="Services\EncriptacionService.cs" />
     <Compile Include="Services\UsuarioService.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -67,6 +65,10 @@
     <ProjectReference Include="..\MidMarket.Entities\MidMarket.Entities.csproj">
       <Project>{4c04a0d0-0b92-4a62-a026-7ad24d07d47e}</Project>
       <Name>MidMarket.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MidMarket.Seguridad\MidMarket.Seguridad.csproj">
+      <Project>{eb46d7d0-e917-46a9-affe-c1418e239d3c}</Project>
+      <Name>MidMarket.Seguridad</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

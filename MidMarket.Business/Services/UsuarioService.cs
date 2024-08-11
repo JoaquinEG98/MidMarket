@@ -5,6 +5,7 @@ using System.Reflection;
 using System;
 using System.Transactions;
 using MidMarket.Entities;
+using MidMarket.Business.Seguridad;
 
 namespace MidMarket.Business.Services
 {
@@ -21,11 +22,11 @@ namespace MidMarket.Business.Services
         {
             using (TransactionScope scope = new TransactionScope())
             {
-                cliente.Email = EncriptacionService.EncriptarAES(cliente.Email);
-                cliente.Password = EncriptacionService.Hash(cliente.Password);
-                cliente.RazonSocial = EncriptacionService.EncriptarAES(cliente.RazonSocial);
-                cliente.CUIT = EncriptacionService.EncriptarAES(cliente.CUIT);
-                cliente.DVH = DigitoVerificadorService.GenerarDVH(cliente);
+                cliente.Email = Encriptacion.EncriptarAES(cliente.Email);
+                cliente.Password = Encriptacion.Hash(cliente.Password);
+                cliente.RazonSocial = Encriptacion.EncriptarAES(cliente.RazonSocial);
+                cliente.CUIT = Encriptacion.EncriptarAES(cliente.CUIT);
+                cliente.DVH = DigitoVerificador.GenerarDVH(cliente);
 
                 int id = _usuarioDataAccess.RegistrarUsuario(cliente);
 

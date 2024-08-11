@@ -3,9 +3,9 @@ using System.Reflection;
 using System.Text;
 using System;
 
-namespace MidMarket.Business.Services
+namespace MidMarket.Business.Seguridad
 {
-    public class DigitoVerificadorService
+    public class DigitoVerificador
     {
         public static string GenerarDVH(Object objeto)
         {
@@ -42,7 +42,7 @@ namespace MidMarket.Business.Services
                 }
             }
 
-            string dvh = EncriptacionService.EncriptarAES(valor.ToString());
+            string dvh = Encriptacion.EncriptarAES(valor.ToString());
             return dvh;
         }
     }

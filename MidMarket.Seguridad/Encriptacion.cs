@@ -3,9 +3,9 @@ using System.Text;
 using System;
 using System.Configuration;
 
-namespace MidMarket.Business.Services
+namespace MidMarket.Business.Seguridad
 {
-    public class EncriptacionService
+    public class Encriptacion
     {
         #region Keys AES
         private readonly static string IV = ConfigurationManager.AppSettings["AES_KeyIV"]; //16 chars = 128 bytes
