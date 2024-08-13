@@ -32,11 +32,12 @@ namespace MidMarket.UI
                 };
 
                 _usuarioService.RegistrarUsuario(cliente);
+
+                Response.Redirect("Login.aspx");
             }
             catch (Exception ex)
             {
-
-                throw;
+                throw ex;
             }
         }
     }

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Registro.aspx.cs" Inherits="MidMarket.UI.Registro" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="MidMarket.UI.Login" %>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <form id="form1" runat="server" method="post" class="registro-form">
-            <h2>Registro</h2>
+            <h2>Iniciar sesión</h2>
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" id="txtEmail" name="email" required runat="server">
@@ -21,18 +21,7 @@
                 <label for="password">Password</label>
                 <input type="password" id="txtPassword" name="password" required runat="server">
             </div>
-            <div class="form-group">
-                <label for="razonSocial">Razón Social</label>
-                <input type="text" id="txtRazonSocial" name="razonSocial" required runat="server">
-            </div>
-            <div class="form-group">
-                <label for="cuit">CUIT</label>
-                <input type="text" id="txtCUIT" name="cuit" required runat="server">
-            </div>
-            <div class="form-group captcha">
-                <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
-            </div>
-            <asp:Button type="submit" id="btnRegistro" class="submit-btn" runat="server" Text="Registrarse" OnClick="btnRegistro_Click"></asp:Button>
+            <asp:Button type="submit" id="btnLogin" class="submit-btn" runat="server" Text="Login" OnClick="btnLogin_Click"></asp:Button>
         </form>
     </div>
 </body>

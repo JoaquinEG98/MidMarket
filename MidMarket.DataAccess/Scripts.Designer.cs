@@ -61,14 +61,26 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to INSERT INTO Cliente (Email, Password, Nombre, CUIT, Puntaje)
-        ///OUTPUT inserted.Id_Cliente INTO @IdCliente
-        ///VALUES (@Email, @Password, @Nombre, @CUIT, 0.0);
+        ///   Looks up a localized string similar to SELECT TOP 1 cliente.Id_Cliente, cliente.Email, cliente.Password, cliente.Nombre, cliente.CUIT, cliente.Puntaje, cliente.DVH, cuenta.NumeroCuenta, cuenta.Saldo
+        ///FROM Cliente cliente
+        ///INNER JOIN Cuenta cuenta on cuenta.Id_Cliente = cliente.Id_Cliente.
+        /// </summary>
+        internal static string LOGIN_USUARIO {
+            get {
+                return ResourceManager.GetString("LOGIN_USUARIO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to INSERT INTO Cliente (Email, Password, Nombre, CUIT, Puntaje, DVH)
+        ///OUTPUT inserted.Id_Cliente
+        ///VALUES (@Email, @Password, @Nombre, @CUIT, 0.0, @DVH);
+        ///
+        ///DECLARE @IdCliente INT;
+        ///SET @IdCliente = SCOPE_IDENTITY();
         ///
         ///INSERT INTO Cuenta (Id_Cliente, NumeroCuenta, Saldo)
-        ///VALUES (@IdCliente, NEXT VALUE FOR dbo.NumeroCuentaSeq, 50000.0);
-        ///
-        ///SELECT @IdCliente AS Id_Cliente;.
+        ///VALUES (@IdCliente, NEXT VALUE FOR dbo.NumeroCuentaSeq, 50000.0);.
         /// </summary>
         internal static string REGISTRAR_USUARIO {
             get {

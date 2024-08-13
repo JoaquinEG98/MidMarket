@@ -2,6 +2,8 @@
 using System;
 using MidMarket.Entities;
 using MidMarket.DataAccess.Conexion;
+using System.Data;
+using MidMarket.DataAccess.Helpers;
 
 namespace MidMarket.DataAccess.DAOs
 {
@@ -27,6 +29,16 @@ namespace MidMarket.DataAccess.DAOs
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@DVH", cliente.DVH);
 
             return _dataAccess.ExecuteNonEscalar();
+        }
+
+        public Cliente Login(string email)
+        {
+            _dataAccess.SelectCommandText = String.Format(Scripts.LOGIN_USUARIO, email);
+
+            DataSet ds = _dataAccess.ExecuteNonReader();
+            Cliente cliente = ds.Tables[0].Rows.Count <= 0 ? null : ClienteFill.FillObjectCliente(ds.Tables[0].Rows[0]);
+
+            return cliente;
         }
     }
 }
