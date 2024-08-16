@@ -23,6 +23,10 @@
             </div>
             <asp:Button type="submit" id="btnLogin" class="submit-btn" runat="server" Text="Login" OnClick="btnLogin_Click"></asp:Button>
         </form>
+        <div class="extra-options">
+            <p>¿No tienes cuenta? <a href="registro.aspx">Regístrate aquí</a></p>
+            <p><a href="RecuperarPassword.aspx">¿Olvidaste tu contraseña?</a></p>
+        </div>
     </div>
 </body>
 </html>

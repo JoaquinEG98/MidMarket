@@ -1,13 +1,15 @@
-﻿/* Estilos personalizados para el navbar */
+﻿/* Estilos personalizados para el navbar en modo oscuro con fondo verde pastel */
 
 /* Fuente estilizada (Roboto) */
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: #181a1b; /* Fondo oscuro para todo el sitio */
+    color: #e4e6eb; /* Color de texto claro */
 }
 
 /* Fondo verde pastel para el navbar */
 .navbar {
-    background-color: #A8D5BA !important; /* Verde pastel */
+    background-color: #86e589 !important; /* Verde pastel */
 }
 
 /* Espaciado entre los elementos del navbar */
@@ -18,19 +20,9 @@ body {
 .navbar-brand, .nav-link {
     color: #333 !important; /* Color de texto oscuro para contrastar con el fondo pastel */
     padding-bottom: 5px;
-    font-weight: 500;
+    font-weight: bold !important; /* Texto en negrita */
     font-size: 16px; /* Tamaño de fuente para mejorar legibilidad */
 }
-
-/* Flecha estilo ">" apuntando hacia abajo */
-/*.nav-link.dropdown-toggle::after {
-        content: " \25BE";*/ /* Flecha hacia abajo */
-/*font-size: 10px;*/ /* Tamaño de la flecha */
-/*margin-left: 5px;
-        vertical-align: middle;*/ /* Alinea la flecha verticalmente con el texto */
-/*display: inline-block;
-        margin-top: -2px;*/ /* Ajuste fino para centrar la flecha */
-/*}*/
 
 /* Estilos para el menú desplegable */
 .dropdown-menu {
@@ -41,8 +33,9 @@ body {
 }
 
 .dropdown-item {
-    color: #333 !important; /* Color de texto en el menú desplegable */
+    color: #333 !important; /* Color de texto oscuro en el menú desplegable */
     padding: 10px 20px; /* Espaciado interno de los ítems */
+    font-weight: bold !important; /* Texto en negrita para los submenús */
 }
 
     .dropdown-item:hover, .dropdown-item:focus {
@@ -69,3 +62,9 @@ body {
     .navbar .nav-link:hover {
         color: #000 !important; /* Oscurece al pasar el cursor */
     }
+
+/* Estilos para el pie de página */
+footer {
+    color: #e4e6eb;
+    text-align: center;
+}

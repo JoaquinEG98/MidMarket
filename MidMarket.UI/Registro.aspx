@@ -34,6 +34,9 @@
             </div>
             <asp:Button type="submit" id="btnRegistro" class="submit-btn" runat="server" Text="Registrarse" OnClick="btnRegistro_Click"></asp:Button>
         </form>
+        <div class="extra-options">
+            <p>¿Ya tienes cuenta? <a href="Login.aspx">Inicia sesión aquí</a></p>
+        </div>
     </div>
 </body>
 </html>

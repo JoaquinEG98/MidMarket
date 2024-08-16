@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #f0f2f5;
+    background-color: #181a1b;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,10 +14,10 @@ body {
 }
 
 .container {
-    background-color: #fff;
+    background-color: #242526;
     padding: 20px 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     max-width: 400px;
     width: 100%;
 }
@@ -25,7 +25,7 @@ body {
 h2 {
     margin-bottom: 20px;
     font-size: 24px;
-    color: #333;
+    color: #e4e6eb;
     text-align: center;
 }
 
@@ -38,24 +38,26 @@ h2 {
         display: block;
         margin-bottom: 5px;
         font-weight: bold;
-        color: #555;
+        color: #b0b3b8;
     }
 
     .form-group input {
         width: 100%;
         padding: 10px;
-        border: 1px solid #ccc;
+        background-color: #3a3b3c;
+        color: #e4e6eb;
+        border: 1px solid #555;
         border-radius: 4px;
         font-size: 16px;
     }
 
         .form-group input:focus {
-            border-color: #007BFF;
+            border-color: #66bb6a;
             outline: none;
         }
 
 .error-message {
-    color: red;
+    color: #ff6b6b;
     font-size: 12px;
     position: absolute;
     top: 100%;
@@ -86,3 +88,24 @@ input:invalid + .error-message {
     .submit-btn:hover {
         background-color: #5aa85e;
     }
+
+.extra-options {
+    margin-top: 20px;
+    text-align: center;
+}
+
+    .extra-options p {
+        color: #b0b3b8;
+        font-size: 14px;
+    }
+
+    .extra-options a {
+        color: #66bb6a;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+
+        .extra-options a:hover {
+            color: #5aa85e;
+        }
