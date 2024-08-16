@@ -1,0 +1,71 @@
+﻿/* Estilos personalizados para el navbar */
+
+/* Fuente estilizada (Roboto) */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Fondo verde pastel para el navbar */
+.navbar {
+    background-color: #A8D5BA !important; /* Verde pastel */
+}
+
+/* Espaciado entre los elementos del navbar */
+.navbar-nav .nav-item {
+    margin-right: 15px; /* Espaciado horizontal entre los ítems */
+}
+
+.navbar-brand, .nav-link {
+    color: #333 !important; /* Color de texto oscuro para contrastar con el fondo pastel */
+    padding-bottom: 5px;
+    font-weight: 500;
+    font-size: 16px; /* Tamaño de fuente para mejorar legibilidad */
+}
+
+/* Flecha estilo ">" apuntando hacia abajo */
+/*.nav-link.dropdown-toggle::after {
+        content: " \25BE";*/ /* Flecha hacia abajo */
+/*font-size: 10px;*/ /* Tamaño de la flecha */
+/*margin-left: 5px;
+        vertical-align: middle;*/ /* Alinea la flecha verticalmente con el texto */
+/*display: inline-block;
+        margin-top: -2px;*/ /* Ajuste fino para centrar la flecha */
+/*}*/
+
+/* Estilos para el menú desplegable */
+.dropdown-menu {
+    background-color: #A8D5BA; /* Fondo verde pastel para el menú desplegable */
+    margin-top: 5px; /* Espaciado entre el dropdown y el enlace */
+    border-radius: 5px; /* Bordes redondeados para un diseño más limpio */
+    padding: 10px 0; /* Espaciado interno para mejor presentación */
+}
+
+.dropdown-item {
+    color: #333 !important; /* Color de texto en el menú desplegable */
+    padding: 10px 20px; /* Espaciado interno de los ítems */
+}
+
+    .dropdown-item:hover, .dropdown-item:focus {
+        background-color: #86C29C !important; /* Fondo verde ligeramente más oscuro al seleccionar */
+        color: #333 !important; /* Color de texto consistente */
+    }
+
+    /* Remover el color azul al hacer clic en los ítems desplegables */
+    .dropdown-item:active {
+        background-color: #A8D5BA !important;
+        color: #333 !important;
+    }
+
+/* Estilo para la barra de navegación desplegable al estar abierta */
+.navbar-toggler {
+    border: none;
+}
+
+/* Estilos para el enlace "Cerrar sesión" */
+.navbar .nav-link {
+    color: #333 !important; /* Mantiene el color oscuro */
+}
+
+    .navbar .nav-link:hover {
+        color: #000 !important; /* Oscurece al pasar el cursor */
+    }

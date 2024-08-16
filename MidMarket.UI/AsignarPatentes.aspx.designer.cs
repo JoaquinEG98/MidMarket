@@ -11,7 +11,7 @@ namespace MidMarket.UI
 {
 
 
-    public partial class _Default
+    public partial class AsignarPatentes
     {
     }
 }

@@ -1,69 +1,124 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="MidMarket.UI.SiteMaster" %>
 
 <!DOCTYPE html>
-
 <html lang="en">
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <title><%: Page.Title %> - MidMarket</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
 
-    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <!-- Incluye Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
+    <!-- Incluye Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <!-- Incluye el CSS personalizado -->
+    <link href="Styles/navbar.css" rel="stylesheet" />
 </head>
 <body>
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
-                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
-                <%--Framework Scripts--%>
                 <asp:ScriptReference Name="MsAjaxBundle" />
                 <asp:ScriptReference Name="jquery" />
-                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
-                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
-                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
-                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
-                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
-                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
-                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
-                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
-                <asp:ScriptReference Name="WebFormsBundle" />
-                <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
 
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" runat="server" href="~/">Application name</a>
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/About">About</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">Contact</a></li>
+        <!-- Navbar -->
+<!-- Navbar -->
+<!-- Navbar -->
+<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" runat="server" href="~/">MidMarket</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <!-- Menú Principal -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="menuPrincipalDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Menú Principal
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="menuPrincipalDropdown">
+                        <li><a class="dropdown-item" href="#">Restablecer Password</a></li>
                     </ul>
-                </div>
-            </div>
-        </nav>
-        <div class="container body-content">
+                </li>
+
+                <!-- Usuarios -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="usuariosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Usuarios
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="usuariosDropdown">
+                        <li><a class="dropdown-item" href="#">Usuarios</a></li>
+                        <li><a class="dropdown-item" href="#">Alta de Usuario</a></li>
+                        <li><a class="dropdown-item" href="#">Modificación de Usuario</a></li>
+                    </ul>
+                </li>
+
+                <!-- Permisos -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="permisosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Permisos
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="permisosDropdown">
+                        <li><a class="dropdown-item" href="#">Permisos</a></li>
+                        <li><a class="dropdown-item" href="#">Asignar Patentes</a></li>
+                        <li><a class="dropdown-item" href="#">Asignar Familias</a></li>
+                        <li><a class="dropdown-item" href="#">Desasignar Patentes</a></li>
+                        <li><a class="dropdown-item" href="#">Desasignar Familias</a></li>
+                    </ul>
+                </li>
+
+                <!-- Familias -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="familiasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Familias
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="familiasDropdown">
+                        <li><a class="dropdown-item" href="#">Administración Familias</a></li>
+                        <li><a class="dropdown-item" href="#">Alta de Familia</a></li>
+                    </ul>
+                </li>
+
+                <!-- Administración de Base de Datos -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Administración de Base de Datos</a>
+                </li>
+
+                <!-- Bitácora -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Bitácora</a>
+                </li>
+
+                <!-- Cerrar sesión -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/Logout.aspx">Cerrar sesión</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+        <!-- Contenido principal de la página -->
+        <div class="container body-content" style="margin-top: 70px;">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <p>&copy; <%: DateTime.Now.Year %> - MidMarket</p>
             </footer>
         </div>
     </form>
-    <asp:PlaceHolder runat="server">
-        <%: Scripts.Render("~/Scripts/bootstrap.js") %>
-    </asp:PlaceHolder>
+
+    <!-- Incluye Bootstrap JS y Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

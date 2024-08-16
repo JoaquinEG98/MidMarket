@@ -4,7 +4,6 @@
 
        <div>
         <h2>Hola, <%: Cliente.RazonSocial %></h2>
-        <asp:Button ID="btnLogout" runat="server" Text="Desloguear" OnClick="btnLogout_Click" />
     </div>
 
 </asp:Content>
