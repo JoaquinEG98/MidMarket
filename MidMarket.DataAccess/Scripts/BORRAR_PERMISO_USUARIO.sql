@@ -1,0 +1,1 @@
+﻿DELETE FROM UsuarioPermiso WHERE Id_Cliente = @ClienteId

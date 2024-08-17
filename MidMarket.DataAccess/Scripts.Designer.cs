@@ -61,9 +61,104 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SELECT TOP 1 cliente.Id_Cliente, cliente.Email, cliente.Password, cliente.Nombre, cliente.CUIT, cliente.Puntaje, cliente.DVH, cuenta.NumeroCuenta, cuenta.Saldo
+        ///   Looks up a localized string similar to DELETE FROM FamiliaPatente WHERE Id_Padre = @PadreId.
+        /// </summary>
+        internal static string BORRAR_FAMILIA {
+            get {
+                return ResourceManager.GetString("BORRAR_FAMILIA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DELETE FROM UsuarioPermiso WHERE Id_Cliente = @ClienteId.
+        /// </summary>
+        internal static string BORRAR_PERMISO_USUARIO {
+            get {
+                return ResourceManager.GetString("BORRAR_PERMISO_USUARIO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WITH RECURSIVO AS (
+        ///    SELECT fp.Id_Padre, fp.Id_Hijo 
+        ///    FROM FamiliaPatente fp 
+        ///    WHERE fp.Id_Padre = {0}
+        ///    
+        ///    UNION ALL
+        ///    
+        ///    SELECT fp2.Id_Padre, fp2.Id_Hijo 
+        ///    FROM FamiliaPatente fp2 
+        ///    INNER JOIN RECURSIVO r ON r.Id_Hijo = fp2.Id_Padre
+        ///)
+        ///SELECT r.Id_Padre, r.Id_Hijo, p.Id_Permiso, p.Nombre, p.Permiso 
+        ///FROM RECURSIVO r 
+        ///INNER JOIN Permiso p ON r.Id_Hijo = p.Id_Permiso
+        ///GROUP BY r.Id_Padre, r.Id_Hijo, p.Id_Permiso, p.Nombre, p.Permiso;.
+        /// </summary>
+        internal static string GET_FAMILIA_PATENTE {
+            get {
+                return ResourceManager.GetString("GET_FAMILIA_PATENTE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT Id_Permiso, Nombre, Permiso FROM Permiso WHERE Permiso IS NULL.
+        /// </summary>
+        internal static string GET_FAMILIAS {
+            get {
+                return ResourceManager.GetString("GET_FAMILIAS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT Id_Permiso, Nombre, Permiso FROM Permiso WHERE Permiso IS NULL.
+        /// </summary>
+        internal static string GET_PATENTES {
+            get {
+                return ResourceManager.GetString("GET_PATENTES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT p.* FROM UsuarioPermiso up INNER JOIN Permiso p on p.Id_Permiso = up.Id_Patente WHERE Id_Cliente = {0}.
+        /// </summary>
+        internal static string GET_USUARIO_PERMISO {
+            get {
+                return ResourceManager.GetString("GET_USUARIO_PERMISO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to INSERT INTO Permiso (Nombre, Permiso) OUTPUT inserted.Id_Permiso VALUES (@Nombre, Permiso).
+        /// </summary>
+        internal static string GUARDAR_COMPONENTE {
+            get {
+                return ResourceManager.GetString("GUARDAR_COMPONENTE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to INSERT INTO FamiliaPatente (Id_Padre, Id_Hijo) VALUES (@PadreId, @HijoId).
+        /// </summary>
+        internal static string GUARDAR_FAMILIA {
+            get {
+                return ResourceManager.GetString("GUARDAR_FAMILIA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to INSERT INTO UsuarioPermiso (UsuarioId, PatenteId, DVH) VALUES (@ClienteId, @PatenteId, @DVH).
+        /// </summary>
+        internal static string GUARDAR_PERMISO_USUARIO {
+            get {
+                return ResourceManager.GetString("GUARDAR_PERMISO_USUARIO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT TOP 1 cliente.Id_Cliente, cliente.Email, cliente.Password, cliente.Nombre, cliente.CUIT, cliente.Puntaje, cliente.DVH, cuenta.Id_Cuenta, cuenta.NumeroCuenta, cuenta.Saldo
         ///FROM Cliente cliente
-        ///INNER JOIN Cuenta cuenta on cuenta.Id_Cliente = cliente.Id_Cliente.
+        ///INNER JOIN Cuenta cuenta on cuenta.Id_Cliente = cliente.Id_Cliente .
         /// </summary>
         internal static string LOGIN_USUARIO {
             get {

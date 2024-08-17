@@ -1,7 +1,6 @@
 ﻿using MidMarket.Entities;
 using System;
 using System.Data;
-using System.Reflection;
 
 namespace MidMarket.DataAccess.Helpers
 {

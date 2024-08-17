@@ -1,0 +1,1 @@
+﻿INSERT INTO UsuarioPermiso (UsuarioId, PatenteId, DVH) VALUES (@ClienteId, @PatenteId, @DVH)
