@@ -1,15 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdministracionFamilias.aspx.cs" Inherits="MidMarket.UI.AdministracionFamilias" %>
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administración de Familias</title>
-    <link rel="stylesheet" href="Styles/gestion_familias.css">
-</head>
-<body>
-    <div class="container">
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdministracionFamilias.aspx.cs" Inherits="MidMarket.UI.AdministracionFamilias" MasterPageFile="~/Site.Master" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <div id="familias-container" class="container">
         <h2>Administración de Familias</h2>
         
         <table id="tablaFamilias">
@@ -60,16 +51,14 @@
         function modificarFamilia() {
             const seleccionada = document.querySelector('input[name="selectFamilia"]:checked');
             if (seleccionada) {
-                window.location.href = 'modificar.html'; 
+                window.location.href = 'modificar.html';
             } else {
                 alert("Por favor, selecciona una familia para modificar.");
             }
         }
 
         function altaFamilia() {
-            window.location.href = 'alta.html'; 
+            window.location.href = 'alta.html';
         }
     </script>
-</body>
-</html>
-
+</asp:Content>

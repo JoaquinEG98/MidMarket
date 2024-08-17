@@ -1,13 +1,6 @@
-﻿<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asignación de Familia a Usuario</title>
-    <link rel="stylesheet" href="Styles/gestion_familias.css"> <!-- Enlace al archivo CSS -->
-</head>
-<body>
-    <div class="container">
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AsignarFamilias.aspx.cs" Inherits="MidMarket.UI.AsignarFamilias" MasterPageFile="~/Site.Master" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <div id="asignar-familias-container" class="container">
         <h2>Asignación de Familia a Usuario</h2>
 
         <!-- Filtro y selección de usuario -->
@@ -24,7 +17,6 @@
                 <option value="1">Usuario 1</option>
                 <option value="2">Usuario 2</option>
                 <option value="3">Usuario 3</option>
-                <!-- Puedes agregar más opciones aquí -->
             </select>
         </div>
 
@@ -68,7 +60,6 @@
                     <td>Familia 3</td>
                     <td>Descripción de la familia 3</td>
                 </tr>
-                <!-- Puedes agregar más filas aquí -->
             </tbody>
         </table>
 
@@ -164,5 +155,4 @@
             alert("Familias asignadas con éxito.");
         }
     </script>
-</body>
-</html>
+</asp:Content>

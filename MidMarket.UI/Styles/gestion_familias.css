@@ -1,120 +1,609 @@
-﻿/* Estilos generales compartidos */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-}
+﻿/* gestion_familias.css */
 
-body {
-    background-color: #181a1b; /* Fondo oscuro */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.container {
+/* Asegúrate de que los estilos solo se apliquen dentro del contenedor #familias-container */
+#familias-container {
     background-color: #242526; /* Fondo oscuro para el contenedor */
     padding: 20px 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada para modo oscuro */
-    max-width: 800px; /* Ajustado para pantallas más anchas */
+    max-width: 800px;
     width: 100%;
+    margin: auto;
 }
 
-h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #e4e6eb; /* Texto claro */
-    text-align: center;
-}
+    #familias-container h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: #e4e6eb;
+        text-align: center;
+    }
 
-h3 {
-    margin-bottom: 10px;
-    font-size: 20px;
-    color: #e4e6eb; /* Texto claro */
-}
+    #familias-container table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 15px;
+        color: #e4e6eb;
+    }
 
-.form-group {
-    margin-bottom: 15px;
-    position: relative;
-}
+    #familias-container table, th, td {
+        border: 1px solid #66bb6a;
+    }
 
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #b0b3b8; /* Texto claro para etiquetas */
-}
+    #familias-container th, td {
+        padding: 10px;
+        text-align: left;
+    }
 
-.form-group input[type="text"] {
+    #familias-container th {
+        background-color: #66bb6a;
+        color: white;
+    }
+
+    #familias-container td {
+        background-color: #2c2e30;
+    }
+
+    #familias-container .submit-btn {
+        width: 100%;
+        padding: 10px;
+        background-color: #66bb6a;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 10px;
+    }
+
+        #familias-container .submit-btn:hover {
+            background-color: #5aa85e;
+        }
+/* gestion_familias.css */
+
+/* Estilos específicos para Alta de Familia */
+#alta-familia-container {
+    background-color: #242526; /* Fondo oscuro para el contenedor */
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
     width: 100%;
-    padding: 10px;
-    background-color: #3a3b3c; /* Fondo gris oscuro para los inputs */
-    color: #e4e6eb; /* Texto claro */
-    border: 1px solid #555; /* Bordes gris oscuro */
-    border-radius: 4px;
-    font-size: 16px;
+    margin: auto;
 }
 
-.form-group input[type="text"]:focus {
-    border-color: #66bb6a; /* Color de enfoque verde */
-    outline: none;
-}
+    #alta-familia-container h2,
+    #alta-familia-container h3 {
+        color: #e4e6eb;
+        margin-bottom: 15px;
+    }
 
-.form-group select {
+    #alta-familia-container h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    #alta-familia-container h3 {
+        font-size: 20px;
+    }
+
+    #alta-familia-container .form-group input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #3a3b3c;
+        color: #e4e6eb;
+        border: 1px solid #555;
+        border-radius: 4px;
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+        #alta-familia-container .form-group input[type="text"]:focus {
+            border-color: #66bb6a;
+            outline: none;
+        }
+
+    #alta-familia-container table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        color: #e4e6eb;
+    }
+
+    #alta-familia-container table,
+    #alta-familia-container th,
+    #alta-familia-container td {
+        border: 1px solid #66bb6a;
+    }
+
+    #alta-familia-container th,
+    #alta-familia-container td {
+        padding: 10px;
+        text-align: left;
+    }
+
+    #alta-familia-container th {
+        background-color: #66bb6a;
+        color: white;
+    }
+
+    #alta-familia-container td {
+        background-color: #2c2e30;
+    }
+
+    #alta-familia-container .submit-btn {
+        width: 100%;
+        padding: 10px;
+        background-color: #66bb6a;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 10px;
+    }
+
+        #alta-familia-container .submit-btn:hover {
+            background-color: #5aa85e;
+        }
+/* gestion_familias.css */
+
+/* Estilos específicos para Asignar Familias */
+#asignar-familias-container {
+    background-color: #242526; /* Fondo oscuro para el contenedor */
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
     width: 100%;
-    padding: 10px;
-    background-color: #3a3b3c; /* Fondo gris oscuro para selects */
-    color: #e4e6eb; /* Texto claro */
-    border: 1px solid #555; /* Bordes gris oscuro */
-    border-radius: 4px;
-    font-size: 16px;
+    margin: auto;
 }
 
-table {
+    #asignar-familias-container h2,
+    #asignar-familias-container h3 {
+        color: #e4e6eb;
+        margin-bottom: 15px;
+    }
+
+    #asignar-familias-container h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    #asignar-familias-container h3 {
+        font-size: 20px;
+    }
+
+    #asignar-familias-container .form-group input[type="text"],
+    #asignar-familias-container .form-group select {
+        width: 100%;
+        padding: 10px;
+        background-color: #3a3b3c;
+        color: #e4e6eb;
+        border: 1px solid #555;
+        border-radius: 4px;
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+        #asignar-familias-container .form-group input[type="text"]:focus,
+        #asignar-familias-container .form-group select:focus {
+            border-color: #66bb6a;
+            outline: none;
+        }
+
+    #asignar-familias-container table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        color: #e4e6eb;
+    }
+
+    #asignar-familias-container table,
+    #asignar-familias-container th,
+    #asignar-familias-container td {
+        border: 1px solid #66bb6a;
+    }
+
+    #asignar-familias-container th,
+    #asignar-familias-container td {
+        padding: 10px;
+        text-align: left;
+    }
+
+    #asignar-familias-container th {
+        background-color: #66bb6a;
+        color: white;
+    }
+
+    #asignar-familias-container td {
+        background-color: #2c2e30;
+    }
+
+    /* Estilos para los botones */
+    #asignar-familias-container .submit-btn {
+        width: 100%;
+        padding: 10px;
+        background-color: #66bb6a;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 10px;
+    }
+
+        #asignar-familias-container .submit-btn:hover {
+            background-color: #5aa85e;
+        }
+/* gestion_familias.css */
+
+/* Estilos específicos para Asignar Patentes */
+#asignar-patentes-container {
+    background-color: #242526; /* Fondo oscuro para el contenedor */
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
     width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 15px;
-    color: #e4e6eb; /* Texto claro para tablas */
+    margin: auto;
 }
 
-table, th, td {
-    border: 1px solid #66bb6a; /* Bordes verdes como los botones */
-}
+    #asignar-patentes-container h2,
+    #asignar-patentes-container h3 {
+        color: #e4e6eb;
+        margin-bottom: 15px;
+    }
 
-th, td {
-    padding: 10px;
-    text-align: left;
-}
+    #asignar-patentes-container h2 {
+        font-size: 24px;
+        text-align: center;
+    }
 
-th {
-    background-color: #66bb6a; /* Verde para encabezados de tabla */
-    color: white;
-}
+    #asignar-patentes-container h3 {
+        font-size: 20px;
+    }
 
-td {
-    background-color: #2c2e30; /* Fondo gris oscuro para celdas */
-}
+    #asignar-patentes-container .form-group input[type="text"],
+    #asignar-patentes-container .form-group select {
+        width: 100%;
+        padding: 10px;
+        background-color: #3a3b3c;
+        color: #e4e6eb;
+        border: 1px solid #555;
+        border-radius: 4px;
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
 
-input[type="checkbox"] {
-    cursor: pointer;
-}
+        #asignar-patentes-container .form-group input[type="text"]:focus,
+        #asignar-patentes-container .form-group select:focus {
+            border-color: #66bb6a;
+            outline: none;
+        }
 
-.submit-btn {
+    #asignar-patentes-container table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        color: #e4e6eb;
+    }
+
+    #asignar-patentes-container table,
+    #asignar-patentes-container th,
+    #asignar-patentes-container td {
+        border: 1px solid #66bb6a;
+    }
+
+    #asignar-patentes-container th,
+    #asignar-patentes-container td {
+        padding: 10px;
+        text-align: left;
+    }
+
+    #asignar-patentes-container th {
+        background-color: #66bb6a;
+        color: white;
+    }
+
+    #asignar-patentes-container td {
+        background-color: #2c2e30;
+    }
+
+    /* Estilos para los botones */
+    #asignar-patentes-container .submit-btn {
+        width: 100%;
+        padding: 10px;
+        background-color: #66bb6a;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 10px;
+    }
+
+        #asignar-patentes-container .submit-btn:hover {
+            background-color: #5aa85e;
+        }
+/* gestion_familias.css */
+
+/* Estilos específicos para Desasignar Familias */
+#desasignar-familias-container {
+    background-color: #242526; /* Fondo oscuro para el contenedor */
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
     width: 100%;
-    padding: 10px;
-    background-color: #66bb6a;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
+    margin: auto;
 }
 
-.submit-btn:hover {
-    background-color: #5aa85e;
+    #desasignar-familias-container h2,
+    #desasignar-familias-container h3 {
+        color: #e4e6eb;
+        margin-bottom: 15px;
+    }
+
+    #desasignar-familias-container h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    #desasignar-familias-container h3 {
+        font-size: 20px;
+    }
+
+    #desasignar-familias-container .form-group input[type="text"],
+    #desasignar-familias-container .form-group select {
+        width: 100%;
+        padding: 10px;
+        background-color: #3a3b3c;
+        color: #e4e6eb;
+        border: 1px solid #555;
+        border-radius: 4px;
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+        #desasignar-familias-container .form-group input[type="text"]:focus,
+        #desasignar-familias-container .form-group select:focus {
+            border-color: #66bb6a;
+            outline: none;
+        }
+
+    #desasignar-familias-container table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        color: #e4e6eb;
+    }
+
+    #desasignar-familias-container table,
+    #desasignar-familias-container th,
+    #desasignar-familias-container td {
+        border: 1px solid #66bb6a;
+    }
+
+    #desasignar-familias-container th,
+    #desasignar-familias-container td {
+        padding: 10px;
+        text-align: left;
+    }
+
+    #desasignar-familias-container th {
+        background-color: #66bb6a;
+        color: white;
+    }
+
+    #desasignar-familias-container td {
+        background-color: #2c2e30;
+    }
+
+    /* Estilos para los botones */
+    #desasignar-familias-container .submit-btn {
+        width: 100%;
+        padding: 10px;
+        background-color: #66bb6a;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 10px;
+    }
+
+        #desasignar-familias-container .submit-btn:hover {
+            background-color: #5aa85e;
+        }
+/* gestion_familias.css */
+
+/* Estilos específicos para Desasignar Patentes */
+#desasignar-patentes-container {
+    background-color: #242526; /* Fondo oscuro para el contenedor */
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
 }
+
+    #desasignar-patentes-container h2,
+    #desasignar-patentes-container h3 {
+        color: #e4e6eb;
+        margin-bottom: 15px;
+    }
+
+    #desasignar-patentes-container h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    #desasignar-patentes-container h3 {
+        font-size: 20px;
+    }
+
+    #desasignar-patentes-container .form-group input[type="text"],
+    #desasignar-patentes-container .form-group select {
+        width: 100%;
+        padding: 10px;
+        background-color: #3a3b3c;
+        color: #e4e6eb;
+        border: 1px solid #555;
+        border-radius: 4px;
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+        #desasignar-patentes-container .form-group input[type="text"]:focus,
+        #desasignar-patentes-container .form-group select:focus {
+            border-color: #66bb6a;
+            outline: none;
+        }
+
+    #desasignar-patentes-container table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        color: #e4e6eb;
+    }
+
+    #desasignar-patentes-container table,
+    #desasignar-patentes-container th,
+    #desasignar-patentes-container td {
+        border: 1px solid #66bb6a;
+    }
+
+    #desasignar-patentes-container th,
+    #desasignar-patentes-container td {
+        padding: 10px;
+        text-align: left;
+    }
+
+    #desasignar-patentes-container th {
+        background-color: #66bb6a;
+        color: white;
+    }
+
+    #desasignar-patentes-container td {
+        background-color: #2c2e30;
+    }
+
+    /* Estilos para los botones */
+    #desasignar-patentes-container .submit-btn {
+        width: 100%;
+        padding: 10px;
+        background-color: #66bb6a;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 10px;
+    }
+
+        #desasignar-patentes-container .submit-btn:hover {
+            background-color: #5aa85e;
+        }
+/* gestion_familias.css */
+
+/* Estilos específicos para Modificar Familia */
+#modificar-familia-container {
+    background-color: #242526; /* Fondo oscuro para el contenedor */
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+}
+
+    #modificar-familia-container h2,
+    #modificar-familia-container h3 {
+        color: #e4e6eb;
+        margin-bottom: 15px;
+    }
+
+    #modificar-familia-container h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    #modificar-familia-container h3 {
+        font-size: 20px;
+    }
+
+    #modificar-familia-container .form-group label {
+        color: #b0b3b8;
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    #modificar-familia-container .form-group input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #3a3b3c;
+        color: #e4e6eb;
+        border: 1px solid #555;
+        border-radius: 4px;
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+        #modificar-familia-container .form-group input[type="text"]:focus {
+            border-color: #66bb6a;
+            outline: none;
+        }
+
+    #modificar-familia-container table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        color: #e4e6eb;
+    }
+
+    #modificar-familia-container table,
+    #modificar-familia-container th,
+    #modificar-familia-container td {
+        border: 1px solid #66bb6a;
+    }
+
+    #modificar-familia-container th,
+    #modificar-familia-container td {
+        padding: 10px;
+        text-align: left;
+    }
+
+    #modificar-familia-container th {
+        background-color: #66bb6a;
+        color: white;
+    }
+
+    #modificar-familia-container td {
+        background-color: #2c2e30;
+    }
+
+    /* Estilos para los botones */
+    #modificar-familia-container .submit-btn {
+        width: 100%;
+        padding: 10px;
+        background-color: #66bb6a;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 10px;
+    }
+
+        #modificar-familia-container .submit-btn:hover {
+            background-color: #5aa85e;
+        }

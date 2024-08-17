@@ -1,15 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AsignarPatentes.aspx.cs" Inherits="MidMarket.UI.AsignarPatentes" %>
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asignación de Patente a Usuario</title>
-    <link rel="stylesheet" href="styles/gestion_familias.css"> <!-- Enlace al archivo CSS -->
-</head>
-<body>
-    <div class="container">
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AsignarPatentes.aspx.cs" Inherits="MidMarket.UI.AsignarPatentes" MasterPageFile="~/Site.Master" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <div id="asignar-patentes-container" class="container">
         <h2>Asignación de Patente a Usuario</h2>
 
         <!-- Filtro y selección de usuario -->
@@ -26,7 +17,6 @@
                 <option value="1">Usuario 1</option>
                 <option value="2">Usuario 2</option>
                 <option value="3">Usuario 3</option>
-                <!-- Puedes agregar más opciones aquí -->
             </select>
         </div>
 
@@ -70,7 +60,6 @@
                     <td>Patente 3</td>
                     <td>Descripción de la patente 3</td>
                 </tr>
-                <!-- Puedes agregar más filas aquí -->
             </tbody>
         </table>
 
@@ -166,5 +155,4 @@
             alert("Patentes asignadas con éxito.");
         }
     </script>
-</body>
-</html>
+</asp:Content>

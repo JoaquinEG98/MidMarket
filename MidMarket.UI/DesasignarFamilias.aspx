@@ -1,15 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DesasignarFamilias.aspx.cs" Inherits="MidMarket.UI.DesasignarFamilias" %>
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eliminar Familia a Usuario</title>
-    <link rel="stylesheet" href="Styles/gestion_familias.css"> <!-- Enlace al archivo CSS -->
-</head>
-<body>
-    <div class="container">
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DesasignarFamilias.aspx.cs" Inherits="MidMarket.UI.DesasignarFamilias" MasterPageFile="~/Site.Master" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <div id="desasignar-familias-container" class="container">
         <h2>Eliminar Familia a Usuario</h2>
 
         <!-- Filtro y selección de usuario -->
@@ -26,7 +17,6 @@
                 <option value="1">Usuario 1</option>
                 <option value="2">Usuario 2</option>
                 <option value="3">Usuario 3</option>
-                <!-- Puedes agregar más opciones aquí -->
             </select>
         </div>
 
@@ -111,5 +101,4 @@
             alert("Familias eliminadas con éxito.");
         }
     </script>
-</body>
-</html>
+</asp:Content>

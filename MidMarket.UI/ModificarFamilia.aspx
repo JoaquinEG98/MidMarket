@@ -1,15 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ModificarFamilia.aspx.cs" Inherits="MidMarket.UI.ModificarFamilia" %>
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modificar Familia</title>
-    <link rel="stylesheet" href="styles/gestion_familias.css">
-</head>
-<body>
-    <div class="container">
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ModificarFamilia.aspx.cs" Inherits="MidMarket.UI.ModificarFamilia" MasterPageFile="~/Site.Master" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <div id="modificar-familia-container" class="container">
         <form class="registro-form">
             <h2>Modificar Familia</h2>
             
@@ -38,7 +29,6 @@
                         <td>Patente 4</td>
                         <td>Descripción de la patente 4</td>
                     </tr>
-
                 </tbody>
             </table>
 
@@ -76,9 +66,9 @@
             checkboxes.forEach(checkbox => {
                 const fila = checkbox.parentElement.parentElement;
                 const nuevaFila = fila.cloneNode(true);
-                
+
                 nuevaFila.deleteCell(0);
-                
+
                 tablaAgregadas.appendChild(nuevaFila);
 
                 checkbox.checked = false;
@@ -102,6 +92,4 @@
             }
         }
     </script>
-</body>
-</html>
-
+</asp:Content>

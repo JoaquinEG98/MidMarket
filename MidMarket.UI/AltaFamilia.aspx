@@ -1,13 +1,6 @@
-﻿<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de Patentes</title>
-    <link rel="stylesheet" href="Styles/gestion_familias.css">
-</head>
-<body>
-    <div class="container">
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AltaFamilia.aspx.cs" Inherits="MidMarket.UI.AltaFamilia" MasterPageFile="~/Site.Master" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <div id="alta-familia-container" class="container">
         <form class="registro-form">
             <h2>Alta de Familia</h2>
             
@@ -91,5 +84,4 @@
             }
         }
     </script>
-</body>
-</html>
+</asp:Content>

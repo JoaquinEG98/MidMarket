@@ -1,4 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="MidMarket.UI.SiteMaster" %>
+
 <%@ Register Src="~/Navbar.ascx" TagPrefix="uc" TagName="Navbar" %>
 
 <!DOCTYPE html>
@@ -19,6 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
     <!-- Incluye el CSS personalizado -->
     <link href="Styles/navbar.css" rel="stylesheet" />
+    <link href="Styles/gestion_familias.css" rel="stylesheet" />
 </head>
 <body>
     <form runat="server">
