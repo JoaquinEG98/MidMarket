@@ -15,6 +15,15 @@ namespace MidMarket.UI
     {
 
         /// <summary>
+        /// NavbarControl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::MidMarket.UI.Navbar NavbarControl;
+
+        /// <summary>
         /// MainContent control.
         /// </summary>
         /// <remarks>
