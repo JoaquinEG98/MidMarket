@@ -21,7 +21,10 @@
                 <tbody>
                     <% foreach (var patente in Patentes) { %>
                     <tr>
-                        <td><input type="checkbox" class="select-patente"></td>
+                        <td>
+                            <input type="checkbox" class="select-patente">
+                            <input type="hidden" class="id-patente" value="<%= patente.Id %>">
+                        </td>
                         <td><%= patente.Nombre %></td>
                         <td><%= patente.Permiso %></td>
                     </tr>
@@ -56,7 +59,10 @@
                 const fila = checkbox.parentElement.parentElement;
                 const nuevaFila = fila.cloneNode(true);
 
+                // Eliminar el checkbox y mover el input hidden con el ID
+                const inputHidden = fila.querySelector('.id-patente').outerHTML;
                 nuevaFila.deleteCell(0);
+                nuevaFila.innerHTML += `<td style="display: none;">${inputHidden}</td>`;
 
                 tablaAgregadas.appendChild(nuevaFila);
 
@@ -75,7 +81,13 @@
             }
 
             if (tablaAgregadas.rows.length > 0) {
-                alert(`¡Las patentes de la familia "${nombreFamilia}" han sido creadas con éxito!`);
+                // Recopilar los IDs de las patentes agregadas
+                const patentesIds = [];
+                tablaAgregadas.querySelectorAll('.id-patente').forEach(input => {
+                    patentesIds.push(input.value);
+                });
+
+                alert(`¡Las patentes de la familia "${nombreFamilia}" han sido creadas con éxito! IDs de las patentes: ${patentesIds.join(', ')}`);
             } else {
                 alert("No hay patentes agregadas.");
             }
