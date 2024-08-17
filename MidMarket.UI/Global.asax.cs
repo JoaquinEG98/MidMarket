@@ -29,6 +29,7 @@ namespace MidMarket.UI
             Container = new UnityContainer();
 
             Container.RegisterType<IUsuarioService, UsuarioService>();
+            Container.RegisterType<IPermisoService, PermisoService>();
         }
     }
 }
