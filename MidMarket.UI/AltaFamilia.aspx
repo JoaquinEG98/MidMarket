@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AltaFamilia.aspx.cs" Inherits="MidMarket.UI.AltaFamilia" MasterPageFile="~/Site.Master" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="alta-familia-container" class="container">
-        <form class="registro-form">
+        <form class="registro-form" method="post">
             <h2>Alta de Familia</h2>
             
             <div class="form-group">
@@ -46,7 +46,11 @@
                 </tbody>
             </table>
 
-            <button type="button" class="submit-btn" onclick="crear()">Crear</button>
+            <!-- Input hidden para almacenar los IDs seleccionados -->
+            <input type="hidden" id="patentesSeleccionadas" name="patentesSeleccionadas">
+
+            <!-- Botón ASP.NET con evento OnClick para el code-behind -->
+            <asp:Button ID="btnCrear" runat="server" Text="Crear" OnClientClick="return prepararEnvio();" OnClick="btnCrear_Click" CssClass="submit-btn" />
         </form>
     </div>
 
@@ -71,26 +75,17 @@
             });
         }
 
-        function crear() {
-            const nombreFamilia = document.getElementById('nombreFamilia').value;
-            const tablaAgregadas = document.getElementById('tablaAgregadas').getElementsByTagName('tbody')[0];
+        function prepararEnvio() {
+            const patentesIds = [];
+            document.querySelectorAll('#tablaAgregadas .id-patente').forEach(input => {
+                patentesIds.push(input.value);
+            });
 
-            if (nombreFamilia.trim() === "") {
-                alert("Por favor, ingresa el nombre de la familia.");
-                return;
-            }
+            // Asignar los IDs al input hidden
+            document.getElementById('patentesSeleccionadas').value = patentesIds.join(',');
 
-            if (tablaAgregadas.rows.length > 0) {
-                // Recopilar los IDs de las patentes agregadas
-                const patentesIds = [];
-                tablaAgregadas.querySelectorAll('.id-patente').forEach(input => {
-                    patentesIds.push(input.value);
-                });
-
-                alert(`¡Las patentes de la familia "${nombreFamilia}" han sido creadas con éxito! IDs de las patentes: ${patentesIds.join(', ')}`);
-            } else {
-                alert("No hay patentes agregadas.");
-            }
+            // Si hay IDs, permite el envío del formulario
+            return patentesIds.length > 0;
         }
     </script>
 </asp:Content>

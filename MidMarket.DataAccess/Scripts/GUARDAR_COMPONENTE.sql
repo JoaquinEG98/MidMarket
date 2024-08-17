@@ -1,1 +1,1 @@
-﻿INSERT INTO Permiso (Nombre, Permiso) OUTPUT inserted.Id_Permiso VALUES (@Nombre, Permiso)
+﻿INSERT INTO Permiso (Nombre, Permiso) OUTPUT inserted.Id_Permiso VALUES (@Nombre, @Permiso)
