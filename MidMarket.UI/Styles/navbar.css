@@ -1,69 +1,59 @@
-﻿/* Estilos personalizados para el navbar en modo oscuro con fondo verde pastel */
-
-/* Fuente estilizada (Roboto) */
-body {
+﻿body {
     font-family: 'Roboto', sans-serif;
-    background-color: #181a1b; /* Fondo oscuro para todo el sitio */
-    color: #e4e6eb; /* Color de texto claro */
+    background-color: #181a1b;
+    color: #e4e6eb;
 }
 
-/* Fondo verde pastel para el navbar */
 .navbar {
-    background-color: #86e589 !important; /* Verde pastel */
+    background-color: #86e589 !important;
 }
 
-/* Espaciado entre los elementos del navbar */
 .navbar-nav .nav-item {
-    margin-right: 15px; /* Espaciado horizontal entre los ítems */
+    margin-right: 15px;
 }
 
 .navbar-brand, .nav-link {
-    color: #333 !important; /* Color de texto oscuro para contrastar con el fondo pastel */
+    color: #333 !important;
     padding-bottom: 5px;
-    font-weight: bold !important; /* Texto en negrita */
-    font-size: 16px; /* Tamaño de fuente para mejorar legibilidad */
+    font-weight: bold !important;
+    font-size: 16px;
 }
 
-/* Estilos para el menú desplegable */
 .dropdown-menu {
-    background-color: #A8D5BA; /* Fondo verde pastel para el menú desplegable */
-    margin-top: 5px; /* Espaciado entre el dropdown y el enlace */
-    border-radius: 5px; /* Bordes redondeados para un diseño más limpio */
-    padding: 10px 0; /* Espaciado interno para mejor presentación */
+    background-color: #A8D5BA;
+    margin-top: 5px;
+    border-radius: 5px;
+    padding: 10px 0;
 }
 
 .dropdown-item {
-    color: #333 !important; /* Color de texto oscuro en el menú desplegable */
-    padding: 10px 20px; /* Espaciado interno de los ítems */
-    font-weight: bold !important; /* Texto en negrita para los submenús */
+    color: #333 !important;
+    padding: 10px 20px;
+    font-weight: bold !important;
 }
 
     .dropdown-item:hover, .dropdown-item:focus {
-        background-color: #86C29C !important; /* Fondo verde ligeramente más oscuro al seleccionar */
-        color: #333 !important; /* Color de texto consistente */
+        background-color: #86C29C !important;
+        color: #333 !important;
     }
 
-    /* Remover el color azul al hacer clic en los ítems desplegables */
     .dropdown-item:active {
         background-color: #A8D5BA !important;
         color: #333 !important;
     }
 
-/* Estilo para la barra de navegación desplegable al estar abierta */
 .navbar-toggler {
     border: none;
 }
 
-/* Estilos para el enlace "Cerrar sesión" */
 .navbar .nav-link {
-    color: #333 !important; /* Mantiene el color oscuro */
+    color: #333 !important;
 }
 
     .navbar .nav-link:hover {
-        color: #000 !important; /* Oscurece al pasar el cursor */
+        color: #000 !important;
     }
 
-/* Estilos para el pie de página */
 footer {
     color: #e4e6eb;
     text-align: center;

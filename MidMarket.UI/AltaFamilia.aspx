@@ -47,10 +47,8 @@
                 </tbody>
             </table>
 
-            <!-- Input hidden para almacenar los IDs seleccionados -->
             <input type="hidden" id="patentesSeleccionadas" name="patentesSeleccionadas">
 
-            <!-- Botón ASP.NET con evento OnClick para el code-behind -->
             <asp:Button ID="btnCrear" runat="server" Text="Crear" OnClientClick="return prepararEnvio();" OnClick="btnCrear_Click" CssClass="submit-btn" />
         </form>
     </div>
@@ -64,7 +62,6 @@
                 const fila = checkbox.parentElement.parentElement;
                 const nuevaFila = fila.cloneNode(true);
 
-                // Eliminar el checkbox y mover el input hidden con el ID
                 const inputHidden = fila.querySelector('.id-patente').outerHTML;
                 nuevaFila.deleteCell(0);
                 nuevaFila.innerHTML += `<td style="display: none;">${inputHidden}</td>`;
@@ -82,10 +79,8 @@
                 patentesIds.push(input.value);
             });
 
-            // Asignar los IDs al input hidden
             document.getElementById('patentesSeleccionadas').value = patentesIds.join(',');
 
-            // Si hay IDs, permite el envío del formulario
             return patentesIds.length > 0;
         }
     </script>

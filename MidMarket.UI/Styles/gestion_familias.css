@@ -1,11 +1,8 @@
-﻿/* gestion_familias.css */
-
-/* Asegúrate de que los estilos solo se apliquen dentro del contenedor #familias-container */
-#familias-container {
-    background-color: #242526; /* Fondo oscuro para el contenedor */
+﻿#familias-container {
+    background-color: #242526;
     padding: 20px 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada para modo oscuro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     max-width: 800px;
     width: 100%;
     margin: auto;
@@ -59,11 +56,9 @@
         #familias-container .submit-btn:hover {
             background-color: #5aa85e;
         }
-/* gestion_familias.css */
 
-/* Estilos específicos para Alta de Familia */
 #alta-familia-container {
-    background-color: #242526; /* Fondo oscuro para el contenedor */
+    background-color: #242526;
     padding: 20px 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -147,11 +142,9 @@
         #alta-familia-container .submit-btn:hover {
             background-color: #5aa85e;
         }
-/* gestion_familias.css */
 
-/* Estilos específicos para Asignar Familias */
 #asignar-familias-container {
-    background-color: #242526; /* Fondo oscuro para el contenedor */
+    background-color: #242526;
     padding: 20px 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -221,7 +214,6 @@
         background-color: #2c2e30;
     }
 
-    /* Estilos para los botones */
     #asignar-familias-container .submit-btn {
         width: 100%;
         padding: 10px;
@@ -238,11 +230,9 @@
         #asignar-familias-container .submit-btn:hover {
             background-color: #5aa85e;
         }
-/* gestion_familias.css */
 
-/* Estilos específicos para Asignar Patentes */
 #asignar-patentes-container {
-    background-color: #242526; /* Fondo oscuro para el contenedor */
+    background-color: #242526;
     padding: 20px 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -312,7 +302,6 @@
         background-color: #2c2e30;
     }
 
-    /* Estilos para los botones */
     #asignar-patentes-container .submit-btn {
         width: 100%;
         padding: 10px;
@@ -329,11 +318,9 @@
         #asignar-patentes-container .submit-btn:hover {
             background-color: #5aa85e;
         }
-/* gestion_familias.css */
 
-/* Estilos específicos para Desasignar Familias */
 #desasignar-familias-container {
-    background-color: #242526; /* Fondo oscuro para el contenedor */
+    background-color: #242526;
     padding: 20px 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -403,7 +390,6 @@
         background-color: #2c2e30;
     }
 
-    /* Estilos para los botones */
     #desasignar-familias-container .submit-btn {
         width: 100%;
         padding: 10px;
@@ -420,11 +406,9 @@
         #desasignar-familias-container .submit-btn:hover {
             background-color: #5aa85e;
         }
-/* gestion_familias.css */
 
-/* Estilos específicos para Desasignar Patentes */
 #desasignar-patentes-container {
-    background-color: #242526; /* Fondo oscuro para el contenedor */
+    background-color: #242526;
     padding: 20px 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -494,7 +478,6 @@
         background-color: #2c2e30;
     }
 
-    /* Estilos para los botones */
     #desasignar-patentes-container .submit-btn {
         width: 100%;
         padding: 10px;
@@ -511,11 +494,9 @@
         #desasignar-patentes-container .submit-btn:hover {
             background-color: #5aa85e;
         }
-/* gestion_familias.css */
 
-/* Estilos específicos para Modificar Familia */
 #modificar-familia-container {
-    background-color: #242526; /* Fondo oscuro para el contenedor */
+    background-color: #242526;
     padding: 20px 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -590,7 +571,6 @@
         background-color: #2c2e30;
     }
 
-    /* Estilos para los botones */
     #modificar-familia-container .submit-btn {
         width: 100%;
         padding: 10px;

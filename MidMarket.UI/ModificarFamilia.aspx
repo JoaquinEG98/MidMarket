@@ -1,9 +1,10 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ModificarFamilia.aspx.cs" Inherits="MidMarket.UI.ModificarFamilia" MasterPageFile="~/Site.Master" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="modificar-familia-container" class="container">
         <form class="registro-form">
             <h2>Modificar Familia</h2>
-            
+
             <div class="form-group">
                 <label for="nombreFamilia">Nombre de la Familia</label>
                 <input type="text" id="nombreFamilia" name="nombreFamilia" value="Familia Ejemplo" required>
@@ -20,12 +21,14 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><input type="checkbox" class="select-patente"></td>
+                        <td>
+                            <input type="checkbox" class="select-patente"></td>
                         <td>Patente 3</td>
                         <td>Descripción de la patente 3</td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" class="select-patente"></td>
+                        <td>
+                            <input type="checkbox" class="select-patente"></td>
                         <td>Patente 4</td>
                         <td>Descripción de la patente 4</td>
                     </tr>
