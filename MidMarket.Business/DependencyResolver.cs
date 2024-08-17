@@ -16,8 +16,6 @@ namespace MidMarket.Business
 
             Container.RegisterType<IUsuarioDAO, UsuarioDAO>();
             Container.RegisterType<IPermisoDAO, PermisoDAO>();
-
-            Container.RegisterType<IUsuarioService, UsuarioService>();
         }
 
         public static T Resolve<T>()
