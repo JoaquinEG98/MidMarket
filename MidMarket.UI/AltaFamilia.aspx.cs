@@ -27,7 +27,6 @@ namespace MidMarket.UI
             {
                 AlertHelper.MostrarMensaje(this, $"Error al cargar la página: {ex.Message}.");
             }
-
         }
 
         protected void btnCrear_Click(object sender, EventArgs e)

@@ -1,8 +1,9 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdministracionFamilias.aspx.cs" Inherits="MidMarket.UI.AdministracionFamilias" MasterPageFile="~/Site.Master" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="familias-container" class="container">
         <h2>Administración de Familias</h2>
-        
+
         <table id="tablaFamilias">
             <thead>
                 <tr>
@@ -11,18 +12,16 @@
                 </tr>
             </thead>
             <tbody>
+                <% foreach (var familia in Familias)
+                    { %>
                 <tr>
-                    <td><input type="radio" name="selectFamilia"></td>
-                    <td>Familia 1</td>
+                    <td>
+                        <input type="radio" name="selectFamilia" class="select-patente">
+                        <input type="hidden" class="id-familia" value="<%= familia.Id %>">
+                    </td>
+                    <td><%= familia.Nombre %></td>
                 </tr>
-                <tr>
-                    <td><input type="radio" name="selectFamilia"></td>
-                    <td>Familia 2</td>
-                </tr>
-                <tr>
-                    <td><input type="radio" name="selectFamilia"></td>
-                    <td>Familia 3</td>
-                </tr>
+                <% } %>
             </tbody>
         </table>
 
@@ -58,7 +57,7 @@
         }
 
         function altaFamilia() {
-            window.location.href = 'alta.html';
+            window.location.href = 'AltaFamilia.aspx';
         }
     </script>
 </asp:Content>
