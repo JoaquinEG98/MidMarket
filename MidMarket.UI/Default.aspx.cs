@@ -1,5 +1,6 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
+using MidMarket.UI.Helpers;
 using System;
 using System.Web.UI;
 using Unity;
@@ -20,10 +21,16 @@ namespace MidMarket.UI
         {
             if (!IsPostBack)
             {
-                Cliente = Session["Usuario"] as Cliente;
-
-                if (Cliente == null)
+                try
                 {
+                    Cliente = Session["Usuario"] as Cliente;
+
+                    if (Cliente == null)
+                        Response.Redirect("Login.aspx");
+                }
+                catch (Exception ex)
+                {
+                    AlertHelper.MostrarMensaje(this, $"Error al cargar la página: {ex.Message}.");
                     Response.Redirect("Login.aspx");
                 }
             }

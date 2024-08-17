@@ -1,5 +1,6 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
+using MidMarket.UI.Helpers;
 using System;
 using Unity;
 
@@ -37,7 +38,7 @@ namespace MidMarket.UI
             }
             catch (Exception ex)
             {
-                throw ex;
+                AlertHelper.MostrarMensaje(this, $"Error al registrar cliente: {ex.Message}.");
             }
         }
     }
