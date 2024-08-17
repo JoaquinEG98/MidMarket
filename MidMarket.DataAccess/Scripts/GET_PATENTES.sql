@@ -1,1 +1,1 @@
-﻿SELECT Id_Permiso, Nombre, Permiso FROM Permiso WHERE Permiso IS NULL
+﻿SELECT Id_Permiso, Nombre, Permiso FROM Permiso WHERE Permiso IS NOT NULL

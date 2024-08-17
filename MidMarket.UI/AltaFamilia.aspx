@@ -19,16 +19,13 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <% foreach (var patente in Patentes) { %>
                     <tr>
                         <td><input type="checkbox" class="select-patente"></td>
-                        <td>Patente 1</td>
-                        <td>Descripción de la patente 1</td>
+                        <td><%= patente.Nombre %></td>
+                        <td><%= patente.Permiso %></td>
                     </tr>
-                    <tr>
-                        <td><input type="checkbox" class="select-patente"></td>
-                        <td>Patente 2</td>
-                        <td>Descripción de la patente 2</td>
-                    </tr>
+                    <% } %>
                 </tbody>
             </table>
 
