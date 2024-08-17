@@ -31,10 +31,10 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="permisosDropdown">
                         <li><a class="dropdown-item" href="#">Permisos</a></li>
-                        <li><a class="dropdown-item" href="#">Asignar Patentes</a></li>
-                        <li><a class="dropdown-item" href="#">Asignar Familias</a></li>
-                        <li><a class="dropdown-item" href="#">Desasignar Patentes</a></li>
-                        <li><a class="dropdown-item" href="#">Desasignar Familias</a></li>
+                        <li><a class="dropdown-item" href="/AsignarPatentes.aspx">Asignar Patentes</a></li>
+                        <li><a class="dropdown-item" href="/AsignarFamilias.aspx">Asignar Familias</a></li>
+                        <li><a class="dropdown-item" href="/DesasignarPatentes.aspx">Desasignar Patentes</a></li>
+                        <li><a class="dropdown-item" href="/DesasignarFamilias.aspx">Desasignar Familias</a></li>
                     </ul>
                 </li>
 
@@ -42,8 +42,8 @@
                     <a class="nav-link dropdown-toggle" href="#" id="familiasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Familias
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="familiasDropdown">
-                        <li><a class="dropdown-item" href="#">Administración Familias</a></li>
-                        <li><a class="dropdown-item" href="#">Alta de Familia</a></li>
+                        <li><a class="dropdown-item" href="/AdministracionFamilias.aspx">Administración Familias</a></li>
+                        <li><a class="dropdown-item" href="/AltaFamilia.aspx">Alta de Familia</a></li>
                     </ul>
                 </li>
 
