@@ -130,8 +130,17 @@
   <data name="GET_FAMILIA_PATENTE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\GET_FAMILIA_PATENTE.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="GET_FAMILIA_VALIDACION" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Scripts\GET_FAMILIA_VALIDACION.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="GET_PATENTES" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\GET_PATENTES.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="GET_PATENTES_DE_FAMILIA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Scripts\GET_PATENTES_DE_FAMILIA.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="GET_PERMISOS_USUARIO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Scripts\GET_PERMISOS_USUARIO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="GET_USUARIO_PERMISO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\GET_USUARIO_PERMISO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>

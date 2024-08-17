@@ -102,6 +102,19 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SELECT p.Id_Permiso, p.Nombre 
+        ///FROM FamiliaPatente fm 
+        ///INNER JOIN Permiso p ON p.Id_Permiso = fm.Id_Padre
+        ///INNER JOIN Permiso p2 ON p2.Id_Permiso = fm.Id_Hijo 
+        ///WHERE fm.Id_Hijo = {0};.
+        /// </summary>
+        internal static string GET_FAMILIA_VALIDACION {
+            get {
+                return ResourceManager.GetString("GET_FAMILIA_VALIDACION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SELECT Id_Permiso, Nombre, Permiso FROM Permiso WHERE Permiso IS NULL.
         /// </summary>
         internal static string GET_FAMILIAS {
@@ -116,6 +129,26 @@ namespace MidMarket.DataAccess {
         internal static string GET_PATENTES {
             get {
                 return ResourceManager.GetString("GET_PATENTES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT Id_Permiso, Nombre, Permiso, Id_Padre, Id_Hijo FROM Permiso p INNER JOIN FamiliaPatente fm on fm.Id_Hijo = p.Id_Permiso WHERE Id_Padre = {0} 
+        ///ORDER BY Permiso DESC.
+        /// </summary>
+        internal static string GET_PATENTES_DE_FAMILIA {
+            get {
+                return ResourceManager.GetString("GET_PATENTES_DE_FAMILIA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT Id_Permiso, Nombre, Permiso FROM Permiso p INNER JOIN UsuarioPermiso up on up.Id_Patente = p.Id_Permiso 
+        ///WHERE up.Id_Cliente = {0} ORDER BY Permiso DESC.
+        /// </summary>
+        internal static string GET_PERMISOS_USUARIO {
+            get {
+                return ResourceManager.GetString("GET_PERMISOS_USUARIO", resourceCulture);
             }
         }
         
