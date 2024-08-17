@@ -23,10 +23,7 @@ namespace MidMarket.UI
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (!IsPostBack)
-            //{
-                Patentes = _permisoService.GetPatentes();
-            //}
+            Patentes = _permisoService.GetPatentes();
         }
 
         protected void btnCrear_Click(object sender, EventArgs e)

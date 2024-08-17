@@ -1,9 +1,10 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AltaFamilia.aspx.cs" Inherits="MidMarket.UI.AltaFamilia" MasterPageFile="~/Site.Master" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="alta-familia-container" class="container">
         <form class="registro-form" method="post">
             <h2>Alta de Familia</h2>
-            
+
             <div class="form-group">
                 <h3>Nombre de Familia</h3>
                 <input type="text" id="nombreFamilia" name="nombreFamilia" required>
