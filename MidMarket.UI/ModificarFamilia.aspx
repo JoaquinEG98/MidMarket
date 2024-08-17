@@ -2,12 +2,12 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="modificar-familia-container" class="container">
-        <form class="registro-form">
+        <form class="registro-form" method="post">
             <h2>Modificar Familia</h2>
 
             <div class="form-group">
                 <label for="nombreFamilia">Nombre de la Familia</label>
-                <input type="text" id="nombreFamilia" name="nombreFamilia" value="Familia Ejemplo" required>
+                <input type="text" id="nombreFamilia" name="nombreFamilia" value="<%= Familia.Nombre %>" required>
             </div>
 
             <h3>Patentes Existentes</h3>
@@ -20,18 +20,17 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <% foreach (var patente in PatentesExistentes)
+                        { %>
                     <tr>
                         <td>
-                            <input type="checkbox" class="select-patente"></td>
-                        <td>Patente 3</td>
-                        <td>Descripción de la patente 3</td>
+                            <input type="checkbox" class="select-patente">
+                            <input type="hidden" class="id-patente" value="<%= patente.Id %>">
+                        </td>
+                        <td><%= patente.Nombre %></td>
+                        <td><%= patente.Permiso %></td>
                     </tr>
-                    <tr>
-                        <td>
-                            <input type="checkbox" class="select-patente"></td>
-                        <td>Patente 4</td>
-                        <td>Descripción de la patente 4</td>
-                    </tr>
+                    <% } %>
                 </tbody>
             </table>
 
@@ -46,18 +45,20 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <% foreach (var patente in Patentes)
+                        { %>
                     <tr>
-                        <td>Patente 1</td>
-                        <td>Descripción de la patente 1</td>
+                        <td><%= patente.Nombre %></td>
+                        <td><%= patente.Permiso %></td>
+                        <input type="hidden" class="id-patente" value="<%= patente.Id %>">
                     </tr>
-                    <tr>
-                        <td>Patente 2</td>
-                        <td>Descripción de la patente 2</td>
-                    </tr>
+                    <% } %>
                 </tbody>
             </table>
 
-            <button type="button" class="submit-btn" onclick="guardar()">Guardar</button>
+            <input type="hidden" id="patentesSeleccionadas" name="patentesSeleccionadas">
+
+            <asp:Button ID="btnGuardar" runat="server" Text="Guardar" OnClientClick="return prepararEnvio();" OnClick="btnGuardar_Click" CssClass="submit-btn" />
         </form>
     </div>
 
@@ -70,7 +71,9 @@
                 const fila = checkbox.parentElement.parentElement;
                 const nuevaFila = fila.cloneNode(true);
 
+                const inputHidden = fila.querySelector('.id-patente').outerHTML;
                 nuevaFila.deleteCell(0);
+                nuevaFila.innerHTML += `<td style="display: none;">${inputHidden}</td>`;
 
                 tablaAgregadas.appendChild(nuevaFila);
 
@@ -79,20 +82,15 @@
             });
         }
 
-        function guardar() {
-            const nombreFamilia = document.getElementById('nombreFamilia').value;
-            const tablaAgregadas = document.getElementById('tablaAgregadas').getElementsByTagName('tbody')[0];
+        function prepararEnvio() {
+            const patentesIds = [];
+            document.querySelectorAll('#tablaAgregadas .id-patente').forEach(input => {
+                patentesIds.push(input.value);
+            });
 
-            if (nombreFamilia.trim() === "") {
-                alert("Por favor, ingresa el nombre de la familia.");
-                return;
-            }
+            document.getElementById('patentesSeleccionadas').value = patentesIds.join(',');
 
-            if (tablaAgregadas.rows.length > 0) {
-                alert(`¡La familia "${nombreFamilia}" ha sido guardada con éxito!`);
-            } else {
-                alert("No hay patentes asignadas.");
-            }
+            return patentesIds.length > 0;
         }
     </script>
 </asp:Content>

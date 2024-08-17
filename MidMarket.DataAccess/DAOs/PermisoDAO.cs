@@ -49,6 +49,9 @@ namespace MidMarket.DataAccess.DAOs
 
                 _dataAccess.ExecuteParameters.Parameters.AddWithValue("@PadreId", familia.Id);
                 _dataAccess.ExecuteParameters.Parameters.AddWithValue("@HijoId", item.Id);
+                _dataAccess.ExecuteParameters.Parameters.AddWithValue("@NombreFamilia", familia.Nombre);
+                _dataAccess.ExecuteParameters.Parameters.AddWithValue("@FamiliaId", familia.Id);
+
                 _dataAccess.ExecuteNonQuery();
             }
         }

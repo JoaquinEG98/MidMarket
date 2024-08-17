@@ -50,7 +50,8 @@
         function modificarFamilia() {
             const seleccionada = document.querySelector('input[name="selectFamilia"]:checked');
             if (seleccionada) {
-                window.location.href = 'modificar.html';
+                const idFamilia = seleccionada.nextElementSibling.value;
+                window.location.href = `ModificarFamilia.aspx?id=${idFamilia}`;
             } else {
                 alert("Por favor, selecciona una familia para modificar.");
             }
