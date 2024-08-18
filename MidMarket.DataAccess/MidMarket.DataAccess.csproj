@@ -70,6 +70,7 @@
     <Content Include="Scripts\GUARDAR_FAMILIA.sql" />
     <Content Include="Scripts\BORRAR_FAMILIA.sql" />
     <Content Include="Scripts\Helpers\CREAR_SECUENCIA_NUMERO_cUENTA.sql" />
+    <Content Include="Scripts\GET_USUARIOS.sql" />
     <Content Include="Scripts\LOGIN_USUARIO.sql" />
     <Content Include="Scripts\GUARDAR_COMPONENTE.sql" />
     <Content Include="Scripts\REGISTRAR_USUARIO.sql" />

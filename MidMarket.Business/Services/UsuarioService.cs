@@ -4,6 +4,8 @@ using System;
 using System.Transactions;
 using MidMarket.Entities;
 using MidMarket.Business.Seguridad;
+using MidMarket.DataAccess.DAOs;
+using System.Collections.Generic;
 
 namespace MidMarket.Business.Services
 {
@@ -64,6 +66,29 @@ namespace MidMarket.Business.Services
             }
 
             return null;
+        }
+
+        public List<Cliente> GetClientes()
+        {
+            List<Cliente> clientes = _usuarioDataAccess.GetClientes();
+            List<Cliente> clientesDesencriptados = new List<Cliente>();
+
+            foreach (Cliente cliente in clientes)
+            {
+                var clienteDesencriptado = new Cliente()
+                {
+                    Id = cliente.Id,
+                    Email = Encriptacion.DesencriptarAES(cliente.Email),
+                    RazonSocial = Encriptacion.DesencriptarAES(cliente.RazonSocial),
+                    CUIT = Encriptacion.DesencriptarAES(cliente.CUIT),
+                    Puntaje = cliente.Puntaje,
+                    Cuenta = cliente.Cuenta,
+                };
+
+                clientesDesencriptados.Add(clienteDesencriptado);
+            }
+
+            return clientesDesencriptados;
         }
     }
 }

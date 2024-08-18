@@ -1,4 +1,5 @@
 ﻿using MidMarket.Entities;
+using System.Collections.Generic;
 
 namespace MidMarket.Business.Interfaces
 {
@@ -6,5 +7,6 @@ namespace MidMarket.Business.Interfaces
     {
         int RegistrarUsuario(Cliente cliente);
         Cliente Login(string email, string password);
+        List<Cliente> GetClientes();
     }
 }

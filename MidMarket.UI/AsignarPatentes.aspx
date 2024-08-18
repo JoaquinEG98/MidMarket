@@ -13,9 +13,10 @@
             <label for="selectUsuario">Seleccionar Usuario:</label>
             <select id="selectUsuario" onchange="cargarPatentesAsignadas()">
                 <option value="">Selecciona un usuario</option>
-                <option value="1">Usuario 1</option>
-                <option value="2">Usuario 2</option>
-                <option value="3">Usuario 3</option>
+                <% foreach (var cliente in Clientes)
+                    { %>
+                <option value="<%= cliente.Id %>"><%= cliente.RazonSocial %></option>
+                <% } %>
             </select>
         </div>
 
@@ -71,7 +72,7 @@
             const selectUsuario = document.getElementById('selectUsuario');
             const opciones = selectUsuario.getElementsByTagName('option');
 
-            for (let i = 1; i < opciones.length; i++) {
+            for (let i = 1; i < opciones.length; i++) { 
                 const texto = opciones[i].textContent.toLowerCase();
                 opciones[i].style.display = texto.includes(filtro) ? '' : 'none';
             }

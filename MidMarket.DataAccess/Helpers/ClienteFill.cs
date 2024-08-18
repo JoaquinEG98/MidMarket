@@ -1,6 +1,8 @@
 ﻿using MidMarket.Entities;
 using System;
+using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 
 namespace MidMarket.DataAccess.Helpers
 {
@@ -41,6 +43,11 @@ namespace MidMarket.DataAccess.Helpers
             cliente.Cuenta = cuenta;
 
             return cliente;
+        }
+
+        public static List<Cliente> FillListCliente(DataSet ds)
+        {
+            return ds.Tables[0].AsEnumerable().Select(dr => FillObjectCliente(dr)).ToList();
         }
     }
 }

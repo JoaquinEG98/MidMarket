@@ -124,7 +124,7 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SELECT Id_Permiso, Nombre, Permiso FROM Permiso WHERE Permiso IS NULL.
+        ///   Looks up a localized string similar to SELECT Id_Permiso, Nombre, Permiso FROM Permiso WHERE Permiso IS NOT NULL.
         /// </summary>
         internal static string GET_PATENTES {
             get {
@@ -162,7 +162,18 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to INSERT INTO Permiso (Nombre, Permiso) OUTPUT inserted.Id_Permiso VALUES (@Nombre, Permiso).
+        ///   Looks up a localized string similar to SELECT cliente.Id_Cliente, cliente.Email, cliente.Password, cliente.Nombre, cliente.CUIT, cliente.Puntaje, cliente.DVH, cuenta.Id_Cuenta, cuenta.NumeroCuenta, cuenta.Saldo
+        ///FROM Cliente cliente
+        ///INNER JOIN Cuenta cuenta on cuenta.Id_Cliente = cliente.Id_Cliente .
+        /// </summary>
+        internal static string GET_USUARIOS {
+            get {
+                return ResourceManager.GetString("GET_USUARIOS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to INSERT INTO Permiso (Nombre, Permiso) OUTPUT inserted.Id_Permiso VALUES (@Nombre, @Permiso).
         /// </summary>
         internal static string GUARDAR_COMPONENTE {
             get {
@@ -171,7 +182,8 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to INSERT INTO FamiliaPatente (Id_Padre, Id_Hijo) VALUES (@PadreId, @HijoId).
+        ///   Looks up a localized string similar to INSERT INTO FamiliaPatente (Id_Padre, Id_Hijo) VALUES (@PadreId, @HijoId);
+        ///UPDATE Permiso SET Nombre = @NombreFamilia WHERE Id_Permiso = @FamiliaId;.
         /// </summary>
         internal static string GUARDAR_FAMILIA {
             get {

@@ -4,6 +4,7 @@ using MidMarket.Entities;
 using MidMarket.DataAccess.Conexion;
 using System.Data;
 using MidMarket.DataAccess.Helpers;
+using System.Collections.Generic;
 
 namespace MidMarket.DataAccess.DAOs
 {
@@ -39,6 +40,19 @@ namespace MidMarket.DataAccess.DAOs
             Cliente cliente = ds.Tables[0].Rows.Count <= 0 ? null : ClienteFill.FillObjectCliente(ds.Tables[0].Rows[0]);
 
             return cliente;
+        }
+
+        public List<Cliente> GetClientes()
+        {
+            _dataAccess.SelectCommandText = String.Format(Scripts.GET_USUARIOS);
+            DataSet ds = _dataAccess.ExecuteNonReader();
+
+            List<Cliente> clientes = new List<Cliente>();
+
+            if (ds.Tables[0].Rows.Count > 0)
+                clientes = ClienteFill.FillListCliente(ds);
+
+            return clientes;
         }
     }
 }
