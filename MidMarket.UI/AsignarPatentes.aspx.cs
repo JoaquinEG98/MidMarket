@@ -5,8 +5,6 @@ using MidMarket.UI.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 using Unity;
 
@@ -30,27 +28,32 @@ namespace MidMarket.UI
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            try
             {
                 Clientes = _usuarioService.GetClientes();
-            }
-            else
-            {
-                // Recuperar el ID del usuario desde el Request o desde el ViewState
-                if (int.TryParse(Request.Form["usuarioSeleccionado"], out int usuarioId))
-                {
-                    UsuarioSeleccionadoId = usuarioId;
-                    ViewState["UsuarioSeleccionadoId"] = usuarioId;
-                }
-                else if (ViewState["UsuarioSeleccionadoId"] != null)
-                {
-                    UsuarioSeleccionadoId = (int)ViewState["UsuarioSeleccionadoId"];
-                }
 
-                if (UsuarioSeleccionadoId > 0)
+                if (IsPostBack)
                 {
-                    CargarPatentes(UsuarioSeleccionadoId);
+                    if (int.TryParse(Request.Form["usuarioSeleccionado"], out int usuarioId))
+                    {
+                        UsuarioSeleccionadoId = usuarioId;
+                        ViewState["UsuarioSeleccionadoId"] = usuarioId;
+                    }
+                    else if (ViewState["UsuarioSeleccionadoId"] != null)
+                    {
+                        UsuarioSeleccionadoId = (int)ViewState["UsuarioSeleccionadoId"];
+                    }
+
+                    if (UsuarioSeleccionadoId > 0)
+                    {
+                        CargarPatentes(UsuarioSeleccionadoId);
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                AlertHelper.MostrarMensaje(this, $"Error al cargar la página: {ex.Message}.");
+                Response.Redirect("Default.aspx");
             }
         }
 
@@ -67,31 +70,23 @@ namespace MidMarket.UI
         {
             try
             {
-                // Capturar los IDs de las patentes asignadas y seleccionadas
                 var patentesSeleccionadas = Request.Form["patentesSeleccionadas"];
                 var patentesAsignadas = Request.Form["patentesAsignadas"];
 
-                // Convertir los IDs en listas para procesarlos
+                
                 var idsPatentesSeleccionadas = patentesSeleccionadas?.Split(',').Select(int.Parse).ToList() ?? new List<int>();
-                var idsPatentesAsignadas = patentesAsignadas?.Split(',').Select(int.Parse).ToList() ?? new List<int>();
+                //var idsPatentesAsignadas = patentesAsignadas?.Split(',').Select(int.Parse).ToList() ?? new List<int>();
 
-                // Obtener las patentes seleccionadas a partir de los IDs
-                var nuevasPatentes = _permisoService.GetPatentes()
-                    .Where(p => idsPatentesSeleccionadas.Contains(p.Id))
-                    .ToList();
+                var nuevasPatentes = _permisoService.GetPatentes().Where(p => idsPatentesSeleccionadas.Contains(p.Id)).ToList();
 
-                // Agregar las nuevas patentes a la lista de permisos del cliente seleccionado
                 ClienteSeleccionado.Permisos.AddRange(nuevasPatentes);
 
-                // Aquí se asume que `GuardarPermiso` actualiza al cliente y sus permisos en la base de datos
                 _permisoService.GuardarPermiso(ClienteSeleccionado);
 
-                // Mostrar mensaje de éxito
                 AlertHelper.MostrarMensaje(this, "Patentes asignadas correctamente.");
             }
             catch (Exception ex)
             {
-                // Manejo de errores
                 AlertHelper.MostrarMensaje(this, $"Error al asignar patentes: {ex.Message}");
             }
         }
