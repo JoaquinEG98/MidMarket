@@ -58,7 +58,7 @@ namespace MidMarket.Business.Services
                         Puntaje = cliente.Puntaje,
                         Cuenta = cliente.Cuenta,
                     };
-                    _permisoService.GetComponenteUsuario(cliente);
+                    _permisoService.GetComponenteUsuario(clienteDesencriptado);
 
                     return clienteDesencriptado;
                 }
@@ -107,7 +107,7 @@ namespace MidMarket.Business.Services
                 Puntaje = cliente.Puntaje,
                 Cuenta = cliente.Cuenta,
             };
-            _permisoService.GetComponenteUsuario(cliente);
+            _permisoService.GetComponenteUsuario(clienteDesencriptado);
 
             return clienteDesencriptado;
         }
