@@ -30,7 +30,6 @@
                     <a class="nav-link dropdown-toggle" href="#" id="permisosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Permisos
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="permisosDropdown">
-                        <li><a class="dropdown-item" href="#">Permisos</a></li>
                         <li><a class="dropdown-item" href="/AsignarPatentes.aspx">Asignar Patentes</a></li>
                         <li><a class="dropdown-item" href="/AsignarFamilias.aspx">Asignar Familias</a></li>
                         <li><a class="dropdown-item" href="/DesasignarPatentes.aspx">Desasignar Patentes</a></li>
