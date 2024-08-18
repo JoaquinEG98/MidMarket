@@ -119,57 +119,63 @@
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="BORRAR_FAMILIA" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Scripts\BORRAR_FAMILIA.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+    <value>Scripts\Permiso\BORRAR_FAMILIA.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="BORRAR_PERMISO_USUARIO" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Scripts\BORRAR_PERMISO_USUARIO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+    <value>Scripts\Permiso\BORRAR_PERMISO_USUARIO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="GET_DIGITOS_HORIZONTALES" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Scripts\GET_DIGITOS_HORIZONTALES.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+    <value>Scripts\DigitoVerificador\GET_DIGITOS_HORIZONTALES.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="GET_FAMILIAS" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Scripts\GET_FAMILIAS.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+    <value>Scripts\Permiso\GET_FAMILIAS.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="GET_FAMILIA_PATENTE" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Scripts\GET_FAMILIA_PATENTE.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+    <value>Scripts\Permiso\GET_FAMILIA_PATENTE.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="GET_FAMILIA_VALIDACION" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Scripts\GET_FAMILIA_VALIDACION.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+    <value>Scripts\Permiso\GET_FAMILIA_VALIDACION.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="GET_PATENTES" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Scripts\GET_PATENTES.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+    <value>Scripts\Permiso\GET_PATENTES.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="GET_PATENTES_DE_FAMILIA" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Scripts\GET_PATENTES_DE_FAMILIA.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+    <value>Scripts\Permiso\GET_PATENTES_DE_FAMILIA.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="GET_PERMISOS_USUARIO" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Scripts\GET_PERMISOS_USUARIO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+    <value>Scripts\Permiso\GET_PERMISOS_USUARIO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="GET_USUARIO" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Scripts\GET_USUARIO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+    <value>Scripts\Usuario\GET_USUARIO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="GET_USUARIOS" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Scripts\GET_USUARIOS.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+    <value>Scripts\Permiso\GET_USUARIOS.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="GET_USUARIO_PERMISO" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Scripts\GET_USUARIO_PERMISO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+    <value>Scripts\Permiso\GET_USUARIO_PERMISO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="GUARDAR_COMPONENTE" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Scripts\GUARDAR_COMPONENTE.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+    <value>Scripts\Permiso\GUARDAR_COMPONENTE.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="GUARDAR_FAMILIA" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Scripts\GUARDAR_FAMILIA.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+    <value>Scripts\Permiso\GUARDAR_FAMILIA.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="GUARDAR_PERMISO_USUARIO" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Scripts\GUARDAR_PERMISO_USUARIO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+    <value>Scripts\Permiso\GUARDAR_PERMISO_USUARIO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="LOGIN_USUARIO" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Scripts\LOGIN_USUARIO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+    <value>Scripts\Usuario\LOGIN_USUARIO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="LOGIN_USUARIO1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Scripts\Usuario\LOGIN_USUARIO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="REGISTRAR_USUARIO" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Scripts\REGISTRAR_USUARIO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+    <value>Scripts\Usuario\REGISTRAR_USUARIO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="REGISTRAR_USUARIO1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Scripts\Usuario\REGISTRAR_USUARIO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="UPDATE_DIGITO_VERTICAL" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Scripts\UPDATE_DIGITO_VERTICAL.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+    <value>Scripts\DigitoVerificador\UPDATE_DIGITO_VERTICAL.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
 </root>

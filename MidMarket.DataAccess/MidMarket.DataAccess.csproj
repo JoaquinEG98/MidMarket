@@ -60,25 +60,25 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Scripts\GET_PERMISOS_USUARIO.sql" />
-    <Content Include="Scripts\GET_PATENTES_DE_FAMILIA.sql" />
-    <Content Include="Scripts\GET_FAMILIA_VALIDACION.sql" />
-    <Content Include="Scripts\BORRAR_PERMISO_USUARIO.sql" />
-    <Content Include="Scripts\UPDATE_DIGITO_VERTICAL.sql" />
-    <Content Include="Scripts\GET_USUARIO.sql" />
-    <Content Include="Scripts\GET_DIGITOS_HORIZONTALES.sql" />
-    <Content Include="Scripts\GUARDAR_PERMISO_USUARIO.sql" />
-    <Content Include="Scripts\GET_USUARIO_PERMISO.sql" />
-    <Content Include="Scripts\GET_FAMILIA_PATENTE.sql" />
-    <Content Include="Scripts\GET_PATENTES.sql" />
-    <Content Include="Scripts\GET_FAMILIAS.sql" />
-    <Content Include="Scripts\GUARDAR_FAMILIA.sql" />
-    <Content Include="Scripts\BORRAR_FAMILIA.sql" />
+    <Content Include="Scripts\Permiso\GET_PERMISOS_USUARIO.sql" />
+    <Content Include="Scripts\Permiso\GET_PATENTES_DE_FAMILIA.sql" />
+    <Content Include="Scripts\Permiso\GET_FAMILIA_VALIDACION.sql" />
+    <Content Include="Scripts\Permiso\BORRAR_PERMISO_USUARIO.sql" />
+    <Content Include="Scripts\DigitoVerificador\UPDATE_DIGITO_VERTICAL.sql" />
+    <Content Include="Scripts\Usuario\GET_USUARIO.sql" />
+    <Content Include="Scripts\DigitoVerificador\GET_DIGITOS_HORIZONTALES.sql" />
+    <Content Include="Scripts\Permiso\GUARDAR_PERMISO_USUARIO.sql" />
+    <Content Include="Scripts\Permiso\GET_USUARIO_PERMISO.sql" />
+    <Content Include="Scripts\Permiso\GET_FAMILIA_PATENTE.sql" />
+    <Content Include="Scripts\Permiso\GET_PATENTES.sql" />
+    <Content Include="Scripts\Permiso\GET_FAMILIAS.sql" />
+    <Content Include="Scripts\Permiso\GUARDAR_FAMILIA.sql" />
+    <Content Include="Scripts\Permiso\BORRAR_FAMILIA.sql" />
     <Content Include="Scripts\Helpers\CREAR_SECUENCIA_NUMERO_CUENTA.sql" />
-    <Content Include="Scripts\GET_USUARIOS.sql" />
-    <Content Include="Scripts\LOGIN_USUARIO.sql" />
-    <Content Include="Scripts\GUARDAR_COMPONENTE.sql" />
-    <Content Include="Scripts\REGISTRAR_USUARIO.sql" />
+    <Content Include="Scripts\Permiso\GET_USUARIOS.sql" />
+    <Content Include="Scripts\Usuario\LOGIN_USUARIO.sql" />
+    <Content Include="Scripts\Permiso\GUARDAR_COMPONENTE.sql" />
+    <Content Include="Scripts\Usuario\REGISTRAR_USUARIO.sql" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Scripts.resx">
@@ -96,5 +96,6 @@
       <Name>MidMarket.Seguridad</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
