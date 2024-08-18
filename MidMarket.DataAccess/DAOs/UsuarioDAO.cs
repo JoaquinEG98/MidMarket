@@ -1,10 +1,10 @@
-﻿using MidMarket.DataAccess.Interfaces;
-using System;
-using MidMarket.Entities;
-using MidMarket.DataAccess.Conexion;
-using System.Data;
+﻿using MidMarket.DataAccess.Conexion;
 using MidMarket.DataAccess.Helpers;
+using MidMarket.DataAccess.Interfaces;
+using MidMarket.Entities;
+using System;
 using System.Collections.Generic;
+using System.Data;
 
 namespace MidMarket.DataAccess.DAOs
 {
@@ -53,6 +53,16 @@ namespace MidMarket.DataAccess.DAOs
                 clientes = ClienteFill.FillListCliente(ds);
 
             return clientes;
+        }
+
+        public Cliente GetCliente(int clienteId)
+        {
+            _dataAccess.SelectCommandText = String.Format(Scripts.GET_USUARIO, clienteId);
+
+            DataSet ds = _dataAccess.ExecuteNonReader();
+            Cliente cliente = ds.Tables[0].Rows.Count <= 0 ? null : ClienteFill.FillObjectCliente(ds.Tables[0].Rows[0]);
+
+            return cliente;
         }
     }
 }

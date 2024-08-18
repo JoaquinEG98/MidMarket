@@ -153,6 +153,18 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SELECT TOP 1 cliente.Id_Cliente, cliente.Email, cliente.Password, cliente.Nombre, cliente.CUIT, cliente.Puntaje, cliente.DVH, cuenta.Id_Cuenta, cuenta.NumeroCuenta, cuenta.Saldo
+        ///FROM Cliente cliente
+        ///INNER JOIN Cuenta cuenta on cuenta.Id_Cliente = cliente.Id_Cliente
+        ///WHERE cliente.Id_Cliente = {0}.
+        /// </summary>
+        internal static string GET_USUARIO {
+            get {
+                return ResourceManager.GetString("GET_USUARIO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SELECT p.* FROM UsuarioPermiso up INNER JOIN Permiso p on p.Id_Permiso = up.Id_Patente WHERE Id_Cliente = {0}.
         /// </summary>
         internal static string GET_USUARIO_PERMISO {

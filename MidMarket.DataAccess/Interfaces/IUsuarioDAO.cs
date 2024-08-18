@@ -8,5 +8,6 @@ namespace MidMarket.DataAccess.Interfaces
         int RegistrarUsuario(Cliente cliente);
         Cliente Login(string email);
         List<Cliente> GetClientes();
+        Cliente GetCliente(int clienteId);
     }
 }

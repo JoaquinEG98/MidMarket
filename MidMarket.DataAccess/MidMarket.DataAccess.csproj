@@ -62,6 +62,7 @@
     <Content Include="Scripts\GET_PATENTES_DE_FAMILIA.sql" />
     <Content Include="Scripts\GET_FAMILIA_VALIDACION.sql" />
     <Content Include="Scripts\BORRAR_PERMISO_USUARIO.sql" />
+    <Content Include="Scripts\GET_USUARIO.sql" />
     <Content Include="Scripts\GUARDAR_PERMISO_USUARIO.sql" />
     <Content Include="Scripts\GET_USUARIO_PERMISO.sql" />
     <Content Include="Scripts\GET_FAMILIA_PATENTE.sql" />

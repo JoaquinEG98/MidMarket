@@ -1,12 +1,11 @@
 ﻿using MidMarket.Entities.Composite;
-using MidMarket.Entities.Enums;
 using System.Collections.Generic;
 
 namespace MidMarket.Entities
 {
     public class Cliente : DigitoVerificadorHorizontal
     {
-        List<Componente> _permisos;
+        List<Componente> _permisos = new List<Componente>();
 
         public int Id { get; set; }
         public string Email { get; set; }

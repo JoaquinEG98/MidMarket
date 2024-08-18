@@ -12,10 +12,12 @@ namespace MidMarket.Business.Services
     public class UsuarioService : IUsuarioService
     {
         private readonly IUsuarioDAO _usuarioDataAccess;
+        private readonly IPermisoService _permisoService;
 
         public UsuarioService()
         {
             _usuarioDataAccess = DependencyResolver.Resolve<IUsuarioDAO>();
+            _permisoService = DependencyResolver.Resolve<IPermisoService>();
         }
 
         public int RegistrarUsuario(Cliente cliente)
@@ -56,6 +58,7 @@ namespace MidMarket.Business.Services
                         Puntaje = cliente.Puntaje,
                         Cuenta = cliente.Cuenta,
                     };
+                    _permisoService.GetComponenteUsuario(cliente);
 
                     return clienteDesencriptado;
                 }
@@ -89,6 +92,24 @@ namespace MidMarket.Business.Services
             }
 
             return clientesDesencriptados;
+        }
+
+        public Cliente GetCliente(int clienteId)
+        {
+            Cliente cliente = _usuarioDataAccess.GetCliente(clienteId);
+
+            var clienteDesencriptado = new Cliente()
+            {
+                Id = cliente.Id,
+                Email = Encriptacion.DesencriptarAES(cliente.Email),
+                RazonSocial = Encriptacion.DesencriptarAES(cliente.RazonSocial),
+                CUIT = Encriptacion.DesencriptarAES(cliente.CUIT),
+                Puntaje = cliente.Puntaje,
+                Cuenta = cliente.Cuenta,
+            };
+            _permisoService.GetComponenteUsuario(cliente);
+
+            return clienteDesencriptado;
         }
     }
 }
