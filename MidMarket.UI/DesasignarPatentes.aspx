@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DesasignarPatentes.aspx.cs" Inherits="MidMarket.UI.DesasignarPatentes" MasterPageFile="~/Site.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DesasignarPatentes.aspx.cs" Inherits="MidMarket.UI.DesasignarPatentes" MasterPageFile="~/Site.Master" Title="Desasignar Patentes" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="desasignar-patentes-container" class="container">

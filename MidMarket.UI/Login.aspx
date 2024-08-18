@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
+    <title>MidMarket - Login</title>
     <link rel="stylesheet" href="Styles/registro_login_style.css">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
