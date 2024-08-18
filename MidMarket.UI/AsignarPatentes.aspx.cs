@@ -86,6 +86,8 @@ namespace MidMarket.UI
 
                 _permisoService.GuardarPermiso(ClienteSeleccionado);
 
+                CargarPatentes(ClienteSeleccionado.Id);
+
                 AlertHelper.MostrarMensaje(this, "Patentes asignadas correctamente.");
             }
             catch (Exception ex)
