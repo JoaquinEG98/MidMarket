@@ -21,5 +21,9 @@ namespace MidMarket.Entities
                 return _permisos;
             }
         }
+        public void EliminarPermisosPorId(List<int> ids)
+        {
+            _permisos.RemoveAll(p => ids.Contains(p.Id));
+        }
     }
 }
