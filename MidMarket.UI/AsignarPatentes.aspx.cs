@@ -17,7 +17,7 @@ namespace MidMarket.UI
         public List<Cliente> Clientes { get; set; } = new List<Cliente>();
         public IList<Componente> PatentesAsignadas { get; set; } = new List<Componente>();
         public IList<Patente> PatentesDisponibles { get; set; } = new List<Patente>();
-        public int UsuarioSeleccionadoId { get; set; }
+        public int ClienteSeleccionadoId { get; set; }
         public Cliente ClienteSeleccionado { get; set; }
 
         public AsignarPatentes()
@@ -34,19 +34,22 @@ namespace MidMarket.UI
 
                 if (IsPostBack)
                 {
+                    string filtroUsuario = Request.Form["filtroUsuario"];
+                    ViewState["FiltroUsuario"] = filtroUsuario;
+
                     if (int.TryParse(Request.Form["usuarioSeleccionado"], out int usuarioId))
                     {
-                        UsuarioSeleccionadoId = usuarioId;
+                        ClienteSeleccionadoId = usuarioId;
                         ViewState["UsuarioSeleccionadoId"] = usuarioId;
                     }
                     else if (ViewState["UsuarioSeleccionadoId"] != null)
                     {
-                        UsuarioSeleccionadoId = (int)ViewState["UsuarioSeleccionadoId"];
+                        ClienteSeleccionadoId = (int)ViewState["UsuarioSeleccionadoId"];
                     }
 
-                    if (UsuarioSeleccionadoId > 0)
+                    if (ClienteSeleccionadoId > 0)
                     {
-                        CargarPatentes(UsuarioSeleccionadoId);
+                        CargarPatentes(ClienteSeleccionadoId);
                     }
                 }
             }
@@ -73,7 +76,7 @@ namespace MidMarket.UI
                 var patentesSeleccionadas = Request.Form["patentesSeleccionadas"];
                 var patentesAsignadas = Request.Form["patentesAsignadas"];
 
-                
+
                 var idsPatentesSeleccionadas = patentesSeleccionadas?.Split(',').Select(int.Parse).ToList() ?? new List<int>();
                 //var idsPatentesAsignadas = patentesAsignadas?.Split(',').Select(int.Parse).ToList() ?? new List<int>();
 

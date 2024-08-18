@@ -6,12 +6,17 @@
             <h2>Asignación de Patente a Usuario</h2>
 
             <div class="form-group">
+                <label for="filtroUsuario">Filtrar Usuario:</label>
+                <input type="text" id="filtroUsuario" name="filtroUsuario" value="<%= ViewState["FiltroUsuario"] ?? "" %>" oninput="filtrarUsuarios()" placeholder="Escribe para buscar...">
+            </div>
+
+            <div class="form-group">
                 <label for="selectUsuario">Seleccionar Usuario:</label>
                 <select id="selectUsuario" name="usuarioSeleccionado" onchange="this.form.submit()">
                     <option value="">Selecciona un usuario</option>
                     <% foreach (var cliente in Clientes)
                         { %>
-                    <option value="<%= cliente.Id %>" <%= cliente.Id == UsuarioSeleccionadoId ? "selected" : "" %>>
+                    <option value="<%= cliente.Id %>" <%= cliente.Id == ClienteSeleccionadoId ? "selected" : "" %>>
                         <%= cliente.RazonSocial %>
                     </option>
                     <% } %>
@@ -61,7 +66,6 @@
                 </tbody>
             </table>
 
-            <!-- Inputs hidden para almacenar los IDs -->
             <input type="hidden" id="patentesSeleccionadas" name="patentesSeleccionadas">
             <input type="hidden" id="patentesAsignadas" name="patentesAsignadas">
 
@@ -86,6 +90,17 @@
             document.getElementById('patentesAsignadas').value = patentesAsignadasIds.join(',');
 
             return true;
+        }
+
+        function filtrarUsuarios() {
+            const filtro = document.getElementById('filtroUsuario').value.toLowerCase();
+            const selectUsuario = document.getElementById('selectUsuario');
+            const opciones = selectUsuario.getElementsByTagName('option');
+
+            for (let i = 1; i < opciones.length; i++) {
+                const texto = opciones[i].textContent.toLowerCase();
+                opciones[i].style.display = texto.includes(filtro) ? '' : 'none';
+            }
         }
     </script>
 </asp:Content>
