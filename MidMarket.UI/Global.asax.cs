@@ -30,6 +30,7 @@ namespace MidMarket.UI
 
             Container.RegisterType<IUsuarioService, UsuarioService>();
             Container.RegisterType<IPermisoService, PermisoService>();
+            Container.RegisterType<IDigitoVerificadorService, DigitoVerificadorService>();
         }
     }
 }

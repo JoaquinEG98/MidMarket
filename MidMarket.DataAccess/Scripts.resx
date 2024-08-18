@@ -124,6 +124,9 @@
   <data name="BORRAR_PERMISO_USUARIO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\BORRAR_PERMISO_USUARIO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="GET_DIGITOS_HORIZONTALES" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Scripts\GET_DIGITOS_HORIZONTALES.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="GET_FAMILIAS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\GET_FAMILIAS.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
@@ -165,5 +168,8 @@
   </data>
   <data name="REGISTRAR_USUARIO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\REGISTRAR_USUARIO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="UPDATE_DIGITO_VERTICAL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Scripts\UPDATE_DIGITO_VERTICAL.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
 </root>

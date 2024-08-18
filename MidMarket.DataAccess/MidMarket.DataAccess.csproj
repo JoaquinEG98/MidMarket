@@ -44,9 +44,11 @@
   <ItemGroup>
     <Compile Include="Conexion\BBDD.cs" />
     <Compile Include="Conexion\Conexion.cs" />
+    <Compile Include="DAOs\DigitoVerificadorDAO.cs" />
     <Compile Include="DAOs\PermisoDAO.cs" />
     <Compile Include="Helpers\ClienteFill.cs" />
     <Compile Include="Helpers\PermisoFill.cs" />
+    <Compile Include="Interfaces\IDigitoVerificadorDAO.cs" />
     <Compile Include="Interfaces\IPermisoDAO.cs" />
     <Compile Include="Interfaces\IUsuarioDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -62,7 +64,9 @@
     <Content Include="Scripts\GET_PATENTES_DE_FAMILIA.sql" />
     <Content Include="Scripts\GET_FAMILIA_VALIDACION.sql" />
     <Content Include="Scripts\BORRAR_PERMISO_USUARIO.sql" />
+    <Content Include="Scripts\UPDATE_DIGITO_VERTICAL.sql" />
     <Content Include="Scripts\GET_USUARIO.sql" />
+    <Content Include="Scripts\GET_DIGITOS_HORIZONTALES.sql" />
     <Content Include="Scripts\GUARDAR_PERMISO_USUARIO.sql" />
     <Content Include="Scripts\GET_USUARIO_PERMISO.sql" />
     <Content Include="Scripts\GET_FAMILIA_PATENTE.sql" />
@@ -86,6 +90,10 @@
     <ProjectReference Include="..\MidMarket.Entities\MidMarket.Entities.csproj">
       <Project>{4c04a0d0-0b92-4a62-a026-7ad24d07d47e}</Project>
       <Name>MidMarket.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MidMarket.Seguridad\MidMarket.Seguridad.csproj">
+      <Project>{eb46d7d0-e917-46a9-affe-c1418e239d3c}</Project>
+      <Name>MidMarket.Seguridad</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

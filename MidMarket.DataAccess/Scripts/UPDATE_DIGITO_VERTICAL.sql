@@ -1,0 +1,1 @@
+﻿UPDATE DigitoVerificador SET Valor = @Valor OUTPUT inserted.Id_DigitoVerificador WHERE Tabla = @Tabla

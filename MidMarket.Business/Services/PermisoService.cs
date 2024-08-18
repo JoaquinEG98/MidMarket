@@ -14,10 +14,12 @@ namespace MidMarket.Business.Services
     public class PermisoService : IPermisoService
     {
         private readonly IPermisoDAO _permisoDataAccess;
+        private readonly IDigitoVerificadorService _digitoVerificadorService;
 
         public PermisoService()
         {
             _permisoDataAccess = DependencyResolver.Resolve<IPermisoDAO>();
+            _digitoVerificadorService = DependencyResolver.Resolve<IDigitoVerificadorService>();
         }
 
         public void GuardarFamiliaCreada(Familia familia)
@@ -51,7 +53,7 @@ namespace MidMarket.Business.Services
                     }
                 }
 
-                //_digitoVerificador.ActualizarDVV("UsuarioPermiso");
+                _digitoVerificadorService.ActualizarDVV("UsuarioPermiso");
 
                 scope.Complete();
             }

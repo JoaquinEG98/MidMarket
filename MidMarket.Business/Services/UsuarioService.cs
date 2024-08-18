@@ -13,11 +13,13 @@ namespace MidMarket.Business.Services
     {
         private readonly IUsuarioDAO _usuarioDataAccess;
         private readonly IPermisoService _permisoService;
+        private readonly IDigitoVerificadorService _digitoVerificadorService;
 
         public UsuarioService()
         {
             _usuarioDataAccess = DependencyResolver.Resolve<IUsuarioDAO>();
             _permisoService = DependencyResolver.Resolve<IPermisoService>();
+            _digitoVerificadorService = DependencyResolver.Resolve<IDigitoVerificadorService>();
         }
 
         public int RegistrarUsuario(Cliente cliente)
@@ -31,6 +33,8 @@ namespace MidMarket.Business.Services
                 cliente.DVH = DigitoVerificador.GenerarDVH(cliente);
 
                 int id = _usuarioDataAccess.RegistrarUsuario(cliente);
+
+                _digitoVerificadorService.ActualizarDVV("Cliente");
 
                 scope.Complete();
 

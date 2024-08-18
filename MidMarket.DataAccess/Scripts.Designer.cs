@@ -79,6 +79,15 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SELECT * FROM {0}.
+        /// </summary>
+        internal static string GET_DIGITOS_HORIZONTALES {
+            get {
+                return ResourceManager.GetString("GET_DIGITOS_HORIZONTALES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to WITH RECURSIVO AS (
         ///    SELECT fp.Id_Padre, fp.Id_Hijo 
         ///    FROM FamiliaPatente fp 
@@ -204,7 +213,7 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to INSERT INTO UsuarioPermiso (UsuarioId, PatenteId, DVH) VALUES (@ClienteId, @PatenteId, @DVH).
+        ///   Looks up a localized string similar to INSERT INTO UsuarioPermiso (Id_Cliente, Id_Patente, DVH) VALUES (@ClienteId, @PatenteId, @DVH).
         /// </summary>
         internal static string GUARDAR_PERMISO_USUARIO {
             get {
@@ -237,6 +246,15 @@ namespace MidMarket.DataAccess {
         internal static string REGISTRAR_USUARIO {
             get {
                 return ResourceManager.GetString("REGISTRAR_USUARIO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to UPDATE DigitoVerificador SET Valor = @Valor OUTPUT inserted.Id_DigitoVerificador WHERE Tabla = @Tabla.
+        /// </summary>
+        internal static string UPDATE_DIGITO_VERTICAL {
+            get {
+                return ResourceManager.GetString("UPDATE_DIGITO_VERTICAL", resourceCulture);
             }
         }
     }
