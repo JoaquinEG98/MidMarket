@@ -51,7 +51,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Bitácora</a>
+                    <a class="nav-link" href="/Bitacora.aspx">Bitácora</a>
                 </li>
 
                 <li class="nav-item">
