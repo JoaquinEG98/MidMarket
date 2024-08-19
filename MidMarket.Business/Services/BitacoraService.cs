@@ -5,6 +5,7 @@ using MidMarket.Entities.Enums;
 using MidMarket.DataAccess.Interfaces;
 using System.Collections.Generic;
 using MidMarket.Business.Interfaces;
+using MidMarket.Seguridad;
 
 namespace MidMarket.Business.Services
 {
@@ -28,7 +29,7 @@ namespace MidMarket.Business.Services
                     Cliente = cliente,
                     Descripcion = descripcion,
                     Criticidad = criticidad,
-                    Fecha = DateTime.Now,
+                    Fecha = ClockWrapper.Now(),
                 };
 
                 id = _bitacoraDAO.AltaBitacora(bitacora);
