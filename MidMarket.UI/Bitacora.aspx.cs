@@ -77,6 +77,10 @@ namespace MidMarket.UI
 
                 Movimientos = todosMovimientos.Skip(PaginaActual * itemsPorPagina).Take(itemsPorPagina).ToList();
 
+                // Actualizar los estados de los botones
+                btnAnterior.Enabled = PaginaActual > 0;
+                btnSiguiente.Enabled = PaginaActual < TotalPaginas - 1;
+
                 // Actualizar la UI
                 DataBind();
             }
@@ -89,6 +93,7 @@ namespace MidMarket.UI
 
         protected void btnAnterior_Click(object sender, EventArgs e)
         {
+            // Verifica si la página actual es mayor a 0 antes de retroceder
             if (PaginaActual > 0)
             {
                 PaginaActual--;
