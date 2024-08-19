@@ -11,12 +11,10 @@ namespace MidMarket.Business.Services
     public class BitacoraService : IBitacoraService
     {
         private readonly IBitacoraDAO _bitacoraDAO;
-        private readonly IUsuarioService _usuarioService;
 
         public BitacoraService()
         {
             _bitacoraDAO = DependencyResolver.Resolve<IBitacoraDAO>();
-            //_usuarioService = DependencyResolver.Resolve<IUsuarioService>();
         }
 
         public int AltaBitacora(string descripcion, Criticidad criticidad, Cliente cliente)
@@ -43,17 +41,8 @@ namespace MidMarket.Business.Services
         public List<Bitacora> GetBitacora()
         {
             List<Bitacora> bitacora = _bitacoraDAO.GetBitacora();
-            List<Bitacora> bitacoraFull = new List<Bitacora>();
 
-            foreach (var item in bitacora)
-            {
-                Bitacora bitacoraItem = item;
-                //bitacoraItem.Cliente = _usuarioService.GetCliente(item.Cliente.Id);
-
-                bitacoraFull.Add(bitacoraItem);
-            }
-
-            return bitacoraFull;
+            return bitacora;
         }
     }
 }

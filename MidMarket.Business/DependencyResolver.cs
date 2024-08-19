@@ -14,6 +14,8 @@ namespace MidMarket.Business
         {
             Container = new UnityContainer();
 
+            Container.RegisterType<ISessionManager, SessionManager>();
+
             Container.RegisterType<IUsuarioDAO, UsuarioDAO>();
             Container.RegisterType<IPermisoDAO, PermisoDAO>();
             Container.RegisterType<IDigitoVerificadorDAO, DigitoVerificadorDAO>();

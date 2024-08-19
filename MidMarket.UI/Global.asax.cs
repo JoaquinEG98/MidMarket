@@ -4,10 +4,12 @@ using MidMarket.Business.Services;
 using MidMarket.DataAccess.DAOs;
 using MidMarket.DataAccess.Interfaces;
 using System;
+using System.ComponentModel;
 using System.Web;
 using System.Web.Optimization;
 using System.Web.Routing;
 using Unity;
+using Unity.Injection;
 
 namespace MidMarket.UI
 {
@@ -27,6 +29,8 @@ namespace MidMarket.UI
         private static void RegisterDependencies()
         {
             Container = new UnityContainer();
+
+            Container.RegisterType<ISessionManager, SessionManager>();
 
             Container.RegisterType<IUsuarioService, UsuarioService>();
             Container.RegisterType<IPermisoService, PermisoService>();

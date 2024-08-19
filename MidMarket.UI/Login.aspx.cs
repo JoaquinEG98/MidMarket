@@ -8,10 +8,12 @@ namespace MidMarket.UI
 {
 	public partial class Login : System.Web.UI.Page
 	{
+        private readonly ISessionManager _sessionManager;
         private readonly IUsuarioService _usuarioService;
 
         public Login()
         {
+            _sessionManager = Global.Container.Resolve<ISessionManager>();
             _usuarioService = Global.Container.Resolve<IUsuarioService>();
         }
 
@@ -28,7 +30,8 @@ namespace MidMarket.UI
 
 				if (cliente != null)
 				{
-                    Session["Usuario"] = cliente;
+                    _sessionManager.Set("Usuario", cliente);    
+
                     Response.Redirect("Default.aspx", false);
                     Context.ApplicationInstance.CompleteRequest();
                 }

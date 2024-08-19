@@ -13,13 +13,17 @@ namespace MidMarket.Business.Services
 {
     public class PermisoService : IPermisoService
     {
+        private readonly ISessionManager _sessionManager;
         private readonly IPermisoDAO _permisoDataAccess;
         private readonly IDigitoVerificadorService _digitoVerificadorService;
+        private readonly IBitacoraService _bitacoraService;
 
         public PermisoService()
         {
+            _sessionManager = DependencyResolver.Resolve<ISessionManager>();
             _permisoDataAccess = DependencyResolver.Resolve<IPermisoDAO>();
             _digitoVerificadorService = DependencyResolver.Resolve<IDigitoVerificadorService>();
+            _bitacoraService = DependencyResolver.Resolve<IBitacoraService>();
         }
 
         public void GuardarFamiliaCreada(Familia familia)
@@ -52,6 +56,9 @@ namespace MidMarket.Business.Services
                         _permisoDataAccess.GuardarPermiso(cliente, item, DVH);
                     }
                 }
+
+                var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+                _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) cambió los permisos de: {cliente.RazonSocial} ({cliente.Id})", Criticidad.Alta, clienteLogueado);
 
                 _digitoVerificadorService.ActualizarDVV("UsuarioPermiso");
 

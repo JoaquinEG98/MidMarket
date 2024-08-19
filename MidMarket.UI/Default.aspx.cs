@@ -1,4 +1,5 @@
-﻿using MidMarket.Business.Interfaces;
+﻿using MidMarket.Business;
+using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
 using MidMarket.UI.Helpers;
 using System;
@@ -10,10 +11,13 @@ namespace MidMarket.UI
     public partial class _Default : Page
     {
         public Cliente Cliente { get; set; }
+
+        private readonly ISessionManager _sessionManager;
         private readonly IUsuarioService _usuarioService;
 
         public _Default()
         {
+            _sessionManager = Global.Container.Resolve<ISessionManager>();
             _usuarioService = Global.Container.Resolve<IUsuarioService>();
         }
 
@@ -23,7 +27,7 @@ namespace MidMarket.UI
             {
                 try
                 {
-                    Cliente = Session["Usuario"] as Cliente;
+                    Cliente = _sessionManager.Get<Cliente>("Usuario");
 
                     if (Cliente == null)
                         Response.Redirect("Login.aspx");
