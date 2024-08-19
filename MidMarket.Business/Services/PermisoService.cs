@@ -29,11 +29,17 @@ namespace MidMarket.Business.Services
         public void GuardarFamiliaCreada(Familia familia)
         {
             _permisoDataAccess.GuardarFamiliaCreada(familia);
+
+            var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+            _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) guardó la familia", Criticidad.Alta, clienteLogueado);
         }
 
         public int GuardarPatenteFamilia(Componente componente, bool familia)
         {
             int id = _permisoDataAccess.GuardarPatenteFamilia(componente, familia);
+
+            var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+            _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) guardó la patente/familia", Criticidad.Alta, clienteLogueado);
 
             return id;
         }

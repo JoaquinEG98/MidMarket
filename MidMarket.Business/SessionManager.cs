@@ -22,5 +22,10 @@ namespace MidMarket.Business
         {
             Session.Remove(key);
         }
+
+        public void AbandonSession()
+        {
+            Session.Abandon();
+        }
     }
 }

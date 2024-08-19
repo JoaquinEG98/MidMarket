@@ -11,6 +11,7 @@ namespace MidMarket.Business.Services
 {
     public class UsuarioService : IUsuarioService
     {
+        private readonly ISessionManager _sessionManager;
         private readonly IUsuarioDAO _usuarioDataAccess;
         private readonly IPermisoService _permisoService;
         private readonly IDigitoVerificadorService _digitoVerificadorService;
@@ -18,6 +19,7 @@ namespace MidMarket.Business.Services
 
         public UsuarioService()
         {
+            _sessionManager = DependencyResolver.Resolve<ISessionManager>();
             _usuarioDataAccess = DependencyResolver.Resolve<IUsuarioDAO>();
             _permisoService = DependencyResolver.Resolve<IPermisoService>();
             _digitoVerificadorService = DependencyResolver.Resolve<IDigitoVerificadorService>();
@@ -77,6 +79,15 @@ namespace MidMarket.Business.Services
             }
 
             return null;
+        }
+
+        public void Logout()
+        {
+            var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+            _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) cerró sesión", Criticidad.Baja, clienteLogueado);
+            
+            _sessionManager.Remove("Usuario");
+            _sessionManager.AbandonSession();
         }
 
         public List<Cliente> GetClientes()
