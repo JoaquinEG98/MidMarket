@@ -39,7 +39,7 @@ namespace MidMarket.UI
             }
         }
 
-        protected int GetPaginaActual() => PaginaActual + 1; // Esto se hace 1-indexado para mostrar al usuario
+        protected int GetPaginaActual() => PaginaActual + 1;
         protected int GetTotalPaginas() => TotalPaginas;
 
         public Bitacora()
@@ -52,7 +52,7 @@ namespace MidMarket.UI
         {
             if (!IsPostBack)
             {
-                CargarClientes(); // Cargar la lista de clientes en el DropDownList
+                CargarClientes();
                 PaginaActual = 0;
                 CargarBitacora();
             }
@@ -62,13 +62,13 @@ namespace MidMarket.UI
         {
             try
             {
-                var clientes = _usuarioService.GetClientes(); // Obtener la lista de clientes
-                ddlUsuario.Items.Clear(); // Limpiar los elementos actuales del DropDownList
-                ddlUsuario.Items.Add(new ListItem("Todos", "")); // Opción para mostrar todos los clientes
+                var clientes = _usuarioService.GetClientes();
+                ddlUsuario.Items.Clear();
+                ddlUsuario.Items.Add(new ListItem("Todos", ""));
 
                 foreach (var cliente in clientes)
                 {
-                    ddlUsuario.Items.Add(new ListItem(cliente.RazonSocial, cliente.RazonSocial)); // Agregar los clientes al DropDownList
+                    ddlUsuario.Items.Add(new ListItem(cliente.RazonSocial, cliente.RazonSocial));
                 }
             }
             catch (Exception ex)
@@ -83,19 +83,16 @@ namespace MidMarket.UI
             {
                 var todosMovimientos = _bitacoraService.GetBitacora();
 
-                // Filtrar por usuario
                 if (!string.IsNullOrEmpty(ddlUsuario.SelectedValue))
                 {
                     todosMovimientos = todosMovimientos.Where(m => m.Cliente.RazonSocial == ddlUsuario.SelectedValue).ToList();
                 }
 
-                // Filtrar por criticidad
                 if (!string.IsNullOrEmpty(ddlCriticidad.SelectedValue))
                 {
                     todosMovimientos = todosMovimientos.Where(m => m.Criticidad.ToString() == ddlCriticidad.SelectedValue).ToList();
                 }
 
-                // Filtrar por fecha
                 DateTime fechaDesde;
                 DateTime fechaHasta;
 
@@ -106,22 +103,18 @@ namespace MidMarket.UI
 
                 if (DateTime.TryParse(txtFechaHasta.Text, out fechaHasta))
                 {
-                    // Asegurar que la fecha hasta incluya todo el día
                     fechaHasta = fechaHasta.AddDays(1).AddSeconds(-1);
                     todosMovimientos = todosMovimientos.Where(m => m.Fecha <= fechaHasta).ToList();
                 }
 
-                // Paginación
                 const int itemsPorPagina = 10;
                 TotalPaginas = (int)Math.Ceiling((double)todosMovimientos.Count / itemsPorPagina);
 
                 Movimientos = todosMovimientos.Skip(PaginaActual * itemsPorPagina).Take(itemsPorPagina).ToList();
 
-                // Actualizar los estados de los botones
                 btnAnterior.Enabled = PaginaActual > 0;
                 btnSiguiente.Enabled = PaginaActual < TotalPaginas - 1;
 
-                // Actualizar la UI
                 DataBind();
             }
             catch (Exception ex)
@@ -133,7 +126,6 @@ namespace MidMarket.UI
 
         protected void btnAnterior_Click(object sender, EventArgs e)
         {
-            // Verifica si la página actual es mayor a 0 antes de retroceder
             if (PaginaActual > 0)
             {
                 PaginaActual--;
@@ -152,7 +144,7 @@ namespace MidMarket.UI
 
         protected void FiltrarBitacora(object sender, EventArgs e)
         {
-            PaginaActual = 0; // Reiniciar a la primera página cuando se aplica un filtro
+            PaginaActual = 0;
             CargarBitacora();
         }
     }
