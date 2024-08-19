@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bitacora.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Composite\Componente.cs" />
     <Compile Include="Composite\Familia.cs" />
@@ -48,6 +49,7 @@
     <Compile Include="Cuenta.cs" />
     <Compile Include="DigitoVerificadorHorizontal.cs" />
     <Compile Include="DTOs\UsuarioPermisoDTO.cs" />
+    <Compile Include="Enums\Criticidad.cs" />
     <Compile Include="Enums\Permiso.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

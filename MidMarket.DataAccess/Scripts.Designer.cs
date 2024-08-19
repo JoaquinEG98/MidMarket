@@ -61,6 +61,16 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to INSERT INTO Bitacora (Id_Cliente, Descripcion, Criticidad, Fecha) 
+        ///OUTPUT inserted.Id_Bitacora VALUES (@ClienteId, @Descripcion, @Criticidad, @Fecha).
+        /// </summary>
+        internal static string ALTA_BITACORA {
+            get {
+                return ResourceManager.GetString("ALTA_BITACORA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to DELETE FROM FamiliaPatente WHERE Id_Padre = @PadreId.
         /// </summary>
         internal static string BORRAR_FAMILIA {
@@ -75,6 +85,15 @@ namespace MidMarket.DataAccess {
         internal static string BORRAR_PERMISO_USUARIO {
             get {
                 return ResourceManager.GetString("BORRAR_PERMISO_USUARIO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT Id_Bitacora, Id_Cliente, Descripcion, Criticidad, Fecha FROM Bitacora ORDER BY Fecha DESC.
+        /// </summary>
+        internal static string GET_BITACORA {
+            get {
+                return ResourceManager.GetString("GET_BITACORA", resourceCulture);
             }
         }
         

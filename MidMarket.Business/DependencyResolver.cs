@@ -17,9 +17,12 @@ namespace MidMarket.Business
             Container.RegisterType<IUsuarioDAO, UsuarioDAO>();
             Container.RegisterType<IPermisoDAO, PermisoDAO>();
             Container.RegisterType<IDigitoVerificadorDAO, DigitoVerificadorDAO>();
+            Container.RegisterType<IBitacoraDAO, BitacoraDAO>();
 
             Container.RegisterType<IPermisoService, PermisoService>();
             Container.RegisterType<IDigitoVerificadorService, DigitoVerificadorService>();
+            Container.RegisterType<IUsuarioService, UsuarioService>();
+            Container.RegisterType<IBitacoraService, BitacoraService>();
         }
 
         public static T Resolve<T>()
