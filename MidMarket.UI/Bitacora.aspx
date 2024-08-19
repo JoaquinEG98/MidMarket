@@ -20,6 +20,18 @@
                     <asp:ListItem Text="Alta" Value="Alta"></asp:ListItem>
                 </asp:DropDownList>
             </div>
+
+            <div class="form-group">
+                <label for="filterFechaDesde">Desde:</label>
+                <asp:TextBox ID="txtFechaDesde" runat="server" CssClass="filter-input" TextMode="Date"></asp:TextBox>
+            </div>
+
+            <div class="form-group">
+                <label for="filterFechaHasta">Hasta:</label>
+                <asp:TextBox ID="txtFechaHasta" runat="server" CssClass="filter-input" TextMode="Date"></asp:TextBox>
+            </div>
+
+            <asp:Button ID="btnFiltrarFechas" runat="server" Text="Filtrar" CssClass="submit-btn" OnClick="FiltrarBitacora" />
         </div>
 
         <table id="tablaBitacora">

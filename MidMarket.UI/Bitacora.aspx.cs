@@ -83,15 +83,32 @@ namespace MidMarket.UI
             {
                 var todosMovimientos = _bitacoraService.GetBitacora();
 
-                // Filtrar por usuario y criticidad
+                // Filtrar por usuario
                 if (!string.IsNullOrEmpty(ddlUsuario.SelectedValue))
                 {
                     todosMovimientos = todosMovimientos.Where(m => m.Cliente.RazonSocial == ddlUsuario.SelectedValue).ToList();
                 }
 
+                // Filtrar por criticidad
                 if (!string.IsNullOrEmpty(ddlCriticidad.SelectedValue))
                 {
                     todosMovimientos = todosMovimientos.Where(m => m.Criticidad.ToString() == ddlCriticidad.SelectedValue).ToList();
+                }
+
+                // Filtrar por fecha
+                DateTime fechaDesde;
+                DateTime fechaHasta;
+
+                if (DateTime.TryParse(txtFechaDesde.Text, out fechaDesde))
+                {
+                    todosMovimientos = todosMovimientos.Where(m => m.Fecha >= fechaDesde).ToList();
+                }
+
+                if (DateTime.TryParse(txtFechaHasta.Text, out fechaHasta))
+                {
+                    // Asegurar que la fecha hasta incluya todo el día
+                    fechaHasta = fechaHasta.AddDays(1).AddSeconds(-1);
+                    todosMovimientos = todosMovimientos.Where(m => m.Fecha <= fechaHasta).ToList();
                 }
 
                 // Paginación
