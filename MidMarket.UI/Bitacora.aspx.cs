@@ -3,6 +3,7 @@ using MidMarket.UI.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Web.UI.WebControls;
 using Unity;
 
 namespace MidMarket.UI
@@ -10,6 +11,7 @@ namespace MidMarket.UI
     public partial class Bitacora : System.Web.UI.Page
     {
         private readonly IBitacoraService _bitacoraService;
+        private readonly IUsuarioService _usuarioService;
 
         public List<Entities.Bitacora> Movimientos { get; set; } = new List<Entities.Bitacora>();
 
@@ -43,14 +45,35 @@ namespace MidMarket.UI
         public Bitacora()
         {
             _bitacoraService = Global.Container.Resolve<IBitacoraService>();
+            _usuarioService = Global.Container.Resolve<IUsuarioService>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
+                CargarClientes(); // Cargar la lista de clientes en el DropDownList
                 PaginaActual = 0;
                 CargarBitacora();
+            }
+        }
+
+        private void CargarClientes()
+        {
+            try
+            {
+                var clientes = _usuarioService.GetClientes(); // Obtener la lista de clientes
+                ddlUsuario.Items.Clear(); // Limpiar los elementos actuales del DropDownList
+                ddlUsuario.Items.Add(new ListItem("Todos", "")); // Opción para mostrar todos los clientes
+
+                foreach (var cliente in clientes)
+                {
+                    ddlUsuario.Items.Add(new ListItem(cliente.RazonSocial, cliente.RazonSocial)); // Agregar los clientes al DropDownList
+                }
+            }
+            catch (Exception ex)
+            {
+                AlertHelper.MostrarMensaje(this, $"Error al cargar la lista de clientes: {ex.Message}.");
             }
         }
 

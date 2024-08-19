@@ -8,10 +8,6 @@
             <div class="form-group">
                 <label for="filterUsuario">Filtrar por Usuario:</label>
                 <asp:DropDownList ID="ddlUsuario" runat="server" CssClass="filter-select" AutoPostBack="true" OnSelectedIndexChanged="FiltrarBitacora">
-                    <asp:ListItem Text="Todos" Value=""></asp:ListItem>
-                    <asp:ListItem Text="Usuario 1" Value="Usuario 1"></asp:ListItem>
-                    <asp:ListItem Text="Usuario 2" Value="Usuario 2"></asp:ListItem>
-                    <asp:ListItem Text="Usuario 3" Value="Usuario 3"></asp:ListItem>
                 </asp:DropDownList>
             </div>
 
