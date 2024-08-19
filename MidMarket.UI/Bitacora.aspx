@@ -7,23 +7,23 @@
         <div class="filter-container">
             <div class="form-group">
                 <label for="filterUsuario">Filtrar por Usuario:</label>
-                <asp:DropDownList ID="ddlUsuario" runat="server" CssClass="filter-select">
-                    <asp:ListItem Value="1">Usuario 1</asp:ListItem>
-                    <asp:ListItem Value="2">Usuario 2</asp:ListItem>
-                    <asp:ListItem Value="3">Usuario 3</asp:ListItem>
+                <asp:DropDownList ID="ddlUsuario" runat="server" CssClass="filter-select" AutoPostBack="true" OnSelectedIndexChanged="FiltrarBitacora">
+                    <asp:ListItem Text="Todos" Value=""></asp:ListItem>
+                    <asp:ListItem Text="Usuario 1" Value="Usuario 1"></asp:ListItem>
+                    <asp:ListItem Text="Usuario 2" Value="Usuario 2"></asp:ListItem>
+                    <asp:ListItem Text="Usuario 3" Value="Usuario 3"></asp:ListItem>
                 </asp:DropDownList>
             </div>
 
             <div class="form-group">
                 <label for="filterCriticidad">Filtrar por Criticidad:</label>
-                <asp:DropDownList ID="ddlCriticidad" runat="server" CssClass="filter-select">
-                    <asp:ListItem Value="Alta">Alta</asp:ListItem>
-                    <asp:ListItem Value="Media">Media</asp:ListItem>
-                    <asp:ListItem Value="Baja">Baja</asp:ListItem>
+                <asp:DropDownList ID="ddlCriticidad" runat="server" CssClass="filter-select" AutoPostBack="true" OnSelectedIndexChanged="FiltrarBitacora">
+                    <asp:ListItem Text="Todas" Value=""></asp:ListItem>
+                    <asp:ListItem Text="Baja" Value="Baja"></asp:ListItem>
+                    <asp:ListItem Text="Media" Value="Media"></asp:ListItem>
+                    <asp:ListItem Text="Alta" Value="Alta"></asp:ListItem>
                 </asp:DropDownList>
             </div>
-
-            <button type="button" class="submit-btn">Filtrar</button>
         </div>
 
         <table id="tablaBitacora">
@@ -36,31 +36,22 @@
                 </tr>
             </thead>
             <tbody>
+                <% foreach (var movimiento in Movimientos)
+                    { %>
                 <tr>
-                    <td>19/08/2024 10:00</td>
-                    <td>Usuario 1</td>
-                    <td>Alta</td>
-                    <td>Error crítico en el sistema</td>
+                    <td><%= movimiento.Fecha.ToString("dd/MM/yyyy HH:mm") %></td>
+                    <td><%= movimiento.Cliente.RazonSocial %></td>
+                    <td><%= movimiento.Criticidad.ToString() %></td>
+                    <td><%= movimiento.Descripcion %></td>
                 </tr>
-                <tr>
-                    <td>18/08/2024 15:30</td>
-                    <td>Usuario 2</td>
-                    <td>Media</td>
-                    <td>Proceso finalizado con advertencias</td>
-                </tr>
-                <tr>
-                    <td>17/08/2024 12:45</td>
-                    <td>Usuario 3</td>
-                    <td>Baja</td>
-                    <td>Operación completada sin problemas</td>
-                </tr>
+                <% } %>
             </tbody>
         </table>
 
         <div class="pagination">
-            <button type="button" class="submit-btn">Anterior</button>
-            <span id="paginaActual">Página 1 de 10</span>
-            <button type="button" class="submit-btn">Siguiente</button>
+            <asp:Button ID="btnAnterior" runat="server" Text="Anterior" CssClass="submit-btn" OnClick="btnAnterior_Click" />
+            <span id="paginaActual">Página <%# GetPaginaActual() %> de <%# GetTotalPaginas() %></span>
+            <asp:Button ID="btnSiguiente" runat="server" Text="Siguiente" CssClass="submit-btn" OnClick="btnSiguiente_Click" />
         </div>
     </div>
 </asp:Content>
