@@ -19,12 +19,15 @@
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
     .filter-container .form-group {
         display: flex;
         flex-direction: column;
         margin-right: 20px;
+        flex: 1;
     }
 
         .filter-container .form-group label {
@@ -33,7 +36,8 @@
             margin-bottom: 5px;
         }
 
-    .filter-container .filter-select {
+    .filter-container .filter-select,
+    .filter-container .filter-input {
         padding: 8px;
         background-color: #3a3b3c;
         color: #e4e6eb;
@@ -41,14 +45,55 @@
         border-radius: 4px;
     }
 
-    .filter-container .submit-btn {
-        padding: 10px 15px;
-        background-color: #66bb6a;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
+        /* Estilo específico para los campos de fecha */
+        .filter-container .filter-input.date-input {
+            font-family: 'Arial', sans-serif;
+            background-color: #3a3b3c;
+            border: 1px solid #555;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        /* Forzar el estilo en los campos de fecha para navegadores */
+        .filter-container .filter-input[type="date"],
+        .filter-container .date-input[type="date"] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-color: #3a3b3c;
+            color: #e4e6eb;
+            border: 1px solid #555;
+            padding: 8px;
+            border-radius: 4px;
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+        }
+
+            /* Asegurar el formato consistente para los iconos de calendario */
+            .filter-container .filter-input[type="date"]::-webkit-calendar-picker-indicator,
+            .filter-container .date-input[type="date"]::-webkit-calendar-picker-indicator {
+                filter: invert(1); /* Invertir el color para que sea visible en fondo oscuro */
+            }
+
+/* Corregir el estilo en Firefox */
+@-moz-document url-prefix() {
+    .filter-container .filter-input[type="date"],
+    .filter-container .date-input[type="date"] {
+        background-color: #3a3b3c;
+        color: #e4e6eb;
+        padding: 8px;
     }
+}
+
+.filter-container .submit-btn {
+    padding: 10px 15px;
+    background-color: #66bb6a;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: flex-end;
+}
 
 #tablaBitacora {
     width: 100%;
