@@ -108,6 +108,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdministracionBD.aspx" />
     <Content Include="AdministracionFamilias.aspx" />
     <Content Include="AltaFamilia.aspx" />
     <Content Include="AsignarFamilias.aspx" />
@@ -196,6 +197,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="Styles\gestion_administracionbd.css" />
     <Content Include="Styles\gestion_bitacora.css" />
     <Content Include="Styles\gestion_familias.css" />
     <Content Include="Styles\navbar.css" />
@@ -205,6 +207,13 @@
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdministracionBD.aspx.cs">
+      <DependentUpon>AdministracionBD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdministracionBD.aspx.designer.cs">
+      <DependentUpon>AdministracionBD.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdministracionFamilias.aspx.cs">
       <DependentUpon>AdministracionFamilias.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
