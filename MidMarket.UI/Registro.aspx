@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MidMarket - Registro</title>
     <link rel="stylesheet" href="Styles/registro_login_style.css">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
     <div class="container">
@@ -30,7 +30,7 @@
                 <input type="text" id="txtCUIT" name="cuit" autocomplete="off" required runat="server">
             </div>
             <div class="form-group captcha">
-                <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+                <div class="cf-turnstile" data-sitekey="0x4AAAAAAAhq4RxabKV10192" data-theme="light"></div>
             </div>
             <asp:Button type="submit" ID="btnRegistro" class="submit-btn" runat="server" Text="Registrarse" OnClick="btnRegistro_Click"></asp:Button>
         </form>

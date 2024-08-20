@@ -109,3 +109,12 @@ input:invalid + .error-message {
         .extra-options a:hover {
             color: #6a1b9a;
         }
+
+.captcha {
+    text-align: center;
+    margin: 20px 0;
+}
+
+    .captcha .cf-turnstile {
+        display: inline-block;
+    }
