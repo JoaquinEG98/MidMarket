@@ -68,7 +68,7 @@ namespace MidMarket.Business.Services
                     };
                     _permisoService.GetComponenteUsuario(clienteDesencriptado);
 
-                    _bitacoraService.AltaBitacora("Inició sesión correctamente", Criticidad.Baja, clienteDesencriptado);
+                    _bitacoraService.AltaBitacora($"{clienteDesencriptado.RazonSocial} ({clienteDesencriptado.Id}) inició sesión correctamente", Criticidad.Baja, clienteDesencriptado);
 
                     return clienteDesencriptado;
                 }
