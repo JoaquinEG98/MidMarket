@@ -154,5 +154,34 @@ namespace MidMarket.DataAccess.DAOs
                 default: return 0;
             }
         }
+
+        public string ObtenerDVV(string tabla)
+        {
+            string dvv = "";
+
+            switch (tabla.ToUpper())
+            {
+                case "CLIENTE":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITO_VERTICAL, "Cliente");
+                    break;
+
+                case "USUARIOPERMISO":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITO_VERTICAL, "UsuarioPermiso");
+                    break;
+            }
+
+            DataSet ds = _dataAccess.ExecuteNonReader();
+            DataTable dt = ds.Tables[0];
+
+            if (dt.Rows.Count > 0)
+            {
+                foreach (DataRow rows in dt.Rows)
+                {
+                    dvv = rows["Valor"].ToString();
+                }
+            }
+
+            return dvv;
+        }
     }
 }

@@ -8,15 +8,24 @@ namespace MidMarket.UI
     public partial class AdministracionBD : System.Web.UI.Page
     {
         private readonly IBackupService _backupService;
+        private readonly IDigitoVerificadorService _digitoVerificadorService;
 
         public AdministracionBD()
         {
             _backupService = Global.Container.Resolve<IBackupService>();
+            _digitoVerificadorService = Global.Container.Resolve<IDigitoVerificadorService>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            try
+            {
+                CargarDV();
+            }
+            catch (Exception ex)
+            {
+                AlertHelper.MostrarMensaje(this, $"Error al cargar página: {ex.Message}.");
+            }
         }
 
         protected void btnGenerarBackup_Click(object sender, EventArgs e)
@@ -32,6 +41,9 @@ namespace MidMarket.UI
                 }
 
                 _backupService.RealizarBackup(rutaBackup);
+
+                CargarDV();
+
                 AlertHelper.MostrarMensaje(this, $"Backup realizado con éxito");
             }
             catch (Exception ex)
@@ -56,6 +68,8 @@ namespace MidMarket.UI
 
                 _backupService.RealizarRestore(rutaBackup);
 
+                CargarDV();
+
                 AlertHelper.MostrarMensaje(this, "Restauración realizada con éxito.");
             }
             catch (Exception ex)
@@ -66,6 +80,34 @@ namespace MidMarket.UI
 
         protected void btnRecalcularDigitos_Click(object sender, EventArgs e)
         {
+            try
+            {
+                _digitoVerificadorService.ActualizarDVV("Cliente");
+                _digitoVerificadorService.ActualizarDVV("UsuarioPermiso");
+
+                CargarDV();
+
+                AlertHelper.MostrarMensaje(this, "Digitos verificadores recalculados con éxito");
+            }
+            catch (Exception ex)
+            {
+                AlertHelper.MostrarMensaje(this, $"Error al recalcular digitos verificadores: {ex.Message}.");
+            }
+        }
+
+        private void CargarDV()
+        {
+            bool cliente = _digitoVerificadorService.ValidarDigitosVerificadores("Cliente");
+            bool usuarioPermiso = _digitoVerificadorService.ValidarDigitosVerificadores("UsuarioPermiso");
+
+            if (!cliente || !usuarioPermiso)
+            {
+                estadoDVLiteral.Text = "<span id='estadoDV' class='status-text incorrecto'>Estado: Incorrecto</span>";
+            }
+            else
+            {
+                estadoDVLiteral.Text = "<span id='estadoDV' class='status-text correcto'>Estado: Correcto</span>";
+            }
         }
     }
 }

@@ -31,7 +31,7 @@
         <div class="section">
             <h3>Dígitos Verificadores</h3>
             <div class="status-container">
-                <span id="estadoDV" class="status-text correcto">Estado: Correcto</span>
+                <asp:Literal ID="estadoDVLiteral" runat="server"></asp:Literal>
             </div>
             <asp:Button ID="btnRecalcularDV" runat="server" Text="Recalcular Dígitos" CssClass="primary-btn" OnClick="btnRecalcularDigitos_Click" />
         </div>

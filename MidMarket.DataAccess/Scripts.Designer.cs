@@ -98,6 +98,15 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SELECT Valor FROM DigitoVerificador WHERE Tabla = &apos;{0}&apos;.
+        /// </summary>
+        internal static string GET_DIGITO_VERTICAL {
+            get {
+                return ResourceManager.GetString("GET_DIGITO_VERTICAL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SELECT * FROM {0}.
         /// </summary>
         internal static string GET_DIGITOS_HORIZONTALES {
@@ -253,16 +262,12 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to DECLARE @rutaBackup NVARCHAR(255);
-        ///DECLARE @nombreBase NVARCHAR(255);
+        ///   Looks up a localized string similar to DECLARE @rutaCompleta NVARCHAR(255) = @RutaBackupParam;
+        ///DECLARE @nombreBase NVARCHAR(255) = @NombreBaseParam;
         ///
-        ///SET @rutaBackup = @RutaBackupParam;
-        ///SET @nombreBase = @NombreBaseParam;
+        ///DECLARE @backupQuery NVARCHAR(MAX) = &apos;BACKUP DATABASE [&apos; + @nombreBase + &apos;] TO DISK = &apos;&apos;&apos; + @rutaCompleta + &apos;&apos;&apos; WITH FORMAT, MEDIANAME = &apos;&apos;SQLServerBackups&apos;&apos;, NAME = &apos;&apos;Full Backup of &apos; + @nombreBase + &apos;&apos;&apos;&apos;;
         ///
-        ///DECLARE @carpetaRuta NVARCHAR(255) = LEFT(@rutaBackup, LEN(@rutaBackup) - CHARINDEX(&apos;\&apos;, REVERSE(@rutaBackup)));
-        ///EXEC xp_cmdshell &apos;IF NOT EXIST &quot;&apos; + @carpetaRuta + &apos;&quot; mkdir &quot;&apos; + @carpetaRuta + &apos;&quot;&apos;;
-        ///
-        ///DECLARE @backupQuery NVARCHAR(MAX) = &apos;BACKUP DATABASE [&apos; + @nombreBase + &apos;] TO DISK = &apos;&apos;&apos; + @rutaBackup + &apos;&apos;&apos; WITH FORMAT, MEDIANAME = &apos;&apos;SQLServerBackups&apos;&apos;, NAM [rest of string was truncated]&quot;;.
+        ///EXEC(@backupQuery);.
         /// </summary>
         internal static string REALIZAR_BACKUP {
             get {

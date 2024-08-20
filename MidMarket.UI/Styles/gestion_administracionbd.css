@@ -111,6 +111,10 @@
         color: #388e3c;
     }
 
+    .status-text.incorrecto {
+        color: red;
+    }
+
 @media (max-width: 768px) {
     .adminbd-container {
         padding: 30px;

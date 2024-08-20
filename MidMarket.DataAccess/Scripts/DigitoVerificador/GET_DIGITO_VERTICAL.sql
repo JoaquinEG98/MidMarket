@@ -1,0 +1,1 @@
+﻿SELECT Valor FROM DigitoVerificador WHERE Tabla = '{0}'

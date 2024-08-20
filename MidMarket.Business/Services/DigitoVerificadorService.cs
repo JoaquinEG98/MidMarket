@@ -3,16 +3,22 @@ using MidMarket.DataAccess.Interfaces;
 using System.Collections.Generic;
 using MidMarket.Business.Interfaces;
 using System.Transactions;
+using MidMarket.Entities.Enums;
+using MidMarket.Entities;
 
 namespace MidMarket.Business.Services
 {
     public class DigitoVerificadorService : IDigitoVerificadorService
     {
+        private readonly ISessionManager _sessionManager;
         private readonly IDigitoVerificadorDAO _digitoVerificadorDataAccess;
+        private readonly IBitacoraService _bitacoraService;
 
         public DigitoVerificadorService()
         {
+            _sessionManager = DependencyResolver.Resolve<ISessionManager>();
             _digitoVerificadorDataAccess = DependencyResolver.Resolve<IDigitoVerificadorDAO>();
+            _bitacoraService = DependencyResolver.Resolve<IBitacoraService>();
         }
 
         public string ObtenerDVVActual(string tabla)
@@ -70,8 +76,28 @@ namespace MidMarket.Business.Services
 
                 _digitoVerificadorDataAccess.ActualizarDVV(tabla, nuevoDVV);
 
+                var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+                _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) recalculó los Digitos Verificadores Verticales de la Tabla: {tabla}", Criticidad.Alta, clienteLogueado);
+                
                 scope.Complete();
             }
+        }
+
+        public string ObtenerDVV(string tabla)
+        {
+            string dvv = _digitoVerificadorDataAccess.ObtenerDVV(tabla);
+            return dvv;
+        }
+
+        public bool ValidarDigitosVerificadores(string tabla)
+        {
+            string actualDVV = ObtenerDVV(tabla);
+            string compararDVV = CalcularDVV(tabla);
+
+            if (actualDVV != compararDVV)
+                return false;
+
+            return true;
         }
     }
 }

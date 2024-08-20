@@ -7,5 +7,6 @@ namespace MidMarket.DataAccess.Interfaces
         List<string> ObtenerDVH(string tabla);
         List<string> ObtenerDVHActuales(string tabla);
         int ActualizarDVV(string tabla, string nuevoDVV);
+        string ObtenerDVV(string tabla);
     }
 }

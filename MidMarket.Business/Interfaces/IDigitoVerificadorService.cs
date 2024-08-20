@@ -8,5 +8,7 @@ namespace MidMarket.Business.Interfaces
         List<string> ObtenerDVH(string tabla);
         string CalcularDVV(string tabla);
         void ActualizarDVV(string tabla);
+        string ObtenerDVV(string tabla);
+        bool ValidarDigitosVerificadores(string tabla);
     }
 }
