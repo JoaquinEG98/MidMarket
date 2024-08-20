@@ -15,7 +15,7 @@
             <h2>Iniciar sesión</h2>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="txtEmail" name="email" required runat="server">
+                <input type="email" id="txtEmail" name="correo" autocomplete="off" required runat="server">
             </div>
             <div class="form-group">
                 <label for="password">Password</label>

@@ -15,7 +15,7 @@
             <h2>Registro</h2>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="txtEmail" name="email" required runat="server">
+                <input type="email" id="txtEmail" name="correo" autocomplete="off" required runat="server">
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
@@ -23,11 +23,11 @@
             </div>
             <div class="form-group">
                 <label for="razonSocial">Razón Social</label>
-                <input type="text" id="txtRazonSocial" name="razonSocial" required runat="server">
+                <input type="text" id="txtRazonSocial" name="razonSocial" autocomplete="off" required runat="server">
             </div>
             <div class="form-group">
                 <label for="cuit">CUIT</label>
-                <input type="text" id="txtCUIT" name="cuit" required runat="server">
+                <input type="text" id="txtCUIT" name="cuit" autocomplete="off" required runat="server">
             </div>
             <div class="form-group captcha">
                 <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
