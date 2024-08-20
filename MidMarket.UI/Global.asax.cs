@@ -19,7 +19,6 @@ namespace MidMarket.UI
 
         void Application_Start(object sender, EventArgs e)
         {
-            // Code that runs on application startup
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
@@ -36,6 +35,7 @@ namespace MidMarket.UI
             Container.RegisterType<IPermisoService, PermisoService>();
             Container.RegisterType<IDigitoVerificadorService, DigitoVerificadorService>();
             Container.RegisterType<IBitacoraService, BitacoraService>();
+            Container.RegisterType<IBackupService, BackupService>();
         }
     }
 }

@@ -172,13 +172,10 @@
   <data name="LOGIN_USUARIO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\Usuario\LOGIN_USUARIO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
-  <data name="LOGIN_USUARIO1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Scripts\Usuario\LOGIN_USUARIO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="REALIZAR_BACKUP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Scripts\REALIZAR_BACKUP.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="REGISTRAR_USUARIO" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Scripts\Usuario\REGISTRAR_USUARIO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
-  </data>
-  <data name="REGISTRAR_USUARIO1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\Usuario\REGISTRAR_USUARIO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="UPDATE_DIGITO_VERTICAL" type="System.Resources.ResXFileRef, System.Windows.Forms">

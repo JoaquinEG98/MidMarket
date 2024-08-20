@@ -20,6 +20,7 @@ namespace MidMarket.Business
             Container.RegisterType<IPermisoDAO, PermisoDAO>();
             Container.RegisterType<IDigitoVerificadorDAO, DigitoVerificadorDAO>();
             Container.RegisterType<IBitacoraDAO, BitacoraDAO>();
+            Container.RegisterType<IBackupDAO, BackupDAO>();
 
             Container.RegisterType<IPermisoService, PermisoService>();
             Container.RegisterType<IDigitoVerificadorService, DigitoVerificadorService>();

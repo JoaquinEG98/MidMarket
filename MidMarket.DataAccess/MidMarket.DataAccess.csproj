@@ -44,12 +44,14 @@
   <ItemGroup>
     <Compile Include="Conexion\BBDD.cs" />
     <Compile Include="Conexion\Conexion.cs" />
+    <Compile Include="DAOs\BackupDAO.cs" />
     <Compile Include="DAOs\BitacoraDAO.cs" />
     <Compile Include="DAOs\DigitoVerificadorDAO.cs" />
     <Compile Include="DAOs\PermisoDAO.cs" />
     <Compile Include="Helpers\BitacoraFill.cs" />
     <Compile Include="Helpers\ClienteFill.cs" />
     <Compile Include="Helpers\PermisoFill.cs" />
+    <Compile Include="Interfaces\IBackupDAO.cs" />
     <Compile Include="Interfaces\IBitacoraDAO.cs" />
     <Compile Include="Interfaces\IDigitoVerificadorDAO.cs" />
     <Compile Include="Interfaces\IPermisoDAO.cs" />
@@ -65,6 +67,7 @@
   <ItemGroup>
     <Content Include="Scripts\Bitacora\GET_BITACORA.sql" />
     <Content Include="Scripts\Bitacora\ALTA_BITACORA.sql" />
+    <Content Include="Scripts\REALIZAR_BACKUP.sql" />
     <Content Include="Scripts\Permiso\GET_PERMISOS_USUARIO.sql" />
     <Content Include="Scripts\Permiso\GET_PATENTES_DE_FAMILIA.sql" />
     <Content Include="Scripts\Permiso\GET_FAMILIA_VALIDACION.sql" />
