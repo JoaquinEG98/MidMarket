@@ -1,8 +1,8 @@
 ﻿#bitacora-container {
-    background-color: #ffffff; /* Fondo blanco */
+    background-color: #ffffff;
     padding: 20px 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 1000px;
     width: 100%;
     margin: auto;
@@ -11,7 +11,7 @@
     #bitacora-container h2 {
         margin-bottom: 20px;
         font-size: 24px;
-        color: #4a148c; /* Morado */
+        color: #4a148c;
         text-align: center;
     }
 
@@ -31,7 +31,7 @@
     }
 
         .filter-container .form-group label {
-            color: #5f6368; /* Gris oscuro */
+            color: #5f6368;
             font-weight: bold;
             margin-bottom: 5px;
         }
@@ -39,9 +39,9 @@
     .filter-container .filter-select,
     .filter-container .filter-input {
         padding: 8px;
-        background-color: #f2e8ff; /* Fondo claro */
-        color: #333; /* Texto oscuro */
-        border: 1px solid #cfd8dc; /* Borde gris claro */
+        background-color: #f2e8ff;
+        color: #333;
+        border: 1px solid #cfd8dc;
         border-radius: 4px;
     }
 
@@ -69,7 +69,7 @@
 
             .filter-container .filter-input[type="date"]::-webkit-calendar-picker-indicator,
             .filter-container .date-input[type="date"]::-webkit-calendar-picker-indicator {
-                filter: invert(0.6); /* Ajuste de color del selector de fecha */
+                filter: invert(0.6);
             }
 
 @-moz-document url-prefix() {
@@ -83,7 +83,7 @@
 
 .filter-container .submit-btn {
     padding: 10px 15px;
-    background-color: #7e57c2; /* Botón morado */
+    background-color: #7e57c2;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -100,7 +100,7 @@
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 15px;
-    color: #333; /* Texto oscuro */
+    color: #333;
 }
 
     #tablaBitacora th,
@@ -110,13 +110,13 @@
     }
 
     #tablaBitacora th {
-        background-color: #7e57c2; /* Morado */
+        background-color: #7e57c2;
         color: white;
     }
 
     #tablaBitacora td {
-        background-color: #f2e8ff; /* Fondo claro */
-        border: 1px solid #7e57c2; /* Borde morado */
+        background-color: #f2e8ff;
+        border: 1px solid #7e57c2;
     }
 
 .pagination {
@@ -141,6 +141,6 @@
         }
 
     .pagination #paginaActual {
-        color: #333; /* Texto oscuro */
+        color: #333;
         font-size: 16px;
     }
