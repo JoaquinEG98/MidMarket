@@ -1,5 +1,5 @@
 ﻿@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap'); /* Importa la fuente Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -14,7 +14,7 @@ body {
 
 .navbar-brand {
     color: #4a148c !important;
-    font-size: 22px; /* Aumenta el tamaño de la fuente para "MidMarket" */
+    font-size: 22px;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
 }
@@ -48,18 +48,25 @@ body {
     transform: translateY(-3px);
 }
 
-/* Estilo personalizado para animación de deslizamiento */
 .nav-link::after {
     content: '';
     position: absolute;
     width: 100%;
-    height: 2px; /* Asegura que la línea subrayada tenga el mismo grosor para todos */
+    height: 2px; 
     background-color: #6a1b9a;
     left: 0;
     bottom: -5px;
     transform: scaleX(0);
     transition: transform 0.3s ease;
     transform-origin: bottom right;
+}
+
+.nav-item:not(.dropdown) .nav-link::after {
+    height: 2px;
+}
+
+.nav-item.dropdown .nav-link::after {
+    height: 4px;
 }
 
 .nav-link:hover::after {
@@ -84,7 +91,6 @@ body {
     font-weight: 500;
 }
 
-/* Muestra el menú al pasar el mouse por el nav-item */
 .nav-item:hover .dropdown-menu {
     display: block;
     animation: fadeInDown 0.3s ease forwards;
@@ -103,7 +109,6 @@ body {
     border-color: rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo personalizado para deslizamiento de dropdown */
 @keyframes fadeInDown {
     0% {
         opacity: 0;

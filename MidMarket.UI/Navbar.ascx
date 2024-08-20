@@ -7,7 +7,6 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNav">
-            <!-- Elementos Centrados -->
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="menuPrincipalDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menú Principal</a>
@@ -46,7 +45,6 @@
                     <a class="nav-link" href="/Bitacora.aspx">Bitácora</a>
                 </li>
             </ul>
-            <!-- Botón Cerrar Sesión a la Derecha -->
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="/Logout.aspx">Cerrar sesión</a>
@@ -56,11 +54,10 @@
     </div>
 </nav>
 
-<!-- Agrega el script aquí, antes de cerrar el body -->
 <script>
     document.querySelectorAll('.nav-item.dropdown').forEach(function (dropdown) {
         dropdown.addEventListener('click', function (e) {
-            if (window.innerWidth <= 992) { // Ajuste para pantallas más pequeñas
+            if (window.innerWidth <= 992) {
                 this.querySelector('.dropdown-menu').classList.toggle('show');
             }
         });
