@@ -42,6 +42,26 @@ namespace MidMarket.UI
 
         protected void btnRestaurarBD_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (!fileUploadRestore.HasFile)
+                {
+                    AlertHelper.MostrarMensaje(this, "Debe seleccionar un archivo de backup.");
+                    return;
+                }
+
+                string rutaBackup = Server.MapPath("~/App_Data/") + fileUploadRestore.FileName;
+
+                fileUploadRestore.SaveAs(rutaBackup);
+
+                _backupService.RealizarRestore(rutaBackup);
+
+                AlertHelper.MostrarMensaje(this, "Restauración realizada con éxito.");
+            }
+            catch (Exception ex)
+            {
+                AlertHelper.MostrarMensaje(this, $"Error al restaurar la base de datos: {ex.Message}.");
+            }
         }
 
         protected void btnRecalcularDigitos_Click(object sender, EventArgs e)

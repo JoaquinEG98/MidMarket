@@ -7,6 +7,9 @@ using MidMarket.Business.Interfaces;
 using MidMarket.DataAccess.Interfaces;
 using MidMarket.Entities.Enums;
 using System.IO;
+using MidMarket.DataAccess.DAOs;
+using static System.Collections.Specialized.BitVector32;
+using System.Transactions;
 
 namespace MidMarket.Business.Services
 {
@@ -53,10 +56,21 @@ namespace MidMarket.Business.Services
                 _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) realizó backup de la base de datos", Criticidad.Media, clienteLogueado);
             }
             else
-            {
                 throw new Exception("Hubo un error en generar el backup en la ruta.");
-            }
         }
 
+        public void RealizarRestore(string rutaBackup)
+        {
+            string nombreBase = ConfigurationManager.AppSettings["base"];
+            var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+            bool restoreRealizado = _backupDataAccess.RealizarRestore(nombreBase, rutaBackup);
+
+            if (restoreRealizado)
+            {
+                _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) realizó backup de la base de datos", Criticidad.Alta, clienteLogueado);
+            }
+            else
+                throw new Exception("Hubo un error al generar el restore en la base de datos.");
+        }
     }
 }

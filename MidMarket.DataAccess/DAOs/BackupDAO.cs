@@ -1,6 +1,7 @@
 ﻿using MidMarket.DataAccess.Conexion;
 using MidMarket.Entities.DTOs;
 using MidMarket.DataAccess.Interfaces;
+using System;
 
 namespace MidMarket.DataAccess.DAOs
 {
@@ -30,5 +31,19 @@ namespace MidMarket.DataAccess.DAOs
             return backupRealizado;
         }
 
+        public bool RealizarRestore(string nombreBase, string rutaBackup)
+        {
+            bool restoreRealizado = false;
+
+            _dataAccess.ExecuteCommandText = $"USE [master] " +
+                                    $"ALTER DATABASE [{nombreBase}] SET OFFLINE WITH ROLLBACK IMMEDIATE  " +
+                                    $"RESTORE DATABASE [{nombreBase}] FROM DISK = '{rutaBackup}' WITH REPLACE  " +
+                                    $"ALTER DATABASE [{nombreBase}] SET ONLINE";
+
+            _dataAccess.ExecuteNonQueryNonTransaction();
+
+            restoreRealizado = true;
+            return restoreRealizado;
+        }
     }
 }
