@@ -7,10 +7,9 @@
         <div class="section">
             <h3>Generar Backup</h3>
             <div class="form-group">
-                <label for="txtRutaBackup">Seleccione la ruta para guardar el Backup:</label>
+                <label for="txtRutaBackup">Escriba la ruta para guardar el Backup:</label>
                 <div class="file-path-container">
-                    <asp:TextBox ID="txtRutaBackup" runat="server" CssClass="file-path-input" Placeholder="C:\ruta\de\backup" />
-                    <asp:Button ID="btnBrowseRutaBackup" runat="server" Text="..." CssClass="browse-btn" OnClick="btnBrowseRutaBackup_Click" />
+                    <asp:TextBox ID="txtRutaBackup" runat="server" CssClass="file-path-input" Placeholder="C:\Backup" />
                 </div>
             </div>
             <asp:Button ID="btnGenerarBackup" runat="server" Text="Guardar Backup" CssClass="primary-btn" OnClick="btnGenerarBackup_Click" />
@@ -38,3 +37,5 @@
         </div>
     </div>
 </asp:Content>
+
+

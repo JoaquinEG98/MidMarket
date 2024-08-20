@@ -19,11 +19,6 @@ namespace MidMarket.UI
 
         }
 
-        protected void btnBrowseRutaBackup_Click(object sender, EventArgs e)
-        {
-            // Lógica para abrir un diálogo de selección de archivos puede implementarse con JavaScript o ActiveX (si es necesario)
-        }
-
         protected void btnGenerarBackup_Click(object sender, EventArgs e)
         {
             try

@@ -39,7 +39,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Administración de Base de Datos</a>
+                    <a class="nav-link" href="/AdministracionBD.aspx">Administración de Base de Datos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/Bitacora.aspx">Bitácora</a>
