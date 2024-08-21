@@ -10,12 +10,14 @@ namespace MidMarket.UI
         private readonly IBackupService _backupService;
         private readonly IDigitoVerificadorService _digitoVerificadorService;
         private readonly IUsuarioService _usuarioService;
+        private readonly IPermisoService _permisoService;
 
         public AdministracionBD()
         {
             _backupService = Global.Container.Resolve<IBackupService>();
             _digitoVerificadorService = Global.Container.Resolve<IDigitoVerificadorService>();
             _usuarioService = Global.Container.Resolve<IUsuarioService>();  
+            _permisoService = Global.Container.Resolve<IPermisoService>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -86,8 +88,11 @@ namespace MidMarket.UI
             {
                 var clientes = _usuarioService.GetClientesEncriptados();
                 _digitoVerificadorService.ActualizarTablaDVH(clientes);
-
                 _digitoVerificadorService.ActualizarDVV("Cliente");
+
+
+                var usuariosPermisos = _permisoService.GetUsuariosPermisos();
+                _digitoVerificadorService.ActualizarTablaDVH(usuariosPermisos);
                 _digitoVerificadorService.ActualizarDVV("UsuarioPermiso");
 
                 CargarDV();

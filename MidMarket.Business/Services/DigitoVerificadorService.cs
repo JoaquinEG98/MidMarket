@@ -5,6 +5,7 @@ using MidMarket.Business.Interfaces;
 using System.Transactions;
 using MidMarket.Entities.Enums;
 using MidMarket.Entities;
+using MidMarket.Entities.DTOs;
 
 namespace MidMarket.Business.Services
 {
@@ -119,6 +120,26 @@ namespace MidMarket.Business.Services
                     clienteCalculado.DVH = DigitoVerificador.GenerarDVH(clienteCalculado);
 
                     _digitoVerificadorDataAccess.ActualizarTablaDVH("Cliente", clienteCalculado.DVH, clienteCalculado.Id);
+                }
+                scope.Complete();
+            }
+        }
+
+        public void ActualizarTablaDVH(List<UsuarioPermisoDTO> usuariosPermisos)
+        {
+            using (TransactionScope scope = new TransactionScope())
+            {
+                foreach (UsuarioPermisoDTO usuarioPermiso in usuariosPermisos)
+                {
+                    var userPermiso = new UsuarioPermisoDTO()
+                    {
+                        Id = usuarioPermiso.Id,
+                        UsuarioId = usuarioPermiso.UsuarioId,
+                        PermisoId = usuarioPermiso.PermisoId
+                    };
+                    userPermiso.DVH = DigitoVerificador.GenerarDVH(userPermiso);
+
+                    _digitoVerificadorDataAccess.ActualizarTablaDVH("UsuarioPermiso", userPermiso.DVH, userPermiso.Id);
                 }
                 scope.Complete();
             }

@@ -145,5 +145,11 @@ namespace MidMarket.Business.Services
                 familia.AgregarHijo(item);
             }
         }
+
+        public List<UsuarioPermisoDTO> GetUsuariosPermisos()
+        {
+            List<UsuarioPermisoDTO> usuariosPermisos = _permisoDataAccess.GetUsuariosPermisos();
+            return usuariosPermisos;
+        }
     }
 }

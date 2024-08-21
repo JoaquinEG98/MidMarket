@@ -160,6 +160,9 @@
   <data name="GET_USUARIOS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\Permiso\GET_USUARIOS.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="GET_USUARIOS_PERMISOS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Scripts\Permiso\GET_USUARIOS_PERMISOS.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="GET_USUARIO_PERMISO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\Permiso\GET_USUARIO_PERMISO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>

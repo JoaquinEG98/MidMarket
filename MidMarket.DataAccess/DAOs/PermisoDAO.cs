@@ -3,6 +3,7 @@ using MidMarket.DataAccess.Helpers;
 using MidMarket.DataAccess.Interfaces;
 using MidMarket.Entities;
 using MidMarket.Entities.Composite;
+using MidMarket.Entities.DTOs;
 using MidMarket.Entities.Enums;
 using System;
 using System.Collections.Generic;
@@ -297,6 +298,18 @@ namespace MidMarket.DataAccess.DAOs
                 }
 
                 return componenteOriginal;
+        }
+
+        public List<UsuarioPermisoDTO> GetUsuariosPermisos()
+        {
+            _dataAccess.SelectCommandText = String.Format(Scripts.GET_USUARIOS_PERMISOS);
+            DataSet ds = _dataAccess.ExecuteNonReader();
+            List<UsuarioPermisoDTO> usuariosPermisos = new List<UsuarioPermisoDTO>();
+
+            if (ds.Tables[0].Rows.Count > 0)
+                usuariosPermisos = PermisoFill.FillListUsuarioPermisoDTO(ds);
+
+            return usuariosPermisos;
         }
     }
 }

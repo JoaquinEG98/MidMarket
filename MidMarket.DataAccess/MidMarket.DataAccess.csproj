@@ -68,6 +68,7 @@
     <Content Include="Scripts\Bitacora\GET_BITACORA.sql" />
     <Content Include="Scripts\Bitacora\ALTA_BITACORA.sql" />
     <Content Include="Scripts\DigitoVerificador\GET_DIGITO_VERTICAL.sql" />
+    <Content Include="Scripts\Permiso\GET_USUARIOS_PERMISOS.sql" />
     <Content Include="Scripts\REALIZAR_BACKUP.sql" />
     <Content Include="Scripts\Permiso\GET_PERMISOS_USUARIO.sql" />
     <Content Include="Scripts\Permiso\GET_PATENTES_DE_FAMILIA.sql" />

@@ -222,6 +222,16 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SELECT Id_Usuario_Permiso, Id_Cliente, Id_Patente, DVH 
+        ///FROM UsuarioPermiso.
+        /// </summary>
+        internal static string GET_USUARIOS_PERMISOS {
+            get {
+                return ResourceManager.GetString("GET_USUARIOS_PERMISOS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to INSERT INTO Permiso (Nombre, Permiso) OUTPUT inserted.Id_Permiso VALUES (@Nombre, @Permiso).
         /// </summary>
         internal static string GUARDAR_COMPONENTE {

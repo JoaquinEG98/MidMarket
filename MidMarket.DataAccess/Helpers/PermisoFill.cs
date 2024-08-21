@@ -1,4 +1,5 @@
 ﻿using MidMarket.Entities.Composite;
+using MidMarket.Entities.DTOs;
 using MidMarket.Entities.Enums;
 using System;
 using System.Collections.Generic;
@@ -48,6 +49,31 @@ namespace MidMarket.DataAccess.Helpers
         public static List<Patente> FillListPatente(DataSet ds)
         {
             return ds.Tables[0].AsEnumerable().Select(dr => FillObjectPatente(dr)).ToList();
+        }
+
+        public static UsuarioPermisoDTO FillObjectUsuarioPermiso(DataRow dr)
+        {
+            var usuarioPermiso = new UsuarioPermisoDTO();
+
+            if (dr.Table.Columns.Contains("Id_Usuario_Permiso") && !Convert.IsDBNull(dr["Id_Usuario_Permiso"]))
+                usuarioPermiso.Id = Convert.ToInt32(dr["Id_Usuario_Permiso"]);
+
+            if (dr.Table.Columns.Contains("Id_Cliente") && !Convert.IsDBNull(dr["Id_Cliente"]))
+                usuarioPermiso.UsuarioId = Convert.ToInt32(dr["Id_Cliente"]);
+
+            if (dr.Table.Columns.Contains("Id_Patente") && !Convert.IsDBNull(dr["Id_Patente"]))
+                usuarioPermiso.PermisoId = Convert.ToInt32(dr["Id_Patente"]);
+
+            if (dr.Table.Columns.Contains("DVH") && !Convert.IsDBNull(dr["DVH"]))
+                usuarioPermiso.DVH = Convert.ToString(dr["DVH"]);
+
+
+            return usuarioPermiso;
+        }
+
+        public static List<UsuarioPermisoDTO> FillListUsuarioPermisoDTO(DataSet ds)
+        {
+            return ds.Tables[0].AsEnumerable().Select(dr => FillObjectUsuarioPermiso(dr)).ToList();
         }
     }
 }

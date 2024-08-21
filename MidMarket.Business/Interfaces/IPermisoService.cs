@@ -2,6 +2,7 @@
 using MidMarket.Entities;
 using System;
 using System.Collections.Generic;
+using MidMarket.Entities.DTOs;
 
 namespace MidMarket.Business.Interfaces
 {
@@ -20,5 +21,6 @@ namespace MidMarket.Business.Interfaces
         bool ExisteComponente(Componente componente, int Id);
         void GetComponenteUsuario(Cliente cliente);
         void GetComponenteFamilia(Familia familia);
+        List<UsuarioPermisoDTO> GetUsuariosPermisos();
     }
 }

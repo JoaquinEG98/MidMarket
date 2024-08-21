@@ -1,4 +1,5 @@
 ﻿using MidMarket.Entities;
+using MidMarket.Entities.DTOs;
 using System.Collections.Generic;
 
 namespace MidMarket.Business.Interfaces
@@ -12,5 +13,6 @@ namespace MidMarket.Business.Interfaces
         string ObtenerDVV(string tabla);
         bool ValidarDigitosVerificadores(string tabla);
         void ActualizarTablaDVH(List<Cliente> clientes);
+        void ActualizarTablaDVH(List<UsuarioPermisoDTO> usuariosPermisos);
     }
 }

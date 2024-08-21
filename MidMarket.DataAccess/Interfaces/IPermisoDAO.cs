@@ -1,5 +1,6 @@
 ﻿using MidMarket.Entities;
 using MidMarket.Entities.Composite;
+using MidMarket.Entities.DTOs;
 using System.Collections.Generic;
 
 namespace MidMarket.DataAccess.Interfaces
@@ -17,5 +18,6 @@ namespace MidMarket.DataAccess.Interfaces
         IList<Familia> GetFamiliasValidacion(int familiaId);
         Componente GetFamiliaArbol(int familiaId, Componente componenteOriginal, Componente componenteAgregar);
         Componente GetUsuarioArbol(int usuarioId, Componente componenteOriginal, Componente componenteAgregar);
+        List<UsuarioPermisoDTO> GetUsuariosPermisos();
     }
 }
