@@ -86,14 +86,7 @@ namespace MidMarket.UI
         {
             try
             {
-                var clientes = _usuarioService.GetClientesEncriptados();
-                _digitoVerificadorService.ActualizarTablaDVH(clientes);
-                _digitoVerificadorService.ActualizarDVV("Cliente");
-
-
-                var usuariosPermisos = _permisoService.GetUsuariosPermisos();
-                _digitoVerificadorService.ActualizarTablaDVH(usuariosPermisos);
-                _digitoVerificadorService.ActualizarDVV("UsuarioPermiso");
+                _digitoVerificadorService.RecalcularDigitosVerificadores(_usuarioService, _permisoService);
 
                 CargarDV();
 

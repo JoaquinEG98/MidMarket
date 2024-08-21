@@ -22,7 +22,7 @@ namespace MidMarket.Business.Services
             _bitacoraService = DependencyResolver.Resolve<IBitacoraService>();
         }
 
-        public string ObtenerDVVActual(string tabla)
+        private string ObtenerDVVActual(string tabla)
         {
             int valor = 0;
             string actualDVV = "";
@@ -42,14 +42,14 @@ namespace MidMarket.Business.Services
             return actualDVV;
         }
 
-        public List<string> ObtenerDVH(string tabla)
+        private List<string> ObtenerDVH(string tabla)
         {
             List<string> dvhCalculados = _digitoVerificadorDataAccess.ObtenerDVH(tabla);
 
             return dvhCalculados;
         }
 
-        public string CalcularDVV(string tabla)
+        private string CalcularDVV(string tabla)
         {
             int valor = 0;
             string actualDVV = "";
@@ -84,7 +84,7 @@ namespace MidMarket.Business.Services
             }
         }
 
-        public string ObtenerDVV(string tabla)
+        private string ObtenerDVV(string tabla)
         {
             string dvv = _digitoVerificadorDataAccess.ObtenerDVV(tabla);
             return dvv;
@@ -102,7 +102,7 @@ namespace MidMarket.Business.Services
             return false;
         }
 
-        public void ActualizarTablaDVH(List<Cliente> clientes)
+        private void ActualizarTablaDVH(List<Cliente> clientes)
         {
             using (TransactionScope scope = new TransactionScope())
             {
@@ -125,7 +125,7 @@ namespace MidMarket.Business.Services
             }
         }
 
-        public void ActualizarTablaDVH(List<UsuarioPermisoDTO> usuariosPermisos)
+        private void ActualizarTablaDVH(List<UsuarioPermisoDTO> usuariosPermisos)
         {
             using (TransactionScope scope = new TransactionScope())
             {
@@ -143,6 +143,18 @@ namespace MidMarket.Business.Services
                 }
                 scope.Complete();
             }
+        }
+
+        public void RecalcularDigitosVerificadores(IUsuarioService usuarioService, IPermisoService permisoService)
+        {
+            var clientes = usuarioService.GetClientesEncriptados();
+            ActualizarTablaDVH(clientes);
+            ActualizarDVV("Cliente");
+
+
+            var usuariosPermisos = permisoService.GetUsuariosPermisos();
+            ActualizarTablaDVH(usuariosPermisos);
+            ActualizarDVV("UsuarioPermiso");
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using MidMarket.Entities;
+﻿using MidMarket.Business.Services;
+using MidMarket.Entities;
 using MidMarket.Entities.DTOs;
 using System.Collections.Generic;
 
@@ -6,13 +7,8 @@ namespace MidMarket.Business.Interfaces
 {
     public interface IDigitoVerificadorService
     {
-        string ObtenerDVVActual(string tabla);
-        List<string> ObtenerDVH(string tabla);
-        string CalcularDVV(string tabla);
         void ActualizarDVV(string tabla);
-        string ObtenerDVV(string tabla);
         bool ValidarDigitosVerificadores(string tabla);
-        void ActualizarTablaDVH(List<Cliente> clientes);
-        void ActualizarTablaDVH(List<UsuarioPermisoDTO> usuariosPermisos);
+        void RecalcularDigitosVerificadores(IUsuarioService usuarioService, IPermisoService permisoService);
     }
 }
