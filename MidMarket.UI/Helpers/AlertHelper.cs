@@ -8,10 +8,19 @@ namespace MidMarket.UI.Helpers
 {
     public static class AlertHelper
     {
-        public static void MostrarMensaje(Page page, string mensaje)
+        public static void MostrarAlert(Page page, string mensaje)
         {
             string script = $"alert('{mensaje}');";
             ScriptManager.RegisterStartupScript(page, page.GetType(), "alerta", script, true);
+        }
+
+        public static void MostrarMensaje(Page page, string mensaje)
+        {
+            var modalControl = (Modal)page.Master.FindControl("globalModalControl");
+            if (modalControl != null)
+            {
+                modalControl.MostrarModal(mensaje);
+            }
         }
     }
 }

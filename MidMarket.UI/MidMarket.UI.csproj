@@ -138,6 +138,7 @@
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
+    <Content Include="Modal.ascx" />
     <Content Include="ModificarFamilia.aspx" />
     <Content Include="Navbar.ascx" />
     <Content Include="Registro.aspx" />
@@ -200,6 +201,7 @@
     <Content Include="Styles\gestion_administracionbd.css" />
     <Content Include="Styles\gestion_bitacora.css" />
     <Content Include="Styles\gestion_familias.css" />
+    <Content Include="Styles\modal.css" />
     <Content Include="Styles\navbar.css" />
     <Content Include="Styles\registro_login_style.css" />
     <Content Include="ViewSwitcher.ascx" />
@@ -289,6 +291,13 @@
     </Compile>
     <Compile Include="Logout.aspx.designer.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modal.ascx.cs">
+      <DependentUpon>Modal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modal.ascx.designer.cs">
+      <DependentUpon>Modal.ascx</DependentUpon>
     </Compile>
     <Compile Include="ModificarFamilia.aspx.cs">
       <DependentUpon>ModificarFamilia.aspx</DependentUpon>
