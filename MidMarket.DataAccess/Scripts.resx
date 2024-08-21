@@ -179,7 +179,7 @@
     <value>Scripts\Usuario\LOGIN_USUARIO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="REALIZAR_BACKUP" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Scripts\REALIZAR_BACKUP.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+    <value>Scripts\BkpRestore\REALIZAR_BACKUP.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="REGISTRAR_USUARIO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\Usuario\REGISTRAR_USUARIO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
