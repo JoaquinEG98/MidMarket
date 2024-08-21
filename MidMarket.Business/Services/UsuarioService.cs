@@ -101,6 +101,7 @@ namespace MidMarket.Business.Services
                 {
                     Id = cliente.Id,
                     Email = Encriptacion.DesencriptarAES(cliente.Email),
+                    Password = cliente.Password,
                     RazonSocial = Encriptacion.DesencriptarAES(cliente.RazonSocial),
                     CUIT = Encriptacion.DesencriptarAES(cliente.CUIT),
                     Puntaje = cliente.Puntaje,
@@ -111,6 +112,30 @@ namespace MidMarket.Business.Services
             }
 
             return clientesDesencriptados;
+        }
+
+        public List<Cliente> GetClientesEncriptados()
+        {
+            List<Cliente> clientes = _usuarioDataAccess.GetClientes();
+            //List<Cliente> clientesDesencriptados = new List<Cliente>();
+
+            //foreach (Cliente cliente in clientes)
+            //{
+            //    var clienteDesencriptado = new Cliente()
+            //    {
+            //        Id = cliente.Id,
+            //        Email = Encriptacion.DesencriptarAES(cliente.Email),
+            //        Password = cliente.Password,
+            //        RazonSocial = Encriptacion.DesencriptarAES(cliente.RazonSocial),
+            //        CUIT = Encriptacion.DesencriptarAES(cliente.CUIT),
+            //        Puntaje = cliente.Puntaje,
+            //        Cuenta = cliente.Cuenta,
+            //    };
+
+            //    clientesDesencriptados.Add(clienteDesencriptado);
+            //}
+
+            return clientes;
         }
 
         public Cliente GetCliente(int clienteId)

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using MidMarket.Entities;
+using System.Collections.Generic;
 
 namespace MidMarket.Business.Interfaces
 {
@@ -10,5 +11,6 @@ namespace MidMarket.Business.Interfaces
         void ActualizarDVV(string tabla);
         string ObtenerDVV(string tabla);
         bool ValidarDigitosVerificadores(string tabla);
+        void ActualizarTablaDVH(List<Cliente> clientes);
     }
 }

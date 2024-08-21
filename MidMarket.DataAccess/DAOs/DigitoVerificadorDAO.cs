@@ -183,5 +183,21 @@ namespace MidMarket.DataAccess.DAOs
 
             return dvv;
         }
+
+        public int ActualizarTablaDVH(string tabla, string nuevoDVH, int objetoId)
+        {
+            if (tabla.ToUpper() == "CLIENTE")
+                _dataAccess.ExecuteCommandText = $"UPDATE {tabla} SET DVH = @parDVH OUTPUT inserted.Id_Cliente WHERE Id_Cliente = @parId";
+
+            if (tabla.ToUpper() == "USUARIOPERMISO")
+                _dataAccess.ExecuteCommandText = $"UPDATE {tabla} SET DVH = @parDVH OUTPUT inserted.Id_Usuario_Permiso WHERE Id_Usuario_Permiso = @parId";
+
+            _dataAccess.ExecuteParameters.Parameters.Clear();
+
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@parDVH", nuevoDVH);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@parId", objetoId);
+
+            return _dataAccess.ExecuteNonEscalar();
+        }
     }
 }

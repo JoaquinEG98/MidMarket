@@ -10,5 +10,6 @@ namespace MidMarket.Business.Interfaces
         void Logout();
         List<Cliente> GetClientes();
         Cliente GetCliente(int clienteId);
+        List<Cliente> GetClientesEncriptados();
     }
 }

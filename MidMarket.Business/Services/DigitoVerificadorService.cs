@@ -78,7 +78,7 @@ namespace MidMarket.Business.Services
 
                 var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
                 _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) recalculó los Digitos Verificadores Verticales de la Tabla: {tabla}", Criticidad.Alta, clienteLogueado);
-                
+
                 scope.Complete();
             }
         }
@@ -91,13 +91,37 @@ namespace MidMarket.Business.Services
 
         public bool ValidarDigitosVerificadores(string tabla)
         {
+            string baseDVV = ObtenerDVVActual(tabla);
             string actualDVV = ObtenerDVV(tabla);
             string compararDVV = CalcularDVV(tabla);
 
-            if (actualDVV != compararDVV)
-                return false;
+            if (baseDVV == actualDVV && actualDVV == compararDVV)
+                return true;
 
-            return true;
+            return false;
+        }
+
+        public void ActualizarTablaDVH(List<Cliente> clientes)
+        {
+            using (TransactionScope scope = new TransactionScope())
+            {
+                foreach (Cliente cliente in clientes)
+                {
+                    Cliente clienteCalculado = new Cliente()
+                    {
+                        Id = cliente.Id,
+                        Email = cliente.Email,
+                        Password = cliente.Password,
+                        RazonSocial = cliente.RazonSocial,
+                        CUIT = cliente.CUIT,
+                        Puntaje = cliente.Puntaje,
+                    };
+                    clienteCalculado.DVH = DigitoVerificador.GenerarDVH(clienteCalculado);
+
+                    _digitoVerificadorDataAccess.ActualizarTablaDVH("Cliente", clienteCalculado.DVH, clienteCalculado.Id);
+                }
+                scope.Complete();
+            }
         }
     }
 }
