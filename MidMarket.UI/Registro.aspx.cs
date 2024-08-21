@@ -27,7 +27,8 @@ namespace MidMarket.UI
             {
                 if (!EsTurnstileValido())
                 {
-                    AlertHelper.MostrarMensaje(this, "Error: la verificación del CAPTCHA falló.");
+                    lblError.Text = "Error: la verificación del CAPTCHA falló.";
+                    lblError.Visible = true;
                     return;
                 }
 
@@ -45,7 +46,8 @@ namespace MidMarket.UI
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarMensaje(this, $"Error al registrar cliente: {ex.Message}.");
+                lblError.Text = $"Error al registrar cliente: {ex.Message}";
+                lblError.Visible = true;
             }
         }
 
@@ -60,11 +62,9 @@ namespace MidMarket.UI
                 postData["secret"] = secretKey;
                 postData["response"] = captchaResponse;
 
-                // Enviar solicitud POST a la API de verificación de Cloudflare
                 byte[] response = client.UploadValues("https://challenges.cloudflare.com/turnstile/v0/siteverify", "POST", postData);
                 string result = System.Text.Encoding.UTF8.GetString(response);
 
-                // Parsear la respuesta JSON
                 var captchaResult = Newtonsoft.Json.JsonConvert.DeserializeObject<CaptchaResponse>(result);
                 return captchaResult.Success;
             }

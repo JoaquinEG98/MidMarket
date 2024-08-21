@@ -22,6 +22,9 @@
                 <input type="password" id="txtPassword" name="password" required runat="server">
             </div>
             <asp:Button type="submit" id="btnLogin" class="submit-btn" runat="server" Text="Login" OnClick="btnLogin_Click"></asp:Button>
+
+            <br />
+            <asp:Label ID="lblError" runat="server" ForeColor="Red" Visible="false" CssClass="error-label"></asp:Label>
         </form>
         <div class="extra-options">
             <p>¿No tienes cuenta? <a href="registro.aspx">Regístrate aquí</a></p>

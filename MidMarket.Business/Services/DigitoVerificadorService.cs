@@ -78,7 +78,9 @@ namespace MidMarket.Business.Services
                 _digitoVerificadorDataAccess.ActualizarDVV(tabla, nuevoDVV);
 
                 var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
-                _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) recalculó los Digitos Verificadores Verticales de la Tabla: {tabla}", Criticidad.Alta, clienteLogueado);
+
+                if (clienteLogueado != null)
+                    _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) recalculó los Digitos Verificadores Verticales de la Tabla: {tabla}", Criticidad.Alta, clienteLogueado);
 
                 scope.Complete();
             }

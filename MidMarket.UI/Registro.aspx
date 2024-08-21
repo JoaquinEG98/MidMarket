@@ -33,6 +33,8 @@
                 <div class="cf-turnstile" data-sitekey="0x4AAAAAAAhq4RxabKV10192" data-theme="light"></div>
             </div>
             <asp:Button type="submit" ID="btnRegistro" class="submit-btn" runat="server" Text="Registrarse" OnClick="btnRegistro_Click"></asp:Button>
+
+            <asp:Label ID="lblError" runat="server" ForeColor="Red" Visible="false" CssClass="error-label"></asp:Label>
         </form>
         <div class="extra-options">
             <p>¿Ya tienes cuenta? <a href="Login.aspx">Inicia sesión aquí</a></p>

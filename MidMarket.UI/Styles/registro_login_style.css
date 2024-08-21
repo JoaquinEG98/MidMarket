@@ -118,3 +118,10 @@ input:invalid + .error-message {
     .captcha .cf-turnstile {
         display: inline-block;
     }
+
+.error-label {
+    padding-top: 20px;
+    margin-top: 0;
+    display: block;
+    font-size: 14px;
+}
