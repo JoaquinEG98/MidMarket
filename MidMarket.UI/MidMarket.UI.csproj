@@ -132,6 +132,9 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Images\brokerfinanciero.png" />
+    <Content Include="Images\brokerfinanciero2.png" />
+    <Content Include="MenuPrincipal.aspx" />
     <Content Include="DesasignarFamilias.aspx" />
     <Content Include="DesasignarPatentes.aspx" />
     <Content Include="favicon.ico" />
@@ -204,6 +207,7 @@
     <Content Include="Styles\modal.css" />
     <Content Include="Styles\navbar.css" />
     <Content Include="Styles\registro_login_style.css" />
+    <Content Include="Styles\homepage.css" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -259,6 +263,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal.aspx.cs">
+      <DependentUpon>MenuPrincipal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal.aspx.designer.cs">
+      <DependentUpon>MenuPrincipal.aspx</DependentUpon>
     </Compile>
     <Compile Include="DesasignarFamilias.aspx.cs">
       <DependentUpon>DesasignarFamilias.aspx</DependentUpon>

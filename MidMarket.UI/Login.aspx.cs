@@ -31,7 +31,7 @@ namespace MidMarket.UI
                 {
                     _sessionManager.Set("Usuario", cliente);
 
-                    Response.Redirect("Default.aspx", false);
+                    Response.Redirect("MenuPrincipal.aspx", false);
                     Context.ApplicationInstance.CompleteRequest();
                 }
                 else
