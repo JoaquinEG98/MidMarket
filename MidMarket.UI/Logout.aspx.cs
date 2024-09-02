@@ -18,12 +18,12 @@ namespace MidMarket.UI
             try
             {
                 _usuarioService.Logout();
-                Response.Redirect("Login.aspx");
+                Response.Redirect("Default.aspx");
             }
             catch (Exception)
             {
                 Session.Abandon();
-                Response.Redirect("Login.aspx");
+                Response.Redirect("Default.aspx");
             }
 
         }

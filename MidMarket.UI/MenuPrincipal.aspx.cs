@@ -30,12 +30,12 @@ namespace MidMarket.UI
                     Cliente = _sessionManager.Get<Cliente>("Usuario");
 
                     if (Cliente == null)
-                        Response.Redirect("Login.aspx");
+                        Response.Redirect("Default.aspx");
                 }
                 catch (Exception ex)
                 {
                     AlertHelper.MostrarMensaje(this, $"Error al cargar la página: {ex.Message}.");
-                    Response.Redirect("Login.aspx");
+                    Response.Redirect("Default.aspx");
                 }
             }
         }

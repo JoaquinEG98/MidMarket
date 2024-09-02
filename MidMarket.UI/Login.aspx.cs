@@ -18,7 +18,13 @@ namespace MidMarket.UI
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                var cliente = _sessionManager.Get<Cliente>("Usuario");
 
+                if (cliente != null)
+                    Response.Redirect("MenuPrincipal.aspx");
+            }
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)

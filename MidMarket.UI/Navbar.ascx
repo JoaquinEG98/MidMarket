@@ -2,16 +2,16 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
     <div class="container">
-        <a class="navbar-brand fw-bold" runat="server" href="~/">MidMarket</a>
+        <a class="navbar-brand fw-bold" runat="server" href="/MenuPrincipal.aspx">MidMarket</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNav">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="menuPrincipalDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menú Principal</a>
+                    <a class="nav-link dropdown-toggle" href="/MenuPrincipal.aspx" id="menuPrincipalDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menú Principal</a>
                     <ul class="dropdown-menu animate__animated animate__fadeInDown animate__faster" aria-labelledby="menuPrincipalDropdown">
-                        <li><a class="dropdown-item" href="#">Restablecer Password</a></li>
+                        <li><a class="dropdown-item" href="#">Cambiar Password</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
