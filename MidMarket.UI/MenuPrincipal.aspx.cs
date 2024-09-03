@@ -3,6 +3,7 @@ using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
 using MidMarket.UI.Helpers;
 using System;
+using System.Linq;
 using System.Web.UI;
 using Unity;
 
@@ -11,6 +12,8 @@ namespace MidMarket.UI
     public partial class _Default : Page
     {
         public Cliente Cliente { get; set; }
+        public string Familia { get; set; }
+
 
         private readonly ISessionManager _sessionManager;
         private readonly IUsuarioService _usuarioService;
@@ -31,6 +34,9 @@ namespace MidMarket.UI
 
                     if (Cliente == null)
                         Response.Redirect("Default.aspx");
+
+                    if (Cliente.Permisos.Count > 0)
+                        Familia = Cliente.Permisos.Where(x => x.Permiso == Entities.Enums.Permiso.EsFamilia).FirstOrDefault().Nombre.ToString();
                 }
                 catch (Exception ex)
                 {

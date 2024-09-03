@@ -10,6 +10,17 @@
         AsignarFamilias,
         AsignarPatentes,
         DesasignarFamilias,
-        DesasignarPatentes
+        DesasignarPatentes,
+        AltaBono,
+        ModificarBono,
+        BajaBono,
+        AltaAccion,
+        ModificarAccion,
+        BajaAccion,
+        VisualizarPortafolio,
+        ComprarAccion,
+        ComprarBono,
+        VenderAccion,
+        VenderBono
     }
 }

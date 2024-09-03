@@ -3,7 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
        <div>
-        <h2>Hola, <%: Cliente.RazonSocial %></h2>
+        <h2>Hola, <%: Cliente.RazonSocial %> (<%: Familia %>)</h2>
     </div>
 
 </asp:Content>
