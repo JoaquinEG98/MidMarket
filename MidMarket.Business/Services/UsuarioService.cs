@@ -6,6 +6,7 @@ using MidMarket.Entities;
 using MidMarket.Business.Seguridad;
 using System.Collections.Generic;
 using MidMarket.Entities.Enums;
+using System.Text.RegularExpressions;
 
 namespace MidMarket.Business.Services
 {
@@ -28,6 +29,8 @@ namespace MidMarket.Business.Services
 
         public int RegistrarUsuario(Cliente cliente)
         {
+            ValidarUsuario(cliente, cliente.Password);
+
             using (TransactionScope scope = new TransactionScope())
             {
                 cliente.Email = Encriptacion.EncriptarAES(cliente.Email);
@@ -51,6 +54,8 @@ namespace MidMarket.Business.Services
             string emailEncriptado = Encriptacion.EncriptarAES(email);
 
             Cliente cliente = _usuarioDataAccess.Login(emailEncriptado);
+            ValidarUsuario(cliente, password);
+
             if (cliente != null)
             {
                 string passwordEncriptada = Encriptacion.Hash(password);
@@ -74,18 +79,33 @@ namespace MidMarket.Business.Services
                 }
                 else
                 {
-                    throw new Exception("La contraseña ingresada es incorrecta.");
+                    throw new Exception("[ERR-007]: Contraseña incorrecta");
                 }
             }
 
             return null;
         }
 
+        private void ValidarUsuario(Cliente cliente, string password)
+        {
+            if (string.IsNullOrWhiteSpace(cliente.Password) || string.IsNullOrWhiteSpace(cliente.Email))
+                throw new Exception("[ERR-005]: El usuario y/o contraseña no contienen datos");
+
+            if (!ValidarFormatoPassword(password))
+                throw new Exception("[ERR-006]: La contraseña no posee el formato correcto");
+        }
+
+        private bool ValidarFormatoPassword(string password)
+        {
+            string regex = @"^(?=.*[A-Z])(?=.*[\W_]).{8,}$";
+            return Regex.IsMatch(password, regex);
+        }
+
         public void Logout()
         {
             var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
             _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) cerró sesión", Criticidad.Baja, clienteLogueado);
-            
+
             _sessionManager.Remove("Usuario");
             _sessionManager.AbandonSession();
         }
