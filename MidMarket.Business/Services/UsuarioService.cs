@@ -55,7 +55,7 @@ namespace MidMarket.Business.Services
 
             Cliente cliente = _usuarioDataAccess.Login(emailEncriptado);
             ValidarUsuario(cliente, password);
-
+            
             if (cliente != null)
             {
                 string passwordEncriptada = Encriptacion.Hash(password);
@@ -72,6 +72,7 @@ namespace MidMarket.Business.Services
                         Cuenta = cliente.Cuenta,
                     };
                     _permisoService.GetComponenteUsuario(clienteDesencriptado);
+                    _usuarioDataAccess.UpdateBloqueo(cliente.Id);
 
                     _bitacoraService.AltaBitacora($"{clienteDesencriptado.RazonSocial} ({clienteDesencriptado.Id}) inició sesión correctamente", Criticidad.Baja, clienteDesencriptado);
 
@@ -79,6 +80,7 @@ namespace MidMarket.Business.Services
                 }
                 else
                 {
+                    _usuarioDataAccess.AumentarBloqueo(cliente.Id);
                     throw new Exception("[ERR-007]: Contraseña incorrecta");
                 }
             }
@@ -93,6 +95,9 @@ namespace MidMarket.Business.Services
 
             if (!ValidarFormatoPassword(password))
                 throw new Exception("[ERR-006]: La contraseña no posee el formato correcto");
+
+            if (cliente.Bloqueo >= 3)
+                throw new Exception("[ERR-008]: El usuario se encuentra bloqueado. Contáctese con el administrador");
         }
 
         private bool ValidarFormatoPassword(string password)

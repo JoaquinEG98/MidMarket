@@ -75,6 +75,8 @@
     <Content Include="Scripts\Permiso\GET_FAMILIA_VALIDACION.sql" />
     <Content Include="Scripts\Permiso\BORRAR_PERMISO_USUARIO.sql" />
     <Content Include="Scripts\DigitoVerificador\UPDATE_DIGITO_VERTICAL.sql" />
+    <Content Include="Scripts\Usuario\AUMENTAR_BLOQUEO.sql" />
+    <Content Include="Scripts\Usuario\UPDATE_BLOQUEO.sql" />
     <Content Include="Scripts\Usuario\GET_USUARIO.sql" />
     <Content Include="Scripts\DigitoVerificador\GET_DIGITOS_HORIZONTALES.sql" />
     <Content Include="Scripts\Permiso\GUARDAR_PERMISO_USUARIO.sql" />

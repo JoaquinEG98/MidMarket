@@ -64,5 +64,19 @@ namespace MidMarket.DataAccess.DAOs
 
             return cliente;
         }
+
+        public void UpdateBloqueo(int clienteId)
+        {
+            _dataAccess.SelectCommandText = String.Format(Scripts.UPDATE_BLOQUEO, clienteId);
+
+            DataSet ds = _dataAccess.ExecuteNonReader();
+        }
+
+        public void AumentarBloqueo(int clienteId)
+        {
+            _dataAccess.SelectCommandText = String.Format(Scripts.AUMENTAR_BLOQUEO, clienteId);
+
+            DataSet ds = _dataAccess.ExecuteNonReader();
+        }
     }
 }

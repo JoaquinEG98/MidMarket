@@ -71,6 +71,17 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to UPDATE Cliente
+        ///SET Bloqueo = Bloqueo + 1
+        ///WHERE ID_Cliente = {0}.
+        /// </summary>
+        internal static string AUMENTAR_BLOQUEO {
+            get {
+                return ResourceManager.GetString("AUMENTAR_BLOQUEO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to DELETE FROM FamiliaPatente WHERE Id_Padre = @PadreId.
         /// </summary>
         internal static string BORRAR_FAMILIA {
@@ -89,7 +100,7 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SELECT Id_Bitacora, Id_Cliente, Descripcion, Criticidad, Fecha FROM Bitacora ORDER BY Fecha DESC.
+        ///   Looks up a localized string similar to SELECT TOP 30 Id_Bitacora, Id_Cliente, Descripcion, Criticidad, Fecha FROM Bitacora ORDER BY Fecha DESC.
         /// </summary>
         internal static string GET_BITACORA {
             get {
@@ -299,6 +310,17 @@ namespace MidMarket.DataAccess {
         internal static string REGISTRAR_USUARIO {
             get {
                 return ResourceManager.GetString("REGISTRAR_USUARIO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to UPDATE Cliente
+        ///SET Bloqueo = 0
+        ///WHERE ID_Cliente = {0}.
+        /// </summary>
+        internal static string UPDATE_BLOQUEO {
+            get {
+                return ResourceManager.GetString("UPDATE_BLOQUEO", resourceCulture);
             }
         }
         

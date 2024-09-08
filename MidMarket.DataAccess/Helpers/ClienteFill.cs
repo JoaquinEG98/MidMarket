@@ -31,6 +31,9 @@ namespace MidMarket.DataAccess.Helpers
             if (dr.Table.Columns.Contains("Puntaje") && !Convert.IsDBNull(dr["Puntaje"]))
                 cliente.Puntaje = Convert.ToInt32(dr["Puntaje"]);
 
+            if (dr.Table.Columns.Contains("Bloqueo") && !Convert.IsDBNull(dr["Bloqueo"]))
+                cliente.Bloqueo = Convert.ToInt32(dr["Bloqueo"]);
+
             if (dr.Table.Columns.Contains("Id_Cuenta") && !Convert.IsDBNull(dr["Id_Cuenta"]))
                 cuenta.Id = Convert.ToInt32(dr["Id_Cuenta"]);
 

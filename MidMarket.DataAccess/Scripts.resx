@@ -121,6 +121,9 @@
   <data name="ALTA_BITACORA" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\Bitacora\ALTA_BITACORA.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="AUMENTAR_BLOQUEO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Scripts\Usuario\AUMENTAR_BLOQUEO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="BORRAR_FAMILIA" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\Permiso\BORRAR_FAMILIA.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
@@ -183,6 +186,9 @@
   </data>
   <data name="REGISTRAR_USUARIO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\Usuario\REGISTRAR_USUARIO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="UPDATE_BLOQUEO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Scripts\Usuario\UPDATE_BLOQUEO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="UPDATE_DIGITO_VERTICAL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\DigitoVerificador\UPDATE_DIGITO_VERTICAL.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>

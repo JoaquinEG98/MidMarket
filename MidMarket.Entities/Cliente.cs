@@ -13,6 +13,7 @@ namespace MidMarket.Entities
         public string RazonSocial { get; set; }
         public string CUIT { get; set; }
         public double Puntaje { get; set; }
+        public int Bloqueo { get; set; }
         public Cuenta Cuenta { get; set; }
         public List<Componente> Permisos
         {
