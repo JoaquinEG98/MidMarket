@@ -3,7 +3,6 @@ using MidMarket.DataAccess.Interfaces;
 using System.Collections.Generic;
 using MidMarket.Business.Interfaces;
 using System.Transactions;
-using MidMarket.Entities.Enums;
 using MidMarket.Entities;
 using MidMarket.Entities.DTOs;
 
@@ -19,7 +18,7 @@ namespace MidMarket.Business.Services
         {
             _sessionManager = DependencyResolver.Resolve<ISessionManager>();
             _digitoVerificadorDataAccess = DependencyResolver.Resolve<IDigitoVerificadorDAO>();
-            _bitacoraService = DependencyResolver.Resolve<IBitacoraService>();
+            //_bitacoraService = DependencyResolver.Resolve<IBitacoraService>();
         }
 
         private string ObtenerDVVActual(string tabla)
@@ -80,7 +79,7 @@ namespace MidMarket.Business.Services
                 var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
 
                 if (clienteLogueado != null)
-                    _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) recalculó los Digitos Verificadores Verticales de la Tabla: {tabla}", Criticidad.Alta, clienteLogueado);
+                    //_bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) recalculó los Digitos Verificadores Verticales de la Tabla: {tabla}", Criticidad.Alta, clienteLogueado);
 
                 scope.Complete();
             }

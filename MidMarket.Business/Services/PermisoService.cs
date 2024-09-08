@@ -23,7 +23,7 @@ namespace MidMarket.Business.Services
             _sessionManager = DependencyResolver.Resolve<ISessionManager>();
             _permisoDataAccess = DependencyResolver.Resolve<IPermisoDAO>();
             _digitoVerificadorService = DependencyResolver.Resolve<IDigitoVerificadorService>();
-            _bitacoraService = DependencyResolver.Resolve<IBitacoraService>();
+            //_bitacoraService = DependencyResolver.Resolve<IBitacoraService>();
         }
 
         public void GuardarFamiliaCreada(Familia familia)
@@ -31,7 +31,7 @@ namespace MidMarket.Business.Services
             _permisoDataAccess.GuardarFamiliaCreada(familia);
 
             var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
-            _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) guardó la familia {familia.Id}", Criticidad.Alta, clienteLogueado);
+            //_bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) guardó la familia {familia.Id}", Criticidad.Alta, clienteLogueado);
         }
 
         public int GuardarPatenteFamilia(Componente componente, bool familia)
@@ -39,7 +39,7 @@ namespace MidMarket.Business.Services
             int id = _permisoDataAccess.GuardarPatenteFamilia(componente, familia);
 
             var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
-            _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) guardó la patente/familia {id}", Criticidad.Alta, clienteLogueado);
+            //_bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) guardó la patente/familia {id}", Criticidad.Alta, clienteLogueado);
 
             return id;
         }
