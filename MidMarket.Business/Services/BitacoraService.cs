@@ -39,7 +39,7 @@ namespace MidMarket.Business.Services
             return id;
         }
 
-        public List<Bitacora> GetBitacora()
+        public List<Bitacora> ObtenerBitacora()
         {
             List<Bitacora> bitacora = _bitacoraDAO.GetBitacora();
 

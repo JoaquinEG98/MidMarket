@@ -31,7 +31,7 @@
                 <asp:TextBox ID="txtFechaHasta" runat="server" CssClass="filter-input" TextMode="Date"></asp:TextBox>
             </div>
 
-            <asp:Button ID="btnFiltrarFechas" runat="server" Text="Filtrar" CssClass="submit-btn" OnClick="FiltrarBitacora" />
+            <asp:Button ID="btnFiltrarFechas" runat="server" Text="Filtrar" CssClass="submit-btn" OnClick="ConsultarBitacoraFiltro" />
         </div>
 
         <table id="tablaBitacora">

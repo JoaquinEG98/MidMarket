@@ -7,6 +7,6 @@ namespace MidMarket.Business.Interfaces
     public interface IBitacoraService
     {
         int AltaBitacora(string descripcion, Criticidad criticidad, Cliente cliente);
-        List<Bitacora> GetBitacora();
+        List<Bitacora> ObtenerBitacora();
     }
 }

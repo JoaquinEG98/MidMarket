@@ -54,7 +54,7 @@ namespace MidMarket.UI
             {
                 CargarClientes();
                 PaginaActual = 0;
-                CargarBitacora();
+                ConsultarBitacora();
             }
         }
 
@@ -77,11 +77,11 @@ namespace MidMarket.UI
             }
         }
 
-        private void CargarBitacora()
+        private void ConsultarBitacora()
         {
             try
             {
-                var todosMovimientos = _bitacoraService.GetBitacora();
+                var todosMovimientos = _bitacoraService.ObtenerBitacora();
 
                 if (!string.IsNullOrEmpty(ddlUsuario.SelectedValue))
                 {
@@ -119,7 +119,7 @@ namespace MidMarket.UI
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarMensaje(this, $"Error al cargar la página: {ex.Message}.");
+                AlertHelper.MostrarMensaje(this, $"No se puede establecer conexión con la base de datos.");
                 Response.Redirect("Default.aspx");
             }
         }
@@ -129,7 +129,7 @@ namespace MidMarket.UI
             if (PaginaActual > 0)
             {
                 PaginaActual--;
-                CargarBitacora();
+                ConsultarBitacora();
             }
         }
 
@@ -138,14 +138,14 @@ namespace MidMarket.UI
             if (PaginaActual < TotalPaginas - 1)
             {
                 PaginaActual++;
-                CargarBitacora();
+                ConsultarBitacora();
             }
         }
 
-        protected void FiltrarBitacora(object sender, EventArgs e)
+        protected void ConsultarBitacoraFiltro(object sender, EventArgs e)
         {
             PaginaActual = 0;
-            CargarBitacora();
+            ConsultarBitacora();
         }
     }
 }
