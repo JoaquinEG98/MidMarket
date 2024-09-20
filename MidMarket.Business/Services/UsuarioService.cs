@@ -90,7 +90,7 @@ namespace MidMarket.Business.Services
 
         private void ValidarUsuario(Cliente cliente, string password)
         {
-            if (string.IsNullOrWhiteSpace(cliente.Password) || string.IsNullOrWhiteSpace(cliente.Email))
+            if (cliente is null || string.IsNullOrWhiteSpace(cliente.Password) || string.IsNullOrWhiteSpace(cliente.Email))
                 throw new Exception("[ERR-005]: El usuario y/o contraseña no contienen datos");
 
             if (!ValidarFormatoPassword(password))
