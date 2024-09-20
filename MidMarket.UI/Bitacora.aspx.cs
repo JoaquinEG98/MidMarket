@@ -119,7 +119,7 @@ namespace MidMarket.UI
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarMensaje(this, $"No se puede establecer conexión con la base de datos.");
+                AlertHelper.MostrarMensaje(this, $"[ERR-003]: No se puede establecer conexión con la base de datos.");
                 Response.Redirect("Default.aspx");
             }
         }
