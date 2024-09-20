@@ -9,7 +9,7 @@ namespace MidMarket.DataAccess.Interfaces
         Cliente Login(string email);
         List<Cliente> GetClientes();
         Cliente GetCliente(int clienteId);
-        void UpdateBloqueo(int clienteId);
+        void ActualizarBloqueo(int clienteId);
         void AumentarBloqueo(int clienteId);
     }
 }

@@ -65,7 +65,7 @@ namespace MidMarket.DataAccess.DAOs
             return cliente;
         }
 
-        public void UpdateBloqueo(int clienteId)
+        public void ActualizarBloqueo(int clienteId)
         {
             _dataAccess.SelectCommandText = String.Format(Scripts.UPDATE_BLOQUEO, clienteId);
 

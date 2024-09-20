@@ -72,7 +72,7 @@ namespace MidMarket.Business.Services
                         Cuenta = cliente.Cuenta,
                     };
                     _permisoService.GetComponenteUsuario(clienteDesencriptado);
-                    _usuarioDataAccess.UpdateBloqueo(cliente.Id);
+                    _usuarioDataAccess.ActualizarBloqueo(cliente.Id);
 
                     _bitacoraService.AltaBitacora($"{clienteDesencriptado.RazonSocial} ({clienteDesencriptado.Id}) inició sesión correctamente", Criticidad.Baja, clienteDesencriptado);
 

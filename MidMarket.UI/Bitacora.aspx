@@ -7,13 +7,13 @@
         <div class="filter-container">
             <div class="form-group">
                 <label for="filterUsuario">Filtrar por Usuario:</label>
-                <asp:DropDownList ID="ddlUsuario" runat="server" CssClass="filter-select" AutoPostBack="true" OnSelectedIndexChanged="FiltrarBitacora">
+                <asp:DropDownList ID="ddlUsuario" runat="server" CssClass="filter-select" AutoPostBack="true" OnSelectedIndexChanged="ConsultarBitacoraFiltro">
                 </asp:DropDownList>
             </div>
 
             <div class="form-group">
                 <label for="filterCriticidad">Filtrar por Criticidad:</label>
-                <asp:DropDownList ID="ddlCriticidad" runat="server" CssClass="filter-select" AutoPostBack="true" OnSelectedIndexChanged="FiltrarBitacora">
+                <asp:DropDownList ID="ddlCriticidad" runat="server" CssClass="filter-select" AutoPostBack="true" OnSelectedIndexChanged="ConsultarBitacoraFiltro">
                     <asp:ListItem Text="Todas" Value=""></asp:ListItem>
                     <asp:ListItem Text="Baja" Value="Baja"></asp:ListItem>
                     <asp:ListItem Text="Media" Value="Media"></asp:ListItem>

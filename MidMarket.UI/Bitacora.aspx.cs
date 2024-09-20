@@ -144,8 +144,27 @@ namespace MidMarket.UI
 
         protected void ConsultarBitacoraFiltro(object sender, EventArgs e)
         {
-            PaginaActual = 0;
-            ConsultarBitacora();
+            try
+            {
+                ValidarFiltros();
+                PaginaActual = 0;
+                ConsultarBitacora();
+            }
+            catch (Exception ex)
+            {
+                AlertHelper.MostrarMensaje(this, $"{ex.Message}");
+            }
+
+        }
+
+        protected void ValidarFiltros()
+        {
+            bool seleccionoFechas = !string.IsNullOrEmpty(txtFechaDesde.Text) && !string.IsNullOrEmpty(txtFechaHasta.Text);
+
+            if (seleccionoFechas && Convert.ToDateTime(txtFechaDesde.Text) > Convert.ToDateTime(txtFechaHasta.Text))
+            {
+                throw new Exception("[ERR-020]: La fecha desde no puede ser mayor que la fecha hasta");
+            }
         }
     }
 }
