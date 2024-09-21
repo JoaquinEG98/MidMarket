@@ -9,9 +9,23 @@
         <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNav">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item dropdown" runat="server" id="menuPrincipalDropdown">
-                    <a class="nav-link dropdown-toggle" href="/MenuPrincipal.aspx" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menú Principal</a>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Mi Cuenta</a>
                     <ul class="dropdown-menu animate__animated animate__fadeInDown animate__faster" aria-labelledby="menuPrincipalDropdown">
                         <li><a class="dropdown-item" href="#">Cambiar Password</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown" runat="server" id="accionesDropDown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Administrar Acciones</a>
+                    <ul class="dropdown-menu animate__animated animate__fadeInDown animate__faster" aria-labelledby="accionesDropDown">
+                        <li><a class="dropdown-item" href="#">Alta Acciones</a></li>
+                        <li><a class="dropdown-item" href="#">Modificar Acciones</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown" runat="server" id="bonosDropDown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Administrar Acciones</a>
+                    <ul class="dropdown-menu animate__animated animate__fadeInDown animate__faster" aria-labelledby="bonosDropDown">
+                        <li><a class="dropdown-item" href="#">Alta Bonos</a></li>
+                        <li><a class="dropdown-item" href="#">Modificar Bonos</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown" runat="server" id="usuariosDropdown">

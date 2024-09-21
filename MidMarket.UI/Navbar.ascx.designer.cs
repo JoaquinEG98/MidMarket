@@ -24,6 +24,24 @@ namespace MidMarket.UI
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl menuPrincipalDropdown;
 
         /// <summary>
+        /// accionesDropDown control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl accionesDropDown;
+
+        /// <summary>
+        /// bonosDropDown control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl bonosDropDown;
+
+        /// <summary>
         /// usuariosDropdown control.
         /// </summary>
         /// <remarks>
