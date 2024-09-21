@@ -34,7 +34,7 @@ namespace MidMarket.DataAccess.DAOs
             return _dataAccess.ExecuteNonEscalar();
         }
 
-        public List<Bitacora> GetBitacora()
+        public List<Bitacora> ObtenerBitacora()
         {
             _dataAccess.SelectCommandText = String.Format(Scripts.GET_BITACORA);
             DataSet ds = _dataAccess.ExecuteNonReader();

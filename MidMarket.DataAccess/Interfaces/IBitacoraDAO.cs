@@ -6,6 +6,6 @@ namespace MidMarket.DataAccess.Interfaces
     public interface IBitacoraDAO
     {
         int AltaBitacora(Bitacora bitacora);
-        List<Bitacora> GetBitacora();
+        List<Bitacora> ObtenerBitacora();
     }
 }
