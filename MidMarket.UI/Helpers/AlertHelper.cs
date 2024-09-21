@@ -15,17 +15,28 @@ namespace MidMarket.UI.Helpers
             ScriptManager.RegisterStartupScript(page, page.GetType(), "alerta", script, true);
         }
 
-        public static void MostrarMensaje(Page page, string mensaje)
+        public static void MostrarMensaje(Page page, string mensaje, bool redirigir = false)
         {
             var modalControl = (Modal)page.Master.FindControl("globalModalControl");
             if (modalControl != null)
             {
-                modalControl.MostrarModal(mensaje);
+                var literalMensaje = (Literal)modalControl.FindControl("modalMessageLiteral");
+                if (literalMensaje != null)
+                {
+                    literalMensaje.Text = mensaje;
+                }
 
-                var hfShowModal = (HiddenField)page.Master.FindControl("hfShowModal");
+                var hfShowModal = (HiddenField)modalControl.FindControl("hfShowModal");
+                var hfRedirigir = (HiddenField)modalControl.FindControl("hfRedirigir");
+
                 if (hfShowModal != null)
                 {
-                    hfShowModal.Value = "false";
+                    hfShowModal.Value = "true";  // Establece que se debe mostrar el modal
+                }
+
+                if (redirigir && hfRedirigir != null)
+                {
+                    hfRedirigir.Value = "true";  // Establece si debe redirigir
                 }
             }
         }

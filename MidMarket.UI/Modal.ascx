@@ -20,6 +20,7 @@
 </div>
 
 <asp:HiddenField ID="hfShowModal" runat="server" Value="false" />
+<asp:HiddenField ID="hfRedirigir" runat="server" Value="false" />
 
 <script>
     window.onload = function () {
@@ -29,6 +30,13 @@
             myModal.show();
 
             document.getElementById('<%= hfShowModal.ClientID %>').value = "false";
+
+            var redirigir = document.getElementById('<%= hfRedirigir.ClientID %>').value;
+            if (redirigir === "true") {
+                setTimeout(function () {
+                    window.location.href = 'Default.aspx';
+                }, 5000);
+            }
         }
     };
 </script>

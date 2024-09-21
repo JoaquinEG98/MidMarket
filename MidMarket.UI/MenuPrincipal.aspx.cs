@@ -4,6 +4,7 @@ using MidMarket.Entities;
 using MidMarket.UI.Helpers;
 using System;
 using System.Linq;
+using System.Threading;
 using System.Web.UI;
 using Unity;
 
@@ -40,8 +41,8 @@ namespace MidMarket.UI
                 }
                 catch (Exception ex)
                 {
-                    AlertHelper.MostrarMensaje(this, $"Error al cargar la página: {ex.Message}.");
-                    Response.Redirect("Default.aspx");
+                    AlertHelper.MostrarMensaje(this, $"Error al cargar la página. Será redirigido al inicio.", true);
+                    _sessionManager.AbandonSession();
                 }
             }
         }
