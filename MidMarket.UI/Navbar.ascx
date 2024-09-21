@@ -22,7 +22,7 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown" runat="server" id="bonosDropDown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Administrar Acciones</a>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Administrar Bonos</a>
                     <ul class="dropdown-menu animate__animated animate__fadeInDown animate__faster" aria-labelledby="bonosDropDown">
                         <li><a class="dropdown-item" href="#">Alta Bonos</a></li>
                         <li><a class="dropdown-item" href="#">Modificar Bonos</a></li>
