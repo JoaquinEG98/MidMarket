@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace MidMarket.UI.Helpers
 {
@@ -20,6 +21,12 @@ namespace MidMarket.UI.Helpers
             if (modalControl != null)
             {
                 modalControl.MostrarModal(mensaje);
+
+                var hfShowModal = (HiddenField)page.Master.FindControl("hfShowModal");
+                if (hfShowModal != null)
+                {
+                    hfShowModal.Value = "false";
+                }
             }
         }
     }

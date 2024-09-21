@@ -27,6 +27,8 @@
         if (showModal === "true") {
             var myModal = new bootstrap.Modal(document.getElementById('globalModal'));
             myModal.show();
+
+            document.getElementById('<%= hfShowModal.ClientID %>').value = "false";
         }
     };
 </script>
