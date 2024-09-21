@@ -374,6 +374,10 @@
       <Project>{4c04a0d0-0b92-4a62-a026-7ad24d07d47e}</Project>
       <Name>MidMarket.Entities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MidMarket.Seguridad\MidMarket.Seguridad.csproj">
+      <Project>{EB46D7D0-E917-46A9-AFFE-C1418E239D3C}</Project>
+      <Name>MidMarket.Seguridad</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

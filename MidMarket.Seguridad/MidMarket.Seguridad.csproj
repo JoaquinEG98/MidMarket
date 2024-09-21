@@ -45,6 +45,7 @@
     <Compile Include="ClockWrapper.cs" />
     <Compile Include="DigitoVerificador.cs" />
     <Compile Include="Encriptacion.cs" />
+    <Compile Include="Errores.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,4 +1,5 @@
 ﻿using MidMarket.Business.Interfaces;
+using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
 using System;
 using System.Collections.Generic;
@@ -119,7 +120,7 @@ namespace MidMarket.UI
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarMensaje(this, $"[ERR-003]: No se puede establecer conexión con la base de datos.");
+                AlertHelper.MostrarMensaje(this, $"{Errores.ObtenerError(3)}");
                 Response.Redirect("Default.aspx");
             }
         }
@@ -163,7 +164,7 @@ namespace MidMarket.UI
 
             if (seleccionoFechas && Convert.ToDateTime(txtFechaDesde.Text) > Convert.ToDateTime(txtFechaHasta.Text))
             {
-                throw new Exception("[ERR-020]: La fecha desde no puede ser mayor que la fecha hasta");
+                throw new Exception(Errores.ObtenerError(20));
             }
         }
     }

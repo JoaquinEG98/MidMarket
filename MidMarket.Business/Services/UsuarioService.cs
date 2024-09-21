@@ -7,6 +7,7 @@ using MidMarket.Business.Seguridad;
 using System.Collections.Generic;
 using MidMarket.Entities.Enums;
 using System.Text.RegularExpressions;
+using MidMarket.Seguridad;
 
 namespace MidMarket.Business.Services
 {
@@ -81,7 +82,7 @@ namespace MidMarket.Business.Services
                 else
                 {
                     _usuarioDataAccess.AumentarBloqueo(cliente.Id);
-                    throw new Exception("[ERR-007]: Contraseña incorrecta");
+                    throw new Exception(Errores.ObtenerError(7));
                 }
             }
 
@@ -91,13 +92,13 @@ namespace MidMarket.Business.Services
         private void ValidarUsuario(Cliente cliente, string password)
         {
             if (cliente is null || string.IsNullOrWhiteSpace(cliente.Password) || string.IsNullOrWhiteSpace(cliente.Email))
-                throw new Exception("[ERR-005]: El usuario y/o contraseña no contienen datos");
+                throw new Exception(Errores.ObtenerError(5));
 
             if (!ValidarFormatoPassword(password))
-                throw new Exception("[ERR-006]: La contraseña no posee el formato correcto");
+                throw new Exception(Errores.ObtenerError(6));
 
             if (cliente.Bloqueo >= 3)
-                throw new Exception("[ERR-008]: El usuario se encuentra bloqueado. Contáctese con el administrador");
+                throw new Exception(Errores.ObtenerError(8));
         }
 
         private bool ValidarFormatoPassword(string password)
