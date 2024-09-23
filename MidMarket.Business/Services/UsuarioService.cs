@@ -55,38 +55,47 @@ namespace MidMarket.Business.Services
             string emailEncriptado = Encriptacion.EncriptarAES(email);
 
             Cliente cliente = _usuarioDataAccess.Login(emailEncriptado);
-            ValidarUsuario(cliente, password);
-            
-            if (cliente != null)
+
+            try
             {
-                string passwordEncriptada = Encriptacion.Hash(password);
+                ValidarUsuario(cliente, password);
 
-                if (passwordEncriptada == cliente.Password)
+                if (cliente != null)
                 {
-                    Cliente clienteDesencriptado = new Cliente()
+                    string passwordEncriptada = Encriptacion.Hash(password);
+
+                    if (passwordEncriptada == cliente.Password)
                     {
-                        Id = cliente.Id,
-                        Email = Encriptacion.DesencriptarAES(cliente.Email),
-                        RazonSocial = Encriptacion.DesencriptarAES(cliente.RazonSocial),
-                        CUIT = Encriptacion.DesencriptarAES(cliente.CUIT),
-                        Puntaje = cliente.Puntaje,
-                        Cuenta = cliente.Cuenta,
-                    };
-                    _permisoService.GetComponenteUsuario(clienteDesencriptado);
-                    _usuarioDataAccess.ActualizarBloqueo(cliente.Id);
+                        Cliente clienteDesencriptado = new Cliente()
+                        {
+                            Id = cliente.Id,
+                            Email = Encriptacion.DesencriptarAES(cliente.Email),
+                            RazonSocial = Encriptacion.DesencriptarAES(cliente.RazonSocial),
+                            CUIT = Encriptacion.DesencriptarAES(cliente.CUIT),
+                            Puntaje = cliente.Puntaje,
+                            Cuenta = cliente.Cuenta,
+                        };
+                        _permisoService.GetComponenteUsuario(clienteDesencriptado);
+                        _usuarioDataAccess.ActualizarBloqueo(cliente.Id);
 
-                    _bitacoraService.AltaBitacora($"{clienteDesencriptado.RazonSocial} ({clienteDesencriptado.Id}) inició sesión correctamente", Criticidad.Baja, clienteDesencriptado);
+                        _bitacoraService.AltaBitacora($"{clienteDesencriptado.RazonSocial} ({clienteDesencriptado.Id}) inició sesión correctamente", Criticidad.Baja, clienteDesencriptado);
 
-                    return clienteDesencriptado;
+                        return clienteDesencriptado;
+                    }
+                    else
+                    {
+                        _usuarioDataAccess.AumentarBloqueo(cliente.Id);
+                        throw new Exception(Errores.ObtenerError(7));
+                    }
                 }
-                else
-                {
-                    _usuarioDataAccess.AumentarBloqueo(cliente.Id);
-                    throw new Exception(Errores.ObtenerError(7));
-                }
+
+                return null;
             }
-
-            return null;
+            catch (Exception ex)
+            {
+                _usuarioDataAccess.AumentarBloqueo(cliente.Id);
+                throw ex;
+            }
         }
 
         private void ValidarUsuario(Cliente cliente, string password)
