@@ -27,8 +27,8 @@
             <asp:Label ID="lblError" runat="server" ForeColor="Red" Visible="false" CssClass="error-label"></asp:Label>
         </form>
         <div class="extra-options">
-            <p>¿No tienes cuenta? <a href="registro.aspx">Regístrate aquí</a></p>
-            <p><a href="RecuperarPassword.aspx">¿Olvidaste tu contraseña?</a></p>
+<%--            <p>¿No tienes cuenta? <a href="registro.aspx">Regístrate aquí</a></p>--%>
+            <p><a href="#">¿Olvidaste tu contraseña?</a></p>
         </div>
     </div>
 </body>
