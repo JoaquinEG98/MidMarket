@@ -1,0 +1,52 @@
+﻿.welcome-container {
+    padding: 20px 0;
+    margin-left: 0;
+    text-align: left;
+}
+
+    .welcome-container h2 {
+        color: #7e57c2;
+    }
+
+    .welcome-container p {
+        font-size: 18px;
+    }
+
+.card {
+    flex: 1;
+    padding: 20px;
+    background-color: #7e57c2;
+    border-radius: 8px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    .card h3 {
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        font-size: 24px;
+    }
+
+.chart-container {
+    margin-bottom: 40px;
+}
+
+    .chart-container h3 {
+        color: #7e57c2;
+    }
+
+.news-list {
+    list-style: none;
+    padding: 0;
+}
+
+.news-item {
+    padding: 10px;
+    background-color: #7e57c2;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

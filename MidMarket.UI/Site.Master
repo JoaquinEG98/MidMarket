@@ -23,6 +23,7 @@
     <link href="Styles/gestion_bitacora.css" rel="stylesheet" />
     <link href="Styles/gestion_administracionbd.css" rel="stylesheet" />
     <link href="Styles/modal.css" rel="stylesheet" />
+    <link href="/Styles/menu_principal.css" rel="stylesheet" />
 </head>
 <body>
     <form runat="server">
@@ -35,7 +36,7 @@
 
         <uc:Navbar ID="NavbarControl" runat="server" />
 
-        <div class="container body-content" style="margin-top: 70px;">
+        <div class="container body-content" style="margin-top: 20px;">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />

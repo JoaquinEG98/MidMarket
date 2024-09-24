@@ -204,6 +204,7 @@
     <Content Include="Styles\gestion_administracionbd.css" />
     <Content Include="Styles\gestion_bitacora.css" />
     <Content Include="Styles\gestion_familias.css" />
+    <Content Include="Styles\menu_principal.css" />
     <Content Include="Styles\modal.css" />
     <Content Include="Styles\navbar.css" />
     <Content Include="Styles\registro_login_style.css" />
