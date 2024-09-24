@@ -71,7 +71,7 @@
             <div class="hero-container">
                 <h2>Soluciones Financieras Exclusivas para Empresas Medianas</h2>
                 <p>Impulsando el crecimiento de su empresa con servicios financieros personalizados y eficaces.</p>
-                <a href="#contact" class="cta-btn">Contáctanos</a>
+                <a href="mailto:contacto@midmarket.com.ar" class="cta-btn">Contáctanos</a>
             </div>
         </footer>
     </form>
