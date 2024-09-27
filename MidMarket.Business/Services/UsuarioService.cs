@@ -58,44 +58,39 @@ namespace MidMarket.Business.Services
 
             try
             {
-                if (cliente != null)
-                {
-                    ValidarUsuario(cliente, password);
-                    string passwordEncriptada = Encriptacion.Hash(password);
-
-                    if (passwordEncriptada == cliente.Password)
-                    {
-                        Cliente clienteDesencriptado = new Cliente()
-                        {
-                            Id = cliente.Id,
-                            Email = Encriptacion.DesencriptarAES(cliente.Email),
-                            RazonSocial = Encriptacion.DesencriptarAES(cliente.RazonSocial),
-                            CUIT = Encriptacion.DesencriptarAES(cliente.CUIT),
-                            Puntaje = cliente.Puntaje,
-                            Cuenta = cliente.Cuenta,
-                        };
-                        _permisoService.GetComponenteUsuario(clienteDesencriptado);
-                        _usuarioDataAccess.ActualizarBloqueo(cliente.Id);
-
-                        _bitacoraService.AltaBitacora($"{clienteDesencriptado.RazonSocial} ({clienteDesencriptado.Id}) inició sesión correctamente", Criticidad.Baja, clienteDesencriptado);
-
-                        return clienteDesencriptado;
-                    }
-                    else
-                    {
-                        throw new Exception(Errores.ObtenerError(7));
-                    }
-                }
-                else
-                {
+                if (cliente == null)
                     throw new Exception(Errores.ObtenerError(7));
-                }
+
+                ValidarUsuario(cliente, password);
+                
+                string passwordEncriptada = Encriptacion.Hash(password);
+
+                if (passwordEncriptada != cliente.Password)
+                    throw new Exception(Errores.ObtenerError(7));
+
+                Cliente clienteDesencriptado = new Cliente()
+                {
+                    Id = cliente.Id,
+                    Email = Encriptacion.DesencriptarAES(cliente.Email),
+                    RazonSocial = Encriptacion.DesencriptarAES(cliente.RazonSocial),
+                    CUIT = Encriptacion.DesencriptarAES(cliente.CUIT),
+                    Puntaje = cliente.Puntaje,
+                    Cuenta = cliente.Cuenta,
+                };
+
+                _permisoService.GetComponenteUsuario(clienteDesencriptado);
+                _usuarioDataAccess.ActualizarBloqueo(cliente.Id);
+
+                _bitacoraService.AltaBitacora($"{clienteDesencriptado.RazonSocial} ({clienteDesencriptado.Id}) inició sesión correctamente", Criticidad.Baja, clienteDesencriptado);
+
+                return clienteDesencriptado;
+
             }
             catch (Exception ex)
             {
                 if (cliente != null)
                     _usuarioDataAccess.AumentarBloqueo(cliente.Id);
-               
+
                 throw ex;
             }
         }
