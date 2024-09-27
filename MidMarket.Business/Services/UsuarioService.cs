@@ -58,10 +58,9 @@ namespace MidMarket.Business.Services
 
             try
             {
-                ValidarUsuario(cliente, password);
-
                 if (cliente != null)
                 {
+                    ValidarUsuario(cliente, password);
                     string passwordEncriptada = Encriptacion.Hash(password);
 
                     if (passwordEncriptada == cliente.Password)
@@ -84,16 +83,19 @@ namespace MidMarket.Business.Services
                     }
                     else
                     {
-                        _usuarioDataAccess.AumentarBloqueo(cliente.Id);
                         throw new Exception(Errores.ObtenerError(7));
                     }
                 }
-
-                return null;
+                else
+                {
+                    throw new Exception(Errores.ObtenerError(7));
+                }
             }
             catch (Exception ex)
             {
-                _usuarioDataAccess.AumentarBloqueo(cliente.Id);
+                if (cliente != null)
+                    _usuarioDataAccess.AumentarBloqueo(cliente.Id);
+               
                 throw ex;
             }
         }

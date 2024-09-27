@@ -12,7 +12,7 @@ namespace MidMarket.Seguridad
             { 4, "[ERR-004]: El item seleccionado ya se encuentra deshabilitado" },
             { 5, "[ERR-005]: El usuario y/o contraseña no contienen datos" },
             { 6, "[ERR-006]: La contraseña no posee el formato correcto" },
-            { 7, "[ERR-007]: Contraseña incorrecta" },
+            { 7, "[ERR-007]: Usuario o contraseña incorrecto" },
             { 8, "[ERR-008]: El usuario se encuentra bloqueado. Contáctese con el administrador" },
             { 9, "[ERR-009]: El usuario no existe en la base de datos" },
             { 10, "[ERR-010]: Problema al enviar el mail" },
