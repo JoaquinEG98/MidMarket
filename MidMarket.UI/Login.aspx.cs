@@ -33,18 +33,10 @@ namespace MidMarket.UI
             {
                 Cliente cliente = _usuarioService.Login(txtEmail.Value, txtPassword.Value);
 
-                if (cliente != null)
-                {
-                    _sessionManager.Set("Usuario", cliente);
+                _sessionManager.Set("Usuario", cliente);
 
-                    Response.Redirect("MenuPrincipal.aspx", false);
-                    Context.ApplicationInstance.CompleteRequest();
-                }
-                else
-                {
-                    lblError.Text = "El correo o la contraseña son incorrectos";
-                    lblError.Visible = true;
-                }
+                Response.Redirect("MenuPrincipal.aspx", false);
+                Context.ApplicationInstance.CompleteRequest();
             }
             catch (Exception ex)
             {
