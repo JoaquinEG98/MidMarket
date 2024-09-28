@@ -89,7 +89,10 @@ namespace MidMarket.Business.Services
             catch (Exception ex)
             {
                 if (cliente != null)
+                {
                     _usuarioDataAccess.AumentarBloqueo(cliente.Id);
+                    _bitacoraService.AltaBitacora($"Intento de login incorrecto para el usuario: {cliente.Id}", Criticidad.Media, cliente);
+                }
 
                 throw ex;
             }
