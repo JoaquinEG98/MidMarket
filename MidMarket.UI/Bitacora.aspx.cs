@@ -16,6 +16,18 @@ namespace MidMarket.UI
 
         public List<Entities.Bitacora> Movimientos { get; set; } = new List<Entities.Bitacora>();
 
+        private bool _filtrado
+        {
+            get
+            {
+                return ViewState["Filtrado"] != null ? (bool)ViewState["Filtrado"] : false;
+            }
+            set
+            {
+                ViewState["Filtrado"] = value;
+            }
+        }
+
         private int PaginaActual
         {
             get
@@ -82,7 +94,12 @@ namespace MidMarket.UI
         {
             try
             {
-                var todosMovimientos = _bitacoraService.ObtenerBitacora();
+                List<Entities.Bitacora> todosMovimientos = new List<Entities.Bitacora>();
+
+                if (_filtrado)
+                    todosMovimientos = _bitacoraService.ObtenerBitacora();
+                else
+                    todosMovimientos = _bitacoraService.ObtenerBitacora().Take(30).ToList();
 
                 if (!string.IsNullOrEmpty(ddlUsuario.SelectedValue))
                 {
@@ -149,11 +166,22 @@ namespace MidMarket.UI
             {
                 ValidarFiltros();
                 PaginaActual = 0;
+
+                _filtrado = true;
                 ConsultarBitacora();
             }
             catch (Exception ex)
             {
                 AlertHelper.MostrarMensaje(this, $"{ex.Message}");
+
+                PaginaActual = 0;
+                TotalPaginas = 1;
+                Movimientos = new List<Entities.Bitacora>();
+
+                btnAnterior.Enabled = false;
+                btnSiguiente.Enabled = false;
+
+                DataBind();
             }
 
         }
