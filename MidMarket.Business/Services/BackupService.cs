@@ -64,7 +64,7 @@ namespace MidMarket.Business.Services
 
             if (restoreRealizado)
             {
-                _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) realizó backup de la base de datos", Criticidad.Alta, clienteLogueado);
+                _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) realizó restore de la base de datos", Criticidad.Alta, clienteLogueado);
             }
             else
                 throw new Exception("Hubo un error al generar el restore en la base de datos.");
