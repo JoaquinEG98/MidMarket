@@ -132,8 +132,11 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Error.aspx" />
+    <Content Include="Images\error.png" />
     <Content Include="Images\brokerfinanciero.png" />
     <Content Include="Images\brokerfinanciero2.png" />
+    <Content Include="Images\123123.png" />
     <Content Include="MenuPrincipal.aspx" />
     <Content Include="DesasignarFamilias.aspx" />
     <Content Include="DesasignarPatentes.aspx" />
@@ -173,6 +176,7 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Images\error.webp" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -201,6 +205,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="Styles\error.css" />
     <Content Include="Styles\gestion_administracionbd.css" />
     <Content Include="Styles\gestion_bitacora.css" />
     <Content Include="Styles\gestion_familias.css" />
@@ -264,6 +269,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
     </Compile>
     <Compile Include="MenuPrincipal.aspx.cs">
       <DependentUpon>MenuPrincipal.aspx</DependentUpon>
