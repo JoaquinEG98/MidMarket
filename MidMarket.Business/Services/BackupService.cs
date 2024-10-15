@@ -6,6 +6,7 @@ using MidMarket.Entities.DTOs;
 using MidMarket.Business.Interfaces;
 using MidMarket.DataAccess.Interfaces;
 using System.IO;
+using MidMarket.Entities.Enums;
 
 namespace MidMarket.Business.Services
 {
@@ -19,7 +20,7 @@ namespace MidMarket.Business.Services
         {
             _sessionManager = DependencyResolver.Resolve<ISessionManager>();
             _backupDataAccess = DependencyResolver.Resolve<IBackupDAO>();
-            //_bitacoraService = DependencyResolver.Resolve<IBitacoraService>();
+            _bitacoraService = DependencyResolver.Resolve<IBitacoraService>();
         }
 
         public void RealizarBackup(string rutaBackup)
@@ -49,7 +50,7 @@ namespace MidMarket.Business.Services
 
             if (backupRealizado)
             {
-                //_bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) realizó backup de la base de datos", Criticidad.Media, clienteLogueado);
+                _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) realizó backup de la base de datos", Criticidad.Media, clienteLogueado);
             }
             else
                 throw new Exception("Hubo un error en generar el backup en la ruta.");
@@ -63,7 +64,7 @@ namespace MidMarket.Business.Services
 
             if (restoreRealizado)
             {
-                //_bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) realizó backup de la base de datos", Criticidad.Alta, clienteLogueado);
+                _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) realizó backup de la base de datos", Criticidad.Alta, clienteLogueado);
             }
             else
                 throw new Exception("Hubo un error al generar el restore en la base de datos.");
