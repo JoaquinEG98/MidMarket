@@ -36,29 +36,23 @@ namespace MidMarket.UI
 
         private void AsignarMenuPermisos(Cliente cliente)
         {
-            if (cliente.Email == "administrador@midmarket.com.ar")
-            {
-                accionesDropDown.Visible = true;
-                bonosDropDown.Visible = true;
-            }
-            else if (cliente.Email == "webmaster@midmarket.com.ar")
-            {
-                bitacora.Visible = true;
-            }
 
-
-            //foreach (var permiso in cliente.Permisos)
-            //{
-            //    if (permiso.Permiso == Entities.Enums.Permiso.EsFamilia && permiso.Nombre == "Webmaster")
-            //    {
-            //        bitacora.Visible = true;
-            //    }
-            //    else if (permiso.Permiso == Entities.Enums.Permiso.EsFamilia && permiso.Nombre == "Administrador Financiero")
-            //    {
-            //        accionesDropDown.Visible = true;
-            //        bonosDropDown.Visible = true;
-            //    }
-            //}
+            foreach (var permiso in cliente.Permisos)
+            {
+                if (permiso.Permiso == Entities.Enums.Permiso.EsFamilia && permiso.Nombre == "Webmaster")
+                {
+                    bitacora.Visible = true;
+                    familiasDropdown.Visible = true;
+                    permisosDropdown.Visible = true;
+                    usuariosDropdown.Visible = true;
+                    administracionBD.Visible = true;
+                }
+                else if (permiso.Permiso == Entities.Enums.Permiso.EsFamilia && permiso.Nombre == "Administrador Financiero")
+                {
+                    accionesDropDown.Visible = true;
+                    bonosDropDown.Visible = true;
+                }
+            }
         }
     }
 }
