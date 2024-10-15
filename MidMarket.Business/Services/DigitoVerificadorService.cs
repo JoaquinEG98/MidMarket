@@ -103,6 +103,18 @@ namespace MidMarket.Business.Services
             return false;
         }
 
+        public bool VerificarInconsistenciaTablas()
+        {
+            bool cliente = ValidarDigitosVerificadores("Cliente");
+            bool usuarioPermiso = ValidarDigitosVerificadores("UsuarioPermiso");
+
+            if (!cliente || !usuarioPermiso)
+                return false;
+
+            else
+                return true;
+        }
+
         private void ActualizarTablaDVH(List<Cliente> clientes)
         {
             using (TransactionScope scope = new TransactionScope())

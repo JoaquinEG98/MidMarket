@@ -100,10 +100,9 @@ namespace MidMarket.UI
 
         private void CargarDV()
         {
-            bool cliente = _digitoVerificadorService.ValidarDigitosVerificadores("Cliente");
-            bool usuarioPermiso = _digitoVerificadorService.ValidarDigitosVerificadores("UsuarioPermiso");
+            bool consistencia = _digitoVerificadorService.VerificarInconsistenciaTablas();
 
-            if (!cliente || !usuarioPermiso)
+            if (!consistencia)
             {
                 estadoDVLiteral.Text = "<span id='estadoDV' class='status-text incorrecto'>Estado: Incorrecto</span>";
             }
