@@ -6,11 +6,11 @@ using Unity;
 
 namespace MidMarket.UI
 {
-    public partial class AltaAcciones : System.Web.UI.Page
+    public partial class AltaBonos : System.Web.UI.Page
     {
         private readonly IActivoService _activoService;
 
-        public AltaAcciones()
+        public AltaBonos()
         {
             _activoService = Global.Container.Resolve<IActivoService>();
         }
@@ -20,20 +20,19 @@ namespace MidMarket.UI
 
         }
 
-        protected void btnCargar_Click(object sender, EventArgs e)
+        protected void btnCargarBono_Click(object sender, EventArgs e)
         {
             try
             {
-                Accion accion = new Accion
+                Bono bono = new Bono
                 {
-                    Nombre = nombreAccion.Value,
-                    Simbolo = simboloAccion.Value,
-                    Precio = decimal.Parse(precioAccion.Value) 
+                    Nombre = nombreBono.Value,
+                    ValorNominal = decimal.Parse(valorNominal.Value),
+                    TasaInteres = float.Parse(tasaInteres.Value)
                 };
+                _activoService.AltaBono(bono);
 
-                _activoService.AltaAccion(accion);
-
-                AlertHelper.MostrarMensaje(this, $"Acción {accion.Nombre} dada de alta correctamente.");
+                AlertHelper.MostrarMensaje(this, $"Bono {bono.Nombre} dado de alta correctamente.");
                 LimpiarCampos();
             }
             catch (Exception ex)
@@ -42,11 +41,12 @@ namespace MidMarket.UI
             }
         }
 
+
         private void LimpiarCampos()
         {
-            nombreAccion.Value = "";
-            simboloAccion.Value = "";
-            precioAccion.Value = "";
+            nombreBono.Value = "";
+            valorNominal.Value = "";
+            tasaInteres.Value = "";
         }
     }
 }

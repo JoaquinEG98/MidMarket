@@ -1,4 +1,4 @@
-﻿.container-acciones {
+﻿.container-bonos {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
@@ -7,22 +7,21 @@
     width: 100%;
     margin: 20px auto;
 }
-
-    .container-acciones h2 {
+    .container-bonos h2 {
         font-size: 24px;
         color: #4a148c;
         text-align: center;
         margin-bottom: 20px;
     }
 
-.form-group-acciones label {
+.form-group-bonos label {
     display: block;
     font-size: 16px;
     color: #333;
     margin-bottom: 5px;
 }
 
-.form-group-acciones input[type="text"] {
+.form-group-bonos input[type="text"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -33,12 +32,12 @@
     font-size: 16px;
 }
 
-    .form-group-acciones input[type="text"]:focus {
+    .form-group-bonos input[type="text"]:focus {
         border-color: #7e57c2;
         outline: none;
     }
 
-.submit-btn-acciones {
+.submit-btn-bonos {
     width: 100%;
     padding: 10px;
     background-color: #7e57c2;
@@ -51,6 +50,6 @@
     margin-top: 10px;
 }
 
-    .submit-btn-acciones:hover {
+    .submit-btn-bonos:hover {
         background-color: #6a1b9a;
     }
