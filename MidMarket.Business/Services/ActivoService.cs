@@ -50,7 +50,7 @@ namespace MidMarket.Business.Services
             }
         }
 
-        public List<Accion> GetClientes()
+        public List<Accion> GetAcciones()
         {
             List<Accion> acciones = _activoDataAccess.GetAcciones();
 

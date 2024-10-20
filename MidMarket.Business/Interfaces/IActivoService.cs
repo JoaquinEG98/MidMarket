@@ -7,7 +7,7 @@ namespace MidMarket.Business.Interfaces
     {
         int AltaAccion(Accion accion);
         int AltaBono(Bono bono);
-        List<Accion> GetClientes();
+        List<Accion> GetAcciones();
         List<Bono> GetBonos();
     }
 }

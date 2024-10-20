@@ -110,6 +110,7 @@
   <ItemGroup>
     <Content Include="AdministracionBD.aspx" />
     <Content Include="AdministracionFamilias.aspx" />
+    <Content Include="AdministrarAcciones.aspx" />
     <Content Include="AltaAcciones.aspx" />
     <Content Include="AltaBonos.aspx" />
     <Content Include="AltaFamilia.aspx" />
@@ -234,6 +235,13 @@
     </Compile>
     <Compile Include="AdministracionFamilias.aspx.designer.cs">
       <DependentUpon>AdministracionFamilias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdministrarAcciones.aspx.cs">
+      <DependentUpon>AdministrarAcciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdministrarAcciones.aspx.designer.cs">
+      <DependentUpon>AdministrarAcciones.aspx</DependentUpon>
     </Compile>
     <Compile Include="AltaAcciones.aspx.cs">
       <DependentUpon>AltaAcciones.aspx</DependentUpon>

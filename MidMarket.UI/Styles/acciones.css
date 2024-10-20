@@ -1,13 +1,17 @@
-﻿.container-acciones {
+﻿/* activos-acciones.css */
+
+/* Contenedor específico para la administración de acciones */
+.container-acciones {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
+    max-width: 800px;
     width: 100%;
     margin: 20px auto;
 }
 
+    /* Títulos principales para el formulario de administración de acciones */
     .container-acciones h2 {
         font-size: 24px;
         color: #4a148c;
@@ -15,29 +19,34 @@
         margin-bottom: 20px;
     }
 
-.form-group-acciones label {
-    display: block;
-    font-size: 16px;
-    color: #333;
-    margin-bottom: 5px;
-}
-
-.form-group-acciones input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #cfd8dc;
-    border-radius: 4px;
-    background-color: #f2e8ff;
-    color: #333;
-    font-size: 16px;
-}
-
-    .form-group-acciones input[type="text"]:focus {
-        border-color: #7e57c2;
-        outline: none;
+    /* Tabla de acciones */
+    .container-acciones table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        color: #333;
     }
 
+    .container-acciones table, th, td {
+        border: 1px solid #7e57c2;
+    }
+
+    .container-acciones th, td {
+        padding: 10px;
+        text-align: left;
+    }
+
+    .container-acciones th {
+        background-color: #7e57c2;
+        color: white;
+    }
+
+    .container-acciones td {
+        background-color: #f2e8ff;
+        color: #333;
+    }
+
+/* Botones de la administración de acciones */
 .submit-btn-acciones {
     width: 100%;
     padding: 10px;
@@ -53,4 +62,35 @@
 
     .submit-btn-acciones:hover {
         background-color: #6a1b9a;
+    }
+
+/* Radio button personalizado */
+input[type="radio"] {
+    appearance: none;
+    background-color: #f2e8ff;
+    margin: 0;
+    font: inherit;
+    color: #7e57c2;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #7e57c2;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+}
+
+    input[type="radio"]::before {
+        content: "";
+        width: 12px;
+        height: 12px;
+        box-shadow: inset 1em 1em #7e57c2;
+        transform: scale(0);
+        transition: transform 0.2s ease-in-out;
+        background-color: #ffffff;
+        border-radius: inherit;
+    }
+
+    input[type="radio"]:checked::before {
+        transform: scale(1);
     }
