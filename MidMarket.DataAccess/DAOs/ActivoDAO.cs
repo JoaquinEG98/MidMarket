@@ -15,13 +15,16 @@ namespace MidMarket.DataAccess.DAOs
 
         public int AltaAccion(Accion accion)
         {
-            _dataAccess.ExecuteCommandText = Scripts.ADD_ACCION;
+            _dataAccess.ExecuteCommandText = Scripts.ADD_ACTIVO;
 
             _dataAccess.ExecuteParameters.Parameters.Clear();
 
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Nombre", accion.Nombre);
 
             int activoId = _dataAccess.ExecuteNonEscalar();
+
+            _dataAccess.ExecuteParameters.Parameters.Clear();
+            _dataAccess.ExecuteCommandText = Scripts.ADD_ACCION;
 
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Simbolo", accion.Simbolo);
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Precio", accion.Precio);
@@ -32,13 +35,16 @@ namespace MidMarket.DataAccess.DAOs
 
         public int AltaBono(Bono bono)
         {
-            _dataAccess.ExecuteCommandText = Scripts.ADD_BONO;
+            _dataAccess.ExecuteCommandText = Scripts.ADD_ACTIVO;
 
             _dataAccess.ExecuteParameters.Parameters.Clear();
 
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Nombre", bono.Nombre);
 
             int activoId = _dataAccess.ExecuteNonEscalar();
+
+            _dataAccess.ExecuteParameters.Parameters.Clear();
+            _dataAccess.ExecuteCommandText = Scripts.ADD_BONO;
 
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@ValorNominal", bono.ValorNominal);
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@TasaInteres", bono.TasaInteres);
