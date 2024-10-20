@@ -44,7 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Accion.cs" />
+    <Compile Include="Activo.cs" />
     <Compile Include="Bitacora.cs" />
+    <Compile Include="Bono.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Composite\Componente.cs" />
     <Compile Include="Composite\Familia.cs" />

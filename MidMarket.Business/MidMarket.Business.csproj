@@ -60,7 +60,9 @@
     <Compile Include="Interfaces\IPermisoService.cs" />
     <Compile Include="Interfaces\ISessionManager.cs" />
     <Compile Include="Interfaces\IUsuarioService.cs" />
+    <Compile Include="Interfaces\IActivoService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ActivoService.cs" />
     <Compile Include="Services\BackupService.cs" />
     <Compile Include="Services\BitacoraService.cs" />
     <Compile Include="Services\DigitoVerificadorService.cs" />

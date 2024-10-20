@@ -61,6 +61,36 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to INSERT INTO Accion (Simbolo, Precio, Id_Activo)
+        ///OUTPUT inserted.Id_Accion VALUES (@Simbolo, @Precio, @Id_Activo).
+        /// </summary>
+        internal static string ADD_ACCION {
+            get {
+                return ResourceManager.GetString("ADD_ACCION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to INSERT INTO Activo (Nombre)
+        ///OUTPUT inserted.Id_Activo VALUES (@Nombre).
+        /// </summary>
+        internal static string ADD_ACTIVO {
+            get {
+                return ResourceManager.GetString("ADD_ACTIVO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to INSERT INTO Bono (ValorNominal, TasaInteres, Id_Activo)
+        ///OUTPUT inserted.Id_Bono VALUES (@ValorNominal, @TasaInteres, @Id_Activo).
+        /// </summary>
+        internal static string ADD_BONO {
+            get {
+                return ResourceManager.GetString("ADD_BONO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to INSERT INTO Bitacora (Id_Cliente, Descripcion, Criticidad, Fecha) 
         ///OUTPUT inserted.Id_Bitacora VALUES (@ClienteId, @Descripcion, @Criticidad, @Fecha).
         /// </summary>
@@ -100,7 +130,7 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SELECT TOP 30 Id_Bitacora, Id_Cliente, Descripcion, Criticidad, Fecha FROM Bitacora ORDER BY Fecha DESC.
+        ///   Looks up a localized string similar to SELECT Id_Bitacora, Id_Cliente, Descripcion, Criticidad, Fecha FROM Bitacora ORDER BY Fecha DESC.
         /// </summary>
         internal static string GET_BITACORA {
             get {
@@ -271,7 +301,7 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SELECT TOP 1 cliente.Id_Cliente, cliente.Email, cliente.Password, cliente.Nombre, cliente.CUIT, cliente.Puntaje, cliente.DVH, cuenta.Id_Cuenta, cuenta.NumeroCuenta, cuenta.Saldo
+        ///   Looks up a localized string similar to SELECT TOP 1 cliente.Id_Cliente, cliente.Email, cliente.Password, cliente.Nombre, cliente.CUIT, cliente.Puntaje, cliente.Bloqueo, cliente.DVH, cuenta.Id_Cuenta, cuenta.NumeroCuenta, cuenta.Saldo
         ///FROM Cliente cliente
         ///INNER JOIN Cuenta cuenta on cuenta.Id_Cliente = cliente.Id_Cliente 
         ///WHERE Email = &apos;{0}&apos;.

@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Conexion\BBDD.cs" />
     <Compile Include="Conexion\Conexion.cs" />
+    <Compile Include="DAOs\ActivoDAO.cs" />
     <Compile Include="DAOs\BackupDAO.cs" />
     <Compile Include="DAOs\BitacoraDAO.cs" />
     <Compile Include="DAOs\DigitoVerificadorDAO.cs" />
@@ -51,6 +52,7 @@
     <Compile Include="Helpers\BitacoraFill.cs" />
     <Compile Include="Helpers\ClienteFill.cs" />
     <Compile Include="Helpers\PermisoFill.cs" />
+    <Compile Include="Interfaces\IActivoDAO.cs" />
     <Compile Include="Interfaces\IBackupDAO.cs" />
     <Compile Include="Interfaces\IBitacoraDAO.cs" />
     <Compile Include="Interfaces\IDigitoVerificadorDAO.cs" />
@@ -65,6 +67,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Scripts\Activo\ADD_BONO.sql" />
+    <Content Include="Scripts\Activo\ADD_ACCION.sql" />
+    <Content Include="Scripts\Activo\ADD_ACTIVO.sql" />
     <Content Include="Scripts\Bitacora\GET_BITACORA.sql" />
     <Content Include="Scripts\Bitacora\ALTA_BITACORA.sql" />
     <Content Include="Scripts\DigitoVerificador\GET_DIGITO_VERTICAL.sql" />

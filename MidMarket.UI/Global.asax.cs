@@ -36,6 +36,7 @@ namespace MidMarket.UI
             Container.RegisterType<IDigitoVerificadorService, DigitoVerificadorService>();
             Container.RegisterType<IBitacoraService, BitacoraService>();
             Container.RegisterType<IBackupService, BackupService>();
+            Container.RegisterType<IActivoService, ActivoService>();
         }
     }
 }
