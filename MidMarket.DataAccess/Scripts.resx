@@ -139,8 +139,14 @@
   <data name="BORRAR_PERMISO_USUARIO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\Permiso\BORRAR_PERMISO_USUARIO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="GET_ACCIONES" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Scripts\Activo\GET_ACCIONES.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="GET_BITACORA" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\Bitacora\GET_BITACORA.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="GET_BONOS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Scripts\Activo\GET_BONOS.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="GET_DIGITOS_HORIZONTALES" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\DigitoVerificador\GET_DIGITOS_HORIZONTALES.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>

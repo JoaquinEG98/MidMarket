@@ -1,4 +1,5 @@
 ﻿using MidMarket.Entities;
+using System.Collections.Generic;
 
 namespace MidMarket.DataAccess.Interfaces
 {
@@ -6,5 +7,7 @@ namespace MidMarket.DataAccess.Interfaces
     {
         int AltaAccion(Accion accion);
         int AltaBono(Bono bono);
+        List<Accion> GetAcciones();
+        List<Bono> GetBonos();
     }
 }

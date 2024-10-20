@@ -1,6 +1,10 @@
 ﻿using MidMarket.DataAccess.Conexion;
+using MidMarket.DataAccess.Helpers;
 using MidMarket.DataAccess.Interfaces;
 using MidMarket.Entities;
+using System.Collections.Generic;
+using System.Data;
+using System;
 
 namespace MidMarket.DataAccess.DAOs
 {
@@ -51,6 +55,32 @@ namespace MidMarket.DataAccess.DAOs
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Activo", activoId);
 
             return _dataAccess.ExecuteNonEscalar();
+        }
+
+        public List<Accion> GetAcciones()
+        {
+            _dataAccess.SelectCommandText = String.Format(Scripts.GET_ACCIONES);
+            DataSet ds = _dataAccess.ExecuteNonReader();
+
+            List<Accion> acciones = new List<Accion>();
+
+            if (ds.Tables[0].Rows.Count > 0)
+                acciones = ActivoFill.FillListAccion(ds);
+
+            return acciones;
+        }
+
+        public List<Bono> GetBonos()
+        {
+            _dataAccess.SelectCommandText = String.Format(Scripts.GET_BONOS);
+            DataSet ds = _dataAccess.ExecuteNonReader();
+
+            List<Bono> bonos = new List<Bono>();
+
+            if (ds.Tables[0].Rows.Count > 0)
+                bonos = ActivoFill.FillListBono(ds);
+
+            return bonos;
         }
     }
 }

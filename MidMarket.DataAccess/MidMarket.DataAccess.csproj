@@ -49,6 +49,7 @@
     <Compile Include="DAOs\BitacoraDAO.cs" />
     <Compile Include="DAOs\DigitoVerificadorDAO.cs" />
     <Compile Include="DAOs\PermisoDAO.cs" />
+    <Compile Include="Helpers\ActivoFill.cs" />
     <Compile Include="Helpers\BitacoraFill.cs" />
     <Compile Include="Helpers\ClienteFill.cs" />
     <Compile Include="Helpers\PermisoFill.cs" />
@@ -67,6 +68,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Scripts\Activo\GET_BONOS.sql" />
+    <Content Include="Scripts\Activo\GET_ACCIONES.sql" />
     <Content Include="Scripts\Activo\ADD_BONO.sql" />
     <Content Include="Scripts\Activo\ADD_ACCION.sql" />
     <Content Include="Scripts\Activo\ADD_ACTIVO.sql" />

@@ -130,11 +130,35 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SELECT activo.Id_Activo, activo.Nombre, accion.Id_Accion, accion.Simbolo, accion.Precio
+        ///FROM Accion accion
+        ///INNER JOIN Activo activo
+        ///ON activo.id_Activo = accion.Id_Activo.
+        /// </summary>
+        internal static string GET_ACCIONES {
+            get {
+                return ResourceManager.GetString("GET_ACCIONES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SELECT Id_Bitacora, Id_Cliente, Descripcion, Criticidad, Fecha FROM Bitacora ORDER BY Fecha DESC.
         /// </summary>
         internal static string GET_BITACORA {
             get {
                 return ResourceManager.GetString("GET_BITACORA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT activo.Id_Activo, activo.Nombre, bono.Id_Bono, bono.ValorNominal, bono.TasaInteres
+        ///FROM Bono bono
+        ///INNER JOIN Activo activo
+        ///ON activo.id_Activo = bono.Id_Activo.
+        /// </summary>
+        internal static string GET_BONOS {
+            get {
+                return ResourceManager.GetString("GET_BONOS", resourceCulture);
             }
         }
         

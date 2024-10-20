@@ -2,6 +2,7 @@
 using MidMarket.Business.Seguridad;
 using MidMarket.DataAccess.Interfaces;
 using MidMarket.Entities;
+using System.Collections.Generic;
 using System.Transactions;
 
 namespace MidMarket.Business.Services
@@ -47,6 +48,20 @@ namespace MidMarket.Business.Services
 
                 return id;
             }
+        }
+
+        public List<Accion> GetClientes()
+        {
+            List<Accion> acciones = _activoDataAccess.GetAcciones();
+
+            return acciones;
+        }
+
+        public List<Bono> GetBonos()
+        {
+            List<Bono> bonos = _activoDataAccess.GetBonos();
+
+            return bonos;
         }
     }
 }
