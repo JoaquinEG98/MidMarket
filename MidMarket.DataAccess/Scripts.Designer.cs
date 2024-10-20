@@ -368,6 +368,21 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to UPDATE Activo
+        ///SET Nombre = @Nombre
+        ///WHERE Id_Activo = @Id_Activo
+        ///
+        ///UPDATE Accion
+        ///SET Simbolo = @Simbolo, Precio = @Precio
+        ///WHERE Id_Accion = @Id_Accion.
+        /// </summary>
+        internal static string UPDATE_ACCION {
+            get {
+                return ResourceManager.GetString("UPDATE_ACCION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to UPDATE Cliente
         ///SET Bloqueo = 0
         ///WHERE ID_Cliente = {0}.
@@ -375,6 +390,21 @@ namespace MidMarket.DataAccess {
         internal static string UPDATE_BLOQUEO {
             get {
                 return ResourceManager.GetString("UPDATE_BLOQUEO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to UPDATE Activo
+        ///SET Nombre = @Nombre
+        ///WHERE Id_Activo = @Id_Activo
+        ///
+        ///UPDATE Bono
+        ///SET ValorNominal = @ValorNominal, TasaInteres = @TasaInteres
+        ///WHERE Id_Bono = @Id_Bono.
+        /// </summary>
+        internal static string UPDATE_BONO {
+            get {
+                return ResourceManager.GetString("UPDATE_BONO", resourceCulture);
             }
         }
         

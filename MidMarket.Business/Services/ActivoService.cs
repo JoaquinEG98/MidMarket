@@ -1,5 +1,4 @@
 ﻿using MidMarket.Business.Interfaces;
-using MidMarket.Business.Seguridad;
 using MidMarket.DataAccess.Interfaces;
 using MidMarket.Entities;
 using System.Collections.Generic;
@@ -62,6 +61,16 @@ namespace MidMarket.Business.Services
             List<Bono> bonos = _activoDataAccess.GetBonos();
 
             return bonos;
+        }
+
+        public void ModificarAccion(Accion accion)
+        {
+            _activoDataAccess.ModificarAccion(accion);
+        }
+
+        public void ModificarBono(Bono bono)
+        {
+            _activoDataAccess.ModificarBono(bono);
         }
     }
 }

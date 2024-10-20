@@ -9,5 +9,7 @@ namespace MidMarket.DataAccess.Interfaces
         int AltaBono(Bono bono);
         List<Accion> GetAcciones();
         List<Bono> GetBonos();
+        void ModificarAccion(Accion accion);
+        void ModificarBono(Bono bono);
     }
 }

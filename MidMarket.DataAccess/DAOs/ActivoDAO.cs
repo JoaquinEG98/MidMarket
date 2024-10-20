@@ -82,5 +82,35 @@ namespace MidMarket.DataAccess.DAOs
 
             return bonos;
         }
+
+        public void ModificarAccion(Accion accion)
+        {
+            _dataAccess.ExecuteCommandText = Scripts.UPDATE_ACCION;
+
+            _dataAccess.ExecuteParameters.Parameters.Clear();
+
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Nombre", accion.Nombre);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Activo", accion.Id);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Simbolo", accion.Simbolo);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Precio", accion.Precio);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Accion", accion.Id_Accion);
+
+            _dataAccess.ExecuteNonQuery();
+        }
+
+        public void ModificarBono(Bono bono)
+        {
+            _dataAccess.ExecuteCommandText = Scripts.UPDATE_BONO;
+
+            _dataAccess.ExecuteParameters.Parameters.Clear();
+
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Nombre", bono.Nombre);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Activo", bono.Id);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@ValorNominal", bono.ValorNominal);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@TasaInteres", bono.TasaInteres);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Bono", bono.Id_Bono);
+
+            _dataAccess.ExecuteNonQuery();
+        }
     }
 }
