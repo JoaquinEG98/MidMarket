@@ -1,12 +1,7 @@
 ﻿using MidMarket.Business.Interfaces;
-using MidMarket.Entities.Composite;
 using MidMarket.Entities;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using Unity;
 using MidMarket.UI.Helpers;
 using Newtonsoft.Json;
@@ -37,9 +32,7 @@ namespace MidMarket.UI
         {
             try
             {
-
-                    CargarClientes();
-                
+                CargarClientes();
             }
             catch (Exception ex)
             {
