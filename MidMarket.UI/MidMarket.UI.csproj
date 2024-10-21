@@ -115,6 +115,7 @@
     <Content Include="AltaAcciones.aspx" />
     <Content Include="AltaBonos.aspx" />
     <Content Include="AltaFamilia.aspx" />
+    <Content Include="AltaUsuario.aspx" />
     <Content Include="AsignarFamilias.aspx" />
     <Content Include="AsignarPatentes.aspx" />
     <Content Include="Bitacora.aspx" />
@@ -283,6 +284,13 @@
     </Compile>
     <Compile Include="AltaFamilia.aspx.designer.cs">
       <DependentUpon>AltaFamilia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AltaUsuario.aspx.cs">
+      <DependentUpon>AltaUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AltaUsuario.aspx.designer.cs">
+      <DependentUpon>AltaUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />

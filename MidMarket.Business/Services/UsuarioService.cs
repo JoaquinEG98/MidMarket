@@ -39,6 +39,7 @@ namespace MidMarket.Business.Services
                 cliente.RazonSocial = Encriptacion.EncriptarAES(cliente.RazonSocial);
                 cliente.CUIT = Encriptacion.EncriptarAES(cliente.CUIT);
                 cliente.DVH = DigitoVerificador.GenerarDVH(cliente);
+                cliente.Bloqueo = 0;
 
                 int id = _usuarioDataAccess.RegistrarUsuario(cliente);
 

@@ -27,6 +27,7 @@ namespace MidMarket.DataAccess.DAOs
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Password", cliente.Password);
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Nombre", cliente.RazonSocial);
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@CUIT", cliente.CUIT);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Bloqueo", cliente.Bloqueo);
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@DVH", cliente.DVH);
 
             return _dataAccess.ExecuteNonEscalar();
