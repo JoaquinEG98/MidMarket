@@ -337,6 +337,17 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to UPDATE Cliente
+        ///SET Email = @Email, Nombre = @Nombre, CUIT = @CUIT, DVH = @DVH
+        ///WHERE Id_Cliente = @Id_Cliente.
+        /// </summary>
+        internal static string MODIFICAR_USUARIO {
+            get {
+                return ResourceManager.GetString("MODIFICAR_USUARIO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to DECLARE @rutaCompleta NVARCHAR(255) = @RutaBackupParam;
         ///DECLARE @nombreBase NVARCHAR(255) = @NombreBaseParam;
         ///
@@ -351,9 +362,9 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to INSERT INTO Cliente (Email, Password, Nombre, CUIT, Puntaje, DVH)
+        ///   Looks up a localized string similar to INSERT INTO Cliente (Email, Password, Nombre, CUIT, Puntaje, Bloqueo, DVH)
         ///OUTPUT inserted.Id_Cliente
-        ///VALUES (@Email, @Password, @Nombre, @CUIT, 0.0, @DVH);
+        ///VALUES (@Email, @Password, @Nombre, @CUIT, 0.0, @Bloqueo, @DVH);
         ///
         ///DECLARE @IdCliente INT;
         ///SET @IdCliente = SCOPE_IDENTITY();

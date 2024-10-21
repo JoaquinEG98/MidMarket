@@ -158,7 +158,7 @@ namespace MidMarket.Business.Services
             }
         }
 
-        public void RecalcularDigitosVerificadores(IUsuarioService usuarioService, IPermisoService permisoService)
+        public void RecalcularTodosDigitosVerificadores(IUsuarioService usuarioService, IPermisoService permisoService)
         {
             var clientes = usuarioService.GetClientesEncriptados();
             ActualizarTablaDVH(clientes);
@@ -168,6 +168,13 @@ namespace MidMarket.Business.Services
             var usuariosPermisos = permisoService.GetUsuariosPermisos();
             ActualizarTablaDVH(usuariosPermisos);
             ActualizarDVV("UsuarioPermiso");
+        }
+
+        public void RecalcularDigitosUsuario(IUsuarioService usuarioService, IPermisoService permisoService)
+        {
+            var clientes = usuarioService.GetClientesEncriptados();
+            ActualizarTablaDVH(clientes);
+            ActualizarDVV("Cliente");
         }
     }
 }

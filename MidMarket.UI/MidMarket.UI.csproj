@@ -160,6 +160,7 @@
     <Content Include="ModificarAccion.aspx" />
     <Content Include="ModificarBono.aspx" />
     <Content Include="ModificarFamilia.aspx" />
+    <Content Include="ModificarUsuario.aspx" />
     <Content Include="Navbar.ascx" />
     <Content Include="Registro.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -395,6 +396,13 @@
     </Compile>
     <Compile Include="ModificarFamilia.aspx.designer.cs">
       <DependentUpon>ModificarFamilia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarUsuario.aspx.cs">
+      <DependentUpon>ModificarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModificarUsuario.aspx.designer.cs">
+      <DependentUpon>ModificarUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Navbar.ascx.cs">
       <DependentUpon>Navbar.ascx</DependentUpon>

@@ -86,7 +86,7 @@ namespace MidMarket.UI
         {
             try
             {
-                _digitoVerificadorService.RecalcularDigitosVerificadores(_usuarioService, _permisoService);
+                _digitoVerificadorService.RecalcularTodosDigitosVerificadores(_usuarioService, _permisoService);
 
                 CargarDV();
 

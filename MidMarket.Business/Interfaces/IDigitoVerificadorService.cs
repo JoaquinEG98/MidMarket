@@ -4,6 +4,7 @@
     {
         void ActualizarDVV(string tabla);
         bool VerificarInconsistenciaTablas();
-        void RecalcularDigitosVerificadores(IUsuarioService usuarioService, IPermisoService permisoService);
+        void RecalcularTodosDigitosVerificadores(IUsuarioService usuarioService, IPermisoService permisoService);
+        void RecalcularDigitosUsuario(IUsuarioService usuarioService, IPermisoService permisoService);
     }
 }

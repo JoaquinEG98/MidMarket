@@ -33,6 +33,21 @@ namespace MidMarket.DataAccess.DAOs
             return _dataAccess.ExecuteNonEscalar();
         }
 
+        public void ModificarUsuario(Cliente cliente)
+        {
+            _dataAccess.ExecuteCommandText = Scripts.MODIFICAR_USUARIO;
+
+            _dataAccess.ExecuteParameters.Parameters.Clear();
+
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Cliente", cliente.Id);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Email", cliente.Email);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Nombre", cliente.RazonSocial);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@CUIT", cliente.CUIT);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@DVH", cliente.DVH);
+
+            _dataAccess.ExecuteNonQuery();
+        }
+
         public Cliente Login(string email)
         {
             _dataAccess.SelectCommandText = String.Format(Scripts.LOGIN_USUARIO, email);

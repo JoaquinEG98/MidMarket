@@ -51,6 +51,26 @@ namespace MidMarket.Business.Services
             }
         }
 
+        public void ModificarUsuario(Cliente cliente)
+        {
+            ValidarUsuario(cliente, cliente.Password);
+
+            using (TransactionScope scope = new TransactionScope())
+            {
+                cliente.Email = Encriptacion.EncriptarAES(cliente.Email);
+                cliente.Password = Encriptacion.Hash(cliente.Password);
+                cliente.RazonSocial = Encriptacion.EncriptarAES(cliente.RazonSocial);
+                cliente.CUIT = Encriptacion.EncriptarAES(cliente.CUIT);
+                cliente.DVH = DigitoVerificador.GenerarDVH(cliente);
+
+                _usuarioDataAccess.ModificarUsuario(cliente);
+
+                _digitoVerificadorService.RecalcularDigitosUsuario(this, _permisoService);
+
+                scope.Complete();
+            }
+        }
+
         public Cliente Login(string email, string password)
         {
             string emailEncriptado = Encriptacion.EncriptarAES(email);
