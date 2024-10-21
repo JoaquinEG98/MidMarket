@@ -29,6 +29,8 @@ namespace MidMarket.Business.Services
         {
             using (TransactionScope scope = new TransactionScope())
             {
+                ValidarAccion(accion);
+
                 int id = _activoDataAccess.AltaAccion(accion);
 
                 scope.Complete();
@@ -41,6 +43,8 @@ namespace MidMarket.Business.Services
         {
             using (TransactionScope scope = new TransactionScope())
             {
+                ValidarBono(bono);
+
                 int id = _activoDataAccess.AltaBono(bono);
 
                 scope.Complete();
@@ -65,12 +69,38 @@ namespace MidMarket.Business.Services
 
         public void ModificarAccion(Accion accion)
         {
-            _activoDataAccess.ModificarAccion(accion);
+            using (TransactionScope scope = new TransactionScope())
+            {
+                ValidarAccion(accion);
+
+                _activoDataAccess.ModificarAccion(accion);
+
+                scope.Complete();
+            }
         }
 
         public void ModificarBono(Bono bono)
         {
-            _activoDataAccess.ModificarBono(bono);
+            using (TransactionScope scope = new TransactionScope())
+            {
+                ValidarBono(bono);
+
+                _activoDataAccess.ModificarBono(bono);
+
+                scope.Complete();
+            }
+        }
+
+        private void ValidarAccion(Accion accion)
+        {
+            if (string.IsNullOrWhiteSpace(accion.Nombre) || accion.Precio <= 0 || string.IsNullOrWhiteSpace(accion.Simbolo))
+                throw new System.Exception("ERR-002 campos obligatorios incompletos");
+        }
+
+        private void ValidarBono(Bono bono)
+        {
+            if (string.IsNullOrWhiteSpace(bono.Nombre) || bono.ValorNominal <= 0 || bono.TasaInteres <= 0)
+                throw new System.Exception("ERR-002 campos obligatorios incompletos");
         }
     }
 }
