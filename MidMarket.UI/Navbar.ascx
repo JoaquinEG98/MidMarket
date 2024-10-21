@@ -31,7 +31,7 @@
                 <li class="nav-item dropdown" runat="server" id="usuariosDropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Usuarios</a>
                     <ul class="dropdown-menu animate__animated animate__fadeInDown animate__faster" aria-labelledby="usuariosDropdown">
-                        <li><a class="dropdown-item" href="#">Usuarios</a></li>
+                        <li><a class="dropdown-item" href="/Usuarios.aspx">Usuarios</a></li>
                         <li><a class="dropdown-item" href="#">Alta de Usuario</a></li>
                         <li><a class="dropdown-item" href="#">Modificación de Usuario</a></li>
                     </ul>

@@ -26,6 +26,7 @@
     <link href="/Styles/menu_principal.css" rel="stylesheet" />
     <link href="/Styles/acciones.css" rel="stylesheet" />
     <link href="/Styles/bonos.css" rel="stylesheet" />
+    <link href="/Styles/usuarios.css" rel="stylesheet" />
 </head>
 <body>
     <form runat="server">
