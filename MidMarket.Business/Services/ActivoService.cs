@@ -1,6 +1,7 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.DataAccess.Interfaces;
 using MidMarket.Entities;
+using MidMarket.Entities.Enums;
 using System.Collections.Generic;
 using System.Transactions;
 
@@ -33,6 +34,9 @@ namespace MidMarket.Business.Services
 
                 int id = _activoDataAccess.AltaAccion(accion);
 
+                var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+                _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) dio de alta el Bono ({accion.Id} - {accion.Nombre})", Criticidad.Media, clienteLogueado);
+
                 scope.Complete();
 
                 return id;
@@ -46,6 +50,9 @@ namespace MidMarket.Business.Services
                 ValidarBono(bono);
 
                 int id = _activoDataAccess.AltaBono(bono);
+
+                var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+                _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) dio de alta el Bono ({bono.Id} - {bono.Nombre})", Criticidad.Media, clienteLogueado);
 
                 scope.Complete();
 
@@ -75,6 +82,9 @@ namespace MidMarket.Business.Services
 
                 _activoDataAccess.ModificarAccion(accion);
 
+                var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+                _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) modificó la Accion ({accion.Id} - {accion.Nombre})", Criticidad.Media, clienteLogueado);
+
                 scope.Complete();
             }
         }
@@ -86,6 +96,9 @@ namespace MidMarket.Business.Services
                 ValidarBono(bono);
 
                 _activoDataAccess.ModificarBono(bono);
+
+                var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+                _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) modificó el Bono ({bono.Id} - {bono.Nombre})", Criticidad.Media, clienteLogueado);
 
                 scope.Complete();
             }
