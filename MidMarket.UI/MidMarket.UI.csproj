@@ -140,6 +140,14 @@
     <Content Include="Images\error.png" />
     <Content Include="Images\brokerfinanciero.png" />
     <Content Include="Images\brokerfinanciero2.png" />
+    <Content Include="Images\icono1.png" />
+    <Content Include="Images\icono2.png" />
+    <Content Include="Images\icono3.png" />
+    <Content Include="Images\icono4.png" />
+    <Content Include="Images\icono5.png" />
+    <Content Include="Images\icono6.png" />
+    <Content Include="Images\icono7.png" />
+    <Content Include="Images\icono8.png" />
     <Content Include="MenuPrincipal.aspx" />
     <Content Include="DesasignarFamilias.aspx" />
     <Content Include="DesasignarPatentes.aspx" />

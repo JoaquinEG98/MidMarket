@@ -187,3 +187,114 @@ footer.hero .cta-btn {
     footer.hero .cta-btn:hover {
         background-color: #8e24aa;
     }
+
+.floating-icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 250px);
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.floating-icon {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    opacity: 0.3;
+    fill: #7e57c2;
+    animation-timing-function: ease-in-out;
+    animation: floatX 10s infinite alternate;
+}
+
+@keyframes floatX {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+
+    50% {
+        transform: translateX(30px) translateY(-30px);
+    }
+
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+@keyframes floatY {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+
+    50% {
+        transform: translateY(-40px) translateX(15px);
+    }
+
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+}
+
+@keyframes floatXY {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+
+    50% {
+        transform: translateY(20px) translateX(-30px);
+    }
+
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+}
+
+.floating-icon:nth-child(1) {
+    top: 15%;
+    left: 15%;
+    animation: floatX 8s ease-in-out infinite;
+}
+
+.floating-icon:nth-child(2) {
+    top: 35%;
+    left: 75%;
+    animation: floatY 10s ease-in-out infinite;
+}
+
+.floating-icon:nth-child(3) {
+    top: 60%;
+    left: 25%;
+    animation: floatXY 12s ease-in-out infinite;
+}
+
+.floating-icon:nth-child(4) {
+    top: 15%;
+    left: 80%;
+    animation: floatX 9s ease-in-out infinite;
+}
+
+.floating-icon:nth-child(5) {
+    top: 45%;
+    left: 15%;
+    animation: floatXY 11s ease-in-out infinite;
+}
+
+.floating-icon:nth-child(6) {
+    top: 70%;
+    left: 75%;
+    animation: floatX 7s ease-in-out infinite;
+}
+
+.floating-icon:nth-child(7) {
+    top: 75%;
+    left: 5%;
+    animation: floatX 9s ease-in-out infinite;
+}
+
+.floating-icon:nth-child(8) {
+    top: 50%;
+    left: 85%;
+    animation: floatY 10s ease-in-out infinite;
+}

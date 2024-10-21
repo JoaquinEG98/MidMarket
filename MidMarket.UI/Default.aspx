@@ -21,6 +21,17 @@
             </div>
         </header>
 
+        <div class="floating-icons">
+            <img src="images/icono1.png" class="floating-icon" alt="Icono 1">
+            <img src="images/icono2.png" class="floating-icon" alt="Icono 2">
+            <img src="images/icono3.png" class="floating-icon" alt="Icono 3">
+            <img src="images/icono4.png" class="floating-icon" alt="Icono 4">
+            <img src="images/icono5.png" class="floating-icon" alt="Icono 5">
+            <img src="images/icono6.png" class="floating-icon" alt="Icono 6">
+            <img src="images/icono7.png" class="floating-icon" alt="Icono 7">
+            <img src="images/icono8.png" class="floating-icon" alt="Icono 8">
+        </div>
+
         <section id="features" class="features">
             <div class="features-container">
                 <div class="image-wrapper">
