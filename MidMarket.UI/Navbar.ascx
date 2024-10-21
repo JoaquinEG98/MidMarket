@@ -15,17 +15,17 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown" runat="server" id="accionesDropDown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Administrar Acciones</a>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Acciones</a>
                     <ul class="dropdown-menu animate__animated animate__fadeInDown animate__faster" aria-labelledby="accionesDropDown">
-                        <li><a class="dropdown-item" href="#">Alta Acciones</a></li>
-                        <li><a class="dropdown-item" href="#">Modificar Acciones</a></li>
+                        <li><a class="dropdown-item" href="/AdministrarAcciones.aspx">Administrar Acciones</a></li>
+                        <li><a class="dropdown-item" href="/AltaAcciones.aspx">Alta Acciones</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown" runat="server" id="bonosDropDown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Administrar Bonos</a>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Bonos</a>
                     <ul class="dropdown-menu animate__animated animate__fadeInDown animate__faster" aria-labelledby="bonosDropDown">
-                        <li><a class="dropdown-item" href="#">Alta Bonos</a></li>
-                        <li><a class="dropdown-item" href="#">Modificar Bonos</a></li>
+                        <li><a class="dropdown-item" href="/AdministrarBonos.aspx">Administrar Bonos</a></li>
+                        <li><a class="dropdown-item" href="/AltaBonos.aspx">Alta Bonos</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown" runat="server" id="usuariosDropdown">

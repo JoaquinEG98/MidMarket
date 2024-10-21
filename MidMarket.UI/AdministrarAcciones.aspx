@@ -61,7 +61,7 @@
         }
 
         function altaAccion() {
-            window.location.href = 'AltaAccion.aspx';
+            window.location.href = 'AltaAcciones.aspx';
         }
     </script>
 </asp:Content>

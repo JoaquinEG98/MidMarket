@@ -7,6 +7,7 @@
     width: 100%;
     margin: 20px auto;
 }
+
     .container-bonos h2 {
         font-size: 24px;
         color: #4a148c;
@@ -52,4 +53,60 @@
 
     .submit-btn-bonos:hover {
         background-color: #6a1b9a;
+    }
+
+.container-bonos table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.container-bonos table, th, td {
+    border: 1px solid #7e57c2;
+}
+
+.container-bonos th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.container-bonos th {
+    background-color: #7e57c2;
+    color: white;
+}
+
+.container-bonos td {
+    background-color: #f2e8ff;
+    color: #333;
+}
+
+input[type="radio"] {
+    appearance: none;
+    background-color: #f2e8ff;
+    margin: 0;
+    font: inherit;
+    color: #7e57c2;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #7e57c2;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+}
+
+    input[type="radio"]::before {
+        content: "";
+        width: 12px;
+        height: 12px;
+        box-shadow: inset 1em 1em #7e57c2;
+        transform: scale(0);
+        transition: transform 0.2s ease-in-out;
+        background-color: #ffffff;
+        border-radius: inherit;
+    }
+
+    input[type="radio"]:checked::before {
+        transform: scale(1);
     }
