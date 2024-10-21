@@ -67,6 +67,9 @@ namespace MidMarket.Business.Services
 
                 _digitoVerificadorService.RecalcularDigitosUsuario(this, _permisoService);
 
+                var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+                _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) modificó el usuario: ({cliente.Id})", Criticidad.Alta, clienteLogueado);
+
                 scope.Complete();
             }
         }
