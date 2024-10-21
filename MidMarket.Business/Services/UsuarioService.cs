@@ -142,6 +142,7 @@ namespace MidMarket.Business.Services
                     Puntaje = cliente.Puntaje,
                     Cuenta = cliente.Cuenta,
                 };
+                _permisoService.GetComponenteUsuario(clienteDesencriptado);
 
                 clientesDesencriptados.Add(clienteDesencriptado);
             }

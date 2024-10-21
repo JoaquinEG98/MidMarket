@@ -117,3 +117,41 @@
     color: #333333;
     background-color: #ffffff;
 }
+
+#detallePatentes {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    background-color: transparent;
+    border: none;
+}
+
+    #detallePatentes li {
+        position: relative;
+        padding: 5px 0 5px 30px;
+        border-bottom: none;
+        color: #333;
+        left: 10px;
+    }
+
+        #detallePatentes li::before {
+            content: '•';
+            color: #7e57c2;
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1em;
+        }
+
+        #detallePatentes li:last-child {
+            border-bottom: none;
+        }
+
+.seguridad-container {
+    border: 1px solid #7e57c2;
+    padding: 10px;
+    background-color: #f2e8ff;
+    border-radius: 5px;
+    margin-top: 10px;
+}
