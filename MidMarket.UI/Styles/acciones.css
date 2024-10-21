@@ -1,55 +1,49 @@
-﻿/* activos-acciones.css */
-
-/* Contenedor específico para la administración de acciones */
-.container-acciones {
+﻿.container-acciones, .container-bonos {
     background-color: #ffffff;
-    padding: 20px;
+    padding: 20px 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
+    max-width: 600px;
     width: 100%;
-    margin: 20px auto;
+    margin: 40px auto;
 }
 
-    /* Títulos principales para el formulario de administración de acciones */
-    .container-acciones h2 {
+    .container-acciones h2, .container-bonos h2 {
         font-size: 24px;
         color: #4a148c;
         text-align: center;
         margin-bottom: 20px;
     }
 
-    /* Tabla de acciones */
-    .container-acciones table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 20px;
+.form-group-acciones, .form-group-bonos {
+    margin-bottom: 15px;
+}
+
+    .form-group-acciones label, .form-group-bonos label {
+        display: block;
+        font-size: 16px;
         color: #333;
+        margin-bottom: 5px;
     }
 
-    .container-acciones table, th, td {
-        border: 1px solid #7e57c2;
-    }
-
-    .container-acciones th, td {
+    .form-group-acciones input[type="text"], .form-group-bonos input[type="text"] {
+        width: 100%;
         padding: 10px;
-        text-align: left;
-    }
-
-    .container-acciones th {
-        background-color: #7e57c2;
-        color: white;
-    }
-
-    .container-acciones td {
+        border: 1px solid #cfd8dc;
+        border-radius: 4px;
         background-color: #f2e8ff;
         color: #333;
+        font-size: 16px;
     }
 
-/* Botones de la administración de acciones */
-.submit-btn-acciones {
+        .form-group-acciones input[type="text"]:focus, .form-group-bonos input[type="text"]:focus {
+            border-color: #7e57c2;
+            outline: none;
+        }
+
+.submit-btn-acciones, .submit-btn-bonos {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     background-color: #7e57c2;
     color: #fff;
     border: none;
@@ -58,39 +52,39 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-top: 10px;
+    text-align: center;
 }
 
-    .submit-btn-acciones:hover {
+    .submit-btn-acciones:hover, .submit-btn-bonos:hover {
         background-color: #6a1b9a;
     }
 
-/* Radio button personalizado */
-input[type="radio"] {
-    appearance: none;
-    background-color: #f2e8ff;
-    margin: 0;
-    font: inherit;
-    color: #7e57c2;
-    width: 18px;
-    height: 18px;
-    border: 1px solid #7e57c2;
-    border-radius: 50%;
-    display: grid;
-    place-content: center;
-    cursor: pointer;
+.container-acciones table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-    input[type="radio"]::before {
-        content: "";
-        width: 12px;
-        height: 12px;
-        box-shadow: inset 1em 1em #7e57c2;
-        transform: scale(0);
-        transition: transform 0.2s ease-in-out;
-        background-color: #ffffff;
-        border-radius: inherit;
-    }
+.container-acciones table, th, td {
+    border: 1px solid #7e57c2;
+}
 
-    input[type="radio"]:checked::before {
-        transform: scale(1);
-    }
+.container-acciones th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.container-acciones th {
+    background-color: #7e57c2;
+    color: white;
+}
+
+.container-acciones td {
+    background-color: #f2e8ff;
+    color: #333;
+}
+
+.submit-btn-acciones:hover {
+    background-color: #6a1b9a;
+}

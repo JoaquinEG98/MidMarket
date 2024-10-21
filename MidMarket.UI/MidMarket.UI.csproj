@@ -147,6 +147,7 @@
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="Modal.ascx" />
+    <Content Include="ModificarAccion.aspx" />
     <Content Include="ModificarFamilia.aspx" />
     <Content Include="Navbar.ascx" />
     <Content Include="Registro.aspx" />
@@ -346,6 +347,13 @@
     </Compile>
     <Compile Include="Modal.ascx.designer.cs">
       <DependentUpon>Modal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarAccion.aspx.cs">
+      <DependentUpon>ModificarAccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModificarAccion.aspx.designer.cs">
+      <DependentUpon>ModificarAccion.aspx</DependentUpon>
     </Compile>
     <Compile Include="ModificarFamilia.aspx.cs">
       <DependentUpon>ModificarFamilia.aspx</DependentUpon>
