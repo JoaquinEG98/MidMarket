@@ -57,6 +57,13 @@
                 <li class="nav-item" runat="server" id="bitacora">
                     <a class="nav-link" href="/Bitacora.aspx">Bitácora</a>
                 </li>
+                <li class="nav-item dropdown" runat="server" id="transaccionesDropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Transacciones</a>
+                    <ul class="dropdown-menu animate__animated animate__fadeInDown animate__faster" aria-labelledby="transaccionesDropdown">
+                        <li><a class="dropdown-item" href="/Compra.aspx">Compra de Activos</a></li>
+                        <li><a class="dropdown-item" href="/Venta.aspx">Venta de Activos</a></li>
+                    </ul>
+                </li>
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item" runat="server" id="logoutLink">

@@ -1,0 +1,108 @@
+﻿/* compra.css */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.compra-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.compra-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #4a148c;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Grid de cards */
+.compra-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+/* ------------------------ Estilos generales para las cards ------------------------ */
+
+.compra-card {
+    background-color: #fff;
+    border: 2px solid #7e57c2;
+    padding: 20px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 230px;
+    height: 250px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Para el botón */
+}
+
+    .compra-card h3 {
+        margin-top: 10px; /* Reducimos el espacio superior */
+        font-size: 20px;
+        color: #4a148c;
+    }
+
+/* Botón que sobresale de la card */
+.compra-button {
+    background-color: #7e57c2;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 0; /* Botón cuadrado */
+    font-size: 16px;
+    width: 150px; /* Más ancho */
+    position: absolute;
+    bottom: -22px; /* Ajuste del botón para que quede mitad adentro, mitad afuera */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade sombra al botón */
+}
+
+    .compra-button:hover {
+        background-color: #6a1b9a;
+    }
+
+/* Separador debajo del título */
+.compra-card .separator {
+    width: 80%;
+    height: 1px;
+    background-color: rgba(126, 87, 194, 0.3); /* Color púrpura semi-transparente */
+    margin: 10px 0;
+}
+
+.compra-card p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.4; /* Menor espacio entre líneas */
+}
+
+    .compra-card p:first-of-type {
+        margin-bottom: 5px; /* Reducimos espacio solo entre el símbolo y el precio */
+    }
+
+    .compra-card p:last-of-type {
+        margin-bottom: 25px; /* Mantenemos el espacio entre el precio y el botón */
+    }
+
+
+/* Hover effect en la card */
+.compra-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}

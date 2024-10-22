@@ -120,6 +120,7 @@
     <Content Include="AsignarPatentes.aspx" />
     <Content Include="Bitacora.aspx" />
     <Content Include="CambiarPassword.aspx" />
+    <Content Include="Compra.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -222,6 +223,7 @@
     <Content Include="Site.Master" />
     <Content Include="Styles\acciones.css" />
     <Content Include="Styles\bonos.css" />
+    <Content Include="Styles\compra.css" />
     <Content Include="Styles\error.css" />
     <Content Include="Styles\gestion_administracionbd.css" />
     <Content Include="Styles\gestion_bitacora.css" />
@@ -324,6 +326,13 @@
     </Compile>
     <Compile Include="CambiarPassword.aspx.designer.cs">
       <DependentUpon>CambiarPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compra.aspx.cs">
+      <DependentUpon>Compra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compra.aspx.designer.cs">
+      <DependentUpon>Compra.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
