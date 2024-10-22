@@ -26,16 +26,16 @@
                             <!-- Se llenará desde el backend -->
                             <td>
                                 <!-- Botones para aumentar/disminuir la cantidad -->
-                                <asp:Button ID="btnDecrease" runat="server" CommandName="ChangeQuantity" CommandArgument='<%# Eval("Id") + ",-1" %>' Text="-" CssClass="cantidad-boton" />
+                                <asp:Button ID="btnDecrease" runat="server" CommandName="ChangeQuantity" CommandArgument='<%# Eval("Id") + ",-1" %>' Text="-" CssClass="carrito-button-confirm cantidad-boton" />
                                 <asp:TextBox ID="cantidadInput" runat="server" Text='<%# Eval("Cantidad") %>' CssClass="cantidad-input" ReadOnly="true" />
-                                <asp:Button ID="btnIncrease" runat="server" CommandName="ChangeQuantity" CommandArgument='<%# Eval("Id") + ",1" %>' Text="+" CssClass="cantidad-boton" />
+                                <asp:Button ID="btnIncrease" runat="server" CommandName="ChangeQuantity" CommandArgument='<%# Eval("Id") + ",1" %>' Text="+" CssClass="carrito-button-confirm cantidad-boton" />
                             </td>
                             <td id="tdPrecioTasa" runat="server"></td>
                             <!-- Ícono de la papelera para eliminar el producto -->
                             <td>
                                 <asp:LinkButton ID="btnEliminar" runat="server" CommandName="DeleteItem" CommandArgument='<%# Eval("Id") %>' CssClass="carrito-icon-remove" ToolTip="Eliminar del carrito">
                     <i class="fas fa-trash"></i>
-                                </asp:LinkButton>
+                </asp:LinkButton>
                             </td>
                         </tr>
                     </ItemTemplate>
