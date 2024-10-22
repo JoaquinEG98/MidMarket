@@ -12,5 +12,6 @@ namespace MidMarket.DataAccess.Interfaces
         Cliente GetCliente(int clienteId);
         void ActualizarBloqueo(int clienteId);
         void AumentarBloqueo(int clienteId);
+        void CambiarPassword(Cliente cliente);
     }
 }

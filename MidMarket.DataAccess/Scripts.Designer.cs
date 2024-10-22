@@ -130,6 +130,17 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to UPDATE Cliente
+        ///SET Password = @Password
+        ///WHERE Id_Cliente = @Id_Cliente.
+        /// </summary>
+        internal static string CAMBIAR_PASSWORD {
+            get {
+                return ResourceManager.GetString("CAMBIAR_PASSWORD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SELECT activo.Id_Activo, activo.Nombre, accion.Id_Accion, accion.Simbolo, accion.Precio
         ///FROM Accion accion
         ///INNER JOIN Activo activo

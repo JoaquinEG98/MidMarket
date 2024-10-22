@@ -206,6 +206,7 @@ namespace MidMarket.Business.Services
             {
                 Id = cliente.Id,
                 Email = Encriptacion.DesencriptarAES(cliente.Email),
+                Password = cliente.Password,
                 RazonSocial = Encriptacion.DesencriptarAES(cliente.RazonSocial),
                 CUIT = Encriptacion.DesencriptarAES(cliente.CUIT),
                 Puntaje = cliente.Puntaje,
@@ -214,6 +215,40 @@ namespace MidMarket.Business.Services
             _permisoService.GetComponenteUsuario(clienteDesencriptado);
 
             return clienteDesencriptado;
+        }
+
+        public void CambiarPassword(Cliente cliente, string nuevaPassword, string confirmacionNuevaPassword)
+        {
+            cliente.Password = Encriptacion.Hash(cliente.Password);
+            ValidarCambioPassword(cliente, nuevaPassword, confirmacionNuevaPassword);
+
+            using (TransactionScope scope = new TransactionScope())
+            {
+                cliente.Password = Encriptacion.Hash(nuevaPassword);
+
+                _usuarioDataAccess.CambiarPassword(cliente);
+
+                _digitoVerificadorService.RecalcularDigitosUsuario(this, _permisoService);
+
+                var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+                _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) cambió su contraseña", Criticidad.Alta, clienteLogueado);
+
+                scope.Complete();
+            }
+        }
+
+        private void ValidarCambioPassword(Cliente cliente, string nuevaPassword, string confirmacionNuevaPassword)
+        {
+            var clienteValidacion = GetCliente(cliente.Id);
+
+            if (clienteValidacion.Password != cliente.Password)
+                throw new Exception("La contraseña actual no coindice con la proporcionada.");
+
+            if (nuevaPassword != confirmacionNuevaPassword)
+                throw new Exception("La confirmación de la nueva contraseña son distintas.");
+
+            if (!ValidarFormatoPassword(nuevaPassword))
+                throw new Exception(Errores.ObtenerError(6));
         }
     }
 }

@@ -94,5 +94,17 @@ namespace MidMarket.DataAccess.DAOs
 
             DataSet ds = _dataAccess.ExecuteNonReader();
         }
+
+        public void CambiarPassword(Cliente cliente)
+        {
+            _dataAccess.ExecuteCommandText = Scripts.CAMBIAR_PASSWORD;
+
+            _dataAccess.ExecuteParameters.Parameters.Clear();
+
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Cliente", cliente.Id);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Password", cliente.Password);
+
+            _dataAccess.ExecuteNonQuery();
+        }
     }
 }

@@ -12,5 +12,6 @@ namespace MidMarket.Business.Interfaces
         List<Cliente> GetClientes();
         Cliente GetCliente(int clienteId);
         List<Cliente> GetClientesEncriptados();
+        void CambiarPassword(Cliente cliente, string nuevaPassword, string confirmacionNuevaPassword);
     }
 }
