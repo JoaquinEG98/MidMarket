@@ -142,6 +142,9 @@
   <data name="CAMBIAR_PASSWORD" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\Usuario\CAMBIAR_PASSWORD.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="ELIMINAR_CARRITO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Scripts\Carrito\ELIMINAR_CARRITO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="GET_ACCIONES" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\Activo\GET_ACCIONES.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
@@ -222,6 +225,9 @@
   </data>
   <data name="UPDATE_BONO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\Activo\UPDATE_BONO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="UPDATE_CARRITO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Scripts\Carrito\UPDATE_CARRITO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="UPDATE_DIGITO_VERTICAL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\DigitoVerificador\UPDATE_DIGITO_VERTICAL.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>

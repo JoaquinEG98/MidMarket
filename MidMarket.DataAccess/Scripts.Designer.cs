@@ -141,6 +141,16 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 	DELETE FROM Carrito
+        ///	WHERE Id_Carrito = @Id_Carrito AND Id_Cliente = @Id_Cliente.
+        /// </summary>
+        internal static string ELIMINAR_CARRITO {
+            get {
+                return ResourceManager.GetString("ELIMINAR_CARRITO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SELECT activo.Id_Activo, activo.Nombre, accion.Id_Accion, accion.Simbolo, accion.Precio
         ///FROM Accion accion
         ///INNER JOIN Activo activo
@@ -177,8 +187,12 @@ namespace MidMarket.DataAccess {
         ///   Looks up a localized string similar to SELECT 
         ///    c.Id_Carrito,
         ///    c.Id_Activo,
+        ///    c.Cantidad,
+        ///	ac.Nombre,
+        ///	a.Id_Accion,
         ///    a.Simbolo,
         ///    a.Precio,
+        ///	b.Id_Bono,
         ///    b.ValorNominal,
         ///    b.TasaInteres,
         ///    CASE 
@@ -186,9 +200,10 @@ namespace MidMarket.DataAccess {
         ///        ELSE &apos;Bono&apos;
         ///    END AS TipoActivo
         ///FROM Carrito c
+        ///INNER JOIN Activo ac ON c.Id_Activo = ac.Id_Activo
         ///LEFT JOIN Accion a ON c.Id_Activo = a.Id_Activo
         ///LEFT JOIN Bono b ON c.Id_Activo = b.Id_Activo
-        ///WHERE c.Id_Cliente = @Id_Cliente.
+        ///WHERE c.Id_Cliente = {0}.
         /// </summary>
         internal static string GET_CARRITO {
             get {
@@ -469,6 +484,17 @@ namespace MidMarket.DataAccess {
         internal static string UPDATE_BONO {
             get {
                 return ResourceManager.GetString("UPDATE_BONO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 	UPDATE Carrito
+        ///	SET Cantidad = @Cantidad
+        ///	WHERE Id_Activo = @Id_Activo and Id_Cliente = @Id_Cliente.
+        /// </summary>
+        internal static string UPDATE_CARRITO {
+            get {
+                return ResourceManager.GetString("UPDATE_CARRITO", resourceCulture);
             }
         }
         

@@ -7,5 +7,7 @@ namespace MidMarket.Business.Interfaces
     {
         void InsertarCarrito(Activo activo);
         List<Carrito> GetCarrito(int idCliente);
+        void ActualizarCarrito(Carrito carrito);
+        void EliminarCarrito(int carritoId);
     }
 }

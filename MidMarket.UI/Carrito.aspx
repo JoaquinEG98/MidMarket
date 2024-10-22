@@ -18,23 +18,28 @@
                 </tr>
             </thead>
             <tbody>
-                <asp:Repeater ID="rptCarrito" runat="server" OnItemDataBound="rptCarrito_ItemDataBound">
+                <asp:Repeater ID="rptCarrito" runat="server" OnItemDataBound="rptCarrito_ItemDataBound" OnItemCommand="rptCarrito_ItemCommand">
                     <ItemTemplate>
                         <tr>
                             <td><%# Eval("Activo.Nombre") %></td>
                             <td id="tdDetalle" runat="server"></td>
                             <!-- Se llenará desde el backend -->
                             <td>
-                                <input type="number" id="cantidadInput" runat="server" min="1" class="cantidad-input">
+                                <!-- Botones para aumentar/disminuir la cantidad -->
+                                <asp:Button ID="btnDecrease" runat="server" CommandName="ChangeQuantity" CommandArgument='<%# Eval("Id") + ",-1" %>' Text="-" CssClass="cantidad-boton" />
+                                <asp:TextBox ID="cantidadInput" runat="server" Text='<%# Eval("Cantidad") %>' CssClass="cantidad-input" ReadOnly="true" />
+                                <asp:Button ID="btnIncrease" runat="server" CommandName="ChangeQuantity" CommandArgument='<%# Eval("Id") + ",1" %>' Text="+" CssClass="cantidad-boton" />
                             </td>
                             <td id="tdPrecioTasa" runat="server"></td>
-                            <!-- Se llenará desde el backend -->
-                            <td><i class="fas fa-trash carrito-icon-remove"></i></td>
+                            <!-- Ícono de la papelera para eliminar el producto -->
+                            <td>
+                                <asp:LinkButton ID="btnEliminar" runat="server" CommandName="DeleteItem" CommandArgument='<%# Eval("Id") %>' CssClass="carrito-icon-remove" ToolTip="Eliminar del carrito">
+                    <i class="fas fa-trash"></i>
+                                </asp:LinkButton>
+                            </td>
                         </tr>
                     </ItemTemplate>
                 </asp:Repeater>
-
-
             </tbody>
         </table>
 

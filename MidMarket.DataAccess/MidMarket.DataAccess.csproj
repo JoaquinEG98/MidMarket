@@ -80,6 +80,8 @@
     <Content Include="Scripts\Activo\ADD_ACTIVO.sql" />
     <Content Include="Scripts\Bitacora\GET_BITACORA.sql" />
     <Content Include="Scripts\Bitacora\ALTA_BITACORA.sql" />
+    <Content Include="Scripts\Carrito\ELIMINAR_CARRITO.sql" />
+    <Content Include="Scripts\Carrito\UPDATE_CARRITO.sql" />
     <Content Include="Scripts\Carrito\GET_CARRITO.sql" />
     <Content Include="Scripts\Carrito\INSERTAR_CARRITO.sql" />
     <Content Include="Scripts\DigitoVerificador\GET_DIGITO_VERTICAL.sql" />

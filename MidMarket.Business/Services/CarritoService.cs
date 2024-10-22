@@ -1,9 +1,9 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.DataAccess.Interfaces;
-using MidMarket.Entities.Enums;
 using MidMarket.Entities;
-using System.Transactions;
+using MidMarket.Entities.Enums;
 using System.Collections.Generic;
+using System.Transactions;
 
 namespace MidMarket.Business.Services
 {
@@ -39,6 +39,34 @@ namespace MidMarket.Business.Services
             List<Carrito> carrito = _carritoDataAccess.GetCarrito(idCliente);
 
             return carrito;
+        }
+
+        public void ActualizarCarrito(Carrito carrito)
+        {
+            using (TransactionScope scope = new TransactionScope())
+            {
+                var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+
+                _carritoDataAccess.ActualizarCarrito(carrito, clienteLogueado);
+
+                _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) actualizó la cantidad del carrito del Activo: ({carrito.Activo.Id}) al carrito", Criticidad.Baja, clienteLogueado);
+
+                scope.Complete();
+            }
+        }
+
+        public void EliminarCarrito(int carritoId)
+        {
+            using (TransactionScope scope = new TransactionScope())
+            {
+                var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+
+                _carritoDataAccess.EliminarCarrito(carritoId, clienteLogueado);
+
+                _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) eliminó Activo del carrito", Criticidad.Baja, clienteLogueado);
+
+                scope.Complete();
+            }
         }
     }
 }

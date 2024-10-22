@@ -21,7 +21,7 @@ namespace MidMarket.DataAccess.DAOs
             _dataAccess.ExecuteCommandText = Scripts.INSERTAR_CARRITO;
 
             _dataAccess.ExecuteParameters.Parameters.Clear();
-            
+
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Cliente", cliente.Id);
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Activo", activo.Id);
 
@@ -40,6 +40,31 @@ namespace MidMarket.DataAccess.DAOs
             }
 
             return new List<Carrito>();
+        }
+
+        public void ActualizarCarrito(Carrito carrito, Cliente cliente)
+        {
+            _dataAccess.ExecuteCommandText = Scripts.UPDATE_CARRITO;
+
+            _dataAccess.ExecuteParameters.Parameters.Clear();
+
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Cliente", cliente.Id);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Activo", carrito.Activo.Id);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Cantidad", carrito.Cantidad);
+
+            _dataAccess.ExecuteNonQuery();
+        }
+
+        public void EliminarCarrito(int idCarrito, Cliente cliente)
+        {
+            _dataAccess.ExecuteCommandText = Scripts.ELIMINAR_CARRITO;
+
+            _dataAccess.ExecuteParameters.Parameters.Clear();
+
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Cliente", cliente.Id);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Carrito", idCarrito);
+
+            _dataAccess.ExecuteNonQuery();
         }
     }
 }
