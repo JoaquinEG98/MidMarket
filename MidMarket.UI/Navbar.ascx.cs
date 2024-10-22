@@ -32,6 +32,7 @@ namespace MidMarket.UI
             administracionBD.Visible = false;
             bitacora.Visible = false;
             transaccionesDropdown.Visible = false;
+            carritoDropdown.Visible = false;
 
         }
 
@@ -56,6 +57,7 @@ namespace MidMarket.UI
                 else if (permiso.Permiso == Entities.Enums.Permiso.EsFamilia && permiso.Nombre == "Cliente")
                 {
                     transaccionesDropdown.Visible = true;
+                    carritoDropdown.Visible = true;
                 }
             }
         }

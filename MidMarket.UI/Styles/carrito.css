@@ -1,0 +1,106 @@
+﻿/* carrito.css */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Contenedor general */
+.carrito-container {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px; /* Ampliamos la anchura máxima */
+    width: 100%;
+    margin: 40px auto;
+}
+
+/* Título del carrito */
+.carrito-title {
+    font-size: 24px;
+    color: #4a148c;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo de la tabla */
+.carrito-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+    .carrito-table th, .carrito-table td {
+        padding: 10px;
+        text-align: left;
+        border: 1px solid #7e57c2;
+    }
+
+    .carrito-table th {
+        background-color: #7e57c2;
+        color: white;
+    }
+
+    .carrito-table td {
+        background-color: #f2e8ff;
+    }
+
+/* Input para la cantidad */
+.cantidad-input {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #7e57c2;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+    background-color: #fff;
+}
+
+    .cantidad-input:focus {
+        outline: none;
+        border-color: #4a148c;
+    }
+
+/* Icono de la papelera */
+.carrito-icon-remove {
+    font-size: 18px;
+    color: #e53935;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+    .carrito-icon-remove:hover {
+        color: #c62828;
+    }
+
+/* Sección de total */
+.carrito-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+    .carrito-total h2 {
+        font-size: 20px;
+        color: #4a148c;
+    }
+
+/* Botón de confirmación de compra */
+.carrito-button-confirm {
+    background-color: #7e57c2;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+    .carrito-button-confirm:hover {
+        background-color: #6a1b9a;
+    }

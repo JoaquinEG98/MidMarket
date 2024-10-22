@@ -64,6 +64,9 @@
                         <li><a class="dropdown-item" href="/Venta.aspx">Venta de Activos</a></li>
                     </ul>
                 </li>
+                <li class="nav-item" runat="server" id="carritoDropdown">
+                    <a class="nav-link" href="/Carrito.aspx">Carrito</a>
+                </li>
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item" runat="server" id="logoutLink">
