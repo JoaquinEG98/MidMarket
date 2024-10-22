@@ -13,7 +13,7 @@
                     <th>Producto</th>
                     <th>Detalle</th>
                     <th>Cantidad</th>
-                    <th>Precio/Tasa</th>
+                    <th>Precio</th>
                     <th>Acción</th>
                 </tr>
             </thead>
@@ -25,7 +25,7 @@
                             <td id="tdDetalle" runat="server"></td>
                             <!-- Se llenará desde el backend -->
                             <td>
-                                <input type="number" value="<%# Eval("Cantidad") %>" min="1" class="cantidad-input">
+                                <input type="number" id="cantidadInput" runat="server" min="1" class="cantidad-input">
                             </td>
                             <td id="tdPrecioTasa" runat="server"></td>
                             <!-- Se llenará desde el backend -->
@@ -40,7 +40,7 @@
 
         <!-- Total y botones de acciones -->
         <div class="carrito-total">
-            <h2>Total: <%= MiCarrito.Sum(item => item.Activo is Accion ? ((Accion)item.Activo).Precio : 0) %></h2>
+            <h2>Total: <%= ViewState["TotalCarrito"] != null ? ((decimal)ViewState["TotalCarrito"]).ToString("F2") : "0.00" %></h2>
             <button class="carrito-button-confirm">Confirmar Compra</button>
         </div>
     </div>

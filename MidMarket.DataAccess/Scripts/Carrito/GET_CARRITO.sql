@@ -1,6 +1,7 @@
 ﻿SELECT 
     c.Id_Carrito,
     c.Id_Activo,
+    c.Cantidad,
 	ac.Nombre,
 	a.Id_Accion,
     a.Simbolo,

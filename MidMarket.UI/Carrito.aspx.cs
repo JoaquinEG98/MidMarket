@@ -34,6 +34,23 @@ namespace MidMarket.UI
 
                 MiCarrito = _carritoService.GetCarrito(cliente.Id);
 
+                // Calcular el total considerando las cantidades y los precios/valores nominales
+                decimal total = 0;
+                foreach (var item in MiCarrito)
+                {
+                    if (item.Activo is Accion accion)
+                    {
+                        total += accion.Precio * item.Cantidad;
+                    }
+                    else if (item.Activo is Bono bono)
+                    {
+                        total += bono.ValorNominal * item.Cantidad;
+                    }
+                }
+
+                // Asignar el total a una propiedad para mostrarlo en el frontend
+                ViewState["TotalCarrito"] = total;
+
                 // Asignar los datos al Repeater
                 rptCarrito.DataSource = MiCarrito;
                 rptCarrito.DataBind();
@@ -49,6 +66,7 @@ namespace MidMarket.UI
                 // Encuentra los controles
                 var tdDetalle = (HtmlTableCell)e.Item.FindControl("tdDetalle");
                 var tdPrecioTasa = (HtmlTableCell)e.Item.FindControl("tdPrecioTasa");
+                var cantidadInput = (HtmlInputGenericControl)e.Item.FindControl("cantidadInput"); // Actualización aquí
 
                 if (tdDetalle != null && tdPrecioTasa != null)
                 {
@@ -60,13 +78,18 @@ namespace MidMarket.UI
                     }
                     else if (carritoItem.Activo is Bono bono)
                     {
-                        tdDetalle.InnerText = $"Valor Nominal: {bono.ValorNominal}";
-                        tdPrecioTasa.InnerText = $"{bono.TasaInteres}%";
+                        tdDetalle.InnerText = $"Tasa: {bono.TasaInteres}%";
+                        tdPrecioTasa.InnerText = $"${bono.ValorNominal.ToString("F2")}";
                     }
+                }
+
+                // Asigna la cantidad al input desde el backend
+                if (cantidadInput != null)
+                {
+                    cantidadInput.Value = carritoItem.Cantidad.ToString();
                 }
             }
         }
-
 
     }
 }
