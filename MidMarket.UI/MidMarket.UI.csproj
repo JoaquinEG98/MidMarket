@@ -141,6 +141,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Error.aspx" />
+    <Content Include="Images\carritovacio.png" />
     <Content Include="Images\error.png" />
     <Content Include="Images\brokerfinanciero.png" />
     <Content Include="Images\brokerfinanciero2.png" />

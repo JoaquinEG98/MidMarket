@@ -128,3 +128,36 @@
         outline: none;
         border-color: #4a148c;
     }
+
+.mensaje-carrito-vacio {
+    text-align: center;
+    font-size: 18px;
+    color: #000000;
+    margin-top: 20px;
+}
+
+    .mensaje-carrito-vacio img {
+        width: 200px;
+        margin-bottom: 20px;
+    }
+
+    .mensaje-carrito-vacio p {
+        margin: 10px 0;
+        font-size: 16px;
+        color: #000000;
+    }
+
+.link-compra-activos {
+    display: inline-block;
+    color: #7e57c2;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+    .link-compra-activos:hover {
+        transform: scale(1.02);
+        color: #6a1b9a;
+    }
+
+
