@@ -336,6 +336,25 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to IF EXISTS (SELECT 1 FROM Carrito WHERE Id_Activo = @Id_Activo AND Id_Cliente = @Id_Cliente)
+        ///BEGIN
+        ///    UPDATE Carrito
+        ///    SET Cantidad = Cantidad + 1
+        ///    WHERE Id_Activo = @Id_Activo AND Id_Cliente = @Id_Cliente;
+        ///END
+        ///ELSE
+        ///BEGIN
+        ///    INSERT INTO Carrito (Id_Activo, Id_Cliente, Cantidad)
+        ///    VALUES (@Id_Activo, @Id_Cliente, 1);
+        ///END.
+        /// </summary>
+        internal static string INSERTAR_CARRITO {
+            get {
+                return ResourceManager.GetString("INSERTAR_CARRITO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SELECT TOP 1 cliente.Id_Cliente, cliente.Email, cliente.Password, cliente.Nombre, cliente.CUIT, cliente.Puntaje, cliente.Bloqueo, cliente.DVH, cuenta.Id_Cuenta, cuenta.NumeroCuenta, cuenta.Saldo
         ///FROM Cliente cliente
         ///INNER JOIN Cuenta cuenta on cuenta.Id_Cliente = cliente.Id_Cliente 

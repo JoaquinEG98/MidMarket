@@ -13,5 +13,23 @@ namespace MidMarket.UI
 
     public partial class Compra
     {
+
+        /// <summary>
+        /// rptAcciones control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptAcciones;
+
+        /// <summary>
+        /// rptBonos control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptBonos;
     }
 }

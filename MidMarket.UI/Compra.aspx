@@ -2,30 +2,40 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="compra-container">
+        <!-- Sección de Acciones -->
         <h1 class="compra-title">Acciones</h1>
         <div class="compra-grid">
-            <% foreach (var accion in Acciones) { %>
-            <div class="compra-card compra-card-acciones">
-                <h3><%= accion.Nombre %></h3>
-                <div class="separator"></div>
-                <p>Símbolo: <%= accion.Simbolo %></p>
-                <p>Precio: $<%= accion.Precio %></p>
-                <button class="compra-button">Agregar al Carrito</button>
-            </div>
-            <% } %>
+            <asp:Repeater ID="rptAcciones" runat="server">
+                <ItemTemplate>
+                    <div class="compra-card compra-card-acciones">
+                        <h3><%# Eval("Nombre") %></h3>
+                        <div class="separator"></div>
+                        <p>Símbolo: <%# Eval("Simbolo") %></p>
+                        <p>Precio: $<%# Eval("Precio") %></p>
+
+                        <!-- Botón para agregar la acción al carrito con el Id como CommandArgument -->
+                        <asp:Button runat="server" Text="Agregar al Carrito" CommandArgument='<%# Eval("Id") %>' OnClick="AgregarAccionAlCarrito_Click" CssClass="compra-button" />
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
         </div>
 
+        <!-- Sección de Bonos -->
         <h1 class="compra-title">Bonos</h1>
         <div class="compra-grid">
-            <% foreach (var bono in Bonos) { %>
-            <div class="compra-card compra-card-bonos">
-                <h3><%= bono.Nombre %></h3>
-                <div class="separator"></div>
-                <p>Valor Nominal: $<%= bono.ValorNominal %></p>
-                <p>Tasa de Interés: <%= bono.TasaInteres %>%</p>
-                <button class="compra-button">Agregar al Carrito</button>
-            </div>
-            <% } %>
+            <asp:Repeater ID="rptBonos" runat="server">
+                <ItemTemplate>
+                    <div class="compra-card compra-card-bonos">
+                        <h3><%# Eval("Nombre") %></h3>
+                        <div class="separator"></div>
+                        <p>Valor Nominal: $<%# Eval("ValorNominal") %></p>
+                        <p>Tasa de Interés: <%# Eval("TasaInteres") %>%</p>
+
+                        <!-- Botón para agregar el bono al carrito con el Id como CommandArgument -->
+                        <asp:Button runat="server" Text="Agregar al Carrito" CommandArgument='<%# Eval("Id") %>' OnClick="AgregarBonoAlCarrito_Click" CssClass="compra-button" />
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
         </div>
     </div>
 </asp:Content>
