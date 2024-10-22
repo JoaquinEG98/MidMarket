@@ -1,6 +1,10 @@
 ﻿using MidMarket.DataAccess.Conexion;
+using MidMarket.DataAccess.Helpers;
 using MidMarket.DataAccess.Interfaces;
 using MidMarket.Entities;
+using System;
+using System.Collections.Generic;
+using System.Data;
 namespace MidMarket.DataAccess.DAOs
 {
     public class CarritoDAO : ICarritoDAO
@@ -22,6 +26,20 @@ namespace MidMarket.DataAccess.DAOs
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Activo", activo.Id);
 
             _dataAccess.ExecuteNonQuery();
+        }
+
+        public List<Carrito> GetCarrito(int clienteId)
+        {
+            _dataAccess.SelectCommandText = String.Format(Scripts.GET_CARRITO, clienteId);
+
+            DataSet ds = _dataAccess.ExecuteNonReader();
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                return CarritoFill.FillListCarrito(ds);
+            }
+
+            return new List<Carrito>();
         }
     }
 }

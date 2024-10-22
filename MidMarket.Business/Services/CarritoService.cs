@@ -3,6 +3,7 @@ using MidMarket.DataAccess.Interfaces;
 using MidMarket.Entities.Enums;
 using MidMarket.Entities;
 using System.Transactions;
+using System.Collections.Generic;
 
 namespace MidMarket.Business.Services
 {
@@ -31,6 +32,13 @@ namespace MidMarket.Business.Services
 
                 scope.Complete();
             }
+        }
+
+        public List<Carrito> GetCarrito(int idCliente)
+        {
+            List<Carrito> carrito = _carritoDataAccess.GetCarrito(idCliente);
+
+            return carrito;
         }
     }
 }

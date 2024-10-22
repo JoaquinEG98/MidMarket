@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Carrito.aspx.cs" Inherits="MidMarket.UI.Carrito" MasterPageFile="~/Site.Master" Title="Carrito de Compras" %>
 
+<%@ Import Namespace="MidMarket.Entities" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="carrito-container">
         <h1 class="carrito-title">Tu Carrito de Compras</h1>
@@ -16,31 +18,29 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- Ejemplo de un producto en el carrito -->
-                <tr>
-                    <td>Acción Tesla</td>
-                    <td>Símbolo: TSLA</td>
-                    <td>
-                        <input type="number" value="1" min="1" class="cantidad-input">
-                    </td>
-                    <td>$800.00</td>
-                    <td><i class="fas fa-trash carrito-icon-remove"></i></td>
-                </tr>
-                <tr>
-                    <td>Bono Corporativo ABC</td>
-                    <td>Valor Nominal: $1000</td>
-                    <td>
-                        <input type="number" value="1" min="1" class="cantidad-input">
-                    </td>
-                    <td>Tasa: 5%</td>
-                    <td><i class="fas fa-trash carrito-icon-remove"></i></td>
-                </tr>
+                <asp:Repeater ID="rptCarrito" runat="server" OnItemDataBound="rptCarrito_ItemDataBound">
+                    <ItemTemplate>
+                        <tr>
+                            <td><%# Eval("Activo.Nombre") %></td>
+                            <td id="tdDetalle" runat="server"></td>
+                            <!-- Se llenará desde el backend -->
+                            <td>
+                                <input type="number" value="<%# Eval("Cantidad") %>" min="1" class="cantidad-input">
+                            </td>
+                            <td id="tdPrecioTasa" runat="server"></td>
+                            <!-- Se llenará desde el backend -->
+                            <td><i class="fas fa-trash carrito-icon-remove"></i></td>
+                        </tr>
+                    </ItemTemplate>
+                </asp:Repeater>
+
+
             </tbody>
         </table>
 
         <!-- Total y botones de acciones -->
         <div class="carrito-total">
-            <h2>Total: $3800.00</h2>
+            <h2>Total: <%= MiCarrito.Sum(item => item.Activo is Accion ? ((Accion)item.Activo).Precio : 0) %></h2>
             <button class="carrito-button-confirm">Confirmar Compra</button>
         </div>
     </div>

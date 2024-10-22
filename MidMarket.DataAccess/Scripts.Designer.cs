@@ -174,6 +174,29 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SELECT 
+        ///    c.Id_Carrito,
+        ///    c.Id_Activo,
+        ///    a.Simbolo,
+        ///    a.Precio,
+        ///    b.ValorNominal,
+        ///    b.TasaInteres,
+        ///    CASE 
+        ///        WHEN a.Id_Accion IS NOT NULL THEN &apos;Accion&apos;
+        ///        ELSE &apos;Bono&apos;
+        ///    END AS TipoActivo
+        ///FROM Carrito c
+        ///LEFT JOIN Accion a ON c.Id_Activo = a.Id_Activo
+        ///LEFT JOIN Bono b ON c.Id_Activo = b.Id_Activo
+        ///WHERE c.Id_Cliente = @Id_Cliente.
+        /// </summary>
+        internal static string GET_CARRITO {
+            get {
+                return ResourceManager.GetString("GET_CARRITO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SELECT Valor FROM DigitoVerificador WHERE Tabla = &apos;{0}&apos;.
         /// </summary>
         internal static string GET_DIGITO_VERTICAL {
