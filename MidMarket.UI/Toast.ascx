@@ -18,14 +18,21 @@
     window.onload = function () {
         var showToast = document.getElementById('<%= hfShowToast.ClientID %>').value;
     if (showToast === "true") {
-        var myToast = new bootstrap.Toast(document.getElementById('toastMessage'));
+        var toastElement = document.getElementById('toastMessage');
+        var myToast = new bootstrap.Toast(toastElement);
         myToast.show();
 
         setTimeout(function () {
-            document.getElementById('toastMessage').classList.add('fade-out');
+            toastElement.classList.add('fade-out');
+            
+            setTimeout(function () {
+                toastElement.style.display = 'none';
+            }, 500);
+
         }, 3000);
 
-        document.getElementById('<%= hfShowToast.ClientID %>').value = "false";
-    }
-};
+            document.getElementById('<%= hfShowToast.ClientID %>').value = "false";
+        }
+    };
+
 </script>
