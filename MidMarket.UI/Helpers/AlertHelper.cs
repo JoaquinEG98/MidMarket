@@ -15,7 +15,7 @@ namespace MidMarket.UI.Helpers
             ScriptManager.RegisterStartupScript(page, page.GetType(), "alerta", script, true);
         }
 
-        public static void MostrarMensaje(Page page, string mensaje, bool redirigir = false)
+        public static void MostrarModal(Page page, string mensaje, bool redirigir = false)
         {
             var modalControl = (Modal)page.Master.FindControl("globalModalControl");
             if (modalControl != null)
@@ -31,12 +31,31 @@ namespace MidMarket.UI.Helpers
 
                 if (hfShowModal != null)
                 {
-                    hfShowModal.Value = "true";  // Establece que se debe mostrar el modal
+                    hfShowModal.Value = "true";
                 }
 
                 if (redirigir && hfRedirigir != null)
                 {
-                    hfRedirigir.Value = "true";  // Establece si debe redirigir
+                    hfRedirigir.Value = "true";
+                }
+            }
+        }
+
+        public static void MostrarToast(Page page, string mensaje)
+        {
+            var toastControl = (Toast)page.Master.FindControl("globalToastControl");
+            if (toastControl != null)
+            {
+                var literalMensaje = (Literal)toastControl.FindControl("toastMessageLiteral");
+                if (literalMensaje != null)
+                {
+                    literalMensaje.Text = mensaje;
+                }
+
+                var hfShowToast = (HiddenField)toastControl.FindControl("hfShowToast");
+                if (hfShowToast != null)
+                {
+                    hfShowToast.Value = "true";
                 }
             }
         }

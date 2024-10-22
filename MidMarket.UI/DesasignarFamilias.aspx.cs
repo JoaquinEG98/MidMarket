@@ -54,7 +54,7 @@ namespace MidMarket.UI
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarMensaje(this, $"Error al cargar la página: {ex.Message}.");
+                AlertHelper.MostrarModal(this, $"Error al cargar la página: {ex.Message}.");
                 Response.Redirect("Default.aspx");
             }
         }
@@ -78,11 +78,11 @@ namespace MidMarket.UI
 
                 CargarFamilias(UsuarioSeleccionadoId);
 
-                AlertHelper.MostrarMensaje(this, "Familias eliminadas correctamente.");
+                AlertHelper.MostrarModal(this, "Familias eliminadas correctamente.");
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarMensaje(this, $"Error al eliminar familias: {ex.Message}");
+                AlertHelper.MostrarModal(this, $"Error al eliminar familias: {ex.Message}");
             }
         }
     }

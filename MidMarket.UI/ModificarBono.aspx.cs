@@ -32,7 +32,7 @@ namespace MidMarket.UI
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarMensaje(this, $"Error al cargar la página: {ex.Message}");
+                AlertHelper.MostrarModal(this, $"Error al cargar la página: {ex.Message}");
                 Response.Redirect("AdministrarBonos.aspx");
             }
         }
@@ -46,12 +46,12 @@ namespace MidMarket.UI
                 float tasaInteres = float.Parse(Request.Form["tasaInteres"]);
 
                 GuardarBono(nombreBono, valorNominal, tasaInteres);
-                AlertHelper.MostrarMensaje(this, $"Bono {nombreBono} modificado correctamente.");
+                AlertHelper.MostrarModal(this, $"Bono {nombreBono} modificado correctamente.");
                 CargarBono();
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarMensaje(this, $"Error al modificar el bono: {ex.Message}");
+                AlertHelper.MostrarModal(this, $"Error al modificar el bono: {ex.Message}");
             }
         }
 
@@ -74,7 +74,7 @@ namespace MidMarket.UI
             Bono = _activoService.GetBonos().FirstOrDefault(x => x.Id == _bonoId);
             if (Bono == null)
             {
-                AlertHelper.MostrarMensaje(this, "Bono no encontrado.");
+                AlertHelper.MostrarModal(this, "Bono no encontrado.");
                 Response.Redirect("AdministrarBonos.aspx");
             }
         }

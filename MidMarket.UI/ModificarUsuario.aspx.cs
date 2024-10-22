@@ -31,7 +31,7 @@ namespace MidMarket.UI
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarMensaje(this, $"Error al cargar la página: {ex.Message}");
+                AlertHelper.MostrarModal(this, $"Error al cargar la página: {ex.Message}");
                 Response.Redirect("AdministrarUsuarios.aspx");
             }
         }
@@ -41,7 +41,7 @@ namespace MidMarket.UI
             Usuario = _usuarioService.GetClientes().FirstOrDefault(x => x.Id == _usuarioId);
             if (Usuario == null)
             {
-                AlertHelper.MostrarMensaje(this, "Usuario no encontrado.");
+                AlertHelper.MostrarModal(this, "Usuario no encontrado.");
                 Response.Redirect("Usuarios.aspx");
             }
         }
@@ -55,12 +55,12 @@ namespace MidMarket.UI
                 string cuitUsuario = Request.Form["cuitUsuario"];
 
                 GuardarUsuario(emailUsuario, razonSocialUsuario, cuitUsuario);
-                AlertHelper.MostrarMensaje(this, $"Usuario {emailUsuario} modificado correctamente.");
+                AlertHelper.MostrarModal(this, $"Usuario {emailUsuario} modificado correctamente.");
                 CargarUsuario();
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarMensaje(this, $"Error al modificar el usuario: {ex.Message}");
+                AlertHelper.MostrarModal(this, $"Error al modificar el usuario: {ex.Message}");
             }
         }
 

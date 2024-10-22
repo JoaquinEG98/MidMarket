@@ -25,7 +25,7 @@ namespace MidMarket.UI
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarMensaje(this, $"Error al cargar la página: {ex.Message}.");
+                AlertHelper.MostrarModal(this, $"Error al cargar la página: {ex.Message}.");
             }
         }
 
@@ -42,16 +42,16 @@ namespace MidMarket.UI
                 {
                     GuardarFamilia(nombreFamilia, patentesIds);
 
-                    AlertHelper.MostrarMensaje(this, $"Familia {nombreFamilia} creada correctamente.");
+                    AlertHelper.MostrarModal(this, $"Familia {nombreFamilia} creada correctamente.");
                 }
                 else
                 {
-                    AlertHelper.MostrarMensaje(this, $"Error al querer crear la familia: {nombreFamilia}.");
+                    AlertHelper.MostrarModal(this, $"Error al querer crear la familia: {nombreFamilia}.");
                 }
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarMensaje(this, $"Error al querer crear la familia: {ex.Message}.");
+                AlertHelper.MostrarModal(this, $"Error al querer crear la familia: {ex.Message}.");
             }
 
         }

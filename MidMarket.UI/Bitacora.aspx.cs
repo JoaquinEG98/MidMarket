@@ -86,7 +86,7 @@ namespace MidMarket.UI
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarMensaje(this, $"Error al cargar la lista de clientes: {ex.Message}.");
+                AlertHelper.MostrarModal(this, $"Error al cargar la lista de clientes: {ex.Message}.");
             }
         }
 
@@ -137,7 +137,7 @@ namespace MidMarket.UI
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarMensaje(this, $"{Errores.ObtenerError(3)}");
+                AlertHelper.MostrarModal(this, $"{Errores.ObtenerError(3)}");
                 Response.Redirect("Default.aspx");
             }
         }
@@ -172,7 +172,7 @@ namespace MidMarket.UI
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarMensaje(this, $"{ex.Message}");
+                AlertHelper.MostrarModal(this, $"{ex.Message}");
 
                 PaginaActual = 0;
                 TotalPaginas = 1;

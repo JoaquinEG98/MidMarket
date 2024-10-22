@@ -37,12 +37,12 @@ namespace MidMarket.UI
 
                 _usuarioService.RegistrarUsuario(cliente);
 
-                AlertHelper.MostrarMensaje(this, $"Usuario dado de alta correctamente.");
+                AlertHelper.MostrarModal(this, $"Usuario dado de alta correctamente.");
                 LimpiarCampos();
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarMensaje(this, $"Error al dar de alta el Usuario: {ex.Message}.");
+                AlertHelper.MostrarModal(this, $"Error al dar de alta el Usuario: {ex.Message}.");
             }
         }
 

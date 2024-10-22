@@ -34,7 +34,7 @@ namespace MidMarket.UI
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarMensaje(this, $"Error al cargar la página: {ex.Message}.");
+                AlertHelper.MostrarModal(this, $"Error al cargar la página: {ex.Message}.");
                 Response.Redirect("Default.aspx");
             }
         }
@@ -54,16 +54,16 @@ namespace MidMarket.UI
 
                     CargarFamiliasPatentes();
 
-                    AlertHelper.MostrarMensaje(this, $"Familia {nombreFamilia} modificada correctamente.");
+                    AlertHelper.MostrarModal(this, $"Familia {nombreFamilia} modificada correctamente.");
                 }
                 else
                 {
-                    AlertHelper.MostrarMensaje(this, $"Error al querer modificar la familia: {nombreFamilia}.");
+                    AlertHelper.MostrarModal(this, $"Error al querer modificar la familia: {nombreFamilia}.");
                 }
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarMensaje(this, $"Error al querer modificar la familia: {ex.Message}.");
+                AlertHelper.MostrarModal(this, $"Error al querer modificar la familia: {ex.Message}.");
             }
         }
 

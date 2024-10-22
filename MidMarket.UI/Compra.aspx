@@ -2,7 +2,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="compra-container">
-        <!-- Sección de Acciones -->
         <h1 class="compra-title">Acciones</h1>
         <div class="compra-grid">
             <asp:Repeater ID="rptAcciones" runat="server">
@@ -13,14 +12,12 @@
                         <p>Símbolo: <%# Eval("Simbolo") %></p>
                         <p>Precio: $<%# Eval("Precio") %></p>
 
-                        <!-- Botón para agregar la acción al carrito con el Id como CommandArgument -->
                         <asp:Button runat="server" Text="Agregar al Carrito" CommandArgument='<%# Eval("Id") %>' OnClick="AgregarAccionAlCarrito_Click" CssClass="compra-button" />
                     </div>
                 </ItemTemplate>
             </asp:Repeater>
         </div>
 
-        <!-- Sección de Bonos -->
         <h1 class="compra-title">Bonos</h1>
         <div class="compra-grid">
             <asp:Repeater ID="rptBonos" runat="server">
@@ -31,7 +28,6 @@
                         <p>Valor Nominal: $<%# Eval("ValorNominal") %></p>
                         <p>Tasa de Interés: <%# Eval("TasaInteres") %>%</p>
 
-                        <!-- Botón para agregar el bono al carrito con el Id como CommandArgument -->
                         <asp:Button runat="server" Text="Agregar al Carrito" CommandArgument='<%# Eval("Id") %>' OnClick="AgregarBonoAlCarrito_Click" CssClass="compra-button" />
                     </div>
                 </ItemTemplate>

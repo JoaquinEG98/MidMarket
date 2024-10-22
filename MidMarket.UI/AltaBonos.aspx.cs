@@ -32,12 +32,12 @@ namespace MidMarket.UI
                 };
                 _activoService.AltaBono(bono);
 
-                AlertHelper.MostrarMensaje(this, $"Bono {bono.Nombre} dado de alta correctamente.");
+                AlertHelper.MostrarModal(this, $"Bono {bono.Nombre} dado de alta correctamente.");
                 LimpiarCampos();
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarMensaje(this, $"Error al dar de alta la Acción: {ex.Message}.");
+                AlertHelper.MostrarModal(this, $"Error al dar de alta la Acción: {ex.Message}.");
             }
         }
 

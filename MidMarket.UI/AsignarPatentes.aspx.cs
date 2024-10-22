@@ -55,7 +55,7 @@ namespace MidMarket.UI
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarMensaje(this, $"Error al cargar la página: {ex.Message}.");
+                AlertHelper.MostrarModal(this, $"Error al cargar la página: {ex.Message}.");
                 Response.Redirect("Default.aspx");
             }
         }
@@ -88,11 +88,11 @@ namespace MidMarket.UI
 
                 CargarPatentes(ClienteSeleccionado.Id);
 
-                AlertHelper.MostrarMensaje(this, "Patentes asignadas correctamente.");
+                AlertHelper.MostrarModal(this, "Patentes asignadas correctamente.");
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarMensaje(this, $"Error al asignar patentes: {ex.Message}");
+                AlertHelper.MostrarModal(this, $"Error al asignar patentes: {ex.Message}");
             }
         }
     }

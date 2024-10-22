@@ -237,6 +237,7 @@
     <Content Include="Styles\registro_login_style.css" />
     <Content Include="Styles\homepage.css" />
     <Content Include="Styles\usuarios.css" />
+    <Content Include="Toast.ascx" />
     <Content Include="Usuarios.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -452,6 +453,13 @@
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Toast.ascx.cs">
+      <DependentUpon>Toast.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Toast.ascx.designer.cs">
+      <DependentUpon>Toast.ascx</DependentUpon>
     </Compile>
     <Compile Include="Usuarios.aspx.cs">
       <DependentUpon>Usuarios.aspx</DependentUpon>

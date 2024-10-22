@@ -40,5 +40,14 @@ namespace MidMarket.UI
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::MidMarket.UI.Modal globalModalControl;
+
+        /// <summary>
+        /// globalToastControl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::MidMarket.UI.Toast globalToastControl;
     }
 }

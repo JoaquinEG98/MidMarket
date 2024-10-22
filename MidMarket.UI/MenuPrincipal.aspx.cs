@@ -45,7 +45,7 @@ namespace MidMarket.UI
                 }
                 catch (Exception ex)
                 {
-                    AlertHelper.MostrarMensaje(this, $"Error al cargar la página. Será redirigido al inicio.", true);
+                    AlertHelper.MostrarModal(this, $"Error al cargar la página. Será redirigido al inicio.", true);
                     _sessionManager.AbandonSession();
                 }
             }
@@ -78,7 +78,7 @@ namespace MidMarket.UI
             }
             else
             {
-                AlertHelper.MostrarMensaje(this, $"Inconsistencia en los digitos verificadores, por favor revise en la sección de Administración de Base de Datos.");
+                AlertHelper.MostrarModal(this, $"Inconsistencia en los digitos verificadores, por favor revise en la sección de Administración de Base de Datos.");
             }
         }
     }

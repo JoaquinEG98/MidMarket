@@ -27,7 +27,7 @@ namespace MidMarket.UI
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarMensaje(this, $"Error al cargar la página: {ex.Message}");
+                AlertHelper.MostrarModal(this, $"Error al cargar la página: {ex.Message}");
                 Response.Redirect("AdministrarAcciones.aspx");
             }
         }
@@ -41,12 +41,12 @@ namespace MidMarket.UI
                 decimal precioAccion = decimal.Parse(Request.Form["precioAccion"]);
 
                 GuardarAccion(nombreAccion, simboloAccion, precioAccion);
-                AlertHelper.MostrarMensaje(this, $"Acción {nombreAccion} modificada correctamente.");
+                AlertHelper.MostrarModal(this, $"Acción {nombreAccion} modificada correctamente.");
                 CargarAccion();
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarMensaje(this, $"Error al modificar la acción: {ex.Message}");
+                AlertHelper.MostrarModal(this, $"Error al modificar la acción: {ex.Message}");
             }
         }
 
@@ -69,7 +69,7 @@ namespace MidMarket.UI
             Accion = _activoService.GetAcciones().FirstOrDefault(x => x.Id == _accionId);
             if (Accion == null)
             {
-                AlertHelper.MostrarMensaje(this, "Acción no encontrada.");
+                AlertHelper.MostrarModal(this, "Acción no encontrada.");
                 Response.Redirect("AdministrarAcciones.aspx");
             }
         }

@@ -42,11 +42,11 @@ namespace MidMarket.UI
 
 
                 _usuarioService.CambiarPassword(cliente, nuevoPassword.Value, confirmarPassword.Value);
-                AlertHelper.MostrarMensaje(this, $"Contraseña cambiada con éxito");
+                AlertHelper.MostrarModal(this, $"Contraseña cambiada con éxito");
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarMensaje(this, $"Error al cambiar contraseña: {ex.Message}");
+                AlertHelper.MostrarModal(this, $"Error al cambiar contraseña: {ex.Message}");
             }
         }
     }

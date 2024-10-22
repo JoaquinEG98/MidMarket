@@ -28,7 +28,7 @@ namespace MidMarket.UI
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarMensaje(this, $"Error al cargar página: {ex.Message}.");
+                AlertHelper.MostrarModal(this, $"Error al cargar página: {ex.Message}.");
             }
         }
 
@@ -40,7 +40,7 @@ namespace MidMarket.UI
 
                 if (string.IsNullOrEmpty(rutaBackup))
                 {
-                    AlertHelper.MostrarMensaje(this, $"Debe seleccionar una ruta válida para guardar el backup.");
+                    AlertHelper.MostrarModal(this, $"Debe seleccionar una ruta válida para guardar el backup.");
                     return;
                 }
 
@@ -48,11 +48,11 @@ namespace MidMarket.UI
 
                 CargarDV();
 
-                AlertHelper.MostrarMensaje(this, $"Backup realizado con éxito");
+                AlertHelper.MostrarModal(this, $"Backup realizado con éxito");
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarMensaje(this, $"Error al generar backup: {ex.Message}.");
+                AlertHelper.MostrarModal(this, $"Error al generar backup: {ex.Message}.");
             }
         }
 
@@ -62,7 +62,7 @@ namespace MidMarket.UI
             {
                 if (!fileUploadRestore.HasFile)
                 {
-                    AlertHelper.MostrarMensaje(this, "Debe seleccionar un archivo de backup.");
+                    AlertHelper.MostrarModal(this, "Debe seleccionar un archivo de backup.");
                     return;
                 }
 
@@ -74,11 +74,11 @@ namespace MidMarket.UI
 
                 CargarDV();
 
-                AlertHelper.MostrarMensaje(this, "Restauración realizada con éxito.");
+                AlertHelper.MostrarModal(this, "Restauración realizada con éxito.");
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarMensaje(this, $"Error al restaurar la base de datos: {ex.Message}.");
+                AlertHelper.MostrarModal(this, $"Error al restaurar la base de datos: {ex.Message}.");
             }
         }
 
@@ -90,11 +90,11 @@ namespace MidMarket.UI
 
                 CargarDV();
 
-                AlertHelper.MostrarMensaje(this, "Digitos verificadores recalculados con éxito");
+                AlertHelper.MostrarModal(this, "Digitos verificadores recalculados con éxito");
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarMensaje(this, $"Error al recalcular digitos verificadores: {ex.Message}.");
+                AlertHelper.MostrarModal(this, $"Error al recalcular digitos verificadores: {ex.Message}.");
             }
         }
 
