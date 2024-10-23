@@ -118,5 +118,19 @@ namespace MidMarket.DataAccess.DAOs
 
             _dataAccess.ExecuteNonQuery();
         }
+
+        public decimal ObtenerTotalInvertido(int clienteId)
+        {
+            _dataAccess.SelectCommandText = String.Format(Scripts.OBTENER_TOTAL_INVERTIDO, clienteId);
+
+            DataSet ds = _dataAccess.ExecuteNonReader();
+
+            if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            {
+                return Convert.ToDecimal(ds.Tables[0].Rows[0][0]);
+            }
+
+            return 0;
+        }
     }
 }

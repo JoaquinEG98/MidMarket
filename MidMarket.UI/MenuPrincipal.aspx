@@ -14,7 +14,7 @@
 
         <div class="card">
             <h3>Inversiones Actuales</h3>
-            <p>$0</p>
+            <p>$<%: TotalInvertido.ToString("N2") %></p>
         </div>
 
         <div class="card">

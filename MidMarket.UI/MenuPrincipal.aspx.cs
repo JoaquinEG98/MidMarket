@@ -1,10 +1,8 @@
-﻿using MidMarket.Business;
-using MidMarket.Business.Interfaces;
+﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
 using MidMarket.UI.Helpers;
 using System;
 using System.Linq;
-using System.Threading;
 using System.Web.UI;
 using Unity;
 
@@ -14,6 +12,7 @@ namespace MidMarket.UI
     {
         public Cliente Cliente { get; set; }
         public string Familia { get; set; }
+        public decimal TotalInvertido { get; set; }
 
 
         private readonly ISessionManager _sessionManager;
@@ -39,6 +38,8 @@ namespace MidMarket.UI
                         Response.Redirect("Default.aspx");
 
                     VerificarDV();
+
+                    TotalInvertido = _usuarioService.ObtenerTotalInvertido(Cliente.Id);
 
                     if (Cliente.Permisos.Count > 0)
                         Familia = Cliente.Permisos.Where(x => x.Permiso == Entities.Enums.Permiso.EsFamilia).FirstOrDefault().Nombre.ToString();

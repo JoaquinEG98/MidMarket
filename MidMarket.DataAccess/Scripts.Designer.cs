@@ -472,6 +472,24 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SELECT 
+        ///    SUM(CASE 
+        ///            WHEN a.Id_Accion IS NOT NULL THEN a.Precio * ca.Cantidad
+        ///            WHEN b.Id_Bono IS NOT NULL THEN b.ValorNominal * ca.Cantidad
+        ///        END) AS TotalValorizado
+        ///FROM Cliente_Activo ca
+        ///INNER JOIN Activo act ON ca.Id_Activo = act.Id_Activo
+        ///LEFT JOIN Accion a ON act.Id_Activo = a.Id_Activo
+        ///LEFT JOIN Bono b ON act.Id_Activo = b.Id_Activo
+        ///WHERE ca.Id_Cliente = {0}.
+        /// </summary>
+        internal static string OBTENER_TOTAL_INVERTIDO {
+            get {
+                return ResourceManager.GetString("OBTENER_TOTAL_INVERTIDO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to DECLARE @rutaCompleta NVARCHAR(255) = @RutaBackupParam;
         ///DECLARE @nombreBase NVARCHAR(255) = @NombreBaseParam;
         ///

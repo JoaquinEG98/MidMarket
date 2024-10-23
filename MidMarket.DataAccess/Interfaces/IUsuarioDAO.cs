@@ -14,5 +14,6 @@ namespace MidMarket.DataAccess.Interfaces
         void AumentarBloqueo(int clienteId);
         void CambiarPassword(Cliente cliente);
         void ActualizarSaldo(int cuentaId, decimal nuevoSaldo);
+        decimal ObtenerTotalInvertido(int clienteId);
     }
 }
