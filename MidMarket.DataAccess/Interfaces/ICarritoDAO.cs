@@ -9,5 +9,6 @@ namespace MidMarket.DataAccess.Interfaces
         List<Carrito> GetCarrito(int clienteId);
         void ActualizarCarrito(Carrito carrito, Cliente cliente);
         void EliminarCarrito(int idCarrito, Cliente cliente);
+        void LimpiarCarrito(Cliente cliente);
     }
 }

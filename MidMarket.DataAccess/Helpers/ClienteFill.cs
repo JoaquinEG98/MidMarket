@@ -41,7 +41,7 @@ namespace MidMarket.DataAccess.Helpers
                 cuenta.NumeroCuenta = Convert.ToInt32(dr["NumeroCuenta"]);
 
             if (dr.Table.Columns.Contains("Saldo") && !Convert.IsDBNull(dr["Saldo"]))
-                cuenta.Saldo = Convert.ToInt32(dr["Saldo"]);
+                cuenta.Saldo = Convert.ToDecimal(dr["Saldo"]);
 
             cliente.Cuenta = cuenta;
 

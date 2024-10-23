@@ -4,6 +4,6 @@
     {
         public int Id { get; set; }
         public int NumeroCuenta { get; set; }
-        public double Saldo { get; set; }
+        public decimal Saldo { get; set; }
     }
 }

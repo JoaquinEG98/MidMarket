@@ -1,15 +1,11 @@
 ﻿using MidMarket.Business;
 using MidMarket.Business.Interfaces;
 using MidMarket.Business.Services;
-using MidMarket.DataAccess.DAOs;
-using MidMarket.DataAccess.Interfaces;
 using System;
-using System.ComponentModel;
 using System.Web;
 using System.Web.Optimization;
 using System.Web.Routing;
 using Unity;
-using Unity.Injection;
 
 namespace MidMarket.UI
 {
@@ -38,6 +34,7 @@ namespace MidMarket.UI
             Container.RegisterType<IBackupService, BackupService>();
             Container.RegisterType<IActivoService, ActivoService>();
             Container.RegisterType<ICarritoService, CarritoService>();
+            Container.RegisterType<ICompraService, CompraService>();
         }
     }
 }

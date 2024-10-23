@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace MidMarket.Entities
 {
@@ -8,7 +9,7 @@ namespace MidMarket.Entities
         public Cuenta Cuenta { get; set; }
         public Cliente Cliente { get; set; }
         public DateTime Fecha { get; set; }
-        public DetalleCompra Detalle { get; set; }
+        public List<DetalleCompra> Detalle { get; set; }
         public decimal Total { get; set; }
     }
 }

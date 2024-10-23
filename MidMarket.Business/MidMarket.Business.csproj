@@ -57,6 +57,7 @@
     <Compile Include="Interfaces\IBackupService.cs" />
     <Compile Include="Interfaces\IBitacoraService.cs" />
     <Compile Include="Interfaces\ICarritoService.cs" />
+    <Compile Include="Interfaces\ICompraService.cs" />
     <Compile Include="Interfaces\IDigitoVerificadorService.cs" />
     <Compile Include="Interfaces\IPermisoService.cs" />
     <Compile Include="Interfaces\ISessionManager.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="Services\BackupService.cs" />
     <Compile Include="Services\BitacoraService.cs" />
     <Compile Include="Services\CarritoService.cs" />
+    <Compile Include="Services\CompraService.cs" />
     <Compile Include="Services\DigitoVerificadorService.cs" />
     <Compile Include="Services\PermisoService.cs" />
     <Compile Include="Services\UsuarioService.cs" />

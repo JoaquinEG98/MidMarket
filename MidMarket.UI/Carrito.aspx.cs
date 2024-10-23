@@ -62,14 +62,7 @@ namespace MidMarket.UI
                     decimal total = 0;
                     foreach (var item in MiCarrito)
                     {
-                        if (item.Activo is Accion accion)
-                        {
-                            total += accion.Precio * item.Cantidad;
-                        }
-                        else if (item.Activo is Bono bono)
-                        {
-                            total += bono.ValorNominal * item.Cantidad;
-                        }
+                        total += item.Total;
                     }
 
                     ViewState["TotalCarrito"] = total;
@@ -82,7 +75,6 @@ namespace MidMarket.UI
             {
                 AlertHelper.MostrarModal(this, $"Error al cargar la página: {ex.Message}.");
             }
-
         }
 
         protected void rptCarrito_ItemDataBound(object sender, RepeaterItemEventArgs e)

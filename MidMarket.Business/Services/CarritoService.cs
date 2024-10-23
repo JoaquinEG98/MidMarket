@@ -68,5 +68,17 @@ namespace MidMarket.Business.Services
                 scope.Complete();
             }
         }
+
+        public void LimpiarCarrito(int carritoId)
+        {
+            using (TransactionScope scope = new TransactionScope())
+            {
+                var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+
+                _carritoDataAccess.LimpiarCarrito(clienteLogueado);
+
+                scope.Complete();
+            }
+        }
     }
 }

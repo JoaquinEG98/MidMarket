@@ -29,6 +29,9 @@ namespace MidMarket.DataAccess.Helpers
                 if (dr.Table.Columns.Contains("Cantidad") && !Convert.IsDBNull(dr["Cantidad"]))
                     itemCarrito.Cantidad = Convert.ToInt32(dr["Cantidad"]);
 
+                if (dr.Table.Columns.Contains("Total") && !Convert.IsDBNull(dr["Total"]))
+                    itemCarrito.Total = Convert.ToInt32(dr["Total"]);
+
                 return itemCarrito;
             }).ToList();
         }

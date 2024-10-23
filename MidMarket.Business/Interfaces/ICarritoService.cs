@@ -9,5 +9,6 @@ namespace MidMarket.Business.Interfaces
         List<Carrito> GetCarrito(int idCliente);
         void ActualizarCarrito(Carrito carrito);
         void EliminarCarrito(int carritoId);
+        void LimpiarCarrito(int carritoId);
     }
 }

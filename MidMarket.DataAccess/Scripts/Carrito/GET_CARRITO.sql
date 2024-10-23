@@ -2,17 +2,21 @@
     c.Id_Carrito,
     c.Id_Activo,
     c.Cantidad,
-	ac.Nombre,
-	a.Id_Accion,
+    ac.Nombre,
+    a.Id_Accion,
     a.Simbolo,
     a.Precio,
-	b.Id_Bono,
+    b.Id_Bono,
     b.ValorNominal,
     b.TasaInteres,
     CASE 
         WHEN a.Id_Accion IS NOT NULL THEN 'Accion'
         ELSE 'Bono'
-    END AS TipoActivo
+    END AS TipoActivo,
+    CASE 
+        WHEN a.Id_Accion IS NOT NULL THEN a.Precio * c.Cantidad
+        ELSE b.ValorNominal * c.Cantidad
+    END AS Total
 FROM Carrito c
 INNER JOIN Activo ac ON c.Id_Activo = ac.Id_Activo
 LEFT JOIN Accion a ON c.Id_Activo = a.Id_Activo

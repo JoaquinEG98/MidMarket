@@ -188,22 +188,24 @@ namespace MidMarket.DataAccess {
         ///    c.Id_Carrito,
         ///    c.Id_Activo,
         ///    c.Cantidad,
-        ///	ac.Nombre,
-        ///	a.Id_Accion,
+        ///    ac.Nombre,
+        ///    a.Id_Accion,
         ///    a.Simbolo,
         ///    a.Precio,
-        ///	b.Id_Bono,
+        ///    b.Id_Bono,
         ///    b.ValorNominal,
         ///    b.TasaInteres,
         ///    CASE 
         ///        WHEN a.Id_Accion IS NOT NULL THEN &apos;Accion&apos;
         ///        ELSE &apos;Bono&apos;
-        ///    END AS TipoActivo
+        ///    END AS TipoActivo,
+        ///    CASE 
+        ///        WHEN a.Id_Accion IS NOT NULL THEN a.Precio * c.Cantidad
+        ///        ELSE b.ValorNominal * c.Cantidad
+        ///    END AS Total
         ///FROM Carrito c
         ///INNER JOIN Activo ac ON c.Id_Activo = ac.Id_Activo
-        ///LEFT JOIN Accion a ON c.Id_Activo = a.Id_Activo
-        ///LEFT JOIN Bono b ON c.Id_Activo = b.Id_Activo
-        ///WHERE c.Id_Cliente = {0}.
+        ///LEFT JOIN Accio [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string GET_CARRITO {
             get {
@@ -374,6 +376,17 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to INSERT INTO Cliente_Activo (Id_Cliente, Id_Activo, Cantidad)
+        ///OUTPUT inserted.Id_Cliente_Activo
+        ///VALUES (@Id_Cliente, @Id_Activo, @Cantidad).
+        /// </summary>
+        internal static string INSERTAR_ACTIVO_CLIENTE {
+            get {
+                return ResourceManager.GetString("INSERTAR_ACTIVO_CLIENTE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to IF EXISTS (SELECT 1 FROM Carrito WHERE Id_Activo = @Id_Activo AND Id_Cliente = @Id_Cliente)
         ///BEGIN
         ///    UPDATE Carrito
@@ -389,6 +402,38 @@ namespace MidMarket.DataAccess {
         internal static string INSERTAR_CARRITO {
             get {
                 return ResourceManager.GetString("INSERTAR_CARRITO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to INSERT INTO DetalleCompra (Id_Activo, Id_Compra, Cantidad, Precio)
+        ///OUTPUT inserted.Id_Detalle
+        ///VALUES (@Id_Activo, @Id_Compra, @Cantidad, @Precio).
+        /// </summary>
+        internal static string INSERTAR_DETALLE_COMPRA {
+            get {
+                return ResourceManager.GetString("INSERTAR_DETALLE_COMPRA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to INSERT INTO TransaccionCompra (Id_Cuenta, Id_Cliente, Fecha, Total)
+        ///OUTPUT inserted.Id_Compra
+        ///VALUES (@Id_Cuenta, @Id_Cliente, @Fecha, @Total).
+        /// </summary>
+        internal static string INSERTAR_TRANSACCION_COMPRA {
+            get {
+                return ResourceManager.GetString("INSERTAR_TRANSACCION_COMPRA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 	DELETE FROM Carrito
+        ///	WHERE Id_Cliente = @Id_Cliente.
+        /// </summary>
+        internal static string LIMPIAR_CARRITO {
+            get {
+                return ResourceManager.GetString("LIMPIAR_CARRITO", resourceCulture);
             }
         }
         

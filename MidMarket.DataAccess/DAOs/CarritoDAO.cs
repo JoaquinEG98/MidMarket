@@ -66,5 +66,16 @@ namespace MidMarket.DataAccess.DAOs
 
             _dataAccess.ExecuteNonQuery();
         }
+
+        public void LimpiarCarrito(Cliente cliente)
+        {
+            _dataAccess.ExecuteCommandText = Scripts.LIMPIAR_CARRITO;
+
+            _dataAccess.ExecuteParameters.Parameters.Clear();
+
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Cliente", cliente.Id);
+
+            _dataAccess.ExecuteNonQuery();
+        }
     }
 }
