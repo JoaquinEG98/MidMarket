@@ -50,7 +50,7 @@
 
             <div class="carrito-total">
                 <h2>Total: $<%= ViewState["TotalCarrito"] != null ? ((decimal)ViewState["TotalCarrito"]).ToString("F2") : "0.00" %></h2>
-                <button class="carrito-button-confirm">Confirmar Compra</button>
+                <asp:Button ID="btnConfirmarCompra" runat="server" CssClass="carrito-button-confirm" OnClick="btnConfirmarCompra_Click" Text="Confirmar Compra" />
             </div>
         </div>
     </div>

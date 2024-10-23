@@ -61,6 +61,17 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to UPDATE Cuenta
+        ///SET Saldo = @Saldo
+        ///WHERE Id_Cuenta = @Id_Cuenta.
+        /// </summary>
+        internal static string ACTUALIZAR_SALDO {
+            get {
+                return ResourceManager.GetString("ACTUALIZAR_SALDO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to INSERT INTO Accion (Simbolo, Precio, Id_Activo)
         ///OUTPUT inserted.Id_Accion VALUES (@Simbolo, @Precio, @Id_Activo).
         /// </summary>

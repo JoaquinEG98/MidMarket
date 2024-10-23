@@ -26,11 +26,13 @@ namespace MidMarket.UI
 
         private readonly ISessionManager _sessionManager;
         private readonly ICarritoService _carritoService;
+        private readonly ICompraService _compraService;
 
         public Carrito()
         {
             _sessionManager = Global.Container.Resolve<ISessionManager>();
             _carritoService = Global.Container.Resolve<ICarritoService>();
+            _compraService = Global.Container.Resolve<ICompraService>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -129,9 +131,19 @@ namespace MidMarket.UI
                             carritoItem.Cantidad = 1;
                         }
 
+                        if (carritoItem.Activo is Accion accion)
+                        {
+                            carritoItem.Total = accion.Precio * carritoItem.Cantidad;
+                        }
+                        else if (carritoItem.Activo is Bono bono)
+                        {
+                            carritoItem.Total = bono.ValorNominal * carritoItem.Cantidad;
+                        }
+
                         _carritoService.ActualizarCarrito(carritoItem);
 
                         CalcularTotalCarrito();
+
                         rptCarrito.DataSource = MiCarrito;
                         rptCarrito.DataBind();
                     }
@@ -163,22 +175,44 @@ namespace MidMarket.UI
             }
         }
 
+
         private void CalcularTotalCarrito()
         {
             decimal total = 0;
             foreach (var item in MiCarrito)
             {
-                if (item.Activo is Accion accion)
-                {
-                    total += accion.Precio * item.Cantidad;
-                }
-                else if (item.Activo is Bono bono)
-                {
-                    total += bono.ValorNominal * item.Cantidad;
-                }
+                total += item.Total;
             }
 
             ViewState["TotalCarrito"] = total;
+        }
+
+        protected void btnConfirmarCompra_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var cliente = _sessionManager.Get<Cliente>("Usuario");
+
+                if (MiCarrito == null || MiCarrito.Count == 0)
+                {
+                    AlertHelper.MostrarModal(this, "El carrito está vacío, no puedes realizar una compra.");
+                    return;
+                }
+
+                _compraService.RealizarCompra(MiCarrito);
+
+                MiCarrito.Clear();
+                _carritoService.LimpiarCarrito(cliente.Id);
+
+                divCarrito.Visible = false;
+                ltlCarritoVacio.Visible = true;
+
+                AlertHelper.MostrarModal(this, "La compra se realizó con éxito.");
+            }
+            catch (Exception ex)
+            {
+                AlertHelper.MostrarModal(this, $"Error al confirmar la compra: {ex.Message}.");
+            }
         }
     }
 }

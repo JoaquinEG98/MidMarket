@@ -21,7 +21,7 @@ namespace MidMarket.DataAccess.DAOs
             _dataAccess.ExecuteParameters.Parameters.Clear();
 
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Activo", carrito.Activo.Id);
-            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Compra", carrito.Activo.Id);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Compra", idCompra);
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Cantidad", carrito.Cantidad);
 
 

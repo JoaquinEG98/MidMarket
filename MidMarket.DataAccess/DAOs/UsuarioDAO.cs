@@ -106,5 +106,17 @@ namespace MidMarket.DataAccess.DAOs
 
             _dataAccess.ExecuteNonQuery();
         }
+
+        public void ActualizarSaldo(int cuentaId, decimal nuevoSaldo)
+        {
+            _dataAccess.ExecuteCommandText = Scripts.ACTUALIZAR_SALDO;
+
+            _dataAccess.ExecuteParameters.Parameters.Clear();
+
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Cuenta", cuentaId);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Saldo", nuevoSaldo);
+
+            _dataAccess.ExecuteNonQuery();
+        }
     }
 }

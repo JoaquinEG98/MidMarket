@@ -1,13 +1,13 @@
 ﻿using MidMarket.Business.Interfaces;
-using MidMarket.DataAccess.Interfaces;
-using System;
-using System.Transactions;
-using MidMarket.Entities;
 using MidMarket.Business.Seguridad;
-using System.Collections.Generic;
+using MidMarket.DataAccess.Interfaces;
+using MidMarket.Entities;
 using MidMarket.Entities.Enums;
-using System.Text.RegularExpressions;
 using MidMarket.Seguridad;
+using System;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
+using System.Transactions;
 
 namespace MidMarket.Business.Services
 {
@@ -86,7 +86,7 @@ namespace MidMarket.Business.Services
                     throw new Exception(Errores.ObtenerError(7));
 
                 ValidarUsuario(cliente, password);
-                
+
                 string passwordEncriptada = Encriptacion.Hash(password);
 
                 if (passwordEncriptada != cliente.Password)
@@ -249,6 +249,18 @@ namespace MidMarket.Business.Services
 
             if (!ValidarFormatoPassword(nuevaPassword))
                 throw new Exception(Errores.ObtenerError(6));
+        }
+
+        public void ActualizarSaldo(decimal total)
+        {
+            var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+
+            decimal nuevoSaldo = clienteLogueado.Cuenta.Saldo - total;
+
+            _usuarioDataAccess.ActualizarSaldo(clienteLogueado.Cuenta.Id, nuevoSaldo);
+
+            var usuarioActualizado = GetCliente(clienteLogueado.Id);
+            _sessionManager.Set("Usuario", usuarioActualizado);
         }
     }
 }
