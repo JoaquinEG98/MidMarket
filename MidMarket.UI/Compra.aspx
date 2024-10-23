@@ -10,7 +10,7 @@
                         <h3><%# Eval("Nombre") %></h3>
                         <div class="separator"></div>
                         <p>Símbolo: <%# Eval("Simbolo") %></p>
-                        <p>Precio: $<%# Eval("Precio") %></p>
+                        <p>Precio: $<%# Convert.ToDecimal(Eval("Precio")).ToString("N2") %></p>
 
                         <asp:Button runat="server" Text="Agregar al Carrito" CommandArgument='<%# Eval("Id") %>' OnClick="AgregarAccionAlCarrito_Click" CssClass="compra-button" />
                     </div>
@@ -25,7 +25,7 @@
                     <div class="compra-card compra-card-bonos">
                         <h3><%# Eval("Nombre") %></h3>
                         <div class="separator"></div>
-                        <p>Valor Nominal: $<%# Eval("ValorNominal") %></p>
+                        <p>Valor Nominal: $<%# Convert.ToDecimal(Eval("ValorNominal")).ToString("N2") %></p>
                         <p>Tasa de Interés: <%# Eval("TasaInteres") %>%</p>
 
                         <asp:Button runat="server" Text="Agregar al Carrito" CommandArgument='<%# Eval("Id") %>' OnClick="AgregarBonoAlCarrito_Click" CssClass="compra-button" />

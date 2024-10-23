@@ -9,7 +9,7 @@
     <div style="display: flex; gap: 20px; margin-bottom: 40px;">
         <div class="card">
             <h3>Balance Total</h3>
-            <p>$<%: Cliente.Cuenta.Saldo %></p>
+            <p>$<%: Cliente.Cuenta.Saldo.ToString("N2") %></p>
         </div>
 
         <div class="card">

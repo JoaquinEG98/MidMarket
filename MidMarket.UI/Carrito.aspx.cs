@@ -95,12 +95,12 @@ namespace MidMarket.UI
                         if (carritoItem.Activo is Accion accion)
                         {
                             tdDetalle.InnerText = $"Símbolo: {accion.Simbolo}";
-                            tdPrecioTasa.InnerText = $"${accion.Precio.ToString("F2")}";
+                            tdPrecioTasa.InnerText = $"${accion.Precio.ToString("N2")}";
                         }
                         else if (carritoItem.Activo is Bono bono)
                         {
                             tdDetalle.InnerText = $"Tasa: {bono.TasaInteres}%";
-                            tdPrecioTasa.InnerText = $"${bono.ValorNominal.ToString("F2")}";
+                            tdPrecioTasa.InnerText = $"${bono.ValorNominal.ToString("N2")}";
                         }
                     }
                 }

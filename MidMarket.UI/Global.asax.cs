@@ -18,6 +18,8 @@ namespace MidMarket.UI
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
+            var cultureInfo = new System.Globalization.CultureInfo("es-AR");
+
             RegisterDependencies();
         }
 
