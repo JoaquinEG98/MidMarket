@@ -127,7 +127,12 @@ namespace MidMarket.DataAccess.DAOs
 
             if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
             {
-                return Convert.ToDecimal(ds.Tables[0].Rows[0][0]);
+                var valor = ds.Tables[0].Rows[0][0];
+
+                if (valor != DBNull.Value)
+                {
+                    return Convert.ToDecimal(valor);
+                }
             }
 
             return 0;
