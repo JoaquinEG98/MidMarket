@@ -1,6 +1,8 @@
 ﻿SELECT 
     DC.Id_Detalle,
     DC.Id_Activo,
+	B.Id_Bono,
+	A.Id_Accion,
     AC.Nombre,
     DC.Id_Compra,
     DC.Cantidad,

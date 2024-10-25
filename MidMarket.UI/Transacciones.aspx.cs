@@ -43,6 +43,9 @@ namespace MidMarket.UI
         private void CargarCompras()
         {
             Compras = _compraService.GetCompras();
+
+            var test = JsonConvert.SerializeObject(Compras);
+
             ViewState["ComprasJson"] = JsonConvert.SerializeObject(Compras, new JsonSerializerSettings
             {
                 ReferenceLoopHandling = ReferenceLoopHandling.Ignore

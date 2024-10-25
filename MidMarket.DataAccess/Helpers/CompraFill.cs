@@ -55,6 +55,9 @@ namespace MidMarket.DataAccess.Helpers
                         detalleCompra.Activo = new Accion
                         {
                             Id = idActivo,
+                            Id_Accion = dr.Table.Columns.Contains("Id_Accion") && !Convert.IsDBNull(dr["Id_Accion"])
+                                ? Convert.ToInt32(dr["Id_Accion"])
+                                : 0,
                             Simbolo = dr.Table.Columns.Contains("Simbolo") && !Convert.IsDBNull(dr["Simbolo"])
                                 ? dr["Simbolo"].ToString()
                                 : null,
@@ -71,6 +74,9 @@ namespace MidMarket.DataAccess.Helpers
                         detalleCompra.Activo = new Bono
                         {
                             Id = idActivo,
+                            Id_Bono = dr.Table.Columns.Contains("Id_Bono") && !Convert.IsDBNull(dr["Id_Bono"])
+                                ? Convert.ToInt32(dr["Id_Bono"])
+                                : 0,
                             ValorNominal = dr.Table.Columns.Contains("PrecioValorNominal") && !Convert.IsDBNull(dr["PrecioValorNominal"])
                                 ? Convert.ToDecimal(dr["PrecioValorNominal"])
                                 : 0,
