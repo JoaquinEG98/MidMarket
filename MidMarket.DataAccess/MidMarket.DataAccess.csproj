@@ -55,6 +55,7 @@
     <Compile Include="Helpers\BitacoraFill.cs" />
     <Compile Include="Helpers\CarritoFill.cs" />
     <Compile Include="Helpers\ClienteFill.cs" />
+    <Compile Include="Helpers\CompraFill.cs" />
     <Compile Include="Helpers\PermisoFill.cs" />
     <Compile Include="Interfaces\IActivoDAO.cs" />
     <Compile Include="Interfaces\IBackupDAO.cs" />
@@ -87,6 +88,8 @@
     <Content Include="Scripts\Carrito\UPDATE_CARRITO.sql" />
     <Content Include="Scripts\Carrito\GET_CARRITO.sql" />
     <Content Include="Scripts\Carrito\INSERTAR_CARRITO.sql" />
+    <Content Include="Scripts\Compra\GET_COMPRAS_DETALLE.sql" />
+    <Content Include="Scripts\Compra\GET_COMPRAS.sql" />
     <Content Include="Scripts\Compra\INSERTAR_TRANSACCION_COMPRA.sql" />
     <Content Include="Scripts\Compra\INSERTAR_DETALLE_COMPRA.sql" />
     <Content Include="Scripts\Compra\INSERTAR_ACTIVO_CLIENTE.sql" />

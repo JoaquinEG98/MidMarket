@@ -1,7 +1,11 @@
 ﻿using MidMarket.DataAccess.Conexion;
+using MidMarket.DataAccess.Helpers;
 using MidMarket.DataAccess.Interfaces;
 using MidMarket.Entities;
 using MidMarket.Seguridad;
+using System;
+using System.Collections.Generic;
+using System.Data;
 
 namespace MidMarket.DataAccess.DAOs
 {
@@ -62,6 +66,34 @@ namespace MidMarket.DataAccess.DAOs
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Cantidad", carrito.Cantidad);
 
             return _dataAccess.ExecuteNonEscalar();
+        }
+
+        public List<TransaccionCompra> GetCompras(Cliente cliente)
+        {
+            var compras = new List<TransaccionCompra>();
+
+            _dataAccess.SelectCommandText = String.Format(Scripts.GET_COMPRAS, cliente.Id);
+
+            DataSet ds = _dataAccess.ExecuteNonReader();
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                compras = CompraFill.FillListTransaccionCompra(ds, cliente);
+
+                foreach (var compra in compras)
+                {
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_COMPRAS_DETALLE, compra.Id);
+
+                    DataSet dsCompra = _dataAccess.ExecuteNonReader();
+
+                    if (dsCompra.Tables[0].Rows.Count > 0)
+                    {
+                        compra.Detalle = CompraFill.FillListDetalleCompra(dsCompra);
+                    }
+                }
+            }
+
+            return compras;
         }
     }
 }

@@ -225,6 +225,46 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SELECT Id_Compra, Id_Cuenta, Id_Cliente, Fecha, Total
+        ///FROM TransaccionCompra
+        ///WHERE Id_Cliente = {0}.
+        /// </summary>
+        internal static string GET_COMPRAS {
+            get {
+                return ResourceManager.GetString("GET_COMPRAS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT 
+        ///    DC.Id_Detalle,
+        ///    DC.Id_Activo,
+        ///    DC.Id_Compra,
+        ///    DC.Cantidad,
+        ///    CASE 
+        ///        WHEN A.Id_Activo IS NOT NULL THEN &apos;Accion&apos;
+        ///        WHEN B.Id_Activo IS NOT NULL THEN &apos;Bono&apos;
+        ///        ELSE &apos;Desconocido&apos;
+        ///    END AS TipoActivo,
+        ///    COALESCE(A.Precio, B.ValorNominal) AS PrecioValorNominal,
+        ///    A.Simbolo,
+        ///    B.TasaInteres
+        ///FROM 
+        ///    DetalleCompra DC
+        ///LEFT JOIN 
+        ///    Accion A ON DC.Id_Activo = A.Id_Activo
+        ///LEFT JOIN 
+        ///    Bono B ON DC.Id_Activo = B.Id_Activo
+        ///WHERE 
+        ///    DC.Id_Compra  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string GET_COMPRAS_DETALLE {
+            get {
+                return ResourceManager.GetString("GET_COMPRAS_DETALLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SELECT Valor FROM DigitoVerificador WHERE Tabla = &apos;{0}&apos;.
         /// </summary>
         internal static string GET_DIGITO_VERTICAL {
@@ -387,9 +427,20 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to INSERT INTO Cliente_Activo (Id_Cliente, Id_Activo, Cantidad)
-        ///OUTPUT inserted.Id_Cliente_Activo
-        ///VALUES (@Id_Cliente, @Id_Activo, @Cantidad).
+        ///   Looks up a localized string similar to IF EXISTS (SELECT 1 FROM Cliente_Activo WHERE Id_Cliente = @Id_Cliente AND Id_Activo = @Id_Activo)
+        ///BEGIN
+        ///    UPDATE Cliente_Activo
+        ///    SET Cantidad = Cantidad + @Cantidad
+        ///    OUTPUT inserted.Id_Cliente_Activo
+        ///    WHERE Id_Cliente = @Id_Cliente AND Id_Activo = @Id_Activo;
+        ///END
+        ///ELSE
+        ///BEGIN
+        ///    INSERT INTO Cliente_Activo (Id_Cliente, Id_Activo, Cantidad)
+        ///    OUTPUT inserted.Id_Cliente_Activo
+        ///    VALUES (@Id_Cliente, @Id_Activo, @Cantidad);
+        ///END
+        ///.
         /// </summary>
         internal static string INSERTAR_ACTIVO_CLIENTE {
             get {

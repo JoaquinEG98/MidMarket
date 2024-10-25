@@ -56,5 +56,14 @@ namespace MidMarket.Business.Services
             if (total > saldo)
                 throw new System.Exception(Errores.ObtenerError(18));
         }
+
+        public List<TransaccionCompra> GetCompras()
+        {
+            var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+
+            List<TransaccionCompra> compras = _compraDataAccess.GetCompras(clienteLogueado);
+
+            return compras;
+        }
     }
 }
