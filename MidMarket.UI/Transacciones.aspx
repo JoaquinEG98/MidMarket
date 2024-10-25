@@ -20,7 +20,7 @@
                     <td><%= compra.Fecha.ToString("dd/MM/yyyy HH:mm:ss") %></td> <!-- Fecha con hora, minutos y segundos -->
                     <td>$<%= compra.Total.ToString("N2") %></td>
                     <td>
-                        <button type="button" class="submit-btn-transacciones ver-detalle-btn" onclick="abrirModalDetalle('<%= compra.Id %>', '<%= compra.Fecha.ToString("dd/MM/yyyy HH:mm:ss") %>')">Ver Detalle</button>
+                        <button type="button" class="submit-btn-transacciones ver-detalle-btn" onclick="abrirModalDetalle('<%= compra.Id %>', '<%= compra.Fecha.ToString("dd/MM/yyyy HH:mm:ss") %>')">Ver Factura</button>
                         <button type="button" class="submit-btn-transacciones descargar-btn">Descargar</button>
                     </td>
                 </tr>
@@ -32,7 +32,7 @@
     <div id="transaccionesModal" class="transacciones-modal">
         <div class="transacciones-modal-content">
             <div class="transacciones-modal-header">
-                <h5 class="transacciones-modal-title">Detalles de la Compra</h5>
+                <h5 class="transacciones-modal-title">Factura de la Compra</h5>
                 <span class="transacciones-close" onclick="cerrarModal()">&times;</span>
             </div>
             <div class="transacciones-modal-body">
@@ -43,7 +43,7 @@
 
                 <!-- Tabla de Acciones -->
                 <div id="accionesSection" style="display: none;">
-                    <h3>Acciones</h3>
+                    <h3 class="section-title">Acciones</h3>
                     <table id="tablaAcciones">
                         <thead>
                             <tr>
@@ -65,7 +65,7 @@
 
                 <!-- Tabla de Bonos -->
                 <div id="bonosSection" style="display: none;">
-                    <h3>Bonos</h3>
+                    <h3 class="section-title">Bonos</h3>
                     <table id="tablaBonos">
                         <thead>
                             <tr>
