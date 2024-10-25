@@ -67,6 +67,9 @@
                 <li class="nav-item" runat="server" id="carritoDropdown">
                     <a class="nav-link" href="/Carrito.aspx">Carrito</a>
                 </li>
+                <li class="nav-item" runat="server" id="misTransaccionesDropdown">
+                    <a class="nav-link" href="/Transacciones.aspx">Mis Transacciones</a>
+                </li>
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item" runat="server" id="logoutLink">

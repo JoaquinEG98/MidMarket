@@ -33,7 +33,7 @@ namespace MidMarket.UI
             bitacora.Visible = false;
             transaccionesDropdown.Visible = false;
             carritoDropdown.Visible = false;
-
+            misTransaccionesDropdown.Visible = false;
         }
 
         private void AsignarMenuPermisos(Cliente cliente)
@@ -58,6 +58,7 @@ namespace MidMarket.UI
                 {
                     transaccionesDropdown.Visible = true;
                     carritoDropdown.Visible = true;
+                    misTransaccionesDropdown.Visible = true;
                 }
             }
         }
