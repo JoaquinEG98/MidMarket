@@ -203,6 +203,7 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="ValidarPassword.ascx" />
+    <Content Include="ValidarUsuario.ascx" />
     <Content Include="WebServices\CalcularCarrito.asmx" />
     <Content Include="WebServices\EstadisticaActivos.asmx" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
@@ -503,6 +504,13 @@
     </Compile>
     <Compile Include="ValidarPassword.ascx.designer.cs">
       <DependentUpon>ValidarPassword.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ValidarUsuario.ascx.cs">
+      <DependentUpon>ValidarUsuario.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValidarUsuario.ascx.designer.cs">
+      <DependentUpon>ValidarUsuario.ascx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

@@ -15,40 +15,13 @@ namespace MidMarket.UI
     {
 
         /// <summary>
-        /// emailUsuario control.
+        /// ValidarUsuarioControl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl emailUsuario;
-
-        /// <summary>
-        /// passwordUsuario control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputPassword passwordUsuario;
-
-        /// <summary>
-        /// razonSocialUsuario control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText razonSocialUsuario;
-
-        /// <summary>
-        /// cuitUsuario control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText cuitUsuario;
+        protected global::MidMarket.UI.ValidarUsuario ValidarUsuarioControl;
 
         /// <summary>
         /// btnRegistrar control.

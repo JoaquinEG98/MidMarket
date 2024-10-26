@@ -1,5 +1,4 @@
-﻿using Antlr.Runtime.Misc;
-using MidMarket.Business.Interfaces;
+﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
 using MidMarket.UI.Helpers;
 using System;
@@ -24,34 +23,34 @@ namespace MidMarket.UI
 
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
-            try
+            if (Page.IsValid)
             {
-
-                Cliente cliente = new Cliente()
+                try
                 {
-                    Email = emailUsuario.Value,
-                    Password = passwordUsuario.Value,
-                    RazonSocial = razonSocialUsuario.Value,
-                    CUIT = cuitUsuario.Value,
-                };
 
-                _usuarioService.RegistrarUsuario(cliente);
+                    Cliente cliente = new Cliente()
+                    {
+                        Email = ValidarUsuarioControl.EmailValue,
+                        Password = ValidarUsuarioControl.PasswordValue,
+                        RazonSocial = ValidarUsuarioControl.RazonSocialValue,
+                        CUIT = ValidarUsuarioControl.CUITValue
+                    };
 
-                AlertHelper.MostrarModal(this, $"Usuario dado de alta correctamente.");
-                LimpiarCampos();
-            }
-            catch (Exception ex)
-            {
-                AlertHelper.MostrarModal(this, $"Error al dar de alta el Usuario: {ex.Message}.");
+                    _usuarioService.RegistrarUsuario(cliente);
+
+                    AlertHelper.MostrarModal(this, $"Usuario dado de alta correctamente.");
+                    LimpiarCampos();
+                }
+                catch (Exception ex)
+                {
+                    AlertHelper.MostrarModal(this, $"Error al dar de alta el Usuario: {ex.Message}.");
+                }
             }
         }
 
         private void LimpiarCampos()
         {
-            emailUsuario.Value = "";
-            passwordUsuario.Value = "";
-            razonSocialUsuario.Value = "";
-            cuitUsuario.Value = "";
+            ValidarUsuarioControl.LimpiarCampos();
         }
     }
 }
