@@ -2,48 +2,47 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="container-cargar-saldo" class="container-cargar-saldo">
-        <form class="cargar-saldo-form" method="post">
+        <!-- Desactivar autocompletar en el formulario -->
+        <form class="cargar-saldo-form" method="post" autocomplete="off">
             <h2>Cargar Saldo</h2>
 
             <div class="form-group-saldo">
                 <label for="nombreTitular">Nombre del Titular</label>
-                <input type="text" id="nombreTitular" required />
+                <input type="text" id="nombreTitular" required autocomplete="off" />
             </div>
 
             <div class="form-group-saldo">
                 <label for="dniTitular">DNI</label>
-                <input type="text" id="dniTitular" required />
+                <input type="text" id="dniTitular" maxlength="8" oninput="validarDNI()" required autocomplete="off" />
+                <span id="lblDniValido" class="dni-validacion-label"></span>
             </div>
 
             <div class="form-group-saldo">
                 <label for="numeroTarjeta">Número de Tarjeta</label>
-                
-                <!-- Contenedor para el input y el ícono de tarjeta -->
                 <div class="input-icon-container">
-                    <input type="text" id="numeroTarjeta" maxlength="16" oninput="validarNumeroTarjeta()" placeholder="#### #### #### ####" />
+                    <input type="text" id="numeroTarjeta" maxlength="16" oninput="validarNumeroTarjeta()" placeholder="#### #### #### ####" autocomplete="off" />
                     <img id="cardIcon" class="card-icon" src="" alt="Icono de tarjeta" style="display: none;" />
                 </div>
-
-                <span id="lblCardType" class="card-type-label"></span> <!-- `span` para mensaje de tipo de tarjeta -->
+                <span id="lblCardType" class="card-type-label"></span>
             </div>
 
             <div class="form-group-saldo">
                 <label for="fechaVencimiento">Fecha de Vencimiento (MM/AA)</label>
-                <input type="text" id="fechaVencimiento" placeholder="MM/AA" required />
+                <input type="text" id="fechaVencimiento" placeholder="MM/AA" maxlength="5" required oninput="formatearFechaVencimiento()" autocomplete="off" />
             </div>
 
             <div class="form-group-saldo">
                 <label for="codigoSeguridad">Código de Seguridad (CVV)</label>
-                <input type="text" id="codigoSeguridad" maxlength="4" required />
+                <input type="text" id="codigoSeguridad" maxlength="4" required autocomplete="off" />
             </div>
 
             <div class="form-group-saldo">
                 <label for="monto">Monto a Cargar</label>
-                <input type="text" id="monto" required />
+                <input type="text" id="monto" required autocomplete="off" />
             </div>
 
             <asp:Label ID="lblResultado" runat="server" Text="" CssClass="resultado-label"></asp:Label>
-            
+
             <asp:Button ID="btnCargarSaldo" runat="server" Text="Cargar Saldo" CssClass="submit-btn-saldo" OnClick="btnCargarSaldo_Click" />
             <div id="progressBar" class="progress-bar" style="display:none;">
                 <div class="progress-fill"></div>
@@ -53,6 +52,32 @@
 
     <!-- JavaScript de Validación en Tiempo Real y Selección de Icono -->
     <script type="text/javascript">
+        function formatearFechaVencimiento() {
+            var fechaInput = document.getElementById("fechaVencimiento");
+            var fecha = fechaInput.value.replace(/\D/g, ''); // Remover caracteres no numéricos
+
+            // Insertar la barra automáticamente después de dos dígitos
+            if (fecha.length >= 3) {
+                fecha = fecha.slice(0, 2) + '/' + fecha.slice(2, 4);
+            }
+
+            fechaInput.value = fecha;
+        }
+
+        function validarDNI() {
+            var dni = document.getElementById("dniTitular").value;
+            var lblDniValido = document.getElementById("lblDniValido");
+
+            // Verificar si el DNI tiene exactamente 8 dígitos numéricos
+            if (/^\d{8}$/.test(dni)) {
+                lblDniValido.innerText = "DNI válido";
+                lblDniValido.style.color = "green";
+            } else {
+                lblDniValido.innerText = "DNI inválido";
+                lblDniValido.style.color = "red";
+            }
+        }
+
         function validarNumeroTarjeta() {
             var numeroTarjeta = document.getElementById("numeroTarjeta").value;
             var lblCardType = document.getElementById("lblCardType");

@@ -343,6 +343,7 @@
     </Compile>
     <Compile Include="CargarSaldo.aspx.cs">
       <DependentUpon>CargarSaldo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CargarSaldo.aspx.designer.cs">
       <DependentUpon>CargarSaldo.aspx</DependentUpon>
