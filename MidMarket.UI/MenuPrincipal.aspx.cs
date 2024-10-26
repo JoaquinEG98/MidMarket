@@ -13,6 +13,7 @@ namespace MidMarket.UI
         public Cliente Cliente { get; set; }
         public string Familia { get; set; }
         public decimal TotalInvertido { get; set; }
+        public decimal UltimaTransaccion { get; set; }
 
 
         private readonly ISessionManager _sessionManager;
@@ -39,7 +40,8 @@ namespace MidMarket.UI
 
                     VerificarDV();
 
-                    TotalInvertido = _usuarioService.ObtenerTotalInvertido(Cliente.Id);
+                    TotalInvertido = _usuarioService.ObtenerTotalInvertido();
+                    UltimaTransaccion = _usuarioService.ObtenerUltimaTransaccion();
 
                     if (Cliente.Permisos.Count > 0)
                         Familia = Cliente.Permisos.Where(x => x.Permiso == Entities.Enums.Permiso.EsFamilia).FirstOrDefault().Nombre.ToString();

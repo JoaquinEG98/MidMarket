@@ -264,7 +264,7 @@ namespace MidMarket.Business.Services
             _sessionManager.Set("Usuario", usuarioActualizado);
         }
 
-        public decimal ObtenerTotalInvertido(decimal total)
+        public decimal ObtenerTotalInvertido()
         {
             var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
 
@@ -332,6 +332,13 @@ namespace MidMarket.Business.Services
             }
 
             return false;
+        }
+
+        public decimal ObtenerUltimaTransaccion()
+        {
+            var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+
+            return _usuarioDataAccess.ObtenerUltimaTransaccion(clienteLogueado.Id);
         }
     }
 }

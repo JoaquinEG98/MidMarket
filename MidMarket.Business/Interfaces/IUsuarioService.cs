@@ -14,7 +14,8 @@ namespace MidMarket.Business.Interfaces
         List<Cliente> GetClientesEncriptados();
         void CambiarPassword(Cliente cliente, string nuevaPassword, string confirmacionNuevaPassword);
         void ActualizarSaldo(decimal total);
-        decimal ObtenerTotalInvertido(decimal total);
+        decimal ObtenerTotalInvertido();
         void CargarSaldo(decimal saldo, string numeroTarjeta, string DNI, string fechaVencimiento);
+        decimal ObtenerUltimaTransaccion();
     }
 }

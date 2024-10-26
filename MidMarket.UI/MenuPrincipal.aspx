@@ -18,8 +18,8 @@
         </div>
 
         <div class="card">
-            <h3>Ganancias del Mes</h3>
-            <p>$0</p>
+            <h3>Última Transacción</h3>
+            <p>$<%: UltimaTransaccion.ToString("N2") %></p>
         </div>
     </div>
 

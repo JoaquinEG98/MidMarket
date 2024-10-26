@@ -238,6 +238,9 @@
   <data name="OBTENER_TOTAL_INVERTIDO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\Cuenta\OBTENER_TOTAL_INVERTIDO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="OBTENER_ULTIMA_TRANSACCION" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Scripts\Cuenta\OBTENER_ULTIMA_TRANSACCION.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="REALIZAR_BACKUP" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\BkpRestore\REALIZAR_BACKUP.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>

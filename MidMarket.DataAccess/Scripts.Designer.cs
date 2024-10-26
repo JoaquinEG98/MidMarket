@@ -552,6 +552,18 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SELECT TOP 1 Total as UltimaTransaccion
+        ///FROM TransaccionCompra
+        ///WHERE Id_Cliente = {0}
+        ///ORDER BY Fecha DESC.
+        /// </summary>
+        internal static string OBTENER_ULTIMA_TRANSACCION {
+            get {
+                return ResourceManager.GetString("OBTENER_ULTIMA_TRANSACCION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to DECLARE @rutaCompleta NVARCHAR(255) = @RutaBackupParam;
         ///DECLARE @nombreBase NVARCHAR(255) = @NombreBaseParam;
         ///
