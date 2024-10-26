@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CambiarPassword.aspx.cs" Inherits="MidMarket.UI.CambiarPassword" MasterPageFile="~/Site.Master" Title="Cambio de Password" %>
+<%@ Register Src="~/ValidarPassword.ascx" TagName="ValidarPassword" TagPrefix="uc" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="container-password">
@@ -12,7 +13,7 @@
 
             <div class="form-group-password">
                 <label for="nuevoPassword">Nueva contraseña</label>
-                <input type="password" id="nuevoPassword" name="nuevoPassword" required runat="server" />
+                <uc:ValidarPassword ID="ValidarPasswordControl" runat="server" />
             </div>
 
             <div class="form-group-password">

@@ -1,13 +1,7 @@
 ﻿using MidMarket.Business.Interfaces;
-using MidMarket.Business.Seguridad;
 using MidMarket.Entities;
 using MidMarket.UI.Helpers;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using Unity;
 
 namespace MidMarket.UI
@@ -40,8 +34,7 @@ namespace MidMarket.UI
                     Password = passwordActual.Value
                 };
 
-
-                _usuarioService.CambiarPassword(cliente, nuevoPassword.Value, confirmarPassword.Value);
+                _usuarioService.CambiarPassword(cliente, ValidarPasswordControl.PasswordValue, confirmarPassword.Value);
                 AlertHelper.MostrarModal(this, $"Contraseña cambiada con éxito");
             }
             catch (Exception ex)
