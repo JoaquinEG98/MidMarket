@@ -24,8 +24,8 @@
     </div>
 
     <div class="chart-container">
-        <h3><strong>Rendimiento de Inversiones</strong></h3>
-        <canvas id="rendimientoChart" width="400" height="150"></canvas>
+        <h3><strong>Compras de Activos</strong></h3>
+        <canvas id="comprasChart" width="400" height="150"></canvas>
     </div>
 
     <div>
@@ -43,27 +43,51 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            var ctx = document.getElementById('rendimientoChart').getContext('2d');
+            var ctx = document.getElementById('comprasChart').getContext('2d');
+
+            // Datos provenientes del backend
+            var labels = <%= LabelsJson %>;
+            var accionesData = <%= AccionesDataJson %>;
+            var bonosData = <%= BonosDataJson %>;
+
             var chart = new Chart(ctx, {
-                type: 'line',
+                type: 'bar',
                 data: {
-                    labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul'],
-                    datasets: [{
-                        label: 'Rendimiento de Inversiones',
-                        backgroundColor: 'rgba(94, 45, 180, 0.2)',
-                        borderColor: '#5e2db4',
-                        data: [1200, 1400, 1300, 1500, 1700, 1600, 1800]
-                    }]
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Acciones',
+                            backgroundColor: '#FFCCB3', // Naranja suave sólido
+                            borderColor: '#FFCCB3',
+                            borderWidth: 1,
+                            data: accionesData
+                        },
+                        {
+                            label: 'Bonos',
+                            backgroundColor: '#D4E6A5', // Verde menta suave sólido
+                            borderColor: '#D4E6A5',
+                            borderWidth: 1,
+                            data: bonosData
+                        }
+                    ]
                 },
                 options: {
                     responsive: true,
+                    scales: {
+                        x: {
+                            stacked: true
+                        },
+                        y: {
+                            stacked: true,
+                            beginAtZero: true
+                        }
+                    },
                     title: {
                         display: true,
-                        text: 'Rendimiento en los últimos meses'
+                        text: 'Compras de Activos por Fecha'
                     }
                 }
             });
         });
     </script>
-
 </asp:Content>

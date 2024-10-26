@@ -1,7 +1,9 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
 using MidMarket.UI.Helpers;
+using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.UI;
 using Unity;
@@ -14,16 +16,20 @@ namespace MidMarket.UI
         public string Familia { get; set; }
         public decimal TotalInvertido { get; set; }
         public decimal UltimaTransaccion { get; set; }
-
+        public string LabelsJson { get; set; }
+        public string AccionesDataJson { get; set; }
+        public string BonosDataJson { get; set; }
 
         private readonly ISessionManager _sessionManager;
         private readonly IUsuarioService _usuarioService;
+        private readonly ICompraService _compraService;
         private readonly IDigitoVerificadorService _digitoVerificadorService;
 
         public _Default()
         {
             _sessionManager = Global.Container.Resolve<ISessionManager>();
             _usuarioService = Global.Container.Resolve<IUsuarioService>();
+            _compraService = Global.Container.Resolve<ICompraService>();
             _digitoVerificadorService = Global.Container.Resolve<IDigitoVerificadorService>();
         }
 
@@ -42,6 +48,8 @@ namespace MidMarket.UI
 
                     TotalInvertido = _usuarioService.ObtenerTotalInvertido();
                     UltimaTransaccion = _usuarioService.ObtenerUltimaTransaccion();
+
+                    LlenarInformacionGrafico();
 
                     if (Cliente.Permisos.Count > 0)
                         Familia = Cliente.Permisos.Where(x => x.Permiso == Entities.Enums.Permiso.EsFamilia).FirstOrDefault().Nombre.ToString();
@@ -83,6 +91,42 @@ namespace MidMarket.UI
             {
                 AlertHelper.MostrarModal(this, $"Inconsistencia en los digitos verificadores, por favor revise en la sección de Administración de Base de Datos.");
             }
+        }
+
+        private void LlenarInformacionGrafico()
+        {
+            var compras = _compraService.GetCompras();
+
+            var labels = new List<string>();
+            var accionesData = new List<decimal>();
+            var bonosData = new List<decimal>();
+
+            foreach (var compra in compras)
+            {
+                labels.Add(compra.Fecha.ToString("yyyy-MM-dd"));
+
+                decimal accionesTotal = 0;
+                decimal bonosTotal = 0;
+
+                foreach (var detalle in compra.Detalle)
+                {
+                    if (detalle.Activo is Accion)
+                    {
+                        accionesTotal += detalle.Precio * detalle.Cantidad;
+                    }
+                    else if (detalle.Activo is Bono)
+                    {
+                        bonosTotal += detalle.Precio * detalle.Cantidad;
+                    }
+                }
+
+                accionesData.Add(accionesTotal);
+                bonosData.Add(bonosTotal);
+            }
+
+            LabelsJson = JsonConvert.SerializeObject(labels);
+            AccionesDataJson = JsonConvert.SerializeObject(accionesData);
+            BonosDataJson = JsonConvert.SerializeObject(bonosData);
         }
     }
 }
