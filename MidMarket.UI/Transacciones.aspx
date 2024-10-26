@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container-transacciones">
-        <h2>Administración de Transacciones</h2>
+        <h2>Mis Transacciones</h2>
 
         <table id="tablaCompras">
             <thead>
@@ -14,14 +14,15 @@
                 </tr>
             </thead>
             <tbody>
-                <% foreach (var compra in Compras) { %>
+                <% foreach (var compra in Compras)
+                    { %>
                 <tr>
                     <td><%= compra.Id %></td>
-                    <td><%= compra.Fecha.ToString("dd/MM/yyyy HH:mm:ss") %></td> <!-- Fecha con hora, minutos y segundos -->
+                    <td><%= compra.Fecha.ToString("dd/MM/yyyy HH:mm:ss") %></td>
                     <td>$<%= compra.Total.ToString("N2") %></td>
                     <td>
                         <button type="button" class="submit-btn-transacciones ver-detalle-btn" onclick="abrirModalDetalle('<%= compra.Id %>', '<%= compra.Fecha.ToString("dd/MM/yyyy HH:mm:ss") %>')">Ver Factura</button>
-                        <button type="button" class="submit-btn-transacciones descargar-btn">Descargar</button>
+                        <button type="button" class="submit-btn-transacciones descargar-btn" onclick="window.location.href='<%= ResolveUrl("~/Transacciones.aspx?descargarfactura=" + compra.Id) %>'">Descargar</button>
                     </td>
                 </tr>
                 <% } %>
@@ -41,7 +42,6 @@
                     <p><strong>Factura N°:</strong> <span id="facturaNumero"></span></p>
                 </div>
 
-                <!-- Tabla de Acciones -->
                 <div id="accionesSection" style="display: none;">
                     <h3 class="section-title">Acciones</h3>
                     <table id="tablaAcciones">
@@ -55,15 +55,12 @@
                             </tr>
                         </thead>
                         <tbody id="detalleAccionesContainer">
-                            <!-- Detalles de acciones aquí -->
                         </tbody>
                     </table>
                 </div>
 
-                <!-- Separador entre Acciones y Bonos -->
                 <div id="separator" style="display: none;" class="separator"></div>
 
-                <!-- Tabla de Bonos -->
                 <div id="bonosSection" style="display: none;">
                     <h3 class="section-title">Bonos</h3>
                     <table id="tablaBonos">
@@ -78,7 +75,6 @@
                             </tr>
                         </thead>
                         <tbody id="detalleBonosContainer">
-                            <!-- Detalles de bonos aquí -->
                         </tbody>
                     </table>
                 </div>
@@ -105,7 +101,6 @@
             var bonosSection = document.getElementById('bonosSection');
             var separator = document.getElementById('separator');
 
-            // Limpiar contenido previo
             detalleAccionesContainer.innerHTML = '';
             detalleBonosContainer.innerHTML = '';
             accionesSection.style.display = 'none';
@@ -147,7 +142,6 @@
                 }
             });
 
-            // Mostrar secciones solo si tienen datos
             if (tieneAcciones) {
                 accionesSection.style.display = 'block';
             }
@@ -155,7 +149,7 @@
                 bonosSection.style.display = 'block';
             }
             if (tieneAcciones && tieneBonos) {
-                separator.style.display = 'block'; // Mostrar separador solo si ambas tablas están presentes
+                separator.style.display = 'block';
             }
 
             document.getElementById('transaccionesModal').style.display = 'block';

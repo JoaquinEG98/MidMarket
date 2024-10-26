@@ -4,6 +4,7 @@ using MidMarket.UI.Helpers;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Unity;
 
 namespace MidMarket.UI
@@ -32,7 +33,11 @@ namespace MidMarket.UI
         {
             try
             {
-                CargarCompras();
+                if (!IsPostBack)
+                {
+                    CargarCompras();
+                    DescargarFactura();
+                }
             }
             catch (Exception ex)
             {
@@ -43,13 +48,22 @@ namespace MidMarket.UI
         private void CargarCompras()
         {
             Compras = _compraService.GetCompras();
-
-            var test = JsonConvert.SerializeObject(Compras);
-
             ViewState["ComprasJson"] = JsonConvert.SerializeObject(Compras, new JsonSerializerSettings
             {
                 ReferenceLoopHandling = ReferenceLoopHandling.Ignore
             });
+        }
+
+        private void DescargarFactura()
+        {
+            if (Request.QueryString["descargarfactura"] != null && int.TryParse(Request.QueryString["descargarfactura"], out int compraId))
+            {
+                var compra = Compras.Where(x => x.Id == compraId).FirstOrDefault();
+                if (compra != null)
+                {
+                    _compraService.DescargarFacturaPdf(compra, Response);
+                }
+            }
         }
     }
 }
