@@ -61,6 +61,56 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SELECT TOP 5 
+        ///	a.Id_Activo,
+        ///    a.Nombre AS Activo,
+        ///    SUM(dc.Cantidad) AS Total_Cantidad,
+        ///    SUM(dc.Cantidad * dc.Precio) AS Monto_Total
+        ///FROM 
+        ///    TransaccionCompra tc
+        ///JOIN 
+        ///    DetalleCompra dc ON tc.Id_Compra = dc.Id_Compra
+        ///JOIN 
+        ///    Activo a ON dc.Id_Activo = a.Id_Activo
+        ///WHERE 
+        ///    tc.Fecha &gt;= DATEADD(DAY, -30, GETDATE())
+        ///GROUP BY 
+        ///    a.Id_Activo, a.Nombre
+        ///ORDER BY 
+        ///    Total_Cantidad DESC;.
+        /// </summary>
+        internal static string ACTIVOS_MAS_COMPRADOS_CANTIDAD {
+            get {
+                return ResourceManager.GetString("ACTIVOS_MAS_COMPRADOS_CANTIDAD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 	SELECT TOP 5
+        ///	a.Id_Activo,
+        ///    a.Nombre AS Activo,
+        ///    SUM(dc.Cantidad) AS Total_Cantidad,
+        ///    SUM(dc.Cantidad * dc.Precio) AS Monto_Total
+        ///FROM 
+        ///    TransaccionCompra tc
+        ///JOIN 
+        ///    DetalleCompra dc ON tc.Id_Compra = dc.Id_Compra
+        ///JOIN 
+        ///    Activo a ON dc.Id_Activo = a.Id_Activo
+        ///WHERE 
+        ///    tc.Fecha &gt;= DATEADD(DAY, -30, GETDATE())
+        ///GROUP BY 
+        ///    a.Id_Activo, a.Nombre
+        ///ORDER BY 
+        ///    Monto_Total DESC;.
+        /// </summary>
+        internal static string ACTIVOS_MAS_COMPRADOS_TOTAL {
+            get {
+                return ResourceManager.GetString("ACTIVOS_MAS_COMPRADOS_TOTAL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to UPDATE Cuenta
         ///SET Saldo = @Saldo
         ///WHERE Id_Cuenta = @Id_Cuenta.

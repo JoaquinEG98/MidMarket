@@ -1,7 +1,8 @@
 ﻿using MidMarket.Entities;
-using System.Data;
+using MidMarket.Entities.DTOs;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 
 namespace MidMarket.DataAccess.Helpers
@@ -26,7 +27,7 @@ namespace MidMarket.DataAccess.Helpers
 
             if (dr.Table.Columns.Contains("Precio") && !Convert.IsDBNull(dr["Precio"]))
                 accion.Precio = Convert.ToDecimal(dr["Precio"]);
-            
+
             return accion;
         }
 
@@ -60,6 +61,30 @@ namespace MidMarket.DataAccess.Helpers
         public static List<Bono> FillListBono(DataSet ds)
         {
             return ds.Tables[0].AsEnumerable().Select(dr => FillObjectBono(dr)).ToList();
+        }
+
+        public static ActivosCompradosDTO FillObjectActivosComprados(DataRow dr)
+        {
+            ActivosCompradosDTO activo = new ActivosCompradosDTO();
+
+            if (dr.Table.Columns.Contains("Id_Activo") && !Convert.IsDBNull(dr["Id_Activo"]))
+                activo.Id = Convert.ToInt32(dr["Id_Activo"]);
+
+            if (dr.Table.Columns.Contains("Activo") && !Convert.IsDBNull(dr["Activo"]))
+                activo.Nombre = Convert.ToString(dr["Activo"]);
+
+            if (dr.Table.Columns.Contains("Total_Cantidad") && !Convert.IsDBNull(dr["Total_Cantidad"]))
+                activo.Cantidad = Convert.ToInt32(dr["Total_Cantidad"]);
+
+            if (dr.Table.Columns.Contains("Monto_Total") && !Convert.IsDBNull(dr["Monto_Total"]))
+                activo.Total = Convert.ToDecimal(dr["Monto_Total"]);
+
+            return activo;
+        }
+
+        public static List<ActivosCompradosDTO> FillListActivosComprados(DataSet ds)
+        {
+            return ds.Tables[0].AsEnumerable().Select(dr => FillObjectActivosComprados(dr)).ToList();
         }
     }
 }

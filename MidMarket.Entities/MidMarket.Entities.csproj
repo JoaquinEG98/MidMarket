@@ -56,6 +56,7 @@
     <Compile Include="Cuenta.cs" />
     <Compile Include="DetalleCompra.cs" />
     <Compile Include="DigitoVerificadorHorizontal.cs" />
+    <Compile Include="DTOs\ActivosCompradosDTO.cs" />
     <Compile Include="DTOs\BackupDTO.cs" />
     <Compile Include="DTOs\UsuarioPermisoDTO.cs" />
     <Compile Include="Enums\Criticidad.cs" />

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ArrayOfActivosCompradosDTO xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ActivosCompradosDTO>
+    <Id>8</Id>
+    <Nombre>BONCER 2024</Nombre>
+    <Cantidad>45</Cantidad>
+    <Total>45.0000</Total>
+  </ActivosCompradosDTO>
+  <ActivosCompradosDTO>
+    <Id>9</Id>
+    <Nombre>BONAR 2024 (AY24)</Nombre>
+    <Cantidad>33</Cantidad>
+    <Total>33000.0000</Total>
+  </ActivosCompradosDTO>
+  <ActivosCompradosDTO>
+    <Id>12</Id>
+    <Nombre>BPA7D</Nombre>
+    <Cantidad>25</Cantidad>
+    <Total>2500.0000</Total>
+  </ActivosCompradosDTO>
+  <ActivosCompradosDTO>
+    <Id>13</Id>
+    <Nombre>BPJ5D</Nombre>
+    <Cantidad>13</Cantidad>
+    <Total>1300.0000</Total>
+  </ActivosCompradosDTO>
+  <ActivosCompradosDTO>
+    <Id>6</Id>
+    <Nombre>Cresud</Nombre>
+    <Cantidad>8</Cantidad>
+    <Total>31600.0000</Total>
+  </ActivosCompradosDTO>
+</ArrayOfActivosCompradosDTO>

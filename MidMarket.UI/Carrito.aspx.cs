@@ -1,6 +1,7 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
 using MidMarket.UI.Helpers;
+using MidMarket.UI.WebServices;
 using System;
 using System.Collections.Generic;
 using System.Web.UI.WebControls;
@@ -175,11 +176,21 @@ namespace MidMarket.UI
                 ltlCarritoVacio.Visible = true;
 
                 AlertHelper.MostrarModal(this, "La compra se realizó con éxito.");
+
+                CalcularComprasWebService();
             }
             catch (Exception ex)
             {
                 AlertHelper.MostrarModal(this, $"Error al confirmar la compra: {ex.Message}.");
             }
+        }
+
+        private void CalcularComprasWebService()
+        {
+            var webService = new EstadisticaActivos();
+
+            webService.CalcularActivosMasCompradosCantidad();
+            webService.CalcularActivosMasCompradosTotal();
         }
     }
 }

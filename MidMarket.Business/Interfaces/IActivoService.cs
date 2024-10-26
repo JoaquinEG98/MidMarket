@@ -1,4 +1,5 @@
 ﻿using MidMarket.Entities;
+using MidMarket.Entities.DTOs;
 using System.Collections.Generic;
 
 namespace MidMarket.Business.Interfaces
@@ -11,5 +12,7 @@ namespace MidMarket.Business.Interfaces
         List<Bono> GetBonos();
         void ModificarAccion(Accion accion);
         void ModificarBono(Bono bono);
+        List<ActivosCompradosDTO> GetActivosCompradosCantidad();
+        List<ActivosCompradosDTO> GetActivosCompradosTotal();
     }
 }

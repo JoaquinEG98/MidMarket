@@ -2,9 +2,10 @@
 using MidMarket.DataAccess.Helpers;
 using MidMarket.DataAccess.Interfaces;
 using MidMarket.Entities;
+using MidMarket.Entities.DTOs;
+using System;
 using System.Collections.Generic;
 using System.Data;
-using System;
 
 namespace MidMarket.DataAccess.DAOs
 {
@@ -111,6 +112,32 @@ namespace MidMarket.DataAccess.DAOs
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Bono", bono.Id_Bono);
 
             _dataAccess.ExecuteNonQuery();
+        }
+
+        public List<ActivosCompradosDTO> GetActivosCompradosCantidad()
+        {
+            _dataAccess.SelectCommandText = String.Format(Scripts.ACTIVOS_MAS_COMPRADOS_CANTIDAD);
+            DataSet ds = _dataAccess.ExecuteNonReader();
+
+            List<ActivosCompradosDTO> activos = new List<ActivosCompradosDTO>();
+
+            if (ds.Tables[0].Rows.Count > 0)
+                activos = ActivoFill.FillListActivosComprados(ds);
+
+            return activos;
+        }
+
+        public List<ActivosCompradosDTO> GetActivosCompradosTotal()
+        {
+            _dataAccess.SelectCommandText = String.Format(Scripts.ACTIVOS_MAS_COMPRADOS_TOTAL);
+            DataSet ds = _dataAccess.ExecuteNonReader();
+
+            List<ActivosCompradosDTO> activos = new List<ActivosCompradosDTO>();
+
+            if (ds.Tables[0].Rows.Count > 0)
+                activos = ActivoFill.FillListActivosComprados(ds);
+
+            return activos;
         }
     }
 }

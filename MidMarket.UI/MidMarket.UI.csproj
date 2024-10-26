@@ -203,6 +203,7 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="WebServices\CalcularCarrito.asmx" />
+    <Content Include="WebServices\EstadisticaActivos.asmx" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -504,6 +505,10 @@
     </Compile>
     <Compile Include="WebServices\CalcularCarrito.asmx.cs">
       <DependentUpon>CalcularCarrito.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebServices\EstadisticaActivos.asmx.cs">
+      <DependentUpon>EstadisticaActivos.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
   </ItemGroup>

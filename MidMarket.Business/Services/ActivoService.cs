@@ -1,6 +1,7 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.DataAccess.Interfaces;
 using MidMarket.Entities;
+using MidMarket.Entities.DTOs;
 using MidMarket.Entities.Enums;
 using System.Collections.Generic;
 using System.Transactions;
@@ -114,6 +115,20 @@ namespace MidMarket.Business.Services
         {
             if (string.IsNullOrWhiteSpace(bono.Nombre) || bono.ValorNominal <= 0 || bono.TasaInteres <= 0)
                 throw new System.Exception("ERR-002 campos obligatorios incompletos");
+        }
+
+        public List<ActivosCompradosDTO> GetActivosCompradosCantidad()
+        {
+            List<ActivosCompradosDTO> activos = _activoDataAccess.GetActivosCompradosCantidad();
+
+            return activos;
+        }
+
+        public List<ActivosCompradosDTO> GetActivosCompradosTotal()
+        {
+            List<ActivosCompradosDTO> activos = _activoDataAccess.GetActivosCompradosTotal();
+
+            return activos;
         }
     }
 }
