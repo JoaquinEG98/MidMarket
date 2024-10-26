@@ -2,7 +2,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="container-cargar-saldo" class="container-cargar-saldo">
-        <!-- Desactivar autocompletar en el formulario -->
         <form class="cargar-saldo-form" method="post" autocomplete="off">
             <h2>Cargar Saldo</h2>
 
@@ -43,15 +42,55 @@
 
             <asp:Label ID="lblResultado" runat="server" Text="" CssClass="resultado-label"></asp:Label>
 
-            <asp:Button ID="btnCargarSaldo" runat="server" Text="Cargar Saldo" CssClass="submit-btn-saldo" OnClick="btnCargarSaldo_Click" />
-            <div id="progressBar" class="progress-bar" style="display:none;">
+            <!-- Botón que inicia la animación de carga en lugar de hacer un postback directo -->
+            <asp:Button ID="btnCargarSaldo" runat="server" Text="Cargar Saldo" CssClass="submit-btn-saldo" OnClick="btnCargarSaldo_Click" OnClientClick="iniciarCarga(); return false;" />
+
+            <div id="progressBar" class="progress-bar" style="display: none;">
                 <div class="progress-fill"></div>
             </div>
         </form>
     </div>
 
+    <!-- Estilos CSS para la barra de carga -->
+    <style>
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background-color: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: #7e57c2;
+            width: 0;
+            transition: width 2s ease; /* Duración y suavidad de la animación */
+        }
+    </style>
+
     <!-- JavaScript de Validación en Tiempo Real y Selección de Icono -->
     <script type="text/javascript">
+        function iniciarCarga() {
+            var progressBar = document.getElementById("progressBar");
+            var progressFill = document.querySelector(".progress-fill");
+
+            progressBar.style.display = "block";
+            progressFill.style.width = "0";
+
+            // Iniciar animación
+            setTimeout(function () {
+                progressFill.style.width = "100%";
+            }, 100);
+
+            // Llamar al evento del servidor después de la animación
+            setTimeout(function () {
+                // Enviar formulario manualmente usando el UniqueID generado
+                __doPostBack('<%= btnCargarSaldo.UniqueID %>', '');
+        }, 2100); // 2 segundos de animación + 100 ms de inicio
+    }
+
         function formatearFechaVencimiento() {
             var fechaInput = document.getElementById("fechaVencimiento");
             var fecha = fechaInput.value.replace(/\D/g, ''); // Remover caracteres no numéricos
@@ -117,22 +156,5 @@
                 cardIcon.style.display = "none";
             }
         }
-
-        document.getElementById("<%= btnCargarSaldo.ClientID %>").onclick = function() {
-            var progressBar = document.getElementById("progressBar");
-            var progressFill = document.querySelector(".progress-fill");
-            
-            progressBar.style.display = "block";
-            progressFill.style.width = "0";
-            
-            setTimeout(function() {
-                progressFill.style.width = "100%";
-            }, 100);
-
-            setTimeout(function() {
-                progressBar.style.display = "none";
-                document.getElementById("<%= lblResultado.ClientID %>").innerText = "Saldo cargado correctamente.";
-            }, 2000);
-        };
     </script>
 </asp:Content>
