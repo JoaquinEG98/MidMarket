@@ -32,13 +32,13 @@
                                 <td><%# Eval("Activo.Nombre") %></td>
                                 <td id="tdDetalle" runat="server"></td>
                                 <td>
-                                    <asp:Button ID="btnDecrease" runat="server" CommandName="ChangeQuantity" CommandArgument='<%# Eval("Id") + ",-1" %>' Text="-" CssClass="carrito-button-confirm" />
+                                    <asp:Button ID="btnDecrease" runat="server" CommandName="CambiarCantidad" CommandArgument='<%# Eval("Id") + ",-1" %>' Text="-" CssClass="carrito-button-confirm" />
                                     <asp:TextBox ID="cantidadInput" runat="server" Text='<%# Eval("Cantidad") %>' CssClass="cantidad-input" ReadOnly="true" />
-                                    <asp:Button ID="btnIncrease" runat="server" CommandName="ChangeQuantity" CommandArgument='<%# Eval("Id") + ",1" %>' Text="+" CssClass="carrito-button-confirm" />
+                                    <asp:Button ID="btnIncrease" runat="server" CommandName="CambiarCantidad" CommandArgument='<%# Eval("Id") + ",1" %>' Text="+" CssClass="carrito-button-confirm" />
                                 </td>
                                 <td id="tdPrecioTasa" runat="server"></td>
                                 <td>
-                                    <asp:LinkButton ID="btnEliminar" runat="server" CommandName="DeleteItem" CommandArgument='<%# Eval("Id") %>' CssClass="carrito-icon-remove" ToolTip="Eliminar del carrito">
+                                    <asp:LinkButton ID="btnEliminar" runat="server" CommandName="EliminarItem" CommandArgument='<%# Eval("Id") %>' CssClass="carrito-icon-remove" ToolTip="Eliminar del carrito">
                                         <i class="fas fa-trash"></i>
                                     </asp:LinkButton>
                                 </td>

@@ -115,58 +115,36 @@ namespace MidMarket.UI
         {
             try
             {
-                if (e.CommandName == "ChangeQuantity")
+                var service = new WebServices.CalcularCarrito();
+
+                decimal total = 0;
+
+                if (e.CommandName == "CambiarCantidad")
                 {
                     var argumentos = e.CommandArgument.ToString().Split(',');
                     int carritoId = int.Parse(argumentos[0]);
                     int cambioCantidad = int.Parse(argumentos[1]);
 
-                    var carritoItem = MiCarrito.Find(c => c.Id == carritoId);
-                    if (carritoItem != null)
-                    {
-                        carritoItem.Cantidad += cambioCantidad;
-
-                        if (carritoItem.Cantidad < 1)
-                        {
-                            carritoItem.Cantidad = 1;
-                        }
-
-                        if (carritoItem.Activo is Accion accion)
-                        {
-                            carritoItem.Total = accion.Precio * carritoItem.Cantidad;
-                        }
-                        else if (carritoItem.Activo is Bono bono)
-                        {
-                            carritoItem.Total = bono.ValorNominal * carritoItem.Cantidad;
-                        }
-
-                        _carritoService.ActualizarCarrito(carritoItem);
-
-                        CalcularTotalCarrito();
-
-                        rptCarrito.DataSource = MiCarrito;
-                        rptCarrito.DataBind();
-                    }
+                    total = service.CalcularTotalCarrito(MiCarrito, "CambiarCantidad", carritoId, cambioCantidad);
                 }
-                else if (e.CommandName == "DeleteItem")
+                else if (e.CommandName == "EliminarItem")
                 {
                     int carritoId = int.Parse(e.CommandArgument.ToString());
 
-                    MiCarrito.RemoveAll(c => c.Id == carritoId);
+                    total = service.CalcularTotalCarrito(MiCarrito, "EliminarItem", carritoId);
+                }
 
-                    _carritoService.EliminarCarrito(carritoId);
+                ViewState["TotalCarrito"] = total;
 
-                    if (MiCarrito.Count == 0)
-                    {
-                        divCarrito.Visible = false;
-                        ltlCarritoVacio.Visible = true;
-                    }
-                    else
-                    {
-                        CalcularTotalCarrito();
-                        rptCarrito.DataSource = MiCarrito;
-                        rptCarrito.DataBind();
-                    }
+                if (MiCarrito.Count == 0)
+                {
+                    divCarrito.Visible = false;
+                    ltlCarritoVacio.Visible = true;
+                }
+                else
+                {
+                    rptCarrito.DataSource = MiCarrito;
+                    rptCarrito.DataBind();
                 }
             }
             catch (Exception ex)
@@ -201,22 +179,6 @@ namespace MidMarket.UI
             catch (Exception ex)
             {
                 AlertHelper.MostrarModal(this, $"Error al confirmar la compra: {ex.Message}.");
-            }
-        }
-
-        protected void CalcularTotalCarrito()
-        {
-            try
-            {
-                var webService = new WebServices.CalcularCarrito();
-
-                decimal total = webService.CalcularTotalCarrito(MiCarrito);
-
-                ViewState["TotalCarrito"] = total;
-            }
-            catch (Exception ex)
-            {
-                AlertHelper.MostrarModal(this, $"Error al calcular el total del carrito (WebService): {ex.Message}.");
             }
         }
     }
