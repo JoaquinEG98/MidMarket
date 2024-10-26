@@ -176,17 +176,6 @@ namespace MidMarket.UI
         }
 
 
-        private void CalcularTotalCarrito()
-        {
-            decimal total = 0;
-            foreach (var item in MiCarrito)
-            {
-                total += item.Total;
-            }
-
-            ViewState["TotalCarrito"] = total;
-        }
-
         protected void btnConfirmarCompra_Click(object sender, EventArgs e)
         {
             try
@@ -212,6 +201,22 @@ namespace MidMarket.UI
             catch (Exception ex)
             {
                 AlertHelper.MostrarModal(this, $"Error al confirmar la compra: {ex.Message}.");
+            }
+        }
+
+        protected void CalcularTotalCarrito()
+        {
+            try
+            {
+                var webService = new WebServices.CalcularCarrito();
+
+                decimal total = webService.CalcularTotalCarrito(MiCarrito);
+
+                ViewState["TotalCarrito"] = total;
+            }
+            catch (Exception ex)
+            {
+                AlertHelper.MostrarModal(this, $"Error al calcular el total del carrito (WebService): {ex.Message}.");
             }
         }
     }
