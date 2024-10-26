@@ -145,6 +145,9 @@
   <data name="CAMBIAR_PASSWORD" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\Usuario\CAMBIAR_PASSWORD.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="CARGAR_SALDO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Scripts\Cuenta\CARGAR_SALDO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="ELIMINAR_CARRITO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\Carrito\ELIMINAR_CARRITO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>

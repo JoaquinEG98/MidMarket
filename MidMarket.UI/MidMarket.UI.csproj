@@ -250,6 +250,7 @@
     <Content Include="Toast.ascx" />
     <Content Include="Transacciones.aspx" />
     <Content Include="Usuarios.aspx" />
+    <Content Include="Utilidades\TarjetasDePrueba.txt" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />

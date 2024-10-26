@@ -6,6 +6,7 @@ using MidMarket.Entities.Enums;
 using MidMarket.Seguridad;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text.RegularExpressions;
 using System.Transactions;
 
@@ -268,6 +269,69 @@ namespace MidMarket.Business.Services
             var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
 
             return _usuarioDataAccess.ObtenerTotalInvertido(clienteLogueado.Id);
+        }
+
+        public void CargarSaldo(decimal saldo, string numeroTarjeta, string DNI, string fechaVencimiento)
+        {
+            ValidarCargaSaldo(numeroTarjeta, DNI, fechaVencimiento);
+
+            using (TransactionScope scope = new TransactionScope())
+            {
+                var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+
+                _usuarioDataAccess.CargarSaldo(clienteLogueado, saldo);
+
+                var usuarioActualizado = GetCliente(clienteLogueado.Id);
+                _sessionManager.Set("Usuario", usuarioActualizado);
+
+                _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) cargó (${saldo}) de saldo en su cuenta comitente: ({clienteLogueado.Cuenta.NumeroCuenta})", Criticidad.Media, clienteLogueado);
+
+                scope.Complete();
+            }
+        }
+
+        private void ValidarCargaSaldo(string numeroTarjeta, string DNI, string fechaVencimiento)
+        {
+            if (!EsTarjetaValida(numeroTarjeta))
+            {
+                throw new Exception(Errores.ObtenerError(21));
+            }
+
+            if (!EsDniValido(DNI))
+            {
+                throw new Exception(Errores.ObtenerError(22));
+            }
+
+            if (!EsFechaVencimientoValida(fechaVencimiento))
+            {
+                throw new Exception(Errores.ObtenerError(23));
+            }
+        }
+
+        private bool EsTarjetaValida(string numeroTarjeta)
+        {
+            bool esVisa = Regex.IsMatch(numeroTarjeta, @"^4[0-9]{12}(?:[0-9]{3})?$");
+            bool esMasterCard = Regex.IsMatch(numeroTarjeta, @"^5[1-5][0-9]{14}$");
+            bool esAmex = Regex.IsMatch(numeroTarjeta, @"^3[47][0-9]{13}$");
+
+            return esVisa || esMasterCard || esAmex;
+        }
+
+        private bool EsDniValido(string dni)
+        {
+            return Regex.IsMatch(dni, @"^\d{8}$");
+        }
+
+        private bool EsFechaVencimientoValida(string fechaVencimiento)
+        {
+            if (DateTime.TryParseExact(fechaVencimiento, "MM/yy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime fechaParsed))
+            {
+                DateTime ultimoDiaDelMes = new DateTime(fechaParsed.Year, fechaParsed.Month, DateTime.DaysInMonth(fechaParsed.Year, fechaParsed.Month));
+
+                return ultimoDiaDelMes >= DateTime.Now;
+            }
+
+            return false;
         }
     }
 }

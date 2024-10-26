@@ -11,6 +11,7 @@
                 <li class="nav-item dropdown" runat="server" id="menuPrincipalDropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Mi Cuenta</a>
                     <ul class="dropdown-menu animate__animated animate__fadeInDown animate__faster" aria-labelledby="menuPrincipalDropdown">
+                        <li><a class="dropdown-item" href="/CargarSaldo.aspx">Cargar Saldo</a></li>
                         <li><a class="dropdown-item" href="/CambiarPassword.aspx">Cambiar Password</a></li>
                     </ul>
                 </li>

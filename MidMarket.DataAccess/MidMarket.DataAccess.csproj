@@ -93,6 +93,7 @@
     <Content Include="Scripts\Compra\INSERTAR_TRANSACCION_COMPRA.sql" />
     <Content Include="Scripts\Compra\INSERTAR_DETALLE_COMPRA.sql" />
     <Content Include="Scripts\Compra\INSERTAR_ACTIVO_CLIENTE.sql" />
+    <Content Include="Scripts\Cuenta\CARGAR_SALDO.sql" />
     <Content Include="Scripts\Cuenta\OBTENER_TOTAL_INVERTIDO.sql" />
     <Content Include="Scripts\DigitoVerificador\GET_DIGITO_VERTICAL.sql" />
     <Content Include="Scripts\Permiso\GET_USUARIOS_PERMISOS.sql" />

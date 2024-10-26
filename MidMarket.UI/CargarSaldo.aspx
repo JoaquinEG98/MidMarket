@@ -7,42 +7,41 @@
 
             <div class="form-group-saldo">
                 <label for="nombreTitular">Nombre del Titular</label>
-                <input type="text" id="nombreTitular" required autocomplete="off" />
+                <asp:TextBox ID="nombreTitular" runat="server" ClientIDMode="Static" CssClass="form-control" autocomplete="off" />
             </div>
 
             <div class="form-group-saldo">
                 <label for="dniTitular">DNI</label>
-                <input type="text" id="dniTitular" maxlength="8" oninput="validarDNI()" required autocomplete="off" />
-                <span id="lblDniValido" class="dni-validacion-label"></span>
+                <asp:TextBox ID="dniTitular" runat="server" ClientIDMode="Static" CssClass="form-control" MaxLength="8" oninput="validarDNI()" autocomplete="off" />
+                <asp:Label ID="lblDniValido" runat="server" CssClass="dni-validacion-label"></asp:Label>
             </div>
 
             <div class="form-group-saldo">
                 <label for="numeroTarjeta">Número de Tarjeta</label>
                 <div class="input-icon-container">
-                    <input type="text" id="numeroTarjeta" maxlength="16" oninput="validarNumeroTarjeta()" placeholder="#### #### #### ####" autocomplete="off" />
-                    <img id="cardIcon" class="card-icon" src="" alt="Icono de tarjeta" style="display: none;" />
+                    <asp:TextBox ID="numeroTarjeta" runat="server" ClientIDMode="Static" CssClass="form-control" MaxLength="16" oninput="validarNumeroTarjeta()" placeholder="#### #### #### ####" autocomplete="off" />
+                    <asp:Image ID="cardIcon" runat="server" CssClass="card-icon" ImageUrl="" AlternateText="Icono de tarjeta" Style="display: none;" />
                 </div>
-                <span id="lblCardType" class="card-type-label"></span>
+                <asp:Label ID="lblCardType" runat="server" CssClass="card-type-label"></asp:Label>
             </div>
 
             <div class="form-group-saldo">
                 <label for="fechaVencimiento">Fecha de Vencimiento (MM/AA)</label>
-                <input type="text" id="fechaVencimiento" placeholder="MM/AA" maxlength="5" required oninput="formatearFechaVencimiento()" autocomplete="off" />
+                <asp:TextBox ID="fechaVencimiento" runat="server" ClientIDMode="Static" CssClass="form-control" MaxLength="5" oninput="formatearFechaVencimiento()" placeholder="MM/AA" autocomplete="off" />
             </div>
 
             <div class="form-group-saldo">
                 <label for="codigoSeguridad">Código de Seguridad (CVV)</label>
-                <input type="text" id="codigoSeguridad" maxlength="4" required autocomplete="off" />
+                <asp:TextBox ID="codigoSeguridad" runat="server" ClientIDMode="Static" CssClass="form-control" MaxLength="4" autocomplete="off" />
             </div>
 
             <div class="form-group-saldo">
                 <label for="monto">Monto a Cargar</label>
-                <input type="text" id="monto" required autocomplete="off" />
+                <asp:TextBox ID="monto" runat="server" ClientIDMode="Static" CssClass="form-control" autocomplete="off" />
             </div>
 
             <asp:Label ID="lblResultado" runat="server" Text="" CssClass="resultado-label"></asp:Label>
 
-            <!-- Botón que inicia la animación de carga en lugar de hacer un postback directo -->
             <asp:Button ID="btnCargarSaldo" runat="server" Text="Cargar Saldo" CssClass="submit-btn-saldo" OnClick="btnCargarSaldo_Click" OnClientClick="iniciarCarga(); return false;" />
 
             <div id="progressBar" class="progress-bar" style="display: none;">
@@ -51,7 +50,6 @@
         </form>
     </div>
 
-    <!-- Estilos CSS para la barra de carga -->
     <style>
         .progress-bar {
             width: 100%;
@@ -66,11 +64,10 @@
             height: 100%;
             background-color: #7e57c2;
             width: 0;
-            transition: width 2s ease; /* Duración y suavidad de la animación */
+            transition: width 2s ease;
         }
     </style>
 
-    <!-- JavaScript de Validación en Tiempo Real y Selección de Icono -->
     <script type="text/javascript">
         function iniciarCarga() {
             var progressBar = document.getElementById("progressBar");
@@ -79,23 +76,19 @@
             progressBar.style.display = "block";
             progressFill.style.width = "0";
 
-            // Iniciar animación
             setTimeout(function () {
                 progressFill.style.width = "100%";
             }, 100);
 
-            // Llamar al evento del servidor después de la animación
             setTimeout(function () {
-                // Enviar formulario manualmente usando el UniqueID generado
                 __doPostBack('<%= btnCargarSaldo.UniqueID %>', '');
-        }, 2100); // 2 segundos de animación + 100 ms de inicio
-    }
+            }, 2100);
+        }
 
         function formatearFechaVencimiento() {
-            var fechaInput = document.getElementById("fechaVencimiento");
-            var fecha = fechaInput.value.replace(/\D/g, ''); // Remover caracteres no numéricos
+            var fechaInput = document.getElementById("<%= fechaVencimiento.ClientID %>");
+            var fecha = fechaInput.value.replace(/\D/g, '');
 
-            // Insertar la barra automáticamente después de dos dígitos
             if (fecha.length >= 3) {
                 fecha = fecha.slice(0, 2) + '/' + fecha.slice(2, 4);
             }
@@ -104,10 +97,9 @@
         }
 
         function validarDNI() {
-            var dni = document.getElementById("dniTitular").value;
-            var lblDniValido = document.getElementById("lblDniValido");
+            var dni = document.getElementById("<%= dniTitular.ClientID %>").value;
+            var lblDniValido = document.getElementById("<%= lblDniValido.ClientID %>");
 
-            // Verificar si el DNI tiene exactamente 8 dígitos numéricos
             if (/^\d{8}$/.test(dni)) {
                 lblDniValido.innerText = "DNI válido";
                 lblDniValido.style.color = "green";
@@ -118,13 +110,12 @@
         }
 
         function validarNumeroTarjeta() {
-            var numeroTarjeta = document.getElementById("numeroTarjeta").value;
-            var lblCardType = document.getElementById("lblCardType");
-            var cardIcon = document.getElementById("cardIcon");
+            var numeroTarjeta = document.getElementById("<%= numeroTarjeta.ClientID %>").value;
+            var lblCardType = document.getElementById("<%= lblCardType.ClientID %>");
+            var cardIcon = document.getElementById("<%= cardIcon.ClientID %>");
             var mensaje = "";
-            var iconSrc = ""; // variable para almacenar la ruta del icono
+            var iconSrc = "";
 
-            // Validación de tipo de tarjeta en tiempo real
             if (/^4[0-9]{12}(?:[0-9]{3})?$/.test(numeroTarjeta)) {
                 mensaje = "Tarjeta VISA válida";
                 lblCardType.style.color = "green";
@@ -140,15 +131,14 @@
             } else if (numeroTarjeta.length > 0) {
                 mensaje = "Número de tarjeta inválido";
                 lblCardType.style.color = "red";
-                iconSrc = ""; // Limpiar icono si no es válida
+                iconSrc = "";
             } else {
                 mensaje = "";
                 iconSrc = "";
             }
 
-            lblCardType.innerText = mensaje; // Mostrar el mensaje de validación
+            lblCardType.innerText = mensaje;
 
-            // Mostrar el icono si hay un tipo de tarjeta válido, ocultarlo si no
             if (iconSrc) {
                 cardIcon.src = iconSrc;
                 cardIcon.style.display = "inline-block";

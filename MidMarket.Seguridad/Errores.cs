@@ -25,7 +25,10 @@ namespace MidMarket.Seguridad
             { 17, "[ERR-017]: Error en la compra de Activo" },
             { 18, "[ERR-018]: Saldo insuficiente para la Compra" },
             { 19, "[ERR-019]: Error al canjear Recompensa" },
-            { 20, "[ERR-020]: La fecha desde no puede ser mayor que la fecha hasta" }
+            { 20, "[ERR-020]: La fecha desde no puede ser mayor que la fecha hasta" },
+            { 21, "[ERR-021]: El numero de la tarjeta de crédito o débito es inválida" },
+            { 22, "[ERR-022]: El formato de DNI es inválido" },
+            { 23, "[ERR-023]: La fecha de vencimiento de la tarjeta es inválida" }
         };
 
         public static string ObtenerError(int codigo)

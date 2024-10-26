@@ -152,6 +152,17 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to UPDATE Cuenta
+        ///SET Saldo = Saldo + @Saldo
+        ///WHERE Id_Cliente = @Id_Cliente AND Id_Cuenta = @Id_Cliente.
+        /// </summary>
+        internal static string CARGAR_SALDO {
+            get {
+                return ResourceManager.GetString("CARGAR_SALDO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 	DELETE FROM Carrito
         ///	WHERE Id_Carrito = @Id_Carrito AND Id_Cliente = @Id_Cliente.
         /// </summary>
@@ -239,6 +250,9 @@ namespace MidMarket.DataAccess {
         ///   Looks up a localized string similar to SELECT 
         ///    DC.Id_Detalle,
         ///    DC.Id_Activo,
+        ///	B.Id_Bono,
+        ///	A.Id_Accion,
+        ///    AC.Nombre,
         ///    DC.Id_Compra,
         ///    DC.Cantidad,
         ///    CASE 
@@ -246,17 +260,14 @@ namespace MidMarket.DataAccess {
         ///        WHEN B.Id_Activo IS NOT NULL THEN &apos;Bono&apos;
         ///        ELSE &apos;Desconocido&apos;
         ///    END AS TipoActivo,
-        ///    COALESCE(A.Precio, B.ValorNominal) AS PrecioValorNominal,
         ///    A.Simbolo,
-        ///    B.TasaInteres
+        ///    B.TasaInteres,
+        ///    DC.Precio AS PrecioValorNominal,
+        ///    DC.Precio * DC.Cantidad AS Total
         ///FROM 
         ///    DetalleCompra DC
-        ///LEFT JOIN 
-        ///    Accion A ON DC.Id_Activo = A.Id_Activo
-        ///LEFT JOIN 
-        ///    Bono B ON DC.Id_Activo = B.Id_Activo
-        ///WHERE 
-        ///    DC.Id_Compra  [rest of string was truncated]&quot;;.
+        ///LEFT JOIN Activo AC ON DC.Id_Activo = AC.Id_Activo
+        ///LEFT JOIN Accion A ON DC. [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string GET_COMPRAS_DETALLE {
             get {

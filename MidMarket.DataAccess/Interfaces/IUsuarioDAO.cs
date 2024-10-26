@@ -15,5 +15,6 @@ namespace MidMarket.DataAccess.Interfaces
         void CambiarPassword(Cliente cliente);
         void ActualizarSaldo(int cuentaId, decimal nuevoSaldo);
         decimal ObtenerTotalInvertido(int clienteId);
+        void CargarSaldo(Cliente cliente, decimal saldo);
     }
 }

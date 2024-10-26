@@ -137,5 +137,18 @@ namespace MidMarket.DataAccess.DAOs
 
             return 0;
         }
+
+        public void CargarSaldo(Cliente cliente, decimal saldo)
+        {
+            _dataAccess.ExecuteCommandText = Scripts.CARGAR_SALDO;
+
+            _dataAccess.ExecuteParameters.Parameters.Clear();
+
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Saldo", saldo);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Cuenta", cliente.Cuenta.Id);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Cliente", cliente.Id);
+
+            _dataAccess.ExecuteNonQuery();
+        }
     }
 }
