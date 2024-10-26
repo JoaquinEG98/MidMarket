@@ -1,0 +1,102 @@
+﻿.container-cargar-saldo {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    margin: 40px auto;
+}
+
+    .container-cargar-saldo h2 {
+        font-size: 24px;
+        color: #4a148c;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+.form-group-saldo {
+    margin-bottom: 15px;
+}
+
+    .form-group-saldo label {
+        display: block;
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 5px;
+    }
+
+    .form-group-saldo input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #cfd8dc;
+        border-radius: 4px;
+        background-color: #f2e8ff;
+        color: #333;
+        font-size: 16px;
+    }
+
+        .form-group-saldo input[type="text"]:focus {
+            border-color: #7e57c2;
+            outline: none;
+        }
+
+.submit-btn-saldo {
+    width: 100%;
+    padding: 12px;
+    background-color: #7e57c2;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    text-align: center;
+}
+
+    .submit-btn-saldo:hover {
+        background-color: #6a1b9a;
+    }
+
+.progress-bar {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress-fill {
+    height: 12px;
+    background-color: #7e57c2;
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.card-type-label {
+    font-size: 14px;
+    color: #333;
+    margin-top: 5px;
+    display: block;
+}
+
+.resultado-label {
+    font-size: 16px;
+    color: #d32f2f;
+    margin-top: 10px;
+    display: block;
+}
+
+.input-icon-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.card-icon {
+    position: absolute;
+    right: 10px; /* Ajusta la distancia del borde derecho */
+    width: 24px;
+    height: 24px;
+}

@@ -123,6 +123,7 @@
     <Content Include="AsignarPatentes.aspx" />
     <Content Include="Bitacora.aspx" />
     <Content Include="CambiarPassword.aspx" />
+    <Content Include="CargarSaldo.aspx" />
     <Content Include="Carrito.aspx" />
     <Content Include="Compra.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -144,6 +145,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Error.aspx" />
+    <Content Include="Images\amex.png" />
     <Content Include="Images\carritovacio.png" />
     <Content Include="Images\error.png" />
     <Content Include="Images\brokerfinanciero.png" />
@@ -156,6 +158,8 @@
     <Content Include="Images\icono6.png" />
     <Content Include="Images\icono7.png" />
     <Content Include="Images\icono8.png" />
+    <Content Include="Images\mastercard.png" />
+    <Content Include="Images\visa.png" />
     <Content Include="MenuPrincipal.aspx" />
     <Content Include="DesasignarFamilias.aspx" />
     <Content Include="DesasignarPatentes.aspx" />
@@ -228,6 +232,7 @@
     <Content Include="Site.Master" />
     <Content Include="Styles\acciones.css" />
     <Content Include="Styles\bonos.css" />
+    <Content Include="Styles\cargar_saldo.css" />
     <Content Include="Styles\carrito.css" />
     <Content Include="Styles\compra.css" />
     <Content Include="Styles\error.css" />
@@ -335,6 +340,12 @@
     </Compile>
     <Compile Include="CambiarPassword.aspx.designer.cs">
       <DependentUpon>CambiarPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CargarSaldo.aspx.cs">
+      <DependentUpon>CargarSaldo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CargarSaldo.aspx.designer.cs">
+      <DependentUpon>CargarSaldo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Carrito.aspx.cs">
       <DependentUpon>Carrito.aspx</DependentUpon>
