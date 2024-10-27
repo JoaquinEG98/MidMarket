@@ -1,5 +1,6 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
+using MidMarket.Entities.Composite;
 using System;
 using Unity;
 
@@ -32,34 +33,123 @@ namespace MidMarket.UI
             administracionBD.Visible = false;
             bitacora.Visible = false;
             transaccionesDropdown.Visible = false;
-            carritoDropdown.Visible = false;
-            misTransaccionesDropdown.Visible = false;
+            comprarAccionLink.Visible = false;
+            venderAccionLink.Visible = false;
+            administrarAccionesLink.Visible = false;
+            altaAccionesLink.Visible = false;
+            administrarBonosLink.Visible = false;
+            altaBonosLink.Visible = false;
+            usuariosDropdown.Visible = false;
+            usuariosLink.Visible = false;
+            altaUsuarioLink.Visible = false;
+            administracionBD.Visible = false;
         }
 
         private void AsignarMenuPermisos(Cliente cliente)
         {
-
             foreach (var permiso in cliente.Permisos)
             {
-                if (permiso.Permiso == Entities.Enums.Permiso.EsFamilia && permiso.Nombre == "Webmaster")
+                if (permiso.Permiso == Entities.Enums.Permiso.EsFamilia)
                 {
+                    foreach (var permisoHijo in permiso.Hijos)
+                    {
+                        AsignarPermiso(permisoHijo);
+                    }
+                }
+                else
+                {
+                    AsignarPermiso(permiso);
+                }
+            }
+        }
+
+        private void AsignarPermiso(Componente permiso)
+        {
+            switch (permiso.Permiso)
+            {
+                case Entities.Enums.Permiso.VisualizarBitacora:
                     bitacora.Visible = true;
-                    familiasDropdown.Visible = true;
-                    permisosDropdown.Visible = true;
-                    usuariosDropdown.Visible = true;
-                    administracionBD.Visible = true;
-                }
-                else if (permiso.Permiso == Entities.Enums.Permiso.EsFamilia && permiso.Nombre == "Administrador Financiero")
-                {
-                    accionesDropDown.Visible = true;
-                    bonosDropDown.Visible = true;
-                }
-                else if (permiso.Permiso == Entities.Enums.Permiso.EsFamilia && permiso.Nombre == "Cliente")
-                {
+                    break;
+
+                case Entities.Enums.Permiso.ComprarAccion:
                     transaccionesDropdown.Visible = true;
-                    carritoDropdown.Visible = true;
-                    misTransaccionesDropdown.Visible = true;
-                }
+                    comprarAccionLink.Visible = true;
+                    break;
+
+                case Entities.Enums.Permiso.ComprarBono:
+                    transaccionesDropdown.Visible = true;
+                    comprarAccionLink.Visible = true;
+                    break;
+
+                case Entities.Enums.Permiso.VenderAccion:
+                    transaccionesDropdown.Visible = true;
+                    venderAccionLink.Visible = true;
+                    break;
+
+                case Entities.Enums.Permiso.VenderBono:
+                    transaccionesDropdown.Visible = true;
+                    venderAccionLink.Visible = true;
+                    break;
+
+                case Entities.Enums.Permiso.AdministracionFamilias:
+                    familiasDropdown.Visible = true;
+                    administracionFamiliasLink.Visible = true;
+                    break;
+
+                case Entities.Enums.Permiso.AltaFamilia:
+                    familiasDropdown.Visible = true;
+                    altaFamiliaLink.Visible = true;
+                    break;
+
+                case Entities.Enums.Permiso.AsignarPatentes:
+                    permisosDropdown.Visible = true;
+                    asignarPatentesLink.Visible = true;
+                    break;
+
+                case Entities.Enums.Permiso.DesasignarPatentes:
+                    permisosDropdown.Visible = true;
+                    desasignarPatentesLink.Visible = true;
+                    break;
+
+                case Entities.Enums.Permiso.AsignarFamilias:
+                    permisosDropdown.Visible = true;
+                    asignarFamiliasLink.Visible = true;
+                    break;
+
+                case Entities.Enums.Permiso.DesasignarFamilias:
+                    permisosDropdown.Visible = true;
+                    desasignarFamiliasLink.Visible = true;
+                    break;
+
+                case Entities.Enums.Permiso.AdministracionUsuarios:
+                    usuariosDropdown.Visible = true;
+                    usuariosLink.Visible = true;
+                    break;
+
+                case Entities.Enums.Permiso.AltaUsuario:
+                    permisosDropdown.Visible = true;
+                    altaUsuarioLink.Visible = true;
+                    break;
+
+                case Entities.Enums.Permiso.AdministracionBaseDeDatos:
+                    administracionBD.Visible = true;
+                    break;
+
+                case Entities.Enums.Permiso.ModificarAccion:
+                    administrarAccionesLink.Visible = true;
+                    break;
+
+                case Entities.Enums.Permiso.ModificarBono:
+                    administrarBonosLink.Visible = true;
+                    break;
+
+                case Entities.Enums.Permiso.AltaBono:
+                    altaBonosLink.Visible = true;
+                    break;
+
+                case Entities.Enums.Permiso.AltaAccion:
+                    altaAccionesLink.Visible = true;
+                    break;
             }
         }
     }

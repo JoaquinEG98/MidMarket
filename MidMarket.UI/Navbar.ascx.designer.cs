@@ -15,6 +15,15 @@ namespace MidMarket.UI
     {
 
         /// <summary>
+        /// brandLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor brandLink;
+
+        /// <summary>
         /// menuPrincipalDropdown control.
         /// </summary>
         /// <remarks>
@@ -22,6 +31,24 @@ namespace MidMarket.UI
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl menuPrincipalDropdown;
+
+        /// <summary>
+        /// cargarSaldoLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor cargarSaldoLink;
+
+        /// <summary>
+        /// cambiarPasswordLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor cambiarPasswordLink;
 
         /// <summary>
         /// accionesDropDown control.
@@ -33,6 +60,24 @@ namespace MidMarket.UI
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl accionesDropDown;
 
         /// <summary>
+        /// administrarAccionesLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor administrarAccionesLink;
+
+        /// <summary>
+        /// altaAccionesLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor altaAccionesLink;
+
+        /// <summary>
         /// bonosDropDown control.
         /// </summary>
         /// <remarks>
@@ -40,6 +85,24 @@ namespace MidMarket.UI
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl bonosDropDown;
+
+        /// <summary>
+        /// administrarBonosLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor administrarBonosLink;
+
+        /// <summary>
+        /// altaBonosLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor altaBonosLink;
 
         /// <summary>
         /// usuariosDropdown control.
@@ -51,6 +114,24 @@ namespace MidMarket.UI
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl usuariosDropdown;
 
         /// <summary>
+        /// usuariosLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor usuariosLink;
+
+        /// <summary>
+        /// altaUsuarioLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor altaUsuarioLink;
+
+        /// <summary>
         /// permisosDropdown control.
         /// </summary>
         /// <remarks>
@@ -60,6 +141,42 @@ namespace MidMarket.UI
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl permisosDropdown;
 
         /// <summary>
+        /// asignarPatentesLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor asignarPatentesLink;
+
+        /// <summary>
+        /// asignarFamiliasLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor asignarFamiliasLink;
+
+        /// <summary>
+        /// desasignarPatentesLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor desasignarPatentesLink;
+
+        /// <summary>
+        /// desasignarFamiliasLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor desasignarFamiliasLink;
+
+        /// <summary>
         /// familiasDropdown control.
         /// </summary>
         /// <remarks>
@@ -67,6 +184,24 @@ namespace MidMarket.UI
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl familiasDropdown;
+
+        /// <summary>
+        /// administracionFamiliasLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor administracionFamiliasLink;
+
+        /// <summary>
+        /// altaFamiliaLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor altaFamiliaLink;
 
         /// <summary>
         /// administracionBD control.
@@ -94,6 +229,24 @@ namespace MidMarket.UI
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl transaccionesDropdown;
+
+        /// <summary>
+        /// comprarAccionLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor comprarAccionLink;
+
+        /// <summary>
+        /// venderAccionLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor venderAccionLink;
 
         /// <summary>
         /// carritoDropdown control.
