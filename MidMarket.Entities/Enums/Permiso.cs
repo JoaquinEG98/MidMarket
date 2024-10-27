@@ -21,6 +21,12 @@
         ComprarAccion,
         ComprarBono,
         VenderAccion,
-        VenderBono
+        VenderBono,
+        VisualizarBitacora,
+        AdministracionUsuarios,
+        AltaUsuario,
+        ModificacionUsuario,
+        BajaUsuario,
+        AdministracionBaseDeDatos
     }
 }

@@ -547,10 +547,6 @@
       <Project>{e819d691-559a-4998-b940-79fb18e3d99d}</Project>
       <Name>MidMarket.Business</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MidMarket.DataAccess\MidMarket.DataAccess.csproj">
-      <Project>{690e4946-3e9c-4ba9-8d89-e52ecb70df2f}</Project>
-      <Name>MidMarket.DataAccess</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MidMarket.Entities\MidMarket.Entities.csproj">
       <Project>{4c04a0d0-0b92-4a62-a026-7ad24d07d47e}</Project>
       <Name>MidMarket.Entities</Name>
@@ -558,6 +554,10 @@
     <ProjectReference Include="..\MidMarket.Seguridad\MidMarket.Seguridad.csproj">
       <Project>{EB46D7D0-E917-46A9-AFFE-C1418E239D3C}</Project>
       <Name>MidMarket.Seguridad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MidMarket.XML\MidMarket.XML.csproj">
+      <Project>{2cc05ced-7799-44cb-8dce-03cd2915891f}</Project>
+      <Name>MidMarket.XML</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

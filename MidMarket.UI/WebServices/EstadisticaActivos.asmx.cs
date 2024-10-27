@@ -1,10 +1,8 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities.DTOs;
-using System;
+using MidMarket.XML;
 using System.Collections.Generic;
-using System.IO;
 using System.Web.Services;
-using System.Xml.Serialization;
 using Unity;
 
 namespace MidMarket.UI.WebServices
@@ -29,16 +27,7 @@ namespace MidMarket.UI.WebServices
 
             if (activos != null && activos.Count > 0)
             {
-                XmlSerializer serializer = new XmlSerializer(typeof(List<ActivosCompradosDTO>));
-                using (StringWriter writer = new StringWriter())
-                {
-                    serializer.Serialize(writer, activos);
-                    string xmlResult = writer.ToString();
-
-                    string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App_Data", "ActivosCompradosCantidad.xml");
-                    Directory.CreateDirectory(Path.GetDirectoryName(path));
-                    File.WriteAllText(path, xmlResult);
-                }
+                ComprasXML.GenerarXMLActivosPorCantidad(activos);
             }
 
             return activos;
@@ -51,16 +40,7 @@ namespace MidMarket.UI.WebServices
 
             if (activos != null && activos.Count > 0)
             {
-                XmlSerializer serializer = new XmlSerializer(typeof(List<ActivosCompradosDTO>));
-                using (StringWriter writer = new StringWriter())
-                {
-                    serializer.Serialize(writer, activos);
-                    string xmlResult = writer.ToString();
-
-                    string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App_Data", "ActivosCompradosTotal.xml");
-                    Directory.CreateDirectory(Path.GetDirectoryName(path));
-                    File.WriteAllText(path, xmlResult);
-                }
+                ComprasXML.GenerarXMLActivosPorTotal(activos);
             }
 
             return activos;

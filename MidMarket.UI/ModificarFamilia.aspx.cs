@@ -1,12 +1,11 @@
 ﻿using MidMarket.Business.Interfaces;
+using MidMarket.Entities;
 using MidMarket.Entities.Composite;
+using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 using Unity;
 
@@ -15,6 +14,8 @@ namespace MidMarket.UI
     public partial class ModificarFamilia : System.Web.UI.Page
     {
         private readonly IPermisoService _permisoService;
+        private readonly ISessionManager _sessionManager;
+
         public Familia Familia { get; set; }
         public IList<Componente> Patentes { get; set; }
         public IList<Patente> PatentesExistentes { get; set; }
@@ -23,10 +24,16 @@ namespace MidMarket.UI
         public ModificarFamilia()
         {
             _permisoService = Global.Container.Resolve<IPermisoService>();
+            _sessionManager = Global.Container.Resolve<ISessionManager>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+
+            if (clienteLogueado == null || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.ModificarFamilia))
+                Response.Redirect("Default.aspx");
+
             try
             {
                 _familiaId = int.Parse(Request.QueryString["id"]);

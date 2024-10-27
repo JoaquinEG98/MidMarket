@@ -13,7 +13,7 @@ namespace MidMarket.UI
     public partial class _Default : Page
     {
         public Cliente Cliente { get; set; }
-        public string Familia { get; set; }
+        public string Familia { get; set; } = "Cliente";
         public decimal TotalInvertido { get; set; }
         public decimal UltimaTransaccion { get; set; }
         public string LabelsJson { get; set; }
@@ -50,9 +50,7 @@ namespace MidMarket.UI
                     UltimaTransaccion = _usuarioService.ObtenerUltimaTransaccion();
 
                     LlenarInformacionGrafico();
-
-                    if (Cliente.Permisos.Count > 0)
-                        Familia = Cliente.Permisos.Where(x => x.Permiso == Entities.Enums.Permiso.EsFamilia).FirstOrDefault().Nombre.ToString();
+                    LlenarFamiliaUsuario();
                 }
                 catch (Exception ex)
                 {
@@ -127,6 +125,18 @@ namespace MidMarket.UI
             LabelsJson = JsonConvert.SerializeObject(labels);
             AccionesDataJson = JsonConvert.SerializeObject(accionesData);
             BonosDataJson = JsonConvert.SerializeObject(bonosData);
+        }
+
+        private void LlenarFamiliaUsuario()
+        {
+            if (Cliente.Permisos.Count > 0)
+            {
+                var permisoFamilia = Cliente.Permisos.FirstOrDefault(x => x.Permiso == Entities.Enums.Permiso.EsFamilia);
+                if (permisoFamilia != null)
+                {
+                    Familia = permisoFamilia.Nombre.ToString();
+                }
+            }
         }
     }
 }

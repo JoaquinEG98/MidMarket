@@ -9,8 +9,14 @@
   <ActivosCompradosDTO>
     <Id>2</Id>
     <Nombre>Banco Galicia</Nombre>
-    <Cantidad>6</Cantidad>
-    <Total>73500.0000</Total>
+    <Cantidad>7</Cantidad>
+    <Total>85750.0000</Total>
+  </ActivosCompradosDTO>
+  <ActivosCompradosDTO>
+    <Id>1</Id>
+    <Nombre>YPF S.A</Nombre>
+    <Cantidad>4</Cantidad>
+    <Total>62000.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
     <Id>3</Id>
@@ -19,15 +25,9 @@
     <Total>50400.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
-    <Id>1</Id>
-    <Nombre>YPF S.A</Nombre>
-    <Cantidad>3</Cantidad>
-    <Total>46500.0000</Total>
-  </ActivosCompradosDTO>
-  <ActivosCompradosDTO>
     <Id>9</Id>
     <Nombre>BONAR 2024 (AY24)</Nombre>
-    <Cantidad>33</Cantidad>
-    <Total>33000.0000</Total>
+    <Cantidad>34</Cantidad>
+    <Total>34000.0000</Total>
   </ActivosCompradosDTO>
 </ArrayOfActivosCompradosDTO>

@@ -1,5 +1,7 @@
 ﻿using MidMarket.Business.Interfaces;
+using MidMarket.Entities;
 using MidMarket.Entities.Composite;
+using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
 using System;
 using System.Collections.Generic;
@@ -10,15 +12,23 @@ namespace MidMarket.UI
     public partial class AltaFamilia : System.Web.UI.Page
     {
         private readonly IPermisoService _permisoService;
+        private readonly ISessionManager _sessionManager;
+
         public IList<Patente> Patentes { get; set; }
 
         public AltaFamilia()
         {
             _permisoService = Global.Container.Resolve<IPermisoService>();
+            _sessionManager = Global.Container.Resolve<ISessionManager>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+
+            if (clienteLogueado == null || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.AltaFamilia))
+                Response.Redirect("Default.aspx");
+
             try
             {
                 Patentes = _permisoService.GetPatentes();

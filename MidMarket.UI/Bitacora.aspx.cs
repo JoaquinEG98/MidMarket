@@ -1,4 +1,5 @@
 ﻿using MidMarket.Business.Interfaces;
+using MidMarket.Entities;
 using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
 using System;
@@ -13,6 +14,7 @@ namespace MidMarket.UI
     {
         private readonly IBitacoraService _bitacoraService;
         private readonly IUsuarioService _usuarioService;
+        private readonly ISessionManager _sessionManager;
 
         public List<Entities.Bitacora> Movimientos { get; set; } = new List<Entities.Bitacora>();
 
@@ -59,10 +61,16 @@ namespace MidMarket.UI
         {
             _bitacoraService = Global.Container.Resolve<IBitacoraService>();
             _usuarioService = Global.Container.Resolve<IUsuarioService>();
+            _sessionManager = Global.Container.Resolve<ISessionManager>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+
+            if (clienteLogueado == null || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.VisualizarBitacora))
+                Response.Redirect("Default.aspx");
+
             if (!IsPostBack)
             {
                 CargarClientes();

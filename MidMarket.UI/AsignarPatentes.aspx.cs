@@ -1,6 +1,7 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
 using MidMarket.Entities.Composite;
+using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,8 @@ namespace MidMarket.UI
     {
         private readonly IUsuarioService _usuarioService;
         private readonly IPermisoService _permisoService;
+        private readonly ISessionManager _sessionManager;
+
         public List<Cliente> Clientes { get; set; } = new List<Cliente>();
         public IList<Componente> PatentesAsignadas { get; set; } = new List<Componente>();
         public IList<Patente> PatentesDisponibles { get; set; } = new List<Patente>();
@@ -24,10 +27,16 @@ namespace MidMarket.UI
         {
             _usuarioService = Global.Container.Resolve<IUsuarioService>();
             _permisoService = Global.Container.Resolve<IPermisoService>();
+            _sessionManager = Global.Container.Resolve<ISessionManager>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+
+            if (clienteLogueado == null || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.AsignarPatentes))
+                Response.Redirect("Default.aspx");
+
             try
             {
                 Clientes = _usuarioService.GetClientes();
