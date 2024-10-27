@@ -1,4 +1,6 @@
 ﻿using MidMarket.Entities.Composite;
+using MidMarket.Entities.Enums;
+using MidMarket.Entities.Factory;
 using System.Collections.Generic;
 
 namespace MidMarket.Entities
@@ -25,6 +27,17 @@ namespace MidMarket.Entities
         public void EliminarPermisosPorId(List<int> ids)
         {
             _permisos.RemoveAll(p => ids.Contains(p.Id));
+        }
+
+        public void AsignarPermiso(Permiso tipoPermiso)
+        {
+            Componente permiso = PermisoFactory.CrearPermiso(tipoPermiso);
+            _permisos.Add(permiso);
+        }
+
+        public void EliminarPermiso(Componente permiso)
+        {
+            _permisos.Remove(permiso);
         }
     }
 }

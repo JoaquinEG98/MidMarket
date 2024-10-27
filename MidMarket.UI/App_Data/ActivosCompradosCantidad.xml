@@ -3,8 +3,14 @@
   <ActivosCompradosDTO>
     <Id>8</Id>
     <Nombre>BONCER 2024</Nombre>
+    <Cantidad>70</Cantidad>
+    <Total>70.0000</Total>
+  </ActivosCompradosDTO>
+  <ActivosCompradosDTO>
+    <Id>12</Id>
+    <Nombre>BPA7D</Nombre>
     <Cantidad>45</Cantidad>
-    <Total>45.0000</Total>
+    <Total>4500.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
     <Id>9</Id>
@@ -13,21 +19,15 @@
     <Total>33000.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
-    <Id>12</Id>
-    <Nombre>BPA7D</Nombre>
-    <Cantidad>25</Cantidad>
-    <Total>2500.0000</Total>
-  </ActivosCompradosDTO>
-  <ActivosCompradosDTO>
     <Id>13</Id>
     <Nombre>BPJ5D</Nombre>
-    <Cantidad>13</Cantidad>
-    <Total>1300.0000</Total>
+    <Cantidad>28</Cantidad>
+    <Total>2800.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
-    <Id>6</Id>
-    <Nombre>Cresud</Nombre>
-    <Cantidad>8</Cantidad>
-    <Total>31600.0000</Total>
+    <Id>10</Id>
+    <Nombre>BPY26</Nombre>
+    <Cantidad>13</Cantidad>
+    <Total>1300.0000</Total>
   </ActivosCompradosDTO>
 </ArrayOfActivosCompradosDTO>

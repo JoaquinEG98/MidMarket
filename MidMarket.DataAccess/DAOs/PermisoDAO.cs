@@ -5,6 +5,7 @@ using MidMarket.Entities;
 using MidMarket.Entities.Composite;
 using MidMarket.Entities.DTOs;
 using MidMarket.Entities.Enums;
+using MidMarket.Entities.Factory;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -149,32 +150,27 @@ namespace MidMarket.DataAccess.DAOs
                 {
                     int id = int.Parse(rows["Id_Permiso"].ToString());
                     string nombre = rows["Nombre"].ToString();
-                    string permiso = String.Empty;
-                    if (rows["Permiso"].ToString() != String.Empty) permiso = rows["Permiso"].ToString();
+                    string permiso = rows["Permiso"].ToString();
 
-                    Componente componente;
-                    if (!String.IsNullOrEmpty(permiso))
-                    {
-                        componente = new Patente();
-                        componente.Id = id;
-                        componente.Nombre = nombre;
+                    Componente componente = string.IsNullOrEmpty(permiso)
+                        ? new Familia()
+                        : PermisoFactory.CrearPermiso((Permiso)Enum.Parse(typeof(Permiso), permiso));
+
+                    componente.Id = id;
+                    componente.Nombre = nombre;
+                    if (!string.IsNullOrEmpty(permiso))
                         componente.Permiso = (Permiso)Enum.Parse(typeof(Permiso), permiso);
-                        cliente.Permisos.Add(componente);
-                    }
-                    else
-                    {
-                        componente = new Familia();
-                        componente.Id = id;
-                        componente.Nombre = nombre;
 
+                    if (componente is Familia)
+                    {
                         var familia = TraerFamiliaPatentes(id);
                         foreach (var f in familia)
                         {
                             componente.AgregarHijo(f);
                         }
-
-                        cliente.Permisos.Add(componente);
                     }
+
+                    cliente.Permisos.Add(componente);
                 }
             }
         }
@@ -263,41 +259,41 @@ namespace MidMarket.DataAccess.DAOs
 
         public Componente GetUsuarioArbol(int usuarioId, Componente componenteOriginal, Componente componenteAgregar)
         {
-                _dataAccess.SelectCommandText = String.Format(Scripts.GET_PERMISOS_USUARIO, usuarioId);
-                DataSet ds = _dataAccess.ExecuteNonReader();
-                DataTable dt = ds.Tables[0];
+            _dataAccess.SelectCommandText = String.Format(Scripts.GET_PERMISOS_USUARIO, usuarioId);
+            DataSet ds = _dataAccess.ExecuteNonReader();
+            DataTable dt = ds.Tables[0];
 
-                if (dt.Rows.Count > 0)
+            if (dt.Rows.Count > 0)
+            {
+                foreach (DataRow rows in dt.Rows)
                 {
-                    foreach (DataRow rows in dt.Rows)
+                    int Id = int.Parse(rows["Id_Permiso"].ToString());
+                    string nombre = rows["Nombre"].ToString();
+                    string permiso = string.Empty;
+                    if (rows["Permiso"] != DBNull.Value) permiso = rows["Permiso"].ToString();
+
+                    Componente componente;
+                    if (string.IsNullOrEmpty(permiso)) componente = new Familia();
+                    else componente = new Patente();
+
+                    componente.Id = Id;
+                    componente.Nombre = nombre;
+                    if (!string.IsNullOrEmpty(permiso)) componente.Permiso = (Permiso)Enum.Parse(typeof(Permiso), permiso);
+
+                    if (componenteAgregar != null)
                     {
-                        int Id = int.Parse(rows["Id_Permiso"].ToString());
-                        string nombre = rows["Nombre"].ToString();
-                        string permiso = string.Empty;
-                        if (rows["Permiso"] != DBNull.Value) permiso = rows["Permiso"].ToString();
-
-                        Componente componente;
-                        if (string.IsNullOrEmpty(permiso)) componente = new Familia();
-                        else componente = new Patente();
-
-                        componente.Id = Id;
-                        componente.Nombre = nombre;
-                        if (!string.IsNullOrEmpty(permiso)) componente.Permiso = (Permiso)Enum.Parse(typeof(Permiso), permiso);
-
-                        if (componenteAgregar != null)
-                        {
-                            if (componente.GetType() == typeof(Patente)) componenteAgregar.AgregarHijo(componente);
-                            else if (componente.GetType() == typeof(Familia)) LlenarComponenteFamilia(componente, componenteOriginal, componenteAgregar);
-                        }
-                        else
-                        {
-                            if (componente.GetType() == typeof(Patente)) componenteOriginal.AgregarHijo(componente);
-                            else if (componente.GetType() == typeof(Familia)) LlenarComponenteFamilia(componente, componenteOriginal, componenteOriginal);
-                        }
+                        if (componente.GetType() == typeof(Patente)) componenteAgregar.AgregarHijo(componente);
+                        else if (componente.GetType() == typeof(Familia)) LlenarComponenteFamilia(componente, componenteOriginal, componenteAgregar);
+                    }
+                    else
+                    {
+                        if (componente.GetType() == typeof(Patente)) componenteOriginal.AgregarHijo(componente);
+                        else if (componente.GetType() == typeof(Familia)) LlenarComponenteFamilia(componente, componenteOriginal, componenteOriginal);
                     }
                 }
+            }
 
-                return componenteOriginal;
+            return componenteOriginal;
         }
 
         public List<UsuarioPermisoDTO> GetUsuariosPermisos()

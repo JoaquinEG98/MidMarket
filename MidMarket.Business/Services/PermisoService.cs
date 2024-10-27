@@ -5,6 +5,7 @@ using MidMarket.Entities;
 using MidMarket.Entities.Composite;
 using MidMarket.Entities.DTOs;
 using MidMarket.Entities.Enums;
+using MidMarket.Entities.Factory;
 using System;
 using System.Collections.Generic;
 using System.Transactions;
@@ -54,17 +55,24 @@ namespace MidMarket.Business.Services
                 {
                     foreach (Componente item in cliente.Permisos)
                     {
-                        UsuarioPermisoDTO usuarioPermisosDVH = new UsuarioPermisoDTO();
-                        usuarioPermisosDVH.UsuarioId = cliente.Id;
-                        usuarioPermisosDVH.PermisoId = item.Id;
-                        string DVH = DigitoVerificador.GenerarDVH(usuarioPermisosDVH);
+                        Componente permiso = PermisoFactory.CrearPermiso(item.Permiso);
 
-                        _permisoDataAccess.GuardarPermiso(cliente, item, DVH);
+                        UsuarioPermisoDTO usuarioPermisosDVH = new UsuarioPermisoDTO
+                        {
+                            UsuarioId = cliente.Id,
+                            PermisoId = permiso.Id
+                        };
+
+                        string DVH = DigitoVerificador.GenerarDVH(usuarioPermisosDVH);
+                        _permisoDataAccess.GuardarPermiso(cliente, permiso, DVH);
                     }
                 }
 
                 var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
-                _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) cambió los permisos de: {cliente.RazonSocial} ({cliente.Id})", Criticidad.Alta, clienteLogueado);
+                _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) cambió los permisos de: {cliente.RazonSocial} ({cliente.Id})",
+                    Criticidad.Alta,
+                    clienteLogueado
+                );
 
                 _digitoVerificadorService.ActualizarDVV("UsuarioPermiso");
 
