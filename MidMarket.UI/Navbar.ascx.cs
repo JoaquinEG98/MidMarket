@@ -33,6 +33,8 @@ namespace MidMarket.UI
             administracionBD.Visible = false;
             bitacora.Visible = false;
             transaccionesDropdown.Visible = false;
+            //carritoDropdown.Visible = false;
+            //misTransaccionesDropdown.Visible = false;
             comprarAccionLink.Visible = false;
             venderAccionLink.Visible = false;
             administrarAccionesLink.Visible = false;
@@ -136,18 +138,22 @@ namespace MidMarket.UI
                     break;
 
                 case Entities.Enums.Permiso.ModificarAccion:
+                    accionesDropDown.Visible = true;
                     administrarAccionesLink.Visible = true;
                     break;
 
                 case Entities.Enums.Permiso.ModificarBono:
+                    accionesDropDown.Visible = true;
                     administrarBonosLink.Visible = true;
                     break;
 
                 case Entities.Enums.Permiso.AltaBono:
+                    accionesDropDown.Visible = true;
                     altaBonosLink.Visible = true;
                     break;
 
                 case Entities.Enums.Permiso.AltaAccion:
+                    accionesDropDown.Visible = true;
                     altaAccionesLink.Visible = true;
                     break;
             }
