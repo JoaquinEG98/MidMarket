@@ -55,7 +55,7 @@ namespace MidMarket.Business.Services
                 {
                     foreach (Componente item in cliente.Permisos)
                     {
-                        Componente permiso = PermisoFactory.CrearPermiso(item.Permiso);
+                        Componente permiso = item.Id > 0 ? item : PermisoFactory.CrearPermiso(item.Permiso, item.Id);
 
                         UsuarioPermisoDTO usuarioPermisosDVH = new UsuarioPermisoDTO
                         {
