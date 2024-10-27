@@ -1,5 +1,6 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
+using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
 using System;
 using System.Linq;
@@ -10,12 +11,15 @@ namespace MidMarket.UI
     public partial class ModificarAccion : System.Web.UI.Page
     {
         private readonly IActivoService _activoService;
+        private readonly ISessionManager _sessionManager;
+
         public Accion Accion { get; set; }
         private int _accionId { get; set; }
 
         public ModificarAccion()
         {
             _activoService = Global.Container.Resolve<IActivoService>();
+            _sessionManager = Global.Container.Resolve<ISessionManager>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -34,6 +38,11 @@ namespace MidMarket.UI
 
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
+            var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+
+            if (clienteLogueado == null || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.ModificarAccion))
+                Response.Redirect("Default.aspx");
+
             try
             {
                 string nombreAccion = Request.Form["nombreAccion"];

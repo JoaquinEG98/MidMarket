@@ -1,4 +1,6 @@
 ﻿using MidMarket.Business.Interfaces;
+using MidMarket.Entities;
+using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
 using System;
 using Unity;
@@ -11,17 +13,23 @@ namespace MidMarket.UI
         private readonly IDigitoVerificadorService _digitoVerificadorService;
         private readonly IUsuarioService _usuarioService;
         private readonly IPermisoService _permisoService;
+        private readonly ISessionManager _sessionManager;
 
         public AdministracionBD()
         {
             _backupService = Global.Container.Resolve<IBackupService>();
             _digitoVerificadorService = Global.Container.Resolve<IDigitoVerificadorService>();
-            _usuarioService = Global.Container.Resolve<IUsuarioService>();  
-            _permisoService = Global.Container.Resolve<IPermisoService>();
+            _usuarioService = Global.Container.Resolve<IUsuarioService>();
+            _sessionManager = Global.Container.Resolve<ISessionManager>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+
+            if (clienteLogueado == null || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.AdministracionBaseDeDatos))
+                Response.Redirect("Default.aspx");
+
             try
             {
                 CargarDV();

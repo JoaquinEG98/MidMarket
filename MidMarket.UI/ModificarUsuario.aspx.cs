@@ -1,12 +1,9 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
+using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using Unity;
 
 namespace MidMarket.UI
@@ -14,16 +11,24 @@ namespace MidMarket.UI
     public partial class ModificarUsuario : System.Web.UI.Page
     {
         private readonly IUsuarioService _usuarioService;
+        private readonly ISessionManager _sessionManager;
+
         public Cliente Usuario { get; set; }
         private int _usuarioId { get; set; }
 
         public ModificarUsuario()
         {
             _usuarioService = Global.Container.Resolve<IUsuarioService>();
+            _sessionManager = Global.Container.Resolve<ISessionManager>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+
+            if (clienteLogueado == null || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.ModificacionUsuario))
+                Response.Redirect("Default.aspx");
+
             try
             {
                 _usuarioId = int.Parse(Request.QueryString["id"]);

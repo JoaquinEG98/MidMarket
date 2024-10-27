@@ -1,4 +1,6 @@
 ﻿using MidMarket.Business.Interfaces;
+using MidMarket.Entities;
+using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
 using System;
 using System.Linq;
@@ -11,15 +13,22 @@ namespace MidMarket.UI
     {
         private readonly IActivoService _activoService;
         private readonly ICarritoService _carritoService;
+        private readonly ISessionManager _sessionManager;
 
         public Compra()
         {
             _activoService = Global.Container.Resolve<IActivoService>();
             _carritoService = Global.Container.Resolve<ICarritoService>();
+            _sessionManager = Global.Container.Resolve<ISessionManager>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+
+            if (clienteLogueado == null || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.ComprarAccion) || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.ComprarBono))
+                Response.Redirect("Default.aspx");
+
             if (!IsPostBack)
             {
                 try

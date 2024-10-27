@@ -1,5 +1,6 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
+using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
 using System;
 using Unity;
@@ -9,20 +10,27 @@ namespace MidMarket.UI
     public partial class AltaUsuario : System.Web.UI.Page
     {
         private readonly IUsuarioService _usuarioService;
+        private readonly ISessionManager _sessionManager;
+
 
         public AltaUsuario()
         {
             _usuarioService = Global.Container.Resolve<IUsuarioService>();
+            _sessionManager = Global.Container.Resolve<ISessionManager>();
         }
 
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
 
+            if (clienteLogueado == null || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.AltaUsuario))
+                Response.Redirect("Default.aspx");
         }
 
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
+
             if (Page.IsValid)
             {
                 try
