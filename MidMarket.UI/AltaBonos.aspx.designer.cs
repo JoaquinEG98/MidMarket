@@ -15,31 +15,13 @@ namespace MidMarket.UI
     {
 
         /// <summary>
-        /// nombreBono control.
+        /// ValidarBonos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText nombreBono;
-
-        /// <summary>
-        /// valorNominal control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText valorNominal;
-
-        /// <summary>
-        /// tasaInteres control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText tasaInteres;
+        protected global::MidMarket.UI.ValidarBonos ValidarBonos;
 
         /// <summary>
         /// btnCargarBono control.

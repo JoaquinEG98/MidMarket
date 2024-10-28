@@ -14,7 +14,7 @@ namespace MidMarket.UI
         private readonly ISessionManager _sessionManager;
 
         public Bono Bono { get; set; }
-        private int _bonoId { get; set; }
+        private int _bonoId;
 
         public ModificarBono()
         {
@@ -29,30 +29,39 @@ namespace MidMarket.UI
             if (clienteLogueado == null || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.ModificarBono))
                 Response.Redirect("Default.aspx");
 
-            try
+            if (!IsPostBack)
             {
-                _bonoId = int.Parse(Request.QueryString["id"]);
-
-                CargarBono();
+                try
+                {
+                    _bonoId = int.Parse(Request.QueryString["id"]);
+                    ViewState["BonoId"] = _bonoId;
+                    CargarBono();
+                }
+                catch (Exception ex)
+                {
+                    AlertHelper.MostrarModal(this, $"Error al cargar la página: {ex.Message}");
+                    Response.Redirect("AdministrarBonos.aspx");
+                }
             }
-            catch (Exception ex)
+            else
             {
-                AlertHelper.MostrarModal(this, $"Error al cargar la página: {ex.Message}");
-                Response.Redirect("AdministrarBonos.aspx");
+                _bonoId = (int)ViewState["BonoId"];
             }
         }
 
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (!Page.IsValid)
+                return;
+
             try
             {
-                string nombreBono = Request.Form["nombreBono"];
-                decimal valorNominal = decimal.Parse(Request.Form["valorNominal"]);
-                float tasaInteres = float.Parse(Request.Form["tasaInteres"]);
+                string nombreBono = ValidarBonos.Nombre;
+                decimal valorNominal = decimal.Parse(ValidarBonos.ValorNominal);
+                float tasaInteres = float.Parse(ValidarBonos.TasaInteres);
 
                 GuardarBono(nombreBono, valorNominal, tasaInteres);
                 AlertHelper.MostrarModal(this, $"Bono {nombreBono} modificado correctamente.");
-                CargarBono();
             }
             catch (Exception ex)
             {
@@ -62,14 +71,17 @@ namespace MidMarket.UI
 
         private void GuardarBono(string nombreBono, decimal valorNominal, float tasaInteres)
         {
-            var bono = new Bono()
+            var bono = _activoService.GetBonos().FirstOrDefault(x => x.Id == _bonoId);
+
+            if (bono == null)
             {
-                Id = Bono.Id,
-                Id_Bono = Bono.Id_Bono,
-                Nombre = nombreBono,
-                ValorNominal = valorNominal,
-                TasaInteres = tasaInteres
-            };
+                AlertHelper.MostrarModal(this, "No se pudo cargar el bono para guardar los cambios.");
+                return;
+            }
+
+            bono.Nombre = nombreBono;
+            bono.ValorNominal = valorNominal;
+            bono.TasaInteres = tasaInteres;
 
             _activoService.ModificarBono(bono);
         }
@@ -81,7 +93,12 @@ namespace MidMarket.UI
             {
                 AlertHelper.MostrarModal(this, "Bono no encontrado.");
                 Response.Redirect("AdministrarBonos.aspx");
+                return;
             }
+
+            ValidarBonos.Nombre = Bono.Nombre;
+            ValidarBonos.ValorNominal = Bono.ValorNominal.ToString("F2");
+            ValidarBonos.TasaInteres = Bono.TasaInteres.ToString("F2");
         }
     }
 }

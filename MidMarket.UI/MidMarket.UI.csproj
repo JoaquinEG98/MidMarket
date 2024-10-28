@@ -203,6 +203,7 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="ValidarAcciones.ascx" />
+    <Content Include="ValidarBonos.ascx" />
     <Content Include="ValidarPassword.ascx" />
     <Content Include="ValidarUsuario.ascx" />
     <Content Include="WebServices\CalcularCarrito.asmx" />
@@ -505,6 +506,13 @@
     </Compile>
     <Compile Include="ValidarAcciones.ascx.designer.cs">
       <DependentUpon>ValidarAcciones.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ValidarBonos.ascx.cs">
+      <DependentUpon>ValidarBonos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValidarBonos.ascx.designer.cs">
+      <DependentUpon>ValidarBonos.ascx</DependentUpon>
     </Compile>
     <Compile Include="ValidarPassword.ascx.cs">
       <DependentUpon>ValidarPassword.ascx</DependentUpon>

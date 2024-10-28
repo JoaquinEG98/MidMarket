@@ -28,31 +28,26 @@ namespace MidMarket.UI
 
         protected void btnCargarBono_Click(object sender, EventArgs e)
         {
+            if (!Page.IsValid)
+                return;
+
             try
             {
                 Bono bono = new Bono
                 {
-                    Nombre = nombreBono.Value,
-                    ValorNominal = decimal.Parse(valorNominal.Value),
-                    TasaInteres = float.Parse(tasaInteres.Value)
+                    Nombre = ValidarBonos.Nombre,
+                    ValorNominal = decimal.Parse(ValidarBonos.ValorNominal),
+                    TasaInteres = float.Parse(ValidarBonos.TasaInteres)
                 };
                 _activoService.AltaBono(bono);
 
                 AlertHelper.MostrarModal(this, $"Bono {bono.Nombre} dado de alta correctamente.");
-                LimpiarCampos();
+                ValidarBonos.LimpiarCampos();
             }
             catch (Exception ex)
             {
                 AlertHelper.MostrarModal(this, $"Error al dar de alta la Acción: {ex.Message}.");
             }
-        }
-
-
-        private void LimpiarCampos()
-        {
-            nombreBono.Value = "";
-            valorNominal.Value = "";
-            tasaInteres.Value = "";
         }
     }
 }
