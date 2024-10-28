@@ -7,6 +7,5 @@ namespace MidMarket.Business.Interfaces
     {
         void RealizarCompra(List<Carrito> carrito);
         List<TransaccionCompra> GetCompras();
-        void DescargarFacturaPdf(TransaccionCompra compra, System.Web.HttpResponse response);
     }
 }

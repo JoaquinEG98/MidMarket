@@ -28,12 +28,16 @@ namespace MidMarket.UI
         private readonly ISessionManager _sessionManager;
         private readonly ICarritoService _carritoService;
         private readonly ICompraService _compraService;
+        private readonly CalcularCarrito _calcularCarritoService;
+        private readonly EstadisticaActivos _estadisticaActivosService;
 
         public Carrito()
         {
             _sessionManager = Global.Container.Resolve<ISessionManager>();
             _carritoService = Global.Container.Resolve<ICarritoService>();
             _compraService = Global.Container.Resolve<ICompraService>();
+            _calcularCarritoService = new CalcularCarrito();
+            _estadisticaActivosService = new EstadisticaActivos();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -116,8 +120,6 @@ namespace MidMarket.UI
         {
             try
             {
-                var service = new WebServices.CalcularCarrito();
-
                 decimal total = 0;
 
                 if (e.CommandName == "CambiarCantidad")
@@ -126,13 +128,13 @@ namespace MidMarket.UI
                     int carritoId = int.Parse(argumentos[0]);
                     int cambioCantidad = int.Parse(argumentos[1]);
 
-                    total = service.CalcularTotalCarrito(MiCarrito, "CambiarCantidad", carritoId, cambioCantidad);
+                    total = _calcularCarritoService.CalcularTotalCarrito(MiCarrito, "CambiarCantidad", carritoId, cambioCantidad);
                 }
                 else if (e.CommandName == "EliminarItem")
                 {
                     int carritoId = int.Parse(e.CommandArgument.ToString());
 
-                    total = service.CalcularTotalCarrito(MiCarrito, "EliminarItem", carritoId);
+                    total = _calcularCarritoService.CalcularTotalCarrito(MiCarrito, "EliminarItem", carritoId);
                 }
 
                 ViewState["TotalCarrito"] = total;
@@ -187,10 +189,8 @@ namespace MidMarket.UI
 
         private void CalcularComprasWebService()
         {
-            var webService = new EstadisticaActivos();
-
-            webService.CalcularActivosMasCompradosCantidad();
-            webService.CalcularActivosMasCompradosTotal();
+            _estadisticaActivosService.CalcularActivosMasCompradosCantidad();
+            _estadisticaActivosService.CalcularActivosMasCompradosTotal();
         }
     }
 }
