@@ -6,12 +6,10 @@
     <div class="container mt-4 portafolio-container">
         <h2 class="portafolio-title">Portafolio</h2>
 
-        <!-- Botón para ingresar dinero -->
         <div class="d-flex justify-content-end mb-3">
             <button class="btn ingresar-dinero">Ingresar dinero</button>
         </div>
 
-        <!-- Tabla de activos -->
         <div class="row">
             <div class="col-md-8">
                 <div class="activos-card">
@@ -43,7 +41,6 @@
                         </tbody>
                     </table>
 
-                    <!-- Disponible para operar section -->
                     <div class="disponible-operar">
                         <h3 class="disponible-titulo">Efectivo</h3>
                         <p class="disponible-item">
@@ -52,17 +49,10 @@
                             <span class="disponible-texto">Disponible para operar</span>
                             <span class="disponible-monto">$ 197,00</span>
                         </p>
-                        <p class="disponible-item">
-                            <span class="icono-moneda">$</span>
-                            <span>DÓLARES</span>
-                            <span class="disponible-texto">Disponible para operar</span>
-                            <span class="disponible-monto">US$ 0,05</span>
-                        </p>
                     </div>
                 </div>
             </div>
 
-            <!-- Resumen y distribución de activos -->
             <div class="col-md-4">
                 <div class="custom-card resumen-card mb-3">
                     <div class="custom-card-header">Resumen</div>
@@ -91,8 +81,8 @@
                 data: {
                     labels: ['Acciones', 'Bonos'],
                     datasets: [{
-                        data: [100, 50], // Valores hardcodeados para visualización
-                        backgroundColor: ['#FFCCB3', '#D4E6A5'] // Nuevos colores: Acciones (#FFCCB3) y Bonos (#D4E6A5)
+                        data: [100, 50],
+                        backgroundColor: ['#FFCCB3', '#D4E6A5']
                     }]
                 },
                 options: {
