@@ -108,6 +108,7 @@
     <Content Include="Scripts\DigitoVerificador\UPDATE_DIGITO_VERTICAL.sql" />
     <Content Include="Scripts\Cuenta\ACTUALIZAR_SALDO.sql" />
     <Content Include="Scripts\Usuario\AUMENTAR_BLOQUEO.sql" />
+    <Content Include="Scripts\Usuario\REESTABLECER_PASSWORD.sql" />
     <Content Include="Scripts\Usuario\CAMBIAR_PASSWORD.sql" />
     <Content Include="Scripts\Usuario\MODIFICAR_USUARIO.sql" />
     <Content Include="Scripts\Usuario\UPDATE_BLOQUEO.sql" />

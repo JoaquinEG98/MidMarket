@@ -169,5 +169,17 @@ namespace MidMarket.DataAccess.DAOs
 
             return 0;
         }
+
+        public void ReestablecerPassword(string email, string password)
+        {
+            _dataAccess.ExecuteCommandText = Scripts.REESTABLECER_PASSWORD;
+
+            _dataAccess.ExecuteParameters.Parameters.Clear();
+
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Email", email);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Password", password);
+
+            _dataAccess.ExecuteNonQuery();
+        }
     }
 }
