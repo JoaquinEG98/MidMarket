@@ -1,8 +1,8 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="MidMarket.UI.SiteMaster" %>
 
-<%@ Register Src="~/Navbar.ascx" TagPrefix="uc" TagName="Navbar" %>
-<%@ Register Src="~/Modal.ascx" TagPrefix="uc" TagName="Modal" %>
-<%@ Register Src="~/Toast.ascx" TagPrefix="uc" TagName="Toast" %>
+<%@ Register Src="~/Controls/Navbar.ascx" TagPrefix="uc" TagName="Navbar" %>
+<%@ Register Src="~/Controls/Modal.ascx" TagPrefix="uc" TagName="Modal" %>
+<%@ Register Src="~/Controls/Toast.ascx" TagPrefix="uc" TagName="Toast" %>
 
 <!DOCTYPE html>
 <html lang="en">

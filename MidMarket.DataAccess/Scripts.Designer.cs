@@ -204,7 +204,7 @@ namespace MidMarket.DataAccess {
         /// <summary>
         ///   Looks up a localized string similar to UPDATE Cuenta
         ///SET Saldo = Saldo + @Saldo
-        ///WHERE Id_Cliente = @Id_Cliente AND Id_Cuenta = @Id_Cliente.
+        ///WHERE Id_Cliente = @Id_Cliente AND Id_Cuenta = @Id_Cuenta.
         /// </summary>
         internal static string CARGAR_SALDO {
             get {
@@ -624,6 +624,17 @@ namespace MidMarket.DataAccess {
         internal static string REALIZAR_BACKUP {
             get {
                 return ResourceManager.GetString("REALIZAR_BACKUP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to UPDATE Cliente
+        ///SET Password = @Password
+        ///WHERE Email = @Email.
+        /// </summary>
+        internal static string REESTABLECER_PASSWORD {
+            get {
+                return ResourceManager.GetString("REESTABLECER_PASSWORD", resourceCulture);
             }
         }
         

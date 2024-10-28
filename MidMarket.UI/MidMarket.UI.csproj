@@ -170,13 +170,14 @@
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
-    <Content Include="Modal.ascx" />
+    <Content Include="Controls\Modal.ascx" />
     <Content Include="ModificarAccion.aspx" />
     <Content Include="ModificarBono.aspx" />
     <Content Include="ModificarFamilia.aspx" />
     <Content Include="ModificarUsuario.aspx" />
-    <Content Include="Navbar.ascx" />
+    <Content Include="Controls\Navbar.ascx" />
     <Content Include="Portafolio.aspx" />
+    <Content Include="ReestablecerPassword.aspx" />
     <Content Include="Registro.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -207,10 +208,11 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="Styles\portafolio.css" />
-    <Content Include="ValidarAcciones.ascx" />
-    <Content Include="ValidarBonos.ascx" />
-    <Content Include="ValidarPassword.ascx" />
-    <Content Include="ValidarUsuario.ascx" />
+    <Content Include="Controls\ValidarAcciones.ascx" />
+    <Content Include="Controls\ValidarBonos.ascx" />
+    <Content Include="Controls\ValidarEmail.ascx" />
+    <Content Include="Controls\ValidarPassword.ascx" />
+    <Content Include="Controls\ValidarUsuario.ascx" />
     <Content Include="WebServices\CalcularCarrito.asmx" />
     <Content Include="WebServices\EstadisticaActivos.asmx" />
     <Content Include="WebServices\GeneradorPdf.asmx" />
@@ -259,7 +261,7 @@
     <Content Include="Styles\homepage.css" />
     <Content Include="Styles\transacciones.css" />
     <Content Include="Styles\usuarios.css" />
-    <Content Include="Toast.ascx" />
+    <Content Include="Controls\Toast.ascx" />
     <Content Include="Transacciones.aspx" />
     <Content Include="Usuarios.aspx" />
     <Content Include="Utilidades\TarjetasDePrueba.txt" />
@@ -428,11 +430,11 @@
     <Compile Include="Logout.aspx.designer.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Modal.ascx.cs">
+    <Compile Include="Controls\Modal.ascx.cs">
       <DependentUpon>Modal.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Modal.ascx.designer.cs">
+    <Compile Include="Controls\Modal.ascx.designer.cs">
       <DependentUpon>Modal.ascx</DependentUpon>
     </Compile>
     <Compile Include="ModificarAccion.aspx.cs">
@@ -463,11 +465,11 @@
     <Compile Include="ModificarUsuario.aspx.designer.cs">
       <DependentUpon>ModificarUsuario.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Navbar.ascx.cs">
+    <Compile Include="Controls\Navbar.ascx.cs">
       <DependentUpon>Navbar.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Navbar.ascx.designer.cs">
+    <Compile Include="Controls\Navbar.ascx.designer.cs">
       <DependentUpon>Navbar.ascx</DependentUpon>
     </Compile>
     <Compile Include="Portafolio.aspx.cs">
@@ -478,6 +480,13 @@
       <DependentUpon>Portafolio.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReestablecerPassword.aspx.cs">
+      <DependentUpon>ReestablecerPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReestablecerPassword.aspx.designer.cs">
+      <DependentUpon>ReestablecerPassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Registro.aspx.cs">
       <DependentUpon>Registro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -492,11 +501,11 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
-    <Compile Include="Toast.ascx.cs">
+    <Compile Include="Controls\Toast.ascx.cs">
       <DependentUpon>Toast.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Toast.ascx.designer.cs">
+    <Compile Include="Controls\Toast.ascx.designer.cs">
       <DependentUpon>Toast.ascx</DependentUpon>
     </Compile>
     <Compile Include="Transacciones.aspx.cs">
@@ -513,32 +522,39 @@
     <Compile Include="Usuarios.aspx.designer.cs">
       <DependentUpon>Usuarios.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ValidarAcciones.ascx.cs">
+    <Compile Include="Controls\ValidarAcciones.ascx.cs">
       <DependentUpon>ValidarAcciones.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ValidarAcciones.ascx.designer.cs">
+    <Compile Include="Controls\ValidarAcciones.ascx.designer.cs">
       <DependentUpon>ValidarAcciones.ascx</DependentUpon>
     </Compile>
-    <Compile Include="ValidarBonos.ascx.cs">
+    <Compile Include="Controls\ValidarBonos.ascx.cs">
       <DependentUpon>ValidarBonos.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ValidarBonos.ascx.designer.cs">
+    <Compile Include="Controls\ValidarBonos.ascx.designer.cs">
       <DependentUpon>ValidarBonos.ascx</DependentUpon>
     </Compile>
-    <Compile Include="ValidarPassword.ascx.cs">
+    <Compile Include="Controls\ValidarEmail.ascx.cs">
+      <DependentUpon>ValidarEmail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ValidarEmail.ascx.designer.cs">
+      <DependentUpon>ValidarEmail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ValidarPassword.ascx.cs">
       <DependentUpon>ValidarPassword.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ValidarPassword.ascx.designer.cs">
+    <Compile Include="Controls\ValidarPassword.ascx.designer.cs">
       <DependentUpon>ValidarPassword.ascx</DependentUpon>
     </Compile>
-    <Compile Include="ValidarUsuario.ascx.cs">
+    <Compile Include="Controls\ValidarUsuario.ascx.cs">
       <DependentUpon>ValidarUsuario.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ValidarUsuario.ascx.designer.cs">
+    <Compile Include="Controls\ValidarUsuario.ascx.designer.cs">
       <DependentUpon>ValidarUsuario.ascx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">

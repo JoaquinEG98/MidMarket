@@ -1,10 +1,10 @@
-﻿using MidMarket.Business.Seguridad;
+﻿using MidMarket.Business.Interfaces;
+using MidMarket.Business.Seguridad;
 using MidMarket.DataAccess.Interfaces;
-using System.Collections.Generic;
-using MidMarket.Business.Interfaces;
-using System.Transactions;
 using MidMarket.Entities;
 using MidMarket.Entities.DTOs;
+using System.Collections.Generic;
+using System.Transactions;
 
 namespace MidMarket.Business.Services
 {
@@ -70,19 +70,9 @@ namespace MidMarket.Business.Services
 
         public void ActualizarDVV(string tabla)
         {
-            using (TransactionScope scope = new TransactionScope())
-            {
-                string nuevoDVV = CalcularDVV(tabla);
+            string nuevoDVV = CalcularDVV(tabla);
 
-                _digitoVerificadorDataAccess.ActualizarDVV(tabla, nuevoDVV);
-
-                var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
-
-                if (clienteLogueado != null)
-                    //_bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) recalculó los Digitos Verificadores Verticales de la Tabla: {tabla}", Criticidad.Alta, clienteLogueado);
-
-                scope.Complete();
-            }
+            _digitoVerificadorDataAccess.ActualizarDVV(tabla, nuevoDVV);
         }
 
         private string ObtenerDVV(string tabla)
@@ -117,24 +107,20 @@ namespace MidMarket.Business.Services
 
         private void ActualizarTablaDVH(List<Cliente> clientes)
         {
-            using (TransactionScope scope = new TransactionScope())
+            foreach (Cliente cliente in clientes)
             {
-                foreach (Cliente cliente in clientes)
+                Cliente clienteCalculado = new Cliente()
                 {
-                    Cliente clienteCalculado = new Cliente()
-                    {
-                        Id = cliente.Id,
-                        Email = cliente.Email,
-                        Password = cliente.Password,
-                        RazonSocial = cliente.RazonSocial,
-                        CUIT = cliente.CUIT,
-                        Puntaje = cliente.Puntaje,
-                    };
-                    clienteCalculado.DVH = DigitoVerificador.GenerarDVH(clienteCalculado);
+                    Id = cliente.Id,
+                    Email = cliente.Email,
+                    Password = cliente.Password,
+                    RazonSocial = cliente.RazonSocial,
+                    CUIT = cliente.CUIT,
+                    Puntaje = cliente.Puntaje,
+                };
+                clienteCalculado.DVH = DigitoVerificador.GenerarDVH(clienteCalculado);
 
-                    _digitoVerificadorDataAccess.ActualizarTablaDVH("Cliente", clienteCalculado.DVH, clienteCalculado.Id);
-                }
-                scope.Complete();
+                _digitoVerificadorDataAccess.ActualizarTablaDVH("Cliente", clienteCalculado.DVH, clienteCalculado.Id);
             }
         }
 

@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AltaBonos.aspx.cs" Inherits="MidMarket.UI.AltaBonos" MasterPageFile="~/Site.Master" Title="Alta de Bonos" %>
-<%@ Register Src="~/ValidarBonos.ascx" TagName="ValidarBonos" TagPrefix="uc" %>
+<%@ Register Src="~/Controls/ValidarBonos.ascx" TagName="ValidarBonos" TagPrefix="uc" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="container-bonos" class="container-bonos">

@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ModificarAccion.aspx.cs" Inherits="MidMarket.UI.ModificarAccion" MasterPageFile="~/Site.Master" Title="Modificar Acción" %>
-<%@ Register Src="~/ValidarAcciones.ascx" TagName="ValidarAcciones" TagPrefix="uc" %>
+<%@ Register Src="~/Controls/ValidarAcciones.ascx" TagName="ValidarAcciones" TagPrefix="uc" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="container-acciones" class="container-acciones">

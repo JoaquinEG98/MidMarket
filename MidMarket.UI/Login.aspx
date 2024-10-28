@@ -28,7 +28,7 @@
         </form>
         <div class="extra-options">
 <%--            <p>¿No tienes cuenta? <a href="registro.aspx">Regístrate aquí</a></p>--%>
-            <p><a href="#">¿Olvidaste tu contraseña?</a></p>
+            <p><a href="reestablecerpassword.aspx">¿Olvidaste tu contraseña?</a></p>
         </div>
     </div>
 </body>

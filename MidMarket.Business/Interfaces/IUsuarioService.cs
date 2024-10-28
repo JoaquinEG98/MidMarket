@@ -17,5 +17,6 @@ namespace MidMarket.Business.Interfaces
         decimal ObtenerTotalInvertido();
         void CargarSaldo(decimal saldo, string numeroTarjeta, string DNI, string fechaVencimiento);
         decimal ObtenerUltimaTransaccion();
+        void ReestablecerPassword(string email, string password);
     }
 }

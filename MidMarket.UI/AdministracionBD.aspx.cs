@@ -20,6 +20,7 @@ namespace MidMarket.UI
             _backupService = Global.Container.Resolve<IBackupService>();
             _digitoVerificadorService = Global.Container.Resolve<IDigitoVerificadorService>();
             _usuarioService = Global.Container.Resolve<IUsuarioService>();
+            _permisoService = Global.Container.Resolve<IPermisoService>();
             _sessionManager = Global.Container.Resolve<ISessionManager>();
         }
 

@@ -1,7 +1,8 @@
-﻿using System.Security.Cryptography;
-using System.Text;
-using System;
+﻿using System;
 using System.Configuration;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace MidMarket.Business.Seguridad
 {
@@ -64,5 +65,29 @@ namespace MidMarket.Business.Seguridad
             return ASCIIEncoding.ASCII.GetString(dec);
         }
         #endregion
+
+        public static string GenerarPasswordRandom()
+        {
+            const string lowerChars = "abcdefghijklmnopqrstuvwxyz";
+            const string upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            const string digitChars = "0123456789";
+            const string specialChars = "!?.#$%";
+
+            Random random = new Random();
+            StringBuilder password = new StringBuilder();
+
+            password.Append(lowerChars[random.Next(lowerChars.Length)]);
+            password.Append(upperChars[random.Next(upperChars.Length)]);
+            password.Append(digitChars[random.Next(digitChars.Length)]);
+            password.Append(specialChars[random.Next(specialChars.Length)]);
+
+            string allChars = lowerChars + upperChars + digitChars + specialChars;
+            while (password.Length < 8)
+            {
+                password.Append(allChars[random.Next(allChars.Length)]);
+            }
+
+            return new string(password.ToString().OrderBy(c => random.Next()).ToArray());
+        }
     }
 }

@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CambiarPassword.aspx.cs" Inherits="MidMarket.UI.CambiarPassword" MasterPageFile="~/Site.Master" Title="Cambio de Password" %>
-<%@ Register Src="~/ValidarPassword.ascx" TagName="ValidarPassword" TagPrefix="uc" %>
+<%@ Register Src="~/Controls/ValidarPassword.ascx" TagName="ValidarPassword" TagPrefix="uc" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="container-password">

@@ -340,5 +340,20 @@ namespace MidMarket.Business.Services
 
             return _usuarioDataAccess.ObtenerUltimaTransaccion(clienteLogueado.Id);
         }
+
+        public void ReestablecerPassword(string email, string password)
+        {
+            string emailEncriptado = Encriptacion.EncriptarAES(email);
+            string passwordHasheada = Encriptacion.Hash(password);
+
+            using (TransactionScope scope = new TransactionScope())
+            {
+                _usuarioDataAccess.ReestablecerPassword(emailEncriptado, passwordHasheada);
+
+                _digitoVerificadorService.RecalcularDigitosUsuario(this, _permisoService);
+
+                scope.Complete();
+            }
+        }
     }
 }

@@ -120,8 +120,18 @@ input:invalid + .error-message {
     }
 
 .error-label {
-    padding-top: 20px;
-    margin-top: 0;
-    display: block;
+    color: #dc3545;
     font-size: 14px;
+    padding-top: 10px;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+}
+
+.success-label {
+    color: #28a745;
+    font-size: 14px;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
 }
