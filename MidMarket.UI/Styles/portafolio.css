@@ -1,0 +1,131 @@
+﻿body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.portafolio-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portafolio-title {
+    color: #4a148c;
+    font-weight: bold;
+}
+
+.ingresar-dinero {
+    background-color: #7e57c2;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+    .ingresar-dinero:hover {
+        background-color: #6a1b9a;
+        color: white;
+    }
+
+/* Tabla de activos */
+.activos-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.activos-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #333;
+}
+
+    .activos-table th {
+        background-color: #7e57c2;
+        color: white;
+        text-align: left;
+        border: 1px solid #7e57c2;
+    }
+
+    .activos-table td {
+        background-color: #f2e8ff;
+        font-weight: bold;
+        border: 1px solid #7e57c2;
+    }
+
+/* Disponible para operar */
+.disponible-operar {
+    background-color: #f2e8ff;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.disponible-titulo {
+    color: #4a148c;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.disponible-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0;
+    background-color: #f2e8ff;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.icono-moneda {
+    color: #00ffcc; /* Ajusta el color del ícono si es necesario */
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.disponible-texto {
+    flex: 1;
+    text-align: center;
+    color: #333;
+}
+
+.disponible-monto {
+    color: #333;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: right;
+}
+
+/* Estilos de las tarjetas personalizadas */
+.custom-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.custom-card-header {
+    background-color: #7e57c2;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.custom-card-body {
+    padding: 15px;
+}
+
+.table-primary {
+    background-color: #d1e7ff;
+}
+
+footer {
+    color: #7e57c2;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0;
+}

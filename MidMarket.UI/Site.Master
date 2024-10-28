@@ -34,6 +34,7 @@
     <link href="/Styles/carrito.css" rel="stylesheet" />
     <link href="/Styles/transacciones.css" rel="stylesheet" />
     <link href="/Styles/cargar_saldo.css" rel="stylesheet" />
+    <link href="/Styles/portafolio.css" rel="stylesheet" />
 </head>
 <body>
     <form runat="server">
