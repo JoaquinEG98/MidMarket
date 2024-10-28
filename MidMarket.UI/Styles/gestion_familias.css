@@ -1,7 +1,7 @@
 ﻿#familias-container {
     background-color: #ffffff;
     padding: 20px 30px;
-    border-radius: 8px;
+    border-radius: 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 800px;
     width: 100%;
@@ -47,7 +47,7 @@
         background-color: #7e57c2;
         color: #fff;
         border: none;
-        border-radius: 4px;
+        border-radius: 0;
         font-size: 16px;
         cursor: pointer;
         transition: background-color 0.3s ease;
@@ -58,10 +58,15 @@
             background-color: #6a1b9a;
         }
 
-#alta-familia-container {
+#alta-familia-container,
+#asignar-familias-container,
+#asignar-patentes-container,
+#desasignar-familias-container,
+#desasignar-patentes-container,
+#modificar-familia-container {
     background-color: #ffffff;
     padding: 20px 30px;
-    border-radius: 8px;
+    border-radius: 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 800px;
     width: 100%;
@@ -69,481 +74,64 @@
 }
 
     #alta-familia-container h2,
-    #alta-familia-container h3 {
-        color: #4a148c;
-        margin-bottom: 15px;
-    }
-
-    #alta-familia-container h2 {
-        font-size: 24px;
-        text-align: center;
-    }
-
-    #alta-familia-container h3 {
-        font-size: 20px;
-    }
-
-    #alta-familia-container .form-group input[type="text"] {
-        width: 100%;
-        padding: 10px;
-        background-color: #f2e8ff;
-        color: #333;
-        border: 1px solid #cfd8dc;
-        border-radius: 4px;
-        font-size: 16px;
-        margin-bottom: 15px;
-    }
-
-        #alta-familia-container .form-group input[type="text"]:focus {
-            border-color: #7e57c2;
-            outline: none;
-        }
-
-    #alta-familia-container table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 20px;
-        color: #333;
-    }
-
-    #alta-familia-container table,
-    #alta-familia-container th,
-    #alta-familia-container td {
-        border: 1px solid #7e57c2;
-    }
-
-    #alta-familia-container th,
-    #alta-familia-container td {
-        padding: 10px;
-        text-align: left;
-    }
-
-    #alta-familia-container th {
-        background-color: #7e57c2;
-        color: white;
-    }
-
-    #alta-familia-container td {
-        background-color: #f2e8ff;
-    }
-
-    #alta-familia-container .submit-btn {
-        width: 100%;
-        padding: 10px;
-        background-color: #7e57c2;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        margin-top: 10px;
-    }
-
-        #alta-familia-container .submit-btn:hover {
-            background-color: #6a1b9a;
-        }
-
-#asignar-familias-container {
-    background-color: #ffffff;
-    padding: 20px 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    width: 100%;
-    margin: auto;
-}
-
+    #alta-familia-container h3,
     #asignar-familias-container h2,
-    #asignar-familias-container h3 {
-        color: #4a148c;
-        margin-bottom: 15px;
-    }
-
-    #asignar-familias-container h2 {
-        font-size: 24px;
-        text-align: center;
-    }
-
-    #asignar-familias-container h3 {
-        font-size: 20px;
-    }
-
-    #asignar-familias-container .form-group input[type="text"],
-    #asignar-familias-container .form-group select {
-        width: 100%;
-        padding: 10px;
-        background-color: #f2e8ff;
-        color: #333;
-        border: 1px solid #cfd8dc;
-        border-radius: 4px;
-        font-size: 16px;
-        margin-bottom: 15px;
-    }
-
-        #asignar-familias-container .form-group input[type="text"]:focus,
-        #asignar-familias-container .form-group select:focus {
-            border-color: #7e57c2;
-            outline: none;
-        }
-
-    #asignar-familias-container table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 20px;
-        color: #333;
-    }
-
-    #asignar-familias-container table,
-    #asignar-familias-container th,
-    #asignar-familias-container td {
-        border: 1px solid #7e57c2;
-    }
-
-    #asignar-familias-container th,
-    #asignar-familias-container td {
-        padding: 10px;
-        text-align: left;
-    }
-
-    #asignar-familias-container th {
-        background-color: #7e57c2;
-        color: white;
-    }
-
-    #asignar-familias-container td {
-        background-color: #f2e8ff;
-    }
-
-    #asignar-familias-container .submit-btn {
-        width: 100%;
-        padding: 10px;
-        background-color: #7e57c2;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        margin-top: 10px;
-    }
-
-        #asignar-familias-container .submit-btn:hover {
-            background-color: #6a1b9a;
-        }
-
-#asignar-patentes-container {
-    background-color: #ffffff;
-    padding: 20px 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    width: 100%;
-    margin: auto;
-}
-
+    #asignar-familias-container h3,
     #asignar-patentes-container h2,
-    #asignar-patentes-container h3 {
-        color: #4a148c;
-        margin-bottom: 15px;
-    }
-
-    #asignar-patentes-container h2 {
-        font-size: 24px;
-        text-align: center;
-    }
-
-    #asignar-patentes-container h3 {
-        font-size: 20px;
-    }
-
-    #asignar-patentes-container .form-group input[type="text"],
-    #asignar-patentes-container .form-group select {
-        width: 100%;
-        padding: 10px;
-        background-color: #f2e8ff;
-        color: #333;
-        border: 1px solid #cfd8dc;
-        border-radius: 4px;
-        font-size: 16px;
-        margin-bottom: 15px;
-    }
-
-        #asignar-patentes-container .form-group input[type="text"]:focus,
-        #asignar-patentes-container .form-group select:focus {
-            border-color: #7e57c2;
-            outline: none;
-        }
-
-    #asignar-patentes-container table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 20px;
-        color: #333;
-    }
-
-    #asignar-patentes-container table,
-    #asignar-patentes-container th,
-    #asignar-patentes-container td {
-        border: 1px solid #7e57c2;
-    }
-
-    #asignar-patentes-container th,
-    #asignar-patentes-container td {
-        padding: 10px;
-        text-align: left;
-    }
-
-    #asignar-patentes-container th {
-        background-color: #7e57c2;
-        color: white;
-    }
-
-    #asignar-patentes-container td {
-        background-color: #f2e8ff;
-    }
-
-    #asignar-patentes-container .submit-btn {
-        width: 100%;
-        padding: 10px;
-        background-color: #7e57c2;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        margin-top: 10px;
-    }
-
-        #asignar-patentes-container .submit-btn:hover {
-            background-color: #6a1b9a;
-        }
-
-#desasignar-familias-container {
-    background-color: #ffffff;
-    padding: 20px 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    width: 100%;
-    margin: auto;
-}
-
+    #asignar-patentes-container h3,
     #desasignar-familias-container h2,
-    #desasignar-familias-container h3 {
-        color: #4a148c;
-        margin-bottom: 15px;
-    }
-
-    #desasignar-familias-container h2 {
-        font-size: 24px;
-        text-align: center;
-    }
-
-    #desasignar-familias-container h3 {
-        font-size: 20px;
-    }
-
-    #desasignar-familias-container .form-group input[type="text"],
-    #desasignar-familias-container .form-group select {
-        width: 100%;
-        padding: 10px;
-        background-color: #f2e8ff;
-        color: #333;
-        border: 1px solid #cfd8dc;
-        border-radius: 4px;
-        font-size: 16px;
-        margin-bottom: 15px;
-    }
-
-        #desasignar-familias-container .form-group input[type="text"]:focus,
-        #desasignar-familias-container .form-group select:focus {
-            border-color: #7e57c2;
-            outline: none;
-        }
-
-    #desasignar-familias-container table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 20px;
-        color: #333;
-    }
-
-    #desasignar-familias-container table,
-    #desasignar-familias-container th,
-    #desasignar-familias-container td {
-        border: 1px solid #7e57c2;
-    }
-
-    #desasignar-familias-container th,
-    #desasignar-familias-container td {
-        padding: 10px;
-        text-align: left;
-    }
-
-    #desasignar-familias-container th {
-        background-color: #7e57c2;
-        color: white;
-    }
-
-    #desasignar-familias-container td {
-        background-color: #f2e8ff;
-    }
-
-    #desasignar-familias-container .submit-btn {
-        width: 100%;
-        padding: 10px;
-        background-color: #7e57c2;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        margin-top: 10px;
-    }
-
-        #desasignar-familias-container .submit-btn:hover {
-            background-color: #6a1b9a;
-        }
-
-#desasignar-patentes-container {
-    background-color: #ffffff;
-    padding: 20px 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    width: 100%;
-    margin: auto;
-}
-
+    #desasignar-familias-container h3,
     #desasignar-patentes-container h2,
-    #desasignar-patentes-container h3 {
-        color: #4a148c;
-        margin-bottom: 15px;
-    }
-
-    #desasignar-patentes-container h2 {
-        font-size: 24px;
-        text-align: center;
-    }
-
-    #desasignar-patentes-container h3 {
-        font-size: 20px;
-    }
-
-    #desasignar-patentes-container .form-group input[type="text"],
-    #desasignar-patentes-container .form-group select {
-        width: 100%;
-        padding: 10px;
-        background-color: #f2e8ff;
-        color: #333;
-        border: 1px solid #cfd8dc;
-        border-radius: 4px;
-        font-size: 16px;
-        margin-bottom: 15px;
-    }
-
-        #desasignar-patentes-container .form-group input[type="text"]:focus,
-        #desasignar-patentes-container .form-group select:focus {
-            border-color: #7e57c2;
-            outline: none;
-        }
-
-    #desasignar-patentes-container table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 20px;
-        color: #333;
-    }
-
-    #desasignar-patentes-container table,
-    #desasignar-patentes-container th,
-    #desasignar-patentes-container td {
-        border: 1px solid #7e57c2;
-    }
-
-    #desasignar-patentes-container th,
-    #desasignar-patentes-container td {
-        padding: 10px;
-        text-align: left;
-    }
-
-    #desasignar-patentes-container th {
-        background-color: #7e57c2;
-        color: white;
-    }
-
-    #desasignar-patentes-container td {
-        background-color: #f2e8ff;
-    }
-
-    #desasignar-patentes-container .submit-btn {
-        width: 100%;
-        padding: 10px;
-        background-color: #7e57c2;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        margin-top: 10px;
-    }
-
-        #desasignar-patentes-container .submit-btn:hover {
-            background-color: #6a1b9a;
-        }
-
-#modificar-familia-container {
-    background-color: #ffffff;
-    padding: 20px 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    width: 100%;
-    margin: auto;
-}
-
+    #desasignar-patentes-container h3,
     #modificar-familia-container h2,
     #modificar-familia-container h3 {
         color: #4a148c;
         margin-bottom: 15px;
     }
 
-    #modificar-familia-container h2 {
-        font-size: 24px;
-        text-align: center;
-    }
-
-    #modificar-familia-container h3 {
-        font-size: 20px;
-    }
-
-    #modificar-familia-container .form-group label {
-        color: #5f6368;
-        font-weight: bold;
-        margin-bottom: 5px;
-        display: block;
-    }
-
+    #alta-familia-container .form-group input[type="text"],
+    #asignar-familias-container .form-group input[type="text"],
+    #asignar-familias-container .form-group select,
+    #asignar-patentes-container .form-group input[type="text"],
+    #asignar-patentes-container .form-group select,
+    #desasignar-familias-container .form-group input[type="text"],
+    #desasignar-familias-container .form-group select,
+    #desasignar-patentes-container .form-group input[type="text"],
+    #desasignar-patentes-container .form-group select,
     #modificar-familia-container .form-group input[type="text"] {
         width: 100%;
         padding: 10px;
         background-color: #f2e8ff;
         color: #333;
         border: 1px solid #cfd8dc;
-        border-radius: 4px;
+        border-radius: 0;
         font-size: 16px;
         margin-bottom: 15px;
     }
 
-        #modificar-familia-container .form-group input[type="text"]:focus {
-            border-color: #7e57c2;
-            outline: none;
-        }
+    #alta-familia-container .submit-btn,
+    #asignar-familias-container .submit-btn,
+    #asignar-patentes-container .submit-btn,
+    #desasignar-familias-container .submit-btn,
+    #desasignar-patentes-container .submit-btn,
+    #modificar-familia-container .submit-btn {
+        width: 100%;
+        padding: 10px;
+        background-color: #7e57c2;
+        color: #fff;
+        border: none;
+        border-radius: 0;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 10px;
+    }
 
+    #alta-familia-container table,
+    #asignar-familias-container table,
+    #asignar-patentes-container table,
+    #desasignar-familias-container table,
+    #desasignar-patentes-container table,
     #modificar-familia-container table {
         width: 100%;
         border-collapse: collapse;
@@ -551,43 +139,41 @@
         color: #333;
     }
 
-    #modificar-familia-container table,
-    #modificar-familia-container th,
-    #modificar-familia-container td {
-        border: 1px solid #7e57c2;
-    }
-
+    #alta-familia-container th,
+    #alta-familia-container td,
+    #asignar-familias-container th,
+    #asignar-familias-container td,
+    #asignar-patentes-container th,
+    #asignar-patentes-container td,
+    #desasignar-familias-container th,
+    #desasignar-familias-container td,
+    #desasignar-patentes-container th,
+    #desasignar-patentes-container td,
     #modificar-familia-container th,
     #modificar-familia-container td {
         padding: 10px;
         text-align: left;
+        border: 1px solid #7e57c2;
     }
 
+    #alta-familia-container th,
+    #asignar-familias-container th,
+    #asignar-patentes-container th,
+    #desasignar-familias-container th,
+    #desasignar-patentes-container th,
     #modificar-familia-container th {
         background-color: #7e57c2;
         color: white;
     }
 
+    #alta-familia-container td,
+    #asignar-familias-container td,
+    #asignar-patentes-container td,
+    #desasignar-familias-container td,
+    #desasignar-patentes-container td,
     #modificar-familia-container td {
         background-color: #f2e8ff;
     }
-
-    #modificar-familia-container .submit-btn {
-        width: 100%;
-        padding: 10px;
-        background-color: #7e57c2;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        margin-top: 10px;
-    }
-
-        #modificar-familia-container .submit-btn:hover {
-            background-color: #6a1b9a;
-        }
 
 input[type="radio"],
 input[type="checkbox"] {
@@ -599,14 +185,10 @@ input[type="checkbox"] {
     width: 18px;
     height: 18px;
     border: 1px solid #7e57c2;
-    border-radius: 4px;
+    border-radius: 0;
     display: grid;
     place-content: center;
     cursor: pointer;
-}
-
-input[type="radio"] {
-    border-radius: 50%;
 }
 
     input[type="radio"]::before,
@@ -618,7 +200,6 @@ input[type="radio"] {
         transform: scale(0);
         transition: transform 0.2s ease-in-out;
         background-color: #ffffff;
-        border-radius: inherit;
     }
 
     input[type="radio"]:checked::before,
@@ -626,7 +207,7 @@ input[type="radio"] {
         transform: scale(1);
     }
 
-input[type="checkbox"]:checked::before {
-    width: 10px;
-    height: 10px;
-}
+    input[type="checkbox"]:checked::before {
+        width: 10px;
+        height: 10px;
+    }

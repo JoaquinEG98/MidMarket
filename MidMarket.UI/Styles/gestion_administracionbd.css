@@ -9,7 +9,7 @@
 .adminbd-container {
     background-color: #ffffff;
     padding: 40px;
-    border-radius: 10px;
+    border-radius: 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     max-width: 900px;
     margin: 50px auto;
@@ -55,7 +55,7 @@
     padding: 10px 14px;
     background-color: #f2e8ff;
     border: 1px solid #cfd8dc;
-    border-radius: 5px;
+    border-radius: 0;
     width: calc(100% - 40px);
     font-size: 15px;
     margin-right: 10px;
@@ -66,7 +66,7 @@
     background-color: #7e57c2;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 0;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -81,7 +81,7 @@
     background-color: #7e57c2;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 0;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;

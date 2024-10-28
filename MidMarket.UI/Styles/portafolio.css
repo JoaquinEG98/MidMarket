@@ -19,6 +19,7 @@
     color: white;
     border: none;
     transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 0;
 }
 
     .ingresar-dinero:hover {
@@ -29,7 +30,7 @@
 .activos-card {
     background-color: #ffffff;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
@@ -45,19 +46,21 @@
         color: white;
         text-align: left;
         border: 1px solid #7e57c2;
+        border-radius: 0;
     }
 
     .activos-table td {
         background-color: #f2e8ff;
         font-weight: bold;
         border: 1px solid #7e57c2;
+        border-radius: 0;
     }
 
 .disponible-operar {
     background-color: #f2e8ff;
     padding: 10px;
     margin-top: 15px;
-    border-radius: 5px;
+    border-radius: 0;
     font-weight: bold;
 }
 
@@ -73,7 +76,7 @@
     justify-content: space-between;
     margin: 5px 0;
     padding: 8px 12px;
-    border-radius: 5px;
+    border-radius: 0;
     background-color: #f2e8ff;
     margin-left: 0;
 }
@@ -98,10 +101,9 @@
     text-align: right;
 }
 
-
 .custom-card {
     background-color: #ffffff;
-    border-radius: 8px;
+    border-radius: 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     color: #333;
 }
@@ -111,8 +113,8 @@
     color: white;
     font-weight: bold;
     padding: 10px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
 
 .custom-card-body {

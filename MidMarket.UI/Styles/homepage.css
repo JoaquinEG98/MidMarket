@@ -53,7 +53,7 @@ nav {
         background-color: #7e57c2;
         color: #fff;
         padding: 10px 20px;
-        border-radius: 4px;
+        border-radius: 0; 
         text-decoration: none;
         font-weight: bold;
         transition: background-color 0.3s ease;
@@ -109,7 +109,7 @@ nav {
     .image-wrapper img {
         max-width: 80%;
         height: auto;
-        border-radius: 8px;
+        border-radius: 0;
         transition: transform 0.3s ease, opacity 0.3s ease;
     }
 
@@ -159,7 +159,7 @@ footer.hero {
     margin: 0 auto;
     background-color: rgba(0, 0, 0, 0.6);
     padding: 40px;
-    border-radius: 8px;
+    border-radius: 0;
 }
 
 footer.hero h2 {
@@ -178,7 +178,7 @@ footer.hero .cta-btn {
     background-color: #6a1b9a;
     color: #fff;
     padding: 10px 20px;
-    border-radius: 4px;
+    border-radius: 0;
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s ease;

@@ -16,7 +16,7 @@
     flex: 1;
     padding: 20px;
     background-color: #7e57c2;
-    border-radius: 8px;
+    border-radius: 0;
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, opacity 0.3s ease;
@@ -47,7 +47,7 @@
     padding: 10px;
     background-color: #7e57c2;
     margin-bottom: 10px;
-    border-radius: 8px;
+    border-radius: 0;
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, opacity 0.3s ease;
