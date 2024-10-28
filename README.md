@@ -8,14 +8,11 @@ Este repositorio contiene el código y la documentación del Trabajo Final de In
 - [Descripción del Proyecto](#descripción-del-proyecto)
 - [Funcionalidades Principales](#funcionalidades-principales)
 - [Tecnologías Utilizadas](#tecnologías-utilizadas)
-- [Instalación y Configuración](#instalación-y-configuración)
-- [Ejecución del Proyecto](#ejecución-del-proyecto)
-- [Contribuciones](#contribuciones)
 - [Contacto](#contacto)
 
 ## Descripción del Proyecto
 
-MidMarket es un broker financiero diseñado para conectar medianas empresas argentinas con oportunidades de inversión adaptadas a sus necesidades. Este TFI aborda la necesidad de servicios financieros especializados para este segmento del mercado, integrando tecnología avanzada y un enfoque personalizado. MidMarket permite la gestión de portafolios, asesoría personalizada, onboarding automatizado y programas de educación financiera para las empresas.
+MidMarket es un broker financiero diseñado para conectar medianas empresas argentinas con oportunidades de inversión adaptadas a sus necesidades. Aborda la necesidad de servicios financieros especializados para este segmento del mercado, integrando tecnología avanzada y un enfoque personalizado. MidMarket permite la gestión de portafolios, asesoría personalizada, onboarding automatizado y programas de educación financiera para las empresas.
 
 ## Funcionalidades Principales
 
