@@ -37,4 +37,4 @@ Este proyecto está desarrollado con:
 Para consultas relacionadas con el proyecto, puedes comunicarte con el desarrollador:
 
 **Joaquin Ezequiel Gonzalez**  
-Correo electrónico: [email@example.com](joaquineg.88@gmail.com)
+Correo electrónico: [joaquineg.88@gmail.com](joaquineg.88@gmail.com)
