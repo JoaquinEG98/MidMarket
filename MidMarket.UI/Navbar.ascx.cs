@@ -143,12 +143,12 @@ namespace MidMarket.UI
                     break;
 
                 case Entities.Enums.Permiso.ModificarBono:
-                    accionesDropDown.Visible = true;
+                    bonosDropDown.Visible = true;
                     administrarBonosLink.Visible = true;
                     break;
 
                 case Entities.Enums.Permiso.AltaBono:
-                    accionesDropDown.Visible = true;
+                    bonosDropDown.Visible = true;
                     altaBonosLink.Visible = true;
                     break;
 
