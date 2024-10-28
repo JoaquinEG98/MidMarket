@@ -1,4 +1,5 @@
 ﻿using MidMarket.Business.Interfaces;
+using MidMarket.Business.Seguridad;
 using MidMarket.Entities.DTOs;
 using Newtonsoft.Json;
 using System;
@@ -7,7 +8,6 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
-using System.Text;
 using Unity;
 
 namespace MidMarket.UI
@@ -26,113 +26,58 @@ namespace MidMarket.UI
         protected void Page_Load(object sender, EventArgs e)
         {
             string token = Request.QueryString["token"];
-
             if (string.IsNullOrEmpty(token))
-            {
                 MostrarFormularioSolicitud();
-            }
             else
-            {
                 ProcesarToken(token);
-            }
         }
 
-        private void MostrarFormularioSolicitud()
-        {
-            formSolicitud.Visible = true;
-        }
+        private void MostrarFormularioSolicitud() => formSolicitud.Visible = true;
 
         private void ProcesarToken(string token)
         {
             if (!EsTokenValido(token))
             {
-                MostrarFormularioSolicitud();
-                lblMensaje.Text = "El enlace de restauración ha expirado o es inválido. Solicitá un nuevo enlace.";
-                lblMensaje.CssClass = "error-label";
-                lblMensaje.Visible = true;
+                MostrarError("El enlace de restauración ha expirado o es inválido. Solicitá un nuevo enlace.");
                 return;
             }
 
             string email = GetEmailPorToken(token);
-            string nuevaPassword = GenerarPasswordRandom();
+            string nuevaPassword = Encriptacion.GenerarPasswordRandom();
 
             ActualizarPassword(email, nuevaPassword);
-            EnviarMailNuevaPassword(email, nuevaPassword);
+            EnviarCorreo(email, "MidMarket - Nueva contraseña generada", $"Tu nueva contraseña es: {nuevaPassword}");
 
             EliminarToken(token);
-
-            MostrarFormularioSolicitud();
-            lblMensaje.Text = "Se ha generado una nueva contraseña y se ha enviado a su correo.";
-            lblMensaje.CssClass = "success-label";
-            lblMensaje.Visible = true;
+            MostrarMensaje("Se ha generado una nueva contraseña y se ha enviado a su correo.");
         }
 
         protected void btnReestablecer_Click(object sender, EventArgs e)
         {
-            if (!Page.IsValid)
-                return;
+            if (!Page.IsValid) return;
 
             string email = ValidarEmailControl.Email;
             string token = GenerarToken();
-            DateTime expiracion = DateTime.Now.AddMinutes(15);
+            GuardarToken(new TokenEmailDTO { Email = email, Token = token, FechaExpiracion = DateTime.Now.AddMinutes(15) });
+            EnviarCorreo(email, "MidMarket - Restauración de Contraseña", $"{UrlSitio}/ReestablecerPassword.aspx?token={token}");
 
-            GuardarTokenJson(email, token, expiracion);
-            EnviarCorreoRecuperacion(email, token);
-
-            lblMensaje.Text = "Se ha enviado un enlace de restauración a tu correo.";
-            lblMensaje.CssClass = "success-label";
-            lblMensaje.Visible = true;
-
+            MostrarMensaje("Se ha enviado un enlace de restauración a tu correo.");
             ValidarEmailControl.Email = string.Empty;
         }
 
-        private string GenerarToken()
+        private void GuardarToken(TokenEmailDTO tokenInfo)
         {
-            return Guid.NewGuid().ToString();
-        }
-
-        private void GuardarTokenJson(string email, string token, DateTime expiracion)
-        {
-            var tokenInfo = new TokenEmailDTO
-            {
-                Email = email,
-                Token = token,
-                FechaExpiracion = expiracion
-            };
-
-            List<TokenEmailDTO> tokens;
-
-            if (File.Exists(Server.MapPath(TokenPath)))
-            {
-                string json = File.ReadAllText(Server.MapPath(TokenPath));
-                tokens = JsonConvert.DeserializeObject<List<TokenEmailDTO>>(json) ?? new List<TokenEmailDTO>();
-            }
-            else
-            {
-                tokens = new List<TokenEmailDTO>();
-            }
-
+            var tokens = LeerTokensJson();
             tokens.Add(tokenInfo);
-
-            string updatedJson = JsonConvert.SerializeObject(tokens, Formatting.Indented);
-            File.WriteAllText(Server.MapPath(TokenPath), updatedJson);
+            GuardarTokensJson(tokens);
         }
 
-        private void EnviarCorreoRecuperacion(string email, string token)
+        private void EnviarCorreo(string destinatario, string asunto, string mensaje)
         {
-            string link = $"{UrlSitio}/ReestablecerPassword.aspx?token={token}";
-            string subject = "MidMarket - Restauración de Contraseña";
-            string body = $"Hola, {email}.\n\nHacé clic en el siguiente enlace para restaurar tu contraseña:\n{link}\n\nEste enlace expirará en 15 minutos.";
-
-            using (MailMessage mail = new MailMessage())
+            using (var mail = new MailMessage("hello@demomailtrap.com", "joaquinezequielgonzalez98@gmail.com", asunto, mensaje))
             {
-                mail.From = new MailAddress("hello@demomailtrap.com");
-                mail.To.Add("joaquinezequielgonzalez98@gmail.com");
-                mail.Subject = subject;
-                mail.Body = body;
                 mail.IsBodyHtml = false;
-
-                using (SmtpClient smtp = new SmtpClient("live.smtp.mailtrap.io", 587))
+                using (var smtp = new SmtpClient("live.smtp.mailtrap.io", 587))
                 {
                     smtp.Credentials = new NetworkCredential("smtp@mailtrap.io", "85c0349a01d11fd5d4230fbef10c1454");
                     smtp.EnableSsl = true;
@@ -143,33 +88,33 @@ namespace MidMarket.UI
 
         private bool EsTokenValido(string token)
         {
-            if (File.Exists(Server.MapPath(TokenPath)))
-            {
-                string json = File.ReadAllText(Server.MapPath(TokenPath));
-                List<TokenEmailDTO> tokens = JsonConvert.DeserializeObject<List<TokenEmailDTO>>(json) ?? new List<TokenEmailDTO>();
-
-                TokenEmailDTO tokenInfo = tokens.FirstOrDefault(t => t.Token == token && t.FechaExpiracion > DateTime.Now);
-                return tokenInfo != null;
-            }
-            return false;
+            return LeerTokensJson().Any(t => t.Token == token && t.FechaExpiracion > DateTime.Now);
         }
 
         private string GetEmailPorToken(string token)
         {
-            string json = File.ReadAllText(Server.MapPath(TokenPath));
-            List<TokenEmailDTO> tokens = JsonConvert.DeserializeObject<List<TokenEmailDTO>>(json) ?? new List<TokenEmailDTO>();
-
-            TokenEmailDTO tokenInfo = tokens.FirstOrDefault(t => t.Token == token);
-            return tokenInfo?.Email;
+            return LeerTokensJson().FirstOrDefault(t => t.Token == token)?.Email;
         }
 
         private void EliminarToken(string token)
         {
-            string json = File.ReadAllText(Server.MapPath(TokenPath));
-            List<TokenEmailDTO> tokens = JsonConvert.DeserializeObject<List<TokenEmailDTO>>(json) ?? new List<TokenEmailDTO>();
+            var tokens = LeerTokensJson().Where(t => t.Token != token).ToList();
+            GuardarTokensJson(tokens);
+        }
 
-            tokens.RemoveAll(t => t.Token == token);
-            File.WriteAllText(Server.MapPath(TokenPath), JsonConvert.SerializeObject(tokens, Formatting.Indented));
+        private List<TokenEmailDTO> LeerTokensJson()
+        {
+            string filePath = Server.MapPath(TokenPath);
+            if (!File.Exists(filePath)) return new List<TokenEmailDTO>();
+
+            string json = File.ReadAllText(filePath);
+            return JsonConvert.DeserializeObject<List<TokenEmailDTO>>(json) ?? new List<TokenEmailDTO>();
+        }
+
+        private void GuardarTokensJson(List<TokenEmailDTO> tokens)
+        {
+            string filePath = Server.MapPath(TokenPath);
+            File.WriteAllText(filePath, JsonConvert.SerializeObject(tokens, Formatting.Indented));
         }
 
         private void ActualizarPassword(string email, string newPassword)
@@ -177,50 +122,25 @@ namespace MidMarket.UI
             _usuarioService.ReestablecerPassword(email, newPassword);
         }
 
-        private void EnviarMailNuevaPassword(string email, string newPassword)
+        private string GenerarToken()
         {
-            string subject = "MidMarket - Nueva contraseña generada";
-            string body = $"Hola, {email}.\n\nTu nueva contraseña es: {newPassword}\n\nPor favor, inicia sesión y cambia tu contraseña en la sección de cambio de contraseña.";
-
-            using (MailMessage mail = new MailMessage())
-            {
-                mail.From = new MailAddress("hello@demomailtrap.com");
-                mail.To.Add("joaquinezequielgonzalez98@gmail.com");
-                mail.Subject = subject;
-                mail.Body = body;
-                mail.IsBodyHtml = false;
-
-                using (SmtpClient smtp = new SmtpClient("live.smtp.mailtrap.io", 587))
-                {
-                    smtp.Credentials = new NetworkCredential("smtp@mailtrap.io", "85c0349a01d11fd5d4230fbef10c1454");
-                    smtp.EnableSsl = true;
-                    smtp.Send(mail);
-                }
-            }
+            return Guid.NewGuid().ToString();
         }
 
-        private string GenerarPasswordRandom()
+        private void MostrarMensaje(string mensaje)
         {
-            const string lowerChars = "abcdefghijklmnopqrstuvwxyz";
-            const string upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            const string digitChars = "0123456789";
-            const string specialChars = "!?.#$%";
+            lblMensaje.Text = mensaje;
+            lblMensaje.CssClass = "success-label";
+            lblMensaje.Visible = true;
+            MostrarFormularioSolicitud();
+        }
 
-            Random random = new Random();
-            StringBuilder password = new StringBuilder();
-
-            password.Append(lowerChars[random.Next(lowerChars.Length)]);
-            password.Append(upperChars[random.Next(upperChars.Length)]);
-            password.Append(digitChars[random.Next(digitChars.Length)]);
-            password.Append(specialChars[random.Next(specialChars.Length)]);
-
-            string allChars = lowerChars + upperChars + digitChars + specialChars;
-            while (password.Length < 8)
-            {
-                password.Append(allChars[random.Next(allChars.Length)]);
-            }
-
-            return new string(password.ToString().OrderBy(c => random.Next()).ToArray());
+        private void MostrarError(string mensaje)
+        {
+            lblMensaje.Text = mensaje;
+            lblMensaje.CssClass = "error-label";
+            lblMensaje.Visible = true;
+            MostrarFormularioSolicitud();
         }
     }
 }
