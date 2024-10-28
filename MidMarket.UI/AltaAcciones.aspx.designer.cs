@@ -15,31 +15,13 @@ namespace MidMarket.UI
     {
 
         /// <summary>
-        /// nombreAccion control.
+        /// ValidarAcciones control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText nombreAccion;
-
-        /// <summary>
-        /// simboloAccion control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText simboloAccion;
-
-        /// <summary>
-        /// precioAccion control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText precioAccion;
+        protected global::MidMarket.UI.ValidarAcciones ValidarAcciones;
 
         /// <summary>
         /// btnCargar control.

@@ -14,7 +14,7 @@ namespace MidMarket.UI
         private readonly ISessionManager _sessionManager;
 
         public Accion Accion { get; set; }
-        private int _accionId { get; set; }
+        private int _accionId;
 
         public ModificarAccion()
         {
@@ -24,34 +24,45 @@ namespace MidMarket.UI
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            try
-            {
-                _accionId = int.Parse(Request.QueryString["id"]);
-                CargarAccion();
-            }
-            catch (Exception ex)
-            {
-                AlertHelper.MostrarModal(this, $"Error al cargar la página: {ex.Message}");
-                Response.Redirect("AdministrarAcciones.aspx");
-            }
-        }
-
-        protected void btnGuardar_Click(object sender, EventArgs e)
-        {
             var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
 
             if (clienteLogueado == null || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.ModificarAccion))
                 Response.Redirect("Default.aspx");
 
+            if (!IsPostBack)
+            {
+                try
+                {
+                    _accionId = int.Parse(Request.QueryString["id"]);
+                    ViewState["AccionId"] = _accionId;
+                    CargarAccion();
+                }
+                catch (Exception ex)
+                {
+                    AlertHelper.MostrarModal(this, $"Error al cargar la página: {ex.Message}");
+                    Response.Redirect("AdministrarAcciones.aspx");
+                }
+            }
+            else
+            {
+                _accionId = (int)ViewState["AccionId"];
+            }
+        }
+
+        protected void btnGuardar_Click(object sender, EventArgs e)
+        {
+            if (!Page.IsValid)
+                return;
+
             try
             {
-                string nombreAccion = Request.Form["nombreAccion"];
-                string simboloAccion = Request.Form["simboloAccion"];
-                decimal precioAccion = decimal.Parse(Request.Form["precioAccion"]);
+                string nombreAccion = ValidarAcciones.Nombre;
+                string simboloAccion = ValidarAcciones.Simbolo;
+                decimal precioAccion = ValidarAcciones.Precio;
 
                 GuardarAccion(nombreAccion, simboloAccion, precioAccion);
+
                 AlertHelper.MostrarModal(this, $"Acción {nombreAccion} modificada correctamente.");
-                CargarAccion();
             }
             catch (Exception ex)
             {
@@ -61,14 +72,17 @@ namespace MidMarket.UI
 
         private void GuardarAccion(string nombreAccion, string simboloAccion, decimal precioAccion)
         {
-            var accion = new Accion()
+            var accion = _activoService.GetAcciones().FirstOrDefault(x => x.Id == _accionId);
+
+            if (accion == null)
             {
-                Id = Accion.Id,
-                Id_Accion = Accion.Id_Accion,
-                Nombre = nombreAccion,
-                Simbolo = simboloAccion,
-                Precio = precioAccion
-            };
+                AlertHelper.MostrarModal(this, "No se pudo cargar la acción para guardar los cambios.");
+                return;
+            }
+
+            accion.Nombre = nombreAccion;
+            accion.Simbolo = simboloAccion;
+            accion.Precio = precioAccion;
 
             _activoService.ModificarAccion(accion);
         }
@@ -76,11 +90,17 @@ namespace MidMarket.UI
         private void CargarAccion()
         {
             Accion = _activoService.GetAcciones().FirstOrDefault(x => x.Id == _accionId);
+
             if (Accion == null)
             {
                 AlertHelper.MostrarModal(this, "Acción no encontrada.");
                 Response.Redirect("AdministrarAcciones.aspx");
+                return;
             }
+
+            ValidarAcciones.Nombre = Accion.Nombre;
+            ValidarAcciones.Simbolo = Accion.Simbolo;
+            ValidarAcciones.Precio = Accion.Precio;
         }
     }
 }

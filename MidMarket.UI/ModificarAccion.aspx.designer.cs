@@ -15,6 +15,15 @@ namespace MidMarket.UI
     {
 
         /// <summary>
+        /// ValidarAcciones control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::MidMarket.UI.ValidarAcciones ValidarAcciones;
+
+        /// <summary>
         /// btnGuardar control.
         /// </summary>
         /// <remarks>

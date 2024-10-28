@@ -28,31 +28,27 @@ namespace MidMarket.UI
 
         protected void btnCargar_Click(object sender, EventArgs e)
         {
+            if (!Page.IsValid)
+                return;
+
             try
             {
                 Accion accion = new Accion
                 {
-                    Nombre = nombreAccion.Value,
-                    Simbolo = simboloAccion.Value,
-                    Precio = decimal.Parse(precioAccion.Value)
+                    Nombre = ValidarAcciones.Nombre,
+                    Simbolo = ValidarAcciones.Simbolo,
+                    Precio = ValidarAcciones.Precio
                 };
 
                 _activoService.AltaAccion(accion);
 
                 AlertHelper.MostrarModal(this, $"Acción {accion.Nombre} dada de alta correctamente.");
-                LimpiarCampos();
+                ValidarAcciones.LimpiarCampos();
             }
             catch (Exception ex)
             {
                 AlertHelper.MostrarModal(this, $"Error al dar de alta la Acción: {ex.Message}.");
             }
-        }
-
-        private void LimpiarCampos()
-        {
-            nombreAccion.Value = "";
-            simboloAccion.Value = "";
-            precioAccion.Value = "";
         }
     }
 }
