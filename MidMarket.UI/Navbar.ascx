@@ -71,6 +71,10 @@
                 <li class="nav-item" runat="server" id="misTransaccionesDropdown">
                     <a class="nav-link" href="/Transacciones.aspx">Mis Transacciones</a>
                 </li>
+
+                <li class="nav-item" runat="server" id="portafolioDrowndown">
+                    <a class="nav-link" href="/Portafolio.aspx">Portafolio</a>
+                </li>
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item" runat="server" id="logoutLink">

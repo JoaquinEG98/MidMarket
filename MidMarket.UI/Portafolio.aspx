@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Portafolio.aspx.cs" Inherits="MidMarket.UI.Portafolio" MasterPageFile="~/Site.Master" Title="Mi Portafolio" %>
 
+<%@ Import Namespace="MidMarket.Entities" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link href="~/Content/Portafolio.css" rel="stylesheet" />
 
@@ -24,20 +26,33 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <% foreach (var compra in Compras)
+                                { %>
+                            <% foreach (var detalle in compra.Detalle)
+                                { %>
                             <tr>
-                                <td>Acciones</td>
-                                <td>100</td>
-                                <td>$1,500.00</td>
+                                <td><%= detalle.Activo.Nombre %></td>
+                                <td><%= detalle.Cantidad %></td>
+
+                                <% if (detalle.Activo is Accion accion)
+                                    { %>
+                                <td><%= accion.Precio.ToString("C") %></td>
+                                <!-- Último Precio para Accion -->
                                 <td>-</td>
-                                <td>$150.00</td>
-                            </tr>
-                            <tr>
-                                <td>Bonos</td>
-                                <td>50</td>
+                                <td><%= (detalle.Cantidad * accion.Precio).ToString("C") %></td>
+                                <!-- Rendimiento para Accion -->
+                                <% }
+                                    else if (detalle.Activo is Bono bono)
+                                    { %>
                                 <td>-</td>
-                                <td>$5,000.00</td>
-                                <td>$250.00</td>
+                                <td><%= bono.ValorNominal.ToString("C") %></td>
+                                <!-- Valor Nominal para Bono -->
+                                <td><%= (detalle.Cantidad * bono.ValorNominal).ToString("C") %></td>
+                                <!-- Rendimiento para Bono -->
+                                <% } %>
                             </tr>
+                            <% } %>
+                            <% } %>
                         </tbody>
                     </table>
 
@@ -47,7 +62,7 @@
                             <span class="icono-moneda">$</span>
                             <span>PESOS</span>
                             <span class="disponible-texto">Disponible para operar</span>
-                            <span class="disponible-monto">$ 197,00</span>
+                            <span class="disponible-monto">$ <%= PesosDisponibles.ToString("N2") %></span>
                         </p>
                     </div>
                 </div>
@@ -72,32 +87,65 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var ctx = document.getElementById('chartDistribucionActivos').getContext('2d');
-            var chart = new Chart(ctx, {
-                type: 'pie',
-                data: {
-                    labels: ['Acciones', 'Bonos'],
-                    datasets: [{
-                        data: [100, 50],
-                        backgroundColor: ['#FFCCB3', '#D4E6A5']
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            display: true,
-                            position: 'bottom',
-                            labels: {
-                                color: '#333'
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var ctx = document.getElementById('chartDistribucionActivos').getContext('2d');
+
+        // Obtén los datos desde las variables JSON del servidor
+        var accionesTotal = <%= AccionesTotalJson %>;
+        var bonosTotal = <%= BonosTotalJson %>;
+
+        var labels = ['Acciones', 'Bonos'];
+        var data = [accionesTotal, bonosTotal];
+
+        var chart = new Chart(ctx, {
+            type: 'pie',  // Cambiado a 'pie' para un gráfico de discos completo
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'Distribución de Activos',
+                        data: data,
+                        backgroundColor: ['#FFCCB3', '#D4E6A5'],  // Colores específicos: Acciones y Bonos
+                        borderColor: ['#FFCCB3', '#D4E6A5'],
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'bottom',
+                        labels: {
+                            color: '#333'
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                var label = context.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                label += context.raw.toLocaleString("es-AR", { style: "currency", currency: "ARS" });
+                                return label;
                             }
                         }
                     }
                 }
-            });
+            }
         });
-    </script>
+    });
+</script>
+
+
+
+
+
+
+
+
 </asp:Content>

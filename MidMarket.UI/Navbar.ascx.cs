@@ -45,6 +45,7 @@ namespace MidMarket.UI
             usuariosLink.Visible = false;
             altaUsuarioLink.Visible = false;
             administracionBD.Visible = false;
+            portafolioDrowndown.Visible = false;
         }
 
         private void AsignarMenuPermisos(Cliente cliente)
@@ -155,6 +156,10 @@ namespace MidMarket.UI
                 case Entities.Enums.Permiso.AltaAccion:
                     accionesDropDown.Visible = true;
                     altaAccionesLink.Visible = true;
+                    break;
+
+                case Entities.Enums.Permiso.VisualizarPortafolio:
+                    portafolioDrowndown.Visible = true;
                     break;
             }
         }
