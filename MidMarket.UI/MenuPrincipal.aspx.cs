@@ -94,7 +94,6 @@ namespace MidMarket.UI
         private void LlenarInformacionGrafico()
         {
             var compras = _compraService.GetCompras();
-
             var labels = new List<string>();
             var accionesData = new List<decimal>();
             var bonosData = new List<decimal>();
@@ -110,11 +109,11 @@ namespace MidMarket.UI
                 {
                     if (detalle.Activo is Accion)
                     {
-                        accionesTotal += detalle.Precio * detalle.Cantidad;
+                        accionesTotal += detalle.Precio;
                     }
                     else if (detalle.Activo is Bono)
                     {
-                        bonosTotal += detalle.Precio * detalle.Cantidad;
+                        bonosTotal += detalle.Precio;
                     }
                 }
 
