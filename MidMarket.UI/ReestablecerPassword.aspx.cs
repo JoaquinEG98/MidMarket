@@ -29,45 +29,42 @@ namespace MidMarket.UI
 
             if (string.IsNullOrEmpty(token))
             {
-                // Modo de Solicitud de Token (sin token en la URL)
                 MostrarFormularioSolicitud();
             }
             else
             {
-                // Modo de Verificación de Token (con token en la URL)
                 ProcesarToken(token);
             }
         }
 
         private void MostrarFormularioSolicitud()
         {
-            // Muestra el formulario para que el usuario ingrese su correo electrónico
-            formSolicitud.Visible = true; // Asegúrate de tener un control form en el .aspx llamado formSolicitud
+            formSolicitud.Visible = true;
         }
 
         private void ProcesarToken(string token)
         {
-            // Verificar si el token es válido y no ha expirado
-            if (!IsTokenValid(token))
+            if (!EsTokenValido(token))
             {
-                // Redirige si el token es inválido o ha expirado
-                Response.Redirect("Default.aspx");
+                MostrarFormularioSolicitud();
+                lblMensaje.Text = "El enlace de restauración ha expirado o es inválido. Solicitá un nuevo enlace.";
+                lblMensaje.CssClass = "error-label";
+                lblMensaje.Visible = true;
                 return;
             }
 
-            // Si el token es válido, generar una nueva contraseña
-            string email = GetEmailByToken(token);
-            string newPassword = GenerateRandomPassword();
+            string email = GetEmailPorToken(token);
+            string nuevaPassword = GenerarPasswordRandom();
 
-            // Actualizar la contraseña del usuario y enviar por correo
-            UpdateUserPassword(email, newPassword);
-            SendNewPasswordEmail(email, newPassword);
+            ActualizarPassword(email, nuevaPassword);
+            EnviarMailNuevaPassword(email, nuevaPassword);
 
-            // Eliminar el token del archivo JSON
-            RemoveToken(token);
+            EliminarToken(token);
 
-            // Mensaje de éxito
-            Response.Write("<script>alert('Se ha generado una nueva contraseña y se ha enviado a su correo.');</script>");
+            MostrarFormularioSolicitud();
+            lblMensaje.Text = "Se ha generado una nueva contraseña y se ha enviado a su correo.";
+            lblMensaje.CssClass = "success-label";
+            lblMensaje.Visible = true;
         }
 
         protected void btnReestablecer_Click(object sender, EventArgs e)
@@ -82,7 +79,11 @@ namespace MidMarket.UI
             GuardarTokenJson(email, token, expiracion);
             EnviarCorreoRecuperacion(email, token);
 
-            Response.Write("<script>alert('Se ha enviado un enlace de restauración a tu correo.');</script>");
+            lblMensaje.Text = "Se ha enviado un enlace de restauración a tu correo.";
+            lblMensaje.CssClass = "success-label";
+            lblMensaje.Visible = true;
+
+            ValidarEmailControl.Email = string.Empty;
         }
 
         private string GenerarToken()
@@ -120,8 +121,8 @@ namespace MidMarket.UI
         private void EnviarCorreoRecuperacion(string email, string token)
         {
             string link = $"{UrlSitio}/ReestablecerPassword.aspx?token={token}";
-            string subject = "Restauración de Contraseña";
-            string body = $"Hola,\n\nHaz clic en el siguiente enlace para restaurar tu contraseña:\n{link}\n\nEste enlace expirará en 15 minutos.";
+            string subject = "MidMarket - Restauración de Contraseña";
+            string body = $"Hola, {email}.\n\nHacé clic en el siguiente enlace para restaurar tu contraseña:\n{link}\n\nEste enlace expirará en 15 minutos.";
 
             using (MailMessage mail = new MailMessage())
             {
@@ -140,7 +141,7 @@ namespace MidMarket.UI
             }
         }
 
-        private bool IsTokenValid(string token)
+        private bool EsTokenValido(string token)
         {
             if (File.Exists(Server.MapPath(TokenPath)))
             {
@@ -153,7 +154,7 @@ namespace MidMarket.UI
             return false;
         }
 
-        private string GetEmailByToken(string token)
+        private string GetEmailPorToken(string token)
         {
             string json = File.ReadAllText(Server.MapPath(TokenPath));
             List<TokenEmailDTO> tokens = JsonConvert.DeserializeObject<List<TokenEmailDTO>>(json) ?? new List<TokenEmailDTO>();
@@ -162,7 +163,7 @@ namespace MidMarket.UI
             return tokenInfo?.Email;
         }
 
-        private void RemoveToken(string token)
+        private void EliminarToken(string token)
         {
             string json = File.ReadAllText(Server.MapPath(TokenPath));
             List<TokenEmailDTO> tokens = JsonConvert.DeserializeObject<List<TokenEmailDTO>>(json) ?? new List<TokenEmailDTO>();
@@ -171,15 +172,15 @@ namespace MidMarket.UI
             File.WriteAllText(Server.MapPath(TokenPath), JsonConvert.SerializeObject(tokens, Formatting.Indented));
         }
 
-        private void UpdateUserPassword(string email, string newPassword)
+        private void ActualizarPassword(string email, string newPassword)
         {
             _usuarioService.ReestablecerPassword(email, newPassword);
         }
 
-        private void SendNewPasswordEmail(string email, string newPassword)
+        private void EnviarMailNuevaPassword(string email, string newPassword)
         {
-            string subject = "Nueva Contraseña Generada";
-            string body = $"Hola,\n\nTu nueva contraseña es: {newPassword}\n\nPor favor, inicia sesión y cambia tu contraseña por una de tu preferencia.";
+            string subject = "MidMarket - Nueva contraseña generada";
+            string body = $"Hola, {email}.\n\nTu nueva contraseña es: {newPassword}\n\nPor favor, inicia sesión y cambia tu contraseña en la sección de cambio de contraseña.";
 
             using (MailMessage mail = new MailMessage())
             {
@@ -198,12 +199,12 @@ namespace MidMarket.UI
             }
         }
 
-        private string GenerateRandomPassword()
+        private string GenerarPasswordRandom()
         {
             const string lowerChars = "abcdefghijklmnopqrstuvwxyz";
             const string upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             const string digitChars = "0123456789";
-            const string specialChars = "!@#$%^&*";
+            const string specialChars = "!?.#$%";
 
             Random random = new Random();
             StringBuilder password = new StringBuilder();
