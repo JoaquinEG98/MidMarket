@@ -18,7 +18,7 @@
                 <label for="email">Email</label>
                 <uc:ValidarEmail ID="ValidarEmailControl" runat="server" />
             </div>
-            <asp:Button ID="btnReestablecer" runat="server" Text="Solicitar Enlace de Restauración" OnClick="btnReestablecer_Click" CssClass="submit-btn" />
+            <asp:Button ID="btnReestablecer" runat="server" Text="Reestablecer" OnClick="btnReestablecer_Click" CssClass="submit-btn" />
             <br />
             <asp:Label ID="lblMensaje" runat="server" Visible="false"></asp:Label>
         </form>

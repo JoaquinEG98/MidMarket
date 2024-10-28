@@ -35,17 +35,24 @@ namespace MidMarket.UI
             transaccionesDropdown.Visible = false;
             //carritoDropdown.Visible = false;
             //misTransaccionesDropdown.Visible = false;
+            portafolioDrowndown.Visible = false;
+
             comprarAccionLink.Visible = false;
             venderAccionLink.Visible = false;
             administrarAccionesLink.Visible = false;
             altaAccionesLink.Visible = false;
             administrarBonosLink.Visible = false;
             altaBonosLink.Visible = false;
-            usuariosDropdown.Visible = false;
             usuariosLink.Visible = false;
             altaUsuarioLink.Visible = false;
-            administracionBD.Visible = false;
-            portafolioDrowndown.Visible = false;
+
+            asignarPatentesLink.Visible = false;
+            asignarFamiliasLink.Visible = false;
+            desasignarPatentesLink.Visible = false;
+            desasignarFamiliasLink.Visible = false;
+
+            administracionFamiliasLink.Visible = false;
+            altaFamiliaLink.Visible = false;
         }
 
         private void AsignarMenuPermisos(Cliente cliente)
@@ -130,7 +137,7 @@ namespace MidMarket.UI
                     break;
 
                 case Entities.Enums.Permiso.AltaUsuario:
-                    permisosDropdown.Visible = true;
+                    usuariosDropdown.Visible = true;
                     altaUsuarioLink.Visible = true;
                     break;
 
