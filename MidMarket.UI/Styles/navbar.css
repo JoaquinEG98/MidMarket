@@ -119,3 +119,10 @@ body {
         transform: translateY(0) scale(1);
     }
 }
+
+footer {
+    color: #7e57c2;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0;
+}

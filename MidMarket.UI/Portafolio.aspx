@@ -9,7 +9,9 @@
         <h2 class="portafolio-title">Portafolio</h2>
 
         <div class="d-flex justify-content-end mb-3">
-            <button class="btn ingresar-dinero">Ingresar dinero</button>
+            <asp:HyperLink ID="btnIngresarDinero" runat="server" NavigateUrl="~/CargarSaldo.aspx" CssClass="btn ingresar-dinero">
+                Ingresar dinero
+            </asp:HyperLink>
         </div>
 
         <div class="row">
@@ -37,18 +39,14 @@
                                 <% if (detalle.Activo is Accion accion)
                                     { %>
                                 <td><%= accion.Precio.ToString("C") %></td>
-                                <!-- Último Precio para Accion -->
                                 <td>-</td>
                                 <td><%= (detalle.Cantidad * accion.Precio).ToString("C") %></td>
-                                <!-- Rendimiento para Accion -->
                                 <% }
                                     else if (detalle.Activo is Bono bono)
                                     { %>
                                 <td>-</td>
                                 <td><%= bono.ValorNominal.ToString("C") %></td>
-                                <!-- Valor Nominal para Bono -->
                                 <td><%= (detalle.Cantidad * bono.ValorNominal).ToString("C") %></td>
-                                <!-- Rendimiento para Bono -->
                                 <% } %>
                             </tr>
                             <% } %>
@@ -72,8 +70,7 @@
                 <div class="custom-card resumen-card mb-3">
                     <div class="custom-card-header">Resumen</div>
                     <div class="custom-card-body">
-                        <p><strong>Ganancia - Pérdida:</strong> <strong>$400.00</strong></p>
-                        <p><strong>Activos Valorizados:</strong> <strong>$7,000.00</strong></p>
+                        <p><strong>Activos Valorizados:</strong> <strong>$<%= ActivosValorizados.ToString("N2") %></strong></p>
                     </div>
                 </div>
 
@@ -87,65 +84,56 @@
         </div>
     </div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var ctx = document.getElementById('chartDistribucionActivos').getContext('2d');
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var ctx = document.getElementById('chartDistribucionActivos').getContext('2d');
 
-        // Obtén los datos desde las variables JSON del servidor
-        var accionesTotal = <%= AccionesTotalJson %>;
-        var bonosTotal = <%= BonosTotalJson %>;
+            var accionesTotal = <%= AccionesTotalJson %>;
+            var bonosTotal = <%= BonosTotalJson %>;
 
-        var labels = ['Acciones', 'Bonos'];
-        var data = [accionesTotal, bonosTotal];
+            var labels = ['Acciones', 'Bonos'];
+            var data = [accionesTotal, bonosTotal];
 
-        var chart = new Chart(ctx, {
-            type: 'pie',  // Cambiado a 'pie' para un gráfico de discos completo
-            data: {
-                labels: labels,
-                datasets: [
-                    {
-                        label: 'Distribución de Activos',
-                        data: data,
-                        backgroundColor: ['#FFCCB3', '#D4E6A5'],  // Colores específicos: Acciones y Bonos
-                        borderColor: ['#FFCCB3', '#D4E6A5'],
-                        borderWidth: 1
-                    }
-                ]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        display: true,
-                        position: 'bottom',
-                        labels: {
-                            color: '#333'
+            var chart = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Distribución de Activos',
+                            data: data,
+                            backgroundColor: ['#FFCCB3', '#D4E6A5'],
+                            borderColor: ['#FFCCB3', '#D4E6A5'],
+                            borderWidth: 1
                         }
-                    },
-                    tooltip: {
-                        callbacks: {
-                            label: function (context) {
-                                var label = context.label || '';
-                                if (label) {
-                                    label += ': ';
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'bottom',
+                            labels: {
+                                color: '#333'
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function (context) {
+                                    var label = context.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    label += context.raw.toLocaleString("es-AR", { style: "currency", currency: "ARS" });
+                                    return label;
                                 }
-                                label += context.raw.toLocaleString("es-AR", { style: "currency", currency: "ARS" });
-                                return label;
                             }
                         }
                     }
                 }
-            }
+            });
         });
-    });
-</script>
-
-
-
-
-
-
-
-
+    </script>
 </asp:Content>
