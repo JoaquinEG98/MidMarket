@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ReestablecerPassword.aspx.cs" Inherits="MidMarket.UI.ReestablecerPassword" %>
-<%@ Register Src="~/ValidarEmail.ascx" TagPrefix="uc" TagName="ValidarEmail" %>
+<%@ Register Src="~/Controls/ValidarEmail.ascx" TagPrefix="uc" TagName="ValidarEmail" %>
 
 
 <!DOCTYPE html>

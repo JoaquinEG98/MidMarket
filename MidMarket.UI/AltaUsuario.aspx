@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AltaUsuario.aspx.cs" Inherits="MidMarket.UI.AltaUsuario" MasterPageFile="~/Site.Master" Title="Alta de Usuario" %>
-<%@ Register Src="~/ValidarUsuario.ascx" TagName="ValidarUsuario" TagPrefix="uc" %>
+<%@ Register Src="~/Controls/ValidarUsuario.ascx" TagName="ValidarUsuario" TagPrefix="uc" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="container-usuarios" class="container-usuarios">
