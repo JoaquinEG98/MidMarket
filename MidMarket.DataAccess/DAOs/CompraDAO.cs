@@ -85,7 +85,10 @@ namespace MidMarket.DataAccess.DAOs
 
                 foreach (var compra in compras)
                 {
-                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_COMPRAS_DETALLE, compra.Id);
+                    if (historico)
+                        _dataAccess.SelectCommandText = String.Format(Scripts.GET_COMPRAS_DETALLE, compra.Id);
+                    else
+                        _dataAccess.SelectCommandText = String.Format(Scripts.GET_COMPRAS_DETALLE_ACTIVAS, compra.Id);
 
                     DataSet dsCompra = _dataAccess.ExecuteNonReader();
 

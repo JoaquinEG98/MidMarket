@@ -91,6 +91,7 @@
     <Content Include="Scripts\Carrito\GET_CARRITO.sql" />
     <Content Include="Scripts\Carrito\INSERTAR_CARRITO.sql" />
     <Content Include="Scripts\Compra\GET_COMPRAS_ACTIVAS.sql" />
+    <Content Include="Scripts\Compra\GET_COMPRAS_DETALLE_ACTIVAS.sql" />
     <Content Include="Scripts\Compra\GET_COMPRAS_DETALLE.sql" />
     <Content Include="Scripts\Compra\GET_COMPRAS.sql" />
     <Content Include="Scripts\Compra\INSERTAR_TRANSACCION_COMPRA.sql" />

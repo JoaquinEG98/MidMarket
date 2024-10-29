@@ -2,32 +2,32 @@
 <ArrayOfActivosCompradosDTO xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ActivosCompradosDTO>
     <Id>1</Id>
-    <Nombre>YPF S.A</Nombre>
+    <Nombre>YPF SA</Nombre>
     <Cantidad>11</Cantidad>
-    <Total>170500.0000</Total>
+    <Total>209500.0000</Total>
+  </ActivosCompradosDTO>
+  <ActivosCompradosDTO>
+    <Id>9</Id>
+    <Nombre>BONAR 2024</Nombre>
+    <Cantidad>92</Cantidad>
+    <Total>107000.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
     <Id>2</Id>
     <Nombre>Banco Galicia</Nombre>
-    <Cantidad>12</Cantidad>
-    <Total>147000.0000</Total>
-  </ActivosCompradosDTO>
-  <ActivosCompradosDTO>
-    <Id>9</Id>
-    <Nombre>BONAR 2024 (AY24)</Nombre>
-    <Cantidad>139</Cantidad>
-    <Total>139000.0000</Total>
+    <Cantidad>8</Cantidad>
+    <Total>98000.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
     <Id>3</Id>
     <Nombre>Pampa Energía</Nombre>
-    <Cantidad>5</Cantidad>
-    <Total>84000.0000</Total>
+    <Cantidad>4</Cantidad>
+    <Total>67200.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
-    <Id>6</Id>
-    <Nombre>Cresud</Nombre>
-    <Cantidad>11</Cantidad>
-    <Total>43450.0000</Total>
+    <Id>7</Id>
+    <Nombre>Ternium Argentina</Nombre>
+    <Cantidad>4</Cantidad>
+    <Total>32600.0000</Total>
   </ActivosCompradosDTO>
 </ArrayOfActivosCompradosDTO>

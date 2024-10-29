@@ -297,10 +297,20 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SELECT TC.Id_Compra, TC.Id_Cuenta, TC.Id_Cliente, TC.Fecha, TC.Total
+        ///   Looks up a localized string similar to SELECT DISTINCT 
+        ///    TC.Id_Compra, 
+        ///    TC.Id_Cuenta, 
+        ///    TC.Id_Cliente, 
+        ///    TC.Fecha, 
+        ///    SUM(COALESCE(a.Precio * AC.Cantidad, b.ValorNominal * AC.Cantidad, 0)) AS Total
         ///FROM TransaccionCompra TC
-        ///JOIN Cliente_Activo AC ON TC.Id_Cliente = AC.Id_Cliente
-        ///WHERE TC.Id_Cliente = {0}.
+        ///JOIN DetalleCompra DC ON TC.Id_Compra = DC.Id_Compra
+        ///JOIN Cliente_Activo AC ON AC.Id_Cliente = TC.Id_Cliente AND AC.Id_Activo = DC.Id_Activo
+        ///LEFT JOIN Accion a ON AC.Id_Activo = a.Id_Activo
+        ///LEFT JOIN Bono b ON AC.Id_Activo = b.Id_Activo
+        ///WHERE TC.Id_Cliente = {0}
+        ///  AND AC.Cantidad &gt; 0
+        ///GROUP BY TC.Id [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string GET_COMPRAS_ACTIVAS {
             get {
@@ -334,6 +344,34 @@ namespace MidMarket.DataAccess {
         internal static string GET_COMPRAS_DETALLE {
             get {
                 return ResourceManager.GetString("GET_COMPRAS_DETALLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT 
+        ///    DC.Id_Detalle,
+        ///    DC.Id_Activo,
+        ///    B.Id_Bono,
+        ///    A.Id_Accion,
+        ///    AC.Nombre,
+        ///    DC.Id_Compra,
+        ///    DC.Cantidad,
+        ///    CASE 
+        ///        WHEN A.Id_Activo IS NOT NULL THEN &apos;Accion&apos;
+        ///        WHEN B.Id_Activo IS NOT NULL THEN &apos;Bono&apos;
+        ///        ELSE &apos;Desconocido&apos;
+        ///    END AS TipoActivo,
+        ///    A.Simbolo,
+        ///    B.TasaInteres,
+        ///    COALESCE(A.Precio, B.ValorNominal, 0) AS PrecioValorNominal,
+        ///    COALESCE(A.Precio, B.ValorNominal, 0) * DC.Cantidad AS Total
+        ///FROM 
+        ///    DetalleCompra DC
+        ///LEFT JOIN Activ [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string GET_COMPRAS_DETALLE_ACTIVAS {
+            get {
+                return ResourceManager.GetString("GET_COMPRAS_DETALLE_ACTIVAS", resourceCulture);
             }
         }
         
@@ -596,16 +634,15 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SELECT 
-        ///    SUM(CASE 
-        ///            WHEN a.Id_Accion IS NOT NULL THEN a.Precio * ca.Cantidad
-        ///            WHEN b.Id_Bono IS NOT NULL THEN b.ValorNominal * ca.Cantidad
-        ///        END) AS TotalValorizado
-        ///FROM Cliente_Activo ca
-        ///INNER JOIN Activo act ON ca.Id_Activo = act.Id_Activo
-        ///LEFT JOIN Accion a ON act.Id_Activo = a.Id_Activo
-        ///LEFT JOIN Bono b ON act.Id_Activo = b.Id_Activo
-        ///WHERE ca.Id_Cliente = {0}.
+        ///   Looks up a localized string similar to SELECT SUM(COALESCE(a.Precio * AC.Cantidad, b.ValorNominal * AC.Cantidad, 0)) AS TotalInvertido
+        ///FROM TransaccionCompra TC
+        ///JOIN DetalleCompra DC ON TC.Id_Compra = DC.Id_Compra
+        ///JOIN Cliente_Activo AC ON AC.Id_Cliente = TC.Id_Cliente AND AC.Id_Activo = DC.Id_Activo
+        ///LEFT JOIN Accion a ON AC.Id_Activo = a.Id_Activo
+        ///LEFT JOIN Bono b ON AC.Id_Activo = b.Id_Activo
+        ///WHERE TC.Id_Cliente = {0}
+        ///  AND AC.Cantidad &gt; 0;
+        ///.
         /// </summary>
         internal static string OBTENER_TOTAL_INVERTIDO {
             get {

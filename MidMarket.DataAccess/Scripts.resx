@@ -178,6 +178,9 @@
   <data name="GET_COMPRAS_DETALLE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\Compra\GET_COMPRAS_DETALLE.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="GET_COMPRAS_DETALLE_ACTIVAS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Scripts\Compra\GET_COMPRAS_DETALLE_ACTIVAS.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="GET_DIGITOS_HORIZONTALES" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\DigitoVerificador\GET_DIGITOS_HORIZONTALES.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
