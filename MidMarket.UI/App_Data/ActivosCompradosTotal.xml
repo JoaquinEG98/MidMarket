@@ -9,25 +9,25 @@
   <ActivosCompradosDTO>
     <Id>1</Id>
     <Nombre>YPF S.A</Nombre>
-    <Cantidad>7</Cantidad>
-    <Total>108500.0000</Total>
-  </ActivosCompradosDTO>
-  <ActivosCompradosDTO>
-    <Id>15</Id>
-    <Nombre>BPOD7</Nombre>
-    <Cantidad>1</Cantidad>
-    <Total>101000.0000</Total>
-  </ActivosCompradosDTO>
-  <ActivosCompradosDTO>
-    <Id>3</Id>
-    <Nombre>Pampa Energía</Nombre>
-    <Cantidad>4</Cantidad>
-    <Total>67200.0000</Total>
+    <Cantidad>6</Cantidad>
+    <Total>93000.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
     <Id>9</Id>
     <Nombre>BONAR 2024 (AY24)</Nombre>
-    <Cantidad>43</Cantidad>
-    <Total>43000.0000</Total>
+    <Cantidad>47</Cantidad>
+    <Total>47000.0000</Total>
+  </ActivosCompradosDTO>
+  <ActivosCompradosDTO>
+    <Id>6</Id>
+    <Nombre>Cresud</Nombre>
+    <Cantidad>9</Cantidad>
+    <Total>35550.0000</Total>
+  </ActivosCompradosDTO>
+  <ActivosCompradosDTO>
+    <Id>3</Id>
+    <Nombre>Pampa Energía</Nombre>
+    <Cantidad>2</Cantidad>
+    <Total>33600.0000</Total>
   </ActivosCompradosDTO>
 </ArrayOfActivosCompradosDTO>

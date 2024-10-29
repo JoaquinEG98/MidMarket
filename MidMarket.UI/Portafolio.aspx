@@ -103,8 +103,8 @@
                         {
                             label: 'Distribución de Activos',
                             data: data,
-                            backgroundColor: ['#FFCCB3', '#D4E6A5'],
-                            borderColor: ['#FFCCB3', '#D4E6A5'],
+                            backgroundColor: ['#7986CB', '#A5D6A7'],
+                            borderColor: ['#7986CB', '#A5D6A7'],
                             borderWidth: 1
                         }
                     ]

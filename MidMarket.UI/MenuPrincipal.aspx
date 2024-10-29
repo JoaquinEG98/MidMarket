@@ -44,15 +44,15 @@
                     datasets: [
                         {
                             label: 'Acciones',
-                            backgroundColor: '#FFCCB3',
-                            borderColor: '#FFCCB3',
+                            backgroundColor: '#7986CB',
+                            borderColor: '#7986CB',
                             borderWidth: 1,
                             data: accionesData
                         },
                         {
                             label: 'Bonos',
-                            backgroundColor: '#D4E6A5',
-                            borderColor: '#D4E6A5',
+                            backgroundColor: '#A5D6A7',
+                            borderColor: '#A5D6A7',
                             borderWidth: 1,
                             data: bonosData
                         }
