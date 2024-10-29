@@ -143,7 +143,7 @@ namespace MidMarket.UI
 
         private void CargarCompras()
         {
-            Compras = _compraService.GetCompras();
+            Compras = _compraService.GetCompras(false);
         }
     }
 }

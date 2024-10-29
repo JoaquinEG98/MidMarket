@@ -57,11 +57,11 @@ namespace MidMarket.Business.Services
                 throw new System.Exception(Errores.ObtenerError(18));
         }
 
-        public List<TransaccionCompra> GetCompras()
+        public List<TransaccionCompra> GetCompras(bool historico)
         {
             var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
 
-            List<TransaccionCompra> compras = _compraDataAccess.GetCompras(clienteLogueado);
+            List<TransaccionCompra> compras = _compraDataAccess.GetCompras(clienteLogueado, historico);
 
             return compras;
         }

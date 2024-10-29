@@ -68,11 +68,14 @@ namespace MidMarket.DataAccess.DAOs
             return _dataAccess.ExecuteNonEscalar();
         }
 
-        public List<TransaccionCompra> GetCompras(Cliente cliente)
+        public List<TransaccionCompra> GetCompras(Cliente cliente, bool historico)
         {
             var compras = new List<TransaccionCompra>();
 
-            _dataAccess.SelectCommandText = String.Format(Scripts.GET_COMPRAS, cliente.Id);
+            if (historico)
+                _dataAccess.SelectCommandText = String.Format(Scripts.GET_COMPRAS, cliente.Id);
+            else
+                _dataAccess.SelectCommandText = String.Format(Scripts.GET_COMPRAS_ACTIVAS, cliente.Id);
 
             DataSet ds = _dataAccess.ExecuteNonReader();
 

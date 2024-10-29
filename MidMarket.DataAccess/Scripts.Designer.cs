@@ -297,6 +297,18 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SELECT TC.Id_Compra, TC.Id_Cuenta, TC.Id_Cliente, TC.Fecha, TC.Total
+        ///FROM TransaccionCompra TC
+        ///JOIN Cliente_Activo AC ON TC.Id_Cliente = AC.Id_Cliente
+        ///WHERE TC.Id_Cliente = {0}.
+        /// </summary>
+        internal static string GET_COMPRAS_ACTIVAS {
+            get {
+                return ResourceManager.GetString("GET_COMPRAS_ACTIVAS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SELECT 
         ///    DC.Id_Detalle,
         ///    DC.Id_Activo,
@@ -629,7 +641,7 @@ namespace MidMarket.DataAccess {
         
         /// <summary>
         ///   Looks up a localized string similar to UPDATE Cliente
-        ///SET Password = @Password
+        ///SET Password = @Password, Bloqueo = 0
         ///WHERE Email = @Email.
         /// </summary>
         internal static string REESTABLECER_PASSWORD {

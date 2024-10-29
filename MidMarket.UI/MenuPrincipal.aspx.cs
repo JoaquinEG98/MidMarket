@@ -93,7 +93,7 @@ namespace MidMarket.UI
 
         private void LlenarInformacionGrafico()
         {
-            var compras = _compraService.GetCompras();
+            var compras = _compraService.GetCompras(true);
             var labels = new List<string>();
             var accionesData = new List<decimal>();
             var bonosData = new List<decimal>();
