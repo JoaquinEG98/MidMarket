@@ -12,7 +12,6 @@ namespace MidMarket.UI.WebServices
     [System.ComponentModel.ToolboxItem(false)]
     public class GeneradorPdf : System.Web.Services.WebService
     {
-
         [WebMethod]
         public byte[] GenerarPdfCompra(TransaccionCompra compra)
         {
@@ -108,6 +107,15 @@ namespace MidMarket.UI.WebServices
 
                     doc.Add(bonosTabla);
                 }
+
+                decimal total = compra.Detalle.Sum(d => d.Precio);
+                doc.Add(new Paragraph(" "));
+                Paragraph totalParrafo = new Paragraph($"Total: ${total.ToString("N2")}", headerFuente)
+                {
+                    Alignment = Element.ALIGN_RIGHT,
+                    SpacingBefore = 15f
+                };
+                doc.Add(totalParrafo);
 
                 doc.Close();
 

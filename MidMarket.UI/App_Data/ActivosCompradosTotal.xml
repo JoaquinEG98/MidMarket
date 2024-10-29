@@ -15,8 +15,8 @@
   <ActivosCompradosDTO>
     <Id>9</Id>
     <Nombre>BONAR 2024 (AY24)</Nombre>
-    <Cantidad>129</Cantidad>
-    <Total>129000.0000</Total>
+    <Cantidad>139</Cantidad>
+    <Total>139000.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
     <Id>3</Id>
@@ -27,7 +27,7 @@
   <ActivosCompradosDTO>
     <Id>6</Id>
     <Nombre>Cresud</Nombre>
-    <Cantidad>10</Cantidad>
-    <Total>39500.0000</Total>
+    <Cantidad>11</Cantidad>
+    <Total>43450.0000</Total>
   </ActivosCompradosDTO>
 </ArrayOfActivosCompradosDTO>
