@@ -213,6 +213,8 @@
     <Content Include="Controls\ValidarEmail.ascx" />
     <Content Include="Controls\ValidarPassword.ascx" />
     <Content Include="Controls\ValidarUsuario.ascx" />
+    <Content Include="Styles\venta.css" />
+    <Content Include="Venta.aspx" />
     <Content Include="WebServices\CalcularCarrito.asmx" />
     <Content Include="WebServices\EstadisticaActivos.asmx" />
     <Content Include="WebServices\GeneradorPdf.asmx" />
@@ -556,6 +558,13 @@
     </Compile>
     <Compile Include="Controls\ValidarUsuario.ascx.designer.cs">
       <DependentUpon>ValidarUsuario.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Venta.aspx.cs">
+      <DependentUpon>Venta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Venta.aspx.designer.cs">
+      <DependentUpon>Venta.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
