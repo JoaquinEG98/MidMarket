@@ -124,6 +124,9 @@
   <data name="ACTIVOS_MAS_COMPRADOS_TOTAL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\Calculo\ACTIVOS_MAS_COMPRADOS_TOTAL.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="ACTUALIZAR_ACTIVO_CLIENTE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Scripts\Venta\ACTUALIZAR_ACTIVO_CLIENTE.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="ACTUALIZAR_SALDO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\Cuenta\ACTUALIZAR_SALDO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
@@ -217,6 +220,12 @@
   <data name="GET_USUARIO_PERMISO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\Permiso\GET_USUARIO_PERMISO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="GET_VENTAS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Scripts\Venta\GET_VENTAS.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="GET_VENTAS_DETALLE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Scripts\Venta\GET_VENTAS_DETALLE.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="GUARDAR_COMPONENTE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\Permiso\GUARDAR_COMPONENTE.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
@@ -235,8 +244,14 @@
   <data name="INSERTAR_DETALLE_COMPRA" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\Compra\INSERTAR_DETALLE_COMPRA.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="INSERTAR_DETALLE_VENTA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Scripts\Venta\INSERTAR_DETALLE_VENTA.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="INSERTAR_TRANSACCION_COMPRA" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\Compra\INSERTAR_TRANSACCION_COMPRA.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="INSERTAR_TRANSACCION_VENTA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Scripts\Venta\INSERTAR_TRANSACCION_VENTA.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="LIMPIAR_CARRITO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\Carrito\LIMPIAR_CARRITO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>

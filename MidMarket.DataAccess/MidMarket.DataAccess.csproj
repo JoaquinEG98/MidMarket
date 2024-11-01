@@ -51,12 +51,14 @@
     <Compile Include="DAOs\CompraDAO.cs" />
     <Compile Include="DAOs\DigitoVerificadorDAO.cs" />
     <Compile Include="DAOs\PermisoDAO.cs" />
+    <Compile Include="DAOs\VentaDAO.cs" />
     <Compile Include="Helpers\ActivoFill.cs" />
     <Compile Include="Helpers\BitacoraFill.cs" />
     <Compile Include="Helpers\CarritoFill.cs" />
     <Compile Include="Helpers\ClienteFill.cs" />
     <Compile Include="Helpers\CompraFill.cs" />
     <Compile Include="Helpers\PermisoFill.cs" />
+    <Compile Include="Helpers\VentaFill.cs" />
     <Compile Include="Interfaces\IActivoDAO.cs" />
     <Compile Include="Interfaces\IBackupDAO.cs" />
     <Compile Include="Interfaces\IBitacoraDAO.cs" />
@@ -65,6 +67,7 @@
     <Compile Include="Interfaces\IDigitoVerificadorDAO.cs" />
     <Compile Include="Interfaces\IPermisoDAO.cs" />
     <Compile Include="Interfaces\IUsuarioDAO.cs" />
+    <Compile Include="Interfaces\IVentaDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DAOs\UsuarioDAO.cs" />
     <Compile Include="Scripts.Designer.cs">
@@ -128,6 +131,11 @@
     <Content Include="Scripts\Usuario\LOGIN_USUARIO.sql" />
     <Content Include="Scripts\Permiso\GUARDAR_COMPONENTE.sql" />
     <Content Include="Scripts\Usuario\REGISTRAR_USUARIO.sql" />
+    <Content Include="Scripts\Venta\ACTUALIZAR_ACTIVO_CLIENTE.sql" />
+    <Content Include="Scripts\Venta\GET_VENTAS.sql" />
+    <Content Include="Scripts\Venta\GET_VENTAS_DETALLE.sql" />
+    <Content Include="Scripts\Venta\INSERTAR_DETALLE_VENTA.sql" />
+    <Content Include="Scripts\Venta\INSERTAR_TRANSACCION_VENTA.sql" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Scripts.resx">

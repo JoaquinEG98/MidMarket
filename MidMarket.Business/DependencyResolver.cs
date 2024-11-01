@@ -24,6 +24,7 @@ namespace MidMarket.Business
             Container.RegisterType<IActivoDAO, ActivoDAO>();
             Container.RegisterType<ICarritoDAO, CarritoDAO>();
             Container.RegisterType<ICompraDAO, CompraDAO>();
+            Container.RegisterType<IVentaDAO, VentaDAO>();
 
             Container.RegisterType<IPermisoService, PermisoService>();
             Container.RegisterType<IDigitoVerificadorService, DigitoVerificadorService>();

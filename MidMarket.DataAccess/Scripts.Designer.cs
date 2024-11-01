@@ -111,6 +111,27 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to IF EXISTS (SELECT 1 FROM Cliente_Activo WHERE Id_Cliente = @Id_Cliente AND Id_Activo = @Id_Activo)
+        ///BEGIN
+        ///    DECLARE @NuevaCantidad INT;
+        ///    SET @NuevaCantidad = (SELECT Cantidad FROM Cliente_Activo WHERE Id_Cliente = @Id_Cliente AND Id_Activo = @Id_Activo) - @Cantidad;
+        ///    
+        ///    IF @NuevaCantidad &gt; 0
+        ///    BEGIN
+        ///        UPDATE Cliente_Activo
+        ///        SET Cantidad = @NuevaCantidad
+        ///        OUTPUT inserted.Id_Cliente_Activo
+        ///        WHERE Id_Cliente = @Id_Cliente AND Id_Activo = @Id_Activo;
+        ///    END
+        ///    [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ACTUALIZAR_ACTIVO_CLIENTE {
+            get {
+                return ResourceManager.GetString("ACTUALIZAR_ACTIVO_CLIENTE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to UPDATE Cuenta
         ///SET Saldo = @Saldo
         ///WHERE Id_Cuenta = @Id_Cuenta.
@@ -510,6 +531,46 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SELECT Id_Venta, Id_Cuenta, Id_Cliente, Fecha, Total
+        ///FROM TransaccionVenta
+        ///WHERE Id_Cliente = {0}.
+        /// </summary>
+        internal static string GET_VENTAS {
+            get {
+                return ResourceManager.GetString("GET_VENTAS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT 
+        ///    DV.Id_Detalle,
+        ///    DV.Id_Activo,
+        ///	B.Id_Bono,
+        ///	A.Id_Accion,
+        ///    AC.Nombre,
+        ///    DV.Id_Venta,
+        ///    DV.Cantidad,
+        ///    CASE 
+        ///        WHEN A.Id_Activo IS NOT NULL THEN &apos;Accion&apos;
+        ///        WHEN B.Id_Activo IS NOT NULL THEN &apos;Bono&apos;
+        ///        ELSE &apos;Desconocido&apos;
+        ///    END AS TipoActivo,
+        ///    A.Simbolo,
+        ///    B.TasaInteres,
+        ///    DV.Precio AS PrecioValorNominal,
+        ///    DV.Precio * DV.Cantidad AS Total
+        ///FROM 
+        ///    DetalleVenta DV
+        ///LEFT JOIN Activo AC ON DV.Id_Activo = AC.Id_Activo
+        ///LEFT JOIN Accion A ON DV.Id [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string GET_VENTAS_DETALLE {
+            get {
+                return ResourceManager.GetString("GET_VENTAS_DETALLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to INSERT INTO Permiso (Nombre, Permiso) OUTPUT inserted.Id_Permiso VALUES (@Nombre, @Permiso).
         /// </summary>
         internal static string GUARDAR_COMPONENTE {
@@ -590,6 +651,17 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to INSERT INTO DetalleVenta (Id_Activo, Id_Venta, Cantidad, Precio)
+        ///OUTPUT inserted.Id_Detalle
+        ///VALUES (@Id_Activo, @Id_Venta, @Cantidad, @Precio).
+        /// </summary>
+        internal static string INSERTAR_DETALLE_VENTA {
+            get {
+                return ResourceManager.GetString("INSERTAR_DETALLE_VENTA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to INSERT INTO TransaccionCompra (Id_Cuenta, Id_Cliente, Fecha, Total)
         ///OUTPUT inserted.Id_Compra
         ///VALUES (@Id_Cuenta, @Id_Cliente, @Fecha, @Total).
@@ -597,6 +669,17 @@ namespace MidMarket.DataAccess {
         internal static string INSERTAR_TRANSACCION_COMPRA {
             get {
                 return ResourceManager.GetString("INSERTAR_TRANSACCION_COMPRA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to INSERT INTO TransaccionVenta (Id_Cuenta, Id_Cliente, Fecha, Total)
+        ///OUTPUT inserted.Id_Venta
+        ///VALUES (@Id_Cuenta, @Id_Cliente, @Fecha, @Total).
+        /// </summary>
+        internal static string INSERTAR_TRANSACCION_VENTA {
+            get {
+                return ResourceManager.GetString("INSERTAR_TRANSACCION_VENTA", resourceCulture);
             }
         }
         
@@ -634,15 +717,22 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SELECT SUM(COALESCE(a.Precio * AC.Cantidad, b.ValorNominal * AC.Cantidad, 0)) AS TotalInvertido
-        ///FROM TransaccionCompra TC
-        ///JOIN DetalleCompra DC ON TC.Id_Compra = DC.Id_Compra
-        ///JOIN Cliente_Activo AC ON AC.Id_Cliente = TC.Id_Cliente AND AC.Id_Activo = DC.Id_Activo
-        ///LEFT JOIN Accion a ON AC.Id_Activo = a.Id_Activo
-        ///LEFT JOIN Bono b ON AC.Id_Activo = b.Id_Activo
-        ///WHERE TC.Id_Cliente = {0}
-        ///  AND AC.Cantidad &gt; 0;
-        ///.
+        ///   Looks up a localized string similar to WITH ActivosComprados AS (
+        ///    SELECT 
+        ///        AC.Id_Activo,
+        ///        act.Nombre,
+        ///        AC.Cantidad,
+        ///        CASE 
+        ///            WHEN a.Precio IS NOT NULL THEN a.Precio
+        ///            WHEN b.ValorNominal IS NOT NULL THEN b.ValorNominal
+        ///            ELSE 0
+        ///        END AS ValorActual
+        ///    FROM Cliente_Activo AC
+        ///    LEFT JOIN Accion a ON AC.Id_Activo = a.Id_Activo
+        ///    LEFT JOIN Bono b ON AC.Id_Activo = b.Id_Activo
+        ///    LEFT JOIN Activo act ON AC.Id_Activo = act.Id_Activo
+        ///    WHERE AC.Id_Cliente = {0}
+        ///  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string OBTENER_TOTAL_INVERTIDO {
             get {
