@@ -7,48 +7,58 @@
     <div class="container-ventas">
         <h2 class="ventas-title">Ventas</h2>
 
-        <table id="tablaVentas">
-            <thead>
-                <tr>
-                    <th>Activo</th>
-                    <th>Cantidad</th>
-                    <th>Último Precio</th>
-                    <th>Valor Nominal</th>
-                    <th>Rendimiento</th>
-                    <th>Cantidad a Vender</th>
-                    <th>Acción</th>
-                </tr>
-            </thead>
-            <tbody>
-                <% foreach (var compra in Compras)
-                   { %>
-                   <% foreach (var detalle in compra.Detalle)
-                      { %>
-                    <tr>
-                        <td><%= detalle.Activo.Nombre %></td>
-                        <td><%= detalle.Cantidad %></td>
+        <asp:Repeater ID="rptTransacciones" runat="server">
+            <HeaderTemplate>
+                <table id="tablaVentas">
+                    <thead>
+                        <tr>
+                            <th>Activo</th>
+                            <th>Cantidad</th>
+                            <th>Último Precio</th>
+                            <th>Valor Nominal</th>
+                            <th>Rendimiento</th>
+                            <th>Cantidad a Vender</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            </HeaderTemplate>
+            <ItemTemplate>
+                <asp:Repeater ID="rptDetalles" runat="server" DataSource='<%# Eval("Detalle") %>'>
+                    <ItemTemplate>
+                        <tr>
+                            <td><%# Eval("Activo.Nombre") %></td>
+                            <td><%# Eval("Cantidad") %></td>
 
-                        <% if (detalle.Activo is Accion accion)
-                           { %>
-                            <td><%= accion.Precio.ToString("C") %></td>
-                            <td>-</td>
-                            <td><%= (detalle.Cantidad * accion.Precio).ToString("C") %></td>
-                        <% }
-                           else if (detalle.Activo is Bono bono)
-                           { %>
-                            <td>-</td>
-                            <td><%= bono.ValorNominal.ToString("C") %></td>
-                            <td><%= (detalle.Cantidad * bono.ValorNominal).ToString("C") %></td>
-                        <% } %>
-
-                        <td><input type="number" class="cantidad-vender" value="1" min="1" max="<%= detalle.Cantidad %>"></td>
-                        <td>
-                            <button class="btn btn-vender" data-activo-id="<%= detalle.Activo.Id %>" onclick="venderActivo(this)">Vender</button>
-                        </td>
-                    </tr>
-                   <% } %>
-                <% } %>
-            </tbody>
-        </table>
+                            <%-- Condicional para mostrar precios según el tipo de activo --%>
+<td><%# Eval("Activo") is Accion ? ((Accion)Eval("Activo")).Precio.ToString("N2") : "-" %></td>
+<td><%# Eval("Activo") is Bono ? ((Bono)Eval("Activo")).ValorNominal.ToString("N2") : "-" %></td>
+<td>
+    <%# 
+        Eval("Activo") is Accion ? 
+        (Convert.ToInt32(Eval("Cantidad")) * ((Accion)Eval("Activo")).Precio).ToString("N2") : 
+        (Eval("Activo") is Bono ? (Convert.ToInt32(Eval("Cantidad")) * ((Bono)Eval("Activo")).ValorNominal).ToString("N2") : "-") 
+    %>
+</td>
+                            <td>
+                                <asp:TextBox ID="txtCantidadVender" runat="server" Text="1" Width="50" />
+                            </td>
+                            <td>
+                                <asp:Button ID="btnVender" 
+                                            runat="server" 
+                                            CssClass="btn btn-vender" 
+                                            CommandArgument='<%# Eval("Activo.Id") %>' 
+                                            Text="Vender" 
+                                            OnClick="VenderActivo_Click" />
+                            </td>
+                        </tr>
+                    </ItemTemplate>
+                </asp:Repeater>
+            </ItemTemplate>
+            <FooterTemplate>
+                    </tbody>
+                </table>
+            </FooterTemplate>
+        </asp:Repeater>
     </div>
 </asp:Content>

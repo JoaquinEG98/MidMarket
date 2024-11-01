@@ -1,6 +1,5 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
-using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
 using System;
 using System.Collections.Generic;
@@ -26,30 +25,18 @@ namespace MidMarket.UI
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
-
-            if (clienteLogueado == null || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.VenderAccion) || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.VenderBono))
-            {
-                Response.Redirect("Default.aspx");
-            }
-
             if (!IsPostBack)
             {
-                try
-                {
-                    CargarCompras();
-                }
-                catch (Exception ex)
-                {
-                    AlertHelper.MostrarModal(this, $"Error al cargar la página: {ex.Message}.");
-                }
+                CargarCompras();
             }
         }
 
         private void CargarCompras()
         {
-            // Obtiene todas las compras del cliente
-            Compras = _compraService.GetCompras(false);
+            // Obtiene todas las transacciones de compra
+            var compras = _compraService.GetCompras(false);
+            rptTransacciones.DataSource = compras;
+            rptTransacciones.DataBind();
         }
 
         protected void VenderActivo_Click(object sender, EventArgs e)
@@ -59,31 +46,18 @@ namespace MidMarket.UI
                 var button = (Button)sender;
                 int activoId = int.Parse(button.CommandArgument);
 
-                // Obtiene el TextBox de cantidad a vender en la misma fila
-                var cantidadTextBox = (TextBox)button.NamingContainer.FindControl("txtCantidadVender");
-                int cantidad = int.Parse(cantidadTextBox.Text);
+                // Encuentra la fila del Repeater y obtiene el TextBox de cantidad
+                RepeaterItem item = (RepeaterItem)button.NamingContainer;
+                TextBox txtCantidadVender = (TextBox)item.FindControl("txtCantidadVender");
 
+                int cantidad = int.Parse(txtCantidadVender.Text);
+
+                // Lógica de venta
                 var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
 
                 if (clienteLogueado != null && cantidad > 0)
                 {
-                    //// Obtiene el activo para verificar su tipo (acción o bono)
-                    //var activo = _compraService.GetActivoById(activoId);
-
-                    //bool resultado;
-
-                    //if (activo is Accion)
-                    //{
-                    //    resultado = _ventaService.VenderAccion(clienteLogueado.Id, activoId, cantidad);
-                    //}
-                    //else if (activo is Bono)
-                    //{
-                    //    resultado = _ventaService.VenderBono(clienteLogueado.Id, activoId, cantidad);
-                    //}
-                    //else
-                    //{
-                    //    throw new Exception("Tipo de activo no reconocido.");
-                    //}
+                    //bool resultado = _ventaService.VenderAccion(clienteLogueado.Id, activoId, cantidad);
 
                     //if (resultado)
                     //{
