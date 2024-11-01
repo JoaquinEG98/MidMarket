@@ -63,33 +63,12 @@ namespace MidMarket.UI
                 var button = (Button)sender;
                 int activoId = int.Parse(button.CommandArgument);
 
-                // Encuentra la fila del Repeater y obtiene el TextBox de cantidad
                 RepeaterItem item = (RepeaterItem)button.NamingContainer;
-                TextBox txtCantidadVender = (TextBox)item.FindControl("txtCantidadVender");
+                TextBox cantidadInput = (TextBox)item.FindControl("cantidadInput");
 
-                int cantidad = int.Parse(txtCantidadVender.Text);
+                int cantidad = int.Parse(cantidadInput.Text);
 
-                // Lógica de venta
-                var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
-
-                if (clienteLogueado != null && cantidad > 0)
-                {
-                    //bool resultado = _ventaService.VenderAccion(clienteLogueado.Id, activoId, cantidad);
-
-                    //if (resultado)
-                    //{
-                    //    AlertHelper.MostrarToast(this, $"Venta realizada con éxito.");
-                    //    CargarCompras(); // Recarga la tabla después de la venta
-                    //}
-                    //else
-                    //{
-                    //    AlertHelper.MostrarModal(this, $"Error al realizar la venta.");
-                    //}
-                }
-                else
-                {
-                    AlertHelper.MostrarModal(this, "Cantidad inválida.");
-                }
+                var a = cantidad;
             }
             catch (Exception ex)
             {

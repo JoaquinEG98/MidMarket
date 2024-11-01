@@ -3,8 +3,6 @@
 <%@ Import Namespace="MidMarket.Entities" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <link href="~/Content/Ventas.css" rel="stylesheet" />
-
     <div class="container-ventas">
         <h2 class="ventas-title">Ventas</h2>
 
@@ -31,18 +29,22 @@
                             <td><%# Eval("Activo.Nombre") %></td>
                             <td><%# Eval("Cantidad") %></td>
 
-                            <%-- Condicional para mostrar precios según el tipo de activo --%>
-                            <td><%# Eval("Activo") is Accion ? ((Accion)Eval("Activo")).Precio.ToString("N2") : "-" %></td>
-                            <td><%# Eval("Activo") is Bono ? ((Bono)Eval("Activo")).ValorNominal.ToString("N2") : "-" %></td>
+                            <td><%# (Eval("Activo") is Accion accion ? accion.Precio.ToString("N2") : "-") %></td>
+                            <td><%# (Eval("Activo") is Bono bono ? bono.ValorNominal.ToString("N2") : "-") %></td>
                             <td>
                                 <%# 
-        Eval("Activo") is Accion ? 
-        (Convert.ToInt32(Eval("Cantidad")) * ((Accion)Eval("Activo")).Precio).ToString("N2") : 
-        (Eval("Activo") is Bono ? (Convert.ToInt32(Eval("Cantidad")) * ((Bono)Eval("Activo")).ValorNominal).ToString("N2") : "-") 
-    %>
-</td>
+                                    Eval("Activo") is Accion ? 
+                                    (Convert.ToInt32(Eval("Cantidad")) * ((Accion)Eval("Activo")).Precio).ToString("N2") : 
+                                    (Eval("Activo") is Bono ? (Convert.ToInt32(Eval("Cantidad")) * ((Bono)Eval("Activo")).ValorNominal).ToString("N2") : "-") 
+                                %>
+                            </td>
+
                             <td>
-                                <asp:TextBox ID="txtCantidadVender" runat="server" Text="1" Width="50" />
+                                <div class="cantidad-container">
+                                    <asp:Button ID="btnDecrease" runat="server" Text="-" CssClass="cantidad-boton" OnClientClick="return cambiarCantidad(this, -1);" />
+                                    <asp:TextBox ID="cantidadInput" runat="server" Text="1" CssClass="cantidad-input" />
+                                    <asp:Button ID="btnIncrease" runat="server" Text="+" CssClass="cantidad-boton" OnClientClick="return cambiarCantidad(this, 1);" />
+                                </div>
                             </td>
                             <td>
                                 <asp:Button ID="btnVender"
@@ -62,4 +64,21 @@
             </FooterTemplate>
         </asp:Repeater>
     </div>
+
+    <script type="text/javascript">
+        function cambiarCantidad(button, cambio) {
+            const cantidadInput = button.closest('td').querySelector('.cantidad-input');
+            let cantidad = parseInt(cantidadInput.value) || 1;
+
+            cantidad += cambio;
+
+            if (cantidad < 1) {
+                cantidad = 1;
+            }
+
+            cantidadInput.value = cantidad;
+
+            return false;
+        }
+    </script>
 </asp:Content>
