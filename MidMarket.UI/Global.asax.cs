@@ -37,6 +37,7 @@ namespace MidMarket.UI
             Container.RegisterType<IActivoService, ActivoService>();
             Container.RegisterType<ICarritoService, CarritoService>();
             Container.RegisterType<ICompraService, CompraService>();
+            Container.RegisterType<IVentaService, VentaService>();
         }
     }
 }

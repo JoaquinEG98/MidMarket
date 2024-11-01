@@ -43,7 +43,7 @@ namespace MidMarket.Business.Services
                     _compraDataAccess.InsertarActivoCliente(clienteLogueado, item);
                 }
 
-                _usuarioService.ActualizarSaldo(total);
+                _usuarioService.ActualizarSaldo(total, false);
 
                 _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) realizó la Compra con Id: ({compraId}) por un total de (${total})", Criticidad.Media, clienteLogueado);
 

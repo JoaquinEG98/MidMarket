@@ -32,22 +32,22 @@ namespace MidMarket.DataAccess.DAOs
             return _dataAccess.ExecuteNonEscalar();
         }
 
-        public int InsertarDetalleVenta(Carrito carrito, int idVenta)
+        public int InsertarDetalleVenta(DetalleVenta venta, int idVenta)
         {
             _dataAccess.ExecuteCommandText = Scripts.INSERTAR_DETALLE_VENTA;
 
             _dataAccess.ExecuteParameters.Parameters.Clear();
 
-            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Activo", carrito.Activo.Id);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Activo", venta.Activo.Id);
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Venta", idVenta);
-            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Cantidad", carrito.Cantidad);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Cantidad", venta.Cantidad);
 
 
-            if (carrito.Activo is Accion accion)
+            if (venta.Activo is Accion accion)
             {
                 _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Precio", accion.Precio);
             }
-            else if (carrito.Activo is Bono bono)
+            else if (venta.Activo is Bono bono)
             {
                 _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Precio", bono.ValorNominal);
             }

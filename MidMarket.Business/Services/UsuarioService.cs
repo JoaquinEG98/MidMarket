@@ -252,11 +252,19 @@ namespace MidMarket.Business.Services
                 throw new Exception(Errores.ObtenerError(6));
         }
 
-        public void ActualizarSaldo(decimal total)
+        public void ActualizarSaldo(decimal total, bool aumentar = false)
         {
             var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+            decimal nuevoSaldo = 0;
 
-            decimal nuevoSaldo = clienteLogueado.Cuenta.Saldo - total;
+            if (!aumentar)
+            {
+                nuevoSaldo = clienteLogueado.Cuenta.Saldo - total;
+            }
+            else
+            {
+                nuevoSaldo = clienteLogueado.Cuenta.Saldo + total;
+            }
 
             _usuarioDataAccess.ActualizarSaldo(clienteLogueado.Cuenta.Id, nuevoSaldo);
 
