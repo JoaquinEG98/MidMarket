@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Venta.aspx.cs" Inherits="MidMarket.UI.Venta" MasterPageFile="~/Site.Master" Title="Ventas" %>
+
 <%@ Import Namespace="MidMarket.Entities" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
@@ -31,10 +32,10 @@
                             <td><%# Eval("Cantidad") %></td>
 
                             <%-- Condicional para mostrar precios según el tipo de activo --%>
-<td><%# Eval("Activo") is Accion ? ((Accion)Eval("Activo")).Precio.ToString("N2") : "-" %></td>
-<td><%# Eval("Activo") is Bono ? ((Bono)Eval("Activo")).ValorNominal.ToString("N2") : "-" %></td>
-<td>
-    <%# 
+                            <td><%# Eval("Activo") is Accion ? ((Accion)Eval("Activo")).Precio.ToString("N2") : "-" %></td>
+                            <td><%# Eval("Activo") is Bono ? ((Bono)Eval("Activo")).ValorNominal.ToString("N2") : "-" %></td>
+                            <td>
+                                <%# 
         Eval("Activo") is Accion ? 
         (Convert.ToInt32(Eval("Cantidad")) * ((Accion)Eval("Activo")).Precio).ToString("N2") : 
         (Eval("Activo") is Bono ? (Convert.ToInt32(Eval("Cantidad")) * ((Bono)Eval("Activo")).ValorNominal).ToString("N2") : "-") 
@@ -44,19 +45,19 @@
                                 <asp:TextBox ID="txtCantidadVender" runat="server" Text="1" Width="50" />
                             </td>
                             <td>
-                                <asp:Button ID="btnVender" 
-                                            runat="server" 
-                                            CssClass="btn btn-vender" 
-                                            CommandArgument='<%# Eval("Activo.Id") %>' 
-                                            Text="Vender" 
-                                            OnClick="VenderActivo_Click" />
+                                <asp:Button ID="btnVender"
+                                    runat="server"
+                                    CssClass="btn btn-vender"
+                                    CommandArgument='<%# Eval("Activo.Id") %>'
+                                    Text="Vender"
+                                    OnClick="VenderActivo_Click" />
                             </td>
                         </tr>
                     </ItemTemplate>
                 </asp:Repeater>
             </ItemTemplate>
             <FooterTemplate>
-                    </tbody>
+                </tbody>
                 </table>
             </FooterTemplate>
         </asp:Repeater>

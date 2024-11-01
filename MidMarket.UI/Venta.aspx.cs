@@ -1,5 +1,6 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
+using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
 using System;
 using System.Collections.Generic;
@@ -27,9 +28,25 @@ namespace MidMarket.UI
         {
             if (!IsPostBack)
             {
-                CargarCompras();
+                var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+
+                if (clienteLogueado == null || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.VenderAccion))
+                {
+                    Response.Redirect("Default.aspx");
+                }
+
+                try
+                {
+                    CargarComprasConsolidadas();
+                }
+                catch (Exception ex)
+                {
+                    AlertHelper.MostrarModal(this, $"Error al cargar la página: {ex.Message}");
+                    Response.Redirect("Default.aspx");
+                }
             }
         }
+
 
         private void CargarCompras()
         {
@@ -79,5 +96,98 @@ namespace MidMarket.UI
                 AlertHelper.MostrarModal(this, $"Error al realizar la venta: {ex.Message}");
             }
         }
+
+        private void CargarComprasConsolidadas()
+        {
+            // Obtiene todas las transacciones de compra
+            var comprasOriginales = _compraService.GetCompras(false);
+
+            // Agrupa y consolida los activos por Id del activo
+            var activosAgrupados = AgruparActivosPorId(comprasOriginales);
+            Compras = ConsolidarActivosPorId(activosAgrupados);
+
+            // Realiza el DataBind del Repeater para mostrar los datos consolidados
+            rptTransacciones.DataSource = Compras;
+            rptTransacciones.DataBind();
+        }
+
+        private Dictionary<int, (string Nombre, decimal Cantidad, decimal Precio, decimal ValorNominal)> AgruparActivosPorId(List<TransaccionCompra> compras)
+        {
+            var activosAgrupados = new Dictionary<int, (string Nombre, decimal Cantidad, decimal Precio, decimal ValorNominal)>();
+
+            foreach (var compra in compras)
+            {
+                foreach (var detalle in compra.Detalle)
+                {
+                    int idActivo = detalle.Activo.Id;
+                    string nombreActivo = detalle.Activo.Nombre;
+
+                    if (detalle.Activo is Accion accion)
+                    {
+                        if (activosAgrupados.ContainsKey(idActivo))
+                        {
+                            var (nombre, cantidad, precio, valorNominal) = activosAgrupados[idActivo];
+                            activosAgrupados[idActivo] = (nombre, cantidad + detalle.Cantidad, precio + (accion.Precio * detalle.Cantidad), valorNominal);
+                        }
+                        else
+                        {
+                            activosAgrupados[idActivo] = (nombreActivo, detalle.Cantidad, accion.Precio * detalle.Cantidad, 0);
+                        }
+                    }
+                    else if (detalle.Activo is Bono bono)
+                    {
+                        if (activosAgrupados.ContainsKey(idActivo))
+                        {
+                            var (nombre, cantidad, precio, valorNominal) = activosAgrupados[idActivo];
+                            activosAgrupados[idActivo] = (nombre, cantidad + detalle.Cantidad, precio, valorNominal + (bono.ValorNominal * detalle.Cantidad));
+                        }
+                        else
+                        {
+                            activosAgrupados[idActivo] = (nombreActivo, detalle.Cantidad, 0, bono.ValorNominal * detalle.Cantidad);
+                        }
+                    }
+                }
+            }
+
+            return activosAgrupados;
+        }
+
+        private List<TransaccionCompra> ConsolidarActivosPorId(Dictionary<int, (string Nombre, decimal Cantidad, decimal Precio, decimal ValorNominal)> activosAgrupados)
+        {
+            var activosConsolidados = new List<DetalleCompra>();
+
+            foreach (var activo in activosAgrupados)
+            {
+                var detalleCompra = new DetalleCompra
+                {
+                    Activo = new Activo { Id = activo.Key, Nombre = activo.Value.Nombre },
+                    Cantidad = (int)activo.Value.Cantidad
+                };
+
+                if (activo.Value.Precio > 0)
+                {
+                    detalleCompra.Activo = new Accion
+                    {
+                        Id = activo.Key,
+                        Nombre = activo.Value.Nombre,
+                        Precio = activo.Value.Precio / activo.Value.Cantidad
+                    };
+                }
+                else
+                {
+                    detalleCompra.Activo = new Bono
+                    {
+                        Id = activo.Key,
+                        Nombre = activo.Value.Nombre,
+                        ValorNominal = activo.Value.ValorNominal / activo.Value.Cantidad
+                    };
+                }
+
+                activosConsolidados.Add(detalleCompra);
+            }
+
+            return new List<TransaccionCompra> { new TransaccionCompra { Detalle = activosConsolidados } };
+        }
+
     }
 }
