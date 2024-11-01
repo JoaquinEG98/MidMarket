@@ -1,5 +1,4 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Portafolio.aspx.cs" Inherits="MidMarket.UI.Portafolio" MasterPageFile="~/Site.Master" Title="Mi Portafolio" %>
-
 <%@ Import Namespace="MidMarket.Entities" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">

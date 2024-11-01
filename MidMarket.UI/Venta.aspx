@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Venta.aspx.cs" Inherits="MidMarket.UI.Venta" MasterPageFile="~/Site.Master" Title="Ventas" %>
+<%@ Import Namespace="MidMarket.Entities" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link href="~/Content/Ventas.css" rel="stylesheet" />
@@ -19,24 +20,34 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Ternium Argentina</td>
-                    <td>3</td>
-                    <td>$ 8.150,00</td>
-                    <td>-</td>
-                    <td>$ 24.450,00</td>
-                    <td><input type="number" class="cantidad-vender" value="1" min="1" max="3"></td>
-                    <td><button class="btn btn-vender">Vender</button></td>
-                </tr>
-                <tr>
-                    <td>Cresud</td>
-                    <td>5</td>
-                    <td>$ 3.950,00</td>
-                    <td>-</td>
-                    <td>$ 19.750,00</td>
-                    <td><input type="number" class="cantidad-vender" value="1" min="1" max="5"></td>
-                    <td><button class="btn btn-vender">Vender</button></td>
-                </tr>
+                <% foreach (var compra in Compras)
+                   { %>
+                   <% foreach (var detalle in compra.Detalle)
+                      { %>
+                    <tr>
+                        <td><%= detalle.Activo.Nombre %></td>
+                        <td><%= detalle.Cantidad %></td>
+
+                        <% if (detalle.Activo is Accion accion)
+                           { %>
+                            <td><%= accion.Precio.ToString("C") %></td>
+                            <td>-</td>
+                            <td><%= (detalle.Cantidad * accion.Precio).ToString("C") %></td>
+                        <% }
+                           else if (detalle.Activo is Bono bono)
+                           { %>
+                            <td>-</td>
+                            <td><%= bono.ValorNominal.ToString("C") %></td>
+                            <td><%= (detalle.Cantidad * bono.ValorNominal).ToString("C") %></td>
+                        <% } %>
+
+                        <td><input type="number" class="cantidad-vender" value="1" min="1" max="<%= detalle.Cantidad %>"></td>
+                        <td>
+                            <button class="btn btn-vender" data-activo-id="<%= detalle.Activo.Id %>" onclick="venderActivo(this)">Vender</button>
+                        </td>
+                    </tr>
+                   <% } %>
+                <% } %>
             </tbody>
         </table>
     </div>
