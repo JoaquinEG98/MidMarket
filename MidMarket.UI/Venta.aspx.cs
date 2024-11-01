@@ -30,10 +30,8 @@ namespace MidMarket.UI
             {
                 var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
 
-                if (clienteLogueado == null || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.VenderAccion))
-                {
+                if (clienteLogueado == null || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.VenderAccion) || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.VenderBono))
                     Response.Redirect("Default.aspx");
-                }
 
                 try
                 {
@@ -45,15 +43,6 @@ namespace MidMarket.UI
                     Response.Redirect("Default.aspx");
                 }
             }
-        }
-
-
-        private void CargarCompras()
-        {
-            // Obtiene todas las transacciones de compra
-            var compras = _compraService.GetCompras(false);
-            rptTransacciones.DataSource = compras;
-            rptTransacciones.DataBind();
         }
 
         protected void VenderActivo_Click(object sender, EventArgs e)
@@ -78,14 +67,11 @@ namespace MidMarket.UI
 
         private void CargarComprasConsolidadas()
         {
-            // Obtiene todas las transacciones de compra
             var comprasOriginales = _compraService.GetCompras(false);
 
-            // Agrupa y consolida los activos por Id del activo
             var activosAgrupados = AgruparActivosPorId(comprasOriginales);
             Compras = ConsolidarActivosPorId(activosAgrupados);
 
-            // Realiza el DataBind del Repeater para mostrar los datos consolidados
             rptTransacciones.DataSource = Compras;
             rptTransacciones.DataBind();
         }
@@ -167,6 +153,5 @@ namespace MidMarket.UI
 
             return new List<TransaccionCompra> { new TransaccionCompra { Detalle = activosConsolidados } };
         }
-
     }
 }

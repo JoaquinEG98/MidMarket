@@ -52,7 +52,8 @@
                                     CssClass="btn btn-vender"
                                     CommandArgument='<%# Eval("Activo.Id") %>'
                                     Text="Vender"
-                                    OnClick="VenderActivo_Click" />
+                                    OnClick="VenderActivo_Click"
+                                    data-max='<%# Eval("Cantidad") %>' />
                             </td>
                         </tr>
                     </ItemTemplate>
@@ -70,10 +71,21 @@
             const cantidadInput = button.closest('td').querySelector('.cantidad-input');
             let cantidad = parseInt(cantidadInput.value) || 1;
 
-            cantidad += cambio;
+            const maxCantidad = parseInt(button.closest('tr').querySelector('.btn-vender').getAttribute('data-max'));
 
-            if (cantidad < 1) {
-                cantidad = 1;
+            if (cambio === 1) {
+                if (cantidad < maxCantidad) {
+                    cantidad += cambio;
+                }
+
+                if (cantidad > maxCantidad) {
+                    cantidad = maxCantidad;
+                }
+            } else {
+                cantidad += cambio;
+                if (cantidad < 1) {
+                    cantidad = 1;
+                }
             }
 
             cantidadInput.value = cantidad;
