@@ -41,16 +41,7 @@ namespace MidMarket.DataAccess.DAOs
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Activo", venta.Activo.Id);
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Venta", idVenta);
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Cantidad", venta.Cantidad);
-
-
-            if (venta.Activo is Accion accion)
-            {
-                _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Precio", accion.Precio);
-            }
-            else if (venta.Activo is Bono bono)
-            {
-                _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Precio", bono.ValorNominal);
-            }
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Precio", venta.Precio);
 
             return _dataAccess.ExecuteNonEscalar();
         }
@@ -94,6 +85,25 @@ namespace MidMarket.DataAccess.DAOs
             }
 
             return ventas;
+        }
+
+        public decimal ObtenerUltimoPrecioActivo(int idActivo)
+        {
+            _dataAccess.SelectCommandText = String.Format(Scripts.OBTENER_PRECIO_ACTUAL, idActivo);
+
+            DataSet ds = _dataAccess.ExecuteNonReader();
+
+            if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            {
+                var valor = ds.Tables[0].Rows[0][0];
+
+                if (valor != DBNull.Value)
+                {
+                    return Convert.ToDecimal(valor);
+                }
+            }
+
+            return 0;
         }
     }
 }

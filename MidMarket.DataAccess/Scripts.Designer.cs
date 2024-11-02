@@ -717,6 +717,23 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SELECT 
+        ///    CASE 
+        ///        WHEN a.Id_Activo IN (SELECT Id_Activo FROM accion) THEN ac.Precio
+        ///        WHEN a.Id_Activo IN (SELECT Id_Activo FROM bono) THEN b.ValorNominal
+        ///    END AS Precio
+        ///FROM activo a
+        ///LEFT JOIN accion ac ON a.Id_Activo = ac.Id_Activo
+        ///LEFT JOIN bono b ON a.Id_Activo = b.Id_Activo
+        ///WHERE a.Id_Activo = @Id_Activo.
+        /// </summary>
+        internal static string OBTENER_PRECIO_ACTUAL {
+            get {
+                return ResourceManager.GetString("OBTENER_PRECIO_ACTUAL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to WITH ActivosComprados AS (
         ///    SELECT 
         ///        AC.Id_Activo,

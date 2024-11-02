@@ -52,5 +52,10 @@ namespace MidMarket.Business.Services
 
             return ventas;
         }
+
+        public decimal ObtenerUltimoPrecioActivo(int idActivo)
+        {
+            return _ventaDataAccess.ObtenerUltimoPrecioActivo(idActivo);
+        }
     }
 }

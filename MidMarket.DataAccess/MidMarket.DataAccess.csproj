@@ -132,6 +132,7 @@
     <Content Include="Scripts\Permiso\GUARDAR_COMPONENTE.sql" />
     <Content Include="Scripts\Usuario\REGISTRAR_USUARIO.sql" />
     <Content Include="Scripts\Venta\ACTUALIZAR_ACTIVO_CLIENTE.sql" />
+    <Content Include="Scripts\Venta\OBTENER_PRECIO_ACTUAL.sql" />
     <Content Include="Scripts\Venta\GET_VENTAS.sql" />
     <Content Include="Scripts\Venta\GET_VENTAS_DETALLE.sql" />
     <Content Include="Scripts\Venta\INSERTAR_DETALLE_VENTA.sql" />

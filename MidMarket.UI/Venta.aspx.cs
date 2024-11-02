@@ -57,7 +57,18 @@ namespace MidMarket.UI
 
                 int cantidad = int.Parse(cantidadInput.Text);
 
-                var a = cantidad;
+
+                DetalleVenta venta = new DetalleVenta()
+                {
+                    Activo = new Activo() { Id = activoId },
+                    Cantidad = cantidad,
+                    Precio = _ventaService.ObtenerUltimoPrecioActivo(activoId)
+                };
+
+                _ventaService.RealizarVenta(venta);
+                CargarComprasConsolidadas();
+
+                AlertHelper.MostrarModal(this, $"Venta realizada con éxito.");
             }
             catch (Exception ex)
             {
