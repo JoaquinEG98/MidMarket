@@ -2,6 +2,7 @@
 using MidMarket.Entities;
 using MidMarket.Entities.Composite;
 using System;
+using System.Linq;
 using Unity;
 
 namespace MidMarket.UI
@@ -21,6 +22,14 @@ namespace MidMarket.UI
 
             OcultarMenu();
             AsignarMenuPermisos(cliente);
+
+            var esAdmin = cliente.Permisos.Any(permiso => permiso.Nombre == "Webmaster" || permiso.Nombre == "Administrador Financiero");
+            if (esAdmin)
+            {
+                carritoDropdown.Visible = false;
+                misTransaccionesDropdown.Visible = false;
+                menuPrincipalDropdown.Visible = false;
+            }
         }
 
         private void OcultarMenu()
