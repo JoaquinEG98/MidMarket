@@ -86,5 +86,29 @@ namespace MidMarket.DataAccess.Helpers
         {
             return ds.Tables[0].AsEnumerable().Select(dr => FillObjectActivosComprados(dr)).ToList();
         }
+
+        public static ActivosVendidosDTO FillObjectActivosVendidos(DataRow dr)
+        {
+            ActivosVendidosDTO activo = new ActivosVendidosDTO();
+
+            if (dr.Table.Columns.Contains("Id_Activo") && !Convert.IsDBNull(dr["Id_Activo"]))
+                activo.Id = Convert.ToInt32(dr["Id_Activo"]);
+
+            if (dr.Table.Columns.Contains("Activo") && !Convert.IsDBNull(dr["Activo"]))
+                activo.Nombre = Convert.ToString(dr["Activo"]);
+
+            if (dr.Table.Columns.Contains("Total_Cantidad") && !Convert.IsDBNull(dr["Total_Cantidad"]))
+                activo.Cantidad = Convert.ToInt32(dr["Total_Cantidad"]);
+
+            if (dr.Table.Columns.Contains("Monto_Total") && !Convert.IsDBNull(dr["Monto_Total"]))
+                activo.Total = Convert.ToDecimal(dr["Monto_Total"]);
+
+            return activo;
+        }
+
+        public static List<ActivosVendidosDTO> FillListActivosVendidos(DataSet ds)
+        {
+            return ds.Tables[0].AsEnumerable().Select(dr => FillObjectActivosVendidos(dr)).ToList();
+        }
     }
 }

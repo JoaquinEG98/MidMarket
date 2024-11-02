@@ -111,6 +111,56 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SELECT TOP 5 
+        ///	a.Id_Activo,
+        ///    a.Nombre AS Activo,
+        ///    SUM(dc.Cantidad) AS Total_Cantidad,
+        ///    SUM(dc.Cantidad * dc.Precio) AS Monto_Total
+        ///FROM 
+        ///    TransaccionVenta tv
+        ///JOIN 
+        ///    DetalleVenta dc ON tv.Id_Venta = dc.Id_Venta
+        ///JOIN 
+        ///    Activo a ON dc.Id_Activo = a.Id_Activo
+        ///WHERE 
+        ///    tv.Fecha &gt;= DATEADD(DAY, -30, GETDATE())
+        ///GROUP BY 
+        ///    a.Id_Activo, a.Nombre
+        ///ORDER BY 
+        ///    Total_Cantidad DESC;.
+        /// </summary>
+        internal static string ACTIVOS_MAS_VENDIDOS_CANTIDAD {
+            get {
+                return ResourceManager.GetString("ACTIVOS_MAS_VENDIDOS_CANTIDAD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 	SELECT TOP 5
+        ///	a.Id_Activo,
+        ///    a.Nombre AS Activo,
+        ///    SUM(dc.Cantidad) AS Total_Cantidad,
+        ///    SUM(dc.Cantidad * dc.Precio) AS Monto_Total
+        ///FROM 
+        ///    TransaccionVenta tv
+        ///JOIN 
+        ///    DetalleVenta dc ON tv.Id_Venta = dc.Id_Venta
+        ///JOIN 
+        ///    Activo a ON dc.Id_Activo = a.Id_Activo
+        ///WHERE 
+        ///    tv.Fecha &gt;= DATEADD(DAY, -30, GETDATE())
+        ///GROUP BY 
+        ///    a.Id_Activo, a.Nombre
+        ///ORDER BY 
+        ///    Monto_Total DESC;.
+        /// </summary>
+        internal static string ACTIVOS_MAS_VENDIDOS_TOTAL {
+            get {
+                return ResourceManager.GetString("ACTIVOS_MAS_VENDIDOS_TOTAL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to IF EXISTS (SELECT 1 FROM Cliente_Activo WHERE Id_Cliente = @Id_Cliente AND Id_Activo = @Id_Activo)
         ///BEGIN
         ///    DECLARE @NuevaCantidad INT;
@@ -319,19 +369,19 @@ namespace MidMarket.DataAccess {
         
         /// <summary>
         ///   Looks up a localized string similar to SELECT DISTINCT 
-        ///    TC.Id_Compra, 
-        ///    TC.Id_Cuenta, 
-        ///    TC.Id_Cliente, 
-        ///    TC.Fecha, 
+        ///    AC.Id_Cliente_Activo AS Id_Compra,
+        ///    NULL AS Id_Cuenta,
+        ///    AC.Id_Cliente, 
+        ///    (SELECT MAX(TC.Fecha) 
+        ///     FROM TransaccionCompra TC 
+        ///     WHERE TC.Id_Cliente = AC.Id_Cliente) AS Fecha,
         ///    SUM(COALESCE(a.Precio * AC.Cantidad, b.ValorNominal * AC.Cantidad, 0)) AS Total
-        ///FROM TransaccionCompra TC
-        ///JOIN DetalleCompra DC ON TC.Id_Compra = DC.Id_Compra
-        ///JOIN Cliente_Activo AC ON AC.Id_Cliente = TC.Id_Cliente AND AC.Id_Activo = DC.Id_Activo
+        ///FROM Cliente_Activo AC
         ///LEFT JOIN Accion a ON AC.Id_Activo = a.Id_Activo
         ///LEFT JOIN Bono b ON AC.Id_Activo = b.Id_Activo
-        ///WHERE TC.Id_Cliente = {0}
+        ///WHERE AC.Id_Cliente = {0}
         ///  AND AC.Cantidad &gt; 0
-        ///GROUP BY TC.Id [rest of string was truncated]&quot;;.
+        ///GROUP BY AC.Id_Cliente_Activo, AC.Id_C [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string GET_COMPRAS_ACTIVAS {
             get {
@@ -370,13 +420,13 @@ namespace MidMarket.DataAccess {
         
         /// <summary>
         ///   Looks up a localized string similar to SELECT 
-        ///    DC.Id_Detalle,
-        ///    DC.Id_Activo,
+        ///    AC.Id_Cliente_Activo AS Id_Detalle,
+        ///    AC.Id_Activo,
         ///    B.Id_Bono,
         ///    A.Id_Accion,
-        ///    AC.Nombre,
-        ///    DC.Id_Compra,
-        ///    DC.Cantidad,
+        ///    Act.Nombre,
+        ///    NULL AS Id_Compra,
+        ///    AC.Cantidad,
         ///    CASE 
         ///        WHEN A.Id_Activo IS NOT NULL THEN &apos;Accion&apos;
         ///        WHEN B.Id_Activo IS NOT NULL THEN &apos;Bono&apos;
@@ -385,10 +435,9 @@ namespace MidMarket.DataAccess {
         ///    A.Simbolo,
         ///    B.TasaInteres,
         ///    COALESCE(A.Precio, B.ValorNominal, 0) AS PrecioValorNominal,
-        ///    COALESCE(A.Precio, B.ValorNominal, 0) * DC.Cantidad AS Total
+        ///    COALESCE(A.Precio, B.ValorNominal, 0) * AC.Cantidad AS Total
         ///FROM 
-        ///    DetalleCompra DC
-        ///LEFT JOIN Activ [rest of string was truncated]&quot;;.
+        ///    Client [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string GET_COMPRAS_DETALLE_ACTIVAS {
             get {
@@ -725,7 +774,7 @@ namespace MidMarket.DataAccess {
         ///FROM activo a
         ///LEFT JOIN accion ac ON a.Id_Activo = ac.Id_Activo
         ///LEFT JOIN bono b ON a.Id_Activo = b.Id_Activo
-        ///WHERE a.Id_Activo = @Id_Activo.
+        ///WHERE a.Id_Activo = {0}.
         /// </summary>
         internal static string OBTENER_PRECIO_ACTUAL {
             get {

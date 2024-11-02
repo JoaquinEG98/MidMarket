@@ -139,5 +139,31 @@ namespace MidMarket.DataAccess.DAOs
 
             return activos;
         }
+
+        public List<ActivosVendidosDTO> GetActivosVendidosCantidad()
+        {
+            _dataAccess.SelectCommandText = String.Format(Scripts.ACTIVOS_MAS_VENDIDOS_CANTIDAD);
+            DataSet ds = _dataAccess.ExecuteNonReader();
+
+            List<ActivosVendidosDTO> activos = new List<ActivosVendidosDTO>();
+
+            if (ds.Tables[0].Rows.Count > 0)
+                activos = ActivoFill.FillListActivosVendidos(ds);
+
+            return activos;
+        }
+
+        public List<ActivosVendidosDTO> GetActivosVendidosTotal()
+        {
+            _dataAccess.SelectCommandText = String.Format(Scripts.ACTIVOS_MAS_VENDIDOS_TOTAL);
+            DataSet ds = _dataAccess.ExecuteNonReader();
+
+            List<ActivosVendidosDTO> activos = new List<ActivosVendidosDTO>();
+
+            if (ds.Tables[0].Rows.Count > 0)
+                activos = ActivoFill.FillListActivosVendidos(ds);
+
+            return activos;
+        }
     }
 }

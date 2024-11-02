@@ -16,7 +16,7 @@ namespace MidMarket.XML
                 serializer.Serialize(writer, activos);
                 string xmlResult = writer.ToString();
 
-                string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App_Data", "ActivosCompradosCantidad.xml");
+                string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App_Data", "Compras//ActivosCompradosCantidad.xml");
                 Directory.CreateDirectory(Path.GetDirectoryName(path));
                 File.WriteAllText(path, xmlResult);
             }
@@ -30,7 +30,7 @@ namespace MidMarket.XML
                 serializer.Serialize(writer, activos);
                 string xmlResult = writer.ToString();
 
-                string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App_Data", "ActivosCompradosTotal.xml");
+                string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App_Data", "Compras//ActivosCompradosTotal.xml");
                 Directory.CreateDirectory(Path.GetDirectoryName(path));
                 File.WriteAllText(path, xmlResult);
             }

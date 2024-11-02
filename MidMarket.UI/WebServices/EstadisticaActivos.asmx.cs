@@ -45,5 +45,31 @@ namespace MidMarket.UI.WebServices
 
             return activos;
         }
+
+        [WebMethod]
+        public List<ActivosVendidosDTO> CalcularActivosMasVendidosCantidad()
+        {
+            List<ActivosVendidosDTO> activos = _activoService.GetActivosVendidosCantidad();
+
+            if (activos != null && activos.Count > 0)
+            {
+                VentasXML.GenerarXMLActivosPorCantidad(activos);
+            }
+
+            return activos;
+        }
+
+        [WebMethod]
+        public List<ActivosVendidosDTO> CalcularActivosMasVendidosTotal()
+        {
+            List<ActivosVendidosDTO> activos = _activoService.GetActivosVendidosTotal();
+
+            if (activos != null && activos.Count > 0)
+            {
+                VentasXML.GenerarXMLActivosPorTotal(activos);
+            }
+
+            return activos;
+        }
     }
 }

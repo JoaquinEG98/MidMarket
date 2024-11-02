@@ -2,6 +2,7 @@
 using MidMarket.Entities;
 using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
+using MidMarket.UI.WebServices;
 using System;
 using System.Collections.Generic;
 using System.Web.UI.WebControls;
@@ -14,6 +15,7 @@ namespace MidMarket.UI
         private readonly ICompraService _compraService;
         private readonly IVentaService _ventaService;
         private readonly ISessionManager _sessionManager;
+        private readonly EstadisticaActivos _estadisticaActivosService;
 
         public List<TransaccionCompra> Compras { get; set; }
 
@@ -22,6 +24,7 @@ namespace MidMarket.UI
             _compraService = Global.Container.Resolve<ICompraService>();
             _ventaService = Global.Container.Resolve<IVentaService>();
             _sessionManager = Global.Container.Resolve<ISessionManager>();
+            _estadisticaActivosService = new EstadisticaActivos();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -69,6 +72,8 @@ namespace MidMarket.UI
                 CargarComprasConsolidadas();
 
                 AlertHelper.MostrarModal(this, $"Venta realizada con éxito.");
+
+                CalcularVentasWebService();
             }
             catch (Exception ex)
             {
@@ -174,6 +179,12 @@ namespace MidMarket.UI
             }
 
             return new List<TransaccionCompra> { new TransaccionCompra { Detalle = activosConsolidados } };
+        }
+
+        private void CalcularVentasWebService()
+        {
+            _estadisticaActivosService.CalcularActivosMasVendidosCantidad();
+            _estadisticaActivosService.CalcularActivosMasVendidosTotal();
         }
     }
 }

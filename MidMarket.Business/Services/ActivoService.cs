@@ -130,5 +130,19 @@ namespace MidMarket.Business.Services
 
             return activos;
         }
+
+        public List<ActivosVendidosDTO> GetActivosVendidosCantidad()
+        {
+            List<ActivosVendidosDTO> activos = _activoDataAccess.GetActivosVendidosCantidad();
+
+            return activos;
+        }
+
+        public List<ActivosVendidosDTO> GetActivosVendidosTotal()
+        {
+            List<ActivosVendidosDTO> activos = _activoDataAccess.GetActivosVendidosTotal();
+
+            return activos;
+        }
     }
 }

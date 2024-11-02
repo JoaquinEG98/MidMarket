@@ -14,5 +14,7 @@ namespace MidMarket.DataAccess.Interfaces
         void ModificarBono(Bono bono);
         List<ActivosCompradosDTO> GetActivosCompradosCantidad();
         List<ActivosCompradosDTO> GetActivosCompradosTotal();
+        List<ActivosVendidosDTO> GetActivosVendidosCantidad();
+        List<ActivosVendidosDTO> GetActivosVendidosTotal();
     }
 }

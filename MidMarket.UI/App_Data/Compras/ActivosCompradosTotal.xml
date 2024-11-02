@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ArrayOfActivosCompradosDTO xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ActivosCompradosDTO>
+    <Id>2</Id>
+    <Nombre>Banco Galicia</Nombre>
+    <Cantidad>22</Cantidad>
+    <Total>269500.0000</Total>
+  </ActivosCompradosDTO>
+  <ActivosCompradosDTO>
+    <Id>1</Id>
+    <Nombre>YPF SA</Nombre>
+    <Cantidad>11</Cantidad>
+    <Total>209500.0000</Total>
+  </ActivosCompradosDTO>
+  <ActivosCompradosDTO>
+    <Id>9</Id>
+    <Nombre>BONAR 2024</Nombre>
+    <Cantidad>96</Cantidad>
+    <Total>117000.0000</Total>
+  </ActivosCompradosDTO>
+  <ActivosCompradosDTO>
+    <Id>3</Id>
+    <Nombre>Pampa Energía</Nombre>
+    <Cantidad>6</Cantidad>
+    <Total>100800.0000</Total>
+  </ActivosCompradosDTO>
+  <ActivosCompradosDTO>
+    <Id>6</Id>
+    <Nombre>Cresud</Nombre>
+    <Cantidad>12</Cantidad>
+    <Total>47400.0000</Total>
+  </ActivosCompradosDTO>
+</ArrayOfActivosCompradosDTO>
