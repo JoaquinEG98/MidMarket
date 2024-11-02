@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-16"?>
 <ArrayOfActivosCompradosDTO xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ActivosCompradosDTO>
+    <Id>2</Id>
+    <Nombre>Banco Galicia</Nombre>
+    <Cantidad>18</Cantidad>
+    <Total>220500.0000</Total>
+  </ActivosCompradosDTO>
+  <ActivosCompradosDTO>
     <Id>1</Id>
     <Nombre>YPF SA</Nombre>
     <Cantidad>11</Cantidad>
     <Total>209500.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
-    <Id>2</Id>
-    <Nombre>Banco Galicia</Nombre>
-    <Cantidad>16</Cantidad>
-    <Total>196000.0000</Total>
-  </ActivosCompradosDTO>
-  <ActivosCompradosDTO>
     <Id>9</Id>
     <Nombre>BONAR 2024</Nombre>
-    <Cantidad>92</Cantidad>
-    <Total>107000.0000</Total>
+    <Cantidad>94</Cantidad>
+    <Total>112000.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
     <Id>3</Id>
@@ -25,9 +25,9 @@
     <Total>67200.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
-    <Id>7</Id>
-    <Nombre>Ternium Argentina</Nombre>
-    <Cantidad>4</Cantidad>
-    <Total>32600.0000</Total>
+    <Id>6</Id>
+    <Nombre>Cresud</Nombre>
+    <Cantidad>11</Cantidad>
+    <Total>43450.0000</Total>
   </ActivosCompradosDTO>
 </ArrayOfActivosCompradosDTO>

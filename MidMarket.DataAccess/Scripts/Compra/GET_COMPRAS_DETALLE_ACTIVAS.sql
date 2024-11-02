@@ -1,11 +1,11 @@
 ﻿SELECT 
-    DC.Id_Detalle,
-    DC.Id_Activo,
+    AC.Id_Cliente_Activo AS Id_Detalle,
+    AC.Id_Activo,
     B.Id_Bono,
     A.Id_Accion,
-    AC.Nombre,
-    DC.Id_Compra,
-    DC.Cantidad,
+    Act.Nombre,
+    NULL AS Id_Compra,
+    AC.Cantidad,
     CASE 
         WHEN A.Id_Activo IS NOT NULL THEN 'Accion'
         WHEN B.Id_Activo IS NOT NULL THEN 'Bono'
@@ -14,11 +14,11 @@
     A.Simbolo,
     B.TasaInteres,
     COALESCE(A.Precio, B.ValorNominal, 0) AS PrecioValorNominal,
-    COALESCE(A.Precio, B.ValorNominal, 0) * DC.Cantidad AS Total
+    COALESCE(A.Precio, B.ValorNominal, 0) * AC.Cantidad AS Total
 FROM 
-    DetalleCompra DC
-LEFT JOIN Activo AC ON DC.Id_Activo = AC.Id_Activo
-LEFT JOIN Accion A ON DC.Id_Activo = A.Id_Activo
-LEFT JOIN Bono B ON DC.Id_Activo = B.Id_Activo
+    Cliente_Activo AC
+LEFT JOIN Activo Act ON AC.Id_Activo = Act.Id_Activo
+LEFT JOIN Accion A ON AC.Id_Activo = A.Id_Activo
+LEFT JOIN Bono B ON AC.Id_Activo = B.Id_Activo 
 WHERE 
-    DC.Id_Compra = {0};
+    AC.Id_Cliente_Activo = {0};
