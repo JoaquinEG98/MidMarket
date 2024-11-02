@@ -6,66 +6,77 @@
     <div class="container-ventas">
         <h2 class="ventas-title">Ventas</h2>
 
-        <asp:Repeater ID="rptTransacciones" runat="server">
-            <HeaderTemplate>
-                <table id="tablaVentas">
-                    <thead>
-                        <tr>
-                            <th>Activo</th>
-                            <th>Cantidad</th>
-                            <th>Último Precio</th>
-                            <th>Valor Nominal</th>
-                            <th>Rendimiento</th>
-                            <th>Cantidad a Vender</th>
-                            <th>Acción</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-            </HeaderTemplate>
-            <ItemTemplate>
-                <asp:Repeater ID="rptDetalles" runat="server" DataSource='<%# Eval("Detalle") %>'>
-                    <ItemTemplate>
-                        <tr>
-                            <td><%# Eval("Activo.Nombre") %></td>
-                            <td><%# Eval("Cantidad") %></td>
+        <asp:Literal ID="ltlVentasVacias" runat="server" Visible="false">
+            <div class="mensaje-ventas-vacio">
+                <img src="images/carritovacio.png" alt="Ventas vacías" class="img-ventas-vacio" />
+                <p>No tenés ventas registradas.</p>
+                <p>Comenzá a invertir ahora mismo en la sección <a href="Compra.aspx" class="link-compra-activos">Compra de Activos</a></p>
+            </div>
+        </asp:Literal>
 
-                            <td><%# (Eval("Activo") is Accion accion ? accion.Precio.ToString("N2") : "-") %></td>
-                            <td><%# (Eval("Activo") is Bono bono ? bono.ValorNominal.ToString("N2") : "-") %></td>
-                            <td>
-                                <%# 
-                                    Eval("Activo") is Accion ? 
-                                    (Convert.ToInt32(Eval("Cantidad")) * ((Accion)Eval("Activo")).Precio).ToString("N2") : 
-                                    (Eval("Activo") is Bono ? (Convert.ToInt32(Eval("Cantidad")) * ((Bono)Eval("Activo")).ValorNominal).ToString("N2") : "-") 
-                                %>
-                            </td>
+        <div id="divVentas" runat="server" class="ventas-contenido">
+            <asp:Repeater ID="rptTransacciones" runat="server">
+                <HeaderTemplate>
+                    <table id="tablaVentas">
+                        <thead>
+                            <tr>
+                                <th>Activo</th>
+                                <th>Cantidad</th>
+                                <th>Último Precio</th>
+                                <th>Valor Nominal</th>
+                                <th>Rendimiento</th>
+                                <th>Cantidad a Vender</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                </HeaderTemplate>
+                <ItemTemplate>
+                    <asp:Repeater ID="rptDetalles" runat="server" DataSource='<%# Eval("Detalle") %>'>
+                        <ItemTemplate>
+                            <tr>
+                                <td><%# Eval("Activo.Nombre") %></td>
+                                <td><%# Eval("Cantidad") %></td>
 
-                            <td>
-                                <div class="cantidad-container">
-                                    <asp:Button ID="btnDecrease" runat="server" Text="-" CssClass="cantidad-boton" OnClientClick="return cambiarCantidad(this, -1);" />
-                                    <asp:TextBox ID="cantidadInput" runat="server" Text="1" CssClass="cantidad-input" />
-                                    <asp:Button ID="btnIncrease" runat="server" Text="+" CssClass="cantidad-boton" OnClientClick="return cambiarCantidad(this, 1);" />
-                                </div>
-                            </td>
-                            <td>
-                                <asp:Button ID="btnVender"
-                                    runat="server"
-                                    CssClass="btn btn-vender"
-                                    CommandArgument='<%# Eval("Activo.Id") %>'
-                                    Text="Vender"
-                                    OnClick="VenderActivo_Click"
-                                    data-max='<%# Eval("Cantidad") %>' />
-                            </td>
-                        </tr>
-                    </ItemTemplate>
-                </asp:Repeater>
-            </ItemTemplate>
-            <FooterTemplate>
-                </tbody>
-                </table>
-            </FooterTemplate>
-        </asp:Repeater>
+                                <td><%# (Eval("Activo") is Accion accion ? accion.Precio.ToString("N2") : "-") %></td>
+                                <td><%# (Eval("Activo") is Bono bono ? bono.ValorNominal.ToString("N2") : "-") %></td>
+                                <td>
+                                    <%# 
+                                        Eval("Activo") is Accion ? 
+                                        (Convert.ToInt32(Eval("Cantidad")) * ((Accion)Eval("Activo")).Precio).ToString("N2") : 
+                                        (Eval("Activo") is Bono ? (Convert.ToInt32(Eval("Cantidad")) * ((Bono)Eval("Activo")).ValorNominal).ToString("N2") : "-") 
+                                    %>
+                                </td>
+
+                                <td>
+                                    <div class="cantidad-container">
+                                        <asp:Button ID="btnDecrease" runat="server" Text="-" CssClass="cantidad-boton" OnClientClick="return cambiarCantidad(this, -1);" />
+                                        <asp:TextBox ID="cantidadInput" runat="server" Text="1" CssClass="cantidad-input" />
+                                        <asp:Button ID="btnIncrease" runat="server" Text="+" CssClass="cantidad-boton" OnClientClick="return cambiarCantidad(this, 1);" />
+                                    </div>
+                                </td>
+                                <td>
+                                    <asp:Button ID="btnVender"
+                                        runat="server"
+                                        CssClass="btn btn-vender"
+                                        CommandArgument='<%# Eval("Activo.Id") %>'
+                                        Text="Vender"
+                                        OnClick="VenderActivo_Click"
+                                        data-max='<%# Eval("Cantidad") %>' />
+                                </td>
+                            </tr>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </ItemTemplate>
+                <FooterTemplate>
+                    </tbody>
+                    </table>
+                </FooterTemplate>
+            </asp:Repeater>
+        </div>
     </div>
 
+    <!-- Script para manejar el cambio de cantidad -->
     <script type="text/javascript">
         function cambiarCantidad(button, cambio) {
             const cantidadInput = button.closest('td').querySelector('.cantidad-input');

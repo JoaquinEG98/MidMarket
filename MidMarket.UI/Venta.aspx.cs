@@ -80,11 +80,22 @@ namespace MidMarket.UI
         {
             var comprasOriginales = _compraService.GetCompras(false);
 
-            var activosAgrupados = AgruparActivosPorId(comprasOriginales);
-            Compras = ConsolidarActivosPorId(activosAgrupados);
+            if (comprasOriginales == null || comprasOriginales.Count == 0)
+            {
+                divVentas.Visible = false;
+                ltlVentasVacias.Visible = true;
+            }
+            else
+            {
+                divVentas.Visible = true;
+                ltlVentasVacias.Visible = false;
 
-            rptTransacciones.DataSource = Compras;
-            rptTransacciones.DataBind();
+                var activosAgrupados = AgruparActivosPorId(comprasOriginales);
+                Compras = ConsolidarActivosPorId(activosAgrupados);
+
+                rptTransacciones.DataSource = Compras;
+                rptTransacciones.DataBind();
+            }
         }
 
         private Dictionary<int, (string Nombre, decimal Cantidad, decimal Precio, decimal ValorNominal)> AgruparActivosPorId(List<TransaccionCompra> compras)
