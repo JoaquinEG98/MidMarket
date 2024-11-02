@@ -13,9 +13,12 @@ namespace MidMarket.UI
     public partial class Transacciones : System.Web.UI.Page
     {
         private readonly ICompraService _compraService;
+        private readonly IVentaService _ventaService;
         private readonly GeneradorPdf _generadorPdfService;
 
         public IList<TransaccionCompra> Compras { get; set; }
+        public IList<TransaccionVenta> Ventas { get; set; }
+
         public string ComprasJson
         {
             get
@@ -26,10 +29,21 @@ namespace MidMarket.UI
                 });
             }
         }
+        public string VentasJson
+        {
+            get
+            {
+                return JsonConvert.SerializeObject(Ventas, new JsonSerializerSettings
+                {
+                    ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                });
+            }
+        }
 
         public Transacciones()
         {
             _compraService = Global.Container.Resolve<ICompraService>();
+            _ventaService = Global.Container.Resolve<IVentaService>();
             _generadorPdfService = new GeneradorPdf();
         }
 
@@ -40,7 +54,9 @@ namespace MidMarket.UI
                 if (!IsPostBack)
                 {
                     CargarCompras();
-                    DescargarFactura();
+                    CargarVentas();
+                    DescargarFacturaCompra();
+                    DescargarFacturaVenta();
                 }
             }
             catch (Exception ex)
@@ -58,9 +74,18 @@ namespace MidMarket.UI
             });
         }
 
-        private void DescargarFactura()
+        private void CargarVentas()
         {
-            if (Request.QueryString["descargarfactura"] != null && int.TryParse(Request.QueryString["descargarfactura"], out int compraId))
+            Ventas = _ventaService.GetVentas();
+            ViewState["VentasJson"] = JsonConvert.SerializeObject(Ventas, new JsonSerializerSettings
+            {
+                ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+            });
+        }
+
+        private void DescargarFacturaCompra()
+        {
+            if (Request.QueryString["descargarfacturacompra"] != null && int.TryParse(Request.QueryString["descargarfacturacompra"], out int compraId))
             {
                 var compra = Compras.Where(x => x.Id == compraId).FirstOrDefault();
                 if (compra != null)
@@ -69,7 +94,26 @@ namespace MidMarket.UI
 
                     Response.Clear();
                     Response.ContentType = "application/pdf";
-                    Response.AddHeader("Content-Disposition", $"attachment; filename=Factura_{compra.Id}.pdf");
+                    Response.AddHeader("Content-Disposition", $"attachment; filename=Factura_Compra_{compra.Id}.pdf");
+                    Response.OutputStream.Write(bytes, 0, bytes.Length);
+                    Response.Flush();
+                    Response.End();
+                }
+            }
+        }
+
+        private void DescargarFacturaVenta()
+        {
+            if (Request.QueryString["descargarfacturaventa"] != null && int.TryParse(Request.QueryString["descargarfacturaventa"], out int ventaId))
+            {
+                var venta = Ventas.Where(x => x.Id == ventaId).FirstOrDefault();
+                if (venta != null)
+                {
+                    var bytes = _generadorPdfService.GenerarPdfVenta(venta);
+
+                    Response.Clear();
+                    Response.ContentType = "application/pdf";
+                    Response.AddHeader("Content-Disposition", $"attachment; filename=Factura_Venta_{venta.Id}.pdf");
                     Response.OutputStream.Write(bytes, 0, bytes.Length);
                     Response.Flush();
                     Response.End();
