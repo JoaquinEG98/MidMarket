@@ -19,6 +19,8 @@ namespace MidMarket.UI
         public string LabelsJson { get; set; }
         public string AccionesDataJson { get; set; }
         public string BonosDataJson { get; set; }
+        protected bool esAdmin = false;
+
 
         private readonly ISessionManager _sessionManager;
         private readonly IUsuarioService _usuarioService;
@@ -46,10 +48,15 @@ namespace MidMarket.UI
 
                     VerificarDV();
 
-                    TotalInvertido = _usuarioService.ObtenerTotalInvertido();
-                    UltimaTransaccion = _usuarioService.ObtenerUltimaTransaccion();
+                    esAdmin = Cliente.Permisos.Any(permiso => permiso.Nombre == "Webmaster" || permiso.Nombre == "Administrador Financiero");
 
-                    LlenarInformacionGrafico();
+                    if (!esAdmin)
+                    {
+                        TotalInvertido = _usuarioService.ObtenerTotalInvertido();
+                        UltimaTransaccion = _usuarioService.ObtenerUltimaTransaccion();
+                        LlenarInformacionGrafico();
+                    }
+
                     LlenarFamiliaUsuario();
                 }
                 catch (Exception ex)

@@ -148,6 +148,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Error.aspx" />
+    <Content Include="Images\admin.png" />
     <Content Include="Images\amex.png" />
     <Content Include="Images\carritovacio.png" />
     <Content Include="Images\error.png" />
