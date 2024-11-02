@@ -60,6 +60,24 @@ namespace MidMarket.UI
         protected global::System.Web.UI.WebControls.Button btnFiltrarFechas;
 
         /// <summary>
+        /// btnExportarXML control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnExportarXML;
+
+        /// <summary>
+        /// btnExportarExcel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnExportarExcel;
+
+        /// <summary>
         /// btnAnterior control.
         /// </summary>
         /// <remarks>

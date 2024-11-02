@@ -32,6 +32,11 @@
             </div>
 
             <asp:Button ID="btnFiltrarFechas" runat="server" Text="Filtrar" CssClass="submit-btn" OnClick="ConsultarBitacoraFiltro" />
+
+            <div class="export-buttons">
+                <asp:Button ID="btnExportarXML" runat="server" Text="Exportar a XML" CssClass="submit-btn" OnClick="ExportarXML_Click" />
+                <asp:Button ID="btnExportarExcel" runat="server" Text="Exportar a Excel" CssClass="submit-btn" OnClick="ExportarExcel_Click" />
+            </div>
         </div>
 
         <table id="tablaBitacora">

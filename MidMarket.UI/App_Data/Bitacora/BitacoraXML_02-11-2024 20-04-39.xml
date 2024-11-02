@@ -1,0 +1,1003 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ArrayOfBitacora xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bitacora>
+    <Id>88663</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) cambió los permisos de: TEST (11006)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-11-02T18:33:14.547</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>83674</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) cambió los permisos de: asdasd (10006)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-11-01T21:00:12.153</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>75698</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) modificó el usuario: (9006)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-29T20:33:17.463</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>75697</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) modificó el usuario: (9005)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-29T20:33:09.683</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>75696</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) modificó el usuario: (8005)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-29T20:33:02.533</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>75695</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) modificó el usuario: (7005)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-29T20:32:54.5</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>75690</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) modificó el usuario: (7005)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-29T20:32:13.867</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>74642</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) cambió los permisos de: COTO (9006)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-29T15:19:07.387</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>5</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) modificó el usuario: (9005)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-28T20:24:20.297</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>4</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) modificó el usuario: (8005)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-28T20:24:12.92</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>3</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) modificó el usuario: (7005)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-28T20:24:04.14</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>2</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) modificó el usuario: (6005)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-28T20:23:56.487</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>1</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) modificó el usuario: (3006)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-28T20:23:45.57</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>73552</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) realizó restore de la base de datos</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-28T19:58:14.217</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>71531</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) modificó el usuario: (9005)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-28T16:25:18.173</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>71530</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) cambió los permisos de: Empresa (9005)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-28T16:25:03.433</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>71524</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) cambió los permisos de: Empresa (9005)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-28T16:23:06.863</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>65510</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) realizó restore de la base de datos</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-27T21:22:25.923</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>63533</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) cambió los permisos de: Empresa (9005)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-27T12:21:02.727</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>63532</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) cambió los permisos de: Empresa (9005)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-27T12:20:38.627</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>63515</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) cambió los permisos de: Empresa (9005)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-27T11:49:28.443</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>63510</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) cambió los permisos de: Empresa (9005)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-27T11:49:00.763</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>63485</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) guardó la familia 3013</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-27T11:41:07.86</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>61490</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) cambió los permisos de: Empresa (9005)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-26T22:26:35.263</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>61489</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) cambió los permisos de: Empresa (9005)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-26T22:26:11.877</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>61488</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) cambió los permisos de: Empresa (9005)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-26T22:25:27.363</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>61487</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) cambió los permisos de: Empresa (9005)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-26T22:25:13.4</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>60626</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) cambió los permisos de: Empresa (9005)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-26T18:54:32.113</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>56494</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) cambió los permisos de: Amazon (8005)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-25T21:17:38.387</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>55453</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) realizó restore de la base de datos</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-23T18:31:49.203</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>54586</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) cambió los permisos de: MELI (7005)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-23T16:39:01.807</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>52462</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) cambió los permisos de: YPF (6005)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-22T21:16:05.27</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>47193</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) cambió su contraseña</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-22T09:43:57.06</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>47186</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) cambió su contraseña</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-22T09:43:06.317</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>45216</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) modificó el usuario: 5005</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-21T20:39:35.097</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>45183</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) cambió los permisos de: probando (5005)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-21T20:31:18.453</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>45182</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) cambió los permisos de: probando (5005)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-21T20:31:11.12</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>45181</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) cambió los permisos de: 123213213 (5005)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-21T20:30:32.283</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>43201</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) cambió los permisos de: Cambiando Empresa123 (4006)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-21T20:02:51.693</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>43199</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) cambió los permisos de: Cambiando Empresa123 (4006)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-21T19:58:51.66</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>37141</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) realizó restore de la base de datos</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-15T20:20:06.687</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>37140</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) realizó restore de la base de datos</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-10-15T20:00:09.333</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>17118</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) recalculó los Digitos Verificadores Verticales de la Tabla: UsuarioPermiso</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-09-08T13:17:31.107</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>17117</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) recalculó los Digitos Verificadores Verticales de la Tabla: Cliente</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-09-08T13:17:31.103</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>17109</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) recalculó los Digitos Verificadores Verticales de la Tabla: UsuarioPermiso</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-09-08T13:06:36.16</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>17108</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) recalculó los Digitos Verificadores Verticales de la Tabla: Cliente</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-09-08T13:06:36.153</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>13130</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) cambió los permisos de: Joaquin Cliente (3007)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-09-03T17:05:48.743</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>13131</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) recalculó los Digitos Verificadores Verticales de la Tabla: UsuarioPermiso</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-09-03T17:05:48.743</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>13128</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) cambió los permisos de: Joaquin Administrador (3006)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-09-03T17:05:36.03</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>13129</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) recalculó los Digitos Verificadores Verticales de la Tabla: UsuarioPermiso</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-09-03T17:05:36.03</Fecha>
+  </Bitacora>
+</ArrayOfBitacora>

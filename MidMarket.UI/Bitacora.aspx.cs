@@ -2,6 +2,7 @@
 using MidMarket.Entities;
 using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
+using MidMarket.XML;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -202,6 +203,69 @@ namespace MidMarket.UI
             {
                 throw new Exception(Errores.ObtenerError(20));
             }
+        }
+
+        protected void ExportarXML_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                BitacoraXML.GenerarXMLBitacora(ObtenerMovimientosExportar());
+
+                AlertHelper.MostrarModal(this, "Bitácora exportada a XML correctamente.");
+
+                ConsultarBitacora();
+            }
+            catch (Exception ex)
+            {
+                AlertHelper.MostrarModal(this, $"Error al exportar a XML: {ex.Message}");
+            }
+        }
+
+        protected void ExportarExcel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                BitacoraXML.GenerarExcelBitacora(ObtenerMovimientosExportar());
+
+                AlertHelper.MostrarModal(this, "Bitácora exportada a Excel correctamente.");
+
+                ConsultarBitacora();
+            }
+            catch (Exception ex)
+            {
+                AlertHelper.MostrarModal(this, $"Error al exportar a Excel: {ex.Message}");
+            }
+        }
+
+        private List<Entities.Bitacora> ObtenerMovimientosExportar()
+        {
+            List<Entities.Bitacora> todosMovimientos = _bitacoraService.ObtenerBitacora();
+
+            if (!string.IsNullOrEmpty(ddlUsuario.SelectedValue))
+            {
+                todosMovimientos = todosMovimientos.Where(m => m.Cliente.RazonSocial == ddlUsuario.SelectedValue).ToList();
+            }
+
+            if (!string.IsNullOrEmpty(ddlCriticidad.SelectedValue))
+            {
+                todosMovimientos = todosMovimientos.Where(m => m.Criticidad.ToString() == ddlCriticidad.SelectedValue).ToList();
+            }
+
+            DateTime fechaDesde;
+            DateTime fechaHasta;
+
+            if (DateTime.TryParse(txtFechaDesde.Text, out fechaDesde))
+            {
+                todosMovimientos = todosMovimientos.Where(m => m.Fecha >= fechaDesde).ToList();
+            }
+
+            if (DateTime.TryParse(txtFechaHasta.Text, out fechaHasta))
+            {
+                fechaHasta = fechaHasta.AddDays(1).AddSeconds(-1);
+                todosMovimientos = todosMovimientos.Where(m => m.Fecha <= fechaHasta).ToList();
+            }
+
+            return todosMovimientos.OrderByDescending(m => m.Fecha).Take(50).ToList();
         }
     }
 }
