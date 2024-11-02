@@ -9,7 +9,7 @@ namespace MidMarket.Seguridad
             { 1, "[ERR-001]: Inconsistencia en los datos ingresados en los campos" },
             { 2, "[ERR-002]: Campos obligatorios incompletos" },
             { 3, "[ERR-003]: No se puede establecer conexión a la base de datos" },
-            { 4, "[ERR-004]: El item seleccionado ya se encuentra deshabilitado" },
+            { 4, "[ERR-004]: La cantidad no puede ser mayor a la disponible" },
             { 5, "[ERR-005]: El usuario y/o contraseña no contienen datos" },
             { 6, "[ERR-006]: La contraseña no posee el formato correcto" },
             { 7, "[ERR-007]: Usuario o contraseña incorrecto" },

@@ -19,15 +19,15 @@
     <Total>43450.0000</Total>
   </ActivosVendidosDTO>
   <ActivosVendidosDTO>
+    <Id>9</Id>
+    <Nombre>BONAR 2024</Nombre>
+    <Cantidad>11</Cantidad>
+    <Total>27500.0000</Total>
+  </ActivosVendidosDTO>
+  <ActivosVendidosDTO>
     <Id>10</Id>
     <Nombre>BPY26</Nombre>
     <Cantidad>10</Cantidad>
     <Total>1000.0000</Total>
-  </ActivosVendidosDTO>
-  <ActivosVendidosDTO>
-    <Id>9</Id>
-    <Nombre>BONAR 2024</Nombre>
-    <Cantidad>8</Cantidad>
-    <Total>20000.0000</Total>
   </ActivosVendidosDTO>
 </ArrayOfActivosVendidosDTO>

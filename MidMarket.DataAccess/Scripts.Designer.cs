@@ -766,6 +766,17 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SELECT Cantidad
+        ///FROM Cliente_Activo
+        ///WHERE Id_Cliente_Activo = {0}.
+        /// </summary>
+        internal static string OBTENER_CANTIDAD_REAL_CLIENTE {
+            get {
+                return ResourceManager.GetString("OBTENER_CANTIDAD_REAL_CLIENTE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SELECT 
         ///    CASE 
         ///        WHEN a.Id_Activo IN (SELECT Id_Activo FROM accion) THEN ac.Precio

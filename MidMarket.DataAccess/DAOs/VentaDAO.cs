@@ -105,5 +105,24 @@ namespace MidMarket.DataAccess.DAOs
 
             return 0;
         }
+
+        public int ObtenerCantidadRealCliente(int idActivo, int idCliente)
+        {
+            _dataAccess.SelectCommandText = String.Format(Scripts.OBTENER_CANTIDAD_REAL_CLIENTE, idActivo, idCliente);
+
+            DataSet ds = _dataAccess.ExecuteNonReader();
+
+            if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            {
+                var valor = ds.Tables[0].Rows[0][0];
+
+                if (valor != DBNull.Value)
+                {
+                    return Convert.ToInt32(valor);
+                }
+            }
+
+            return 0;
+        }
     }
 }

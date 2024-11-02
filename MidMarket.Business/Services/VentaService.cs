@@ -2,6 +2,7 @@
 using MidMarket.DataAccess.Interfaces;
 using MidMarket.Entities;
 using MidMarket.Entities.Enums;
+using MidMarket.Seguridad;
 using System.Collections.Generic;
 using System.Transactions;
 
@@ -24,10 +25,14 @@ namespace MidMarket.Business.Services
 
         public void RealizarVenta(DetalleVenta venta)
         {
+
+
             using (TransactionScope scope = new TransactionScope())
             {
-
                 var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+
+                ValidarVenta(venta, clienteLogueado.Id);
+
                 var saldoActual = _usuarioService.GetCliente(clienteLogueado.Id).Cuenta.Saldo;
                 var total = venta.Cantidad * venta.Precio;
 
@@ -44,6 +49,14 @@ namespace MidMarket.Business.Services
             }
         }
 
+        private void ValidarVenta(DetalleVenta venta, int idCliente)
+        {
+            int cantidad = ObtenerCantidadRealCliente(venta.Activo.Id, idCliente);
+
+            if (venta.Cantidad > cantidad)
+                throw new System.Exception(Errores.ObtenerError(4));
+        }
+
         public List<TransaccionVenta> GetVentas()
         {
             var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
@@ -56,6 +69,11 @@ namespace MidMarket.Business.Services
         public decimal ObtenerUltimoPrecioActivo(int idActivo)
         {
             return _ventaDataAccess.ObtenerUltimoPrecioActivo(idActivo);
+        }
+
+        private int ObtenerCantidadRealCliente(int activoId, int idCliente)
+        {
+            return _ventaDataAccess.ObtenerCantidadRealCliente(activoId, idCliente);
         }
     }
 }
