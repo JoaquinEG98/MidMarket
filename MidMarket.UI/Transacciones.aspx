@@ -2,63 +2,69 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container-transacciones">
-        <h2>Mis Transacciones</h2>
+        <div id="divCompras" runat="server">
+            <h2>Mis Compras</h2>
+            <table id="tablaCompras">
+                <thead>
+                    <tr>
+                        <th>Número</th>
+                        <th>Fecha</th>
+                        <th>Total</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% foreach (var compra in Compras) { %>
+                    <tr>
+                        <td><%= compra.Id %></td>
+                        <td><%= compra.Fecha.ToString("dd/MM/yyyy HH:mm:ss") %></td>
+                        <td>$<%= compra.Total.ToString("N2") %></td>
+                        <td>
+                            <button type="button" class="submit-btn-transacciones ver-detalle-btn" onclick="abrirModalDetalleCompra('<%= compra.Id %>', '<%= compra.Fecha.ToString("dd/MM/yyyy HH:mm:ss") %>')">Ver Factura</button>
+                            <button type="button" class="submit-btn-transacciones descargar-btn" onclick="window.location.href='<%= ResolveUrl("~/Transacciones.aspx?descargarfacturacompra=" + compra.Id) %>'">Descargar</button>
+                        </td>
+                    </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
 
-        <!-- Tabla de Compras -->
-        <table id="tablaCompras">
-            <thead>
-                <tr>
-                    <th>Número</th>
-                    <th>Fecha</th>
-                    <th>Total</th>
-                    <th>Acción</th>
-                </tr>
-            </thead>
-            <tbody>
-                <% foreach (var compra in Compras) { %>
-                <tr>
-                    <td><%= compra.Id %></td>
-                    <td><%= compra.Fecha.ToString("dd/MM/yyyy HH:mm:ss") %></td>
-                    <td>$<%= compra.Total.ToString("N2") %></td>
-                    <td>
-                        <button type="button" class="submit-btn-transacciones ver-detalle-btn" onclick="abrirModalDetalleCompra('<%= compra.Id %>', '<%= compra.Fecha.ToString("dd/MM/yyyy HH:mm:ss") %>')">Ver Factura</button>
-                        <button type="button" class="submit-btn-transacciones descargar-btn" onclick="window.location.href='<%= ResolveUrl("~/Transacciones.aspx?descargarfacturacompra=" + compra.Id) %>'">Descargar</button>
-                    </td>
-                </tr>
-                <% } %>
-            </tbody>
-        </table>
+        <div id="divVentas" runat="server">
+            <h2 class="titulo-ventas">Mis Ventas</h2>
+            <table id="tablaVentas">
+                <thead>
+                    <tr>
+                        <th>Número</th>
+                        <th>Fecha</th>
+                        <th>Total</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% foreach (var venta in Ventas) { %>
+                    <tr>
+                        <td><%= venta.Id %></td>
+                        <td><%= venta.Fecha.ToString("dd/MM/yyyy HH:mm:ss") %></td>
+                        <td>$<%= venta.Total.ToString("N2") %></td>
+                        <td>
+                            <button type="button" class="submit-btn-transacciones ver-detalle-btn" onclick="abrirModalDetalleVenta('<%= venta.Id %>', '<%= venta.Fecha.ToString("dd/MM/yyyy HH:mm:ss") %>')">Ver Factura</button>
+                            <button type="button" class="submit-btn-transacciones descargar-btn" onclick="window.location.href='<%= ResolveUrl("~/Transacciones.aspx?descargarfacturaventa=" + venta.Id) %>'">Descargar</button>
+                        </td>
+                    </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
 
-        <!-- Espacio antes de la tabla de Ventas -->
-        <h2 class="titulo-ventas">Mis Ventas</h2>
-
-        <!-- Tabla de Ventas -->
-        <table id="tablaVentas">
-            <thead>
-                <tr>
-                    <th>Número</th>
-                    <th>Fecha</th>
-                    <th>Total</th>
-                    <th>Acción</th>
-                </tr>
-            </thead>
-            <tbody>
-                <% foreach (var venta in Ventas) { %>
-                <tr>
-                    <td><%= venta.Id %></td>
-                    <td><%= venta.Fecha.ToString("dd/MM/yyyy HH:mm:ss") %></td>
-                    <td>$<%= venta.Total.ToString("N2") %></td>
-                    <td>
-                        <button type="button" class="submit-btn-transacciones ver-detalle-btn" onclick="abrirModalDetalleVenta('<%= venta.Id %>', '<%= venta.Fecha.ToString("dd/MM/yyyy HH:mm:ss") %>')">Ver Factura</button>
-                        <button type="button" class="submit-btn-transacciones descargar-btn" onclick="window.location.href='<%= ResolveUrl("~/Transacciones.aspx?descargarfacturaventa=" + venta.Id) %>'">Descargar</button>
-                    </td>
-                </tr>
-                <% } %>
-            </tbody>
-        </table>
+        <asp:Literal ID="ltlNoTransacciones" runat="server" Visible="false">
+            <div class="mensaje-carrito-vacio">
+                <img src="images/carritovacio.png" alt="Carrito vacío" class="img-carrito-vacio" />
+                <p>No tenés transacciones registradas.</p>
+                <p>Comenzá a invertir ahora mismo en la sección <a href="Compra.aspx" class="link-compra-activos">Compra de Activos</a></p>
+            </div>
+        </asp:Literal>
     </div>
 
-    <!-- Modal para Detalle de Factura -->
     <div id="transaccionesModal" class="transacciones-modal">
         <div class="transacciones-modal-content">
             <div class="transacciones-modal-header">

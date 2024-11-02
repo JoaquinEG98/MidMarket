@@ -57,6 +57,10 @@ namespace MidMarket.UI
                     CargarVentas();
                     DescargarFacturaCompra();
                     DescargarFacturaVenta();
+
+                    divCompras.Visible = Compras != null && Compras.Count > 0;
+                    divVentas.Visible = Ventas != null && Ventas.Count > 0;
+                    ltlNoTransacciones.Visible = !divCompras.Visible && !divVentas.Visible;
                 }
             }
             catch (Exception ex)
