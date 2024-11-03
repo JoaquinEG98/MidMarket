@@ -135,10 +135,16 @@
                     textoTraducido = textoTraducido.replace("{TasaInteres}", tasaInteres);
                 }
 
-                if (element.tagName === "INPUT" && element.type === "submit") {
+                if (element.tagName === "A") {
+                    element.textContent = textoTraducido;
+                } else if (element.tagName === "INPUT" && element.type === "submit") {
                     element.value = textoTraducido;
                 } else {
-                    element.textContent = textoTraducido;
+                    if (element.querySelector("a")) {
+                        element.firstChild.textContent = textoTraducido;
+                    } else {
+                        element.textContent = textoTraducido;
+                    }
                 }
             }
         });

@@ -669,7 +669,7 @@
     "Id": 112,
     "IdiomaId": 1,
     "Etiqueta": "mensaje_ComenzaInvertir",
-    "Texto": "Comenzá a invertir ahora mismo en la sección"
+    "Texto": "Comenzá a invertir ahora mismo en la sección "
   },
   {
     "Id": 113,
@@ -795,7 +795,7 @@
     "Id": 135,
     "IdiomaId": 2,
     "Etiqueta": "mensaje_ComenzaInvertir",
-    "Texto": "Start investing now in the"
+    "Texto": "Start investing now in the "
   },
   {
     "Id": 136,
@@ -1018,5 +1018,78 @@
     "IdiomaId": 2,
     "Etiqueta": "card_TasaInteres",
     "Texto": "Interest Rate: {TasaInteres}%"
+  },
+  {
+    "Id": 177,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_Ventas",
+    "Texto": "Ventas"
+  },
+  {
+    "Id": 178,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_Ventas",
+    "Texto": "Sales"
+  },
+  {
+    "Id": 179,
+    "IdiomaId": 1,
+    "Etiqueta": "mensaje_VentasVacias",
+    "Texto": "No tenés ventas registradas."
+  },
+  {
+    "Id": 180,
+    "IdiomaId": 2,
+    "Etiqueta": "mensaje_VentasVacias",
+    "Texto": "You have no recorded sales."
+  },
+  {
+    "Id": 181,
+    "IdiomaId": 1,
+    "Etiqueta": "mensaje_ComenzaInvertirVentas",
+    "Texto": "Comenzá a invertir ahora mismo en la sección "
+  },
+  {
+    "Id": 182,
+    "IdiomaId": 2,
+    "Etiqueta": "mensaje_ComenzaInvertirVentas",
+    "Texto": "Start investing now in the "
+  },
+  {
+    "Id": 183,
+    "IdiomaId": 1,
+    "Etiqueta": "link_CompraActivosVentas",
+    "Texto": "Compra de Activos"
+  },
+  {
+    "Id": 184,
+    "IdiomaId": 2,
+    "Etiqueta": "link_CompraActivosVentas",
+    "Texto": "Asset Purchase"
+  },
+  {
+    "Id": 185,
+    "IdiomaId": 1,
+    "Etiqueta": "table_CantidadVender",
+    "Texto": "Cantidad a Vender"
+  },
+  {
+    "Id": 186,
+    "IdiomaId": 2,
+    "Etiqueta": "table_CantidadVender",
+    "Texto": "Quantity to Sell"
+  },
+  {
+    "Id": 187,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_Vender",
+    "Texto": "Vender"
+  },
+  {
+    "Id": 188,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_Vender",
+    "Texto": "Sell"
   }
+
 ]
