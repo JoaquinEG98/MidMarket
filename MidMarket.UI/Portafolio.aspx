@@ -36,15 +36,15 @@
 
                                 <% if (detalle.Activo is Accion accion)
                                     { %>
-                                <td><%= accion.Precio.ToString("C") %></td>
+                                <td><%= accion.Precio.ToString("N2") %></td>
                                 <td>-</td>
-                                <td><%= (detalle.Cantidad * accion.Precio).ToString("C") %></td>
+                                <td><%= (detalle.Cantidad * accion.Precio).ToString("N2") %></td>
                                 <% }
                                 else if (detalle.Activo is Bono bono)
                                 { %>
                                 <td>-</td>
-                                <td><%= bono.ValorNominal.ToString("C") %></td>
-                                <td><%= (detalle.Cantidad * bono.ValorNominal).ToString("C") %></td>
+                                <td><%= bono.ValorNominal.ToString("N2") %></td>
+                                <td><%= (detalle.Cantidad * bono.ValorNominal).ToString("N2") %></td>
                                 <% } %>
                             </tr>
                             <% } %>
