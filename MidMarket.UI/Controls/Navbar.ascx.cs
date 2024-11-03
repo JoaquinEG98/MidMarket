@@ -27,6 +27,8 @@ namespace MidMarket.UI
 
             if (!IsPostBack)
             {
+                VerificarIdioma(cliente);
+
                 OcultarMenu();
                 AsignarMenuPermisos(cliente);
 
@@ -44,19 +46,26 @@ namespace MidMarket.UI
             }
             else
             {
-                // Detecta si el postback viene del cambio de idioma
                 string eventTarget = Request["__EVENTTARGET"];
                 string eventArgument = Request["__EVENTARGUMENT"];
 
                 if (eventTarget == "ChangeLanguage" && int.TryParse(eventArgument, out int idiomaId))
                 {
                     var idioma = _traduccionService.ObtenerIdiomas().Where(x => x.Id == idiomaId).FirstOrDefault();
-                    //Cliente cliente = _sessionManager.Get<Cliente>("Usuario");
+                    _sessionManager.Set("Idioma", idioma);
                     cliente.CambiarIdioma(idioma);
+                    VerificarIdioma(cliente);
                 }
             }
         }
 
+        private void VerificarIdioma(Cliente cliente)
+        {
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
+            cliente.CambiarIdioma(idioma);
+            UpdateLanguage(idioma);
+        }
 
         private void OcultarMenu()
         {

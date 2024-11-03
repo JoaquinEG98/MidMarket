@@ -40,7 +40,9 @@ namespace MidMarket.DataAccess.DAOs
             if (idioma == null)
                 idioma = ObtenerIdiomaDefault();
 
-            if (!_cache.Contains(_cacheTraduccionesKey))
+            string cacheKeyIdioma = $"{_cacheTraduccionesKey}_{idioma.Id}";
+
+            if (!_cache.Contains(cacheKeyIdioma))
             {
                 string json = Encoding.UTF8.GetString(Traduccion.Traducciones);
                 IList<Entities.Observer.Traduccion> traducciones = JsonConvert.DeserializeObject<IList<Entities.Observer.Traduccion>>(json);
@@ -49,17 +51,12 @@ namespace MidMarket.DataAccess.DAOs
                     .Where(t => t.IdiomaId == idioma.Id)
                     .ToDictionary(t => t.Etiqueta, t => (ITraduccion)t);
 
-                _cache.Set(_cacheTraduccionesKey, cacheData, _tiempoCache);
+                _cache.Set(cacheKeyIdioma, cacheData, _tiempoCache);
             }
 
-            var traduccionesCache = (IDictionary<string, ITraduccion>)_cache.Get(_cacheTraduccionesKey);
+            var traduccionesCache = (IDictionary<string, ITraduccion>)_cache.Get(cacheKeyIdioma);
 
-            var traduccionesFiltradas = traduccionesCache
-                .Where(t => t.Value.IdiomaId == idioma.Id)
-                .ToDictionary(t => t.Key, t => t.Value);
-
-            return traduccionesFiltradas;
+            return traduccionesCache;
         }
-
     }
 }
