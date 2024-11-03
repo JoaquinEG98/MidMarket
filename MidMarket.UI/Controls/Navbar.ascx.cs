@@ -1,36 +1,61 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
 using MidMarket.Entities.Composite;
+using MidMarket.Entities.Observer;
 using System;
 using System.Linq;
 using Unity;
 
 namespace MidMarket.UI
 {
-    public partial class Navbar : System.Web.UI.UserControl
+    public partial class Navbar : System.Web.UI.UserControl, IObserver
     {
         private readonly ISessionManager _sessionManager;
+        private readonly ITraduccionService _traduccionService;
 
         public Navbar()
         {
             _sessionManager = Global.Container.Resolve<ISessionManager>();
+            _traduccionService = Global.Container.Resolve<ITraduccionService>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
             Cliente cliente = _sessionManager.Get<Cliente>("Usuario");
+            cliente.SuscribirObservador(this);
 
-            OcultarMenu();
-            AsignarMenuPermisos(cliente);
-
-            var esAdmin = cliente.Permisos.Any(permiso => permiso.Nombre == "Webmaster" || permiso.Nombre == "Administrador Financiero");
-            if (esAdmin)
+            if (!IsPostBack)
             {
-                carritoDropdown.Visible = false;
-                misTransaccionesDropdown.Visible = false;
-                menuPrincipalDropdown.Visible = false;
+                OcultarMenu();
+                AsignarMenuPermisos(cliente);
+
+                var idiomas = _traduccionService.ObtenerIdiomas();
+                idiomaRepeater.DataSource = idiomas;
+                idiomaRepeater.DataBind();
+
+                var esAdmin = cliente.Permisos.Any(permiso => permiso.Nombre == "Webmaster" || permiso.Nombre == "Administrador Financiero");
+                if (esAdmin)
+                {
+                    carritoDropdown.Visible = false;
+                    misTransaccionesDropdown.Visible = false;
+                    menuPrincipalDropdown.Visible = false;
+                }
+            }
+            else
+            {
+                // Detecta si el postback viene del cambio de idioma
+                string eventTarget = Request["__EVENTTARGET"];
+                string eventArgument = Request["__EVENTARGUMENT"];
+
+                if (eventTarget == "ChangeLanguage" && int.TryParse(eventArgument, out int idiomaId))
+                {
+                    var idioma = _traduccionService.ObtenerIdiomas().Where(x => x.Id == idiomaId).FirstOrDefault();
+                    //Cliente cliente = _sessionManager.Get<Cliente>("Usuario");
+                    cliente.CambiarIdioma(idioma);
+                }
             }
         }
+
 
         private void OcultarMenu()
         {
@@ -178,6 +203,17 @@ namespace MidMarket.UI
                     portafolioDrowndown.Visible = true;
                     break;
             }
+        }
+
+        public void UpdateLanguage(IIdioma idioma)
+        {
+            var traducciones = _traduccionService.ObtenerTraducciones(idioma);
+
+            // Convertir las traducciones a JSON
+            var traduccionesJson = Newtonsoft.Json.JsonConvert.SerializeObject(traducciones.ToDictionary(t => t.Key, t => t.Value.Texto));
+
+            // Registrar el script en el cliente para definir la variable de traducciones
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "SetTranslations", $"var traducciones = {traduccionesJson};", true);
         }
     }
 }

@@ -75,12 +75,45 @@
                 <li class="nav-item" runat="server" id="portafolioDrowndown">
                     <a class="nav-link" href="/Portafolio.aspx">Portafolio</a>
                 </li>
+
+                <li class="nav-item dropdown" runat="server" id="idiomaDropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Idioma</a>
+                    <ul class="dropdown-menu animate__animated animate__fadeInDown animate__faster" aria-labelledby="idiomaDropdown">
+                        <asp:Repeater ID="idiomaRepeater" runat="server">
+                            <ItemTemplate>
+                                <li><a class="dropdown-item idioma-item" href="#" data-id='<%# Eval("Id") %>'><%# Eval("Nombre") %></a></li>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </ul>
+                </li>
+
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item" runat="server" id="logoutLink">
-                    <a class="nav-link" href="/Logout.aspx">Cerrar sesión</a>
+                    <a class="nav-link" href="/Logout.aspx" data-etiqueta="drop_Logout">Cerrar sesión</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll('.idioma-item').forEach(item => {
+            item.addEventListener('click', function (event) {
+                event.preventDefault();
+                const idiomaId = event.target.getAttribute("data-id");
+                __doPostBack('ChangeLanguage', idiomaId);
+            });
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll("[data-etiqueta]").forEach(function (element) {
+            const etiqueta = element.getAttribute("data-etiqueta");
+            if (traducciones && traducciones[etiqueta]) {
+                element.textContent = traducciones[etiqueta];
+            }
+        });
+    });
+</script>

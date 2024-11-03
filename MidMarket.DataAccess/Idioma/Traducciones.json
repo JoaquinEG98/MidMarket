@@ -2,25 +2,85 @@
   {
     "Id": 1,
     "IdiomaId": 1,
-    "Etiqueta": "Bienvenida",
-    "Texto": "Bienvenido a nuestro sistema"
+    "Etiqueta": "drop_MiCuenta",
+    "Texto": "Mi Cuenta"
   },
   {
     "Id": 2,
     "IdiomaId": 1,
-    "Etiqueta": "Despedida",
-    "Texto": "Gracias por visitarnos"
+    "Etiqueta": "drop_Transacciones",
+    "Texto": "Transacciones"
   },
   {
     "Id": 3,
-    "IdiomaId": 2,
-    "Etiqueta": "Welcome",
-    "Texto": "Welcome to our system"
+    "IdiomaId": 1,
+    "Etiqueta": "drop_Carrito",
+    "Texto": "Carrito"
   },
   {
     "Id": 4,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_MisTransacciones",
+    "Texto": "Mis Transacciones"
+  },
+  {
+    "Id": 5,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_Portafolio",
+    "Texto": "Portafolio"
+  },
+  {
+    "Id": 6,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_Idioma",
+    "Texto": "Idioma"
+  },
+  {
+    "Id": 7,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_Logout",
+    "Texto": "Cerrar sesión"
+  },
+  {
+    "Id": 8,
     "IdiomaId": 2,
-    "Etiqueta": "Goodbye",
-    "Texto": "Thank you for visiting"
+    "Etiqueta": "drop_MiCuenta",
+    "Texto": "My Account"
+  },
+  {
+    "Id": 9,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_Transacciones",
+    "Texto": "Transactions"
+  },
+  {
+    "Id": 10,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_Carrito",
+    "Texto": "Cart"
+  },
+  {
+    "Id": 11,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_MisTransacciones",
+    "Texto": "My Transactions"
+  },
+  {
+    "Id": 12,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_Portafolio",
+    "Texto": "Portfolio"
+  },
+  {
+    "Id": 13,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_Idioma",
+    "Texto": "Language"
+  },
+  {
+    "Id": 14,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_Logout",
+    "Texto": "Logout"
   }
 ]

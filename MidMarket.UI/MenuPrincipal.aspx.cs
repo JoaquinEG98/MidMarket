@@ -40,35 +40,32 @@ namespace MidMarket.UI
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            Cliente = _sessionManager.Get<Cliente>("Usuario");
+
+            if (Cliente == null)
+                Response.Redirect("Default.aspx");
+
+            try
             {
-                try
+                Cliente.SuscribirObservador(this);
+
+                VerificarDV();
+
+                esAdmin = Cliente.Permisos.Any(permiso => permiso.Nombre == "Webmaster" || permiso.Nombre == "Administrador Financiero");
+
+                if (!esAdmin)
                 {
-                    Cliente = _sessionManager.Get<Cliente>("Usuario");
-
-                    if (Cliente == null)
-                        Response.Redirect("Default.aspx");
-
-                    Cliente.SuscribirObservador(this);
-
-                    VerificarDV();
-
-                    esAdmin = Cliente.Permisos.Any(permiso => permiso.Nombre == "Webmaster" || permiso.Nombre == "Administrador Financiero");
-
-                    if (!esAdmin)
-                    {
-                        TotalInvertido = _usuarioService.ObtenerTotalInvertido();
-                        UltimaTransaccion = _usuarioService.ObtenerUltimaTransaccion();
-                        LlenarInformacionGrafico();
-                    }
-
-                    LlenarFamiliaUsuario();
+                    TotalInvertido = _usuarioService.ObtenerTotalInvertido();
+                    UltimaTransaccion = _usuarioService.ObtenerUltimaTransaccion();
+                    LlenarInformacionGrafico();
                 }
-                catch (Exception ex)
-                {
-                    AlertHelper.MostrarModal(this, $"Error al cargar la página. Será redirigido al inicio.", true);
-                    _sessionManager.AbandonSession();
-                }
+
+                LlenarFamiliaUsuario();
+            }
+            catch (Exception ex)
+            {
+                AlertHelper.MostrarModal(this, $"Error al cargar la página. Será redirigido al inicio.", true);
+                _sessionManager.AbandonSession();
             }
         }
 
