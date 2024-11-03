@@ -610,5 +610,257 @@
     "IdiomaId": 2,
     "Etiqueta": "chart_Bonos",
     "Texto": "Bonds"
-  }
+  },
+      {
+        "Id": 103,
+        "IdiomaId": 1,
+        "Etiqueta": "texto_MisCompras",
+        "Texto": "Mis Compras"
+    },
+    {
+        "Id": 104,
+        "IdiomaId": 1,
+        "Etiqueta": "table_Numero",
+        "Texto": "Número"
+    },
+    {
+        "Id": 105,
+        "IdiomaId": 1,
+        "Etiqueta": "table_Fecha",
+        "Texto": "Fecha"
+    },
+    {
+        "Id": 106,
+        "IdiomaId": 1,
+        "Etiqueta": "table_Total",
+        "Texto": "Total"
+    },
+    {
+        "Id": 107,
+        "IdiomaId": 1,
+        "Etiqueta": "table_Accion",
+        "Texto": "Acción"
+    },
+    {
+        "Id": 108,
+        "IdiomaId": 1,
+        "Etiqueta": "btn_VerFactura",
+        "Texto": "Ver Factura"
+    },
+    {
+        "Id": 109,
+        "IdiomaId": 1,
+        "Etiqueta": "btn_Descargar",
+        "Texto": "Descargar"
+    },
+    {
+        "Id": 110,
+        "IdiomaId": 1,
+        "Etiqueta": "texto_MisVentas",
+        "Texto": "Mis Ventas"
+    },
+    {
+        "Id": 111,
+        "IdiomaId": 1,
+        "Etiqueta": "mensaje_NoTransacciones",
+        "Texto": "No tenés transacciones registradas."
+    },
+    {
+        "Id": 112,
+        "IdiomaId": 1,
+        "Etiqueta": "mensaje_ComenzaInvertir",
+        "Texto": "Comenzá a invertir ahora mismo en la sección"
+    },
+    {
+        "Id": 113,
+        "IdiomaId": 1,
+        "Etiqueta": "link_CompraActivos",
+        "Texto": "Compra de Activos"
+    },
+    {
+        "Id": 114,
+        "IdiomaId": 1,
+        "Etiqueta": "modal_TituloFactura",
+        "Texto": "Factura de la Transacción"
+    },
+    {
+        "Id": 115,
+        "IdiomaId": 1,
+        "Etiqueta": "modal_Fecha",
+        "Texto": "Fecha"
+    },
+    {
+        "Id": 116,
+        "IdiomaId": 1,
+        "Etiqueta": "modal_NumeroFactura",
+        "Texto": "Factura N°"
+    },
+    {
+        "Id": 117,
+        "IdiomaId": 1,
+        "Etiqueta": "table_NombreActivo",
+        "Texto": "Nombre de Activo"
+    },
+    {
+        "Id": 118,
+        "IdiomaId": 1,
+        "Etiqueta": "table_Simbolo",
+        "Texto": "Símbolo"
+    },
+    {
+        "Id": 120,
+        "IdiomaId": 1,
+        "Etiqueta": "table_Precio",
+        "Texto": "Precio"
+    },
+    {
+        "Id": 122,
+        "IdiomaId": 1,
+        "Etiqueta": "table_TasaInteres",
+        "Texto": "Tasa de Interés"
+    },
+    {
+        "Id": 123,
+        "IdiomaId": 1,
+        "Etiqueta": "table_TotalActivo",
+        "Texto": "Total"
+    },
+    {
+        "Id": 124,
+        "IdiomaId": 1,
+        "Etiqueta": "section_Acciones",
+        "Texto": "Acciones"
+    },
+    {
+        "Id": 125,
+        "IdiomaId": 1,
+        "Etiqueta": "section_Bonos",
+        "Texto": "Bonos"
+    },
+    {
+        "Id": 126,
+        "IdiomaId": 2,
+        "Etiqueta": "texto_MisCompras",
+        "Texto": "My Purchases"
+    },
+    {
+        "Id": 127,
+        "IdiomaId": 2,
+        "Etiqueta": "table_Numero",
+        "Texto": "Number"
+    },
+    {
+        "Id": 128,
+        "IdiomaId": 2,
+        "Etiqueta": "table_Fecha",
+        "Texto": "Date"
+    },
+    {
+        "Id": 129,
+        "IdiomaId": 2,
+        "Etiqueta": "table_Total",
+        "Texto": "Total"
+    },
+    {
+        "Id": 130,
+        "IdiomaId": 2,
+        "Etiqueta": "table_Accion",
+        "Texto": "Action"
+    },
+    {
+        "Id": 131,
+        "IdiomaId": 2,
+        "Etiqueta": "btn_VerFactura",
+        "Texto": "View Invoice"
+    },
+    {
+        "Id": 132,
+        "IdiomaId": 2,
+        "Etiqueta": "btn_Descargar",
+        "Texto": "Download"
+    },
+    {
+        "Id": 133,
+        "IdiomaId": 2,
+        "Etiqueta": "texto_MisVentas",
+        "Texto": "My Sales"
+    },
+    {
+        "Id": 134,
+        "IdiomaId": 2,
+        "Etiqueta": "mensaje_NoTransacciones",
+        "Texto": "You have no recorded transactions."
+    },
+    {
+        "Id": 135,
+        "IdiomaId": 2,
+        "Etiqueta": "mensaje_ComenzaInvertir",
+        "Texto": "Start investing now in the"
+    },
+    {
+        "Id": 136,
+        "IdiomaId": 2,
+        "Etiqueta": "link_CompraActivos",
+        "Texto": "Asset Purchase"
+    },
+    {
+        "Id": 137,
+        "IdiomaId": 2,
+        "Etiqueta": "modal_TituloFactura",
+        "Texto": "Transaction Invoice"
+    },
+    {
+        "Id": 138,
+        "IdiomaId": 2,
+        "Etiqueta": "modal_Fecha",
+        "Texto": "Date"
+    },
+    {
+        "Id": 139,
+        "IdiomaId": 2,
+        "Etiqueta": "modal_NumeroFactura",
+        "Texto": "Invoice No."
+    },
+    {
+        "Id": 140,
+        "IdiomaId": 2,
+        "Etiqueta": "table_NombreActivo",
+        "Texto": "Asset Name"
+    },
+    {
+        "Id": 141,
+        "IdiomaId": 2,
+        "Etiqueta": "table_Simbolo",
+        "Texto": "Symbol"
+    },
+    {
+        "Id": 143,
+        "IdiomaId": 2,
+        "Etiqueta": "table_Precio",
+        "Texto": "Price"
+    },
+    {
+        "Id": 145,
+        "IdiomaId": 2,
+        "Etiqueta": "table_TasaInteres",
+        "Texto": "Interest Rate"
+    },
+    {
+        "Id": 146,
+        "IdiomaId": 2,
+        "Etiqueta": "table_TotalActivo",
+        "Texto": "Total"
+    },
+    {
+        "Id": 147,
+        "IdiomaId": 2,
+        "Etiqueta": "section_Acciones",
+        "Texto": "Stocks"
+    },
+    {
+        "Id": 148,
+        "IdiomaId": 2,
+        "Etiqueta": "section_Bonos",
+        "Texto": "Bonds"
+    }
 ]
