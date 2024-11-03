@@ -2,6 +2,7 @@
 using MidMarket.Entities;
 using MidMarket.Entities.Composite;
 using MidMarket.Entities.Observer;
+using MidMarket.UI.Helpers;
 using System;
 using System.Linq;
 using Unity;
@@ -208,12 +209,7 @@ namespace MidMarket.UI
         public void UpdateLanguage(IIdioma idioma)
         {
             var traducciones = _traduccionService.ObtenerTraducciones(idioma);
-
-            // Convertir las traducciones a JSON
-            var traduccionesJson = Newtonsoft.Json.JsonConvert.SerializeObject(traducciones.ToDictionary(t => t.Key, t => t.Value.Texto));
-
-            // Registrar el script en el cliente para definir la variable de traducciones
-            Page.ClientScript.RegisterStartupScript(this.GetType(), "SetTranslations", $"var traducciones = {traduccionesJson};", true);
+            ScriptHelper.TraducirPagina(this.Page, traducciones);
         }
     }
 }

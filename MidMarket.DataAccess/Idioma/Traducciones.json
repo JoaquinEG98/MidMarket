@@ -82,5 +82,257 @@
     "IdiomaId": 2,
     "Etiqueta": "drop_Logout",
     "Texto": "Logout"
+  },
+  {
+    "Id": 15,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_CargarSaldo",
+    "Texto": "Cargar Saldo"
+  },
+  {
+    "Id": 16,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_CambiarPassword",
+    "Texto": "Cambiar Contraseña"
+  },
+  {
+    "Id": 17,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_Acciones",
+    "Texto": "Acciones"
+  },
+  {
+    "Id": 18,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_AdministrarAcciones",
+    "Texto": "Administrar Acciones"
+  },
+  {
+    "Id": 19,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_AltaAcciones",
+    "Texto": "Alta de Acciones"
+  },
+  {
+    "Id": 20,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_Bonos",
+    "Texto": "Bonos"
+  },
+  {
+    "Id": 21,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_AdministrarBonos",
+    "Texto": "Administrar Bonos"
+  },
+  {
+    "Id": 22,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_AltaBonos",
+    "Texto": "Alta de Bonos"
+  },
+  {
+    "Id": 23,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_Usuarios",
+    "Texto": "Usuarios"
+  },
+  {
+    "Id": 24,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_AltaUsuario",
+    "Texto": "Alta de Usuario"
+  },
+  {
+    "Id": 25,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_Permisos",
+    "Texto": "Permisos"
+  },
+  {
+    "Id": 26,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_AsignarPatentes",
+    "Texto": "Asignar Patentes"
+  },
+  {
+    "Id": 27,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_AsignarFamilias",
+    "Texto": "Asignar Familias"
+  },
+  {
+    "Id": 28,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_DesasignarPatentes",
+    "Texto": "Desasignar Patentes"
+  },
+  {
+    "Id": 29,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_DesasignarFamilias",
+    "Texto": "Desasignar Familias"
+  },
+  {
+    "Id": 30,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_Familias",
+    "Texto": "Administración de Familias"
+  },
+  {
+    "Id": 31,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_AltaFamilia",
+    "Texto": "Alta de Familia"
+  },
+  {
+    "Id": 32,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_AdministracionBD",
+    "Texto": "Administración de Base de Datos"
+  },
+  {
+    "Id": 33,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_CompraActivos",
+    "Texto": "Compra de Activos"
+  },
+  {
+    "Id": 34,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_VentaActivos",
+    "Texto": "Venta de Activos"
+  },
+  {
+    "Id": 35,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_CargarSaldo",
+    "Texto": "Load Balance"
+  },
+  {
+    "Id": 36,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_CambiarPassword",
+    "Texto": "Change Password"
+  },
+  {
+    "Id": 37,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_Acciones",
+    "Texto": "Stocks"
+  },
+  {
+    "Id": 38,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_AdministrarAcciones",
+    "Texto": "Manage Stocks"
+  },
+  {
+    "Id": 39,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_AltaAcciones",
+    "Texto": "New Stock Entry"
+  },
+  {
+    "Id": 40,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_Bonos",
+    "Texto": "Bonds"
+  },
+  {
+    "Id": 41,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_AdministrarBonos",
+    "Texto": "Manage Bonds"
+  },
+  {
+    "Id": 42,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_AltaBonos",
+    "Texto": "New Bond Entry"
+  },
+  {
+    "Id": 43,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_Usuarios",
+    "Texto": "Users"
+  },
+  {
+    "Id": 44,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_AltaUsuario",
+    "Texto": "New User"
+  },
+  {
+    "Id": 45,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_Permisos",
+    "Texto": "Permissions"
+  },
+  {
+    "Id": 46,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_AsignarPatentes",
+    "Texto": "Assign Permissions"
+  },
+  {
+    "Id": 47,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_AsignarFamilias",
+    "Texto": "Assign Families"
+  },
+  {
+    "Id": 48,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_DesasignarPatentes",
+    "Texto": "Unassign Permissions"
+  },
+  {
+    "Id": 49,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_DesasignarFamilias",
+    "Texto": "Unassign Families"
+  },
+  {
+    "Id": 50,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_Familias",
+    "Texto": "Family Administration"
+  },
+  {
+    "Id": 51,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_AltaFamilia",
+    "Texto": "New Family"
+  },
+  {
+    "Id": 52,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_AdministracionBD",
+    "Texto": "Database Administration"
+  },
+  {
+    "Id": 53,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_CompraActivos",
+    "Texto": "Asset Purchase"
+  },
+  {
+    "Id": 54,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_VentaActivos",
+    "Texto": "Asset Sale"
+  },
+  {
+    "Id": 55,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_Bitacora",
+    "Texto": "Bitácora"
+  },
+  {
+    "Id": 56,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_Bitacora",
+    "Texto": "Logs"
   }
 ]
