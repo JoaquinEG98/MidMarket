@@ -90,7 +90,7 @@
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item" runat="server" id="logoutLink">
-                    <a class="nav-link" href="/Logout.aspx">Cerrar sesión</a>
+                    <a class="nav-link" href="/Logout.aspx" data-etiqueta="drop_Logout">Cerrar sesión</a>
                 </li>
             </ul>
         </div>

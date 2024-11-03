@@ -406,5 +406,41 @@
     "IdiomaId": 2,
     "Etiqueta": "texto_ComprasActivos",
     "Texto": "Asset Purchases"
+  },
+  {
+    "Id": 69,
+    "IdiomaId": 1,
+    "Etiqueta": "graph_CompraActivos",
+    "Texto": "Compras de Activos por Fecha"
+  },
+  {
+    "Id": 70,
+    "IdiomaId": 1,
+    "Etiqueta": "graph_Acciones",
+    "Texto": "Acciones"
+  },
+  {
+    "Id": 71,
+    "IdiomaId": 1,
+    "Etiqueta": "graph_Bonos",
+    "Texto": "Bonos"
+  },
+  {
+    "Id": 72,
+    "IdiomaId": 2,
+    "Etiqueta": "graph_CompraActivos",
+    "Texto": "Asset Purchases by Date"
+  },
+  {
+    "Id": 73,
+    "IdiomaId": 2,
+    "Etiqueta": "graph_Acciones",
+    "Texto": "Stocks"
+  },
+  {
+    "Id": 74,
+    "IdiomaId": 2,
+    "Etiqueta": "graph_Bonos",
+    "Texto": "Bonds"
   }
 ]
