@@ -1870,5 +1870,29 @@
     "IdiomaId": 2,
     "Etiqueta": "error_FormatoTasaInteres",
     "Texto": "Incorrect interest rate format."
+  },
+  {
+    "Id": 317,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_AltaBono",
+    "Texto": "Alta de Bono"
+  },
+  {
+    "Id": 318,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_AltaBono",
+    "Texto": "Add Bond"
+  },
+  {
+    "Id": 319,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_CargarBono",
+    "Texto": "Cargar"
+  },
+  {
+    "Id": 320,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_CargarBono",
+    "Texto": "Add"
   }
 ]

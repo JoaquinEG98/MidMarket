@@ -3,10 +3,10 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="container-bonos" class="container-bonos">
-        <h2>Alta de Bono</h2>
+        <h2 data-etiqueta="titulo_AltaBono">Alta de Bono</h2>
 
         <uc:ValidarBonos ID="ValidarBonos" runat="server" />
 
-        <asp:Button ID="btnCargarBono" runat="server" Text="Cargar" OnClick="btnCargarBono_Click" CssClass="submit-btn-bonos" />
+        <asp:Button ID="btnCargarBono" runat="server" Text="Cargar" OnClick="btnCargarBono_Click" CssClass="submit-btn-bonos" data-etiqueta="btn_CargarBono" />
     </div>
 </asp:Content>
