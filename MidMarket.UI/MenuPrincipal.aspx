@@ -2,30 +2,30 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div class="welcome-container">
-        <h2><strong>Hola, <%: Cliente.RazonSocial %> (<%: Familia %>) 👋</strong></h2>
+        <h2><strong data-etiqueta="texto_Hola">Hola, <%: Cliente.RazonSocial %> (<%: Familia %>) 👋</strong></h2>
         <% if (!esAdmin) { %>
-        <p>Acá podés ver el resumen de tu cuenta y las últimas novedades del mercado financiero.</p>
+        <p data-etiqueta="texto_ResumenCuenta">Acá podés ver el resumen de tu cuenta y las últimas novedades del mercado financiero.</p>
         <% } %>
     </div>
 
     <% if (!esAdmin) { %>
         <div style="display: flex; gap: 20px; margin-bottom: 40px;">
             <div class="card">
-                <h3>Balance Total</h3>
+                <h3 data-etiqueta="texto_BalanceTotal">Balance Total</h3>
                 <p>$<%: Cliente.Cuenta.Saldo.ToString("N2") %></p>
             </div>
             <div class="card">
-                <h3>Inversiones Actuales</h3>
+                <h3 data-etiqueta="texto_InversionesActuales">Inversiones Actuales</h3>
                 <p>$<%: TotalInvertido.ToString("N2") %></p>
             </div>
             <div class="card">
-                <h3>Última Transacción</h3>
+                <h3 data-etiqueta="texto_UltimaTransaccion">Última Transacción</h3>
                 <p>$<%: UltimaTransaccion.ToString("N2") %></p>
             </div>
         </div>
 
         <div class="chart-container">
-            <h3><strong>Compras de Activos</strong></h3>
+            <h3 data-etiqueta="texto_ComprasActivos"><strong>Compras de Activos</strong></h3>
             <canvas id="comprasChart" width="400" height="150"></canvas>
         </div>
     <% } else { %>

@@ -1,6 +1,5 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
-using MidMarket.Entities.Observer;
 using MidMarket.UI.Helpers;
 using Newtonsoft.Json;
 using System;
@@ -11,7 +10,7 @@ using Unity;
 
 namespace MidMarket.UI
 {
-    public partial class _Default : Page, IObserver
+    public partial class _Default : Page
     {
         public Cliente Cliente { get; set; }
         public string Familia { get; set; } = "Cliente";
@@ -47,8 +46,6 @@ namespace MidMarket.UI
 
             try
             {
-                Cliente.SuscribirObservador(this);
-
                 VerificarDV();
 
                 esAdmin = Cliente.Permisos.Any(permiso => permiso.Nombre == "Webmaster" || permiso.Nombre == "Administrador Financiero");
@@ -145,11 +142,6 @@ namespace MidMarket.UI
                     Familia = permisoFamilia.Nombre.ToString();
                 }
             }
-        }
-
-        public void UpdateLanguage(IIdioma idioma)
-        {
-            //
         }
     }
 }

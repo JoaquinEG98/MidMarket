@@ -223,7 +223,7 @@ namespace MidMarket.UI
         public void UpdateLanguage(IIdioma idioma)
         {
             var traducciones = _traduccionService.ObtenerTraducciones(idioma);
-            ScriptHelper.TraducirPagina(this.Page, traducciones);
+            ScriptHelper.TraducirPagina(this.Page, traducciones, _sessionManager);
         }
     }
 }

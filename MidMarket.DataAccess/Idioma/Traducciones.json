@@ -334,5 +334,77 @@
     "IdiomaId": 2,
     "Etiqueta": "drop_Bitacora",
     "Texto": "Logs"
+  },
+  {
+    "Id": 57,
+    "IdiomaId": 1,
+    "Etiqueta": "texto_Hola",
+    "Texto": "Hola, {RazonSocial} ({Familia}) 👋"
+  },
+  {
+    "Id": 58,
+    "IdiomaId": 1,
+    "Etiqueta": "texto_ResumenCuenta",
+    "Texto": "Acá podés ver el resumen de tu cuenta y las últimas novedades del mercado financiero."
+  },
+  {
+    "Id": 59,
+    "IdiomaId": 1,
+    "Etiqueta": "texto_BalanceTotal",
+    "Texto": "Balance Total"
+  },
+  {
+    "Id": 60,
+    "IdiomaId": 1,
+    "Etiqueta": "texto_InversionesActuales",
+    "Texto": "Inversiones Actuales"
+  },
+  {
+    "Id": 61,
+    "IdiomaId": 1,
+    "Etiqueta": "texto_UltimaTransaccion",
+    "Texto": "Última Transacción"
+  },
+  {
+    "Id": 62,
+    "IdiomaId": 1,
+    "Etiqueta": "texto_ComprasActivos",
+    "Texto": "Compras de Activos"
+  },
+  {
+    "Id": 63,
+    "IdiomaId": 2,
+    "Etiqueta": "texto_Hola",
+    "Texto": "Hello, {RazonSocial} ({Familia}) 👋"
+  },
+  {
+    "Id": 64,
+    "IdiomaId": 2,
+    "Etiqueta": "texto_ResumenCuenta",
+    "Texto": "Here you can see your account summary and the latest financial market news."
+  },
+  {
+    "Id": 65,
+    "IdiomaId": 2,
+    "Etiqueta": "texto_BalanceTotal",
+    "Texto": "Total Balance"
+  },
+  {
+    "Id": 66,
+    "IdiomaId": 2,
+    "Etiqueta": "texto_InversionesActuales",
+    "Texto": "Current Investments"
+  },
+  {
+    "Id": 67,
+    "IdiomaId": 2,
+    "Etiqueta": "texto_UltimaTransaccion",
+    "Texto": "Last Transaction"
+  },
+  {
+    "Id": 68,
+    "IdiomaId": 2,
+    "Etiqueta": "texto_ComprasActivos",
+    "Texto": "Asset Purchases"
   }
 ]
