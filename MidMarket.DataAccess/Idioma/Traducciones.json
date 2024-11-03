@@ -442,5 +442,173 @@
     "IdiomaId": 2,
     "Etiqueta": "graph_Bonos",
     "Texto": "Bonds"
+  },
+  {
+    "Id": 75,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_IngresarDinero",
+    "Texto": "Ingresar dinero"
+  },
+  {
+    "Id": 76,
+    "IdiomaId": 1,
+    "Etiqueta": "table_Activo",
+    "Texto": "Activo"
+  },
+  {
+    "Id": 77,
+    "IdiomaId": 1,
+    "Etiqueta": "table_Cantidad",
+    "Texto": "Cantidad"
+  },
+  {
+    "Id": 78,
+    "IdiomaId": 1,
+    "Etiqueta": "table_UltimoPrecio",
+    "Texto": "Último Precio"
+  },
+  {
+    "Id": 79,
+    "IdiomaId": 1,
+    "Etiqueta": "table_ValorNominal",
+    "Texto": "Valor Nominal"
+  },
+  {
+    "Id": 80,
+    "IdiomaId": 1,
+    "Etiqueta": "table_Rendimiento",
+    "Texto": "Rendimiento"
+  },
+  {
+    "Id": 81,
+    "IdiomaId": 1,
+    "Etiqueta": "text_Efectivo",
+    "Texto": "Efectivo"
+  },
+  {
+    "Id": 82,
+    "IdiomaId": 1,
+    "Etiqueta": "text_DisponibleParaOperar",
+    "Texto": "Disponible para operar"
+  },
+  {
+    "Id": 83,
+    "IdiomaId": 1,
+    "Etiqueta": "text_Pesos",
+    "Texto": "PESOS"
+  },
+  {
+    "Id": 84,
+    "IdiomaId": 1,
+    "Etiqueta": "text_Resumen",
+    "Texto": "Resumen"
+  },
+  {
+    "Id": 85,
+    "IdiomaId": 1,
+    "Etiqueta": "text_ActivosValorizados",
+    "Texto": "Activos Valorizados"
+  },
+  {
+    "Id": 86,
+    "IdiomaId": 1,
+    "Etiqueta": "chart_DistribucionActivos",
+    "Texto": "Distribución de Activos"
+  },
+  {
+    "Id": 87,
+    "IdiomaId": 1,
+    "Etiqueta": "chart_Acciones",
+    "Texto": "Acciones"
+  },
+  {
+    "Id": 88,
+    "IdiomaId": 1,
+    "Etiqueta": "chart_Bonos",
+    "Texto": "Bonos"
+  },
+  {
+    "Id": 89,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_IngresarDinero",
+    "Texto": "Deposit Money"
+  },
+  {
+    "Id": 90,
+    "IdiomaId": 2,
+    "Etiqueta": "table_Activo",
+    "Texto": "Asset"
+  },
+  {
+    "Id": 91,
+    "IdiomaId": 2,
+    "Etiqueta": "table_Cantidad",
+    "Texto": "Quantity"
+  },
+  {
+    "Id": 92,
+    "IdiomaId": 2,
+    "Etiqueta": "table_UltimoPrecio",
+    "Texto": "Last Price"
+  },
+  {
+    "Id": 93,
+    "IdiomaId": 2,
+    "Etiqueta": "table_ValorNominal",
+    "Texto": "Nominal Value"
+  },
+  {
+    "Id": 94,
+    "IdiomaId": 2,
+    "Etiqueta": "table_Rendimiento",
+    "Texto": "Performance"
+  },
+  {
+    "Id": 95,
+    "IdiomaId": 2,
+    "Etiqueta": "text_Efectivo",
+    "Texto": "Cash"
+  },
+  {
+    "Id": 96,
+    "IdiomaId": 2,
+    "Etiqueta": "text_DisponibleParaOperar",
+    "Texto": "Available for trading"
+  },
+  {
+    "Id": 97,
+    "IdiomaId": 2,
+    "Etiqueta": "text_Pesos",
+    "Texto": "PESOS"
+  },
+  {
+    "Id": 98,
+    "IdiomaId": 2,
+    "Etiqueta": "text_Resumen",
+    "Texto": "Summary"
+  },
+  {
+    "Id": 99,
+    "IdiomaId": 2,
+    "Etiqueta": "text_ActivosValorizados",
+    "Texto": "Valued Assets"
+  },
+  {
+    "Id": 100,
+    "IdiomaId": 2,
+    "Etiqueta": "chart_DistribucionActivos",
+    "Texto": "Asset Distribution"
+  },
+  {
+    "Id": 101,
+    "IdiomaId": 2,
+    "Etiqueta": "chart_Acciones",
+    "Texto": "Stocks"
+  },
+  {
+    "Id": 102,
+    "IdiomaId": 2,
+    "Etiqueta": "chart_Bonos",
+    "Texto": "Bonds"
   }
 ]
