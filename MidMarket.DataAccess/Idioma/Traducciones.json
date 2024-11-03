@@ -1464,18 +1464,6 @@
     "Texto": "Name"
   },
   {
-    "Id": 251,
-    "IdiomaId": 1,
-    "Etiqueta": "placeholder_Nombre",
-    "Texto": "Nombre"
-  },
-  {
-    "Id": 252,
-    "IdiomaId": 2,
-    "Etiqueta": "placeholder_Nombre",
-    "Texto": "Name"
-  },
-  {
     "Id": 253,
     "IdiomaId": 1,
     "Etiqueta": "error_NombreRequerido",
@@ -1512,18 +1500,6 @@
     "Texto": "Symbol"
   },
   {
-    "Id": 259,
-    "IdiomaId": 1,
-    "Etiqueta": "placeholder_Simbolo",
-    "Texto": "Símbolo"
-  },
-  {
-    "Id": 260,
-    "IdiomaId": 2,
-    "Etiqueta": "placeholder_Simbolo",
-    "Texto": "Symbol"
-  },
-  {
     "Id": 261,
     "IdiomaId": 1,
     "Etiqueta": "error_SimboloRequerido",
@@ -1557,18 +1533,6 @@
     "Id": 266,
     "IdiomaId": 2,
     "Etiqueta": "label_Precio",
-    "Texto": "Price"
-  },
-  {
-    "Id": 267,
-    "IdiomaId": 1,
-    "Etiqueta": "placeholder_Precio",
-    "Texto": "Precio"
-  },
-  {
-    "Id": 268,
-    "IdiomaId": 2,
-    "Etiqueta": "placeholder_Precio",
     "Texto": "Price"
   },
   {
@@ -1740,18 +1704,6 @@
     "Texto": "Name"
   },
   {
-    "Id": 295,
-    "IdiomaId": 1,
-    "Etiqueta": "placeholder_NombreBono",
-    "Texto": "Nombre del Bono"
-  },
-  {
-    "Id": 296,
-    "IdiomaId": 2,
-    "Etiqueta": "placeholder_NombreBono",
-    "Texto": "Bond Name"
-  },
-  {
     "Id": 297,
     "IdiomaId": 1,
     "Etiqueta": "error_NombreBonoRequerido",
@@ -1785,18 +1737,6 @@
     "Id": 302,
     "IdiomaId": 2,
     "Etiqueta": "label_ValorNominal",
-    "Texto": "Nominal Value"
-  },
-  {
-    "Id": 303,
-    "IdiomaId": 1,
-    "Etiqueta": "placeholder_ValorNominal",
-    "Texto": "Valor Nominal"
-  },
-  {
-    "Id": 304,
-    "IdiomaId": 2,
-    "Etiqueta": "placeholder_ValorNominal",
     "Texto": "Nominal Value"
   },
   {
@@ -1834,18 +1774,6 @@
     "IdiomaId": 2,
     "Etiqueta": "label_TasaInteres",
     "Texto": "Interest Rate (%)"
-  },
-  {
-    "Id": 311,
-    "IdiomaId": 1,
-    "Etiqueta": "placeholder_TasaInteres",
-    "Texto": "Tasa de Interés"
-  },
-  {
-    "Id": 312,
-    "IdiomaId": 2,
-    "Etiqueta": "placeholder_TasaInteres",
-    "Texto": "Interest Rate"
   },
   {
     "Id": 313,
