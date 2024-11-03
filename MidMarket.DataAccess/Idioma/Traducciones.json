@@ -1618,5 +1618,101 @@
     "IdiomaId": 2,
     "Etiqueta": "btn_Cargar",
     "Texto": "Add"
+  },
+  {
+    "Id": 275,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_AdministracionBonos",
+    "Texto": "Administración de Bonos"
+  },
+  {
+    "Id": 276,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_AdministracionBonos",
+    "Texto": "Bond Management"
+  },
+  {
+    "Id": 277,
+    "IdiomaId": 1,
+    "Etiqueta": "table_NombreBono",
+    "Texto": "Nombre de Bono"
+  },
+  {
+    "Id": 278,
+    "IdiomaId": 2,
+    "Etiqueta": "table_NombreBono",
+    "Texto": "Bond Name"
+  },
+  {
+    "Id": 279,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_BajaBono",
+    "Texto": "Baja"
+  },
+  {
+    "Id": 280,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_BajaBono",
+    "Texto": "Remove"
+  },
+  {
+    "Id": 281,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_ModificarBono",
+    "Texto": "Modificar"
+  },
+  {
+    "Id": 282,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_ModificarBono",
+    "Texto": "Edit"
+  },
+  {
+    "Id": 283,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_AltaBono",
+    "Texto": "Alta"
+  },
+  {
+    "Id": 284,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_AltaBono",
+    "Texto": "Add"
+  },
+  {
+    "Id": 285,
+    "IdiomaId": 1,
+    "Etiqueta": "alert_SeleccionarBono",
+    "Texto": "Por favor, selecciona un bono."
+  },
+  {
+    "Id": 286,
+    "IdiomaId": 2,
+    "Etiqueta": "alert_SeleccionarBono",
+    "Texto": "Please select a bond."
+  },
+  {
+    "Id": 287,
+    "IdiomaId": 1,
+    "Etiqueta": "confirm_EliminarBono",
+    "Texto": "¿Estás seguro de eliminar el bono \"{NombreBono}\"?"
+  },
+  {
+    "Id": 288,
+    "IdiomaId": 2,
+    "Etiqueta": "confirm_EliminarBono",
+    "Texto": "Are you sure you want to delete the bond \"{NombreBono}\"?"
+  },
+  {
+    "Id": 289,
+    "IdiomaId": 1,
+    "Etiqueta": "alert_BonoEliminado",
+    "Texto": "El bono \"{NombreBono}\" ha sido eliminado."
+  },
+  {
+    "Id": 290,
+    "IdiomaId": 2,
+    "Etiqueta": "alert_BonoEliminado",
+    "Texto": "The bond \"{NombreBono}\" has been deleted."
   }
 ]
