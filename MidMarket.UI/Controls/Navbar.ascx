@@ -112,7 +112,11 @@
         document.querySelectorAll("[data-etiqueta]").forEach(function (element) {
             const etiqueta = element.getAttribute("data-etiqueta");
             if (traducciones && traducciones[etiqueta]) {
-                element.textContent = traducciones[etiqueta];
+                if (element.tagName === "INPUT" && element.type === "submit") {
+                    element.value = traducciones[etiqueta];
+                } else {
+                    element.textContent = traducciones[etiqueta];
+                }
             }
         });
     });

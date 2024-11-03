@@ -51,10 +51,11 @@ namespace MidMarket.UI
         {
             try
             {
+                CargarCompras();
+                CargarVentas();
+
                 if (!IsPostBack)
                 {
-                    CargarCompras();
-                    CargarVentas();
                     DescargarFacturaCompra();
                     DescargarFacturaVenta();
 
