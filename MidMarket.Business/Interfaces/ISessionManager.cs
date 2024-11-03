@@ -6,5 +6,7 @@
         void Set<T>(string key, T value);
         void Remove(string key);
         void AbandonSession();
+        bool IsObserverSubscribed();
+        void ObserverSubscribe();
     }
 }

@@ -23,7 +23,12 @@ namespace MidMarket.UI
         protected void Page_Load(object sender, EventArgs e)
         {
             Cliente cliente = _sessionManager.Get<Cliente>("Usuario");
-            cliente.SuscribirObservador(this);
+
+            if (!_sessionManager.IsObserverSubscribed())
+            {
+                cliente.SuscribirObservador(this);
+                _sessionManager.ObserverSubscribe();
+            }
 
             if (!IsPostBack)
             {

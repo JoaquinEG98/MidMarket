@@ -6,6 +6,8 @@ namespace MidMarket.Business
 {
     public class SessionManager : ISessionManager
     {
+        private const string clienteLanguageKey = "ClienteIdioma";
+
         private HttpSessionState Session => HttpContext.Current?.Session;
 
         public T Get<T>(string key)
@@ -26,6 +28,16 @@ namespace MidMarket.Business
         public void AbandonSession()
         {
             Session.Abandon();
+        }
+
+        public bool IsObserverSubscribed()
+        {
+            return Session[clienteLanguageKey] != null && (bool)Session[clienteLanguageKey];
+        }
+
+        public void ObserverSubscribe()
+        {
+            Session[clienteLanguageKey] = true;
         }
     }
 }
