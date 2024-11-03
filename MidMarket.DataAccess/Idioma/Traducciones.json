@@ -1318,6 +1318,113 @@
     "IdiomaId": 2,
     "Etiqueta": "btn_CambiarPassword",
     "Texto": "Change"
+  },
+  {
+    "Id": 227,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_AdministracionAcciones",
+    "Texto": "Administración de Acciones"
+  },
+  {
+    "Id": 228,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_AdministracionAcciones",
+    "Texto": "Stock Management"
+  },
+  {
+    "Id": 229,
+    "IdiomaId": 1,
+    "Etiqueta": "table_Seleccionar",
+    "Texto": "Seleccionar"
+  },
+  {
+    "Id": 230,
+    "IdiomaId": 2,
+    "Etiqueta": "table_Seleccionar",
+    "Texto": "Select"
+  },
+  {
+    "Id": 231,
+    "IdiomaId": 1,
+    "Etiqueta": "table_NombreAccion",
+    "Texto": "Nombre de Acción"
+  },
+  {
+    "Id": 232,
+    "IdiomaId": 2,
+    "Etiqueta": "table_NombreAccion",
+    "Texto": "Stock Name"
+  },
+  {
+    "Id": 233,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_Baja",
+    "Texto": "Baja"
+  },
+  {
+    "Id": 234,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_Baja",
+    "Texto": "Remove"
+  },
+  {
+    "Id": 235,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_Modificar",
+    "Texto": "Modificar"
+  },
+  {
+    "Id": 236,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_Modificar",
+    "Texto": "Edit"
+  },
+  {
+    "Id": 237,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_Alta",
+    "Texto": "Alta"
+  },
+  {
+    "Id": 238,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_Alta",
+    "Texto": "Add"
+  },
+  {
+    "Id": 239,
+    "IdiomaId": 1,
+    "Etiqueta": "confirmacion_BajaAccion",
+    "Texto": "¿Estás seguro de dar de baja la acción \"{NombreAccion}\"?"
+  },
+  {
+    "Id": 240,
+    "IdiomaId": 2,
+    "Etiqueta": "confirmacion_BajaAccion",
+    "Texto": "Are you sure you want to remove the stock \"{NombreAccion}\"?"
+  },
+  {
+    "Id": 241,
+    "IdiomaId": 1,
+    "Etiqueta": "alerta_AccionBaja",
+    "Texto": "La acción \"{NombreAccion}\" ha sido dada de baja."
+  },
+  {
+    "Id": 242,
+    "IdiomaId": 2,
+    "Etiqueta": "alerta_AccionBaja",
+    "Texto": "The stock \"{NombreAccion}\" has been removed."
+  },
+  {
+    "Id": 243,
+    "IdiomaId": 1,
+    "Etiqueta": "alerta_SeleccionarAccion",
+    "Texto": "Por favor, selecciona una acción."
+  },
+  {
+    "Id": 244,
+    "IdiomaId": 2,
+    "Etiqueta": "alerta_SeleccionarAccion",
+    "Texto": "Please select a stock."
   }
-
 ]

@@ -2,19 +2,20 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="acciones-container" class="container-acciones">
-        <h2>Administración de Acciones</h2>
+        <h2 data-etiqueta="titulo_AdministracionAcciones">Administración de Acciones</h2>
 
         <table id="tablaAcciones">
             <thead>
                 <tr>
-                    <th>Seleccionar</th>
-                    <th>Nombre de Acción</th>
-                    <th>Símbolo</th>
-                    <th>Precio</th>
+                    <th data-etiqueta="table_Seleccionar">Seleccionar</th>
+                    <th data-etiqueta="table_NombreAccion">Nombre de Acción</th>
+                    <th data-etiqueta="table_Simbolo">Símbolo</th>
+                    <th data-etiqueta="table_Precio">Precio</th>
                 </tr>
             </thead>
             <tbody>
-                <% foreach (var accion in Acciones) { %>
+                <% foreach (var accion in Acciones)
+                    { %>
                 <tr>
                     <td>
                         <input type="radio" name="selectAccion" class="select-accion">
@@ -29,9 +30,9 @@
         </table>
 
         <div class="button-group">
-            <button type="button" class="submit-btn-acciones" onclick="darBajaAccion()">Baja</button>
-            <button type="button" class="submit-btn-acciones" onclick="modificarAccion()">Modificar</button>
-            <button type="button" class="submit-btn-acciones" onclick="altaAccion()">Alta</button>
+            <button type="button" class="submit-btn-acciones" onclick="darBajaAccion()" data-etiqueta="btn_Baja">Baja</button>
+            <button type="button" class="submit-btn-acciones" onclick="modificarAccion()" data-etiqueta="btn_Modificar">Modificar</button>
+            <button type="button" class="submit-btn-acciones" onclick="altaAccion()" data-etiqueta="btn_Alta">Alta</button>
         </div>
     </div>
 
@@ -40,13 +41,13 @@
             const seleccionada = document.querySelector('input[name="selectAccion"]:checked');
             if (seleccionada) {
                 const nombreAccion = seleccionada.parentElement.nextElementSibling.textContent;
-                const confirmar = confirm(`¿Estás seguro de dar de baja la acción "${nombreAccion}"?`);
+                const confirmar = confirm(traducciones["confirmacion_BajaAccion"].replace("{NombreAccion}", nombreAccion));
                 if (confirmar) {
                     seleccionada.parentElement.parentElement.remove();
-                    alert(`La acción "${nombreAccion}" ha sido dada de baja.`);
+                    alert(traducciones["alerta_AccionBaja"].replace("{NombreAccion}", nombreAccion));
                 }
             } else {
-                alert("Por favor, selecciona una acción para dar de baja.");
+                alert(traducciones["alerta_SeleccionarAccion"]);
             }
         }
 
@@ -56,7 +57,7 @@
                 const idAccion = seleccionada.nextElementSibling.value;
                 window.location.href = `ModificarAccion.aspx?id=${idAccion}`;
             } else {
-                alert("Por favor, selecciona una acción para modificar.");
+                alert(traducciones["alerta_SeleccionarAccion"]);
             }
         }
 
