@@ -1,5 +1,6 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
+using MidMarket.Entities.Observer;
 using MidMarket.UI.Helpers;
 using Newtonsoft.Json;
 using System;
@@ -58,6 +59,9 @@ namespace MidMarket.UI
                         UltimaTransaccion = _usuarioService.ObtenerUltimaTransaccion();
                         LlenarInformacionGrafico();
                     }
+
+                    var traducciones = _traduccionService.ObtenerTraducciones(new Idioma() { Id = 1 });
+                    var traducciones2 = _traduccionService.ObtenerTraducciones(new Idioma() { Id = 2 });
 
                     LlenarFamiliaUsuario();
                 }

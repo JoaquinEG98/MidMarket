@@ -1,0 +1,26 @@
+[
+  {
+    "Id": 1,
+    "IdiomaId": 1,
+    "Etiqueta": "Bienvenida",
+    "Texto": "Bienvenido a nuestro sistema"
+  },
+  {
+    "Id": 2,
+    "IdiomaId": 1,
+    "Etiqueta": "Despedida",
+    "Texto": "Gracias por visitarnos"
+  },
+  {
+    "Id": 3,
+    "IdiomaId": 2,
+    "Etiqueta": "Welcome",
+    "Texto": "Welcome to our system"
+  },
+  {
+    "Id": 4,
+    "IdiomaId": 2,
+    "Etiqueta": "Goodbye",
+    "Texto": "Thank you for visiting"
+  }
+]

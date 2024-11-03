@@ -69,5 +69,15 @@ namespace MidMarket.DataAccess {
                 return ((byte[])(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Traducciones {
+            get {
+                object obj = ResourceManager.GetObject("Traducciones", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }

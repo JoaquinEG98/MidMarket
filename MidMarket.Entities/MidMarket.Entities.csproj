@@ -65,9 +65,7 @@
     <Compile Include="Enums\Criticidad.cs" />
     <Compile Include="Enums\Permiso.cs" />
     <Compile Include="Factory\PermisoFactory.cs" />
-    <Compile Include="Observer\Etiqueta.cs" />
     <Compile Include="Observer\Idioma.cs" />
-    <Compile Include="Observer\IEtiqueta.cs" />
     <Compile Include="Observer\IIdioma.cs" />
     <Compile Include="Observer\ITraduccion.cs" />
     <Compile Include="Observer\Traduccion.cs" />

@@ -2,7 +2,8 @@
 {
     public interface ITraduccion
     {
-        IEtiqueta Etiqueta { get; set; }
+        int IdiomaId { get; set; }
+        string Etiqueta { get; set; }
         string Texto { get; set; }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.DataAccess.Interfaces;
 using MidMarket.Entities.Observer;
-using System;
 using System.Collections.Generic;
 
 namespace MidMarket.Business.Services
@@ -18,24 +17,23 @@ namespace MidMarket.Business.Services
 
         public IList<Idioma> ObtenerIdiomas()
         {
-            try
-            {
-                IList<Idioma> idiomas = _traduccionDataAccess.ObtenerIdiomas();
+            IList<Idioma> idiomas = _traduccionDataAccess.ObtenerIdiomas();
 
-                return idiomas;
-            }
-            catch (Exception) { throw new Exception("Hubo un error al querer obtener los idiomas."); }
+            return idiomas;
         }
 
         public IIdioma ObtenerIdiomaDefault()
         {
-            try
-            {
-                IIdioma idioma = _traduccionDataAccess.ObtenerIdiomaDefault();
+            IIdioma idioma = _traduccionDataAccess.ObtenerIdiomaDefault();
 
-                return idioma;
-            }
-            catch (Exception) { throw new Exception("Hubo un error al querer obtener los idiomas."); }
+            return idioma;
+        }
+
+        public IDictionary<string, ITraduccion> ObtenerTraducciones(IIdioma idioma)
+        {
+            IDictionary<string, ITraduccion> traducciones = _traduccionDataAccess.ObtenerTraducciones(idioma);
+
+            return traducciones;
         }
     }
 }
