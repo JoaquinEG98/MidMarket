@@ -1714,5 +1714,161 @@
     "IdiomaId": 2,
     "Etiqueta": "alert_BonoEliminado",
     "Texto": "The bond \"{NombreBono}\" has been deleted."
+  },
+  {
+    "Id": 291,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_ModificarBono",
+    "Texto": "Modificar Bono"
+  },
+  {
+    "Id": 292,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_ModificarBono",
+    "Texto": "Edit Bond"
+  },
+  {
+    "Id": 293,
+    "IdiomaId": 1,
+    "Etiqueta": "label_NombreBono",
+    "Texto": "Nombre"
+  },
+  {
+    "Id": 294,
+    "IdiomaId": 2,
+    "Etiqueta": "label_NombreBono",
+    "Texto": "Name"
+  },
+  {
+    "Id": 295,
+    "IdiomaId": 1,
+    "Etiqueta": "placeholder_NombreBono",
+    "Texto": "Nombre del Bono"
+  },
+  {
+    "Id": 296,
+    "IdiomaId": 2,
+    "Etiqueta": "placeholder_NombreBono",
+    "Texto": "Bond Name"
+  },
+  {
+    "Id": 297,
+    "IdiomaId": 1,
+    "Etiqueta": "error_NombreBonoRequerido",
+    "Texto": "El nombre es requerido."
+  },
+  {
+    "Id": 298,
+    "IdiomaId": 2,
+    "Etiqueta": "error_NombreBonoRequerido",
+    "Texto": "Name is required."
+  },
+  {
+    "Id": 299,
+    "IdiomaId": 1,
+    "Etiqueta": "error_NombreBonoLongitud",
+    "Texto": "El nombre no debe exceder 30 caracteres."
+  },
+  {
+    "Id": 300,
+    "IdiomaId": 2,
+    "Etiqueta": "error_NombreBonoLongitud",
+    "Texto": "Name must not exceed 30 characters."
+  },
+  {
+    "Id": 301,
+    "IdiomaId": 1,
+    "Etiqueta": "label_ValorNominal",
+    "Texto": "Valor Nominal"
+  },
+  {
+    "Id": 302,
+    "IdiomaId": 2,
+    "Etiqueta": "label_ValorNominal",
+    "Texto": "Nominal Value"
+  },
+  {
+    "Id": 303,
+    "IdiomaId": 1,
+    "Etiqueta": "placeholder_ValorNominal",
+    "Texto": "Valor Nominal"
+  },
+  {
+    "Id": 304,
+    "IdiomaId": 2,
+    "Etiqueta": "placeholder_ValorNominal",
+    "Texto": "Nominal Value"
+  },
+  {
+    "Id": 305,
+    "IdiomaId": 1,
+    "Etiqueta": "error_ValorNominalRequerido",
+    "Texto": "El valor nominal es requerido."
+  },
+  {
+    "Id": 306,
+    "IdiomaId": 2,
+    "Etiqueta": "error_ValorNominalRequerido",
+    "Texto": "Nominal value is required."
+  },
+  {
+    "Id": 307,
+    "IdiomaId": 1,
+    "Etiqueta": "error_FormatoValorNominal",
+    "Texto": "Formato de valor nominal incorrecto."
+  },
+  {
+    "Id": 308,
+    "IdiomaId": 2,
+    "Etiqueta": "error_FormatoValorNominal",
+    "Texto": "Incorrect nominal value format."
+  },
+  {
+    "Id": 309,
+    "IdiomaId": 1,
+    "Etiqueta": "label_TasaInteres",
+    "Texto": "Tasa de Interés (%)"
+  },
+  {
+    "Id": 310,
+    "IdiomaId": 2,
+    "Etiqueta": "label_TasaInteres",
+    "Texto": "Interest Rate (%)"
+  },
+  {
+    "Id": 311,
+    "IdiomaId": 1,
+    "Etiqueta": "placeholder_TasaInteres",
+    "Texto": "Tasa de Interés"
+  },
+  {
+    "Id": 312,
+    "IdiomaId": 2,
+    "Etiqueta": "placeholder_TasaInteres",
+    "Texto": "Interest Rate"
+  },
+  {
+    "Id": 313,
+    "IdiomaId": 1,
+    "Etiqueta": "error_TasaInteresRequerido",
+    "Texto": "La tasa de interés es requerida."
+  },
+  {
+    "Id": 314,
+    "IdiomaId": 2,
+    "Etiqueta": "error_TasaInteresRequerido",
+    "Texto": "Interest rate is required."
+  },
+  {
+    "Id": 315,
+    "IdiomaId": 1,
+    "Etiqueta": "error_FormatoTasaInteres",
+    "Texto": "Formato de tasa de interés incorrecto."
+  },
+  {
+    "Id": 316,
+    "IdiomaId": 2,
+    "Etiqueta": "error_FormatoTasaInteres",
+    "Texto": "Incorrect interest rate format."
   }
 ]
