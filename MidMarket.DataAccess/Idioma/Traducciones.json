@@ -1258,5 +1258,66 @@
     "IdiomaId": 2,
     "Etiqueta": "validacion_TarjetaInvalida",
     "Texto": "Invalid card number"
+  },
+  {
+    "Id": 217,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_CambioPassword",
+    "Texto": "Cambio de contraseña"
+  },
+  {
+    "Id": 218,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_CambioPassword",
+    "Texto": "Change Password"
+  },
+  {
+    "Id": 219,
+    "IdiomaId": 1,
+    "Etiqueta": "label_PasswordActual",
+    "Texto": "Contraseña actual"
+  },
+  {
+    "Id": 220,
+    "IdiomaId": 2,
+    "Etiqueta": "label_PasswordActual",
+    "Texto": "Current Password"
+  },
+  {
+    "Id": 221,
+    "IdiomaId": 1,
+    "Etiqueta": "label_NuevoPassword",
+    "Texto": "Nueva contraseña"
+  },
+  {
+    "Id": 222,
+    "IdiomaId": 2,
+    "Etiqueta": "label_NuevoPassword",
+    "Texto": "New Password"
+  },
+  {
+    "Id": 223,
+    "IdiomaId": 1,
+    "Etiqueta": "label_ConfirmarPassword",
+    "Texto": "Confirmar nueva contraseña"
+  },
+  {
+    "Id": 224,
+    "IdiomaId": 2,
+    "Etiqueta": "label_ConfirmarPassword",
+    "Texto": "Confirm New Password"
+  },
+  {
+    "Id": 225,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_CambiarPassword",
+    "Texto": "Cambiar"
+  },
+  {
+    "Id": 226,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_CambiarPassword",
+    "Texto": "Change"
   }
+
 ]
