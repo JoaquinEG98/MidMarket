@@ -946,5 +946,77 @@
     "IdiomaId": 2,
     "Etiqueta": "btn_ConfirmarCompra",
     "Texto": "Confirm Purchase"
+  },
+  {
+    "Id": 165,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_AgregarCarritoAccion",
+    "Texto": "Agregar al Carrito"
+  },
+  {
+    "Id": 166,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_AgregarCarritoAccion",
+    "Texto": "Add to Cart"
+  },
+  {
+    "Id": 167,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_AgregarCarritoBono",
+    "Texto": "Agregar al Carrito"
+  },
+  {
+    "Id": 168,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_AgregarCarritoBono",
+    "Texto": "Add to Cart"
+  },
+  {
+    "Id": 169,
+    "IdiomaId": 1,
+    "Etiqueta": "card_Simbolo",
+    "Texto": "Símbolo: {Simbolo}"
+  },
+  {
+    "Id": 170,
+    "IdiomaId": 2,
+    "Etiqueta": "card_Simbolo",
+    "Texto": "Symbol: {Simbolo}"
+  },
+  {
+    "Id": 171,
+    "IdiomaId": 1,
+    "Etiqueta": "card_Precio",
+    "Texto": "Precio: ${Precio}"
+  },
+  {
+    "Id": 172,
+    "IdiomaId": 2,
+    "Etiqueta": "card_Precio",
+    "Texto": "Price: ${Precio}"
+  },
+  {
+    "Id": 173,
+    "IdiomaId": 1,
+    "Etiqueta": "card_ValorNominal",
+    "Texto": "Valor Nominal: ${ValorNominal}"
+  },
+  {
+    "Id": 174,
+    "IdiomaId": 2,
+    "Etiqueta": "card_ValorNominal",
+    "Texto": "Nominal Value: ${ValorNominal}"
+  },
+  {
+    "Id": 175,
+    "IdiomaId": 1,
+    "Etiqueta": "card_TasaInteres",
+    "Texto": "Tasa de Interés: {TasaInteres}%"
+  },
+  {
+    "Id": 176,
+    "IdiomaId": 2,
+    "Etiqueta": "card_TasaInteres",
+    "Texto": "Interest Rate: {TasaInteres}%"
   }
 ]

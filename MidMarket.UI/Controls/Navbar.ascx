@@ -111,11 +111,34 @@
     document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll("[data-etiqueta]").forEach(function (element) {
             const etiqueta = element.getAttribute("data-etiqueta");
+
             if (traducciones && traducciones[etiqueta]) {
+                let textoTraducido = traducciones[etiqueta];
+
+                if (element.hasAttribute("data-simbolo")) {
+                    const simbolo = element.getAttribute("data-simbolo");
+                    textoTraducido = textoTraducido.replace("{Simbolo}", simbolo);
+                }
+
+                if (element.hasAttribute("data-precio")) {
+                    const precio = element.getAttribute("data-precio");
+                    textoTraducido = textoTraducido.replace("{Precio}", precio);
+                }
+
+                if (element.hasAttribute("data-valornominal")) {
+                    const valorNominal = element.getAttribute("data-valornominal");
+                    textoTraducido = textoTraducido.replace("{ValorNominal}", valorNominal);
+                }
+
+                if (element.hasAttribute("data-tasainteres")) {
+                    const tasaInteres = element.getAttribute("data-tasainteres");
+                    textoTraducido = textoTraducido.replace("{TasaInteres}", tasaInteres);
+                }
+
                 if (element.tagName === "INPUT" && element.type === "submit") {
-                    element.value = traducciones[etiqueta];
+                    element.value = textoTraducido;
                 } else {
-                    element.textContent = traducciones[etiqueta];
+                    element.textContent = textoTraducido;
                 }
             }
         });

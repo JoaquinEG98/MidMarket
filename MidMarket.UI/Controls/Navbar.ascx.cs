@@ -32,8 +32,6 @@ namespace MidMarket.UI
 
             if (!IsPostBack)
             {
-                VerificarIdioma(cliente);
-
                 OcultarMenu();
                 AsignarMenuPermisos(cliente);
 
@@ -62,6 +60,8 @@ namespace MidMarket.UI
                     VerificarIdioma(cliente);
                 }
             }
+
+            VerificarIdioma(cliente);
         }
 
         private void VerificarIdioma(Cliente cliente)
@@ -82,8 +82,6 @@ namespace MidMarket.UI
             administracionBD.Visible = false;
             bitacora.Visible = false;
             transaccionesDropdown.Visible = false;
-            //carritoDropdown.Visible = false;
-            //misTransaccionesDropdown.Visible = false;
             portafolioDrowndown.Visible = false;
 
             comprarAccionLink.Visible = false;
