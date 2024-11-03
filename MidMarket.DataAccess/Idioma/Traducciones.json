@@ -1426,5 +1426,173 @@
     "IdiomaId": 2,
     "Etiqueta": "alerta_SeleccionarAccion",
     "Texto": "Please select a stock."
+  },
+  {
+    "Id": 245,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_ModificarAccion",
+    "Texto": "Modificar Acción"
+  },
+  {
+    "Id": 246,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_ModificarAccion",
+    "Texto": "Edit Stock"
+  },
+  {
+    "Id": 247,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_Guardar",
+    "Texto": "Guardar"
+  },
+  {
+    "Id": 248,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_Guardar",
+    "Texto": "Save"
+  },
+  {
+    "Id": 249,
+    "IdiomaId": 1,
+    "Etiqueta": "label_Nombre",
+    "Texto": "Nombre"
+  },
+  {
+    "Id": 250,
+    "IdiomaId": 2,
+    "Etiqueta": "label_Nombre",
+    "Texto": "Name"
+  },
+  {
+    "Id": 251,
+    "IdiomaId": 1,
+    "Etiqueta": "placeholder_Nombre",
+    "Texto": "Nombre"
+  },
+  {
+    "Id": 252,
+    "IdiomaId": 2,
+    "Etiqueta": "placeholder_Nombre",
+    "Texto": "Name"
+  },
+  {
+    "Id": 253,
+    "IdiomaId": 1,
+    "Etiqueta": "error_NombreRequerido",
+    "Texto": "El nombre es requerido."
+  },
+  {
+    "Id": 254,
+    "IdiomaId": 2,
+    "Etiqueta": "error_NombreRequerido",
+    "Texto": "Name is required."
+  },
+  {
+    "Id": 255,
+    "IdiomaId": 1,
+    "Etiqueta": "error_NombreLongitud",
+    "Texto": "El nombre no debe exceder 20 caracteres."
+  },
+  {
+    "Id": 256,
+    "IdiomaId": 2,
+    "Etiqueta": "error_NombreLongitud",
+    "Texto": "Name must not exceed 20 characters."
+  },
+  {
+    "Id": 257,
+    "IdiomaId": 1,
+    "Etiqueta": "label_Simbolo",
+    "Texto": "Símbolo"
+  },
+  {
+    "Id": 258,
+    "IdiomaId": 2,
+    "Etiqueta": "label_Simbolo",
+    "Texto": "Symbol"
+  },
+  {
+    "Id": 259,
+    "IdiomaId": 1,
+    "Etiqueta": "placeholder_Simbolo",
+    "Texto": "Símbolo"
+  },
+  {
+    "Id": 260,
+    "IdiomaId": 2,
+    "Etiqueta": "placeholder_Simbolo",
+    "Texto": "Symbol"
+  },
+  {
+    "Id": 261,
+    "IdiomaId": 1,
+    "Etiqueta": "error_SimboloRequerido",
+    "Texto": "El símbolo es requerido."
+  },
+  {
+    "Id": 262,
+    "IdiomaId": 2,
+    "Etiqueta": "error_SimboloRequerido",
+    "Texto": "Symbol is required."
+  },
+  {
+    "Id": 263,
+    "IdiomaId": 1,
+    "Etiqueta": "error_SimboloLongitud",
+    "Texto": "El símbolo no debe exceder 20 caracteres."
+  },
+  {
+    "Id": 264,
+    "IdiomaId": 2,
+    "Etiqueta": "error_SimboloLongitud",
+    "Texto": "Symbol must not exceed 20 characters."
+  },
+  {
+    "Id": 265,
+    "IdiomaId": 1,
+    "Etiqueta": "label_Precio",
+    "Texto": "Precio"
+  },
+  {
+    "Id": 266,
+    "IdiomaId": 2,
+    "Etiqueta": "label_Precio",
+    "Texto": "Price"
+  },
+  {
+    "Id": 267,
+    "IdiomaId": 1,
+    "Etiqueta": "placeholder_Precio",
+    "Texto": "Precio"
+  },
+  {
+    "Id": 268,
+    "IdiomaId": 2,
+    "Etiqueta": "placeholder_Precio",
+    "Texto": "Price"
+  },
+  {
+    "Id": 269,
+    "IdiomaId": 1,
+    "Etiqueta": "error_PrecioRequerido",
+    "Texto": "El precio es requerido."
+  },
+  {
+    "Id": 270,
+    "IdiomaId": 2,
+    "Etiqueta": "error_PrecioRequerido",
+    "Texto": "Price is required."
+  },
+  {
+    "Id": 271,
+    "IdiomaId": 1,
+    "Etiqueta": "error_FormatoPrecio",
+    "Texto": "Formato de precio incorrecto."
+  },
+  {
+    "Id": 272,
+    "IdiomaId": 2,
+    "Etiqueta": "error_FormatoPrecio",
+    "Texto": "Incorrect price format."
   }
 ]
