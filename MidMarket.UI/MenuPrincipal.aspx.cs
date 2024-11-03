@@ -11,7 +11,7 @@ using Unity;
 
 namespace MidMarket.UI
 {
-    public partial class _Default : Page
+    public partial class _Default : Page, IObserver
     {
         public Cliente Cliente { get; set; }
         public string Familia { get; set; } = "Cliente";
@@ -49,6 +49,8 @@ namespace MidMarket.UI
                     if (Cliente == null)
                         Response.Redirect("Default.aspx");
 
+                    Cliente.SuscribirObservador(this);
+
                     VerificarDV();
 
                     esAdmin = Cliente.Permisos.Any(permiso => permiso.Nombre == "Webmaster" || permiso.Nombre == "Administrador Financiero");
@@ -59,9 +61,6 @@ namespace MidMarket.UI
                         UltimaTransaccion = _usuarioService.ObtenerUltimaTransaccion();
                         LlenarInformacionGrafico();
                     }
-
-                    var traducciones = _traduccionService.ObtenerTraducciones(new Idioma() { Id = 1 });
-                    var traducciones2 = _traduccionService.ObtenerTraducciones(new Idioma() { Id = 2 });
 
                     LlenarFamiliaUsuario();
                 }
@@ -149,6 +148,11 @@ namespace MidMarket.UI
                     Familia = permisoFamilia.Nombre.ToString();
                 }
             }
+        }
+
+        public void UpdateLanguage(IIdioma idioma)
+        {
+            //
         }
     }
 }

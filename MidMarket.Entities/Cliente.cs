@@ -1,6 +1,7 @@
 ﻿using MidMarket.Entities.Composite;
 using MidMarket.Entities.Enums;
 using MidMarket.Entities.Factory;
+using MidMarket.Entities.Observer;
 using System.Collections.Generic;
 
 namespace MidMarket.Entities
@@ -8,6 +9,7 @@ namespace MidMarket.Entities
     public class Cliente : DigitoVerificadorHorizontal
     {
         List<Componente> _permisos = new List<Componente>();
+        static List<IObserver> _observers = new List<IObserver>();
 
         public int Id { get; set; }
         public string Email { get; set; }
@@ -38,6 +40,28 @@ namespace MidMarket.Entities
         public void EliminarPermiso(Componente permiso)
         {
             _permisos.Remove(permiso);
+        }
+
+        public void SuscribirObservador(IObserver o)
+        {
+            _observers.Add(o);
+        }
+
+        public void DesuscribirObservador(IObserver o)
+        {
+            _observers.Remove(o);
+        }
+
+        private static void Notificar(IIdioma idioma)
+        {
+            foreach (var o in _observers)
+            {
+                o.UpdateLanguage(idioma);
+            }
+        }
+        public void CambiarIdioma(IIdioma idioma)
+        {
+            Notificar(idioma);
         }
     }
 }

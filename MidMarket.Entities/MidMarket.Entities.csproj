@@ -67,6 +67,7 @@
     <Compile Include="Factory\PermisoFactory.cs" />
     <Compile Include="Observer\Idioma.cs" />
     <Compile Include="Observer\IIdioma.cs" />
+    <Compile Include="Observer\IObserver.cs" />
     <Compile Include="Observer\ITraduccion.cs" />
     <Compile Include="Observer\Traduccion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
