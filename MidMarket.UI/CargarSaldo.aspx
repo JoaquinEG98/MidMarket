@@ -3,21 +3,21 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="container-cargar-saldo" class="container-cargar-saldo">
         <form class="cargar-saldo-form" method="post" autocomplete="off">
-            <h2>Cargar Saldo</h2>
+            <h2 data-etiqueta="titulo_CargarSaldo">Cargar Saldo</h2>
 
             <div class="form-group-saldo">
-                <label for="nombreTitular">Nombre del Titular</label>
+                <label for="nombreTitular" data-etiqueta="label_NombreTitular">Nombre del Titular</label>
                 <asp:TextBox ID="nombreTitular" runat="server" ClientIDMode="Static" CssClass="form-control" autocomplete="off" />
             </div>
 
             <div class="form-group-saldo">
-                <label for="dniTitular">DNI</label>
+                <label for="dniTitular" data-etiqueta="label_DNI">DNI</label>
                 <asp:TextBox ID="dniTitular" runat="server" ClientIDMode="Static" CssClass="form-control" MaxLength="8" oninput="validarDNI()" autocomplete="off" />
                 <asp:Label ID="lblDniValido" runat="server" CssClass="dni-validacion-label"></asp:Label>
             </div>
 
             <div class="form-group-saldo">
-                <label for="numeroTarjeta">Número de Tarjeta</label>
+                <label for="numeroTarjeta" data-etiqueta="label_NumeroTarjeta">Número de Tarjeta</label>
                 <div class="input-icon-container">
                     <asp:TextBox ID="numeroTarjeta" runat="server" ClientIDMode="Static" CssClass="form-control" MaxLength="16" oninput="validarNumeroTarjeta()" placeholder="#### #### #### ####" autocomplete="off" />
                     <asp:Image ID="cardIcon" runat="server" CssClass="card-icon" ImageUrl="" AlternateText="Icono de tarjeta" Style="display: none;" />
@@ -26,23 +26,23 @@
             </div>
 
             <div class="form-group-saldo">
-                <label for="fechaVencimiento">Fecha de Vencimiento (MM/AA)</label>
+                <label for="fechaVencimiento" data-etiqueta="label_FechaVencimiento">Fecha de Vencimiento (MM/AA)</label>
                 <asp:TextBox ID="fechaVencimiento" runat="server" ClientIDMode="Static" CssClass="form-control" MaxLength="5" oninput="formatearFechaVencimiento()" placeholder="MM/AA" autocomplete="off" />
             </div>
 
             <div class="form-group-saldo">
-                <label for="codigoSeguridad">Código de Seguridad (CVV)</label>
+                <label for="codigoSeguridad" data-etiqueta="label_CodigoSeguridad">Código de Seguridad (CVV)</label>
                 <asp:TextBox ID="codigoSeguridad" runat="server" ClientIDMode="Static" CssClass="form-control" MaxLength="4" autocomplete="off" />
             </div>
 
             <div class="form-group-saldo">
-                <label for="monto">Monto a Cargar</label>
+                <label for="monto" data-etiqueta="label_MontoCargar">Monto a Cargar</label>
                 <asp:TextBox ID="monto" runat="server" ClientIDMode="Static" CssClass="form-control" autocomplete="off" />
             </div>
 
             <asp:Label ID="lblResultado" runat="server" Text="" CssClass="resultado-label"></asp:Label>
 
-            <asp:Button ID="btnCargarSaldo" runat="server" Text="Cargar Saldo" CssClass="submit-btn-saldo" OnClick="btnCargarSaldo_Click" OnClientClick="iniciarCarga(); return false;" />
+            <asp:Button ID="btnCargarSaldo" runat="server" Text="Cargar Saldo" CssClass="submit-btn-saldo" OnClick="btnCargarSaldo_Click" OnClientClick="iniciarCarga(); return false;" data-etiqueta="btn_CargarSaldo" />
 
             <div id="progressBar" class="progress-bar" style="display: none;">
                 <div class="progress-fill"></div>
@@ -99,12 +99,14 @@
         function validarDNI() {
             var dni = document.getElementById("<%= dniTitular.ClientID %>").value;
             var lblDniValido = document.getElementById("<%= lblDniValido.ClientID %>");
+            var dniValido = traducciones["validacion_DNIValido"];
+            var dniInvalido = traducciones["validacion_DNIInvalido"];
 
             if (/^\d{8}$/.test(dni)) {
-                lblDniValido.innerText = "DNI válido";
+                lblDniValido.innerText = dniValido;
                 lblDniValido.style.color = "green";
             } else {
-                lblDniValido.innerText = "DNI inválido";
+                lblDniValido.innerText = dniInvalido;
                 lblDniValido.style.color = "red";
             }
         }
@@ -116,20 +118,25 @@
             var mensaje = "";
             var iconSrc = "";
 
+            var visaValida = traducciones["validacion_TarjetaVisa"];
+            var masterValida = traducciones["validacion_TarjetaMasterCard"];
+            var amexValida = traducciones["validacion_TarjetaAmex"];
+            var tarjetaInvalida = traducciones["validacion_TarjetaInvalida"];
+
             if (/^4[0-9]{12}(?:[0-9]{3})?$/.test(numeroTarjeta)) {
-                mensaje = "Tarjeta VISA válida";
+                mensaje = visaValida;
                 lblCardType.style.color = "green";
                 iconSrc = "images/visa.png";
             } else if (/^5[1-5][0-9]{14}$/.test(numeroTarjeta)) {
-                mensaje = "Tarjeta MasterCard válida";
+                mensaje = masterValida;
                 lblCardType.style.color = "green";
                 iconSrc = "images/mastercard.png";
             } else if (/^3[47][0-9]{13}$/.test(numeroTarjeta)) {
-                mensaje = "Tarjeta AMEX válida";
+                mensaje = amexValida;
                 lblCardType.style.color = "green";
                 iconSrc = "images/amex.png";
             } else if (numeroTarjeta.length > 0) {
-                mensaje = "Número de tarjeta inválido";
+                mensaje = tarjetaInvalida;
                 lblCardType.style.color = "red";
                 iconSrc = "";
             } else {

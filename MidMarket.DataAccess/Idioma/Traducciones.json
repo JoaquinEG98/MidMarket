@@ -1090,6 +1090,173 @@
     "IdiomaId": 2,
     "Etiqueta": "btn_Vender",
     "Texto": "Sell"
+  },
+  {
+    "Id": 189,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_CargarSaldo",
+    "Texto": "Cargar Saldo"
+  },
+  {
+    "Id": 190,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_CargarSaldo",
+    "Texto": "Load Balance"
+  },
+  {
+    "Id": 191,
+    "IdiomaId": 1,
+    "Etiqueta": "label_NombreTitular",
+    "Texto": "Nombre del Titular"
+  },
+  {
+    "Id": 192,
+    "IdiomaId": 2,
+    "Etiqueta": "label_NombreTitular",
+    "Texto": "Account Holder Name"
+  },
+  {
+    "Id": 193,
+    "IdiomaId": 1,
+    "Etiqueta": "label_DNI",
+    "Texto": "DNI"
+  },
+  {
+    "Id": 194,
+    "IdiomaId": 2,
+    "Etiqueta": "label_DNI",
+    "Texto": "ID Number"
+  },
+  {
+    "Id": 195,
+    "IdiomaId": 1,
+    "Etiqueta": "label_NumeroTarjeta",
+    "Texto": "Número de Tarjeta"
+  },
+  {
+    "Id": 196,
+    "IdiomaId": 2,
+    "Etiqueta": "label_NumeroTarjeta",
+    "Texto": "Card Number"
+  },
+  {
+    "Id": 197,
+    "IdiomaId": 1,
+    "Etiqueta": "label_FechaVencimiento",
+    "Texto": "Fecha de Vencimiento (MM/AA)"
+  },
+  {
+    "Id": 198,
+    "IdiomaId": 2,
+    "Etiqueta": "label_FechaVencimiento",
+    "Texto": "Expiration Date (MM/YY)"
+  },
+  {
+    "Id": 199,
+    "IdiomaId": 1,
+    "Etiqueta": "label_CodigoSeguridad",
+    "Texto": "Código de Seguridad (CVV)"
+  },
+  {
+    "Id": 200,
+    "IdiomaId": 2,
+    "Etiqueta": "label_CodigoSeguridad",
+    "Texto": "Security Code (CVV)"
+  },
+  {
+    "Id": 201,
+    "IdiomaId": 1,
+    "Etiqueta": "label_MontoCargar",
+    "Texto": "Monto a Cargar"
+  },
+  {
+    "Id": 202,
+    "IdiomaId": 2,
+    "Etiqueta": "label_MontoCargar",
+    "Texto": "Amount to Load"
+  },
+  {
+    "Id": 203,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_CargarSaldo",
+    "Texto": "Cargar Saldo"
+  },
+  {
+    "Id": 204,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_CargarSaldo",
+    "Texto": "Load Balance"
+  },
+  {
+    "Id": 205,
+    "IdiomaId": 1,
+    "Etiqueta": "validacion_DNIValido",
+    "Texto": "DNI válido"
+  },
+  {
+    "Id": 206,
+    "IdiomaId": 2,
+    "Etiqueta": "validacion_DNIValido",
+    "Texto": "Valid ID"
+  },
+  {
+    "Id": 207,
+    "IdiomaId": 1,
+    "Etiqueta": "validacion_DNIInvalido",
+    "Texto": "DNI inválido"
+  },
+  {
+    "Id": 208,
+    "IdiomaId": 2,
+    "Etiqueta": "validacion_DNIInvalido",
+    "Texto": "Invalid ID"
+  },
+  {
+    "Id": 209,
+    "IdiomaId": 1,
+    "Etiqueta": "validacion_TarjetaVisa",
+    "Texto": "Tarjeta VISA válida"
+  },
+  {
+    "Id": 210,
+    "IdiomaId": 2,
+    "Etiqueta": "validacion_TarjetaVisa",
+    "Texto": "Valid VISA Card"
+  },
+  {
+    "Id": 211,
+    "IdiomaId": 1,
+    "Etiqueta": "validacion_TarjetaMasterCard",
+    "Texto": "Tarjeta MasterCard válida"
+  },
+  {
+    "Id": 212,
+    "IdiomaId": 2,
+    "Etiqueta": "validacion_TarjetaMasterCard",
+    "Texto": "Valid MasterCard"
+  },
+  {
+    "Id": 213,
+    "IdiomaId": 1,
+    "Etiqueta": "validacion_TarjetaAmex",
+    "Texto": "Tarjeta AMEX válida"
+  },
+  {
+    "Id": 214,
+    "IdiomaId": 2,
+    "Etiqueta": "validacion_TarjetaAmex",
+    "Texto": "Valid AMEX Card"
+  },
+  {
+    "Id": 215,
+    "IdiomaId": 1,
+    "Etiqueta": "validacion_TarjetaInvalida",
+    "Texto": "Número de tarjeta inválido"
+  },
+  {
+    "Id": 216,
+    "IdiomaId": 2,
+    "Etiqueta": "validacion_TarjetaInvalida",
+    "Texto": "Invalid card number"
   }
-
 ]
