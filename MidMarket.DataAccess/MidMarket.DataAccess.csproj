@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -51,6 +54,7 @@
     <Compile Include="DAOs\CompraDAO.cs" />
     <Compile Include="DAOs\DigitoVerificadorDAO.cs" />
     <Compile Include="DAOs\PermisoDAO.cs" />
+    <Compile Include="DAOs\TraduccionDAO.cs" />
     <Compile Include="DAOs\VentaDAO.cs" />
     <Compile Include="Helpers\ActivoFill.cs" />
     <Compile Include="Helpers\BitacoraFill.cs" />
@@ -66,6 +70,7 @@
     <Compile Include="Interfaces\ICompraDAO.cs" />
     <Compile Include="Interfaces\IDigitoVerificadorDAO.cs" />
     <Compile Include="Interfaces\IPermisoDAO.cs" />
+    <Compile Include="Interfaces\ITraduccionDAO.cs" />
     <Compile Include="Interfaces\IUsuarioDAO.cs" />
     <Compile Include="Interfaces\IVentaDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,6 +79,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Scripts.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Traduccion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Traduccion.resx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -146,6 +156,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Scripts.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Traduccion.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Traduccion.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MidMarket.Entities\MidMarket.Entities.csproj">
@@ -157,6 +171,9 @@
       <Name>MidMarket.Seguridad</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Idioma\Idioma.json" />
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

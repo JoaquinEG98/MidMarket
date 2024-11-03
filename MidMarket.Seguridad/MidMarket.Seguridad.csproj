@@ -46,6 +46,7 @@
     <Compile Include="DigitoVerificador.cs" />
     <Compile Include="Encriptacion.cs" />
     <Compile Include="Errores.cs" />
+    <Compile Include="IObserver.cs" />
     <Compile Include="PermisoCheck.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

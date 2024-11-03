@@ -26,6 +26,7 @@ namespace MidMarket.UI
         private readonly IUsuarioService _usuarioService;
         private readonly ICompraService _compraService;
         private readonly IDigitoVerificadorService _digitoVerificadorService;
+        private readonly ITraduccionService _traduccionService;
 
         public _Default()
         {
@@ -33,6 +34,7 @@ namespace MidMarket.UI
             _usuarioService = Global.Container.Resolve<IUsuarioService>();
             _compraService = Global.Container.Resolve<ICompraService>();
             _digitoVerificadorService = Global.Container.Resolve<IDigitoVerificadorService>();
+            _traduccionService = Global.Container.Resolve<ITraduccionService>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
