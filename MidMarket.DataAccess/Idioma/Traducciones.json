@@ -2278,5 +2278,77 @@
     "IdiomaId": 2,
     "Etiqueta": "btn_AsignarPatentes",
     "Texto": "Assign Permissions"
+  },
+  {
+    "Id": 409,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_AsignarFamilias",
+    "Texto": "Asignación de Familia a Usuario"
+  },
+  {
+    "Id": 410,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_AsignarFamilias",
+    "Texto": "Assigning Family to User"
+  },
+  {
+    "Id": 411,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_FamiliasAsignadas",
+    "Texto": "Familias Asignadas"
+  },
+  {
+    "Id": 412,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_FamiliasAsignadas",
+    "Texto": "Assigned Families"
+  },
+  {
+    "Id": 413,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_FamiliasDisponibles",
+    "Texto": "Familias Disponibles"
+  },
+  {
+    "Id": 414,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_FamiliasDisponibles",
+    "Texto": "Available Families"
+  },
+  {
+    "Id": 415,
+    "IdiomaId": 1,
+    "Etiqueta": "table_NombreFamilia",
+    "Texto": "Nombre de Familia"
+  },
+  {
+    "Id": 416,
+    "IdiomaId": 2,
+    "Etiqueta": "table_NombreFamilia",
+    "Texto": "Family Name"
+  },
+  {
+    "Id": 417,
+    "IdiomaId": 1,
+    "Etiqueta": "table_DescripcionFamilia",
+    "Texto": "Descripción"
+  },
+  {
+    "Id": 418,
+    "IdiomaId": 2,
+    "Etiqueta": "table_DescripcionFamilia",
+    "Texto": "Description"
+  },
+  {
+    "Id": 419,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_AsignarFamilias",
+    "Texto": "Asignar Familias"
+  },
+  {
+    "Id": 420,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_AsignarFamilias",
+    "Texto": "Assign Families"
   }
 ]
