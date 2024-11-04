@@ -3,7 +3,7 @@ using MidMarket.Business.Seguridad;
 using MidMarket.DataAccess.Interfaces;
 using MidMarket.Entities;
 using MidMarket.Entities.Enums;
-using MidMarket.Seguridad;
+using MidMarket.Entities.Observer;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -19,6 +19,7 @@ namespace MidMarket.Business.Services
         private readonly IPermisoService _permisoService;
         private readonly IDigitoVerificadorService _digitoVerificadorService;
         private readonly IBitacoraService _bitacoraService;
+        private readonly ITraduccionService _traduccionService;
 
         public UsuarioService()
         {
@@ -27,6 +28,7 @@ namespace MidMarket.Business.Services
             _permisoService = DependencyResolver.Resolve<IPermisoService>();
             _digitoVerificadorService = DependencyResolver.Resolve<IDigitoVerificadorService>();
             _bitacoraService = DependencyResolver.Resolve<IBitacoraService>();
+            _traduccionService = DependencyResolver.Resolve<ITraduccionService>();
         }
 
         public int RegistrarUsuario(Cliente cliente)
@@ -83,15 +85,17 @@ namespace MidMarket.Business.Services
 
             try
             {
+                var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
                 if (cliente == null)
-                    throw new Exception(Errores.ObtenerError(7));
+                    throw new Exception($"{_traduccionService.ObtenerMensaje(idioma, "ERR_07")}");
 
                 ValidarUsuario(cliente, password);
 
                 string passwordEncriptada = Encriptacion.Hash(password);
 
                 if (passwordEncriptada != cliente.Password)
-                    throw new Exception(Errores.ObtenerError(7));
+                    throw new Exception($"{_traduccionService.ObtenerMensaje(idioma, "ERR_07")}");
 
                 Cliente clienteDesencriptado = new Cliente()
                 {
@@ -125,14 +129,16 @@ namespace MidMarket.Business.Services
 
         private void ValidarUsuario(Cliente cliente, string password)
         {
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             if (cliente is null || string.IsNullOrWhiteSpace(cliente.Password) || string.IsNullOrWhiteSpace(cliente.Email))
-                throw new Exception(Errores.ObtenerError(5));
+                throw new Exception($"{_traduccionService.ObtenerMensaje(idioma, "ERR_05")}");
 
             if (!ValidarFormatoPassword(password))
-                throw new Exception(Errores.ObtenerError(6));
+                throw new Exception($"{_traduccionService.ObtenerMensaje(idioma, "ERR_06")}");
 
             if (cliente.Bloqueo >= 3)
-                throw new Exception(Errores.ObtenerError(8));
+                throw new Exception($"{_traduccionService.ObtenerMensaje(idioma, "ERR_08")}");
         }
 
         private bool ValidarFormatoPassword(string password)
@@ -242,14 +248,16 @@ namespace MidMarket.Business.Services
         {
             var clienteValidacion = GetCliente(cliente.Id);
 
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             if (clienteValidacion.Password != cliente.Password)
-                throw new Exception("La contraseña actual no coindice con la proporcionada.");
+                throw new Exception($"{_traduccionService.ObtenerMensaje(idioma, "MSJ_33")}");
 
             if (nuevaPassword != confirmacionNuevaPassword)
-                throw new Exception("La confirmación de la nueva contraseña son distintas.");
+                throw new Exception($"{_traduccionService.ObtenerMensaje(idioma, "MSJ_34")}");
 
             if (!ValidarFormatoPassword(nuevaPassword))
-                throw new Exception(Errores.ObtenerError(6));
+                throw new Exception($"{_traduccionService.ObtenerMensaje(idioma, "ERR_06")}");
         }
 
         public void ActualizarSaldo(decimal total, bool aumentar = false)
@@ -300,19 +308,21 @@ namespace MidMarket.Business.Services
 
         private void ValidarCargaSaldo(string numeroTarjeta, string DNI, string fechaVencimiento)
         {
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             if (!EsTarjetaValida(numeroTarjeta))
             {
-                throw new Exception(Errores.ObtenerError(21));
+                throw new Exception($"{_traduccionService.ObtenerMensaje(idioma, "ERR_21")}");
             }
 
             if (!EsDniValido(DNI))
             {
-                throw new Exception(Errores.ObtenerError(22));
+                throw new Exception($"{_traduccionService.ObtenerMensaje(idioma, "ERR_22")}");
             }
 
             if (!EsFechaVencimientoValida(fechaVencimiento))
             {
-                throw new Exception(Errores.ObtenerError(23));
+                throw new Exception($"{_traduccionService.ObtenerMensaje(idioma, "ERR_23")}");
             }
         }
 

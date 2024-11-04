@@ -149,7 +149,8 @@ namespace MidMarket.UI
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarModal(this, $"{Errores.ObtenerError(3)}");
+                var idioma = _sessionManager.Get<IIdioma>("Idioma");
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
                 Response.Redirect("Default.aspx");
             }
         }
@@ -200,11 +201,13 @@ namespace MidMarket.UI
 
         protected void ValidarFiltros()
         {
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             bool seleccionoFechas = !string.IsNullOrEmpty(txtFechaDesde.Text) && !string.IsNullOrEmpty(txtFechaHasta.Text);
 
             if (seleccionoFechas && Convert.ToDateTime(txtFechaDesde.Text) > Convert.ToDateTime(txtFechaHasta.Text))
             {
-                throw new Exception(Errores.ObtenerError(20));
+                throw new Exception($"{_traduccionService.ObtenerMensaje(idioma, "ERR_20")}");
             }
         }
 

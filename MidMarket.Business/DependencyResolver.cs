@@ -31,6 +31,7 @@ namespace MidMarket.Business
             Container.RegisterType<IDigitoVerificadorService, DigitoVerificadorService>();
             Container.RegisterType<IUsuarioService, UsuarioService>();
             Container.RegisterType<IBitacoraService, BitacoraService>();
+            Container.RegisterType<ITraduccionService, TraduccionService>();
         }
 
         public static T Resolve<T>()

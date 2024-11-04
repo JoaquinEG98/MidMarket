@@ -2,7 +2,7 @@
 using MidMarket.DataAccess.Interfaces;
 using MidMarket.Entities;
 using MidMarket.Entities.Enums;
-using MidMarket.Seguridad;
+using MidMarket.Entities.Observer;
 using System.Collections.Generic;
 using System.Transactions;
 
@@ -14,6 +14,7 @@ namespace MidMarket.Business.Services
         private readonly IBitacoraService _bitacoraService;
         private readonly IVentaDAO _ventaDataAccess;
         private readonly IUsuarioService _usuarioService;
+        private readonly ITraduccionService _traduccionService;
 
         public VentaService()
         {
@@ -21,6 +22,7 @@ namespace MidMarket.Business.Services
             _bitacoraService = DependencyResolver.Resolve<IBitacoraService>();
             _ventaDataAccess = DependencyResolver.Resolve<IVentaDAO>();
             _usuarioService = DependencyResolver.Resolve<IUsuarioService>();
+            _traduccionService = DependencyResolver.Resolve<ITraduccionService>();
         }
 
         public void RealizarVenta(DetalleVenta venta)
@@ -53,8 +55,10 @@ namespace MidMarket.Business.Services
         {
             int cantidad = ObtenerCantidadRealCliente(venta.Activo.Id, idCliente);
 
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             if (venta.Cantidad > cantidad)
-                throw new System.Exception(Errores.ObtenerError(4));
+                throw new System.Exception($"{_traduccionService.ObtenerMensaje(idioma, "ERR_04")}");
         }
 
         public List<TransaccionVenta> GetVentas()

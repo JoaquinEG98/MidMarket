@@ -658,5 +658,29 @@
     "IdiomaId": 2,
     "Etiqueta": "MSJ_32",
     "Texto": "Sale made successfully"
+  },
+  {
+    "Id": 111,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_33",
+    "Texto": "La contraseña actual no coindice con la proporcionada."
+  },
+  {
+    "Id": 112,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_33",
+    "Texto": "The current password does not match the one provided."
+  },
+  {
+    "Id": 113,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_34",
+    "Texto": "La confirmación de la nueva contraseña son distintas."
+  },
+  {
+    "Id": 114,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_34",
+    "Texto": "Confirmation of the new password are different."
   }
 ]

@@ -1,12 +1,12 @@
-﻿using MidMarket.Entities;
-using System.Configuration;
-using System;
-using MidMarket.Seguridad;
-using MidMarket.Entities.DTOs;
-using MidMarket.Business.Interfaces;
+﻿using MidMarket.Business.Interfaces;
 using MidMarket.DataAccess.Interfaces;
-using System.IO;
+using MidMarket.Entities;
+using MidMarket.Entities.DTOs;
 using MidMarket.Entities.Enums;
+using MidMarket.Seguridad;
+using System;
+using System.Configuration;
+using System.IO;
 
 namespace MidMarket.Business.Services
 {
@@ -52,8 +52,6 @@ namespace MidMarket.Business.Services
             {
                 _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) realizó backup de la base de datos", Criticidad.Media, clienteLogueado);
             }
-            else
-                throw new Exception("Hubo un error en generar el backup en la ruta.");
         }
 
         public void RealizarRestore(string rutaBackup)
@@ -66,8 +64,6 @@ namespace MidMarket.Business.Services
             {
                 _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) realizó restore de la base de datos", Criticidad.Alta, clienteLogueado);
             }
-            else
-                throw new Exception("Hubo un error al generar el restore en la base de datos.");
         }
     }
 }

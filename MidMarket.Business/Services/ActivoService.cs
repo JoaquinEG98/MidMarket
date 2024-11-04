@@ -3,6 +3,7 @@ using MidMarket.DataAccess.Interfaces;
 using MidMarket.Entities;
 using MidMarket.Entities.DTOs;
 using MidMarket.Entities.Enums;
+using MidMarket.Entities.Observer;
 using System.Collections.Generic;
 using System.Transactions;
 
@@ -16,6 +17,7 @@ namespace MidMarket.Business.Services
         private readonly IDigitoVerificadorService _digitoVerificadorService;
         private readonly IBitacoraService _bitacoraService;
         private readonly IActivoDAO _activoDataAccess;
+        private readonly ITraduccionService _traduccionService;
 
         public ActivoService()
         {
@@ -25,6 +27,7 @@ namespace MidMarket.Business.Services
             _digitoVerificadorService = DependencyResolver.Resolve<IDigitoVerificadorService>();
             _bitacoraService = DependencyResolver.Resolve<IBitacoraService>();
             _activoDataAccess = DependencyResolver.Resolve<IActivoDAO>();
+            _traduccionService = DependencyResolver.Resolve<ITraduccionService>();
         }
 
         public int AltaAccion(Accion accion)
@@ -107,14 +110,18 @@ namespace MidMarket.Business.Services
 
         private void ValidarAccion(Accion accion)
         {
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             if (string.IsNullOrWhiteSpace(accion.Nombre) || accion.Precio <= 0 || string.IsNullOrWhiteSpace(accion.Simbolo))
-                throw new System.Exception("ERR-002 campos obligatorios incompletos");
+                throw new System.Exception($"{_traduccionService.ObtenerMensaje(idioma, "ERR_02")}");
         }
 
         private void ValidarBono(Bono bono)
         {
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             if (string.IsNullOrWhiteSpace(bono.Nombre) || bono.ValorNominal <= 0 || bono.TasaInteres <= 0)
-                throw new System.Exception("ERR-002 campos obligatorios incompletos");
+                throw new System.Exception($"{_traduccionService.ObtenerMensaje(idioma, "ERR_02")}");
         }
 
         public List<ActivosCompradosDTO> GetActivosCompradosCantidad()

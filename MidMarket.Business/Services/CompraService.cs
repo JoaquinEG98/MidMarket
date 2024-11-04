@@ -2,7 +2,7 @@
 using MidMarket.DataAccess.Interfaces;
 using MidMarket.Entities;
 using MidMarket.Entities.Enums;
-using MidMarket.Seguridad;
+using MidMarket.Entities.Observer;
 using System.Collections.Generic;
 using System.Linq;
 using System.Transactions;
@@ -15,6 +15,7 @@ namespace MidMarket.Business.Services
         private readonly IBitacoraService _bitacoraService;
         private readonly ICompraDAO _compraDataAccess;
         private readonly IUsuarioService _usuarioService;
+        private readonly ITraduccionService _traduccionService;
 
         public CompraService()
         {
@@ -22,6 +23,7 @@ namespace MidMarket.Business.Services
             _bitacoraService = DependencyResolver.Resolve<IBitacoraService>();
             _compraDataAccess = DependencyResolver.Resolve<ICompraDAO>();
             _usuarioService = DependencyResolver.Resolve<IUsuarioService>();
+            _traduccionService = DependencyResolver.Resolve<ITraduccionService>();
         }
 
         public void RealizarCompra(List<Carrito> carrito)
@@ -53,8 +55,10 @@ namespace MidMarket.Business.Services
 
         public void ValidarSaldo(decimal saldo, decimal total)
         {
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             if (total > saldo)
-                throw new System.Exception(Errores.ObtenerError(18));
+                throw new System.Exception($"{_traduccionService.ObtenerMensaje(idioma, "ERR_18")}");
         }
 
         public List<TransaccionCompra> GetCompras(bool historico)
