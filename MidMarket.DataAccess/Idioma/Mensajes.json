@@ -454,5 +454,41 @@
     "IdiomaId": 2,
     "Etiqueta": "MSJ_15",
     "Texto": "Password changed successfully"
+  },
+  {
+    "Id": 77,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_16",
+    "Texto": "Saldo cagado correctamente"
+  },
+  {
+    "Id": 78,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_16",
+    "Texto": "Correctly loaded balance"
+  },
+  {
+    "Id": 79,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_17",
+    "Texto": "El carrito está vacío, no podés realizar la compra"
+  },
+  {
+    "Id": 80,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_17",
+    "Texto": "The cart is empty, you cannot make the purchase"
+  },
+  {
+    "Id": 81,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_18",
+    "Texto": "Compra realizada con éxito"
+  },
+  {
+    "Id": 82,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_18",
+    "Texto": "Purchase made successfully"
   }
 ]

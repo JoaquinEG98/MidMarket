@@ -1,4 +1,5 @@
 ﻿using MidMarket.Business.Interfaces;
+using MidMarket.Entities.Observer;
 using MidMarket.UI.Helpers;
 using System;
 using Unity;
@@ -8,10 +9,14 @@ namespace MidMarket.UI
     public partial class CargarSaldo : System.Web.UI.Page
     {
         private readonly IUsuarioService _usuarioService;
+        private readonly ISessionManager _sessionManager;
+        private readonly ITraduccionService _traduccionService;
 
         public CargarSaldo()
         {
             _usuarioService = Global.Container.Resolve<IUsuarioService>();
+            _sessionManager = Global.Container.Resolve<ISessionManager>();
+            _traduccionService = Global.Container.Resolve<ITraduccionService>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -22,6 +27,8 @@ namespace MidMarket.UI
         {
             try
             {
+                var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
                 string numTarjeta = numeroTarjeta.Text;
                 string dni = dniTitular.Text;
                 string fechaVencimientoTarjeta = fechaVencimiento.Text;
@@ -31,11 +38,11 @@ namespace MidMarket.UI
 
                 LimpiarCampos();
 
-                AlertHelper.MostrarModal(this, $"Saldo cargado correctamente.");
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_16")}");
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarModal(this, $"Error al cargar saldo: {ex.Message}.");
+                AlertHelper.MostrarModal(this, $"{ex.Message}.");
             }
         }
 

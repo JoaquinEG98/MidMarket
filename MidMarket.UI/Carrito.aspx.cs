@@ -1,5 +1,6 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
+using MidMarket.Entities.Observer;
 using MidMarket.UI.Helpers;
 using MidMarket.UI.WebServices;
 using System;
@@ -30,6 +31,8 @@ namespace MidMarket.UI
         private readonly ICompraService _compraService;
         private readonly CalcularCarrito _calcularCarritoService;
         private readonly EstadisticaActivos _estadisticaActivosService;
+        private readonly ITraduccionService _traduccionService;
+
 
         public Carrito()
         {
@@ -38,6 +41,7 @@ namespace MidMarket.UI
             _compraService = Global.Container.Resolve<ICompraService>();
             _calcularCarritoService = new CalcularCarrito();
             _estadisticaActivosService = new EstadisticaActivos();
+            _traduccionService = Global.Container.Resolve<ITraduccionService>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -80,7 +84,7 @@ namespace MidMarket.UI
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarModal(this, $"Error al cargar la página: {ex.Message}.");
+                AlertHelper.MostrarModal(this, $"{ex.Message}.");
             }
         }
 
@@ -112,7 +116,7 @@ namespace MidMarket.UI
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarModal(this, $"Error al cargar carrito: {ex.Message}.");
+                AlertHelper.MostrarModal(this, $"{ex.Message}.");
             }
         }
 
@@ -152,7 +156,7 @@ namespace MidMarket.UI
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarModal(this, $"Error al modificar carrito: {ex.Message}.");
+                AlertHelper.MostrarModal(this, $"{ex.Message}.");
             }
         }
 
@@ -162,10 +166,11 @@ namespace MidMarket.UI
             try
             {
                 var cliente = _sessionManager.Get<Cliente>("Usuario");
+                var idioma = _sessionManager.Get<IIdioma>("Idioma");
 
                 if (MiCarrito == null || MiCarrito.Count == 0)
                 {
-                    AlertHelper.MostrarModal(this, "El carrito está vacío, no puedes realizar una compra.");
+                    AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_17")}");
                     return;
                 }
 
@@ -177,13 +182,13 @@ namespace MidMarket.UI
                 divCarrito.Visible = false;
                 ltlCarritoVacio.Visible = true;
 
-                AlertHelper.MostrarModal(this, "La compra se realizó con éxito.");
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_18")}");
 
                 CalcularComprasWebService();
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarModal(this, $"Error al confirmar la compra: {ex.Message}.");
+                AlertHelper.MostrarModal(this, $"{ex.Message}.");
             }
         }
 
