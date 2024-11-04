@@ -2410,5 +2410,53 @@
     "IdiomaId": 2,
     "Etiqueta": "titulo_AdministracionFamilias",
     "Texto": "Family Management"
+  },
+  {
+    "Id": 431,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_ModificarFamilia",
+    "Texto": "Modificar Familia"
+  },
+  {
+    "Id": 432,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_ModificarFamilia",
+    "Texto": "Edit Family"
+  },
+  {
+    "Id": 433,
+    "IdiomaId": 1,
+    "Etiqueta": "label_NombreFamilia",
+    "Texto": "Nombre de la Familia"
+  },
+  {
+    "Id": 434,
+    "IdiomaId": 2,
+    "Etiqueta": "label_NombreFamilia",
+    "Texto": "Family Name"
+  },
+  {
+    "Id": 435,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_PatentesExistentes",
+    "Texto": "Patentes Existentes"
+  },
+  {
+    "Id": 436,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_PatentesExistentes",
+    "Texto": "Existing Permissions"
+  },
+  {
+    "Id": 437,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_AgregarPatente",
+    "Texto": "Agregar Patente"
+  },
+  {
+    "Id": 438,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_AgregarPatente",
+    "Texto": "Add Permission"
   }
 ]
