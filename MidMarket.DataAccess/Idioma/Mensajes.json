@@ -646,5 +646,17 @@
     "IdiomaId": 2,
     "Etiqueta": "MSJ_31",
     "Texto": "Modified successfully user:"
+  },
+  {
+    "Id": 109,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_32",
+    "Texto": "Venta realizada con éxito"
+  },
+  {
+    "Id": 110,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_32",
+    "Texto": "Sale made successfully"
   }
 ]

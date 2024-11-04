@@ -1,5 +1,6 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
+using MidMarket.Entities.Observer;
 using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
 using MidMarket.UI.WebServices;
@@ -16,6 +17,7 @@ namespace MidMarket.UI
         private readonly IVentaService _ventaService;
         private readonly ISessionManager _sessionManager;
         private readonly EstadisticaActivos _estadisticaActivosService;
+        private readonly ITraduccionService _traduccionService;
 
         public List<TransaccionCompra> Compras { get; set; }
 
@@ -25,6 +27,7 @@ namespace MidMarket.UI
             _ventaService = Global.Container.Resolve<IVentaService>();
             _sessionManager = Global.Container.Resolve<ISessionManager>();
             _estadisticaActivosService = new EstadisticaActivos();
+            _traduccionService = Global.Container.Resolve<ITraduccionService>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -42,7 +45,7 @@ namespace MidMarket.UI
                 }
                 catch (Exception ex)
                 {
-                    AlertHelper.MostrarModal(this, $"Error al cargar la página: {ex.Message}");
+                    AlertHelper.MostrarModal(this, $"{ex.Message}");
                     Response.Redirect("Default.aspx");
                 }
             }
@@ -71,13 +74,15 @@ namespace MidMarket.UI
                 _ventaService.RealizarVenta(venta);
                 CargarComprasConsolidadas();
 
-                AlertHelper.MostrarModal(this, $"Venta realizada con éxito.");
+                var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_32")}");
 
                 CalcularVentasWebService();
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarModal(this, $"Error al realizar la venta: {ex.Message}");
+                AlertHelper.MostrarModal(this, $"{ex.Message}");
             }
         }
 

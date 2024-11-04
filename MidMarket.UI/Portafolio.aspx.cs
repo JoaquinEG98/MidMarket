@@ -42,7 +42,7 @@ namespace MidMarket.UI
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarModal(this, $"Error al cargar la página: {ex.Message}");
+                AlertHelper.MostrarModal(this, $"{ex.Message}");
                 Response.Redirect("Default.aspx");
             }
         }
