@@ -2374,5 +2374,29 @@
     "IdiomaId": 2,
     "Etiqueta": "btn_DesasignarPatentes",
     "Texto": "Unassign Permissions"
+  },
+  {
+    "Id": 425,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_DesasignarFamilias",
+    "Texto": "Eliminar Familia a Usuario"
+  },
+  {
+    "Id": 426,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_DesasignarFamilias",
+    "Texto": "Remove Family from User"
+  },
+  {
+    "Id": 427,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_DesasignarFamilias",
+    "Texto": "Desasignar Familias"
+  },
+  {
+    "Id": 428,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_DesasignarFamilias",
+    "Texto": "Unassign Families"
   }
 ]
