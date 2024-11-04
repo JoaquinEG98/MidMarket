@@ -2614,5 +2614,95 @@
     "IdiomaId": 2,
     "Etiqueta": "btn_RecalcularDV",
     "Texto": "Recalculate Digits"
+  },
+  {
+    "Id": 465,
+    "IdiomaId": 2,
+    "Etiqueta": "title_LogConsulta",
+    "Texto": "Log Consultation"
+  },
+  {
+    "Id": 466,
+    "IdiomaId": 2,
+    "Etiqueta": "label_FilterUser",
+    "Texto": "Filter User"
+  },
+  {
+    "Id": 467,
+    "IdiomaId": 2,
+    "Etiqueta": "label_FilterSeverity",
+    "Texto": "Filter by Severity"
+  },
+  {
+    "Id": 468,
+    "IdiomaId": 2,
+    "Etiqueta": "label_From",
+    "Texto": "From"
+  },
+  {
+    "Id": 469,
+    "IdiomaId": 2,
+    "Etiqueta": "label_To",
+    "Texto": "To"
+  },
+  {
+    "Id": 470,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_Filter",
+    "Texto": "Filter"
+  },
+  {
+    "Id": 471,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_ExportToXML",
+    "Texto": "Export to XML"
+  },
+  {
+    "Id": 472,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_ExportToExcel",
+    "Texto": "Export to Excel"
+  },
+  {
+    "Id": 473,
+    "IdiomaId": 2,
+    "Etiqueta": "table_Date",
+    "Texto": "Date"
+  },
+  {
+    "Id": 474,
+    "IdiomaId": 2,
+    "Etiqueta": "table_User",
+    "Texto": "User"
+  },
+  {
+    "Id": 475,
+    "IdiomaId": 2,
+    "Etiqueta": "table_Severity",
+    "Texto": "Severity"
+  },
+  {
+    "Id": 476,
+    "IdiomaId": 2,
+    "Etiqueta": "table_Message",
+    "Texto": "Message"
+  },
+  {
+    "Id": 477,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_Previous",
+    "Texto": "Previous"
+  },
+  {
+    "Id": 478,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_Next",
+    "Texto": "Next"
+  },
+  {
+    "Id": 479,
+    "IdiomaId": 2,
+    "Etiqueta": "label_Page",
+    "Texto": "Page"
   }
 ]
