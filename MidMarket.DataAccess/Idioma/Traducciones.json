@@ -2016,18 +2016,6 @@
     "Texto": "Email"
   },
   {
-    "Id": 353,
-    "IdiomaId": 1,
-    "Etiqueta": "label_RazonSocialUsuario",
-    "Texto": "Razón Social"
-  },
-  {
-    "Id": 354,
-    "IdiomaId": 2,
-    "Etiqueta": "label_RazonSocialUsuario",
-    "Texto": "Business Name"
-  },
-  {
     "Id": 355,
     "IdiomaId": 1,
     "Etiqueta": "label_CUITUsuario",
@@ -2050,5 +2038,113 @@
     "IdiomaId": 2,
     "Etiqueta": "btn_GuardarUsuario",
     "Texto": "Save"
+  },
+  {
+    "Id": 359,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_AltaUsuario",
+    "Texto": "Alta de Usuario"
+  },
+  {
+    "Id": 360,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_AltaUsuario",
+    "Texto": "Add User"
+  },
+  {
+    "Id": 361,
+    "IdiomaId": 1,
+    "Etiqueta": "label_EmailUsuario",
+    "Texto": "Email"
+  },
+  {
+    "Id": 362,
+    "IdiomaId": 2,
+    "Etiqueta": "label_EmailUsuario",
+    "Texto": "Email"
+  },
+  {
+    "Id": 363,
+    "IdiomaId": 1,
+    "Etiqueta": "label_PasswordUsuario",
+    "Texto": "Contraseña"
+  },
+  {
+    "Id": 364,
+    "IdiomaId": 2,
+    "Etiqueta": "label_PasswordUsuario",
+    "Texto": "Password"
+  },
+  {
+    "Id": 365,
+    "IdiomaId": 1,
+    "Etiqueta": "label_RazonSocialUsuario",
+    "Texto": "Razón Social"
+  },
+  {
+    "Id": 366,
+    "IdiomaId": 2,
+    "Etiqueta": "label_RazonSocialUsuario",
+    "Texto": "Business Name"
+  },
+  {
+    "Id": 369,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_RegistrarUsuario",
+    "Texto": "Registrar"
+  },
+  {
+    "Id": 370,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_RegistrarUsuario",
+    "Texto": "Register"
+  },
+  {
+    "Id": 373,
+    "IdiomaId": 1,
+    "Etiqueta": "error_EmailFormato",
+    "Texto": "El formato del email no es válido."
+  },
+  {
+    "Id": 374,
+    "IdiomaId": 2,
+    "Etiqueta": "error_EmailFormato",
+    "Texto": "The email format is invalid."
+  },
+  {
+    "Id": 377,
+    "IdiomaId": 1,
+    "Etiqueta": "error_PasswordRequisitos",
+    "Texto": "La contraseña debe tener al menos 8 caracteres, una mayúscula, una minúscula y un carácter especial."
+  },
+  {
+    "Id": 378,
+    "IdiomaId": 2,
+    "Etiqueta": "error_PasswordRequisitos",
+    "Texto": "The password must be at least 8 characters long, with an uppercase letter, a lowercase letter, and a special character."
+  },
+  {
+    "Id": 381,
+    "IdiomaId": 1,
+    "Etiqueta": "error_RazonSocialLongitud",
+    "Texto": "La razón social no debe superar los 30 caracteres."
+  },
+  {
+    "Id": 382,
+    "IdiomaId": 2,
+    "Etiqueta": "error_RazonSocialLongitud",
+    "Texto": "The business name must not exceed 30 characters."
+  },
+  {
+    "Id": 385,
+    "IdiomaId": 1,
+    "Etiqueta": "error_CUITFormato",
+    "Texto": "El CUIT debe contener exactamente 11 dígitos."
+  },
+  {
+    "Id": 386,
+    "IdiomaId": 2,
+    "Etiqueta": "error_CUITFormato",
+    "Texto": "The CUIT must contain exactly 11 digits."
   }
 ]
