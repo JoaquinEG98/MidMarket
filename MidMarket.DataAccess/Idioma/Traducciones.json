@@ -2398,5 +2398,17 @@
     "IdiomaId": 2,
     "Etiqueta": "btn_DesasignarFamilias",
     "Texto": "Unassign Families"
+  },
+  {
+    "Id": 429,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_AdministracionFamilias",
+    "Texto": "Administración de Familias"
+  },
+  {
+    "Id": 430,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_AdministracionFamilias",
+    "Texto": "Family Management"
   }
 ]

@@ -2,13 +2,13 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="familias-container" class="container">
-        <h2>Administración de Familias</h2>
+        <h2 data-etiqueta="titulo_AdministracionFamilias">Administración de Familias</h2>
 
         <table id="tablaFamilias">
             <thead>
                 <tr>
-                    <th>Seleccionar</th>
-                    <th>Nombre de Familia</th>
+                    <th data-etiqueta="table_Seleccionar">Seleccionar</th>
+                    <th data-etiqueta="table_NombreFamilia">Nombre de Familia</th>
                 </tr>
             </thead>
             <tbody>
@@ -26,9 +26,9 @@
         </table>
 
         <div class="button-group">
-            <button type="button" class="submit-btn" onclick="darBaja()">Baja</button>
-            <button type="button" class="submit-btn" onclick="modificarFamilia()">Modificar</button>
-            <button type="button" class="submit-btn" onclick="altaFamilia()">Alta</button>
+            <button type="button" class="submit-btn" onclick="darBaja()" data-etiqueta="btn_Baja">Baja</button>
+            <button type="button" class="submit-btn" onclick="modificarFamilia()" data-etiqueta="btn_Modificar">Modificar</button>
+            <button type="button" class="submit-btn" onclick="altaFamilia()" data-etiqueta="btn_Alta">Alta</button>
         </div>
     </div>
 
