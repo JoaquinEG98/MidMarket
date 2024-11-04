@@ -2506,5 +2506,113 @@
     "IdiomaId": 2,
     "Etiqueta": "table_Descripcion",
     "Texto": "Description"
+  },
+  {
+    "Id": 447,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_AdministracionBD",
+    "Texto": "Administración de Base de Datos"
+  },
+  {
+    "Id": 448,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_AdministracionBD",
+    "Texto": "Database Administration"
+  },
+  {
+    "Id": 449,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_GenerarBackup",
+    "Texto": "Generar Backup"
+  },
+  {
+    "Id": 450,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_GenerarBackup",
+    "Texto": "Generate Backup"
+  },
+  {
+    "Id": 451,
+    "IdiomaId": 1,
+    "Etiqueta": "label_RutaBackup",
+    "Texto": "Escriba la ruta para guardar el Backup:"
+  },
+  {
+    "Id": 452,
+    "IdiomaId": 2,
+    "Etiqueta": "label_RutaBackup",
+    "Texto": "Enter the path to save the Backup:"
+  },
+  {
+    "Id": 453,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_GuardarBackup",
+    "Texto": "Guardar Backup"
+  },
+  {
+    "Id": 454,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_GuardarBackup",
+    "Texto": "Save Backup"
+  },
+  {
+    "Id": 455,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_RestaurarBD",
+    "Texto": "Restaurar Base de Datos"
+  },
+  {
+    "Id": 456,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_RestaurarBD",
+    "Texto": "Restore Database"
+  },
+  {
+    "Id": 457,
+    "IdiomaId": 1,
+    "Etiqueta": "label_ArchivoBackup",
+    "Texto": "Seleccione el archivo de Backup:"
+  },
+  {
+    "Id": 458,
+    "IdiomaId": 2,
+    "Etiqueta": "label_ArchivoBackup",
+    "Texto": "Select the Backup file:"
+  },
+  {
+    "Id": 459,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_RestaurarBD",
+    "Texto": "Restaurar Base de Datos"
+  },
+  {
+    "Id": 460,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_RestaurarBD",
+    "Texto": "Restore Database"
+  },
+  {
+    "Id": 461,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_DigitosVerificadores",
+    "Texto": "Dígitos Verificadores"
+  },
+  {
+    "Id": 462,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_DigitosVerificadores",
+    "Texto": "Verification Digits"
+  },
+  {
+    "Id": 463,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_RecalcularDV",
+    "Texto": "Recalcular Dígitos"
+  },
+  {
+    "Id": 464,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_RecalcularDV",
+    "Texto": "Recalculate Digits"
   }
 ]
