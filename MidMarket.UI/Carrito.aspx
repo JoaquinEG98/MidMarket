@@ -47,9 +47,12 @@
                     </asp:Repeater>
                 </tbody>
             </table>
-
             <div class="carrito-total">
-                <h2 data-etiqueta="total_Carrito">Total: $<%= ViewState["TotalCarrito"] != null ? ((decimal)ViewState["TotalCarrito"]).ToString("N2") : "0,00" %></h2>
+                <h2>
+                    <span data-etiqueta="total_CarritoTexto">Total</span>: 
+       
+                    <span id="totalCarrito">$<%= ViewState["TotalCarrito"] != null ? ((decimal)ViewState["TotalCarrito"]).ToString("N2") : "0,00" %></span>
+                </h2>
                 <asp:Button ID="btnConfirmarCompra" runat="server" CssClass="carrito-button-confirm" OnClick="btnConfirmarCompra_Click" Text="Confirmar Compra" data-etiqueta="btn_ConfirmarCompra" />
             </div>
         </div>
