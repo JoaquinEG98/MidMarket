@@ -2458,5 +2458,53 @@
     "IdiomaId": 2,
     "Etiqueta": "btn_AgregarPatente",
     "Texto": "Add Permission"
+  },
+  {
+    "Id": 439,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_AltaFamilia",
+    "Texto": "Alta de Familia"
+  },
+  {
+    "Id": 440,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_AltaFamilia",
+    "Texto": "Add Family"
+  },
+  {
+    "Id": 441,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_Crear",
+    "Texto": "Crear"
+  },
+  {
+    "Id": 442,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_Crear",
+    "Texto": "Create"
+  },
+  {
+    "Id": 443,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_PatentesAgregadas",
+    "Texto": "Patentes Agregadas"
+  },
+  {
+    "Id": 444,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_PatentesAgregadas",
+    "Texto": "Added Permissions"
+  },
+  {
+    "Id": 445,
+    "IdiomaId": 1,
+    "Etiqueta": "table_Descripcion",
+    "Texto": "Descripción"
+  },
+  {
+    "Id": 446,
+    "IdiomaId": 2,
+    "Etiqueta": "table_Descripcion",
+    "Texto": "Description"
   }
 ]
