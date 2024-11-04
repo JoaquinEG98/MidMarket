@@ -1,0 +1,2708 @@
+[
+  {
+    "Id": 1,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_MiCuenta",
+    "Texto": "Mi Cuenta"
+  },
+  {
+    "Id": 2,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_Transacciones",
+    "Texto": "Transacciones"
+  },
+  {
+    "Id": 3,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_Carrito",
+    "Texto": "Carrito"
+  },
+  {
+    "Id": 4,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_MisTransacciones",
+    "Texto": "Mis Transacciones"
+  },
+  {
+    "Id": 5,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_Portafolio",
+    "Texto": "Portafolio"
+  },
+  {
+    "Id": 6,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_Idioma",
+    "Texto": "Idioma"
+  },
+  {
+    "Id": 7,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_Logout",
+    "Texto": "Cerrar sesión"
+  },
+  {
+    "Id": 8,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_MiCuenta",
+    "Texto": "My Account"
+  },
+  {
+    "Id": 9,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_Transacciones",
+    "Texto": "Transactions"
+  },
+  {
+    "Id": 10,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_Carrito",
+    "Texto": "Cart"
+  },
+  {
+    "Id": 11,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_MisTransacciones",
+    "Texto": "My Transactions"
+  },
+  {
+    "Id": 12,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_Portafolio",
+    "Texto": "Portfolio"
+  },
+  {
+    "Id": 13,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_Idioma",
+    "Texto": "Language"
+  },
+  {
+    "Id": 14,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_Logout",
+    "Texto": "Logout"
+  },
+  {
+    "Id": 15,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_CargarSaldo",
+    "Texto": "Cargar Saldo"
+  },
+  {
+    "Id": 16,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_CambiarPassword",
+    "Texto": "Cambiar Contraseña"
+  },
+  {
+    "Id": 17,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_Acciones",
+    "Texto": "Acciones"
+  },
+  {
+    "Id": 18,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_AdministrarAcciones",
+    "Texto": "Administrar Acciones"
+  },
+  {
+    "Id": 19,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_AltaAcciones",
+    "Texto": "Alta de Acciones"
+  },
+  {
+    "Id": 20,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_Bonos",
+    "Texto": "Bonos"
+  },
+  {
+    "Id": 21,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_AdministrarBonos",
+    "Texto": "Administrar Bonos"
+  },
+  {
+    "Id": 22,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_AltaBonos",
+    "Texto": "Alta de Bonos"
+  },
+  {
+    "Id": 23,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_Usuarios",
+    "Texto": "Usuarios"
+  },
+  {
+    "Id": 24,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_AltaUsuario",
+    "Texto": "Alta de Usuario"
+  },
+  {
+    "Id": 25,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_Permisos",
+    "Texto": "Permisos"
+  },
+  {
+    "Id": 26,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_AsignarPatentes",
+    "Texto": "Asignar Patentes"
+  },
+  {
+    "Id": 27,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_AsignarFamilias",
+    "Texto": "Asignar Familias"
+  },
+  {
+    "Id": 28,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_DesasignarPatentes",
+    "Texto": "Desasignar Patentes"
+  },
+  {
+    "Id": 29,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_DesasignarFamilias",
+    "Texto": "Desasignar Familias"
+  },
+  {
+    "Id": 30,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_Familias",
+    "Texto": "Administración de Familias"
+  },
+  {
+    "Id": 31,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_AltaFamilia",
+    "Texto": "Alta de Familia"
+  },
+  {
+    "Id": 32,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_AdministracionBD",
+    "Texto": "Administración de Base de Datos"
+  },
+  {
+    "Id": 33,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_CompraActivos",
+    "Texto": "Compra de Activos"
+  },
+  {
+    "Id": 34,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_VentaActivos",
+    "Texto": "Venta de Activos"
+  },
+  {
+    "Id": 35,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_CargarSaldo",
+    "Texto": "Load Balance"
+  },
+  {
+    "Id": 36,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_CambiarPassword",
+    "Texto": "Change Password"
+  },
+  {
+    "Id": 37,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_Acciones",
+    "Texto": "Stocks"
+  },
+  {
+    "Id": 38,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_AdministrarAcciones",
+    "Texto": "Manage Stocks"
+  },
+  {
+    "Id": 39,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_AltaAcciones",
+    "Texto": "New Stock Entry"
+  },
+  {
+    "Id": 40,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_Bonos",
+    "Texto": "Bonds"
+  },
+  {
+    "Id": 41,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_AdministrarBonos",
+    "Texto": "Manage Bonds"
+  },
+  {
+    "Id": 42,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_AltaBonos",
+    "Texto": "New Bond Entry"
+  },
+  {
+    "Id": 43,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_Usuarios",
+    "Texto": "Users"
+  },
+  {
+    "Id": 44,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_AltaUsuario",
+    "Texto": "New User"
+  },
+  {
+    "Id": 45,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_Permisos",
+    "Texto": "Permissions"
+  },
+  {
+    "Id": 46,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_AsignarPatentes",
+    "Texto": "Assign Permissions"
+  },
+  {
+    "Id": 47,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_AsignarFamilias",
+    "Texto": "Assign Families"
+  },
+  {
+    "Id": 48,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_DesasignarPatentes",
+    "Texto": "Unassign Permissions"
+  },
+  {
+    "Id": 49,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_DesasignarFamilias",
+    "Texto": "Unassign Families"
+  },
+  {
+    "Id": 50,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_Familias",
+    "Texto": "Family Administration"
+  },
+  {
+    "Id": 51,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_AltaFamilia",
+    "Texto": "New Family"
+  },
+  {
+    "Id": 52,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_AdministracionBD",
+    "Texto": "Database Administration"
+  },
+  {
+    "Id": 53,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_CompraActivos",
+    "Texto": "Asset Purchase"
+  },
+  {
+    "Id": 54,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_VentaActivos",
+    "Texto": "Asset Sale"
+  },
+  {
+    "Id": 55,
+    "IdiomaId": 1,
+    "Etiqueta": "drop_Bitacora",
+    "Texto": "Bitácora"
+  },
+  {
+    "Id": 56,
+    "IdiomaId": 2,
+    "Etiqueta": "drop_Bitacora",
+    "Texto": "Logs"
+  },
+  {
+    "Id": 57,
+    "IdiomaId": 1,
+    "Etiqueta": "texto_Hola",
+    "Texto": "Hola, {RazonSocial} ({Familia}) 👋"
+  },
+  {
+    "Id": 58,
+    "IdiomaId": 1,
+    "Etiqueta": "texto_ResumenCuenta",
+    "Texto": "Acá podés ver el resumen de tu cuenta y las últimas novedades del mercado financiero."
+  },
+  {
+    "Id": 59,
+    "IdiomaId": 1,
+    "Etiqueta": "texto_BalanceTotal",
+    "Texto": "Balance Total"
+  },
+  {
+    "Id": 60,
+    "IdiomaId": 1,
+    "Etiqueta": "texto_InversionesActuales",
+    "Texto": "Inversiones Actuales"
+  },
+  {
+    "Id": 61,
+    "IdiomaId": 1,
+    "Etiqueta": "texto_UltimaTransaccion",
+    "Texto": "Última Transacción"
+  },
+  {
+    "Id": 62,
+    "IdiomaId": 1,
+    "Etiqueta": "texto_ComprasActivos",
+    "Texto": "Compras de Activos"
+  },
+  {
+    "Id": 63,
+    "IdiomaId": 2,
+    "Etiqueta": "texto_Hola",
+    "Texto": "Hello, {RazonSocial} ({Familia}) 👋"
+  },
+  {
+    "Id": 64,
+    "IdiomaId": 2,
+    "Etiqueta": "texto_ResumenCuenta",
+    "Texto": "Here you can see your account summary and the latest financial market news."
+  },
+  {
+    "Id": 65,
+    "IdiomaId": 2,
+    "Etiqueta": "texto_BalanceTotal",
+    "Texto": "Total Balance"
+  },
+  {
+    "Id": 66,
+    "IdiomaId": 2,
+    "Etiqueta": "texto_InversionesActuales",
+    "Texto": "Current Investments"
+  },
+  {
+    "Id": 67,
+    "IdiomaId": 2,
+    "Etiqueta": "texto_UltimaTransaccion",
+    "Texto": "Last Transaction"
+  },
+  {
+    "Id": 68,
+    "IdiomaId": 2,
+    "Etiqueta": "texto_ComprasActivos",
+    "Texto": "Asset Purchases"
+  },
+  {
+    "Id": 69,
+    "IdiomaId": 1,
+    "Etiqueta": "graph_CompraActivos",
+    "Texto": "Compras de Activos por Fecha"
+  },
+  {
+    "Id": 70,
+    "IdiomaId": 1,
+    "Etiqueta": "graph_Acciones",
+    "Texto": "Acciones"
+  },
+  {
+    "Id": 71,
+    "IdiomaId": 1,
+    "Etiqueta": "graph_Bonos",
+    "Texto": "Bonos"
+  },
+  {
+    "Id": 72,
+    "IdiomaId": 2,
+    "Etiqueta": "graph_CompraActivos",
+    "Texto": "Asset Purchases by Date"
+  },
+  {
+    "Id": 73,
+    "IdiomaId": 2,
+    "Etiqueta": "graph_Acciones",
+    "Texto": "Stocks"
+  },
+  {
+    "Id": 74,
+    "IdiomaId": 2,
+    "Etiqueta": "graph_Bonos",
+    "Texto": "Bonds"
+  },
+  {
+    "Id": 75,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_IngresarDinero",
+    "Texto": "Ingresar dinero"
+  },
+  {
+    "Id": 76,
+    "IdiomaId": 1,
+    "Etiqueta": "table_Activo",
+    "Texto": "Activo"
+  },
+  {
+    "Id": 77,
+    "IdiomaId": 1,
+    "Etiqueta": "table_Cantidad",
+    "Texto": "Cantidad"
+  },
+  {
+    "Id": 78,
+    "IdiomaId": 1,
+    "Etiqueta": "table_UltimoPrecio",
+    "Texto": "Último Precio"
+  },
+  {
+    "Id": 79,
+    "IdiomaId": 1,
+    "Etiqueta": "table_ValorNominal",
+    "Texto": "Valor Nominal"
+  },
+  {
+    "Id": 80,
+    "IdiomaId": 1,
+    "Etiqueta": "table_Rendimiento",
+    "Texto": "Rendimiento"
+  },
+  {
+    "Id": 81,
+    "IdiomaId": 1,
+    "Etiqueta": "text_Efectivo",
+    "Texto": "Efectivo"
+  },
+  {
+    "Id": 82,
+    "IdiomaId": 1,
+    "Etiqueta": "text_DisponibleParaOperar",
+    "Texto": "Disponible para operar"
+  },
+  {
+    "Id": 83,
+    "IdiomaId": 1,
+    "Etiqueta": "text_Pesos",
+    "Texto": "PESOS"
+  },
+  {
+    "Id": 84,
+    "IdiomaId": 1,
+    "Etiqueta": "text_Resumen",
+    "Texto": "Resumen"
+  },
+  {
+    "Id": 85,
+    "IdiomaId": 1,
+    "Etiqueta": "text_ActivosValorizados",
+    "Texto": "Activos Valorizados"
+  },
+  {
+    "Id": 86,
+    "IdiomaId": 1,
+    "Etiqueta": "chart_DistribucionActivos",
+    "Texto": "Distribución de Activos"
+  },
+  {
+    "Id": 87,
+    "IdiomaId": 1,
+    "Etiqueta": "chart_Acciones",
+    "Texto": "Acciones"
+  },
+  {
+    "Id": 88,
+    "IdiomaId": 1,
+    "Etiqueta": "chart_Bonos",
+    "Texto": "Bonos"
+  },
+  {
+    "Id": 89,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_IngresarDinero",
+    "Texto": "Deposit Money"
+  },
+  {
+    "Id": 90,
+    "IdiomaId": 2,
+    "Etiqueta": "table_Activo",
+    "Texto": "Asset"
+  },
+  {
+    "Id": 91,
+    "IdiomaId": 2,
+    "Etiqueta": "table_Cantidad",
+    "Texto": "Quantity"
+  },
+  {
+    "Id": 92,
+    "IdiomaId": 2,
+    "Etiqueta": "table_UltimoPrecio",
+    "Texto": "Last Price"
+  },
+  {
+    "Id": 93,
+    "IdiomaId": 2,
+    "Etiqueta": "table_ValorNominal",
+    "Texto": "Nominal Value"
+  },
+  {
+    "Id": 94,
+    "IdiomaId": 2,
+    "Etiqueta": "table_Rendimiento",
+    "Texto": "Performance"
+  },
+  {
+    "Id": 95,
+    "IdiomaId": 2,
+    "Etiqueta": "text_Efectivo",
+    "Texto": "Cash"
+  },
+  {
+    "Id": 96,
+    "IdiomaId": 2,
+    "Etiqueta": "text_DisponibleParaOperar",
+    "Texto": "Available for trading"
+  },
+  {
+    "Id": 97,
+    "IdiomaId": 2,
+    "Etiqueta": "text_Pesos",
+    "Texto": "PESOS"
+  },
+  {
+    "Id": 98,
+    "IdiomaId": 2,
+    "Etiqueta": "text_Resumen",
+    "Texto": "Summary"
+  },
+  {
+    "Id": 99,
+    "IdiomaId": 2,
+    "Etiqueta": "text_ActivosValorizados",
+    "Texto": "Valued Assets"
+  },
+  {
+    "Id": 100,
+    "IdiomaId": 2,
+    "Etiqueta": "chart_DistribucionActivos",
+    "Texto": "Asset Distribution"
+  },
+  {
+    "Id": 101,
+    "IdiomaId": 2,
+    "Etiqueta": "chart_Acciones",
+    "Texto": "Stocks"
+  },
+  {
+    "Id": 102,
+    "IdiomaId": 2,
+    "Etiqueta": "chart_Bonos",
+    "Texto": "Bonds"
+  },
+  {
+    "Id": 103,
+    "IdiomaId": 1,
+    "Etiqueta": "texto_MisCompras",
+    "Texto": "Mis Compras"
+  },
+  {
+    "Id": 104,
+    "IdiomaId": 1,
+    "Etiqueta": "table_Numero",
+    "Texto": "Número"
+  },
+  {
+    "Id": 105,
+    "IdiomaId": 1,
+    "Etiqueta": "table_Fecha",
+    "Texto": "Fecha"
+  },
+  {
+    "Id": 106,
+    "IdiomaId": 1,
+    "Etiqueta": "table_Total",
+    "Texto": "Total"
+  },
+  {
+    "Id": 107,
+    "IdiomaId": 1,
+    "Etiqueta": "table_Accion",
+    "Texto": "Acción"
+  },
+  {
+    "Id": 108,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_VerFactura",
+    "Texto": "Ver Factura"
+  },
+  {
+    "Id": 109,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_Descargar",
+    "Texto": "Descargar"
+  },
+  {
+    "Id": 110,
+    "IdiomaId": 1,
+    "Etiqueta": "texto_MisVentas",
+    "Texto": "Mis Ventas"
+  },
+  {
+    "Id": 111,
+    "IdiomaId": 1,
+    "Etiqueta": "mensaje_NoTransacciones",
+    "Texto": "No tenés transacciones registradas."
+  },
+  {
+    "Id": 112,
+    "IdiomaId": 1,
+    "Etiqueta": "mensaje_ComenzaInvertir",
+    "Texto": "Comenzá a invertir ahora mismo en la sección "
+  },
+  {
+    "Id": 113,
+    "IdiomaId": 1,
+    "Etiqueta": "link_CompraActivos",
+    "Texto": "Compra de Activos"
+  },
+  {
+    "Id": 114,
+    "IdiomaId": 1,
+    "Etiqueta": "modal_TituloFactura",
+    "Texto": "Factura de la Transacción"
+  },
+  {
+    "Id": 115,
+    "IdiomaId": 1,
+    "Etiqueta": "modal_Fecha",
+    "Texto": "Fecha"
+  },
+  {
+    "Id": 116,
+    "IdiomaId": 1,
+    "Etiqueta": "modal_NumeroFactura",
+    "Texto": "Factura N°"
+  },
+  {
+    "Id": 117,
+    "IdiomaId": 1,
+    "Etiqueta": "table_NombreActivo",
+    "Texto": "Nombre de Activo"
+  },
+  {
+    "Id": 118,
+    "IdiomaId": 1,
+    "Etiqueta": "table_Simbolo",
+    "Texto": "Símbolo"
+  },
+  {
+    "Id": 120,
+    "IdiomaId": 1,
+    "Etiqueta": "table_Precio",
+    "Texto": "Precio"
+  },
+  {
+    "Id": 122,
+    "IdiomaId": 1,
+    "Etiqueta": "table_TasaInteres",
+    "Texto": "Tasa de Interés"
+  },
+  {
+    "Id": 123,
+    "IdiomaId": 1,
+    "Etiqueta": "table_TotalActivo",
+    "Texto": "Total"
+  },
+  {
+    "Id": 124,
+    "IdiomaId": 1,
+    "Etiqueta": "section_Acciones",
+    "Texto": "Acciones"
+  },
+  {
+    "Id": 125,
+    "IdiomaId": 1,
+    "Etiqueta": "section_Bonos",
+    "Texto": "Bonos"
+  },
+  {
+    "Id": 126,
+    "IdiomaId": 2,
+    "Etiqueta": "texto_MisCompras",
+    "Texto": "My Purchases"
+  },
+  {
+    "Id": 127,
+    "IdiomaId": 2,
+    "Etiqueta": "table_Numero",
+    "Texto": "Number"
+  },
+  {
+    "Id": 128,
+    "IdiomaId": 2,
+    "Etiqueta": "table_Fecha",
+    "Texto": "Date"
+  },
+  {
+    "Id": 129,
+    "IdiomaId": 2,
+    "Etiqueta": "table_Total",
+    "Texto": "Total"
+  },
+  {
+    "Id": 130,
+    "IdiomaId": 2,
+    "Etiqueta": "table_Accion",
+    "Texto": "Action"
+  },
+  {
+    "Id": 131,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_VerFactura",
+    "Texto": "View Invoice"
+  },
+  {
+    "Id": 132,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_Descargar",
+    "Texto": "Download"
+  },
+  {
+    "Id": 133,
+    "IdiomaId": 2,
+    "Etiqueta": "texto_MisVentas",
+    "Texto": "My Sales"
+  },
+  {
+    "Id": 134,
+    "IdiomaId": 2,
+    "Etiqueta": "mensaje_NoTransacciones",
+    "Texto": "You have no recorded transactions."
+  },
+  {
+    "Id": 135,
+    "IdiomaId": 2,
+    "Etiqueta": "mensaje_ComenzaInvertir",
+    "Texto": "Start investing now in the "
+  },
+  {
+    "Id": 136,
+    "IdiomaId": 2,
+    "Etiqueta": "link_CompraActivos",
+    "Texto": "Asset Purchase"
+  },
+  {
+    "Id": 137,
+    "IdiomaId": 2,
+    "Etiqueta": "modal_TituloFactura",
+    "Texto": "Transaction Invoice"
+  },
+  {
+    "Id": 138,
+    "IdiomaId": 2,
+    "Etiqueta": "modal_Fecha",
+    "Texto": "Date"
+  },
+  {
+    "Id": 139,
+    "IdiomaId": 2,
+    "Etiqueta": "modal_NumeroFactura",
+    "Texto": "Invoice No."
+  },
+  {
+    "Id": 140,
+    "IdiomaId": 2,
+    "Etiqueta": "table_NombreActivo",
+    "Texto": "Asset Name"
+  },
+  {
+    "Id": 141,
+    "IdiomaId": 2,
+    "Etiqueta": "table_Simbolo",
+    "Texto": "Symbol"
+  },
+  {
+    "Id": 143,
+    "IdiomaId": 2,
+    "Etiqueta": "table_Precio",
+    "Texto": "Price"
+  },
+  {
+    "Id": 145,
+    "IdiomaId": 2,
+    "Etiqueta": "table_TasaInteres",
+    "Texto": "Interest Rate"
+  },
+  {
+    "Id": 146,
+    "IdiomaId": 2,
+    "Etiqueta": "table_TotalActivo",
+    "Texto": "Total"
+  },
+  {
+    "Id": 147,
+    "IdiomaId": 2,
+    "Etiqueta": "section_Acciones",
+    "Texto": "Stocks"
+  },
+  {
+    "Id": 148,
+    "IdiomaId": 2,
+    "Etiqueta": "section_Bonos",
+    "Texto": "Bonds"
+  },
+  {
+    "Id": 149,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_CarritoCompras",
+    "Texto": "Tu Carrito de Compras"
+  },
+  {
+    "Id": 150,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_CarritoCompras",
+    "Texto": "Your Shopping Cart"
+  },
+  {
+    "Id": 151,
+    "IdiomaId": 1,
+    "Etiqueta": "table_Producto",
+    "Texto": "Producto"
+  },
+  {
+    "Id": 152,
+    "IdiomaId": 2,
+    "Etiqueta": "table_Producto",
+    "Texto": "Product"
+  },
+  {
+    "Id": 153,
+    "IdiomaId": 1,
+    "Etiqueta": "table_Detalle",
+    "Texto": "Detalle"
+  },
+  {
+    "Id": 154,
+    "IdiomaId": 2,
+    "Etiqueta": "table_Detalle",
+    "Texto": "Detail"
+  },
+  {
+    "Id": 155,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_Decrease",
+    "Texto": "-"
+  },
+  {
+    "Id": 156,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_Increase",
+    "Texto": "+"
+  },
+  {
+    "Id": 157,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_Decrease",
+    "Texto": "-"
+  },
+  {
+    "Id": 158,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_Increase",
+    "Texto": "+"
+  },
+  {
+    "Id": 161,
+    "IdiomaId": 1,
+    "Etiqueta": "total_Carrito",
+    "Texto": "Total"
+  },
+  {
+    "Id": 162,
+    "IdiomaId": 2,
+    "Etiqueta": "total_Carrito",
+    "Texto": "Total"
+  },
+  {
+    "Id": 163,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_ConfirmarCompra",
+    "Texto": "Confirmar Compra"
+  },
+  {
+    "Id": 164,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_ConfirmarCompra",
+    "Texto": "Confirm Purchase"
+  },
+  {
+    "Id": 165,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_AgregarCarritoAccion",
+    "Texto": "Agregar al Carrito"
+  },
+  {
+    "Id": 166,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_AgregarCarritoAccion",
+    "Texto": "Add to Cart"
+  },
+  {
+    "Id": 167,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_AgregarCarritoBono",
+    "Texto": "Agregar al Carrito"
+  },
+  {
+    "Id": 168,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_AgregarCarritoBono",
+    "Texto": "Add to Cart"
+  },
+  {
+    "Id": 169,
+    "IdiomaId": 1,
+    "Etiqueta": "card_Simbolo",
+    "Texto": "Símbolo: {Simbolo}"
+  },
+  {
+    "Id": 170,
+    "IdiomaId": 2,
+    "Etiqueta": "card_Simbolo",
+    "Texto": "Symbol: {Simbolo}"
+  },
+  {
+    "Id": 171,
+    "IdiomaId": 1,
+    "Etiqueta": "card_Precio",
+    "Texto": "Precio: ${Precio}"
+  },
+  {
+    "Id": 172,
+    "IdiomaId": 2,
+    "Etiqueta": "card_Precio",
+    "Texto": "Price: ${Precio}"
+  },
+  {
+    "Id": 173,
+    "IdiomaId": 1,
+    "Etiqueta": "card_ValorNominal",
+    "Texto": "Valor Nominal: ${ValorNominal}"
+  },
+  {
+    "Id": 174,
+    "IdiomaId": 2,
+    "Etiqueta": "card_ValorNominal",
+    "Texto": "Nominal Value: ${ValorNominal}"
+  },
+  {
+    "Id": 175,
+    "IdiomaId": 1,
+    "Etiqueta": "card_TasaInteres",
+    "Texto": "Tasa de Interés: {TasaInteres}%"
+  },
+  {
+    "Id": 176,
+    "IdiomaId": 2,
+    "Etiqueta": "card_TasaInteres",
+    "Texto": "Interest Rate: {TasaInteres}%"
+  },
+  {
+    "Id": 177,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_Ventas",
+    "Texto": "Ventas"
+  },
+  {
+    "Id": 178,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_Ventas",
+    "Texto": "Sales"
+  },
+  {
+    "Id": 179,
+    "IdiomaId": 1,
+    "Etiqueta": "mensaje_VentasVacias",
+    "Texto": "No tenés ventas registradas."
+  },
+  {
+    "Id": 180,
+    "IdiomaId": 2,
+    "Etiqueta": "mensaje_VentasVacias",
+    "Texto": "You have no recorded sales."
+  },
+  {
+    "Id": 181,
+    "IdiomaId": 1,
+    "Etiqueta": "mensaje_ComenzaInvertirVentas",
+    "Texto": "Comenzá a invertir ahora mismo en la sección "
+  },
+  {
+    "Id": 182,
+    "IdiomaId": 2,
+    "Etiqueta": "mensaje_ComenzaInvertirVentas",
+    "Texto": "Start investing now in the "
+  },
+  {
+    "Id": 183,
+    "IdiomaId": 1,
+    "Etiqueta": "link_CompraActivosVentas",
+    "Texto": "Compra de Activos"
+  },
+  {
+    "Id": 184,
+    "IdiomaId": 2,
+    "Etiqueta": "link_CompraActivosVentas",
+    "Texto": "Asset Purchase"
+  },
+  {
+    "Id": 185,
+    "IdiomaId": 1,
+    "Etiqueta": "table_CantidadVender",
+    "Texto": "Cantidad a Vender"
+  },
+  {
+    "Id": 186,
+    "IdiomaId": 2,
+    "Etiqueta": "table_CantidadVender",
+    "Texto": "Quantity to Sell"
+  },
+  {
+    "Id": 187,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_Vender",
+    "Texto": "Vender"
+  },
+  {
+    "Id": 188,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_Vender",
+    "Texto": "Sell"
+  },
+  {
+    "Id": 189,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_CargarSaldo",
+    "Texto": "Cargar Saldo"
+  },
+  {
+    "Id": 190,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_CargarSaldo",
+    "Texto": "Load Balance"
+  },
+  {
+    "Id": 191,
+    "IdiomaId": 1,
+    "Etiqueta": "label_NombreTitular",
+    "Texto": "Nombre del Titular"
+  },
+  {
+    "Id": 192,
+    "IdiomaId": 2,
+    "Etiqueta": "label_NombreTitular",
+    "Texto": "Account Holder Name"
+  },
+  {
+    "Id": 193,
+    "IdiomaId": 1,
+    "Etiqueta": "label_DNI",
+    "Texto": "DNI"
+  },
+  {
+    "Id": 194,
+    "IdiomaId": 2,
+    "Etiqueta": "label_DNI",
+    "Texto": "ID Number"
+  },
+  {
+    "Id": 195,
+    "IdiomaId": 1,
+    "Etiqueta": "label_NumeroTarjeta",
+    "Texto": "Número de Tarjeta"
+  },
+  {
+    "Id": 196,
+    "IdiomaId": 2,
+    "Etiqueta": "label_NumeroTarjeta",
+    "Texto": "Card Number"
+  },
+  {
+    "Id": 197,
+    "IdiomaId": 1,
+    "Etiqueta": "label_FechaVencimiento",
+    "Texto": "Fecha de Vencimiento (MM/AA)"
+  },
+  {
+    "Id": 198,
+    "IdiomaId": 2,
+    "Etiqueta": "label_FechaVencimiento",
+    "Texto": "Expiration Date (MM/YY)"
+  },
+  {
+    "Id": 199,
+    "IdiomaId": 1,
+    "Etiqueta": "label_CodigoSeguridad",
+    "Texto": "Código de Seguridad (CVV)"
+  },
+  {
+    "Id": 200,
+    "IdiomaId": 2,
+    "Etiqueta": "label_CodigoSeguridad",
+    "Texto": "Security Code (CVV)"
+  },
+  {
+    "Id": 201,
+    "IdiomaId": 1,
+    "Etiqueta": "label_MontoCargar",
+    "Texto": "Monto a Cargar"
+  },
+  {
+    "Id": 202,
+    "IdiomaId": 2,
+    "Etiqueta": "label_MontoCargar",
+    "Texto": "Amount to Load"
+  },
+  {
+    "Id": 203,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_CargarSaldo",
+    "Texto": "Cargar Saldo"
+  },
+  {
+    "Id": 204,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_CargarSaldo",
+    "Texto": "Load Balance"
+  },
+  {
+    "Id": 205,
+    "IdiomaId": 1,
+    "Etiqueta": "validacion_DNIValido",
+    "Texto": "DNI válido"
+  },
+  {
+    "Id": 206,
+    "IdiomaId": 2,
+    "Etiqueta": "validacion_DNIValido",
+    "Texto": "Valid ID"
+  },
+  {
+    "Id": 207,
+    "IdiomaId": 1,
+    "Etiqueta": "validacion_DNIInvalido",
+    "Texto": "DNI inválido"
+  },
+  {
+    "Id": 208,
+    "IdiomaId": 2,
+    "Etiqueta": "validacion_DNIInvalido",
+    "Texto": "Invalid ID"
+  },
+  {
+    "Id": 209,
+    "IdiomaId": 1,
+    "Etiqueta": "validacion_TarjetaVisa",
+    "Texto": "Tarjeta VISA válida"
+  },
+  {
+    "Id": 210,
+    "IdiomaId": 2,
+    "Etiqueta": "validacion_TarjetaVisa",
+    "Texto": "Valid VISA Card"
+  },
+  {
+    "Id": 211,
+    "IdiomaId": 1,
+    "Etiqueta": "validacion_TarjetaMasterCard",
+    "Texto": "Tarjeta MasterCard válida"
+  },
+  {
+    "Id": 212,
+    "IdiomaId": 2,
+    "Etiqueta": "validacion_TarjetaMasterCard",
+    "Texto": "Valid MasterCard"
+  },
+  {
+    "Id": 213,
+    "IdiomaId": 1,
+    "Etiqueta": "validacion_TarjetaAmex",
+    "Texto": "Tarjeta AMEX válida"
+  },
+  {
+    "Id": 214,
+    "IdiomaId": 2,
+    "Etiqueta": "validacion_TarjetaAmex",
+    "Texto": "Valid AMEX Card"
+  },
+  {
+    "Id": 215,
+    "IdiomaId": 1,
+    "Etiqueta": "validacion_TarjetaInvalida",
+    "Texto": "Número de tarjeta inválido"
+  },
+  {
+    "Id": 216,
+    "IdiomaId": 2,
+    "Etiqueta": "validacion_TarjetaInvalida",
+    "Texto": "Invalid card number"
+  },
+  {
+    "Id": 217,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_CambioPassword",
+    "Texto": "Cambio de contraseña"
+  },
+  {
+    "Id": 218,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_CambioPassword",
+    "Texto": "Change Password"
+  },
+  {
+    "Id": 219,
+    "IdiomaId": 1,
+    "Etiqueta": "label_PasswordActual",
+    "Texto": "Contraseña actual"
+  },
+  {
+    "Id": 220,
+    "IdiomaId": 2,
+    "Etiqueta": "label_PasswordActual",
+    "Texto": "Current Password"
+  },
+  {
+    "Id": 221,
+    "IdiomaId": 1,
+    "Etiqueta": "label_NuevoPassword",
+    "Texto": "Nueva contraseña"
+  },
+  {
+    "Id": 222,
+    "IdiomaId": 2,
+    "Etiqueta": "label_NuevoPassword",
+    "Texto": "New Password"
+  },
+  {
+    "Id": 223,
+    "IdiomaId": 1,
+    "Etiqueta": "label_ConfirmarPassword",
+    "Texto": "Confirmar nueva contraseña"
+  },
+  {
+    "Id": 224,
+    "IdiomaId": 2,
+    "Etiqueta": "label_ConfirmarPassword",
+    "Texto": "Confirm New Password"
+  },
+  {
+    "Id": 225,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_CambiarPassword",
+    "Texto": "Cambiar"
+  },
+  {
+    "Id": 226,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_CambiarPassword",
+    "Texto": "Change"
+  },
+  {
+    "Id": 227,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_AdministracionAcciones",
+    "Texto": "Administración de Acciones"
+  },
+  {
+    "Id": 228,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_AdministracionAcciones",
+    "Texto": "Stock Management"
+  },
+  {
+    "Id": 229,
+    "IdiomaId": 1,
+    "Etiqueta": "table_Seleccionar",
+    "Texto": "Seleccionar"
+  },
+  {
+    "Id": 230,
+    "IdiomaId": 2,
+    "Etiqueta": "table_Seleccionar",
+    "Texto": "Select"
+  },
+  {
+    "Id": 231,
+    "IdiomaId": 1,
+    "Etiqueta": "table_NombreAccion",
+    "Texto": "Nombre de Acción"
+  },
+  {
+    "Id": 232,
+    "IdiomaId": 2,
+    "Etiqueta": "table_NombreAccion",
+    "Texto": "Stock Name"
+  },
+  {
+    "Id": 233,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_Baja",
+    "Texto": "Baja"
+  },
+  {
+    "Id": 234,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_Baja",
+    "Texto": "Remove"
+  },
+  {
+    "Id": 235,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_Modificar",
+    "Texto": "Modificar"
+  },
+  {
+    "Id": 236,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_Modificar",
+    "Texto": "Edit"
+  },
+  {
+    "Id": 237,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_Alta",
+    "Texto": "Alta"
+  },
+  {
+    "Id": 238,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_Alta",
+    "Texto": "Add"
+  },
+  {
+    "Id": 239,
+    "IdiomaId": 1,
+    "Etiqueta": "confirmacion_BajaAccion",
+    "Texto": "¿Estás seguro de dar de baja la acción \"{NombreAccion}\"?"
+  },
+  {
+    "Id": 240,
+    "IdiomaId": 2,
+    "Etiqueta": "confirmacion_BajaAccion",
+    "Texto": "Are you sure you want to remove the stock \"{NombreAccion}\"?"
+  },
+  {
+    "Id": 241,
+    "IdiomaId": 1,
+    "Etiqueta": "alerta_AccionBaja",
+    "Texto": "La acción \"{NombreAccion}\" ha sido dada de baja."
+  },
+  {
+    "Id": 242,
+    "IdiomaId": 2,
+    "Etiqueta": "alerta_AccionBaja",
+    "Texto": "The stock \"{NombreAccion}\" has been removed."
+  },
+  {
+    "Id": 243,
+    "IdiomaId": 1,
+    "Etiqueta": "alerta_SeleccionarAccion",
+    "Texto": "Por favor, selecciona una acción."
+  },
+  {
+    "Id": 244,
+    "IdiomaId": 2,
+    "Etiqueta": "alerta_SeleccionarAccion",
+    "Texto": "Please select a stock."
+  },
+  {
+    "Id": 245,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_ModificarAccion",
+    "Texto": "Modificar Acción"
+  },
+  {
+    "Id": 246,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_ModificarAccion",
+    "Texto": "Edit Stock"
+  },
+  {
+    "Id": 247,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_Guardar",
+    "Texto": "Guardar"
+  },
+  {
+    "Id": 248,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_Guardar",
+    "Texto": "Save"
+  },
+  {
+    "Id": 249,
+    "IdiomaId": 1,
+    "Etiqueta": "label_Nombre",
+    "Texto": "Nombre"
+  },
+  {
+    "Id": 250,
+    "IdiomaId": 2,
+    "Etiqueta": "label_Nombre",
+    "Texto": "Name"
+  },
+  {
+    "Id": 253,
+    "IdiomaId": 1,
+    "Etiqueta": "error_NombreRequerido",
+    "Texto": "El nombre es requerido."
+  },
+  {
+    "Id": 254,
+    "IdiomaId": 2,
+    "Etiqueta": "error_NombreRequerido",
+    "Texto": "Name is required."
+  },
+  {
+    "Id": 255,
+    "IdiomaId": 1,
+    "Etiqueta": "error_NombreLongitud",
+    "Texto": "El nombre no debe exceder 20 caracteres."
+  },
+  {
+    "Id": 256,
+    "IdiomaId": 2,
+    "Etiqueta": "error_NombreLongitud",
+    "Texto": "Name must not exceed 20 characters."
+  },
+  {
+    "Id": 257,
+    "IdiomaId": 1,
+    "Etiqueta": "label_Simbolo",
+    "Texto": "Símbolo"
+  },
+  {
+    "Id": 258,
+    "IdiomaId": 2,
+    "Etiqueta": "label_Simbolo",
+    "Texto": "Symbol"
+  },
+  {
+    "Id": 261,
+    "IdiomaId": 1,
+    "Etiqueta": "error_SimboloRequerido",
+    "Texto": "El símbolo es requerido."
+  },
+  {
+    "Id": 262,
+    "IdiomaId": 2,
+    "Etiqueta": "error_SimboloRequerido",
+    "Texto": "Symbol is required."
+  },
+  {
+    "Id": 263,
+    "IdiomaId": 1,
+    "Etiqueta": "error_SimboloLongitud",
+    "Texto": "El símbolo no debe exceder 20 caracteres."
+  },
+  {
+    "Id": 264,
+    "IdiomaId": 2,
+    "Etiqueta": "error_SimboloLongitud",
+    "Texto": "Symbol must not exceed 20 characters."
+  },
+  {
+    "Id": 265,
+    "IdiomaId": 1,
+    "Etiqueta": "label_Precio",
+    "Texto": "Precio"
+  },
+  {
+    "Id": 266,
+    "IdiomaId": 2,
+    "Etiqueta": "label_Precio",
+    "Texto": "Price"
+  },
+  {
+    "Id": 269,
+    "IdiomaId": 1,
+    "Etiqueta": "error_PrecioRequerido",
+    "Texto": "El precio es requerido."
+  },
+  {
+    "Id": 270,
+    "IdiomaId": 2,
+    "Etiqueta": "error_PrecioRequerido",
+    "Texto": "Price is required."
+  },
+  {
+    "Id": 271,
+    "IdiomaId": 1,
+    "Etiqueta": "error_FormatoPrecio",
+    "Texto": "Formato de precio incorrecto."
+  },
+  {
+    "Id": 272,
+    "IdiomaId": 2,
+    "Etiqueta": "error_FormatoPrecio",
+    "Texto": "Incorrect price format."
+  },
+  {
+    "Id": 273,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_AltaAccion",
+    "Texto": "Alta de Acción"
+  },
+  {
+    "Id": 274,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_Cargar",
+    "Texto": "Cargar"
+  },
+  {
+    "Id": 273,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_AltaAccion",
+    "Texto": "Add Stock"
+  },
+  {
+    "Id": 274,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_Cargar",
+    "Texto": "Add"
+  },
+  {
+    "Id": 275,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_AdministracionBonos",
+    "Texto": "Administración de Bonos"
+  },
+  {
+    "Id": 276,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_AdministracionBonos",
+    "Texto": "Bond Management"
+  },
+  {
+    "Id": 277,
+    "IdiomaId": 1,
+    "Etiqueta": "table_NombreBono",
+    "Texto": "Nombre de Bono"
+  },
+  {
+    "Id": 278,
+    "IdiomaId": 2,
+    "Etiqueta": "table_NombreBono",
+    "Texto": "Bond Name"
+  },
+  {
+    "Id": 279,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_BajaBono",
+    "Texto": "Baja"
+  },
+  {
+    "Id": 280,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_BajaBono",
+    "Texto": "Remove"
+  },
+  {
+    "Id": 281,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_ModificarBono",
+    "Texto": "Modificar"
+  },
+  {
+    "Id": 282,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_ModificarBono",
+    "Texto": "Edit"
+  },
+  {
+    "Id": 283,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_AltaBono",
+    "Texto": "Alta"
+  },
+  {
+    "Id": 284,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_AltaBono",
+    "Texto": "Add"
+  },
+  {
+    "Id": 285,
+    "IdiomaId": 1,
+    "Etiqueta": "alert_SeleccionarBono",
+    "Texto": "Por favor, selecciona un bono."
+  },
+  {
+    "Id": 286,
+    "IdiomaId": 2,
+    "Etiqueta": "alert_SeleccionarBono",
+    "Texto": "Please select a bond."
+  },
+  {
+    "Id": 287,
+    "IdiomaId": 1,
+    "Etiqueta": "confirm_EliminarBono",
+    "Texto": "¿Estás seguro de eliminar el bono \"{NombreBono}\"?"
+  },
+  {
+    "Id": 288,
+    "IdiomaId": 2,
+    "Etiqueta": "confirm_EliminarBono",
+    "Texto": "Are you sure you want to delete the bond \"{NombreBono}\"?"
+  },
+  {
+    "Id": 289,
+    "IdiomaId": 1,
+    "Etiqueta": "alert_BonoEliminado",
+    "Texto": "El bono \"{NombreBono}\" ha sido eliminado."
+  },
+  {
+    "Id": 290,
+    "IdiomaId": 2,
+    "Etiqueta": "alert_BonoEliminado",
+    "Texto": "The bond \"{NombreBono}\" has been deleted."
+  },
+  {
+    "Id": 291,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_ModificarBono",
+    "Texto": "Modificar Bono"
+  },
+  {
+    "Id": 292,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_ModificarBono",
+    "Texto": "Edit Bond"
+  },
+  {
+    "Id": 293,
+    "IdiomaId": 1,
+    "Etiqueta": "label_NombreBono",
+    "Texto": "Nombre"
+  },
+  {
+    "Id": 294,
+    "IdiomaId": 2,
+    "Etiqueta": "label_NombreBono",
+    "Texto": "Name"
+  },
+  {
+    "Id": 297,
+    "IdiomaId": 1,
+    "Etiqueta": "error_NombreBonoRequerido",
+    "Texto": "El nombre es requerido."
+  },
+  {
+    "Id": 298,
+    "IdiomaId": 2,
+    "Etiqueta": "error_NombreBonoRequerido",
+    "Texto": "Name is required."
+  },
+  {
+    "Id": 299,
+    "IdiomaId": 1,
+    "Etiqueta": "error_NombreBonoLongitud",
+    "Texto": "El nombre no debe exceder 30 caracteres."
+  },
+  {
+    "Id": 300,
+    "IdiomaId": 2,
+    "Etiqueta": "error_NombreBonoLongitud",
+    "Texto": "Name must not exceed 30 characters."
+  },
+  {
+    "Id": 301,
+    "IdiomaId": 1,
+    "Etiqueta": "label_ValorNominal",
+    "Texto": "Valor Nominal"
+  },
+  {
+    "Id": 302,
+    "IdiomaId": 2,
+    "Etiqueta": "label_ValorNominal",
+    "Texto": "Nominal Value"
+  },
+  {
+    "Id": 305,
+    "IdiomaId": 1,
+    "Etiqueta": "error_ValorNominalRequerido",
+    "Texto": "El valor nominal es requerido."
+  },
+  {
+    "Id": 306,
+    "IdiomaId": 2,
+    "Etiqueta": "error_ValorNominalRequerido",
+    "Texto": "Nominal value is required."
+  },
+  {
+    "Id": 307,
+    "IdiomaId": 1,
+    "Etiqueta": "error_FormatoValorNominal",
+    "Texto": "Formato de valor nominal incorrecto."
+  },
+  {
+    "Id": 308,
+    "IdiomaId": 2,
+    "Etiqueta": "error_FormatoValorNominal",
+    "Texto": "Incorrect nominal value format."
+  },
+  {
+    "Id": 309,
+    "IdiomaId": 1,
+    "Etiqueta": "label_TasaInteres",
+    "Texto": "Tasa de Interés (%)"
+  },
+  {
+    "Id": 310,
+    "IdiomaId": 2,
+    "Etiqueta": "label_TasaInteres",
+    "Texto": "Interest Rate (%)"
+  },
+  {
+    "Id": 313,
+    "IdiomaId": 1,
+    "Etiqueta": "error_TasaInteresRequerido",
+    "Texto": "La tasa de interés es requerida."
+  },
+  {
+    "Id": 314,
+    "IdiomaId": 2,
+    "Etiqueta": "error_TasaInteresRequerido",
+    "Texto": "Interest rate is required."
+  },
+  {
+    "Id": 315,
+    "IdiomaId": 1,
+    "Etiqueta": "error_FormatoTasaInteres",
+    "Texto": "Formato de tasa de interés incorrecto."
+  },
+  {
+    "Id": 316,
+    "IdiomaId": 2,
+    "Etiqueta": "error_FormatoTasaInteres",
+    "Texto": "Incorrect interest rate format."
+  },
+  {
+    "Id": 317,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_AltaBono",
+    "Texto": "Alta de Bono"
+  },
+  {
+    "Id": 318,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_AltaBono",
+    "Texto": "Add Bond"
+  },
+  {
+    "Id": 319,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_CargarBono",
+    "Texto": "Cargar"
+  },
+  {
+    "Id": 320,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_CargarBono",
+    "Texto": "Add"
+  },
+  {
+    "Id": 321,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_AdministracionUsuarios",
+    "Texto": "Administración de Usuarios"
+  },
+  {
+    "Id": 322,
+    "IdiomaId": 1,
+    "Etiqueta": "table_RazonSocial",
+    "Texto": "Razón Social"
+  },
+  {
+    "Id": 323,
+    "IdiomaId": 1,
+    "Etiqueta": "table_CUIT",
+    "Texto": "CUIT"
+  },
+  {
+    "Id": 324,
+    "IdiomaId": 1,
+    "Etiqueta": "table_Familia",
+    "Texto": "Familia"
+  },
+  {
+    "Id": 325,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_VerMas",
+    "Texto": "Ver Más"
+  },
+  {
+    "Id": 326,
+    "IdiomaId": 1,
+    "Etiqueta": "modal_TituloDetallesUsuario",
+    "Texto": "Detalles del Usuario"
+  },
+  {
+    "Id": 327,
+    "IdiomaId": 1,
+    "Etiqueta": "modal_ID",
+    "Texto": "- ID:"
+  },
+  {
+    "Id": 328,
+    "IdiomaId": 1,
+    "Etiqueta": "modal_Email",
+    "Texto": "- Email:"
+  },
+  {
+    "Id": 329,
+    "IdiomaId": 1,
+    "Etiqueta": "modal_RazonSocial",
+    "Texto": "- Razón Social:"
+  },
+  {
+    "Id": 330,
+    "IdiomaId": 1,
+    "Etiqueta": "modal_CUIT",
+    "Texto": "- CUIT:"
+  },
+  {
+    "Id": 331,
+    "IdiomaId": 1,
+    "Etiqueta": "modal_NumeroCuenta",
+    "Texto": "- Número de Cuenta:"
+  },
+  {
+    "Id": 332,
+    "IdiomaId": 1,
+    "Etiqueta": "modal_Saldo",
+    "Texto": "- Saldo:"
+  },
+  {
+    "Id": 333,
+    "IdiomaId": 1,
+    "Etiqueta": "modal_Familia",
+    "Texto": "- Familia:"
+  },
+  {
+    "Id": 334,
+    "IdiomaId": 1,
+    "Etiqueta": "modal_PatentesAsignadas",
+    "Texto": "- Patentes Asignadas:"
+  },
+  {
+    "Id": 335,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_AdministracionUsuarios",
+    "Texto": "User Management"
+  },
+  {
+    "Id": 336,
+    "IdiomaId": 2,
+    "Etiqueta": "table_RazonSocial",
+    "Texto": "Business Name"
+  },
+  {
+    "Id": 337,
+    "IdiomaId": 2,
+    "Etiqueta": "table_CUIT",
+    "Texto": "CUIT"
+  },
+  {
+    "Id": 338,
+    "IdiomaId": 2,
+    "Etiqueta": "table_Familia",
+    "Texto": "Family"
+  },
+  {
+    "Id": 339,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_VerMas",
+    "Texto": "View More"
+  },
+  {
+    "Id": 340,
+    "IdiomaId": 2,
+    "Etiqueta": "modal_TituloDetallesUsuario",
+    "Texto": "User Details"
+  },
+  {
+    "Id": 341,
+    "IdiomaId": 2,
+    "Etiqueta": "modal_ID",
+    "Texto": "- ID:"
+  },
+  {
+    "Id": 342,
+    "IdiomaId": 2,
+    "Etiqueta": "modal_Email",
+    "Texto": "- Email:"
+  },
+  {
+    "Id": 343,
+    "IdiomaId": 2,
+    "Etiqueta": "modal_RazonSocial",
+    "Texto": "- Business Name:"
+  },
+  {
+    "Id": 344,
+    "IdiomaId": 2,
+    "Etiqueta": "modal_CUIT",
+    "Texto": "- CUIT:"
+  },
+  {
+    "Id": 345,
+    "IdiomaId": 2,
+    "Etiqueta": "modal_NumeroCuenta",
+    "Texto": "- Account Number:"
+  },
+  {
+    "Id": 346,
+    "IdiomaId": 2,
+    "Etiqueta": "modal_Saldo",
+    "Texto": "- Balance:"
+  },
+  {
+    "Id": 347,
+    "IdiomaId": 2,
+    "Etiqueta": "modal_Familia",
+    "Texto": "- Family:"
+  },
+  {
+    "Id": 348,
+    "IdiomaId": 2,
+    "Etiqueta": "modal_PatentesAsignadas",
+    "Texto": "- Assigned Permissions:"
+  },
+  {
+    "Id": 349,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_ModificarUsuario",
+    "Texto": "Modificar Usuario"
+  },
+  {
+    "Id": 350,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_ModificarUsuario",
+    "Texto": "Edit User"
+  },
+  {
+    "Id": 351,
+    "IdiomaId": 1,
+    "Etiqueta": "label_Email",
+    "Texto": "Email"
+  },
+  {
+    "Id": 352,
+    "IdiomaId": 2,
+    "Etiqueta": "label_Email",
+    "Texto": "Email"
+  },
+  {
+    "Id": 355,
+    "IdiomaId": 1,
+    "Etiqueta": "label_CUITUsuario",
+    "Texto": "CUIT"
+  },
+  {
+    "Id": 356,
+    "IdiomaId": 2,
+    "Etiqueta": "label_CUITUsuario",
+    "Texto": "CUIT"
+  },
+  {
+    "Id": 357,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_GuardarUsuario",
+    "Texto": "Guardar"
+  },
+  {
+    "Id": 358,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_GuardarUsuario",
+    "Texto": "Save"
+  },
+  {
+    "Id": 359,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_AltaUsuario",
+    "Texto": "Alta de Usuario"
+  },
+  {
+    "Id": 360,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_AltaUsuario",
+    "Texto": "Add User"
+  },
+  {
+    "Id": 361,
+    "IdiomaId": 1,
+    "Etiqueta": "label_EmailUsuario",
+    "Texto": "Email"
+  },
+  {
+    "Id": 362,
+    "IdiomaId": 2,
+    "Etiqueta": "label_EmailUsuario",
+    "Texto": "Email"
+  },
+  {
+    "Id": 363,
+    "IdiomaId": 1,
+    "Etiqueta": "label_PasswordUsuario",
+    "Texto": "Contraseña"
+  },
+  {
+    "Id": 364,
+    "IdiomaId": 2,
+    "Etiqueta": "label_PasswordUsuario",
+    "Texto": "Password"
+  },
+  {
+    "Id": 365,
+    "IdiomaId": 1,
+    "Etiqueta": "label_RazonSocialUsuario",
+    "Texto": "Razón Social"
+  },
+  {
+    "Id": 366,
+    "IdiomaId": 2,
+    "Etiqueta": "label_RazonSocialUsuario",
+    "Texto": "Business Name"
+  },
+  {
+    "Id": 369,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_RegistrarUsuario",
+    "Texto": "Registrar"
+  },
+  {
+    "Id": 370,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_RegistrarUsuario",
+    "Texto": "Register"
+  },
+  {
+    "Id": 373,
+    "IdiomaId": 1,
+    "Etiqueta": "error_EmailFormato",
+    "Texto": "El formato del email no es válido."
+  },
+  {
+    "Id": 374,
+    "IdiomaId": 2,
+    "Etiqueta": "error_EmailFormato",
+    "Texto": "The email format is invalid."
+  },
+  {
+    "Id": 377,
+    "IdiomaId": 1,
+    "Etiqueta": "error_PasswordRequisitos",
+    "Texto": "La contraseña debe tener al menos 8 caracteres, una mayúscula, una minúscula y un carácter especial."
+  },
+  {
+    "Id": 378,
+    "IdiomaId": 2,
+    "Etiqueta": "error_PasswordRequisitos",
+    "Texto": "The password must be at least 8 characters long, with an uppercase letter, a lowercase letter, and a special character."
+  },
+  {
+    "Id": 381,
+    "IdiomaId": 1,
+    "Etiqueta": "error_RazonSocialLongitud",
+    "Texto": "La razón social no debe superar los 30 caracteres."
+  },
+  {
+    "Id": 382,
+    "IdiomaId": 2,
+    "Etiqueta": "error_RazonSocialLongitud",
+    "Texto": "The business name must not exceed 30 characters."
+  },
+  {
+    "Id": 385,
+    "IdiomaId": 1,
+    "Etiqueta": "error_CUITFormato",
+    "Texto": "El CUIT debe contener exactamente 11 dígitos."
+  },
+  {
+    "Id": 386,
+    "IdiomaId": 2,
+    "Etiqueta": "error_CUITFormato",
+    "Texto": "The CUIT must contain exactly 11 digits."
+  },
+  {
+    "Id": 387,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_AsignarPatentes",
+    "Texto": "Asignación de Patente a Usuario"
+  },
+  {
+    "Id": 388,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_AsignarPatentes",
+    "Texto": "Assigning Permission to User"
+  },
+  {
+    "Id": 389,
+    "IdiomaId": 1,
+    "Etiqueta": "label_FiltrarUsuario",
+    "Texto": "Filtrar Usuario"
+  },
+  {
+    "Id": 390,
+    "IdiomaId": 2,
+    "Etiqueta": "label_FiltrarUsuario",
+    "Texto": "Filter User"
+  },
+  {
+    "Id": 391,
+    "IdiomaId": 1,
+    "Etiqueta": "placeholder_FiltrarUsuario",
+    "Texto": "Escribe para buscar..."
+  },
+  {
+    "Id": 392,
+    "IdiomaId": 2,
+    "Etiqueta": "placeholder_FiltrarUsuario",
+    "Texto": "Type to search..."
+  },
+  {
+    "Id": 393,
+    "IdiomaId": 1,
+    "Etiqueta": "label_SeleccionarUsuario",
+    "Texto": "Seleccionar Usuario"
+  },
+  {
+    "Id": 394,
+    "IdiomaId": 2,
+    "Etiqueta": "label_SeleccionarUsuario",
+    "Texto": "Select User"
+  },
+  {
+    "Id": 395,
+    "IdiomaId": 1,
+    "Etiqueta": "option_SeleccionarUsuario",
+    "Texto": "Selecciona un usuario"
+  },
+  {
+    "Id": 396,
+    "IdiomaId": 2,
+    "Etiqueta": "option_SeleccionarUsuario",
+    "Texto": "Select a user"
+  },
+  {
+    "Id": 397,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_PatentesAsignadas",
+    "Texto": "Patentes Asignadas"
+  },
+  {
+    "Id": 398,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_PatentesAsignadas",
+    "Texto": "Assigned Permissions"
+  },
+  {
+    "Id": 399,
+    "IdiomaId": 1,
+    "Etiqueta": "table_NombrePatente",
+    "Texto": "Nombre de Patente"
+  },
+  {
+    "Id": 400,
+    "IdiomaId": 2,
+    "Etiqueta": "table_NombrePatente",
+    "Texto": "Permission Name"
+  },
+  {
+    "Id": 401,
+    "IdiomaId": 1,
+    "Etiqueta": "table_DescripcionPatente",
+    "Texto": "Descripción"
+  },
+  {
+    "Id": 402,
+    "IdiomaId": 2,
+    "Etiqueta": "table_DescripcionPatente",
+    "Texto": "Description"
+  },
+  {
+    "Id": 403,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_PatentesDisponibles",
+    "Texto": "Patentes Disponibles"
+  },
+  {
+    "Id": 404,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_PatentesDisponibles",
+    "Texto": "Available Permissions"
+  },
+  {
+    "Id": 405,
+    "IdiomaId": 1,
+    "Etiqueta": "table_SeleccionarPatente",
+    "Texto": "Seleccionar"
+  },
+  {
+    "Id": 406,
+    "IdiomaId": 2,
+    "Etiqueta": "table_SeleccionarPatente",
+    "Texto": "Select"
+  },
+  {
+    "Id": 407,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_AsignarPatentes",
+    "Texto": "Asignar Patentes"
+  },
+  {
+    "Id": 408,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_AsignarPatentes",
+    "Texto": "Assign Permissions"
+  },
+  {
+    "Id": 409,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_AsignarFamilias",
+    "Texto": "Asignación de Familia a Usuario"
+  },
+  {
+    "Id": 410,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_AsignarFamilias",
+    "Texto": "Assigning Family to User"
+  },
+  {
+    "Id": 411,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_FamiliasAsignadas",
+    "Texto": "Familias Asignadas"
+  },
+  {
+    "Id": 412,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_FamiliasAsignadas",
+    "Texto": "Assigned Families"
+  },
+  {
+    "Id": 413,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_FamiliasDisponibles",
+    "Texto": "Familias Disponibles"
+  },
+  {
+    "Id": 414,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_FamiliasDisponibles",
+    "Texto": "Available Families"
+  },
+  {
+    "Id": 415,
+    "IdiomaId": 1,
+    "Etiqueta": "table_NombreFamilia",
+    "Texto": "Nombre de Familia"
+  },
+  {
+    "Id": 416,
+    "IdiomaId": 2,
+    "Etiqueta": "table_NombreFamilia",
+    "Texto": "Family Name"
+  },
+  {
+    "Id": 417,
+    "IdiomaId": 1,
+    "Etiqueta": "table_DescripcionFamilia",
+    "Texto": "Descripción"
+  },
+  {
+    "Id": 418,
+    "IdiomaId": 2,
+    "Etiqueta": "table_DescripcionFamilia",
+    "Texto": "Description"
+  },
+  {
+    "Id": 419,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_AsignarFamilias",
+    "Texto": "Asignar Familias"
+  },
+  {
+    "Id": 420,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_AsignarFamilias",
+    "Texto": "Assign Families"
+  },
+  {
+    "Id": 421,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_DesasignarPatentes",
+    "Texto": "Eliminar Patente a Usuario"
+  },
+  {
+    "Id": 422,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_DesasignarPatentes",
+    "Texto": "Remove Permission from User"
+  },
+  {
+    "Id": 423,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_DesasignarPatentes",
+    "Texto": "Desasignar Patentes"
+  },
+  {
+    "Id": 424,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_DesasignarPatentes",
+    "Texto": "Unassign Permissions"
+  },
+  {
+    "Id": 425,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_DesasignarFamilias",
+    "Texto": "Eliminar Familia a Usuario"
+  },
+  {
+    "Id": 426,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_DesasignarFamilias",
+    "Texto": "Remove Family from User"
+  },
+  {
+    "Id": 427,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_DesasignarFamilias",
+    "Texto": "Desasignar Familias"
+  },
+  {
+    "Id": 428,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_DesasignarFamilias",
+    "Texto": "Unassign Families"
+  },
+  {
+    "Id": 429,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_AdministracionFamilias",
+    "Texto": "Administración de Familias"
+  },
+  {
+    "Id": 430,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_AdministracionFamilias",
+    "Texto": "Family Management"
+  },
+  {
+    "Id": 431,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_ModificarFamilia",
+    "Texto": "Modificar Familia"
+  },
+  {
+    "Id": 432,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_ModificarFamilia",
+    "Texto": "Edit Family"
+  },
+  {
+    "Id": 433,
+    "IdiomaId": 1,
+    "Etiqueta": "label_NombreFamilia",
+    "Texto": "Nombre de la Familia"
+  },
+  {
+    "Id": 434,
+    "IdiomaId": 2,
+    "Etiqueta": "label_NombreFamilia",
+    "Texto": "Family Name"
+  },
+  {
+    "Id": 435,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_PatentesExistentes",
+    "Texto": "Patentes Existentes"
+  },
+  {
+    "Id": 436,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_PatentesExistentes",
+    "Texto": "Existing Permissions"
+  },
+  {
+    "Id": 437,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_AgregarPatente",
+    "Texto": "Agregar Patente"
+  },
+  {
+    "Id": 438,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_AgregarPatente",
+    "Texto": "Add Permission"
+  },
+  {
+    "Id": 439,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_AltaFamilia",
+    "Texto": "Alta de Familia"
+  },
+  {
+    "Id": 440,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_AltaFamilia",
+    "Texto": "Add Family"
+  },
+  {
+    "Id": 441,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_Crear",
+    "Texto": "Crear"
+  },
+  {
+    "Id": 442,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_Crear",
+    "Texto": "Create"
+  },
+  {
+    "Id": 443,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_PatentesAgregadas",
+    "Texto": "Patentes Agregadas"
+  },
+  {
+    "Id": 444,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_PatentesAgregadas",
+    "Texto": "Added Permissions"
+  },
+  {
+    "Id": 445,
+    "IdiomaId": 1,
+    "Etiqueta": "table_Descripcion",
+    "Texto": "Descripción"
+  },
+  {
+    "Id": 446,
+    "IdiomaId": 2,
+    "Etiqueta": "table_Descripcion",
+    "Texto": "Description"
+  },
+  {
+    "Id": 447,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_AdministracionBD",
+    "Texto": "Administración de Base de Datos"
+  },
+  {
+    "Id": 448,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_AdministracionBD",
+    "Texto": "Database Administration"
+  },
+  {
+    "Id": 449,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_GenerarBackup",
+    "Texto": "Generar Backup"
+  },
+  {
+    "Id": 450,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_GenerarBackup",
+    "Texto": "Generate Backup"
+  },
+  {
+    "Id": 451,
+    "IdiomaId": 1,
+    "Etiqueta": "label_RutaBackup",
+    "Texto": "Escriba la ruta para guardar el Backup:"
+  },
+  {
+    "Id": 452,
+    "IdiomaId": 2,
+    "Etiqueta": "label_RutaBackup",
+    "Texto": "Enter the path to save the Backup:"
+  },
+  {
+    "Id": 453,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_GuardarBackup",
+    "Texto": "Guardar Backup"
+  },
+  {
+    "Id": 454,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_GuardarBackup",
+    "Texto": "Save Backup"
+  },
+  {
+    "Id": 455,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_RestaurarBD",
+    "Texto": "Restaurar Base de Datos"
+  },
+  {
+    "Id": 456,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_RestaurarBD",
+    "Texto": "Restore Database"
+  },
+  {
+    "Id": 457,
+    "IdiomaId": 1,
+    "Etiqueta": "label_ArchivoBackup",
+    "Texto": "Seleccione el archivo de Backup:"
+  },
+  {
+    "Id": 458,
+    "IdiomaId": 2,
+    "Etiqueta": "label_ArchivoBackup",
+    "Texto": "Select the Backup file:"
+  },
+  {
+    "Id": 459,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_RestaurarBD",
+    "Texto": "Restaurar Base de Datos"
+  },
+  {
+    "Id": 460,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_RestaurarBD",
+    "Texto": "Restore Database"
+  },
+  {
+    "Id": 461,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_DigitosVerificadores",
+    "Texto": "Dígitos Verificadores"
+  },
+  {
+    "Id": 462,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_DigitosVerificadores",
+    "Texto": "Verification Digits"
+  },
+  {
+    "Id": 463,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_RecalcularDV",
+    "Texto": "Recalcular Dígitos"
+  },
+  {
+    "Id": 464,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_RecalcularDV",
+    "Texto": "Recalculate Digits"
+  },
+  {
+    "Id": 465,
+    "IdiomaId": 2,
+    "Etiqueta": "title_LogConsulta",
+    "Texto": "Log Consultation"
+  },
+  {
+    "Id": 466,
+    "IdiomaId": 2,
+    "Etiqueta": "label_FilterUser",
+    "Texto": "Filter User"
+  },
+  {
+    "Id": 467,
+    "IdiomaId": 2,
+    "Etiqueta": "label_FilterSeverity",
+    "Texto": "Filter by Severity"
+  },
+  {
+    "Id": 468,
+    "IdiomaId": 2,
+    "Etiqueta": "label_From",
+    "Texto": "From"
+  },
+  {
+    "Id": 469,
+    "IdiomaId": 2,
+    "Etiqueta": "label_To",
+    "Texto": "To"
+  },
+  {
+    "Id": 470,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_Filter",
+    "Texto": "Filter"
+  },
+  {
+    "Id": 471,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_ExportToXML",
+    "Texto": "Export to XML"
+  },
+  {
+    "Id": 472,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_ExportToExcel",
+    "Texto": "Export to Excel"
+  },
+  {
+    "Id": 473,
+    "IdiomaId": 2,
+    "Etiqueta": "table_Date",
+    "Texto": "Date"
+  },
+  {
+    "Id": 474,
+    "IdiomaId": 2,
+    "Etiqueta": "table_User",
+    "Texto": "User"
+  },
+  {
+    "Id": 475,
+    "IdiomaId": 2,
+    "Etiqueta": "table_Severity",
+    "Texto": "Severity"
+  },
+  {
+    "Id": 476,
+    "IdiomaId": 2,
+    "Etiqueta": "table_Message",
+    "Texto": "Message"
+  },
+  {
+    "Id": 477,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_Previous",
+    "Texto": "Previous"
+  },
+  {
+    "Id": 478,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_Next",
+    "Texto": "Next"
+  },
+  {
+    "Id": 479,
+    "IdiomaId": 2,
+    "Etiqueta": "label_Page",
+    "Texto": "Page"
+  }
+]

@@ -19,7 +19,7 @@ namespace MidMarket.UI
         protected void ValidatePassword(object source, ServerValidateEventArgs args)
         {
             string password = args.Value;
-            string pattern = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$"; // Mínimo 8 caracteres, 1 mayúscula, 1 minúscula, 1 número y 1 especial
+            string pattern = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$";
             args.IsValid = Regex.IsMatch(password, pattern);
         }
 

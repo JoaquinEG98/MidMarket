@@ -1,35 +1,75 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
 using MidMarket.Entities.Composite;
+using MidMarket.Entities.Observer;
+using MidMarket.UI.Helpers;
 using System;
 using System.Linq;
 using Unity;
 
 namespace MidMarket.UI
 {
-    public partial class Navbar : System.Web.UI.UserControl
+    public partial class Navbar : System.Web.UI.UserControl, IObserver
     {
         private readonly ISessionManager _sessionManager;
+        private readonly ITraduccionService _traduccionService;
 
         public Navbar()
         {
             _sessionManager = Global.Container.Resolve<ISessionManager>();
+            _traduccionService = Global.Container.Resolve<ITraduccionService>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
             Cliente cliente = _sessionManager.Get<Cliente>("Usuario");
 
-            OcultarMenu();
-            AsignarMenuPermisos(cliente);
-
-            var esAdmin = cliente.Permisos.Any(permiso => permiso.Nombre == "Webmaster" || permiso.Nombre == "Administrador Financiero");
-            if (esAdmin)
+            if (!_sessionManager.IsObserverSubscribed())
             {
-                carritoDropdown.Visible = false;
-                misTransaccionesDropdown.Visible = false;
-                menuPrincipalDropdown.Visible = false;
+                cliente.SuscribirObservador(this);
+                _sessionManager.ObserverSubscribe();
             }
+
+            if (!IsPostBack)
+            {
+                OcultarMenu();
+                AsignarMenuPermisos(cliente);
+
+                var idiomas = _traduccionService.ObtenerIdiomas();
+                idiomaRepeater.DataSource = idiomas;
+                idiomaRepeater.DataBind();
+
+                var esAdmin = cliente.Permisos.Any(permiso => permiso.Nombre == "Webmaster" || permiso.Nombre == "Administrador Financiero");
+                if (esAdmin)
+                {
+                    carritoDropdown.Visible = false;
+                    misTransaccionesDropdown.Visible = false;
+                    menuPrincipalDropdown.Visible = false;
+                }
+            }
+            else
+            {
+                string eventTarget = Request["__EVENTTARGET"];
+                string eventArgument = Request["__EVENTARGUMENT"];
+
+                if (eventTarget == "ChangeLanguage" && int.TryParse(eventArgument, out int idiomaId))
+                {
+                    var idioma = _traduccionService.ObtenerIdiomas().Where(x => x.Id == idiomaId).FirstOrDefault();
+                    _sessionManager.Set("Idioma", idioma);
+                    cliente.CambiarIdioma(idioma);
+                    VerificarIdioma(cliente);
+                }
+            }
+
+            VerificarIdioma(cliente);
+        }
+
+        private void VerificarIdioma(Cliente cliente)
+        {
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
+            cliente.CambiarIdioma(idioma);
+            UpdateLanguage(idioma);
         }
 
         private void OcultarMenu()
@@ -42,8 +82,6 @@ namespace MidMarket.UI
             administracionBD.Visible = false;
             bitacora.Visible = false;
             transaccionesDropdown.Visible = false;
-            //carritoDropdown.Visible = false;
-            //misTransaccionesDropdown.Visible = false;
             portafolioDrowndown.Visible = false;
 
             comprarAccionLink.Visible = false;
@@ -178,6 +216,12 @@ namespace MidMarket.UI
                     portafolioDrowndown.Visible = true;
                     break;
             }
+        }
+
+        public void UpdateLanguage(IIdioma idioma)
+        {
+            var traducciones = _traduccionService.ObtenerTraducciones(idioma);
+            ScriptHelper.TraducirPagina(this.Page, traducciones, _sessionManager);
         }
     }
 }

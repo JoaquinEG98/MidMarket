@@ -2,15 +2,15 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container-bonos">
-        <h2>Administración de Bonos</h2>
+        <h2 data-etiqueta="titulo_AdministracionBonos">Administración de Bonos</h2>
 
         <table id="tablaBonos">
             <thead>
                 <tr>
-                    <th>Seleccionar</th>
-                    <th>Nombre de Bono</th>
-                    <th>Valor Nominal</th>
-                    <th>Tasa de Interés</th>
+                    <th data-etiqueta="table_Seleccionar">Seleccionar</th>
+                    <th data-etiqueta="table_NombreBono">Nombre de Bono</th>
+                    <th data-etiqueta="table_ValorNominal">Valor Nominal</th>
+                    <th data-etiqueta="table_TasaInteres">Tasa de Interés</th>
                 </tr>
             </thead>
             <tbody>
@@ -30,9 +30,9 @@
         </table>
 
         <div class="button-group">
-            <button type="button" class="submit-btn-bonos" onclick="eliminarBono()">Baja</button>
-            <button type="button" class="submit-btn-bonos" onclick="modificarBono()">Modificar</button>
-            <button type="button" class="submit-btn-bonos" onclick="agregarBono()">Alta</button>
+            <button type="button" class="submit-btn-bonos" onclick="eliminarBono()" data-etiqueta="btn_BajaBono">Baja</button>
+            <button type="button" class="submit-btn-bonos" onclick="modificarBono()" data-etiqueta="btn_ModificarBono">Modificar</button>
+            <button type="button" class="submit-btn-bonos" onclick="agregarBono()" data-etiqueta="btn_AltaBono">Alta</button>
         </div>
     </div>
 
@@ -43,7 +43,7 @@
                 const idBono = seleccionado.nextElementSibling.value;
                 window.location.href = `ModificarBono.aspx?id=${idBono}`;
             } else {
-                alert("Por favor, selecciona un bono para modificar.");
+                alert(traducciones["alert_SeleccionarBono"]);
             }
         }
 
@@ -51,12 +51,12 @@
             const seleccionado = document.querySelector('input[name="selectBono"]:checked');
             if (seleccionado) {
                 const nombreBono = seleccionado.parentElement.nextElementSibling.textContent;
-                const confirmar = confirm(`¿Estás seguro de eliminar el bono "${nombreBono}"?`);
+                const confirmar = confirm(traducciones["confirm_EliminarBono"].replace("{NombreBono}", nombreBono));
                 if (confirmar) {
-                    alert(`El bono "${nombreBono}" ha sido eliminado.`);
+                    alert(traducciones["alert_BonoEliminado"].replace("{NombreBono}", nombreBono));
                 }
             } else {
-                alert("Por favor, selecciona un bono para eliminar.");
+                alert(traducciones["alert_SeleccionarBono"]);
             }
         }
 

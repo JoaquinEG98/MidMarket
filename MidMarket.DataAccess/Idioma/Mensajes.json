@@ -1,0 +1,686 @@
+[
+  {
+    "Id": 1,
+    "IdiomaId": 1,
+    "Etiqueta": "ERR_01",
+    "Texto": "[ERR-001]: Inconsistencia en los datos ingresados en los campos"
+  },
+  {
+    "Id": 2,
+    "IdiomaId": 2,
+    "Etiqueta": "ERR_01",
+    "Texto": "[ERR-001]: Data inconsistency in entered fields"
+  },
+  {
+    "Id": 3,
+    "IdiomaId": 1,
+    "Etiqueta": "ERR_02",
+    "Texto": "[ERR-002]: Campos obligatorios incompletos"
+  },
+  {
+    "Id": 4,
+    "IdiomaId": 2,
+    "Etiqueta": "ERR_02",
+    "Texto": "[ERR-002]: Required fields are incomplete"
+  },
+  {
+    "Id": 5,
+    "IdiomaId": 1,
+    "Etiqueta": "ERR_03",
+    "Texto": "[ERR-003]: No se puede establecer conexión a la base de datos"
+  },
+  {
+    "Id": 6,
+    "IdiomaId": 2,
+    "Etiqueta": "ERR_03",
+    "Texto": "[ERR-003]: Cannot establish database connection"
+  },
+  {
+    "Id": 7,
+    "IdiomaId": 1,
+    "Etiqueta": "ERR_04",
+    "Texto": "[ERR-004]: La cantidad no puede ser mayor a la disponible"
+  },
+  {
+    "Id": 8,
+    "IdiomaId": 2,
+    "Etiqueta": "ERR_04",
+    "Texto": "[ERR-004]: Quantity cannot exceed available amount"
+  },
+  {
+    "Id": 9,
+    "IdiomaId": 1,
+    "Etiqueta": "ERR_05",
+    "Texto": "[ERR-005]: El usuario y/o contraseña no contienen datos"
+  },
+  {
+    "Id": 10,
+    "IdiomaId": 2,
+    "Etiqueta": "ERR_05",
+    "Texto": "[ERR-005]: Username and/or password are empty"
+  },
+  {
+    "Id": 11,
+    "IdiomaId": 1,
+    "Etiqueta": "ERR_06",
+    "Texto": "[ERR-006]: La contraseña no posee el formato correcto"
+  },
+  {
+    "Id": 12,
+    "IdiomaId": 2,
+    "Etiqueta": "ERR_06",
+    "Texto": "[ERR-006]: Password format is incorrect"
+  },
+  {
+    "Id": 13,
+    "IdiomaId": 1,
+    "Etiqueta": "ERR_07",
+    "Texto": "[ERR-007]: Usuario o contraseña incorrecto"
+  },
+  {
+    "Id": 14,
+    "IdiomaId": 2,
+    "Etiqueta": "ERR_07",
+    "Texto": "[ERR-007]: Incorrect username or password"
+  },
+  {
+    "Id": 15,
+    "IdiomaId": 1,
+    "Etiqueta": "ERR_08",
+    "Texto": "[ERR-008]: El usuario se encuentra bloqueado. Contáctese con el administrador"
+  },
+  {
+    "Id": 16,
+    "IdiomaId": 2,
+    "Etiqueta": "ERR_08",
+    "Texto": "[ERR-008]: User is locked. Please contact the administrator"
+  },
+  {
+    "Id": 17,
+    "IdiomaId": 1,
+    "Etiqueta": "ERR_09",
+    "Texto": "[ERR-009]: El usuario no existe en la base de datos"
+  },
+  {
+    "Id": 18,
+    "IdiomaId": 2,
+    "Etiqueta": "ERR_09",
+    "Texto": "[ERR-009]: User does not exist in the database"
+  },
+  {
+    "Id": 19,
+    "IdiomaId": 1,
+    "Etiqueta": "ERR_10",
+    "Texto": "[ERR-010]: Problema al enviar el mail"
+  },
+  {
+    "Id": 20,
+    "IdiomaId": 2,
+    "Etiqueta": "ERR_10",
+    "Texto": "[ERR-010]: Problem sending the email"
+  },
+  {
+    "Id": 21,
+    "IdiomaId": 1,
+    "Etiqueta": "ERR_11",
+    "Texto": "[ERR-011]: El usuario ya está registrado"
+  },
+  {
+    "Id": 22,
+    "IdiomaId": 2,
+    "Etiqueta": "ERR_11",
+    "Texto": "[ERR-011]: User is already registered"
+  },
+  {
+    "Id": 23,
+    "IdiomaId": 1,
+    "Etiqueta": "ERR_12",
+    "Texto": "[ERR-012]: El usuario se encuentra bloqueado"
+  },
+  {
+    "Id": 24,
+    "IdiomaId": 2,
+    "Etiqueta": "ERR_12",
+    "Texto": "[ERR-012]: User is locked"
+  },
+  {
+    "Id": 25,
+    "IdiomaId": 1,
+    "Etiqueta": "ERR_13",
+    "Texto": "[ERR-013]: Nombre de familia ya existente"
+  },
+  {
+    "Id": 26,
+    "IdiomaId": 2,
+    "Etiqueta": "ERR_13",
+    "Texto": "[ERR-013]: Family name already exists"
+  },
+  {
+    "Id": 27,
+    "IdiomaId": 1,
+    "Etiqueta": "ERR_14",
+    "Texto": "[ERR-014]: Error al generar copia de seguridad"
+  },
+  {
+    "Id": 28,
+    "IdiomaId": 2,
+    "Etiqueta": "ERR_14",
+    "Texto": "[ERR-014]: Error generating backup"
+  },
+  {
+    "Id": 29,
+    "IdiomaId": 1,
+    "Etiqueta": "ERR_15",
+    "Texto": "[ERR-015]: Error al querer restaurar una copia de seguridad"
+  },
+  {
+    "Id": 30,
+    "IdiomaId": 2,
+    "Etiqueta": "ERR_15",
+    "Texto": "[ERR-015]: Error restoring backup"
+  },
+  {
+    "Id": 31,
+    "IdiomaId": 1,
+    "Etiqueta": "ERR_16",
+    "Texto": "[ERR-016]: Error de integridad en la base de datos"
+  },
+  {
+    "Id": 32,
+    "IdiomaId": 2,
+    "Etiqueta": "ERR_16",
+    "Texto": "[ERR-016]: Database integrity error"
+  },
+  {
+    "Id": 33,
+    "IdiomaId": 1,
+    "Etiqueta": "ERR_17",
+    "Texto": "[ERR-017]: Error en la compra de Activo"
+  },
+  {
+    "Id": 34,
+    "IdiomaId": 2,
+    "Etiqueta": "ERR_17",
+    "Texto": "[ERR-017]: Error in asset purchase"
+  },
+  {
+    "Id": 35,
+    "IdiomaId": 1,
+    "Etiqueta": "ERR_18",
+    "Texto": "[ERR-018]: Saldo insuficiente para la Compra"
+  },
+  {
+    "Id": 36,
+    "IdiomaId": 2,
+    "Etiqueta": "ERR_18",
+    "Texto": "[ERR-018]: Insufficient balance for purchase"
+  },
+  {
+    "Id": 37,
+    "IdiomaId": 1,
+    "Etiqueta": "ERR_19",
+    "Texto": "[ERR-019]: Error al canjear Recompensa"
+  },
+  {
+    "Id": 38,
+    "IdiomaId": 2,
+    "Etiqueta": "ERR_19",
+    "Texto": "[ERR-019]: Error redeeming reward"
+  },
+  {
+    "Id": 39,
+    "IdiomaId": 1,
+    "Etiqueta": "ERR_20",
+    "Texto": "[ERR-020]: La fecha desde no puede ser mayor que la fecha hasta"
+  },
+  {
+    "Id": 40,
+    "IdiomaId": 2,
+    "Etiqueta": "ERR_20",
+    "Texto": "[ERR-020]: Start date cannot be greater than end date"
+  },
+  {
+    "Id": 41,
+    "IdiomaId": 1,
+    "Etiqueta": "ERR_21",
+    "Texto": "[ERR-021]: El numero de la tarjeta de crédito o débito es inválida"
+  },
+  {
+    "Id": 42,
+    "IdiomaId": 2,
+    "Etiqueta": "ERR_21",
+    "Texto": "[ERR-021]: Credit or debit card number is invalid"
+  },
+  {
+    "Id": 43,
+    "IdiomaId": 1,
+    "Etiqueta": "ERR_22",
+    "Texto": "[ERR-022]: El formato de DNI es inválido"
+  },
+  {
+    "Id": 44,
+    "IdiomaId": 2,
+    "Etiqueta": "ERR_22",
+    "Texto": "[ERR-022]: ID format is invalid"
+  },
+  {
+    "Id": 45,
+    "IdiomaId": 1,
+    "Etiqueta": "ERR_23",
+    "Texto": "[ERR-023]: La fecha de vencimiento de la tarjeta es inválida"
+  },
+  {
+    "Id": 46,
+    "IdiomaId": 2,
+    "Etiqueta": "ERR_23",
+    "Texto": "[ERR-023]: Card expiration date is invalid"
+  },
+  {
+    "Id": 47,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_01",
+    "Texto": "Debe seleccionar una ruta válida para guardar el backup."
+  },
+  {
+    "Id": 48,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_01",
+    "Texto": "You must select a valid path to save the backup."
+  },
+  {
+    "Id": 49,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_02",
+    "Texto": "Backup realizado con éxito"
+  },
+  {
+    "Id": 50,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_02",
+    "Texto": "Backup performed successfully"
+  },
+  {
+    "Id": 51,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_03",
+    "Texto": "Debe seleccionar un archivo de backup."
+  },
+  {
+    "Id": 52,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_03",
+    "Texto": "You must select a backup file."
+  },
+  {
+    "Id": 53,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_04",
+    "Texto": "Restauración realizada con éxito."
+  },
+  {
+    "Id": 54,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_04",
+    "Texto": "Restoration made successfully."
+  },
+  {
+    "Id": 55,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_05",
+    "Texto": "Digitos verificadores recalculados con éxito"
+  },
+  {
+    "Id": 56,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_05",
+    "Texto": "Verifier digits successfully recalculated"
+  },
+  {
+    "Id": 57,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_06",
+    "Texto": "Acción dada de alta correctamente"
+  },
+  {
+    "Id": 58,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_06",
+    "Texto": "Stock created successfully"
+  },
+  {
+    "Id": 59,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_07",
+    "Texto": "Bono dado de alta correctamente."
+  },
+  {
+    "Id": 60,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_07",
+    "Texto": "Bond created successfully"
+  },
+  {
+    "Id": 61,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_08",
+    "Texto": "Familia creada correctamente"
+  },
+  {
+    "Id": 62,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_08",
+    "Texto": "Family created successfully"
+  },
+  {
+    "Id": 63,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_09",
+    "Texto": "Error al crear familia:"
+  },
+  {
+    "Id": 64,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_09",
+    "Texto": "Error creating family:"
+  },
+  {
+    "Id": 65,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_10",
+    "Texto": "Usuario creado con éxito"
+  },
+  {
+    "Id": 66,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_10",
+    "Texto": "User created succesfully"
+  },
+  {
+    "Id": 67,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_11",
+    "Texto": "Familia asignada correctamente"
+  },
+  {
+    "Id": 68,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_11",
+    "Texto": "Successfully assigned family"
+  },
+  {
+    "Id": 69,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_12",
+    "Texto": "Patentes asignadas correctamente"
+  },
+  {
+    "Id": 70,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_12",
+    "Texto": "Roles assigned successfully"
+  },
+  {
+    "Id": 71,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_13",
+    "Texto": "Bitácora exportada a XML correctamente"
+  },
+  {
+    "Id": 72,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_13",
+    "Texto": "Logs exported to XML successfully"
+  },
+  {
+    "Id": 73,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_14",
+    "Texto": "Bitácora exportada a Excel correctamente"
+  },
+  {
+    "Id": 74,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_14",
+    "Texto": "Logs exported to Excel successfully"
+  },
+  {
+    "Id": 75,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_15",
+    "Texto": "Contraseña cambiada con éxito"
+  },
+  {
+    "Id": 76,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_15",
+    "Texto": "Password changed successfully"
+  },
+  {
+    "Id": 77,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_16",
+    "Texto": "Saldo cagado correctamente"
+  },
+  {
+    "Id": 78,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_16",
+    "Texto": "Correctly loaded balance"
+  },
+  {
+    "Id": 79,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_17",
+    "Texto": "El carrito está vacío, no podés realizar la compra"
+  },
+  {
+    "Id": 80,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_17",
+    "Texto": "The cart is empty, you cannot make the purchase"
+  },
+  {
+    "Id": 81,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_18",
+    "Texto": "Compra realizada con éxito"
+  },
+  {
+    "Id": 82,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_18",
+    "Texto": "Purchase made successfully"
+  },
+  {
+    "Id": 83,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_19",
+    "Texto": "Se agregó al carrito la Acción:"
+  },
+  {
+    "Id": 84,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_19",
+    "Texto": "Stock added to cart:"
+  },
+  {
+    "Id": 85,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_20",
+    "Texto": "Se agregó al carrito el Bono:"
+  },
+  {
+    "Id": 86,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_20",
+    "Texto": "Bond added to cart:"
+  },
+  {
+    "Id": 87,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_21",
+    "Texto": "Familias desasignadas correctamente"
+  },
+  {
+    "Id": 88,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_21",
+    "Texto": "Successfully reassigned families"
+  },
+  {
+    "Id": 89,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_22",
+    "Texto": "Patentes desasignadas correctamente"
+  },
+  {
+    "Id": 90,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_22",
+    "Texto": "Successfully reassigned roles"
+  },
+  {
+    "Id": 91,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_23",
+    "Texto": "Error al cargar la página. Será redirigido al inicio."
+  },
+  {
+    "Id": 92,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_23",
+    "Texto": "Error loading page. You will be redirected to the home."
+  },
+  {
+    "Id": 93,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_24",
+    "Texto": "Inconsistencia en los digitos verificadores, por favor revise en la sección de Administración de Base de Datos."
+  },
+  {
+    "Id": 94,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_24",
+    "Texto": "Inconsistency in the verification digits, please check the Database Administration section."
+  },
+  {
+    "Id": 95,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_25",
+    "Texto": "Modificada correctamente la Acción:"
+  },
+  {
+    "Id": 96,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_25",
+    "Texto": "Modified successfully Stock:"
+  },
+  {
+    "Id": 97,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_26",
+    "Texto": "No se pudo cargar la acción para guardar los cambios."
+  },
+  {
+    "Id": 98,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_26",
+    "Texto": "The Stock to save changes could not be loaded."
+  },
+  {
+    "Id": 99,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_27",
+    "Texto": "Modificado correctamente el Bono:"
+  },
+  {
+    "Id": 100,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_27",
+    "Texto": "Modified successfully Bond:"
+  },
+  {
+    "Id": 101,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_28",
+    "Texto": "No se pudo cargar el bono para guardar los cambios."
+  },
+  {
+    "Id": 102,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_28",
+    "Texto": "Could not load Bond to save changes."
+  },
+  {
+    "Id": 103,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_29",
+    "Texto": "Modificada correctamente la familia:"
+  },
+  {
+    "Id": 104,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_29",
+    "Texto": "Modified successfully the family:"
+  },
+  {
+    "Id": 105,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_30",
+    "Texto": "Error al querer modificar la familia:"
+  },
+  {
+    "Id": 106,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_30",
+    "Texto": "Error trying to modify family:"
+  },
+  {
+    "Id": 107,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_31",
+    "Texto": "Modificado correctamente el usuario:"
+  },
+  {
+    "Id": 108,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_31",
+    "Texto": "Modified successfully user:"
+  },
+  {
+    "Id": 109,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_32",
+    "Texto": "Venta realizada con éxito"
+  },
+  {
+    "Id": 110,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_32",
+    "Texto": "Sale made successfully"
+  },
+  {
+    "Id": 111,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_33",
+    "Texto": "La contraseña actual no coindice con la proporcionada."
+  },
+  {
+    "Id": 112,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_33",
+    "Texto": "The current password does not match the one provided."
+  },
+  {
+    "Id": 113,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_34",
+    "Texto": "La confirmación de la nueva contraseña son distintas."
+  },
+  {
+    "Id": 114,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_34",
+    "Texto": "Confirmation of the new password are different."
+  }
+]

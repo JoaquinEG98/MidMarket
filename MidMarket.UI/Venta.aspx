@@ -4,13 +4,13 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container-ventas">
-        <h2 class="ventas-title">Ventas</h2>
+        <h2 class="ventas-title" data-etiqueta="titulo_Ventas">Ventas</h2>
 
         <asp:Literal ID="ltlVentasVacias" runat="server" Visible="false">
             <div class="mensaje-ventas-vacio">
                 <img src="images/carritovacio.png" alt="Ventas vacías" class="img-ventas-vacio" />
-                <p>No tenés ventas registradas.</p>
-                <p>Comenzá a invertir ahora mismo en la sección <a href="Compra.aspx" class="link-compra-activos">Compra de Activos</a></p>
+                <p data-etiqueta="mensaje_VentasVacias">No tenés ventas registradas.</p>
+                <p data-etiqueta="mensaje_ComenzaInvertir">Comenzá a invertir ahora mismo en la sección <a href="Compra.aspx" class="link-compra-activos" data-etiqueta="link_CompraActivosVentas">Compra de Activos</a></p>
             </div>
         </asp:Literal>
 
@@ -20,13 +20,13 @@
                     <table id="tablaVentas">
                         <thead>
                             <tr>
-                                <th>Activo</th>
-                                <th>Cantidad</th>
-                                <th>Último Precio</th>
-                                <th>Valor Nominal</th>
-                                <th>Rendimiento</th>
-                                <th>Cantidad a Vender</th>
-                                <th>Acción</th>
+                                <th data-etiqueta="table_Activo">Activo</th>
+                                <th data-etiqueta="table_Cantidad">Cantidad</th>
+                                <th data-etiqueta="table_UltimoPrecio">Último Precio</th>
+                                <th data-etiqueta="table_ValorNominal">Valor Nominal</th>
+                                <th data-etiqueta="table_Rendimiento">Rendimiento</th>
+                                <th data-etiqueta="table_CantidadVender">Cantidad a Vender</th>
+                                <th data-etiqueta="table_Accion">Acción</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -50,9 +50,9 @@
 
                                 <td>
                                     <div class="cantidad-container">
-                                        <asp:Button ID="btnDecrease" runat="server" Text="-" CssClass="cantidad-boton" OnClientClick="return cambiarCantidad(this, -1);" />
+                                        <asp:Button ID="btnDecrease" runat="server" Text="-" CssClass="cantidad-boton" OnClientClick="return cambiarCantidad(this, -1);" data-etiqueta="btn_Decrease" />
                                         <asp:TextBox ID="cantidadInput" runat="server" Text="1" CssClass="cantidad-input" />
-                                        <asp:Button ID="btnIncrease" runat="server" Text="+" CssClass="cantidad-boton" OnClientClick="return cambiarCantidad(this, 1);" />
+                                        <asp:Button ID="btnIncrease" runat="server" Text="+" CssClass="cantidad-boton" OnClientClick="return cambiarCantidad(this, 1);" data-etiqueta="btn_Increase" />
                                     </div>
                                 </td>
                                 <td>
@@ -62,6 +62,7 @@
                                         CommandArgument='<%# Eval("Activo.Id") %>'
                                         Text="Vender"
                                         OnClick="VenderActivo_Click"
+                                        data-etiqueta="btn_Vender"
                                         data-max='<%# Eval("Cantidad") %>' />
                                 </td>
                             </tr>
@@ -76,7 +77,6 @@
         </div>
     </div>
 
-    <!-- Script para manejar el cambio de cantidad -->
     <script type="text/javascript">
         function cambiarCantidad(button, cambio) {
             const cantidadInput = button.closest('td').querySelector('.cantidad-input');

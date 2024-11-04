@@ -1,5 +1,6 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
+using MidMarket.Entities.Observer;
 using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
 using System;
@@ -12,6 +13,7 @@ namespace MidMarket.UI
     {
         private readonly IActivoService _activoService;
         private readonly ISessionManager _sessionManager;
+        private readonly ITraduccionService _traduccionService;
 
         public Accion Accion { get; set; }
         private int _accionId;
@@ -20,6 +22,7 @@ namespace MidMarket.UI
         {
             _activoService = Global.Container.Resolve<IActivoService>();
             _sessionManager = Global.Container.Resolve<ISessionManager>();
+            _traduccionService = Global.Container.Resolve<ITraduccionService>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -39,7 +42,7 @@ namespace MidMarket.UI
                 }
                 catch (Exception ex)
                 {
-                    AlertHelper.MostrarModal(this, $"Error al cargar la página: {ex.Message}");
+                    AlertHelper.MostrarModal(this, $"{ex.Message}");
                     Response.Redirect("AdministrarAcciones.aspx");
                 }
             }
@@ -54,6 +57,8 @@ namespace MidMarket.UI
             if (!Page.IsValid)
                 return;
 
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             try
             {
                 string nombreAccion = ValidarAcciones.Nombre;
@@ -62,11 +67,11 @@ namespace MidMarket.UI
 
                 GuardarAccion(nombreAccion, simboloAccion, precioAccion);
 
-                AlertHelper.MostrarModal(this, $"Acción {nombreAccion} modificada correctamente.");
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_25")} {nombreAccion}");
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarModal(this, $"Error al modificar la acción: {ex.Message}");
+                AlertHelper.MostrarModal(this, $"{ex.Message}");
             }
         }
 
@@ -74,9 +79,11 @@ namespace MidMarket.UI
         {
             var accion = _activoService.GetAcciones().FirstOrDefault(x => x.Id == _accionId);
 
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             if (accion == null)
             {
-                AlertHelper.MostrarModal(this, "No se pudo cargar la acción para guardar los cambios.");
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_26")}");
                 return;
             }
 
@@ -93,7 +100,6 @@ namespace MidMarket.UI
 
             if (Accion == null)
             {
-                AlertHelper.MostrarModal(this, "Acción no encontrada.");
                 Response.Redirect("AdministrarAcciones.aspx");
                 return;
             }

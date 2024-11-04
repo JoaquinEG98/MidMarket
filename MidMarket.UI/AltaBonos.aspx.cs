@@ -1,5 +1,6 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
+using MidMarket.Entities.Observer;
 using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
 using System;
@@ -11,11 +12,13 @@ namespace MidMarket.UI
     {
         private readonly IActivoService _activoService;
         private readonly ISessionManager _sessionManager;
+        private readonly ITraduccionService _traduccionService;
 
         public AltaBonos()
         {
             _activoService = Global.Container.Resolve<IActivoService>();
             _sessionManager = Global.Container.Resolve<ISessionManager>();
+            _traduccionService = Global.Container.Resolve<ITraduccionService>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -33,6 +36,8 @@ namespace MidMarket.UI
 
             try
             {
+                var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
                 Bono bono = new Bono
                 {
                     Nombre = ValidarBonos.Nombre,
@@ -41,12 +46,12 @@ namespace MidMarket.UI
                 };
                 _activoService.AltaBono(bono);
 
-                AlertHelper.MostrarModal(this, $"Bono {bono.Nombre} dado de alta correctamente.");
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_07")}");
                 ValidarBonos.LimpiarCampos();
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarModal(this, $"Error al dar de alta la Acción: {ex.Message}.");
+                AlertHelper.MostrarModal(this, $"{ex.Message}.");
             }
         }
     }

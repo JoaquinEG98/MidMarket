@@ -3,17 +3,17 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="desasignar-familias-container" class="container">
         <form method="post">
-            <h2>Eliminar Familia a Usuario</h2>
+            <h2 data-etiqueta="titulo_DesasignarFamilias">Eliminar Familia a Usuario</h2>
 
             <div class="form-group">
-                <label for="filtroUsuario">Filtrar Usuario:</label>
-                <input type="text" id="filtroUsuario" name="filtroUsuario" value="<%= ViewState["FiltroUsuario"] ?? "" %>" oninput="filtrarUsuarios()" placeholder="Escribe para buscar...">
+                <label for="filtroUsuario" data-etiqueta="label_FiltrarUsuario">Filtrar Usuario:</label>
+                <input type="text" id="filtroUsuario" name="filtroUsuario" value="<%= ViewState["FiltroUsuario"] ?? "" %>" oninput="filtrarUsuarios()" placeholder="Escribe para buscar..." data-etiqueta="placeholder_FiltrarUsuario">
             </div>
 
             <div class="form-group">
-                <label for="selectUsuario">Seleccionar Usuario:</label>
+                <label for="selectUsuario" data-etiqueta="label_SeleccionarUsuario">Seleccionar Usuario:</label>
                 <select id="selectUsuario" name="usuarioSeleccionado" onchange="this.form.submit()">
-                    <option value="">Selecciona un usuario</option>
+                    <option value="" data-etiqueta="option_SeleccionaUsuario">Selecciona un usuario</option>
                     <% foreach (var cliente in Clientes)
                         { %>
                     <option value="<%= cliente.Id %>" <%= cliente.Id == UsuarioSeleccionadoId ? "selected" : "" %>>
@@ -23,13 +23,13 @@
                 </select>
             </div>
 
-            <h3>Familias Asignadas</h3>
+            <h3 data-etiqueta="titulo_FamiliasAsignadas">Familias Asignadas</h3>
             <table id="tablaFamiliasAsignadas">
                 <thead>
                     <tr>
-                        <th>Seleccionar</th>
-                        <th>Nombre de Familia</th>
-                        <th>Descripción</th>
+                        <th data-etiqueta="table_Seleccionar">Seleccionar</th>
+                        <th data-etiqueta="table_NombreFamilia">Nombre de Familia</th>
+                        <th data-etiqueta="table_DescripcionFamilia">Descripción</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -48,7 +48,7 @@
 
             <input type="hidden" id="familiasSeleccionadas" name="familiasSeleccionadas">
 
-            <asp:Button ID="btnEliminar" runat="server" Text="Desasignar Familias" OnClientClick="return prepararEnvio();" OnClick="btnEliminar_Click" CssClass="submit-btn" />
+            <asp:Button ID="btnEliminar" runat="server" Text="Desasignar Familias" OnClientClick="return prepararEnvio();" OnClick="btnEliminar_Click" CssClass="submit-btn" data-etiqueta="btn_DesasignarFamilias" />
         </form>
     </div>
 

@@ -3,20 +3,20 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="alta-familia-container" class="container">
         <form class="registro-form" method="post">
-            <h2>Alta de Familia</h2>
+            <h2 data-etiqueta="titulo_AltaFamilia">Alta de Familia</h2>
 
             <div class="form-group">
-                <h3>Nombre de Familia</h3>
+                <h3 data-etiqueta="label_NombreFamilia">Nombre de Familia</h3>
                 <input type="text" id="nombreFamilia" name="nombreFamilia" required>
             </div>
 
-            <h3>Patentes Existentes</h3>
+            <h3 data-etiqueta="titulo_PatentesExistentes">Patentes Existentes</h3>
             <table id="tablaExistentes">
                 <thead>
                     <tr>
-                        <th>Seleccionar</th>
-                        <th>Nombre de Patente</th>
-                        <th>Descripción</th>
+                        <th data-etiqueta="table_Seleccionar">Seleccionar</th>
+                        <th data-etiqueta="table_NombreFamilia">Nombre de Patente</th>
+                        <th data-etiqueta="table_Descripcion">Descripción</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -33,14 +33,14 @@
                 </tbody>
             </table>
 
-            <button type="button" class="submit-btn" onclick="agregarPatente()">Agregar Patente</button>
+            <button type="button" class="submit-btn" onclick="agregarPatente()" data-etiqueta="btn_AgregarPatente">Agregar Patente</button>
 
-            <h3>Patentes Agregadas</h3>
+            <h3 data-etiqueta="titulo_PatentesAgregadas">Patentes Agregadas</h3>
             <table id="tablaAgregadas">
                 <thead>
                     <tr>
-                        <th>Nombre de Patente</th>
-                        <th>Descripción</th>
+                        <th data-etiqueta="table_NombreFamilia">Nombre de Patente</th>
+                        <th data-etiqueta="table_Descripcion">Descripción</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -49,7 +49,7 @@
 
             <input type="hidden" id="patentesSeleccionadas" name="patentesSeleccionadas">
 
-            <asp:Button ID="btnCrear" runat="server" Text="Crear" OnClientClick="return prepararEnvio();" OnClick="btnCrear_Click" CssClass="submit-btn" />
+            <asp:Button ID="btnCrear" runat="server" Text="Crear" OnClientClick="return prepararEnvio();" OnClick="btnCrear_Click" CssClass="submit-btn" data-etiqueta="btn_Crear"/>
         </form>
     </div>
 

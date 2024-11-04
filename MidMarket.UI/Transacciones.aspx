@@ -3,14 +3,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container-transacciones">
         <div id="divCompras" runat="server">
-            <h2>Mis Compras</h2>
+            <h2 data-etiqueta="texto_MisCompras">Mis Compras</h2>
             <table id="tablaCompras">
                 <thead>
                     <tr>
-                        <th>Número</th>
-                        <th>Fecha</th>
-                        <th>Total</th>
-                        <th>Acción</th>
+                        <th data-etiqueta="table_Numero">Número</th>
+                        <th data-etiqueta="table_Fecha">Fecha</th>
+                        <th data-etiqueta="table_Total">Total</th>
+                        <th data-etiqueta="table_Accion">Acción</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -20,8 +20,8 @@
                         <td><%= compra.Fecha.ToString("dd/MM/yyyy HH:mm:ss") %></td>
                         <td>$<%= compra.Total.ToString("N2") %></td>
                         <td>
-                            <button type="button" class="submit-btn-transacciones ver-detalle-btn" onclick="abrirModalDetalleCompra('<%= compra.Id %>', '<%= compra.Fecha.ToString("dd/MM/yyyy HH:mm:ss") %>')">Ver Factura</button>
-                            <button type="button" class="submit-btn-transacciones descargar-btn" onclick="window.location.href='<%= ResolveUrl("~/Transacciones.aspx?descargarfacturacompra=" + compra.Id) %>'">Descargar</button>
+                            <button type="button" class="submit-btn-transacciones ver-detalle-btn" data-etiqueta="btn_VerFactura" onclick="abrirModalDetalleCompra('<%= compra.Id %>', '<%= compra.Fecha.ToString("dd/MM/yyyy HH:mm:ss") %>')">Ver Factura</button>
+                            <button type="button" class="submit-btn-transacciones descargar-btn" data-etiqueta="btn_Descargar" onclick="window.location.href='<%= ResolveUrl("~/Transacciones.aspx?descargarfacturacompra=" + compra.Id) %>'">Descargar</button>
                         </td>
                     </tr>
                     <% } %>
@@ -30,14 +30,14 @@
         </div>
 
         <div id="divVentas" runat="server">
-            <h2 class="titulo-ventas">Mis Ventas</h2>
+            <h2 class="titulo-ventas" data-etiqueta="texto_MisVentas">Mis Ventas</h2>
             <table id="tablaVentas">
                 <thead>
                     <tr>
-                        <th>Número</th>
-                        <th>Fecha</th>
-                        <th>Total</th>
-                        <th>Acción</th>
+                        <th data-etiqueta="table_Numero">Número</th>
+                        <th data-etiqueta="table_Fecha">Fecha</th>
+                        <th data-etiqueta="table_Total">Total</th>
+                        <th data-etiqueta="table_Accion">Acción</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -47,8 +47,8 @@
                         <td><%= venta.Fecha.ToString("dd/MM/yyyy HH:mm:ss") %></td>
                         <td>$<%= venta.Total.ToString("N2") %></td>
                         <td>
-                            <button type="button" class="submit-btn-transacciones ver-detalle-btn" onclick="abrirModalDetalleVenta('<%= venta.Id %>', '<%= venta.Fecha.ToString("dd/MM/yyyy HH:mm:ss") %>')">Ver Factura</button>
-                            <button type="button" class="submit-btn-transacciones descargar-btn" onclick="window.location.href='<%= ResolveUrl("~/Transacciones.aspx?descargarfacturaventa=" + venta.Id) %>'">Descargar</button>
+                            <button type="button" class="submit-btn-transacciones ver-detalle-btn" data-etiqueta="btn_VerFactura" onclick="abrirModalDetalleVenta('<%= venta.Id %>', '<%= venta.Fecha.ToString("dd/MM/yyyy HH:mm:ss") %>')">Ver Factura</button>
+                            <button type="button" class="submit-btn-transacciones descargar-btn" data-etiqueta="btn_Descargar" onclick="window.location.href='<%= ResolveUrl("~/Transacciones.aspx?descargarfacturaventa=" + venta.Id) %>'">Descargar</button>
                         </td>
                     </tr>
                     <% } %>
@@ -59,8 +59,8 @@
         <asp:Literal ID="ltlNoTransacciones" runat="server" Visible="false">
             <div class="mensaje-carrito-vacio">
                 <img src="images/carritovacio.png" alt="Carrito vacío" class="img-carrito-vacio" />
-                <p>No tenés transacciones registradas.</p>
-                <p>Comenzá a invertir ahora mismo en la sección <a href="Compra.aspx" class="link-compra-activos">Compra de Activos</a></p>
+                <p data-etiqueta="mensaje_NoTransacciones">No tenés transacciones registradas.</p>
+                <p data-etiqueta="mensaje_ComenzaInvertir">Comenzá a invertir ahora mismo en la sección <a href="Compra.aspx" class="link-compra-activos" data-etiqueta="link_CompraActivos">Compra de Activos</a></p>
             </div>
         </asp:Literal>
     </div>
@@ -68,25 +68,25 @@
     <div id="transaccionesModal" class="transacciones-modal">
         <div class="transacciones-modal-content">
             <div class="transacciones-modal-header">
-                <h5 class="transacciones-modal-title">Factura de la Transacción</h5>
+                <h5 class="transacciones-modal-title" data-etiqueta="modal_TituloFactura">Factura de la Transacción</h5>
                 <span class="transacciones-close" onclick="cerrarModal()">&times;</span>
             </div>
             <div class="transacciones-modal-body">
                 <div class="factura-info">
-                    <p><strong>Fecha:</strong> <span id="facturaFecha"></span></p>
-                    <p><strong>Factura N°:</strong> <span id="facturaNumero"></span></p>
+                    <p><strong data-etiqueta="modal_Fecha">Fecha:</strong> <span id="facturaFecha"></span></p>
+                    <p><strong data-etiqueta="modal_NumeroFactura">Factura N°:</strong> <span id="facturaNumero"></span></p>
                 </div>
 
                 <div id="accionesSection" style="display: none;">
-                    <h3 class="section-title">Acciones</h3>
+                    <h3 class="section-title" data-etiqueta="section_Acciones">Acciones</h3>
                     <table id="tablaAcciones">
                         <thead>
                             <tr>
-                                <th>Nombre de Activo</th>
-                                <th>Símbolo</th>
-                                <th>Cantidad</th>
-                                <th>Precio</th>
-                                <th>Total</th>
+                                <th data-etiqueta="table_NombreActivo">Nombre de Activo</th>
+                                <th data-etiqueta="table_Simbolo">Símbolo</th>
+                                <th data-etiqueta="table_Cantidad">Cantidad</th>
+                                <th data-etiqueta="table_Precio">Precio</th>
+                                <th data-etiqueta="table_TotalActivo">Total</th>
                             </tr>
                         </thead>
                         <tbody id="detalleAccionesContainer">
@@ -97,16 +97,16 @@
                 <div id="separator" style="display: none;" class="separator"></div>
 
                 <div id="bonosSection" style="display: none;">
-                    <h3 class="section-title">Bonos</h3>
+                    <h3 class="section-title" data-etiqueta="section_Bonos">Bonos</h3>
                     <table id="tablaBonos">
                         <thead>
                             <tr>
-                                <th>Nombre de Activo</th>
-                                <th>Valor Nominal</th>
-                                <th>Tasa de Interés</th>
-                                <th>Cantidad</th>
-                                <th>Precio</th>
-                                <th>Total</th>
+                                <th data-etiqueta="table_NombreActivo">Nombre de Activo</th>
+                                <th data-etiqueta="table_ValorNominal">Valor Nominal</th>
+                                <th data-etiqueta="table_TasaInteres">Tasa de Interés</th>
+                                <th data-etiqueta="table_Cantidad">Cantidad</th>
+                                <th data-etiqueta="table_Precio">Precio</th>
+                                <th data-etiqueta="table_TotalActivo">Total</th>
                             </tr>
                         </thead>
                         <tbody id="detalleBonosContainer">

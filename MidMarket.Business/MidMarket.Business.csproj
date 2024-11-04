@@ -64,6 +64,7 @@
     <Compile Include="Interfaces\IDigitoVerificadorService.cs" />
     <Compile Include="Interfaces\IPermisoService.cs" />
     <Compile Include="Interfaces\ISessionManager.cs" />
+    <Compile Include="Interfaces\ITraduccionService.cs" />
     <Compile Include="Interfaces\IUsuarioService.cs" />
     <Compile Include="Interfaces\IActivoService.cs" />
     <Compile Include="Interfaces\IVentaService.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Services\CompraService.cs" />
     <Compile Include="Services\DigitoVerificadorService.cs" />
     <Compile Include="Services\PermisoService.cs" />
+    <Compile Include="Services\TraduccionService.cs" />
     <Compile Include="Services\UsuarioService.cs" />
     <Compile Include="Services\VentaService.cs" />
     <Compile Include="SessionManager.cs" />

@@ -1,5 +1,6 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
+using MidMarket.Entities.Observer;
 using MidMarket.UI.Helpers;
 using Newtonsoft.Json;
 using System;
@@ -26,6 +27,7 @@ namespace MidMarket.UI
         private readonly IUsuarioService _usuarioService;
         private readonly ICompraService _compraService;
         private readonly IDigitoVerificadorService _digitoVerificadorService;
+        private readonly ITraduccionService _traduccionService;
 
         public _Default()
         {
@@ -33,37 +35,37 @@ namespace MidMarket.UI
             _usuarioService = Global.Container.Resolve<IUsuarioService>();
             _compraService = Global.Container.Resolve<ICompraService>();
             _digitoVerificadorService = Global.Container.Resolve<IDigitoVerificadorService>();
+            _traduccionService = Global.Container.Resolve<ITraduccionService>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            Cliente = _sessionManager.Get<Cliente>("Usuario");
+
+            if (Cliente == null)
+                Response.Redirect("Default.aspx");
+
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
+            try
             {
-                try
+                VerificarDV();
+
+                esAdmin = Cliente.Permisos.Any(permiso => permiso.Nombre == "Webmaster" || permiso.Nombre == "Administrador Financiero");
+
+                if (!esAdmin)
                 {
-                    Cliente = _sessionManager.Get<Cliente>("Usuario");
-
-                    if (Cliente == null)
-                        Response.Redirect("Default.aspx");
-
-                    VerificarDV();
-
-                    esAdmin = Cliente.Permisos.Any(permiso => permiso.Nombre == "Webmaster" || permiso.Nombre == "Administrador Financiero");
-
-                    if (!esAdmin)
-                    {
-                        TotalInvertido = _usuarioService.ObtenerTotalInvertido();
-                        UltimaTransaccion = _usuarioService.ObtenerUltimaTransaccion();
-                        LlenarInformacionGrafico();
-                    }
-
-                    LlenarFamiliaUsuario();
+                    TotalInvertido = _usuarioService.ObtenerTotalInvertido();
+                    UltimaTransaccion = _usuarioService.ObtenerUltimaTransaccion();
+                    LlenarInformacionGrafico();
                 }
-                catch (Exception ex)
-                {
-                    AlertHelper.MostrarModal(this, $"Error al cargar la página. Será redirigido al inicio.", true);
-                    _sessionManager.AbandonSession();
-                }
+
+                LlenarFamiliaUsuario();
+            }
+            catch (Exception ex)
+            {
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_23")}", true);
+                _sessionManager.AbandonSession();
             }
         }
 
@@ -88,13 +90,15 @@ namespace MidMarket.UI
 
         private void VerificarWebmaster(bool esWebmaster)
         {
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             if (!esWebmaster)
             {
                 Response.Redirect("Error.aspx");
             }
             else
             {
-                AlertHelper.MostrarModal(this, $"Inconsistencia en los digitos verificadores, por favor revise en la sección de Administración de Base de Datos.");
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_24")}");
             }
         }
 

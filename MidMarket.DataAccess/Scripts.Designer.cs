@@ -768,7 +768,7 @@ namespace MidMarket.DataAccess {
         /// <summary>
         ///   Looks up a localized string similar to SELECT Cantidad
         ///FROM Cliente_Activo
-        ///WHERE Id_Cliente_Activo = {0}.
+        ///WHERE Id_Activo = {0} AND Id_Cliente = {1}.
         /// </summary>
         internal static string OBTENER_CANTIDAD_REAL_CLIENTE {
             get {

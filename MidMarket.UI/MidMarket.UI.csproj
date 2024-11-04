@@ -219,6 +219,8 @@
     <Content Include="WebServices\CalcularCarrito.asmx" />
     <Content Include="WebServices\EstadisticaActivos.asmx" />
     <Content Include="WebServices\GeneradorPdf.asmx" />
+    <None Include="Properties\PublishProfiles\joaquing88-001-site1 - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\joaquing88-001-site1 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -394,6 +396,7 @@
     <Compile Include="Error.aspx.designer.cs">
       <DependentUpon>Error.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\ScriptHelper.cs" />
     <Compile Include="MenuPrincipal.aspx.cs">
       <DependentUpon>MenuPrincipal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
