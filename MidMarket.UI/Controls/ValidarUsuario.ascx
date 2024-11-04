@@ -4,6 +4,7 @@
     <label for="txtEmailUsuario" data-etiqueta="label_Email">Email</label>
     <asp:TextBox ID="txtEmailUsuario" runat="server" CssClass="usuario-input form-group-usuarios" TextMode="Email"></asp:TextBox>
     <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtEmailUsuario"
+        ValidationExpression="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
         ErrorMessage="El formato del email no es válido." Display="Dynamic" CssClass="error-message" data-etiqueta="error_EmailFormato"></asp:RegularExpressionValidator>
 </div>
 
@@ -19,6 +20,7 @@
     <label for="txtRazonSocialUsuario" data-etiqueta="label_RazonSocialUsuario">Razón Social</label>
     <asp:TextBox ID="txtRazonSocialUsuario" runat="server" CssClass="usuario-input form-group-usuarios"></asp:TextBox>
     <asp:RegularExpressionValidator ID="revRazonSocial" runat="server" ControlToValidate="txtRazonSocialUsuario"
+        ValidationExpression=".{1,30}"
         ErrorMessage="La razón social no debe superar los 30 caracteres." Display="Dynamic" CssClass="error-message" data-etiqueta="error_RazonSocialLongitud"></asp:RegularExpressionValidator>
 </div>
 
@@ -26,5 +28,6 @@
     <label for="txtCUITUsuario" data-etiqueta="label_CUITUsuario">CUIT</label>
     <asp:TextBox ID="txtCUITUsuario" runat="server" CssClass="usuario-input form-group-usuarios"></asp:TextBox>
     <asp:RegularExpressionValidator ID="revCUIT" runat="server" ControlToValidate="txtCUITUsuario"
+        ValidationExpression="^\d{11}$"
         ErrorMessage="El CUIT debe contener exactamente 11 dígitos." Display="Dynamic" CssClass="error-message" data-etiqueta="error_CUITFormato"></asp:RegularExpressionValidator>
 </div>
