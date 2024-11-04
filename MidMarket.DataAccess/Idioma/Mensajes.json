@@ -339,12 +339,12 @@
     "Id": 57,
     "IdiomaId": 1,
     "Etiqueta": "MSJ_06",
-    "Texto": "Digitos verificadores recalculados con éxito"
+    "Texto": "Acción dada de alta correctamente"
   },
   {
     "Id": 58,
     "IdiomaId": 2,
     "Etiqueta": "MSJ_06",
-    "Texto": "Verifier digits successfully recalculated"
+    "Texto": "Stock created successfully"
   }
 ]
