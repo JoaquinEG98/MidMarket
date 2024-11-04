@@ -490,5 +490,53 @@
     "IdiomaId": 2,
     "Etiqueta": "MSJ_18",
     "Texto": "Purchase made successfully"
+  },
+  {
+    "Id": 83,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_19",
+    "Texto": "Se agregó al carrito la Acción:"
+  },
+  {
+    "Id": 84,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_19",
+    "Texto": "Stock added to cart:"
+  },
+  {
+    "Id": 85,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_20",
+    "Texto": "Se agregó al carrito el Bono:"
+  },
+  {
+    "Id": 86,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_20",
+    "Texto": "Bond added to cart:"
+  },
+  {
+    "Id": 87,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_21",
+    "Texto": "Familias desasignadas correctamente"
+  },
+  {
+    "Id": 88,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_21",
+    "Texto": "Successfully reassigned families"
+  },
+  {
+    "Id": 89,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_22",
+    "Texto": "Patentes desasignadas correctamente"
+  },
+  {
+    "Id": 90,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_22",
+    "Texto": "Successfully reassigned roles"
   }
 ]

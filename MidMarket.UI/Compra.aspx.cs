@@ -1,5 +1,6 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
+using MidMarket.Entities.Observer;
 using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
 using System;
@@ -14,12 +15,14 @@ namespace MidMarket.UI
         private readonly IActivoService _activoService;
         private readonly ICarritoService _carritoService;
         private readonly ISessionManager _sessionManager;
+        private readonly ITraduccionService _traduccionService;
 
         public Compra()
         {
             _activoService = Global.Container.Resolve<IActivoService>();
             _carritoService = Global.Container.Resolve<ICarritoService>();
             _sessionManager = Global.Container.Resolve<ISessionManager>();
+            _traduccionService = Global.Container.Resolve<ITraduccionService>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -44,7 +47,7 @@ namespace MidMarket.UI
                 }
                 catch (Exception ex)
                 {
-                    AlertHelper.MostrarModal(this, $"Error al cargar la página: {ex.Message}.");
+                    AlertHelper.MostrarModal(this, $"{ex.Message}.");
                 }
             }
         }
@@ -53,6 +56,8 @@ namespace MidMarket.UI
         {
             try
             {
+                var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
                 var button = (Button)sender;
                 int accionId = int.Parse(button.CommandArgument);
 
@@ -61,12 +66,12 @@ namespace MidMarket.UI
                 if (accion != null)
                 {
                     _carritoService.InsertarCarrito(accion);
-                    AlertHelper.MostrarToast(this, $"La acción {accion.Nombre} ha sido agregada al carrito.");
+                    AlertHelper.MostrarToast(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_19")} {accion.Nombre}");
                 }
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarModal(this, $"Error al agregar la acción al carrito: {ex.Message}");
+                AlertHelper.MostrarModal(this, $"{ex.Message}");
             }
         }
 
@@ -74,6 +79,8 @@ namespace MidMarket.UI
         {
             try
             {
+                var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
                 var button = (Button)sender;
                 int bonoId = int.Parse(button.CommandArgument);
 
@@ -82,12 +89,12 @@ namespace MidMarket.UI
                 if (bono != null)
                 {
                     _carritoService.InsertarCarrito(bono);
-                    AlertHelper.MostrarToast(this, $"El bono {bono.Nombre} ha sido agregado al carrito.");
+                    AlertHelper.MostrarToast(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_20")} {bono.Nombre}");
                 }
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarModal(this, $"Error al agregar el bono al carrito: {ex.Message}");
+                AlertHelper.MostrarModal(this, $"{ex.Message}");
             }
         }
     }
