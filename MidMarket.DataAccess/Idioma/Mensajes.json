@@ -358,5 +358,29 @@
     "IdiomaId": 2,
     "Etiqueta": "MSJ_07",
     "Texto": "Bond created successfully"
+  },
+  {
+    "Id": 61,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_08",
+    "Texto": "Familia creada correctamente"
+  },
+  {
+    "Id": 62,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_08",
+    "Texto": "Family created successfully"
+  },
+  {
+    "Id": 63,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_09",
+    "Texto": "Error al crear familia:"
+  },
+  {
+    "Id": 64,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_09",
+    "Texto": "Error creating family:"
   }
 ]
