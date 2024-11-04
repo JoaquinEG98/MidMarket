@@ -15,6 +15,7 @@ namespace MidMarket.DataAccess.DAOs
         private static readonly MemoryCache _cache = MemoryCache.Default;
         private const string _cacheIdiomasKey = "Idiomas";
         private const string _cacheTraduccionesKey = "Traducciones";
+        private const string _cacheMensajesKey = "Mensajes";
         private readonly DateTimeOffset _tiempoCache = DateTimeOffset.Now.AddHours(1);
 
         public IList<Idioma> ObtenerIdiomas()
@@ -57,6 +58,35 @@ namespace MidMarket.DataAccess.DAOs
             var traduccionesCache = (IDictionary<string, ITraduccion>)_cache.Get(cacheKeyIdioma);
 
             return traduccionesCache;
+        }
+
+        public string ObtenerMensaje(IIdioma idioma, string etiqueta)
+        {
+            if (idioma == null)
+                idioma = ObtenerIdiomaDefault();
+
+            string cacheKeyIdioma = $"{_cacheMensajesKey}_{idioma.Id}";
+
+            if (!_cache.Contains(cacheKeyIdioma))
+            {
+                string json = Encoding.UTF8.GetString(Traduccion.Mensajes);
+                IList<Entities.Observer.Traduccion> mensajes = JsonConvert.DeserializeObject<IList<Entities.Observer.Traduccion>>(json);
+
+                var cacheData = mensajes
+                    .Where(t => t.IdiomaId == idioma.Id)
+                    .ToDictionary(t => t.Etiqueta, t => (ITraduccion)t);
+
+                _cache.Set(cacheKeyIdioma, cacheData, _tiempoCache);
+            }
+
+            var mensajesCache = (IDictionary<string, ITraduccion>)_cache.Get(cacheKeyIdioma);
+
+            if (mensajesCache.TryGetValue(etiqueta, out ITraduccion traduccion))
+            {
+                return traduccion.Texto;
+            }
+
+            return null;
         }
     }
 }

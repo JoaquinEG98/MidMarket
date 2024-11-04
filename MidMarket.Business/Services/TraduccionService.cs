@@ -35,5 +35,12 @@ namespace MidMarket.Business.Services
 
             return traducciones;
         }
+
+        public string ObtenerMensaje(IIdioma idioma, string etiqueta)
+        {
+            var mensaje = _traduccionDataAccess.ObtenerMensaje(idioma, etiqueta);
+
+            return mensaje;
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
+using MidMarket.Entities.Observer;
 using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
 using System;
@@ -14,6 +15,7 @@ namespace MidMarket.UI
         private readonly IUsuarioService _usuarioService;
         private readonly IPermisoService _permisoService;
         private readonly ISessionManager _sessionManager;
+        private readonly ITraduccionService _traduccionService;
 
         public AdministracionBD()
         {
@@ -22,6 +24,7 @@ namespace MidMarket.UI
             _usuarioService = Global.Container.Resolve<IUsuarioService>();
             _permisoService = Global.Container.Resolve<IPermisoService>();
             _sessionManager = Global.Container.Resolve<ISessionManager>();
+            _traduccionService = Global.Container.Resolve<ITraduccionService>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -37,7 +40,7 @@ namespace MidMarket.UI
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarModal(this, $"Error al cargar página: {ex.Message}.");
+                AlertHelper.MostrarModal(this, $"{ex.Message}.");
             }
         }
 
@@ -45,11 +48,13 @@ namespace MidMarket.UI
         {
             try
             {
+                var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
                 string rutaBackup = txtRutaBackup.Text.Trim();
 
                 if (string.IsNullOrEmpty(rutaBackup))
                 {
-                    AlertHelper.MostrarModal(this, $"Debe seleccionar una ruta válida para guardar el backup.");
+                    AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_01")}");
                     return;
                 }
 
@@ -57,11 +62,11 @@ namespace MidMarket.UI
 
                 CargarDV();
 
-                AlertHelper.MostrarModal(this, $"Backup realizado con éxito");
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_02")}");
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarModal(this, $"Error al generar backup: {ex.Message}.");
+                AlertHelper.MostrarModal(this, $"{ex.Message}.");
             }
         }
 
@@ -69,9 +74,11 @@ namespace MidMarket.UI
         {
             try
             {
+                var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
                 if (!fileUploadRestore.HasFile)
                 {
-                    AlertHelper.MostrarModal(this, "Debe seleccionar un archivo de backup.");
+                    AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_03")}");
                     return;
                 }
 
@@ -83,27 +90,29 @@ namespace MidMarket.UI
 
                 CargarDV();
 
-                AlertHelper.MostrarModal(this, "Restauración realizada con éxito.");
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_04")}");
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarModal(this, $"Error al restaurar la base de datos: {ex.Message}.");
+                AlertHelper.MostrarModal(this, $"{ex.Message}.");
             }
         }
 
         protected void btnRecalcularDigitos_Click(object sender, EventArgs e)
         {
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             try
             {
                 _digitoVerificadorService.RecalcularTodosDigitosVerificadores(_usuarioService, _permisoService);
 
                 CargarDV();
 
-                AlertHelper.MostrarModal(this, "Digitos verificadores recalculados con éxito");
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_05")}");
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarModal(this, $"Error al recalcular digitos verificadores: {ex.Message}.");
+                AlertHelper.MostrarModal(this, $"{ex.Message}.");
             }
         }
 

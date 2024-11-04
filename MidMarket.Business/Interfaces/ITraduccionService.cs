@@ -8,5 +8,6 @@ namespace MidMarket.Business.Interfaces
         IList<Idioma> ObtenerIdiomas();
         IIdioma ObtenerIdiomaDefault();
         IDictionary<string, ITraduccion> ObtenerTraducciones(IIdioma idioma);
+        string ObtenerMensaje(IIdioma idioma, string etiqueta);
     }
 }
