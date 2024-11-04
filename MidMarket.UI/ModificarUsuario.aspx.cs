@@ -1,5 +1,6 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
+using MidMarket.Entities.Observer;
 using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
 using System;
@@ -12,6 +13,7 @@ namespace MidMarket.UI
     {
         private readonly IUsuarioService _usuarioService;
         private readonly ISessionManager _sessionManager;
+        private readonly ITraduccionService _traduccionService;
 
         public Cliente Usuario { get; set; }
         private int _usuarioId { get; set; }
@@ -20,6 +22,7 @@ namespace MidMarket.UI
         {
             _usuarioService = Global.Container.Resolve<IUsuarioService>();
             _sessionManager = Global.Container.Resolve<ISessionManager>();
+            _traduccionService = Global.Container.Resolve<ITraduccionService>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -36,7 +39,7 @@ namespace MidMarket.UI
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarModal(this, $"Error al cargar la página: {ex.Message}");
+                AlertHelper.MostrarModal(this, $"{ex.Message}");
                 Response.Redirect("AdministrarUsuarios.aspx");
             }
         }
@@ -46,7 +49,6 @@ namespace MidMarket.UI
             Usuario = _usuarioService.GetClientes().FirstOrDefault(x => x.Id == _usuarioId);
             if (Usuario == null)
             {
-                AlertHelper.MostrarModal(this, "Usuario no encontrado.");
                 Response.Redirect("Usuarios.aspx");
             }
         }
@@ -55,17 +57,19 @@ namespace MidMarket.UI
         {
             try
             {
+                var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
                 string emailUsuario = Request.Form["emailUsuario"];
                 string razonSocialUsuario = Request.Form["razonSocialUsuario"];
                 string cuitUsuario = Request.Form["cuitUsuario"];
 
                 GuardarUsuario(emailUsuario, razonSocialUsuario, cuitUsuario);
-                AlertHelper.MostrarModal(this, $"Usuario {emailUsuario} modificado correctamente.");
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_31")} {emailUsuario}");
                 CargarUsuario();
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarModal(this, $"Error al modificar el usuario: {ex.Message}");
+                AlertHelper.MostrarModal(this, $"{ex.Message}");
             }
         }
 

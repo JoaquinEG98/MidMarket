@@ -1,5 +1,6 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
+using MidMarket.Entities.Observer;
 using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
 using System;
@@ -12,6 +13,7 @@ namespace MidMarket.UI
     {
         private readonly IActivoService _activoService;
         private readonly ISessionManager _sessionManager;
+        private readonly ITraduccionService _traduccionService;
 
         public Bono Bono { get; set; }
         private int _bonoId;
@@ -20,6 +22,7 @@ namespace MidMarket.UI
         {
             _activoService = Global.Container.Resolve<IActivoService>();
             _sessionManager = Global.Container.Resolve<ISessionManager>();
+            _traduccionService = Global.Container.Resolve<ITraduccionService>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -39,7 +42,7 @@ namespace MidMarket.UI
                 }
                 catch (Exception ex)
                 {
-                    AlertHelper.MostrarModal(this, $"Error al cargar la página: {ex.Message}");
+                    AlertHelper.MostrarModal(this, $"{ex.Message}");
                     Response.Redirect("AdministrarBonos.aspx");
                 }
             }
@@ -56,16 +59,18 @@ namespace MidMarket.UI
 
             try
             {
+                var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
                 string nombreBono = ValidarBonos.Nombre;
                 decimal valorNominal = decimal.Parse(ValidarBonos.ValorNominal);
                 float tasaInteres = float.Parse(ValidarBonos.TasaInteres);
 
                 GuardarBono(nombreBono, valorNominal, tasaInteres);
-                AlertHelper.MostrarModal(this, $"Bono {nombreBono} modificado correctamente.");
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_27")}");
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarModal(this, $"Error al modificar el bono: {ex.Message}");
+                AlertHelper.MostrarModal(this, $"{ex.Message}");
             }
         }
 
@@ -73,9 +78,11 @@ namespace MidMarket.UI
         {
             var bono = _activoService.GetBonos().FirstOrDefault(x => x.Id == _bonoId);
 
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             if (bono == null)
             {
-                AlertHelper.MostrarModal(this, "No se pudo cargar el bono para guardar los cambios.");
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_28")}");
                 return;
             }
 
@@ -91,7 +98,6 @@ namespace MidMarket.UI
             Bono = _activoService.GetBonos().FirstOrDefault(x => x.Id == _bonoId);
             if (Bono == null)
             {
-                AlertHelper.MostrarModal(this, "Bono no encontrado.");
                 Response.Redirect("AdministrarBonos.aspx");
                 return;
             }

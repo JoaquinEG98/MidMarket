@@ -562,5 +562,89 @@
     "IdiomaId": 2,
     "Etiqueta": "MSJ_24",
     "Texto": "Inconsistency in the verification digits, please check the Database Administration section."
+  },
+  {
+    "Id": 95,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_25",
+    "Texto": "Modificada correctamente la Acción:"
+  },
+  {
+    "Id": 96,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_25",
+    "Texto": "Modified successfully Stock:"
+  },
+  {
+    "Id": 97,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_26",
+    "Texto": "No se pudo cargar la acción para guardar los cambios."
+  },
+  {
+    "Id": 98,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_26",
+    "Texto": "The Stock to save changes could not be loaded."
+  },
+  {
+    "Id": 99,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_27",
+    "Texto": "Modificado correctamente el Bono:"
+  },
+  {
+    "Id": 100,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_27",
+    "Texto": "Modified successfully Bond:"
+  },
+  {
+    "Id": 101,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_28",
+    "Texto": "No se pudo cargar el bono para guardar los cambios."
+  },
+  {
+    "Id": 102,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_28",
+    "Texto": "Could not load Bond to save changes."
+  },
+  {
+    "Id": 103,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_29",
+    "Texto": "Modificada correctamente la familia:"
+  },
+  {
+    "Id": 104,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_29",
+    "Texto": "Modified successfully the family:"
+  },
+  {
+    "Id": 105,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_30",
+    "Texto": "Error al querer modificar la familia:"
+  },
+  {
+    "Id": 106,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_30",
+    "Texto": "Error trying to modify family:"
+  },
+  {
+    "Id": 107,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_31",
+    "Texto": "Modificado correctamente el usuario:"
+  },
+  {
+    "Id": 108,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_31",
+    "Texto": "Modified successfully user:"
   }
 ]
