@@ -2,30 +2,29 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container-usuarios">
-        <h2>Administración de Usuarios</h2>
+        <h2 data-etiqueta="titulo_AdministracionUsuarios">Administración de Usuarios</h2>
 
         <table id="tablaUsuarios">
             <thead>
                 <tr>
-                    <th>Razón Social</th>
-                    <th>CUIT</th>
-                    <th>Familia</th>
-                    <th>Ver Más</th>
-                    <th>Modificar</th>
+                    <th data-etiqueta="table_RazonSocial">Razón Social</th>
+                    <th data-etiqueta="table_CUIT">CUIT</th>
+                    <th data-etiqueta="table_Familia">Familia</th>
+                    <th data-etiqueta="btn_VerMas">Ver Más</th>
+                    <th data-etiqueta="btn_Modificar">Modificar</th>
                 </tr>
             </thead>
             <tbody>
-                <% foreach (var cliente in Clientes)
-                    { %>
+                <% foreach (var cliente in Clientes) { %>
                 <tr>
                     <td><%= cliente.RazonSocial %></td>
                     <td><%= cliente.CUIT %></td>
                     <td><%= cliente.Permisos[0].Nombre %></td>
                     <td>
-                        <button type="button" class="submit-btn-usuarios ver-detalle-btn" onclick="abrirModalDetalle('<%= cliente.Id %>')">Ver Más</button>
+                        <button type="button" class="submit-btn-usuarios ver-detalle-btn" onclick="abrirModalDetalle('<%= cliente.Id %>')" data-etiqueta="btn_VerMas">Ver Más</button>
                     </td>
                     <td>
-                        <button type="button" class="submit-btn-usuarios modificar-btn" onclick="window.location.href='<%= ResolveUrl("~/ModificarUsuario.aspx?id=" + cliente.Id) %>';">Modificar</button>
+                        <button type="button" class="submit-btn-usuarios modificar-btn" onclick="window.location.href='<%= ResolveUrl("~/ModificarUsuario.aspx?id=" + cliente.Id) %>';" data-etiqueta="btn_Modificar">Modificar</button>
                     </td>
                 </tr>
                 <% } %>
@@ -36,20 +35,20 @@
     <div id="usuariosModal" class="usuarios-modal">
         <div class="usuarios-modal-content">
             <div class="usuarios-modal-header">
-                <h5 class="usuarios-modal-title">Detalles del Usuario</h5>
+                <h5 class="usuarios-modal-title" data-etiqueta="modal_TituloDetallesUsuario">Detalles del Usuario</h5>
                 <span class="usuarios-close" onclick="cerrarModal()">&times;</span>
             </div>
             <div class="usuarios-modal-body">
-                <p><strong>- ID:</strong> <span id="detalleId"></span></p>
-                <p><strong>- Email:</strong> <span id="detalleEmail"></span></p>
-                <p><strong>- Razón Social:</strong> <span id="detalleRazonSocial"></span></p>
-                <p><strong>- CUIT:</strong> <span id="detalleCuit"></span></p>
-                <p><strong>- Número de Cuenta:</strong> <span id="detalleNumeroCuenta"></span></p>
-                <p><strong>- Saldo:</strong> $<span id="detalleSaldo"></span></p>
+                <p><strong data-etiqueta="modal_ID">- ID:</strong> <span id="detalleId"></span></p>
+                <p><strong data-etiqueta="modal_Email">- Email:</strong> <span id="detalleEmail"></span></p>
+                <p><strong data-etiqueta="modal_RazonSocial">- Razón Social:</strong> <span id="detalleRazonSocial"></span></p>
+                <p><strong data-etiqueta="modal_CUIT">- CUIT:</strong> <span id="detalleCuit"></span></p>
+                <p><strong data-etiqueta="modal_NumeroCuenta">- Número de Cuenta:</strong> <span id="detalleNumeroCuenta"></span></p>
+                <p><strong data-etiqueta="modal_Saldo">- Saldo:</strong> $<span id="detalleSaldo"></span></p>
                 <div class="seguridad-container">
-                    <p><strong>- Familia:</strong> <span id="detalleFamilia"></span></p>
+                    <p><strong data-etiqueta="modal_Familia">- Familia:</strong> <span id="detalleFamilia"></span></p>
                     <p>
-                        <strong>- Patentes Asignadas:</strong>
+                        <strong data-etiqueta="modal_PatentesAsignadas">- Patentes Asignadas:</strong>
                         <ul id="detallePatentes"></ul>
                     </p>
                 </div>

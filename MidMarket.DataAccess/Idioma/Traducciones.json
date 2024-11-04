@@ -1822,5 +1822,174 @@
     "IdiomaId": 2,
     "Etiqueta": "btn_CargarBono",
     "Texto": "Add"
+  },
+  {
+    "Id": 321,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_AdministracionUsuarios",
+    "Texto": "Administración de Usuarios"
+  },
+  {
+    "Id": 322,
+    "IdiomaId": 1,
+    "Etiqueta": "table_RazonSocial",
+    "Texto": "Razón Social"
+  },
+  {
+    "Id": 323,
+    "IdiomaId": 1,
+    "Etiqueta": "table_CUIT",
+    "Texto": "CUIT"
+  },
+  {
+    "Id": 324,
+    "IdiomaId": 1,
+    "Etiqueta": "table_Familia",
+    "Texto": "Familia"
+  },
+  {
+    "Id": 325,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_VerMas",
+    "Texto": "Ver Más"
+  },
+  {
+    "Id": 326,
+    "IdiomaId": 1,
+    "Etiqueta": "modal_TituloDetallesUsuario",
+    "Texto": "Detalles del Usuario"
+  },
+  {
+    "Id": 327,
+    "IdiomaId": 1,
+    "Etiqueta": "modal_ID",
+    "Texto": "- ID:"
+  },
+  {
+    "Id": 328,
+    "IdiomaId": 1,
+    "Etiqueta": "modal_Email",
+    "Texto": "- Email:"
+  },
+  {
+    "Id": 329,
+    "IdiomaId": 1,
+    "Etiqueta": "modal_RazonSocial",
+    "Texto": "- Razón Social:"
+  },
+  {
+    "Id": 330,
+    "IdiomaId": 1,
+    "Etiqueta": "modal_CUIT",
+    "Texto": "- CUIT:"
+  },
+  {
+    "Id": 331,
+    "IdiomaId": 1,
+    "Etiqueta": "modal_NumeroCuenta",
+    "Texto": "- Número de Cuenta:"
+  },
+  {
+    "Id": 332,
+    "IdiomaId": 1,
+    "Etiqueta": "modal_Saldo",
+    "Texto": "- Saldo:"
+  },
+  {
+    "Id": 333,
+    "IdiomaId": 1,
+    "Etiqueta": "modal_Familia",
+    "Texto": "- Familia:"
+  },
+  {
+    "Id": 334,
+    "IdiomaId": 1,
+    "Etiqueta": "modal_PatentesAsignadas",
+    "Texto": "- Patentes Asignadas:"
+  },
+  {
+    "Id": 335,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_AdministracionUsuarios",
+    "Texto": "User Management"
+  },
+  {
+    "Id": 336,
+    "IdiomaId": 2,
+    "Etiqueta": "table_RazonSocial",
+    "Texto": "Business Name"
+  },
+  {
+    "Id": 337,
+    "IdiomaId": 2,
+    "Etiqueta": "table_CUIT",
+    "Texto": "CUIT"
+  },
+  {
+    "Id": 338,
+    "IdiomaId": 2,
+    "Etiqueta": "table_Familia",
+    "Texto": "Family"
+  },
+  {
+    "Id": 339,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_VerMas",
+    "Texto": "View More"
+  },
+  {
+    "Id": 340,
+    "IdiomaId": 2,
+    "Etiqueta": "modal_TituloDetallesUsuario",
+    "Texto": "User Details"
+  },
+  {
+    "Id": 341,
+    "IdiomaId": 2,
+    "Etiqueta": "modal_ID",
+    "Texto": "- ID:"
+  },
+  {
+    "Id": 342,
+    "IdiomaId": 2,
+    "Etiqueta": "modal_Email",
+    "Texto": "- Email:"
+  },
+  {
+    "Id": 343,
+    "IdiomaId": 2,
+    "Etiqueta": "modal_RazonSocial",
+    "Texto": "- Business Name:"
+  },
+  {
+    "Id": 344,
+    "IdiomaId": 2,
+    "Etiqueta": "modal_CUIT",
+    "Texto": "- CUIT:"
+  },
+  {
+    "Id": 345,
+    "IdiomaId": 2,
+    "Etiqueta": "modal_NumeroCuenta",
+    "Texto": "- Account Number:"
+  },
+  {
+    "Id": 346,
+    "IdiomaId": 2,
+    "Etiqueta": "modal_Saldo",
+    "Texto": "- Balance:"
+  },
+  {
+    "Id": 347,
+    "IdiomaId": 2,
+    "Etiqueta": "modal_Familia",
+    "Texto": "- Family:"
+  },
+  {
+    "Id": 348,
+    "IdiomaId": 2,
+    "Etiqueta": "modal_PatentesAsignadas",
+    "Texto": "- Assigned Permissions:"
   }
+
 ]
