@@ -1,6 +1,7 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
 using MidMarket.Entities.Composite;
+using MidMarket.Entities.Observer;
 using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
 using System;
@@ -16,6 +17,7 @@ namespace MidMarket.UI
         private readonly IUsuarioService _usuarioService;
         private readonly IPermisoService _permisoService;
         private readonly ISessionManager _sessionManager;
+        private readonly ITraduccionService _traduccionService;
 
         public List<Cliente> Clientes { get; set; } = new List<Cliente>();
         public IList<Componente> PatentesAsignadas { get; set; } = new List<Componente>();
@@ -28,6 +30,7 @@ namespace MidMarket.UI
             _usuarioService = Global.Container.Resolve<IUsuarioService>();
             _permisoService = Global.Container.Resolve<IPermisoService>();
             _sessionManager = Global.Container.Resolve<ISessionManager>();
+            _traduccionService = Global.Container.Resolve<ITraduccionService>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -64,7 +67,7 @@ namespace MidMarket.UI
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarModal(this, $"Error al cargar la página: {ex.Message}.");
+                AlertHelper.MostrarModal(this, $"{ex.Message}.");
                 Response.Redirect("Default.aspx");
             }
         }
@@ -82,6 +85,8 @@ namespace MidMarket.UI
         {
             try
             {
+                var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
                 var patentesSeleccionadas = Request.Form["patentesSeleccionadas"];
                 var patentesAsignadas = Request.Form["patentesAsignadas"];
 
@@ -97,11 +102,11 @@ namespace MidMarket.UI
 
                 CargarPatentes(ClienteSeleccionado.Id);
 
-                AlertHelper.MostrarModal(this, "Patentes asignadas correctamente.");
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_12")}");
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarModal(this, $"Error al asignar patentes: {ex.Message}");
+                AlertHelper.MostrarModal(this, $"{ex.Message}");
             }
         }
     }

@@ -1,5 +1,6 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
+using MidMarket.Entities.Observer;
 using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
 using MidMarket.XML;
@@ -16,6 +17,7 @@ namespace MidMarket.UI
         private readonly IBitacoraService _bitacoraService;
         private readonly IUsuarioService _usuarioService;
         private readonly ISessionManager _sessionManager;
+        private readonly ITraduccionService _traduccionService;
 
         public List<Entities.Bitacora> Movimientos { get; set; } = new List<Entities.Bitacora>();
 
@@ -63,6 +65,7 @@ namespace MidMarket.UI
             _bitacoraService = Global.Container.Resolve<IBitacoraService>();
             _usuarioService = Global.Container.Resolve<IUsuarioService>();
             _sessionManager = Global.Container.Resolve<ISessionManager>();
+            _traduccionService = Global.Container.Resolve<ITraduccionService>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -95,7 +98,7 @@ namespace MidMarket.UI
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarModal(this, $"Error al cargar la lista de clientes: {ex.Message}.");
+                AlertHelper.MostrarModal(this, $"{ex.Message}.");
             }
         }
 
@@ -209,15 +212,17 @@ namespace MidMarket.UI
         {
             try
             {
+                var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
                 BitacoraXML.GenerarXMLBitacora(ObtenerMovimientosExportar());
 
-                AlertHelper.MostrarModal(this, "Bitácora exportada a XML correctamente.");
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_13")}");
 
                 ConsultarBitacora();
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarModal(this, $"Error al exportar a XML: {ex.Message}");
+                AlertHelper.MostrarModal(this, $"{ex.Message}");
             }
         }
 
@@ -225,15 +230,17 @@ namespace MidMarket.UI
         {
             try
             {
+                var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
                 BitacoraXML.GenerarExcelBitacora(ObtenerMovimientosExportar());
 
-                AlertHelper.MostrarModal(this, "Bitácora exportada a Excel correctamente.");
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_14")}");
 
                 ConsultarBitacora();
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarModal(this, $"Error al exportar a Excel: {ex.Message}");
+                AlertHelper.MostrarModal(this, $"{ex.Message}");
             }
         }
 

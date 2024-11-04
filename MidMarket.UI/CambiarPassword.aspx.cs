@@ -1,5 +1,6 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
+using MidMarket.Entities.Observer;
 using MidMarket.UI.Helpers;
 using System;
 using Unity;
@@ -10,11 +11,13 @@ namespace MidMarket.UI
     {
         private readonly IUsuarioService _usuarioService;
         private readonly ISessionManager _sessionManager;
+        private readonly ITraduccionService _traduccionService;
 
         public CambiarPassword()
         {
             _usuarioService = Global.Container.Resolve<IUsuarioService>();
             _sessionManager = Global.Container.Resolve<ISessionManager>();
+            _traduccionService = Global.Container.Resolve<ITraduccionService>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -26,6 +29,8 @@ namespace MidMarket.UI
         {
             try
             {
+                var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
                 var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
 
                 Cliente cliente = new Cliente()
@@ -35,11 +40,11 @@ namespace MidMarket.UI
                 };
 
                 _usuarioService.CambiarPassword(cliente, ValidarPasswordControl.PasswordValue, confirmarPassword.Value);
-                AlertHelper.MostrarModal(this, $"Contraseña cambiada con éxito");
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_15")}");
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarModal(this, $"Error al cambiar contraseña: {ex.Message}");
+                AlertHelper.MostrarModal(this, $"{ex.Message}");
             }
         }
     }

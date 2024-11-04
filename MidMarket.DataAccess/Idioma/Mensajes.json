@@ -406,5 +406,53 @@
     "IdiomaId": 2,
     "Etiqueta": "MSJ_11",
     "Texto": "Successfully assigned family"
+  },
+  {
+    "Id": 69,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_12",
+    "Texto": "Patentes asignadas correctamente"
+  },
+  {
+    "Id": 70,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_12",
+    "Texto": "Roles assigned successfully"
+  },
+  {
+    "Id": 71,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_13",
+    "Texto": "Bitácora exportada a XML correctamente"
+  },
+  {
+    "Id": 72,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_13",
+    "Texto": "Logs exported to XML successfully"
+  },
+  {
+    "Id": 73,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_14",
+    "Texto": "Bitácora exportada a Excel correctamente"
+  },
+  {
+    "Id": 74,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_14",
+    "Texto": "Logs exported to Excel successfully"
+  },
+  {
+    "Id": 75,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_15",
+    "Texto": "Contraseña cambiada con éxito"
+  },
+  {
+    "Id": 76,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_15",
+    "Texto": "Password changed successfully"
   }
 ]
