@@ -382,5 +382,29 @@
     "IdiomaId": 2,
     "Etiqueta": "MSJ_09",
     "Texto": "Error creating family:"
+  },
+  {
+    "Id": 65,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_10",
+    "Texto": "Usuario creado con éxito"
+  },
+  {
+    "Id": 66,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_10",
+    "Texto": "User created succesfully"
+  },
+  {
+    "Id": 67,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_11",
+    "Texto": "Familia asignada correctamente"
+  },
+  {
+    "Id": 68,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_11",
+    "Texto": "Successfully assigned family"
   }
 ]

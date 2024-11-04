@@ -1,5 +1,6 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
+using MidMarket.Entities.Observer;
 using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
 using System;
@@ -11,12 +12,14 @@ namespace MidMarket.UI
     {
         private readonly IUsuarioService _usuarioService;
         private readonly ISessionManager _sessionManager;
+        private readonly ITraduccionService _traduccionService;
 
 
         public AltaUsuario()
         {
             _usuarioService = Global.Container.Resolve<IUsuarioService>();
             _sessionManager = Global.Container.Resolve<ISessionManager>();
+            _traduccionService = Global.Container.Resolve<ITraduccionService>();
         }
 
 
@@ -30,9 +33,10 @@ namespace MidMarket.UI
 
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
-
             if (Page.IsValid)
             {
+                var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
                 try
                 {
 
@@ -46,12 +50,12 @@ namespace MidMarket.UI
 
                     _usuarioService.RegistrarUsuario(cliente);
 
-                    AlertHelper.MostrarModal(this, $"Usuario dado de alta correctamente.");
+                    AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_10")}");
                     LimpiarCampos();
                 }
                 catch (Exception ex)
                 {
-                    AlertHelper.MostrarModal(this, $"Error al dar de alta el Usuario: {ex.Message}.");
+                    AlertHelper.MostrarModal(this, $"{ex.Message}.");
                 }
             }
         }
