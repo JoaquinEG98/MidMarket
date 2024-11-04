@@ -538,5 +538,29 @@
     "IdiomaId": 2,
     "Etiqueta": "MSJ_22",
     "Texto": "Successfully reassigned roles"
+  },
+  {
+    "Id": 91,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_23",
+    "Texto": "Error al cargar la página. Será redirigido al inicio."
+  },
+  {
+    "Id": 92,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_23",
+    "Texto": "Error loading page. You will be redirected to the home."
+  },
+  {
+    "Id": 93,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_24",
+    "Texto": "Inconsistencia en los digitos verificadores, por favor revise en la sección de Administración de Base de Datos."
+  },
+  {
+    "Id": 94,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_24",
+    "Texto": "Inconsistency in the verification digits, please check the Database Administration section."
   }
 ]

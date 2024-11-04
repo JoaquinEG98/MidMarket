@@ -1,5 +1,6 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
+using MidMarket.Entities.Observer;
 using MidMarket.UI.Helpers;
 using Newtonsoft.Json;
 using System;
@@ -44,6 +45,8 @@ namespace MidMarket.UI
             if (Cliente == null)
                 Response.Redirect("Default.aspx");
 
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             try
             {
                 VerificarDV();
@@ -61,7 +64,7 @@ namespace MidMarket.UI
             }
             catch (Exception ex)
             {
-                AlertHelper.MostrarModal(this, $"Error al cargar la página. Será redirigido al inicio.", true);
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_23")}", true);
                 _sessionManager.AbandonSession();
             }
         }
@@ -87,13 +90,15 @@ namespace MidMarket.UI
 
         private void VerificarWebmaster(bool esWebmaster)
         {
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             if (!esWebmaster)
             {
                 Response.Redirect("Error.aspx");
             }
             else
             {
-                AlertHelper.MostrarModal(this, $"Inconsistencia en los digitos verificadores, por favor revise en la sección de Administración de Base de Datos.");
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_24")}");
             }
         }
 
