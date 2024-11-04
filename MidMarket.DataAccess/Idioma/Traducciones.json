@@ -2146,5 +2146,137 @@
     "IdiomaId": 2,
     "Etiqueta": "error_CUITFormato",
     "Texto": "The CUIT must contain exactly 11 digits."
+  },
+  {
+    "Id": 387,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_AsignarPatentes",
+    "Texto": "Asignación de Patente a Usuario"
+  },
+  {
+    "Id": 388,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_AsignarPatentes",
+    "Texto": "Assigning Permission to User"
+  },
+  {
+    "Id": 389,
+    "IdiomaId": 1,
+    "Etiqueta": "label_FiltrarUsuario",
+    "Texto": "Filtrar Usuario"
+  },
+  {
+    "Id": 390,
+    "IdiomaId": 2,
+    "Etiqueta": "label_FiltrarUsuario",
+    "Texto": "Filter User"
+  },
+  {
+    "Id": 391,
+    "IdiomaId": 1,
+    "Etiqueta": "placeholder_FiltrarUsuario",
+    "Texto": "Escribe para buscar..."
+  },
+  {
+    "Id": 392,
+    "IdiomaId": 2,
+    "Etiqueta": "placeholder_FiltrarUsuario",
+    "Texto": "Type to search..."
+  },
+  {
+    "Id": 393,
+    "IdiomaId": 1,
+    "Etiqueta": "label_SeleccionarUsuario",
+    "Texto": "Seleccionar Usuario"
+  },
+  {
+    "Id": 394,
+    "IdiomaId": 2,
+    "Etiqueta": "label_SeleccionarUsuario",
+    "Texto": "Select User"
+  },
+  {
+    "Id": 395,
+    "IdiomaId": 1,
+    "Etiqueta": "option_SeleccionarUsuario",
+    "Texto": "Selecciona un usuario"
+  },
+  {
+    "Id": 396,
+    "IdiomaId": 2,
+    "Etiqueta": "option_SeleccionarUsuario",
+    "Texto": "Select a user"
+  },
+  {
+    "Id": 397,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_PatentesAsignadas",
+    "Texto": "Patentes Asignadas"
+  },
+  {
+    "Id": 398,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_PatentesAsignadas",
+    "Texto": "Assigned Permissions"
+  },
+  {
+    "Id": 399,
+    "IdiomaId": 1,
+    "Etiqueta": "table_NombrePatente",
+    "Texto": "Nombre de Patente"
+  },
+  {
+    "Id": 400,
+    "IdiomaId": 2,
+    "Etiqueta": "table_NombrePatente",
+    "Texto": "Permission Name"
+  },
+  {
+    "Id": 401,
+    "IdiomaId": 1,
+    "Etiqueta": "table_DescripcionPatente",
+    "Texto": "Descripción"
+  },
+  {
+    "Id": 402,
+    "IdiomaId": 2,
+    "Etiqueta": "table_DescripcionPatente",
+    "Texto": "Description"
+  },
+  {
+    "Id": 403,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_PatentesDisponibles",
+    "Texto": "Patentes Disponibles"
+  },
+  {
+    "Id": 404,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_PatentesDisponibles",
+    "Texto": "Available Permissions"
+  },
+  {
+    "Id": 405,
+    "IdiomaId": 1,
+    "Etiqueta": "table_SeleccionarPatente",
+    "Texto": "Seleccionar"
+  },
+  {
+    "Id": 406,
+    "IdiomaId": 2,
+    "Etiqueta": "table_SeleccionarPatente",
+    "Texto": "Select"
+  },
+  {
+    "Id": 407,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_AsignarPatentes",
+    "Texto": "Asignar Patentes"
+  },
+  {
+    "Id": 408,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_AsignarPatentes",
+    "Texto": "Assign Permissions"
   }
 ]

@@ -3,17 +3,17 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div id="asignar-patentes-container" class="container">
         <form method="post">
-            <h2>Asignación de Patente a Usuario</h2>
+            <h2 data-etiqueta="titulo_AsignarPatentes">Asignación de Patente a Usuario</h2>
 
             <div class="form-group">
-                <label for="filtroUsuario">Filtrar Usuario:</label>
-                <input type="text" id="filtroUsuario" name="filtroUsuario" value="<%= ViewState["FiltroUsuario"] ?? "" %>" oninput="filtrarUsuarios()" placeholder="Escribe para buscar...">
+                <label for="filtroUsuario" data-etiqueta="label_FiltrarUsuario">Filtrar Usuario:</label>
+                <input type="text" id="filtroUsuario" name="filtroUsuario" value="<%= ViewState["FiltroUsuario"] ?? "" %>" oninput="filtrarUsuarios()" placeholder="Escribe para buscar..." data-etiqueta="placeholder_FiltrarUsuario">
             </div>
 
             <div class="form-group">
-                <label for="selectUsuario">Seleccionar Usuario:</label>
+                <label for="selectUsuario" data-etiqueta="label_SeleccionarUsuario">Seleccionar Usuario:</label>
                 <select id="selectUsuario" name="usuarioSeleccionado" onchange="this.form.submit()">
-                    <option value="">Selecciona un usuario</option>
+                    <option value="" data-etiqueta="option_SeleccionarUsuario">Selecciona un usuario</option>
                     <% foreach (var cliente in Clientes)
                         { %>
                     <option value="<%= cliente.Id %>" <%= cliente.Id == ClienteSeleccionadoId ? "selected" : "" %>>
@@ -23,12 +23,12 @@
                 </select>
             </div>
 
-            <h3>Patentes Asignadas</h3>
+            <h3 data-etiqueta="titulo_PatentesAsignadas">Patentes Asignadas</h3>
             <table id="tablaPatentesAsignadas">
                 <thead>
                     <tr>
-                        <th>Nombre de Patente</th>
-                        <th>Descripción</th>
+                        <th data-etiqueta="table_NombrePatente">Nombre de Patente</th>
+                        <th data-etiqueta="table_DescripcionPatente">Descripción</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -43,13 +43,13 @@
                 </tbody>
             </table>
 
-            <h3>Patentes Disponibles</h3>
+            <h3 data-etiqueta="titulo_PatentesDisponibles">Patentes Disponibles</h3>
             <table id="tablaPatentesDisponibles">
                 <thead>
                     <tr>
-                        <th>Seleccionar</th>
-                        <th>Nombre de Patente</th>
-                        <th>Descripción</th>
+                        <th data-etiqueta="table_SeleccionarPatente">Seleccionar</th>
+                        <th data-etiqueta="table_NombrePatente">Nombre de Patente</th>
+                        <th data-etiqueta="table_DescripcionPatente">Descripción</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -69,7 +69,7 @@
             <input type="hidden" id="patentesSeleccionadas" name="patentesSeleccionadas">
             <input type="hidden" id="patentesAsignadas" name="patentesAsignadas">
 
-            <asp:Button ID="btnGuardar" runat="server" Text="Asignar Patentes" OnClientClick="return prepararEnvio();" OnClick="btnGuardar_Click" CssClass="submit-btn" />
+            <asp:Button ID="btnGuardar" runat="server" Text="Asignar Patentes" OnClientClick="return prepararEnvio();" OnClick="btnGuardar_Click" CssClass="submit-btn" data-etiqueta="btn_AsignarPatentes" />
         </form>
     </div>
 
