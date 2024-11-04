@@ -1990,6 +1990,65 @@
     "IdiomaId": 2,
     "Etiqueta": "modal_PatentesAsignadas",
     "Texto": "- Assigned Permissions:"
+  },
+  {
+    "Id": 349,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_ModificarUsuario",
+    "Texto": "Modificar Usuario"
+  },
+  {
+    "Id": 350,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_ModificarUsuario",
+    "Texto": "Edit User"
+  },
+  {
+    "Id": 351,
+    "IdiomaId": 1,
+    "Etiqueta": "label_Email",
+    "Texto": "Email"
+  },
+  {
+    "Id": 352,
+    "IdiomaId": 2,
+    "Etiqueta": "label_Email",
+    "Texto": "Email"
+  },
+  {
+    "Id": 353,
+    "IdiomaId": 1,
+    "Etiqueta": "label_RazonSocialUsuario",
+    "Texto": "Razón Social"
+  },
+  {
+    "Id": 354,
+    "IdiomaId": 2,
+    "Etiqueta": "label_RazonSocialUsuario",
+    "Texto": "Business Name"
+  },
+  {
+    "Id": 355,
+    "IdiomaId": 1,
+    "Etiqueta": "label_CUITUsuario",
+    "Texto": "CUIT"
+  },
+  {
+    "Id": 356,
+    "IdiomaId": 2,
+    "Etiqueta": "label_CUITUsuario",
+    "Texto": "CUIT"
+  },
+  {
+    "Id": 357,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_GuardarUsuario",
+    "Texto": "Guardar"
+  },
+  {
+    "Id": 358,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_GuardarUsuario",
+    "Texto": "Save"
   }
-
 ]
