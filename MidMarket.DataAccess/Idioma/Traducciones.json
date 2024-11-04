@@ -2350,5 +2350,29 @@
     "IdiomaId": 2,
     "Etiqueta": "btn_AsignarFamilias",
     "Texto": "Assign Families"
+  },
+  {
+    "Id": 421,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_DesasignarPatentes",
+    "Texto": "Eliminar Patente a Usuario"
+  },
+  {
+    "Id": 422,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_DesasignarPatentes",
+    "Texto": "Remove Permission from User"
+  },
+  {
+    "Id": 423,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_DesasignarPatentes",
+    "Texto": "Desasignar Patentes"
+  },
+  {
+    "Id": 424,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_DesasignarPatentes",
+    "Texto": "Unassign Permissions"
   }
 ]
