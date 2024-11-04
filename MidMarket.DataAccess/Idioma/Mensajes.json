@@ -346,5 +346,17 @@
     "IdiomaId": 2,
     "Etiqueta": "MSJ_06",
     "Texto": "Stock created successfully"
+  },
+  {
+    "Id": 59,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_07",
+    "Texto": "Bono dado de alta correctamente."
+  },
+  {
+    "Id": 60,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_07",
+    "Texto": "Bond created successfully"
   }
 ]
