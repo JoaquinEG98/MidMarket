@@ -682,5 +682,41 @@
     "IdiomaId": 2,
     "Etiqueta": "MSJ_34",
     "Texto": "Confirmation of the new password are different."
+  },
+  {
+    "Id": 115,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_35",
+    "Texto": "Se ha enviado un enlace de restauración a tu correo."
+  },
+  {
+    "Id": 116,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_35",
+    "Texto": "A restoration link has been sent to your email."
+  },
+  {
+    "Id": 117,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_36",
+    "Texto": "El enlace de restauración ha expirado o es inválido. Solicitá un nuevo enlace."
+  },
+  {
+    "Id": 118,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_36",
+    "Texto": "The restoration link has expired or is invalid. Please request a new link."
+  },
+  {
+    "Id": 119,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_37",
+    "Texto": "Se ha generado una nueva contraseña y se ha enviado a su correo."
+  },
+  {
+    "Id": 120,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_37",
+    "Texto": "A new password has been generated and sent to your email."
   }
 ]

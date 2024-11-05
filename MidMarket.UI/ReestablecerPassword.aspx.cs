@@ -1,6 +1,8 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.Business.Seguridad;
 using MidMarket.Entities.DTOs;
+using MidMarket.Entities.Observer;
+using MidMarket.UI.Helpers;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -15,16 +17,23 @@ namespace MidMarket.UI
     public partial class ReestablecerPassword : System.Web.UI.Page
     {
         private readonly IUsuarioService _usuarioService;
+        private readonly ISessionManager _sessionManager;
+        private readonly ITraduccionService _traduccionService;
+
         private const string TokenPath = "~/App_Data/tokens.json";
         private const string UrlSitio = "https://localhost:44339";
 
         public ReestablecerPassword()
         {
             _usuarioService = Global.Container.Resolve<IUsuarioService>();
+            _sessionManager = Global.Container.Resolve<ISessionManager>();
+            _traduccionService = Global.Container.Resolve<ITraduccionService>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            TraducirPagina();
+
             string token = Request.QueryString["token"];
             if (string.IsNullOrEmpty(token))
                 MostrarFormularioSolicitud();
@@ -32,13 +41,22 @@ namespace MidMarket.UI
                 ProcesarToken(token);
         }
 
+        private void TraducirPagina()
+        {
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+            var traducciones = _traduccionService.ObtenerTraducciones(idioma);
+            ScriptHelper.TraducirPagina(this.Page, traducciones, _sessionManager);
+        }
+
         private void MostrarFormularioSolicitud() => formSolicitud.Visible = true;
 
         private void ProcesarToken(string token)
         {
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             if (!EsTokenValido(token))
             {
-                MostrarError("El enlace de restauración ha expirado o es inválido. Solicitá un nuevo enlace.");
+                MostrarError($"{_traduccionService.ObtenerMensaje(idioma, "MSJ_36")}");
                 return;
             }
 
@@ -49,19 +67,21 @@ namespace MidMarket.UI
             EnviarCorreo(email, "MidMarket - Nueva contraseña generada", $"Tu nueva contraseña es: {nuevaPassword}");
 
             EliminarToken(token);
-            MostrarMensaje("Se ha generado una nueva contraseña y se ha enviado a su correo.");
+            MostrarMensaje($"{_traduccionService.ObtenerMensaje(idioma, "MSJ_37")}");
         }
 
         protected void btnReestablecer_Click(object sender, EventArgs e)
         {
             if (!Page.IsValid) return;
 
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             string email = ValidarEmailControl.Email;
             string token = GenerarToken();
             GuardarToken(new TokenEmailDTO { Email = email, Token = token, FechaExpiracion = DateTime.Now.AddMinutes(15) });
             EnviarCorreo(email, "MidMarket - Restauración de Contraseña", $"{UrlSitio}/ReestablecerPassword.aspx?token={token}");
 
-            MostrarMensaje("Se ha enviado un enlace de restauración a tu correo.");
+            MostrarMensaje($"{_traduccionService.ObtenerMensaje(idioma, "MSJ_35")}");
             ValidarEmailControl.Email = string.Empty;
         }
 

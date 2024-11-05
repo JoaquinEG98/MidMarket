@@ -3052,5 +3052,53 @@
     "IdiomaId": 2,
     "Etiqueta": "lbl_ErrorLogin",
     "Texto": "Incorrect credentials, please try again."
+  },
+  {
+    "Id": 538,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_ReestablecerPassword",
+    "Texto": "Restaurar Contraseña"
+  },
+  {
+    "Id": 539,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_ReestablecerPassword",
+    "Texto": "Restore Password"
+  },
+  {
+    "Id": 542,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_Reestablecer",
+    "Texto": "Reestablecer"
+  },
+  {
+    "Id": 543,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_Reestablecer",
+    "Texto": "Reset"
+  },
+  {
+    "Id": 552,
+    "IdiomaId": 1,
+    "Etiqueta": "validate_EmailRequerido",
+    "Texto": "El email es requerido."
+  },
+  {
+    "Id": 553,
+    "IdiomaId": 2,
+    "Etiqueta": "validate_EmailRequerido",
+    "Texto": "Email is required."
+  },
+  {
+    "Id": 554,
+    "IdiomaId": 1,
+    "Etiqueta": "validate_EmailFormatoInvalido",
+    "Texto": "Formato de correo inválido"
+  },
+  {
+    "Id": 555,
+    "IdiomaId": 2,
+    "Etiqueta": "validate_EmailFormatoInvalido",
+    "Texto": "Invalid email format"
   }
 ]
