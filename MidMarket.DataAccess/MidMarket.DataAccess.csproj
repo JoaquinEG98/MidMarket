@@ -106,7 +106,9 @@
     <Content Include="Scripts\Carrito\UPDATE_CARRITO.sql" />
     <Content Include="Scripts\Carrito\GET_CARRITO.sql" />
     <Content Include="Scripts\Carrito\INSERTAR_CARRITO.sql" />
+    <Content Include="Scripts\Compra\GET_ALL_COMPRAS.sql" />
     <Content Include="Scripts\Compra\GET_COMPRAS_ACTIVAS.sql" />
+    <Content Include="Scripts\Compra\GET_ALL_COMPRAS_DETALLE.sql" />
     <Content Include="Scripts\Compra\GET_COMPRAS_DETALLE_ACTIVAS.sql" />
     <Content Include="Scripts\Compra\GET_COMPRAS_DETALLE.sql" />
     <Content Include="Scripts\Compra\GET_COMPRAS.sql" />
@@ -116,6 +118,7 @@
     <Content Include="Scripts\Cuenta\CARGAR_SALDO.sql" />
     <Content Include="Scripts\Cuenta\OBTENER_ULTIMA_TRANSACCION.sql" />
     <Content Include="Scripts\Cuenta\OBTENER_TOTAL_INVERTIDO.sql" />
+    <Content Include="Scripts\DigitoVerificador\DTOs\GET_ALL_ACTIVO_CLIENTE.sql" />
     <Content Include="Scripts\DigitoVerificador\GET_DIGITO_VERTICAL.sql" />
     <Content Include="Scripts\Permiso\GET_USUARIOS_PERMISOS.sql" />
     <Content Include="Scripts\BkpRestore\REALIZAR_BACKUP.sql" />

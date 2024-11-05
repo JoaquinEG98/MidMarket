@@ -1,6 +1,6 @@
 ﻿namespace MidMarket.Entities
 {
-    public class DetalleCompra
+    public class DetalleCompra : DigitoVerificadorHorizontal
     {
         public int Id { get; set; }
         public Activo Activo { get; set; }

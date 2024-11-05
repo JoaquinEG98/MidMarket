@@ -1,3 +1,3 @@
-﻿INSERT INTO TransaccionCompra (Id_Cuenta, Id_Cliente, Fecha, Total)
+﻿INSERT INTO TransaccionCompra (Id_Cuenta, Id_Cliente, Fecha, Total, DVH)
 OUTPUT inserted.Id_Compra
-VALUES (@Id_Cuenta, @Id_Cliente, @Fecha, @Total)
+VALUES (@Id_Cuenta, @Id_Cliente, @Fecha, @Total, @DVH)

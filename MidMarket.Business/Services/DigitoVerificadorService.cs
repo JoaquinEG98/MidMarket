@@ -97,8 +97,11 @@ namespace MidMarket.Business.Services
         {
             bool cliente = ValidarDigitosVerificadores("Cliente");
             bool usuarioPermiso = ValidarDigitosVerificadores("UsuarioPermiso");
+            bool transaccionCompra = ValidarDigitosVerificadores("TransaccionCompra");
+            bool detalleCompra = ValidarDigitosVerificadores("DetalleCompra");
+            bool clienteActivo = ValidarDigitosVerificadores("ClienteActivo");
 
-            if (!cliente || !usuarioPermiso)
+            if (!cliente || !usuarioPermiso || !transaccionCompra || !detalleCompra || !clienteActivo)
                 return false;
 
             else
@@ -144,16 +147,88 @@ namespace MidMarket.Business.Services
             }
         }
 
-        public void RecalcularTodosDigitosVerificadores(IUsuarioService usuarioService, IPermisoService permisoService)
+        private void ActualizarTablaDVH(List<TransaccionCompra> compras)
+        {
+            using (TransactionScope scope = new TransactionScope())
+            {
+                foreach (TransaccionCompra compra in compras)
+                {
+                    var compraDTO = new TransaccionCompra()
+                    {
+                        Id = compra.Id,
+                        Fecha = compra.Fecha,
+                        Total = compra.Total,
+                    };
+                    compraDTO.DVH = DigitoVerificador.GenerarDVH(compraDTO);
+
+                    _digitoVerificadorDataAccess.ActualizarTablaDVH("TransaccionCompra", compraDTO.DVH, compraDTO.Id);
+                }
+                scope.Complete();
+            }
+        }
+
+        private void ActualizarTablaDVH(List<DetalleCompra> detalle)
+        {
+            using (TransactionScope scope = new TransactionScope())
+            {
+                foreach (DetalleCompra item in detalle)
+                {
+                    var detalleDTO = new DetalleCompra()
+                    {
+                        Id = item.Id,
+                        Cantidad = item.Cantidad,
+                        Precio = item.Precio,
+                    };
+                    detalleDTO.DVH = DigitoVerificador.GenerarDVH(detalleDTO);
+
+                    _digitoVerificadorDataAccess.ActualizarTablaDVH("DetalleCompra", detalleDTO.DVH, detalleDTO.Id);
+                }
+                scope.Complete();
+            }
+        }
+
+        private void ActualizarTablaDVH(List<ClienteActivoDTO> clienteActivo)
+        {
+            using (TransactionScope scope = new TransactionScope())
+            {
+                foreach (var item in clienteActivo)
+                {
+                    var clienteActivoDTO = new ClienteActivoDTO()
+                    {
+                        Id = item.Id,
+                        Id_Cliente = item.Id_Cliente,
+                        Id_Activo = item.Id_Activo,
+                        Cantidad = item.Cantidad
+                    };
+                    clienteActivoDTO.DVH = DigitoVerificador.GenerarDVH(clienteActivoDTO);
+
+                    _digitoVerificadorDataAccess.ActualizarTablaDVH("ClienteActivo", clienteActivoDTO.DVH, clienteActivoDTO.Id);
+                }
+                scope.Complete();
+            }
+        }
+
+        public void RecalcularTodosDigitosVerificadores(IUsuarioService usuarioService, IPermisoService permisoService, ICompraService compraService)
         {
             var clientes = usuarioService.GetClientesEncriptados();
             ActualizarTablaDVH(clientes);
             ActualizarDVV("Cliente");
 
-
             var usuariosPermisos = permisoService.GetUsuariosPermisos();
             ActualizarTablaDVH(usuariosPermisos);
             ActualizarDVV("UsuarioPermiso");
+
+            var compras = compraService.GetAllCompras();
+            ActualizarTablaDVH(compras);
+            ActualizarDVV("TransaccionCompra");
+
+            var detalleCompra = compraService.GetAllComprasDetalle();
+            ActualizarTablaDVH(detalleCompra);
+            ActualizarDVV("DetalleCompra");
+
+            var clienteActivo = compraService.GetAllClienteActivo();
+            ActualizarTablaDVH(clienteActivo);
+            ActualizarDVV("ClienteActivo");
         }
 
         public void RecalcularDigitosUsuario(IUsuarioService usuarioService, IPermisoService permisoService)

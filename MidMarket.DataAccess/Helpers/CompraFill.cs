@@ -1,4 +1,5 @@
 ﻿using MidMarket.Entities;
+using MidMarket.Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,7 +9,7 @@ namespace MidMarket.DataAccess.Helpers
 {
     public static class CompraFill
     {
-        public static TransaccionCompra FillObjectTransaccionCompra(DataRow dr, Cliente cliente)
+        public static TransaccionCompra FillObjectTransaccionCompra(DataRow dr, Cliente cliente = null)
         {
             TransaccionCompra compra = new TransaccionCompra();
             compra.Cliente = new Cliente();
@@ -17,9 +18,11 @@ namespace MidMarket.DataAccess.Helpers
             if (dr.Table.Columns.Contains("Id_Compra") && !Convert.IsDBNull(dr["Id_Compra"]))
                 compra.Id = Convert.ToInt32(dr["Id_Compra"]);
 
-            compra.Cuenta = cliente.Cuenta;
-
-            compra.Cliente = cliente;
+            if (cliente != null)
+            {
+                compra.Cuenta = cliente.Cuenta;
+                compra.Cliente = cliente;
+            }
 
             if (dr.Table.Columns.Contains("Fecha") && !Convert.IsDBNull(dr["Fecha"]))
                 compra.Fecha = Convert.ToDateTime(dr["Fecha"]);
@@ -106,6 +109,30 @@ namespace MidMarket.DataAccess.Helpers
         public static List<DetalleCompra> FillListDetalleCompra(DataSet ds)
         {
             return ds.Tables[0].AsEnumerable().Select(dr => FillObjectDetalleCompra(dr)).ToList();
+        }
+
+        public static ClienteActivoDTO FillObjectClienteActivo(DataRow dr)
+        {
+            ClienteActivoDTO clienteActivo = new ClienteActivoDTO();
+
+            if (dr.Table.Columns.Contains("Id_Cliente_Activo") && !Convert.IsDBNull(dr["Id_Cliente_Activo"]))
+                clienteActivo.Id = Convert.ToInt32(dr["Id_Cliente_Activo"]);
+
+            if (dr.Table.Columns.Contains("Id_Cliente") && !Convert.IsDBNull(dr["Id_Cliente"]))
+                clienteActivo.Id_Cliente = Convert.ToInt32(dr["Id_Cliente"]);
+
+            if (dr.Table.Columns.Contains("Id_Activo") && !Convert.IsDBNull(dr["Id_Activo"]))
+                clienteActivo.Id_Activo = Convert.ToInt32(dr["Id_Activo"]);
+
+            if (dr.Table.Columns.Contains("Cantidad") && !Convert.IsDBNull(dr["Cantidad"]))
+                clienteActivo.Cantidad = Convert.ToInt32(dr["Cantidad"]);
+
+            return clienteActivo;
+        }
+
+        public static List<ClienteActivoDTO> FillListClienteActivo(DataSet ds)
+        {
+            return ds.Tables[0].AsEnumerable().Select(dr => FillObjectClienteActivo(dr)).ToList();
         }
     }
 }

@@ -306,6 +306,36 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SELECT Id_Cliente_Activo, Id_Cliente, Id_Activo, Cantidad, DVH
+        ///FROM Cliente_Activo.
+        /// </summary>
+        internal static string GET_ALL_ACTIVO_CLIENTE {
+            get {
+                return ResourceManager.GetString("GET_ALL_ACTIVO_CLIENTE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT Id_Compra, Id_Cuenta, Id_Cliente, Fecha, Total
+        ///FROM TransaccionCompra.
+        /// </summary>
+        internal static string GET_ALL_COMPRAS {
+            get {
+                return ResourceManager.GetString("GET_ALL_COMPRAS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT Id_Detalle, Id_Activo, Id_Compra, Cantidad, Precio, DVH
+        ///FROM DetalleCompra.
+        /// </summary>
+        internal static string GET_ALL_COMPRAS_DETALLE {
+            get {
+                return ResourceManager.GetString("GET_ALL_COMPRAS_DETALLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SELECT Id_Bitacora, Id_Cliente, Descripcion, Criticidad, Fecha FROM Bitacora ORDER BY Fecha DESC.
         /// </summary>
         internal static string GET_BITACORA {
@@ -651,15 +681,15 @@ namespace MidMarket.DataAccess {
         ///   Looks up a localized string similar to IF EXISTS (SELECT 1 FROM Cliente_Activo WHERE Id_Cliente = @Id_Cliente AND Id_Activo = @Id_Activo)
         ///BEGIN
         ///    UPDATE Cliente_Activo
-        ///    SET Cantidad = Cantidad + @Cantidad
+        ///    SET Cantidad = Cantidad + @Cantidad, DVH = @DVH
         ///    OUTPUT inserted.Id_Cliente_Activo
         ///    WHERE Id_Cliente = @Id_Cliente AND Id_Activo = @Id_Activo;
         ///END
         ///ELSE
         ///BEGIN
-        ///    INSERT INTO Cliente_Activo (Id_Cliente, Id_Activo, Cantidad)
+        ///    INSERT INTO Cliente_Activo (Id_Cliente, Id_Activo, Cantidad, DVH)
         ///    OUTPUT inserted.Id_Cliente_Activo
-        ///    VALUES (@Id_Cliente, @Id_Activo, @Cantidad);
+        ///    VALUES (@Id_Cliente, @Id_Activo, @Cantidad, @DVH);
         ///END
         ///.
         /// </summary>
@@ -689,9 +719,9 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to INSERT INTO DetalleCompra (Id_Activo, Id_Compra, Cantidad, Precio)
+        ///   Looks up a localized string similar to INSERT INTO DetalleCompra (Id_Activo, Id_Compra, Cantidad, Precio, DVH)
         ///OUTPUT inserted.Id_Detalle
-        ///VALUES (@Id_Activo, @Id_Compra, @Cantidad, @Precio).
+        ///VALUES (@Id_Activo, @Id_Compra, @Cantidad, @Precio, @DVH).
         /// </summary>
         internal static string INSERTAR_DETALLE_COMPRA {
             get {
@@ -711,9 +741,9 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to INSERT INTO TransaccionCompra (Id_Cuenta, Id_Cliente, Fecha, Total)
+        ///   Looks up a localized string similar to INSERT INTO TransaccionCompra (Id_Cuenta, Id_Cliente, Fecha, Total, DVH)
         ///OUTPUT inserted.Id_Compra
-        ///VALUES (@Id_Cuenta, @Id_Cliente, @Fecha, @Total).
+        ///VALUES (@Id_Cuenta, @Id_Cliente, @Fecha, @Total, @DVH).
         /// </summary>
         internal static string INSERTAR_TRANSACCION_COMPRA {
             get {

@@ -71,6 +71,73 @@ namespace MidMarket.DataAccess.DAOs
                     }
 
                     break;
+
+                case "DETALLECOMPRA":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITOS_HORIZONTALES, "DetalleCompra");
+                    ds = _dataAccess.ExecuteNonReader();
+
+                    DataTable dtDetalleCompra = ds.Tables[0];
+                    if (dtDetalleCompra.Rows.Count > 0)
+                    {
+                        foreach (DataRow rows in dtDetalleCompra.Rows)
+                        {
+                            DetalleCompra detalleCompra = new DetalleCompra()
+                            {
+                                Cantidad = Convert.ToInt32(rows["Cantidad"].ToString()),
+                                Precio = Convert.ToDecimal(rows["Precio"].ToString()),
+                                DVH = Convert.ToString(rows["DVH"].ToString())
+                            };
+
+                            dvhs.Add(detalleCompra.DVH);
+                        }
+                    }
+
+                    break;
+
+                case "TRANSACCIONCOMPRA":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITOS_HORIZONTALES, "TransaccionCompra");
+                    ds = _dataAccess.ExecuteNonReader();
+
+                    DataTable dtTransaccionCompra = ds.Tables[0];
+                    if (dtTransaccionCompra.Rows.Count > 0)
+                    {
+                        foreach (DataRow rows in dtTransaccionCompra.Rows)
+                        {
+                            TransaccionCompra transaccionCompra = new TransaccionCompra()
+                            {
+                                Fecha = Convert.ToDateTime(rows["Fecha"].ToString()),
+                                Total = Convert.ToDecimal(rows["Total"].ToString()),
+                                DVH = Convert.ToString(rows["DVH"].ToString())
+                            };
+
+                            dvhs.Add(transaccionCompra.DVH);
+                        }
+                    }
+
+                    break;
+
+                case "CLIENTEACTIVO":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITOS_HORIZONTALES, "Cliente_Activo");
+                    ds = _dataAccess.ExecuteNonReader();
+
+                    DataTable dtClienteActivo = ds.Tables[0];
+                    if (dtClienteActivo.Rows.Count > 0)
+                    {
+                        foreach (DataRow rows in dtClienteActivo.Rows)
+                        {
+                            ClienteActivoDTO clienteActivo = new ClienteActivoDTO()
+                            {
+                                Id_Cliente = Convert.ToInt32(rows["Id_Cliente"].ToString()),
+                                Id_Activo = Convert.ToInt32(rows["Id_Activo"].ToString()),
+                                Cantidad = Convert.ToInt32(rows["Cantidad"].ToString()),
+                                DVH = Convert.ToString(rows["DVH"].ToString())
+                            };
+
+                            dvhs.Add(clienteActivo.DVH);
+                        }
+                    }
+
+                    break;
             }
 
             return dvhs;
@@ -129,6 +196,73 @@ namespace MidMarket.DataAccess.DAOs
                     }
 
                     break;
+
+                case "DETALLECOMPRA":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITOS_HORIZONTALES, "DetalleCompra");
+                    ds = _dataAccess.ExecuteNonReader();
+
+                    DataTable dtDetalleCompra = ds.Tables[0];
+                    if (dtDetalleCompra.Rows.Count > 0)
+                    {
+                        foreach (DataRow rows in dtDetalleCompra.Rows)
+                        {
+                            DetalleCompra detalleCompra = new DetalleCompra()
+                            {
+                                Cantidad = Convert.ToInt32(rows["Cantidad"].ToString()),
+                                Precio = Convert.ToDecimal(rows["Precio"].ToString()),
+                                DVH = Convert.ToString(rows["DVH"].ToString())
+                            };
+
+                            dvhs.Add(detalleCompra.DVH);
+                        }
+                    }
+
+                    break;
+
+                case "TRANSACCIONCOMPRA":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITOS_HORIZONTALES, "TransaccionCompra");
+                    ds = _dataAccess.ExecuteNonReader();
+
+                    DataTable dtTransaccionCompra = ds.Tables[0];
+                    if (dtTransaccionCompra.Rows.Count > 0)
+                    {
+                        foreach (DataRow rows in dtTransaccionCompra.Rows)
+                        {
+                            TransaccionCompra transaccionCompra = new TransaccionCompra()
+                            {
+                                Fecha = Convert.ToDateTime(rows["Fecha"].ToString()),
+                                Total = Convert.ToDecimal(rows["Total"].ToString()),
+                                DVH = Convert.ToString(rows["DVH"].ToString())
+                            };
+
+                            dvhs.Add(transaccionCompra.DVH);
+                        }
+                    }
+
+                    break;
+
+                case "CLIENTEACTIVO":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITOS_HORIZONTALES, "Cliente_Activo");
+                    ds = _dataAccess.ExecuteNonReader();
+
+                    DataTable dtClienteActivo = ds.Tables[0];
+                    if (dtClienteActivo.Rows.Count > 0)
+                    {
+                        foreach (DataRow rows in dtClienteActivo.Rows)
+                        {
+                            ClienteActivoDTO clienteActivo = new ClienteActivoDTO()
+                            {
+                                Id_Cliente = Convert.ToInt32(rows["Id_Cliente"].ToString()),
+                                Id_Activo = Convert.ToInt32(rows["Id_Activo"].ToString()),
+                                Cantidad = Convert.ToInt32(rows["Cantidad"].ToString()),
+                                DVH = Convert.ToString(rows["DVH"].ToString())
+                            };
+
+                            dvhs.Add(clienteActivo.DVH);
+                        }
+                    }
+
+                    break;
             }
 
             return dvhs;
@@ -151,6 +285,18 @@ namespace MidMarket.DataAccess.DAOs
                     _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Tabla", "UsuarioPermiso");
                     return _dataAccess.ExecuteNonEscalar();
 
+                case "DETALLECOMPRA":
+                    _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Tabla", "DetalleCompra");
+                    return _dataAccess.ExecuteNonEscalar();
+
+                case "TRANSACCIONCOMPRA":
+                    _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Tabla", "TransaccionCompra");
+                    return _dataAccess.ExecuteNonEscalar();
+
+                case "CLIENTEACTIVO":
+                    _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Tabla", "Cliente_Activo");
+                    return _dataAccess.ExecuteNonEscalar();
+
                 default: return 0;
             }
         }
@@ -167,6 +313,18 @@ namespace MidMarket.DataAccess.DAOs
 
                 case "USUARIOPERMISO":
                     _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITO_VERTICAL, "UsuarioPermiso");
+                    break;
+
+                case "DETALLECOMPRA":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITO_VERTICAL, "DetalleCompra");
+                    break;
+
+                case "TRANSACCIONCOMPRA":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITO_VERTICAL, "TransaccionCompra");
+                    break;
+
+                case "CLIENTEACTIVO":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITO_VERTICAL, "Cliente_Activo");
                     break;
             }
 
@@ -191,6 +349,15 @@ namespace MidMarket.DataAccess.DAOs
 
             if (tabla.ToUpper() == "USUARIOPERMISO")
                 _dataAccess.ExecuteCommandText = $"UPDATE {tabla} SET DVH = @parDVH OUTPUT inserted.Id_Usuario_Permiso WHERE Id_Usuario_Permiso = @parId";
+
+            if (tabla.ToUpper() == "DETALLECOMPRA")
+                _dataAccess.ExecuteCommandText = $"UPDATE {tabla} SET DVH = @parDVH OUTPUT inserted.Id_Detalle WHERE Id_Detalle = @parId";
+
+            if (tabla.ToUpper() == "TRANSACCIONCOMPRA")
+                _dataAccess.ExecuteCommandText = $"UPDATE {tabla} SET DVH = @parDVH OUTPUT inserted.Id_Compra WHERE Id_Compra = @parId";
+
+            if (tabla.ToUpper() == "CLIENTEACTIVO")
+                _dataAccess.ExecuteCommandText = $"UPDATE Cliente_Activo SET DVH = @parDVH OUTPUT inserted.Id_Cliente_Activo WHERE Id_Cliente_Activo = @parId";
 
             _dataAccess.ExecuteParameters.Parameters.Clear();
 

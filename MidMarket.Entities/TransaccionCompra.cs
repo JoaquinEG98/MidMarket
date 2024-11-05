@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace MidMarket.Entities
 {
-    public class TransaccionCompra
+    public class TransaccionCompra : DigitoVerificadorHorizontal
     {
         public int Id { get; set; }
         public Cuenta Cuenta { get; set; }

@@ -3,20 +3,20 @@
   <ActivosCompradosDTO>
     <Id>2</Id>
     <Nombre>Banco Galicia</Nombre>
-    <Cantidad>25</Cantidad>
-    <Total>306250.0000</Total>
+    <Cantidad>27</Cantidad>
+    <Total>330750.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
     <Id>1</Id>
     <Nombre>YPF SA</Nombre>
-    <Cantidad>11</Cantidad>
-    <Total>209500.0000</Total>
+    <Cantidad>13</Cantidad>
+    <Total>279500.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
     <Id>9</Id>
     <Nombre>BONAR 2024</Nombre>
-    <Cantidad>104</Cantidad>
-    <Total>137000.0000</Total>
+    <Cantidad>109</Cantidad>
+    <Total>149500.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
     <Id>3</Id>
