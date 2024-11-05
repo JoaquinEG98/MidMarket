@@ -29,6 +29,9 @@ namespace MidMarket.UI
         {
             try
             {
+                if (!Page.IsValid)
+                    return;
+
                 var idioma = _sessionManager.Get<IIdioma>("Idioma");
 
                 var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");

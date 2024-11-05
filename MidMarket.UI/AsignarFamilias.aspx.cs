@@ -90,6 +90,9 @@ namespace MidMarket.UI
                 var familiasSeleccionadas = Request.Form["familiasSeleccionadas"];
                 var familiasAsignadas = Request.Form["familiasAsignadas"];
 
+                if (string.IsNullOrEmpty(familiasSeleccionadas) || string.IsNullOrEmpty(familiasAsignadas) || ClienteSeleccionado == null || string.IsNullOrEmpty(familiasSeleccionadas))
+                    return;
+
                 var idsFamiliasSeleccionadas = familiasSeleccionadas?.Split(',').Select(int.Parse).ToList() ?? new List<int>();
 
                 var nuevasFamilias = _permisoService.GetFamilias().Where(f => idsFamiliasSeleccionadas.Contains(f.Id)).ToList();

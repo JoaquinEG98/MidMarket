@@ -27,6 +27,9 @@ namespace MidMarket.UI
         {
             try
             {
+                if (!Page.IsValid)
+                    return;
+
                 var idioma = _sessionManager.Get<IIdioma>("Idioma");
 
                 string numTarjeta = numeroTarjeta.Text;

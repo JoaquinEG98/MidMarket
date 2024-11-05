@@ -2704,5 +2704,41 @@
     "IdiomaId": 2,
     "Etiqueta": "label_Page",
     "Texto": "Page"
+  },
+  {
+    "Id": 480,
+    "IdiomaId": 1,
+    "Etiqueta": "validate_FechaVencimientoTarjeta",
+    "Texto": "Fecha de vencimiento inválida"
+  },
+  {
+    "Id": 481,
+    "IdiomaId": 2,
+    "Etiqueta": "validate_FechaVencimientoTarjeta",
+    "Texto": "Invalid Expiration Date"
+  },
+  {
+    "Id": 482,
+    "IdiomaId": 1,
+    "Etiqueta": "validate_CodigoSeguridad",
+    "Texto": "Código de seguridad inválido"
+  },
+  {
+    "Id": 483,
+    "IdiomaId": 2,
+    "Etiqueta": "validate_CodigoSeguridad",
+    "Texto": "Invalid Security Code"
+  },
+  {
+    "Id": 484,
+    "IdiomaId": 1,
+    "Etiqueta": "validate_MontoInvalido",
+    "Texto": "El monto es requerido"
+  },
+  {
+    "Id": 485,
+    "IdiomaId": 2,
+    "Etiqueta": "validate_MontoInvalido",
+    "Texto": "The amount is required"
   }
 ]

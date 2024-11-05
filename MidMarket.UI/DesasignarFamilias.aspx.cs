@@ -86,6 +86,9 @@ namespace MidMarket.UI
                 var familiasSeleccionadas = Request.Form["familiasSeleccionadas"];
                 var idsFamiliasSeleccionadas = familiasSeleccionadas?.Split(',').Select(int.Parse).ToList() ?? new List<int>();
 
+                if (string.IsNullOrEmpty(familiasSeleccionadas) || ClienteSeleccionado == null)
+                    return;
+
                 ClienteSeleccionado.EliminarPermisosPorId(idsFamiliasSeleccionadas);
 
                 _permisoService.GuardarPermiso(ClienteSeleccionado);

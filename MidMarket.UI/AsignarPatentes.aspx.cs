@@ -90,6 +90,8 @@ namespace MidMarket.UI
                 var patentesSeleccionadas = Request.Form["patentesSeleccionadas"];
                 var patentesAsignadas = Request.Form["patentesAsignadas"];
 
+                if (patentesSeleccionadas == null || patentesAsignadas == null || ClienteSeleccionado == null)
+                    return;
 
                 var idsPatentesSeleccionadas = patentesSeleccionadas?.Split(',').Select(int.Parse).ToList() ?? new List<int>();
                 //var idsPatentesAsignadas = patentesAsignadas?.Split(',').Select(int.Parse).ToList() ?? new List<int>();

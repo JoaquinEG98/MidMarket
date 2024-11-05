@@ -8,11 +8,13 @@
             <div class="form-group-saldo">
                 <label for="nombreTitular" data-etiqueta="label_NombreTitular">Nombre del Titular</label>
                 <asp:TextBox ID="nombreTitular" runat="server" ClientIDMode="Static" CssClass="form-control" autocomplete="off" />
+                <asp:RequiredFieldValidator ID="rfvNombreTitular" runat="server" ControlToValidate="nombreTitular" ErrorMessage="El nombre del titular es obligatorio" CssClass="dni-validacion-label" Display="Dynamic" data-etiqueta="error_NombreRequerido" />
             </div>
 
             <div class="form-group-saldo">
                 <label for="dniTitular" data-etiqueta="label_DNI">DNI</label>
                 <asp:TextBox ID="dniTitular" runat="server" ClientIDMode="Static" CssClass="form-control" MaxLength="8" oninput="validarDNI()" autocomplete="off" />
+                <asp:RequiredFieldValidator ID="rfvDniTitular" runat="server" ControlToValidate="dniTitular" ErrorMessage="El DNI es obligatorio" CssClass="dni-validacion-label" Display="Dynamic" data-etiqueta="validacion_DNIInvalido" />
                 <asp:Label ID="lblDniValido" runat="server" CssClass="dni-validacion-label"></asp:Label>
             </div>
 
@@ -20,6 +22,7 @@
                 <label for="numeroTarjeta" data-etiqueta="label_NumeroTarjeta">Número de Tarjeta</label>
                 <div class="input-icon-container">
                     <asp:TextBox ID="numeroTarjeta" runat="server" ClientIDMode="Static" CssClass="form-control" MaxLength="16" oninput="validarNumeroTarjeta()" placeholder="#### #### #### ####" autocomplete="off" />
+                    <asp:RequiredFieldValidator ID="rfvNumeroTarjeta" runat="server" ControlToValidate="numeroTarjeta" ErrorMessage="El número de tarjeta es obligatorio" CssClass="dni-validacion-label" Display="Dynamic" data-etiqueta="validacion_TarjetaInvalida" />
                     <asp:Image ID="cardIcon" runat="server" CssClass="card-icon" ImageUrl="" AlternateText="Icono de tarjeta" Style="display: none;" />
                 </div>
                 <asp:Label ID="lblCardType" runat="server" CssClass="card-type-label"></asp:Label>
@@ -28,16 +31,19 @@
             <div class="form-group-saldo">
                 <label for="fechaVencimiento" data-etiqueta="label_FechaVencimiento">Fecha de Vencimiento (MM/AA)</label>
                 <asp:TextBox ID="fechaVencimiento" runat="server" ClientIDMode="Static" CssClass="form-control" MaxLength="5" oninput="formatearFechaVencimiento()" placeholder="MM/AA" autocomplete="off" />
+                <asp:RequiredFieldValidator ID="rfvFechaVencimiento" runat="server" ControlToValidate="fechaVencimiento" ErrorMessage="La fecha de vencimiento es obligatoria" CssClass="dni-validacion-label" Display="Dynamic" data-etiqueta="validate_FechaVencimientoTarjeta" />
             </div>
 
             <div class="form-group-saldo">
                 <label for="codigoSeguridad" data-etiqueta="label_CodigoSeguridad">Código de Seguridad (CVV)</label>
                 <asp:TextBox ID="codigoSeguridad" runat="server" ClientIDMode="Static" CssClass="form-control" MaxLength="4" autocomplete="off" />
+                <asp:RequiredFieldValidator ID="rfvCodigoSeguridad" runat="server" ControlToValidate="codigoSeguridad" ErrorMessage="El código de seguridad es obligatorio" CssClass="dni-validacion-label" Display="Dynamic" data-etiqueta="validate_CodigoSeguridad" />
             </div>
 
             <div class="form-group-saldo">
                 <label for="monto" data-etiqueta="label_MontoCargar">Monto a Cargar</label>
                 <asp:TextBox ID="monto" runat="server" ClientIDMode="Static" CssClass="form-control" autocomplete="off" />
+                <asp:RequiredFieldValidator ID="rfvMonto" runat="server" ControlToValidate="monto" ErrorMessage="El monto a cargar es obligatorio" CssClass="dni-validacion-label" Display="Dynamic" data-etiqueta="validate_MontoInvalido" />
             </div>
 
             <asp:Label ID="lblResultado" runat="server" Text="" CssClass="resultado-label"></asp:Label>

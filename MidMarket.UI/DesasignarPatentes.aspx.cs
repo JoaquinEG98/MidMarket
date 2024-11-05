@@ -86,6 +86,9 @@ namespace MidMarket.UI
                 var patentesSeleccionadas = Request.Form["patentesSeleccionadas"];
                 var idsPatentesSeleccionadas = patentesSeleccionadas?.Split(',').Select(int.Parse).ToList() ?? new List<int>();
 
+                if (string.IsNullOrEmpty(patentesSeleccionadas) || ClienteSeleccionado == null)
+                    return;
+
                 ClienteSeleccionado.EliminarPermisosPorId(idsPatentesSeleccionadas);
 
                 _permisoService.GuardarPermiso(ClienteSeleccionado);

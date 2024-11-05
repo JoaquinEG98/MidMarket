@@ -24,6 +24,15 @@ namespace MidMarket.UI
         protected global::System.Web.UI.WebControls.TextBox nombreTitular;
 
         /// <summary>
+        /// rfvNombreTitular control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNombreTitular;
+
+        /// <summary>
         /// dniTitular control.
         /// </summary>
         /// <remarks>
@@ -31,6 +40,15 @@ namespace MidMarket.UI
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox dniTitular;
+
+        /// <summary>
+        /// rfvDniTitular control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDniTitular;
 
         /// <summary>
         /// lblDniValido control.
@@ -49,6 +67,15 @@ namespace MidMarket.UI
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox numeroTarjeta;
+
+        /// <summary>
+        /// rfvNumeroTarjeta control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNumeroTarjeta;
 
         /// <summary>
         /// cardIcon control.
@@ -78,6 +105,15 @@ namespace MidMarket.UI
         protected global::System.Web.UI.WebControls.TextBox fechaVencimiento;
 
         /// <summary>
+        /// rfvFechaVencimiento control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvFechaVencimiento;
+
+        /// <summary>
         /// codigoSeguridad control.
         /// </summary>
         /// <remarks>
@@ -87,6 +123,15 @@ namespace MidMarket.UI
         protected global::System.Web.UI.WebControls.TextBox codigoSeguridad;
 
         /// <summary>
+        /// rfvCodigoSeguridad control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCodigoSeguridad;
+
+        /// <summary>
         /// monto control.
         /// </summary>
         /// <remarks>
@@ -94,6 +139,15 @@ namespace MidMarket.UI
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox monto;
+
+        /// <summary>
+        /// rfvMonto control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvMonto;
 
         /// <summary>
         /// lblResultado control.

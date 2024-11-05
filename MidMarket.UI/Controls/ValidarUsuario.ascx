@@ -22,6 +22,8 @@
     <asp:RegularExpressionValidator ID="revRazonSocial" runat="server" ControlToValidate="txtRazonSocialUsuario"
         ValidationExpression=".{1,30}"
         ErrorMessage="La razón social no debe superar los 30 caracteres." Display="Dynamic" CssClass="error-message" data-etiqueta="error_RazonSocialLongitud"></asp:RegularExpressionValidator>
+    <asp:RequiredFieldValidator ID="rfvRazonSocial" runat="server" ControlToValidate="txtRazonSocialUsuario"
+        ErrorMessage="La razón social es obligatoria." Display="Dynamic" CssClass="error-message" data-etiqueta="error_RazonSocialLongitud"></asp:RequiredFieldValidator>
 </div>
 
 <div class="form-group-usuarios">
@@ -30,4 +32,6 @@
     <asp:RegularExpressionValidator ID="revCUIT" runat="server" ControlToValidate="txtCUITUsuario"
         ValidationExpression="^\d{11}$"
         ErrorMessage="El CUIT debe contener exactamente 11 dígitos." Display="Dynamic" CssClass="error-message" data-etiqueta="error_CUITFormato"></asp:RegularExpressionValidator>
+    <asp:RequiredFieldValidator ID="rfvCUITUsuario" runat="server" ControlToValidate="txtCUITUsuario"
+        ErrorMessage="El CUIT es obligatorio." Display="Dynamic" CssClass="error-message" data-etiqueta="error_CUITFormato"></asp:RequiredFieldValidator>
 </div>

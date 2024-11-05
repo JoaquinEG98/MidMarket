@@ -57,6 +57,9 @@ namespace MidMarket.UI
         {
             try
             {
+                if (!Page.IsValid)
+                    return;
+
                 var idioma = _sessionManager.Get<IIdioma>("Idioma");
 
                 string emailUsuario = Request.Form["emailUsuario"];
