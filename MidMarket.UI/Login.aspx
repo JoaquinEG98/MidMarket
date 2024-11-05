@@ -5,31 +5,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MidMarket - Login</title>
+    <title data-etiqueta="titulo_Login">MidMarket - Login</title>
     <link rel="stylesheet" href="Styles/registro_login_style.css">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <div class="container">
         <form id="form1" runat="server" method="post" class="registro-form">
-            <h2>Iniciar sesión</h2>
+            <h2 data-etiqueta="titulo_IniciarSesion">Iniciar sesión</h2>
             <div class="form-group">
-                <label for="email">Email</label>
+                <label for="txtEmail" data-etiqueta="lbl_Email">Email</label>
                 <input type="email" id="txtEmail" name="correo" autocomplete="off" required runat="server">
             </div>
             <div class="form-group">
-                <label for="password">Password</label>
+                <label for="txtPassword" data-etiqueta="lbl_Password">Password</label>
                 <input type="password" id="txtPassword" name="password" required runat="server">
             </div>
-            <asp:Button type="submit" id="btnLogin" class="submit-btn" runat="server" Text="Login" OnClick="btnLogin_Click"></asp:Button>
+            <asp:Button type="submit" id="btnLogin" class="submit-btn" runat="server" Text="Login" OnClick="btnLogin_Click" data-etiqueta="btn_Login"></asp:Button>
 
             <br />
             <asp:Label ID="lblError" runat="server" ForeColor="Red" Visible="false" CssClass="error-label"></asp:Label>
         </form>
         <div class="extra-options">
-<%--            <p>¿No tienes cuenta? <a href="registro.aspx">Regístrate aquí</a></p>--%>
-            <p><a href="reestablecerpassword.aspx">¿Olvidaste tu contraseña?</a></p>
+            <p><a href="reestablecerpassword.aspx" data-etiqueta="link_OlvidoPassword">¿Olvidaste tu contraseña?</a></p>
         </div>
     </div>
+
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll("[data-etiqueta]").forEach(function (element) {
+                const etiqueta = element.getAttribute("data-etiqueta");
+                if (traducciones && traducciones[etiqueta]) {
+                    element.textContent = traducciones[etiqueta];
+                }
+            });
+        });
+    </script>
 </body>
 </html>

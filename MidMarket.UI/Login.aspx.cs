@@ -1,5 +1,7 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
+using MidMarket.Entities.Observer;
+using MidMarket.UI.Helpers;
 using System;
 using Unity;
 
@@ -9,11 +11,13 @@ namespace MidMarket.UI
     {
         private readonly ISessionManager _sessionManager;
         private readonly IUsuarioService _usuarioService;
+        private readonly ITraduccionService _traduccionService;
 
         public Login()
         {
             _sessionManager = Global.Container.Resolve<ISessionManager>();
             _usuarioService = Global.Container.Resolve<IUsuarioService>();
+            _traduccionService = Global.Container.Resolve<ITraduccionService>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -24,6 +28,8 @@ namespace MidMarket.UI
 
                 if (cliente != null)
                     Response.Redirect("MenuPrincipal.aspx");
+
+                VerificarIdioma();
             }
         }
 
@@ -40,9 +46,17 @@ namespace MidMarket.UI
             }
             catch (Exception ex)
             {
-                lblError.Text = $"Error al iniciar sesión: {ex.Message}";
+                lblError.Text = $"{ex.Message}";
                 lblError.Visible = true;
             }
+        }
+
+        private void VerificarIdioma()
+        {
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
+            var traducciones = _traduccionService.ObtenerTraducciones(idioma);
+            ScriptHelper.TraducirPagina(this.Page, traducciones, _sessionManager);
         }
     }
 }

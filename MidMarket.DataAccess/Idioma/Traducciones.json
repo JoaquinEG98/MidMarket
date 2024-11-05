@@ -2968,5 +2968,89 @@
     "IdiomaId": 2,
     "Etiqueta": "btn_Contactanos",
     "Texto": "Contact Us"
+  },
+  {
+    "Id": 524,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_Login",
+    "Texto": "MidMarket - Iniciar sesión"
+  },
+  {
+    "Id": 525,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_Login",
+    "Texto": "MidMarket - Login"
+  },
+  {
+    "Id": 526,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_IniciarSesion",
+    "Texto": "Iniciar sesión"
+  },
+  {
+    "Id": 527,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_IniciarSesion",
+    "Texto": "Sign In"
+  },
+  {
+    "Id": 528,
+    "IdiomaId": 1,
+    "Etiqueta": "lbl_Email",
+    "Texto": "Correo Electrónico"
+  },
+  {
+    "Id": 529,
+    "IdiomaId": 2,
+    "Etiqueta": "lbl_Email",
+    "Texto": "Email"
+  },
+  {
+    "Id": 530,
+    "IdiomaId": 1,
+    "Etiqueta": "lbl_Password",
+    "Texto": "Contraseña"
+  },
+  {
+    "Id": 531,
+    "IdiomaId": 2,
+    "Etiqueta": "lbl_Password",
+    "Texto": "Password"
+  },
+  {
+    "Id": 532,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_Login",
+    "Texto": "Iniciar sesión"
+  },
+  {
+    "Id": 533,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_Login",
+    "Texto": "Login"
+  },
+  {
+    "Id": 534,
+    "IdiomaId": 1,
+    "Etiqueta": "link_OlvidoPassword",
+    "Texto": "¿Olvidaste tu contraseña?"
+  },
+  {
+    "Id": 535,
+    "IdiomaId": 2,
+    "Etiqueta": "link_OlvidoPassword",
+    "Texto": "Forgot your password?"
+  },
+  {
+    "Id": 536,
+    "IdiomaId": 1,
+    "Etiqueta": "lbl_ErrorLogin",
+    "Texto": "Credenciales incorrectas, por favor intenta nuevamente."
+  },
+  {
+    "Id": 537,
+    "IdiomaId": 2,
+    "Etiqueta": "lbl_ErrorLogin",
+    "Texto": "Incorrect credentials, please try again."
   }
 ]
