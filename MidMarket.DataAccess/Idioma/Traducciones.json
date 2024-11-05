@@ -2740,5 +2740,233 @@
     "IdiomaId": 2,
     "Etiqueta": "validate_MontoInvalido",
     "Texto": "The amount is required"
+  },
+  {
+    "Id": 486,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_MidMarket",
+    "Texto": "MidMarket"
+  },
+  {
+    "Id": 487,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_MidMarket",
+    "Texto": "MidMarket"
+  },
+  {
+    "Id": 488,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_IniciarSesion",
+    "Texto": "Iniciar Sesión"
+  },
+  {
+    "Id": 489,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_IniciarSesion",
+    "Texto": "Login"
+  },
+  {
+    "Id": 490,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_NuestrasCaracteristicas",
+    "Texto": "Nuestras Características"
+  },
+  {
+    "Id": 491,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_NuestrasCaracteristicas",
+    "Texto": "Our Features"
+  },
+  {
+    "Id": 492,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_AsesoriaFinanciera",
+    "Texto": "Asesoría Financiera"
+  },
+  {
+    "Id": 493,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_AsesoriaFinanciera",
+    "Texto": "Financial Advisory"
+  },
+  {
+    "Id": 494,
+    "IdiomaId": 1,
+    "Etiqueta": "desc_AsesoriaFinanciera",
+    "Texto": "Expertos en brindar soluciones a medida para las necesidades específicas de su empresa."
+  },
+  {
+    "Id": 495,
+    "IdiomaId": 2,
+    "Etiqueta": "desc_AsesoriaFinanciera",
+    "Texto": "Experts in providing tailored solutions for your company's specific needs."
+  },
+  {
+    "Id": 496,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_SeguridadConfianza",
+    "Texto": "Seguridad y Confianza"
+  },
+  {
+    "Id": 497,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_SeguridadConfianza",
+    "Texto": "Security and Trust"
+  },
+  {
+    "Id": 498,
+    "IdiomaId": 1,
+    "Etiqueta": "desc_SeguridadConfianza",
+    "Texto": "Protegemos sus transacciones con la más alta seguridad."
+  },
+  {
+    "Id": 499,
+    "IdiomaId": 2,
+    "Etiqueta": "desc_SeguridadConfianza",
+    "Texto": "We protect your transactions with the highest security."
+  },
+  {
+    "Id": 500,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_OptimizacionRecursos",
+    "Texto": "Optimización de Recursos"
+  },
+  {
+    "Id": 501,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_OptimizacionRecursos",
+    "Texto": "Resource Optimization"
+  },
+  {
+    "Id": 502,
+    "IdiomaId": 1,
+    "Etiqueta": "desc_OptimizacionRecursos",
+    "Texto": "Maximizamos el rendimiento de sus inversiones con estrategias personalizadas."
+  },
+  {
+    "Id": 503,
+    "IdiomaId": 2,
+    "Etiqueta": "desc_OptimizacionRecursos",
+    "Texto": "We maximize the performance of your investments with tailored strategies."
+  },
+  {
+    "Id": 504,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_NuestrosServicios",
+    "Texto": "Nuestros Servicios"
+  },
+  {
+    "Id": 505,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_NuestrosServicios",
+    "Texto": "Our Services"
+  },
+  {
+    "Id": 506,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_FinanciamientoEmpresarial",
+    "Texto": "Financiamiento Empresarial"
+  },
+  {
+    "Id": 507,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_FinanciamientoEmpresarial",
+    "Texto": "Business Financing"
+  },
+  {
+    "Id": 508,
+    "IdiomaId": 1,
+    "Etiqueta": "desc_FinanciamientoEmpresarial",
+    "Texto": "Proveemos las mejores opciones de financiamiento para apoyar el crecimiento de su empresa."
+  },
+  {
+    "Id": 509,
+    "IdiomaId": 2,
+    "Etiqueta": "desc_FinanciamientoEmpresarial",
+    "Texto": "We provide the best financing options to support your company’s growth."
+  },
+  {
+    "Id": 510,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_GestionInversiones",
+    "Texto": "Gestión de Inversiones"
+  },
+  {
+    "Id": 511,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_GestionInversiones",
+    "Texto": "Investment Management"
+  },
+  {
+    "Id": 512,
+    "IdiomaId": 1,
+    "Etiqueta": "desc_GestionInversiones",
+    "Texto": "Optimizamos sus inversiones para asegurar un rendimiento sólido y constante."
+  },
+  {
+    "Id": 513,
+    "IdiomaId": 2,
+    "Etiqueta": "desc_GestionInversiones",
+    "Texto": "We optimize your investments to ensure solid and consistent returns."
+  },
+  {
+    "Id": 514,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_PortafoliosInversion",
+    "Texto": "Portafolios de Inversión Avanzados"
+  },
+  {
+    "Id": 515,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_PortafoliosInversion",
+    "Texto": "Advanced Investment Portfolios"
+  },
+  {
+    "Id": 516,
+    "IdiomaId": 1,
+    "Etiqueta": "desc_PortafoliosInversion",
+    "Texto": "Contamos con Portafolios de Inversión dedicados exclusivamente para cada Empresa."
+  },
+  {
+    "Id": 517,
+    "IdiomaId": 2,
+    "Etiqueta": "desc_PortafoliosInversion",
+    "Texto": "We have Investment Portfolios exclusively dedicated to each company."
+  },
+  {
+    "Id": 518,
+    "IdiomaId": 1,
+    "Etiqueta": "titulo_SolucionesFinancieras",
+    "Texto": "Soluciones Financieras Exclusivas para Empresas Medianas"
+  },
+  {
+    "Id": 519,
+    "IdiomaId": 2,
+    "Etiqueta": "titulo_SolucionesFinancieras",
+    "Texto": "Exclusive Financial Solutions for Mid-Sized Companies"
+  },
+  {
+    "Id": 520,
+    "IdiomaId": 1,
+    "Etiqueta": "desc_SolucionesFinancieras",
+    "Texto": "Impulsando el crecimiento de su empresa con servicios financieros personalizados y eficaces."
+  },
+  {
+    "Id": 521,
+    "IdiomaId": 2,
+    "Etiqueta": "desc_SolucionesFinancieras",
+    "Texto": "Driving your company's growth with personalized and effective financial services."
+  },
+  {
+    "Id": 522,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_Contactanos",
+    "Texto": "Contáctanos"
+  },
+  {
+    "Id": 523,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_Contactanos",
+    "Texto": "Contact Us"
   }
 ]

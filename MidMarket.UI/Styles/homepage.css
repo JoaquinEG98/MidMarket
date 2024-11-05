@@ -298,3 +298,79 @@ footer.hero .cta-btn {
     left: 85%;
     animation: floatY 10s ease-in-out infinite;
 }
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #7e57c2;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.idioma-dropdown {
+    position: relative;
+    font-weight: bold;
+    margin-top: -5px;
+}
+
+.idioma-btn {
+    color: #7e57c2;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.idioma-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    top: 100%;
+    left: 0;
+}
+
+    .idioma-menu .dropdown-item {
+        color: #333;
+        padding: 8px 12px;
+        text-decoration: none;
+        display: block;
+    }
+
+        .idioma-menu .dropdown-item:hover {
+            background-color: #f1f1f1;
+        }
+
+.idioma-dropdown:hover .idioma-menu {
+    display: block;
+}
+
+.login-btn {
+    background-color: #7e57c2;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 0;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+    .login-btn:hover {
+        background-color: #6a1b9a;
+    }
