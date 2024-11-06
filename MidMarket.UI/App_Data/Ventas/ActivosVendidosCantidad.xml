@@ -15,14 +15,14 @@
   <ActivosVendidosDTO>
     <Id>2</Id>
     <Nombre>Banco Galicia</Nombre>
-    <Cantidad>24</Cantidad>
-    <Total>281750.0000</Total>
+    <Cantidad>25</Cantidad>
+    <Total>294000.0000</Total>
   </ActivosVendidosDTO>
   <ActivosVendidosDTO>
     <Id>13</Id>
     <Nombre>BPJ5D</Nombre>
-    <Cantidad>20</Cantidad>
-    <Total>2000.0000</Total>
+    <Cantidad>23</Cantidad>
+    <Total>2300.0000</Total>
   </ActivosVendidosDTO>
   <ActivosVendidosDTO>
     <Id>11</Id>

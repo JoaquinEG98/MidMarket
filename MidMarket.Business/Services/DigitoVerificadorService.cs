@@ -106,8 +106,9 @@ namespace MidMarket.Business.Services
             bool familiaPatente = ValidarDigitosVerificadores("FamiliaPatente");
             bool cuenta = ValidarDigitosVerificadores("Cuenta");
             bool carrito = ValidarDigitosVerificadores("Carrito");
+            bool bitacora = ValidarDigitosVerificadores("Bitacora");
 
-            if (!cliente || !usuarioPermiso || !transaccionCompra || !detalleCompra || !clienteActivo || !transaccionVenta || !detalleVenta || !permisos || !familiaPatente || !cuenta || !carrito)
+            if (!cliente || !usuarioPermiso || !transaccionCompra || !detalleCompra || !clienteActivo || !transaccionVenta || !detalleVenta || !permisos || !familiaPatente || !cuenta || !carrito || !bitacora)
                 return false;
 
             else
@@ -338,7 +339,30 @@ namespace MidMarket.Business.Services
             }
         }
 
-        public void RecalcularTodosDigitosVerificadores(IUsuarioService usuarioService, IPermisoService permisoService, ICompraService compraService, IVentaService ventaService, ICarritoService carritoService)
+        private void ActualizarTablaDVH(List<BitacoraDTO> bitacora)
+        {
+            using (TransactionScope scope = new TransactionScope())
+            {
+                foreach (var item in bitacora)
+                {
+                    var bitacoraDTO = new BitacoraDTO()
+                    {
+                        Id = item.Id,
+                        Id_Cliente = item.Id_Cliente,
+                        Descripcion = item.Descripcion,
+                        Criticidad = item.Criticidad,
+                        Fecha = item.Fecha,
+                        DVH = item.DVH,
+                    };
+                    bitacoraDTO.DVH = DigitoVerificador.GenerarDVH(bitacoraDTO);
+
+                    _digitoVerificadorDataAccess.ActualizarTablaDVH("Bitacora", bitacoraDTO.DVH, bitacoraDTO.Id);
+                }
+                scope.Complete();
+            }
+        }
+
+        public void RecalcularTodosDigitosVerificadores(IUsuarioService usuarioService, IPermisoService permisoService, ICompraService compraService, IVentaService ventaService, ICarritoService carritoService, IBitacoraService bitacoraService)
         {
             var clientes = usuarioService.GetClientesEncriptados();
             ActualizarTablaDVH(clientes);
@@ -383,6 +407,10 @@ namespace MidMarket.Business.Services
             var carrito = carritoService.GetCarritoDTO();
             ActualizarTablaDVH(carrito);
             ActualizarDVV("Carrito");
+
+            var bitacora = bitacoraService.GetAllBitacora();
+            ActualizarTablaDVH(bitacora);
+            ActualizarDVV("Bitacora");
         }
 
         public void RecalcularDigitosUsuario(IUsuarioService usuarioService, IPermisoService permisoService)
@@ -425,6 +453,13 @@ namespace MidMarket.Business.Services
             var carrito = carritoService.GetCarritoDTO();
             ActualizarTablaDVH(carrito);
             ActualizarDVV("Carrito");
+        }
+
+        public void RecalcularDigitosBitacora(IBitacoraService bitacoraService)
+        {
+            var bitacora = bitacoraService.GetAllBitacora();
+            ActualizarTablaDVH(bitacora);
+            ActualizarDVV("Bitacora");
         }
     }
 }

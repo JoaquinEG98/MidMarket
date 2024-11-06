@@ -95,6 +95,7 @@
     <Content Include="Scripts\Activo\ADD_BONO.sql" />
     <Content Include="Scripts\Activo\ADD_ACCION.sql" />
     <Content Include="Scripts\Activo\ADD_ACTIVO.sql" />
+    <Content Include="Scripts\Bitacora\GET_ALL_BITACORA.sql" />
     <Content Include="Scripts\Bitacora\GET_BITACORA.sql" />
     <Content Include="Scripts\Bitacora\ALTA_BITACORA.sql" />
     <Content Include="Scripts\Calculo\ACTIVOS_MAS_VENDIDOS_TOTAL.sql" />

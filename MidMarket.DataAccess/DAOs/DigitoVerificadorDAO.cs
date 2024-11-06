@@ -279,6 +279,31 @@ namespace MidMarket.DataAccess.DAOs
                     }
 
                     break;
+
+                case "BITACORA":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITOS_HORIZONTALES, "Bitacora");
+                    ds = _dataAccess.ExecuteNonReader();
+
+                    DataTable dtBitacora = ds.Tables[0];
+                    if (dtBitacora.Rows.Count > 0)
+                    {
+                        foreach (DataRow rows in dtBitacora.Rows)
+                        {
+                            var bitacora = new BitacoraDTO()
+                            {
+                                Id = Convert.ToInt32(rows["Id_Bitacora"].ToString()),
+                                Id_Cliente = Convert.ToInt32(rows["Id_Cliente"].ToString()),
+                                Descripcion = Convert.ToString(rows["Descripcion"].ToString()),
+                                Criticidad = Convert.ToInt32(rows["Criticidad"].ToString()),
+                                Fecha = Convert.ToDateTime(rows["Fecha"].ToString()),
+                                DVH = Convert.ToString(rows["DVH"].ToString()),
+                            };
+
+                            dvhs.Add(bitacora.DVH);
+                        }
+                    }
+
+                    break;
             }
 
             return dvhs;
@@ -544,6 +569,31 @@ namespace MidMarket.DataAccess.DAOs
                     }
 
                     break;
+
+                case "BITACORA":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITOS_HORIZONTALES, "Bitacora");
+                    ds = _dataAccess.ExecuteNonReader();
+
+                    DataTable dtBitacora = ds.Tables[0];
+                    if (dtBitacora.Rows.Count > 0)
+                    {
+                        foreach (DataRow rows in dtBitacora.Rows)
+                        {
+                            var bitacora = new BitacoraDTO()
+                            {
+                                Id = Convert.ToInt32(rows["Id_Bitacora"].ToString()),
+                                Id_Cliente = Convert.ToInt32(rows["Id_Cliente"].ToString()),
+                                Descripcion = Convert.ToString(rows["Descripcion"].ToString()),
+                                Criticidad = Convert.ToInt32(rows["Criticidad"].ToString()),
+                                Fecha = Convert.ToDateTime(rows["Fecha"].ToString()),
+                                DVH = Convert.ToString(rows["DVH"].ToString()),
+                            };
+
+                            dvhs.Add(bitacora.DVH);
+                        }
+                    }
+
+                    break;
             }
 
             return dvhs;
@@ -602,6 +652,10 @@ namespace MidMarket.DataAccess.DAOs
                     _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Tabla", "Carrito");
                     return _dataAccess.ExecuteNonEscalar();
 
+                case "BITACORA":
+                    _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Tabla", "Bitacora");
+                    return _dataAccess.ExecuteNonEscalar();
+
                 default: return 0;
             }
         }
@@ -655,6 +709,10 @@ namespace MidMarket.DataAccess.DAOs
                 case "CARRITO":
                     _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITO_VERTICAL, "Carrito");
                     break;
+
+                case "BITACORA":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITO_VERTICAL, "Bitacora");
+                    break;
             }
 
             DataSet ds = _dataAccess.ExecuteNonReader();
@@ -702,6 +760,9 @@ namespace MidMarket.DataAccess.DAOs
 
             if (tabla.ToUpper() == "CARRITO")
                 _dataAccess.ExecuteCommandText = $"UPDATE {tabla} SET DVH = @parDVH OUTPUT inserted.Id_Carrito WHERE Id_Carrito = @parId";
+
+            if (tabla.ToUpper() == "BITACORA")
+                _dataAccess.ExecuteCommandText = $"UPDATE {tabla} SET DVH = @parDVH OUTPUT inserted.Id_BItacora WHERE Id_Bitacora = @parId";
 
             _dataAccess.ExecuteParameters.Parameters.Clear();
 

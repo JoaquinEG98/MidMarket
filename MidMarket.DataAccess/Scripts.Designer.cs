@@ -316,6 +316,16 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SELECT Id_Bitacora, Id_Cliente, Descripcion, Criticidad, Fecha 
+        ///FROM Bitacora.
+        /// </summary>
+        internal static string GET_ALL_BITACORA {
+            get {
+                return ResourceManager.GetString("GET_ALL_BITACORA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SELECT Id_Carrito, Id_Activo, Id_Cliente, Cantidad, DVH
         ///FROM Carrito.
         /// </summary>

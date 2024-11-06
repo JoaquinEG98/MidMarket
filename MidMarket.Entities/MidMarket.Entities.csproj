@@ -60,6 +60,7 @@
     <Compile Include="DTOs\ActivosCompradosDTO.cs" />
     <Compile Include="DTOs\ActivosVendidosDTO.cs" />
     <Compile Include="DTOs\BackupDTO.cs" />
+    <Compile Include="DTOs\BitacoraDTO.cs" />
     <Compile Include="DTOs\CarritoDTO.cs" />
     <Compile Include="DTOs\ClienteActivoDTO.cs" />
     <Compile Include="DTOs\CuentaDTO.cs" />

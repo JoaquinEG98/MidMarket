@@ -3,8 +3,8 @@
   <ActivosCompradosDTO>
     <Id>2</Id>
     <Nombre>Banco Galicia</Nombre>
-    <Cantidad>32</Cantidad>
-    <Total>392000.0000</Total>
+    <Cantidad>33</Cantidad>
+    <Total>404250.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
     <Id>1</Id>
@@ -15,14 +15,14 @@
   <ActivosCompradosDTO>
     <Id>3</Id>
     <Nombre>Pampa Energía</Nombre>
-    <Cantidad>11</Cantidad>
-    <Total>184800.0000</Total>
+    <Cantidad>15</Cantidad>
+    <Total>252000.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
     <Id>9</Id>
     <Nombre>BONAR 2024</Nombre>
-    <Cantidad>123</Cantidad>
-    <Total>184500.0000</Total>
+    <Cantidad>124</Cantidad>
+    <Total>187000.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
     <Id>14</Id>
