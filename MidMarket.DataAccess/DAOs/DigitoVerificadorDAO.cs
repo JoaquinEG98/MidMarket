@@ -294,7 +294,7 @@ namespace MidMarket.DataAccess.DAOs
                                 Id = Convert.ToInt32(rows["Id_Bitacora"].ToString()),
                                 Id_Cliente = Convert.ToInt32(rows["Id_Cliente"].ToString()),
                                 Descripcion = Convert.ToString(rows["Descripcion"].ToString()),
-                                Criticidad = Convert.ToInt32(rows["Criticidad"].ToString()),
+                                Criticidad = (Criticidad)(rows["Criticidad"]),
                                 Fecha = Convert.ToDateTime(rows["Fecha"].ToString()),
                                 DVH = Convert.ToString(rows["DVH"].ToString()),
                             };
@@ -584,7 +584,7 @@ namespace MidMarket.DataAccess.DAOs
                                 Id = Convert.ToInt32(rows["Id_Bitacora"].ToString()),
                                 Id_Cliente = Convert.ToInt32(rows["Id_Cliente"].ToString()),
                                 Descripcion = Convert.ToString(rows["Descripcion"].ToString()),
-                                Criticidad = Convert.ToInt32(rows["Criticidad"].ToString()),
+                                Criticidad = (Criticidad)(rows["Criticidad"]),
                                 Fecha = Convert.ToDateTime(rows["Fecha"].ToString()),
                                 DVH = Convert.ToString(rows["DVH"].ToString()),
                             };

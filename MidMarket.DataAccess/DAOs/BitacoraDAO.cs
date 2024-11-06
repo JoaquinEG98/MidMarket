@@ -31,6 +31,7 @@ namespace MidMarket.DataAccess.DAOs
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Descripcion", bitacora.Descripcion);
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Criticidad", (int)bitacora.Criticidad);
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Fecha", bitacora.Fecha);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@DVH", bitacora.DVH);
 
             return _dataAccess.ExecuteNonEscalar();
         }

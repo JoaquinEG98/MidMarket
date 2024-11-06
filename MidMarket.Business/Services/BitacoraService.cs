@@ -1,4 +1,5 @@
 ﻿using MidMarket.Business.Interfaces;
+using MidMarket.Business.Seguridad;
 using MidMarket.DataAccess.Interfaces;
 using MidMarket.Entities;
 using MidMarket.Entities.DTOs;
@@ -33,10 +34,13 @@ namespace MidMarket.Business.Services
                     Criticidad = criticidad,
                     Fecha = ClockWrapper.Now(),
                 };
+                bitacora.DVH = DigitoVerificador.GenerarDVH(bitacora);
 
                 id = _bitacoraDAO.AltaBitacora(bitacora);
 
-                _digitoVerificadorService.RecalcularDigitosBitacora(this);
+                _digitoVerificadorService.ActualizarDVV("Bitacora");
+
+                //_digitoVerificadorService.RecalcularDigitosBitacora(this);
 
                 scope.Complete();
             }

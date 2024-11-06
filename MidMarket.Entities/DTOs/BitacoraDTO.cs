@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MidMarket.Entities.Enums;
+using System;
 
 namespace MidMarket.Entities.DTOs
 {
@@ -7,7 +8,7 @@ namespace MidMarket.Entities.DTOs
         public int Id { get; set; }
         public int Id_Cliente { get; set; }
         public string Descripcion { get; set; }
-        public int Criticidad { get; set; }
+        public Criticidad Criticidad { get; set; }
         public DateTime Fecha { get; set; }
     }
 }
