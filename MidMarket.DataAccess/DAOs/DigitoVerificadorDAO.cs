@@ -209,6 +209,28 @@ namespace MidMarket.DataAccess.DAOs
                     }
 
                     break;
+
+                case "FAMILIAPATENTE":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITOS_HORIZONTALES, "FamiliaPatente");
+                    ds = _dataAccess.ExecuteNonReader();
+
+                    DataTable dtFamiliaPatente = ds.Tables[0];
+                    if (dtFamiliaPatente.Rows.Count > 0)
+                    {
+                        foreach (DataRow rows in dtFamiliaPatente.Rows)
+                        {
+                            var familiaPatenteDTO = new FamiliaPatenteDTO()
+                            {
+                                Id_Padre = Convert.ToInt32(rows["Id_Padre"].ToString()),
+                                Id_Hijo = Convert.ToInt32(rows["Id_Hijo"].ToString()),
+                                DVH = Convert.ToString(rows["DVH"].ToString()),
+                            };
+
+                            dvhs.Add(familiaPatenteDTO.DVH);
+                        }
+                    }
+
+                    break;
             }
 
             return dvhs;
@@ -404,6 +426,28 @@ namespace MidMarket.DataAccess.DAOs
                     }
 
                     break;
+
+                case "FAMILIAPATENTE":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITOS_HORIZONTALES, "FamiliaPatente");
+                    ds = _dataAccess.ExecuteNonReader();
+
+                    DataTable dtFamiliaPatenteDTO = ds.Tables[0];
+                    if (dtFamiliaPatenteDTO.Rows.Count > 0)
+                    {
+                        foreach (DataRow rows in dtFamiliaPatenteDTO.Rows)
+                        {
+                            var familiaPatenteDTO = new FamiliaPatenteDTO()
+                            {
+                                Id_Padre = Convert.ToInt32(rows["Id_Padre"].ToString()),
+                                Id_Hijo = Convert.ToInt32(rows["Id_Hijo"].ToString()),
+                                DVH = Convert.ToString(rows["DVH"].ToString())
+                            };
+
+                            dvhs.Add(familiaPatenteDTO.DVH);
+                        }
+                    }
+
+                    break;
             }
 
             return dvhs;
@@ -450,6 +494,10 @@ namespace MidMarket.DataAccess.DAOs
                     _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Tabla", "Permiso");
                     return _dataAccess.ExecuteNonEscalar();
 
+                case "FAMILIAPATENTE":
+                    _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Tabla", "FamiliaPatente");
+                    return _dataAccess.ExecuteNonEscalar();
+
                 default: return 0;
             }
         }
@@ -490,6 +538,10 @@ namespace MidMarket.DataAccess.DAOs
 
                 case "PERMISO":
                     _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITO_VERTICAL, "Permiso");
+                    break;
+
+                case "FAMILIAPATENTE":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITO_VERTICAL, "FamiliaPatente");
                     break;
             }
 
@@ -537,6 +589,20 @@ namespace MidMarket.DataAccess.DAOs
 
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@parDVH", nuevoDVH);
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@parId", objetoId);
+
+            return _dataAccess.ExecuteNonEscalar();
+        }
+
+        public int ActualizarTablaDVHFamiliaPatente(string tabla, string nuevoDVH, int objetoId, int idSecundario)
+        {
+            if (tabla.ToUpper() == "FAMILIAPATENTE")
+                _dataAccess.ExecuteCommandText = $"UPDATE {tabla} SET DVH = @parDVH OUTPUT inserted.Id_Padre WHERE Id_Padre = @parId AND Id_Hijo = @parIdHijo";
+
+            _dataAccess.ExecuteParameters.Parameters.Clear();
+
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@parDVH", nuevoDVH);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@parId", objetoId);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@parIdHijo", idSecundario);
 
             return _dataAccess.ExecuteNonEscalar();
         }

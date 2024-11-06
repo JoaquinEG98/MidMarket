@@ -103,8 +103,9 @@ namespace MidMarket.Business.Services
             bool transaccionVenta = ValidarDigitosVerificadores("TransaccionVenta");
             bool detalleVenta = ValidarDigitosVerificadores("DetalleVenta");
             bool permisos = ValidarDigitosVerificadores("Permiso");
+            bool familiaPatente = ValidarDigitosVerificadores("FamiliaPatente");
 
-            if (!cliente || !usuarioPermiso || !transaccionCompra || !detalleCompra || !clienteActivo || !transaccionVenta || !detalleVenta || !permisos)
+            if (!cliente || !usuarioPermiso || !transaccionCompra || !detalleCompra || !clienteActivo || !transaccionVenta || !detalleVenta || !permisos || !familiaPatente)
                 return false;
 
             else
@@ -272,6 +273,25 @@ namespace MidMarket.Business.Services
             }
         }
 
+        private void ActualizarTablaDVH(List<FamiliaPatenteDTO> familiaPatente)
+        {
+            using (TransactionScope scope = new TransactionScope())
+            {
+                foreach (var fp in familiaPatente)
+                {
+                    var familiaPatenteDTO = new FamiliaPatenteDTO()
+                    {
+                        Id_Padre = fp.Id_Padre,
+                        Id_Hijo = fp.Id_Hijo,
+                    };
+                    familiaPatenteDTO.DVH = DigitoVerificador.GenerarDVH(familiaPatenteDTO);
+
+                    _digitoVerificadorDataAccess.ActualizarTablaDVHFamiliaPatente("FamiliaPatente", familiaPatenteDTO.DVH, familiaPatenteDTO.Id_Padre, familiaPatenteDTO.Id_Hijo);
+                }
+                scope.Complete();
+            }
+        }
+
         public void RecalcularTodosDigitosVerificadores(IUsuarioService usuarioService, IPermisoService permisoService, ICompraService compraService, IVentaService ventaService)
         {
             var clientes = usuarioService.GetClientesEncriptados();
@@ -305,6 +325,10 @@ namespace MidMarket.Business.Services
             var permisos = permisoService.GetPermisoDTO();
             ActualizarTablaDVH(permisos);
             ActualizarDVV("Permiso");
+
+            var familiaPatente = permisoService.GetFamiliaPatenteDTO();
+            ActualizarTablaDVH(familiaPatente);
+            ActualizarDVV("FamiliaPatente");
         }
 
         public void RecalcularDigitosUsuario(IUsuarioService usuarioService, IPermisoService permisoService)
@@ -326,6 +350,13 @@ namespace MidMarket.Business.Services
             var permisos = permisoService.GetPermisoDTO();
             ActualizarTablaDVH(permisos);
             ActualizarDVV("Permiso");
+        }
+
+        public void RecalcularDigitosFamiliaPatente(IPermisoService permisoService)
+        {
+            var familiaPatente = permisoService.GetFamiliaPatenteDTO();
+            ActualizarTablaDVH(familiaPatente);
+            ActualizarDVV("FamiliaPatente");
         }
     }
 }

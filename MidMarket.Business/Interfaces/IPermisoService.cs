@@ -23,5 +23,6 @@ namespace MidMarket.Business.Interfaces
         void GetComponenteFamilia(Familia familia);
         List<UsuarioPermisoDTO> GetUsuariosPermisos();
         List<PermisoDTO> GetPermisoDTO();
+        List<FamiliaPatenteDTO> GetFamiliaPatenteDTO();
     }
 }

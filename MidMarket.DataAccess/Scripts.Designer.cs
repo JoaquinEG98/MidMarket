@@ -336,6 +336,16 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SELECT Id_Padre, Id_Hijo, DVH
+        ///FROM FamiliaPatente.
+        /// </summary>
+        internal static string GET_ALL_FAMILIAPATENTEDTO {
+            get {
+                return ResourceManager.GetString("GET_ALL_FAMILIAPATENTEDTO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SELECT Id_Permiso, Nombre, Permiso, DVH
         ///FROM Permiso.
         /// </summary>

@@ -37,6 +37,7 @@ namespace MidMarket.Business.Services
                 _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) guardó la familia {familia.Id}", Criticidad.Alta, clienteLogueado);
 
                 _digitoVerificadorService.RecalcularDigitosPermisoDTO(this);
+                _digitoVerificadorService.RecalcularDigitosFamiliaPatente(this);
 
                 scope.Complete();
             }
@@ -52,6 +53,7 @@ namespace MidMarket.Business.Services
                 _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) guardó la patente/familia {id}", Criticidad.Alta, clienteLogueado);
 
                 _digitoVerificadorService.RecalcularDigitosPermisoDTO(this);
+                _digitoVerificadorService.RecalcularDigitosFamiliaPatente(this);
 
                 scope.Complete();
 
@@ -178,6 +180,12 @@ namespace MidMarket.Business.Services
         {
             List<PermisoDTO> permisos = _permisoDataAccess.GetPermisosDTO();
             return permisos;
+        }
+
+        public List<FamiliaPatenteDTO> GetFamiliaPatenteDTO()
+        {
+            List<FamiliaPatenteDTO> familiaPatente = _permisoDataAccess.GetFamiliaPatenteDTO();
+            return familiaPatente;
         }
     }
 }

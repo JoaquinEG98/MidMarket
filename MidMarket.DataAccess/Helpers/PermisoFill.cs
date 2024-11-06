@@ -95,5 +95,23 @@ namespace MidMarket.DataAccess.Helpers
         {
             return ds.Tables[0].AsEnumerable().Select(dr => FillObjectPermisoDTO(dr)).ToList();
         }
+
+        public static FamiliaPatenteDTO FillObjectFamiliaPatenteDTO(DataRow dr)
+        {
+            FamiliaPatenteDTO familiaPatenteDTO = new FamiliaPatenteDTO();
+
+            if (dr.Table.Columns.Contains("Id_Padre") && !Convert.IsDBNull(dr["Id_Padre"]))
+                familiaPatenteDTO.Id_Padre = Convert.ToInt32(dr["Id_Padre"]);
+
+            if (dr.Table.Columns.Contains("Id_Hijo") && !Convert.IsDBNull(dr["Id_Hijo"]))
+                familiaPatenteDTO.Id_Hijo = Convert.ToInt32(dr["Id_Hijo"]);
+
+            return familiaPatenteDTO;
+        }
+
+        public static List<FamiliaPatenteDTO> FillListFamiliaPatenteDTO(DataSet ds)
+        {
+            return ds.Tables[0].AsEnumerable().Select(dr => FillObjectFamiliaPatenteDTO(dr)).ToList();
+        }
     }
 }

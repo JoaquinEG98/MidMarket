@@ -320,5 +320,18 @@ namespace MidMarket.DataAccess.DAOs
 
             return patentes;
         }
+
+        public List<FamiliaPatenteDTO> GetFamiliaPatenteDTO()
+        {
+            _dataAccess.SelectCommandText = String.Format(Scripts.GET_ALL_FAMILIAPATENTEDTO);
+            DataSet ds = _dataAccess.ExecuteNonReader();
+
+            List<FamiliaPatenteDTO> familiaPatenteDTO = new List<FamiliaPatenteDTO>();
+
+            if (ds.Tables[0].Rows.Count > 0)
+                familiaPatenteDTO = PermisoFill.FillListFamiliaPatenteDTO(ds);
+
+            return familiaPatenteDTO;
+        }
     }
 }
