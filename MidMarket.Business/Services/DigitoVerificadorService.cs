@@ -100,8 +100,10 @@ namespace MidMarket.Business.Services
             bool transaccionCompra = ValidarDigitosVerificadores("TransaccionCompra");
             bool detalleCompra = ValidarDigitosVerificadores("DetalleCompra");
             bool clienteActivo = ValidarDigitosVerificadores("ClienteActivo");
+            bool transaccionVenta = ValidarDigitosVerificadores("TransaccionVenta");
+            bool detalleVenta = ValidarDigitosVerificadores("DetalleVenta");
 
-            if (!cliente || !usuarioPermiso || !transaccionCompra || !detalleCompra || !clienteActivo)
+            if (!cliente || !usuarioPermiso || !transaccionCompra || !detalleCompra || !clienteActivo || !transaccionVenta || !detalleVenta)
                 return false;
 
             else
@@ -208,7 +210,47 @@ namespace MidMarket.Business.Services
             }
         }
 
-        public void RecalcularTodosDigitosVerificadores(IUsuarioService usuarioService, IPermisoService permisoService, ICompraService compraService)
+        private void ActualizarTablaDVH(List<TransaccionVenta> ventas)
+        {
+            using (TransactionScope scope = new TransactionScope())
+            {
+                foreach (var venta in ventas)
+                {
+                    var ventaDTO = new TransaccionVenta()
+                    {
+                        Id = venta.Id,
+                        Fecha = venta.Fecha,
+                        Total = venta.Total,
+                    };
+                    ventaDTO.DVH = DigitoVerificador.GenerarDVH(ventaDTO);
+
+                    _digitoVerificadorDataAccess.ActualizarTablaDVH("TransaccionVenta", ventaDTO.DVH, ventaDTO.Id);
+                }
+                scope.Complete();
+            }
+        }
+
+        private void ActualizarTablaDVH(List<DetalleVenta> detalle)
+        {
+            using (TransactionScope scope = new TransactionScope())
+            {
+                foreach (var item in detalle)
+                {
+                    var detalleDTO = new DetalleVenta()
+                    {
+                        Id = item.Id,
+                        Cantidad = item.Cantidad,
+                        Precio = item.Precio,
+                    };
+                    detalleDTO.DVH = DigitoVerificador.GenerarDVH(detalleDTO);
+
+                    _digitoVerificadorDataAccess.ActualizarTablaDVH("DetalleVenta", detalleDTO.DVH, detalleDTO.Id);
+                }
+                scope.Complete();
+            }
+        }
+
+        public void RecalcularTodosDigitosVerificadores(IUsuarioService usuarioService, IPermisoService permisoService, ICompraService compraService, IVentaService ventaService)
         {
             var clientes = usuarioService.GetClientesEncriptados();
             ActualizarTablaDVH(clientes);
@@ -229,6 +271,14 @@ namespace MidMarket.Business.Services
             var clienteActivo = compraService.GetAllClienteActivo();
             ActualizarTablaDVH(clienteActivo);
             ActualizarDVV("ClienteActivo");
+
+            var ventas = ventaService.GetAllVentas();
+            ActualizarTablaDVH(ventas);
+            ActualizarDVV("TransaccionVenta");
+
+            var detalleVenta = ventaService.GetAllVentasDetalle();
+            ActualizarTablaDVH(detalleVenta);
+            ActualizarDVV("DetalleVenta");
         }
 
         public void RecalcularDigitosUsuario(IUsuarioService usuarioService, IPermisoService permisoService)
@@ -236,6 +286,13 @@ namespace MidMarket.Business.Services
             var clientes = usuarioService.GetClientesEncriptados();
             ActualizarTablaDVH(clientes);
             ActualizarDVV("Cliente");
+        }
+
+        public void RecalcularDigitosClienteActivo(ICompraService compraService)
+        {
+            var clienteActivo = compraService.GetAllClienteActivo();
+            ActualizarTablaDVH(clienteActivo);
+            ActualizarDVV("ClienteActivo");
         }
     }
 }

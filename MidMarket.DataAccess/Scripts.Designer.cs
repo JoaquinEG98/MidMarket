@@ -336,6 +336,26 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SELECT Id_Venta, Id_Cuenta, Id_Cliente, Fecha, Total
+        ///FROM TransaccionVenta.
+        /// </summary>
+        internal static string GET_ALL_VENTAS {
+            get {
+                return ResourceManager.GetString("GET_ALL_VENTAS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT Id_Detalle, Id_Activo, Id_Venta, Cantidad, Precio, DVH
+        ///FROM DetalleVenta.
+        /// </summary>
+        internal static string GET_ALL_VENTAS_DETALLE {
+            get {
+                return ResourceManager.GetString("GET_ALL_VENTAS_DETALLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SELECT Id_Bitacora, Id_Cliente, Descripcion, Criticidad, Fecha FROM Bitacora ORDER BY Fecha DESC.
         /// </summary>
         internal static string GET_BITACORA {
@@ -730,9 +750,9 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to INSERT INTO DetalleVenta (Id_Activo, Id_Venta, Cantidad, Precio)
+        ///   Looks up a localized string similar to INSERT INTO DetalleVenta (Id_Activo, Id_Venta, Cantidad, Precio, DVH)
         ///OUTPUT inserted.Id_Detalle
-        ///VALUES (@Id_Activo, @Id_Venta, @Cantidad, @Precio).
+        ///VALUES (@Id_Activo, @Id_Venta, @Cantidad, @Precio, @DVH).
         /// </summary>
         internal static string INSERTAR_DETALLE_VENTA {
             get {
@@ -752,9 +772,9 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to INSERT INTO TransaccionVenta (Id_Cuenta, Id_Cliente, Fecha, Total)
+        ///   Looks up a localized string similar to INSERT INTO TransaccionVenta (Id_Cuenta, Id_Cliente, Fecha, Total, DVH)
         ///OUTPUT inserted.Id_Venta
-        ///VALUES (@Id_Cuenta, @Id_Cliente, @Fecha, @Total).
+        ///VALUES (@Id_Cuenta, @Id_Cliente, @Fecha, @Total, @DVH).
         /// </summary>
         internal static string INSERTAR_TRANSACCION_VENTA {
             get {

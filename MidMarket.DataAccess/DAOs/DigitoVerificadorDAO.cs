@@ -138,6 +138,50 @@ namespace MidMarket.DataAccess.DAOs
                     }
 
                     break;
+
+                case "DETALLEVENTA":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITOS_HORIZONTALES, "DetalleVenta");
+                    ds = _dataAccess.ExecuteNonReader();
+
+                    DataTable dtDetalleVenta = ds.Tables[0];
+                    if (dtDetalleVenta.Rows.Count > 0)
+                    {
+                        foreach (DataRow rows in dtDetalleVenta.Rows)
+                        {
+                            DetalleVenta detalleVenta = new DetalleVenta()
+                            {
+                                Cantidad = Convert.ToInt32(rows["Cantidad"].ToString()),
+                                Precio = Convert.ToDecimal(rows["Precio"].ToString()),
+                                DVH = Convert.ToString(rows["DVH"].ToString())
+                            };
+
+                            dvhs.Add(detalleVenta.DVH);
+                        }
+                    }
+
+                    break;
+
+                case "TRANSACCIONVENTA":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITOS_HORIZONTALES, "TransaccionVenta");
+                    ds = _dataAccess.ExecuteNonReader();
+
+                    DataTable dtTransaccionVenta = ds.Tables[0];
+                    if (dtTransaccionVenta.Rows.Count > 0)
+                    {
+                        foreach (DataRow rows in dtTransaccionVenta.Rows)
+                        {
+                            var transaccionVenta = new TransaccionVenta()
+                            {
+                                Fecha = Convert.ToDateTime(rows["Fecha"].ToString()),
+                                Total = Convert.ToDecimal(rows["Total"].ToString()),
+                                DVH = Convert.ToString(rows["DVH"].ToString())
+                            };
+
+                            dvhs.Add(transaccionVenta.DVH);
+                        }
+                    }
+
+                    break;
             }
 
             return dvhs;
@@ -263,6 +307,50 @@ namespace MidMarket.DataAccess.DAOs
                     }
 
                     break;
+
+                case "DETALLEVENTA":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITOS_HORIZONTALES, "DetalleVenta");
+                    ds = _dataAccess.ExecuteNonReader();
+
+                    DataTable dtDetalleVenta = ds.Tables[0];
+                    if (dtDetalleVenta.Rows.Count > 0)
+                    {
+                        foreach (DataRow rows in dtDetalleVenta.Rows)
+                        {
+                            var detalleVenta = new DetalleVenta()
+                            {
+                                Cantidad = Convert.ToInt32(rows["Cantidad"].ToString()),
+                                Precio = Convert.ToDecimal(rows["Precio"].ToString()),
+                                DVH = Convert.ToString(rows["DVH"].ToString())
+                            };
+
+                            dvhs.Add(detalleVenta.DVH);
+                        }
+                    }
+
+                    break;
+
+                case "TRANSACCIONVENTA":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITOS_HORIZONTALES, "TransaccionVenta");
+                    ds = _dataAccess.ExecuteNonReader();
+
+                    DataTable dtTransaccionVenta = ds.Tables[0];
+                    if (dtTransaccionVenta.Rows.Count > 0)
+                    {
+                        foreach (DataRow rows in dtTransaccionVenta.Rows)
+                        {
+                            var transaccionVenta = new TransaccionVenta()
+                            {
+                                Fecha = Convert.ToDateTime(rows["Fecha"].ToString()),
+                                Total = Convert.ToDecimal(rows["Total"].ToString()),
+                                DVH = Convert.ToString(rows["DVH"].ToString())
+                            };
+
+                            dvhs.Add(transaccionVenta.DVH);
+                        }
+                    }
+
+                    break;
             }
 
             return dvhs;
@@ -297,6 +385,14 @@ namespace MidMarket.DataAccess.DAOs
                     _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Tabla", "Cliente_Activo");
                     return _dataAccess.ExecuteNonEscalar();
 
+                case "DETALLEVENTA":
+                    _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Tabla", "DetalleVenta");
+                    return _dataAccess.ExecuteNonEscalar();
+
+                case "TRANSACCIONVENTA":
+                    _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Tabla", "TransaccionVenta");
+                    return _dataAccess.ExecuteNonEscalar();
+
                 default: return 0;
             }
         }
@@ -325,6 +421,14 @@ namespace MidMarket.DataAccess.DAOs
 
                 case "CLIENTEACTIVO":
                     _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITO_VERTICAL, "Cliente_Activo");
+                    break;
+
+                case "DETALLEVENTA":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITO_VERTICAL, "DetalleVenta");
+                    break;
+
+                case "TRANSACCIONVENTA":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITO_VERTICAL, "TransaccionVenta");
                     break;
             }
 
@@ -358,6 +462,12 @@ namespace MidMarket.DataAccess.DAOs
 
             if (tabla.ToUpper() == "CLIENTEACTIVO")
                 _dataAccess.ExecuteCommandText = $"UPDATE Cliente_Activo SET DVH = @parDVH OUTPUT inserted.Id_Cliente_Activo WHERE Id_Cliente_Activo = @parId";
+
+            if (tabla.ToUpper() == "DETALLEVENTA")
+                _dataAccess.ExecuteCommandText = $"UPDATE {tabla} SET DVH = @parDVH OUTPUT inserted.Id_Detalle WHERE Id_Detalle = @parId";
+
+            if (tabla.ToUpper() == "TRANSACCIONVENTA")
+                _dataAccess.ExecuteCommandText = $"UPDATE {tabla} SET DVH = @parDVH OUTPUT inserted.Id_Venta WHERE Id_Venta = @parId";
 
             _dataAccess.ExecuteParameters.Parameters.Clear();
 

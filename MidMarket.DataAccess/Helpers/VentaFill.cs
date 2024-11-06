@@ -8,7 +8,7 @@ namespace MidMarket.DataAccess.Helpers
 {
     public static class VentaFill
     {
-        public static TransaccionVenta FillObjectTransaccionVenta(DataRow dr, Cliente cliente)
+        public static TransaccionVenta FillObjectTransaccionVenta(DataRow dr, Cliente cliente = null)
         {
             TransaccionVenta venta = new TransaccionVenta();
             venta.Cliente = new Cliente();
@@ -17,9 +17,11 @@ namespace MidMarket.DataAccess.Helpers
             if (dr.Table.Columns.Contains("Id_Venta") && !Convert.IsDBNull(dr["Id_Venta"]))
                 venta.Id = Convert.ToInt32(dr["Id_Venta"]);
 
-            venta.Cuenta = cliente.Cuenta;
-
-            venta.Cliente = cliente;
+            if (cliente != null)
+            {
+                venta.Cuenta = cliente.Cuenta;
+                venta.Cliente = cliente;
+            }
 
             if (dr.Table.Columns.Contains("Fecha") && !Convert.IsDBNull(dr["Fecha"]))
                 venta.Fecha = Convert.ToDateTime(dr["Fecha"]);

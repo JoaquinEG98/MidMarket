@@ -17,6 +17,7 @@ namespace MidMarket.UI
         private readonly ISessionManager _sessionManager;
         private readonly ITraduccionService _traduccionService;
         private readonly ICompraService _compraService;
+        private readonly IVentaService _ventaService;
 
         public AdministracionBD()
         {
@@ -27,6 +28,7 @@ namespace MidMarket.UI
             _sessionManager = Global.Container.Resolve<ISessionManager>();
             _traduccionService = Global.Container.Resolve<ITraduccionService>();
             _compraService = Global.Container.Resolve<ICompraService>();
+            _ventaService = Global.Container.Resolve<IVentaService>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -106,7 +108,7 @@ namespace MidMarket.UI
 
             try
             {
-                _digitoVerificadorService.RecalcularTodosDigitosVerificadores(_usuarioService, _permisoService, _compraService);
+                _digitoVerificadorService.RecalcularTodosDigitosVerificadores(_usuarioService, _permisoService, _compraService, _ventaService);
 
                 CargarDV();
 

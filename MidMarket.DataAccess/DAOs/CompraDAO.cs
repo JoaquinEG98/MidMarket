@@ -57,7 +57,7 @@ namespace MidMarket.DataAccess.DAOs
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Cliente", clienteActivo.Id_Cliente);
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Activo", clienteActivo.Id_Activo);
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Cantidad", clienteActivo.Cantidad);
-            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@dvh", clienteActivo.DVH);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@DVH", clienteActivo.DVH);
 
             return _dataAccess.ExecuteNonEscalar();
         }
