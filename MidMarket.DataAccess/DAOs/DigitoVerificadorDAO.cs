@@ -3,6 +3,7 @@ using MidMarket.DataAccess.Conexion;
 using MidMarket.DataAccess.Interfaces;
 using MidMarket.Entities;
 using MidMarket.Entities.DTOs;
+using MidMarket.Entities.Enums;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -182,6 +183,32 @@ namespace MidMarket.DataAccess.DAOs
                     }
 
                     break;
+
+                case "PERMISO":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITOS_HORIZONTALES, "Permiso");
+                    ds = _dataAccess.ExecuteNonReader();
+
+                    DataTable dtPermiso = ds.Tables[0];
+                    if (dtPermiso.Rows.Count > 0)
+                    {
+                        foreach (DataRow rows in dtPermiso.Rows)
+                        {
+                            string permisoString = rows["Permiso"] != null && !string.IsNullOrEmpty(rows["Permiso"].ToString())
+                                                    ? rows["Permiso"].ToString()
+                                                    : null;
+
+                            var permisoDTO = new PermisoDTO()
+                            {
+                                Nombre = Convert.ToString(rows["Nombre"].ToString()),
+                                Permiso = permisoString != null ? (Permiso)Enum.Parse(typeof(Permiso), permisoString) : default(Permiso),
+                                DVH = Convert.ToString(rows["DVH"].ToString())
+                            };
+
+                            dvhs.Add(permisoDTO.DVH);
+                        }
+                    }
+
+                    break;
             }
 
             return dvhs;
@@ -351,6 +378,32 @@ namespace MidMarket.DataAccess.DAOs
                     }
 
                     break;
+
+                case "PERMISO":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITOS_HORIZONTALES, "Permiso");
+                    ds = _dataAccess.ExecuteNonReader();
+
+                    DataTable dtPermiso = ds.Tables[0];
+                    if (dtPermiso.Rows.Count > 0)
+                    {
+                        foreach (DataRow rows in dtPermiso.Rows)
+                        {
+                            string permisoString = rows["Permiso"] != null && !string.IsNullOrEmpty(rows["Permiso"].ToString())
+                                                    ? rows["Permiso"].ToString()
+                                                    : null;
+
+                            var permisoDTO = new PermisoDTO()
+                            {
+                                Nombre = Convert.ToString(rows["Nombre"].ToString()),
+                                Permiso = permisoString != null ? (Permiso)Enum.Parse(typeof(Permiso), permisoString) : default(Permiso),
+                                DVH = Convert.ToString(rows["DVH"].ToString())
+                            };
+
+                            dvhs.Add(permisoDTO.DVH);
+                        }
+                    }
+
+                    break;
             }
 
             return dvhs;
@@ -393,6 +446,10 @@ namespace MidMarket.DataAccess.DAOs
                     _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Tabla", "TransaccionVenta");
                     return _dataAccess.ExecuteNonEscalar();
 
+                case "PERMISO":
+                    _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Tabla", "Permiso");
+                    return _dataAccess.ExecuteNonEscalar();
+
                 default: return 0;
             }
         }
@@ -429,6 +486,10 @@ namespace MidMarket.DataAccess.DAOs
 
                 case "TRANSACCIONVENTA":
                     _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITO_VERTICAL, "TransaccionVenta");
+                    break;
+
+                case "PERMISO":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITO_VERTICAL, "Permiso");
                     break;
             }
 
@@ -468,6 +529,9 @@ namespace MidMarket.DataAccess.DAOs
 
             if (tabla.ToUpper() == "TRANSACCIONVENTA")
                 _dataAccess.ExecuteCommandText = $"UPDATE {tabla} SET DVH = @parDVH OUTPUT inserted.Id_Venta WHERE Id_Venta = @parId";
+
+            if (tabla.ToUpper() == "PERMISO")
+                _dataAccess.ExecuteCommandText = $"UPDATE {tabla} SET DVH = @parDVH OUTPUT inserted.Id_Permiso WHERE Id_Permiso = @parId";
 
             _dataAccess.ExecuteParameters.Parameters.Clear();
 

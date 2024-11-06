@@ -178,6 +178,9 @@
   <data name="GET_ALL_COMPRAS_DETALLE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\Compra\GET_ALL_COMPRAS_DETALLE.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="GET_ALL_PERMISOSDTO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Scripts\Permiso\GET_ALL_PERMISOSDTO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="GET_ALL_VENTAS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\Venta\GET_ALL_VENTAS.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>

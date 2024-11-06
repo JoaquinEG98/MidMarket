@@ -336,6 +336,16 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SELECT Id_Permiso, Nombre, Permiso, DVH
+        ///FROM Permiso.
+        /// </summary>
+        internal static string GET_ALL_PERMISOSDTO {
+            get {
+                return ResourceManager.GetString("GET_ALL_PERMISOSDTO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SELECT Id_Venta, Id_Cuenta, Id_Cliente, Fecha, Total
         ///FROM TransaccionVenta.
         /// </summary>

@@ -19,5 +19,6 @@ namespace MidMarket.DataAccess.Interfaces
         Componente GetFamiliaArbol(int familiaId, Componente componenteOriginal, Componente componenteAgregar);
         Componente GetUsuarioArbol(int usuarioId, Componente componenteOriginal, Componente componenteAgregar);
         List<UsuarioPermisoDTO> GetUsuariosPermisos();
+        List<PermisoDTO> GetPermisosDTO();
     }
 }

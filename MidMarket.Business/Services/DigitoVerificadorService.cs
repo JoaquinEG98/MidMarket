@@ -102,8 +102,9 @@ namespace MidMarket.Business.Services
             bool clienteActivo = ValidarDigitosVerificadores("ClienteActivo");
             bool transaccionVenta = ValidarDigitosVerificadores("TransaccionVenta");
             bool detalleVenta = ValidarDigitosVerificadores("DetalleVenta");
+            bool permisos = ValidarDigitosVerificadores("Permiso");
 
-            if (!cliente || !usuarioPermiso || !transaccionCompra || !detalleCompra || !clienteActivo || !transaccionVenta || !detalleVenta)
+            if (!cliente || !usuarioPermiso || !transaccionCompra || !detalleCompra || !clienteActivo || !transaccionVenta || !detalleVenta || !permisos)
                 return false;
 
             else
@@ -250,6 +251,27 @@ namespace MidMarket.Business.Services
             }
         }
 
+        private void ActualizarTablaDVH(List<PermisoDTO> permisos)
+        {
+            using (TransactionScope scope = new TransactionScope())
+            {
+                foreach (var permiso in permisos)
+                {
+                    var permisoDTO = new PermisoDTO()
+                    {
+                        Id = permiso.Id,
+                        Nombre = permiso.Nombre,
+                        Permiso = permiso.Permiso,
+                        DVH = permiso.DVH,
+                    };
+                    permisoDTO.DVH = DigitoVerificador.GenerarDVH(permisoDTO);
+
+                    _digitoVerificadorDataAccess.ActualizarTablaDVH("Permiso", permisoDTO.DVH, permisoDTO.Id);
+                }
+                scope.Complete();
+            }
+        }
+
         public void RecalcularTodosDigitosVerificadores(IUsuarioService usuarioService, IPermisoService permisoService, ICompraService compraService, IVentaService ventaService)
         {
             var clientes = usuarioService.GetClientesEncriptados();
@@ -279,6 +301,10 @@ namespace MidMarket.Business.Services
             var detalleVenta = ventaService.GetAllVentasDetalle();
             ActualizarTablaDVH(detalleVenta);
             ActualizarDVV("DetalleVenta");
+
+            var permisos = permisoService.GetPermisoDTO();
+            ActualizarTablaDVH(permisos);
+            ActualizarDVV("Permiso");
         }
 
         public void RecalcularDigitosUsuario(IUsuarioService usuarioService, IPermisoService permisoService)
@@ -293,6 +319,13 @@ namespace MidMarket.Business.Services
             var clienteActivo = compraService.GetAllClienteActivo();
             ActualizarTablaDVH(clienteActivo);
             ActualizarDVV("ClienteActivo");
+        }
+
+        public void RecalcularDigitosPermisoDTO(IPermisoService permisoService)
+        {
+            var permisos = permisoService.GetPermisoDTO();
+            ActualizarTablaDVH(permisos);
+            ActualizarDVV("Permiso");
         }
     }
 }

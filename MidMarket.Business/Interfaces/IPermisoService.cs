@@ -1,8 +1,8 @@
-﻿using MidMarket.Entities.Composite;
-using MidMarket.Entities;
+﻿using MidMarket.Entities;
+using MidMarket.Entities.Composite;
+using MidMarket.Entities.DTOs;
 using System;
 using System.Collections.Generic;
-using MidMarket.Entities.DTOs;
 
 namespace MidMarket.Business.Interfaces
 {
@@ -22,5 +22,6 @@ namespace MidMarket.Business.Interfaces
         void GetComponenteUsuario(Cliente cliente);
         void GetComponenteFamilia(Familia familia);
         List<UsuarioPermisoDTO> GetUsuariosPermisos();
+        List<PermisoDTO> GetPermisoDTO();
     }
 }

@@ -307,5 +307,18 @@ namespace MidMarket.DataAccess.DAOs
 
             return usuariosPermisos;
         }
+
+        public List<PermisoDTO> GetPermisosDTO()
+        {
+            _dataAccess.SelectCommandText = String.Format(Scripts.GET_ALL_PERMISOSDTO);
+            DataSet ds = _dataAccess.ExecuteNonReader();
+
+            List<PermisoDTO> patentes = new List<PermisoDTO>();
+
+            if (ds.Tables[0].Rows.Count > 0)
+                patentes = PermisoFill.FillListPermisoDTO(ds);
+
+            return patentes;
+        }
     }
 }
