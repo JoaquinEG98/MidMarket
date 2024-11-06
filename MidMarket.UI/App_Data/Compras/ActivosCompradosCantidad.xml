@@ -3,14 +3,14 @@
   <ActivosCompradosDTO>
     <Id>9</Id>
     <Nombre>BONAR 2024</Nombre>
-    <Cantidad>119</Cantidad>
-    <Total>174500.0000</Total>
+    <Cantidad>123</Cantidad>
+    <Total>184500.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
     <Id>13</Id>
     <Nombre>BPJ5D</Nombre>
-    <Cantidad>93</Cantidad>
-    <Total>9300.0000</Total>
+    <Cantidad>96</Cantidad>
+    <Total>9600.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
     <Id>10</Id>

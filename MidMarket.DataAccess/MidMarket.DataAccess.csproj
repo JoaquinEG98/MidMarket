@@ -101,6 +101,7 @@
     <Content Include="Scripts\Calculo\ACTIVOS_MAS_VENDIDOS_CANTIDAD.sql" />
     <Content Include="Scripts\Calculo\ACTIVOS_MAS_COMPRADOS_TOTAL.sql" />
     <Content Include="Scripts\Calculo\ACTIVOS_MAS_COMPRADOS_CANTIDAD.sql" />
+    <Content Include="Scripts\Carrito\GET_ALL_CARRITO.sql" />
     <Content Include="Scripts\Carrito\LIMPIAR_CARRITO.sql" />
     <Content Include="Scripts\Carrito\ELIMINAR_CARRITO.sql" />
     <Content Include="Scripts\Carrito\UPDATE_CARRITO.sql" />

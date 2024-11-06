@@ -316,6 +316,16 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SELECT Id_Carrito, Id_Activo, Id_Cliente, Cantidad, DVH
+        ///FROM Carrito.
+        /// </summary>
+        internal static string GET_ALL_CARRITO {
+            get {
+                return ResourceManager.GetString("GET_ALL_CARRITO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SELECT Id_Compra, Id_Cuenta, Id_Cliente, Fecha, Total
         ///FROM TransaccionCompra.
         /// </summary>

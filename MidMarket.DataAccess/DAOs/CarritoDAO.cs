@@ -2,6 +2,7 @@
 using MidMarket.DataAccess.Helpers;
 using MidMarket.DataAccess.Interfaces;
 using MidMarket.Entities;
+using MidMarket.Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -76,6 +77,20 @@ namespace MidMarket.DataAccess.DAOs
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Cliente", cliente.Id);
 
             _dataAccess.ExecuteNonQuery();
+        }
+
+        public List<CarritoDTO> GetCarritoDTO()
+        {
+            _dataAccess.SelectCommandText = String.Format(Scripts.GET_ALL_CARRITO);
+
+            DataSet ds = _dataAccess.ExecuteNonReader();
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                return CarritoFill.FillListCarritoDTO(ds);
+            }
+
+            return new List<CarritoDTO>();
         }
     }
 }

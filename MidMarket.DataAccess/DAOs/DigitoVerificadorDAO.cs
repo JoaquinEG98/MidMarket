@@ -255,6 +255,30 @@ namespace MidMarket.DataAccess.DAOs
                     }
 
                     break;
+
+                case "CARRITO":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITOS_HORIZONTALES, "Carrito");
+                    ds = _dataAccess.ExecuteNonReader();
+
+                    DataTable dtCarrito = ds.Tables[0];
+                    if (dtCarrito.Rows.Count > 0)
+                    {
+                        foreach (DataRow rows in dtCarrito.Rows)
+                        {
+                            var carrito = new CarritoDTO()
+                            {
+                                Id = Convert.ToInt32(rows["Id_Carrito"].ToString()),
+                                Id_Activo = Convert.ToInt32(rows["Id_Activo"].ToString()),
+                                Id_Cliente = Convert.ToInt32(rows["Id_Cliente"].ToString()),
+                                Cantidad = Convert.ToInt32(rows["Cantidad"].ToString()),
+                                DVH = Convert.ToString(rows["DVH"].ToString()),
+                            };
+
+                            dvhs.Add(carrito.DVH);
+                        }
+                    }
+
+                    break;
             }
 
             return dvhs;
@@ -496,6 +520,30 @@ namespace MidMarket.DataAccess.DAOs
                     }
 
                     break;
+
+                case "CARRITO":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITOS_HORIZONTALES, "Carrito");
+                    ds = _dataAccess.ExecuteNonReader();
+
+                    DataTable dtCarrito = ds.Tables[0];
+                    if (dtCarrito.Rows.Count > 0)
+                    {
+                        foreach (DataRow rows in dtCarrito.Rows)
+                        {
+                            var carrito = new CarritoDTO()
+                            {
+                                Id = Convert.ToInt32(rows["Id_Carrito"].ToString()),
+                                Id_Activo = Convert.ToInt32(rows["Id_Activo"].ToString()),
+                                Id_Cliente = Convert.ToInt32(rows["Id_Cliente"].ToString()),
+                                Cantidad = Convert.ToInt32(rows["Cantidad"].ToString()),
+                                DVH = Convert.ToString(rows["DVH"].ToString()),
+                            };
+
+                            dvhs.Add(carrito.DVH);
+                        }
+                    }
+
+                    break;
             }
 
             return dvhs;
@@ -550,6 +598,10 @@ namespace MidMarket.DataAccess.DAOs
                     _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Tabla", "Cuenta");
                     return _dataAccess.ExecuteNonEscalar();
 
+                case "CARRITO":
+                    _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Tabla", "Carrito");
+                    return _dataAccess.ExecuteNonEscalar();
+
                 default: return 0;
             }
         }
@@ -599,6 +651,10 @@ namespace MidMarket.DataAccess.DAOs
                 case "CUENTA":
                     _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITO_VERTICAL, "Cuenta");
                     break;
+
+                case "CARRITO":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITO_VERTICAL, "Carrito");
+                    break;
             }
 
             DataSet ds = _dataAccess.ExecuteNonReader();
@@ -643,6 +699,9 @@ namespace MidMarket.DataAccess.DAOs
 
             if (tabla.ToUpper() == "CUENTA")
                 _dataAccess.ExecuteCommandText = $"UPDATE {tabla} SET DVH = @parDVH OUTPUT inserted.Id_Cuenta WHERE Id_Cuenta = @parId";
+
+            if (tabla.ToUpper() == "CARRITO")
+                _dataAccess.ExecuteCommandText = $"UPDATE {tabla} SET DVH = @parDVH OUTPUT inserted.Id_Carrito WHERE Id_Carrito = @parId";
 
             _dataAccess.ExecuteParameters.Parameters.Clear();
 

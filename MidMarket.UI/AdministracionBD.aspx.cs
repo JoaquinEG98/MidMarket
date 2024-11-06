@@ -18,6 +18,7 @@ namespace MidMarket.UI
         private readonly ITraduccionService _traduccionService;
         private readonly ICompraService _compraService;
         private readonly IVentaService _ventaService;
+        private readonly ICarritoService _carritoService;
 
         public AdministracionBD()
         {
@@ -29,6 +30,7 @@ namespace MidMarket.UI
             _traduccionService = Global.Container.Resolve<ITraduccionService>();
             _compraService = Global.Container.Resolve<ICompraService>();
             _ventaService = Global.Container.Resolve<IVentaService>();
+            _carritoService = Global.Container.Resolve<ICarritoService>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -108,7 +110,7 @@ namespace MidMarket.UI
 
             try
             {
-                _digitoVerificadorService.RecalcularTodosDigitosVerificadores(_usuarioService, _permisoService, _compraService, _ventaService);
+                _digitoVerificadorService.RecalcularTodosDigitosVerificadores(_usuarioService, _permisoService, _compraService, _ventaService, _carritoService);
 
                 CargarDV();
 

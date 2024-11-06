@@ -105,8 +105,9 @@ namespace MidMarket.Business.Services
             bool permisos = ValidarDigitosVerificadores("Permiso");
             bool familiaPatente = ValidarDigitosVerificadores("FamiliaPatente");
             bool cuenta = ValidarDigitosVerificadores("Cuenta");
+            bool carrito = ValidarDigitosVerificadores("Carrito");
 
-            if (!cliente || !usuarioPermiso || !transaccionCompra || !detalleCompra || !clienteActivo || !transaccionVenta || !detalleVenta || !permisos || !familiaPatente || !cuenta)
+            if (!cliente || !usuarioPermiso || !transaccionCompra || !detalleCompra || !clienteActivo || !transaccionVenta || !detalleVenta || !permisos || !familiaPatente || !cuenta || !carrito)
                 return false;
 
             else
@@ -315,7 +316,29 @@ namespace MidMarket.Business.Services
             }
         }
 
-        public void RecalcularTodosDigitosVerificadores(IUsuarioService usuarioService, IPermisoService permisoService, ICompraService compraService, IVentaService ventaService)
+        private void ActualizarTablaDVH(List<CarritoDTO> carrito)
+        {
+            using (TransactionScope scope = new TransactionScope())
+            {
+                foreach (var item in carrito)
+                {
+                    var carritoDTO = new CarritoDTO()
+                    {
+                        Id = item.Id,
+                        Id_Activo = item.Id_Activo,
+                        Id_Cliente = item.Id_Cliente,
+                        Cantidad = item.Cantidad,
+                        DVH = item.DVH,
+                    };
+                    carritoDTO.DVH = DigitoVerificador.GenerarDVH(carritoDTO);
+
+                    _digitoVerificadorDataAccess.ActualizarTablaDVH("Carrito", carritoDTO.DVH, carritoDTO.Id);
+                }
+                scope.Complete();
+            }
+        }
+
+        public void RecalcularTodosDigitosVerificadores(IUsuarioService usuarioService, IPermisoService permisoService, ICompraService compraService, IVentaService ventaService, ICarritoService carritoService)
         {
             var clientes = usuarioService.GetClientesEncriptados();
             ActualizarTablaDVH(clientes);
@@ -356,6 +379,10 @@ namespace MidMarket.Business.Services
             var cuentas = usuarioService.GetCuentas();
             ActualizarTablaDVH(cuentas);
             ActualizarDVV("Cuenta");
+
+            var carrito = carritoService.GetCarritoDTO();
+            ActualizarTablaDVH(carrito);
+            ActualizarDVV("Carrito");
         }
 
         public void RecalcularDigitosUsuario(IUsuarioService usuarioService, IPermisoService permisoService)
@@ -391,6 +418,13 @@ namespace MidMarket.Business.Services
             var cuentas = usuarioService.GetCuentas();
             ActualizarTablaDVH(cuentas);
             ActualizarDVV("Cuenta");
+        }
+
+        public void RecalcularDigitosCarrito(ICarritoService carritoService)
+        {
+            var carrito = carritoService.GetCarritoDTO();
+            ActualizarTablaDVH(carrito);
+            ActualizarDVV("Carrito");
         }
     }
 }
