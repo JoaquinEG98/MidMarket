@@ -28,9 +28,9 @@ namespace MidMarket.UI
 
                 if (cliente != null)
                     Response.Redirect("MenuPrincipal.aspx");
-
-                VerificarIdioma();
             }
+
+            VerificarIdioma();
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)

@@ -88,5 +88,22 @@ namespace MidMarket.DataAccess.DAOs
 
             return null;
         }
+
+        public void LimpiarCache()
+        {
+            _cache.Remove(_cacheIdiomasKey);
+
+            var traduccionesKeys = _cache.Where(kvp => kvp.Key.StartsWith(_cacheTraduccionesKey)).Select(kvp => kvp.Key).ToList();
+            foreach (var key in traduccionesKeys)
+            {
+                _cache.Remove(key);
+            }
+
+            var mensajesKeys = _cache.Where(kvp => kvp.Key.StartsWith(_cacheMensajesKey)).Select(kvp => kvp.Key).ToList();
+            foreach (var key in mensajesKeys)
+            {
+                _cache.Remove(key);
+            }
+        }
     }
 }

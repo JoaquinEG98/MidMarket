@@ -25,7 +25,6 @@ namespace MidMarket.UI
                 Session.Abandon();
                 Response.Redirect("Default.aspx");
             }
-
         }
     }
 }

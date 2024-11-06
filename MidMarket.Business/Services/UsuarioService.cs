@@ -153,6 +153,7 @@ namespace MidMarket.Business.Services
             var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
             _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) cerró sesión", Criticidad.Baja, clienteLogueado);
 
+            _traduccionService.LimpiarCache();
             _sessionManager.Remove("Usuario");
             _sessionManager.AbandonSession();
         }
