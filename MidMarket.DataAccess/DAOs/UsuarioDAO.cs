@@ -2,6 +2,7 @@
 using MidMarket.DataAccess.Helpers;
 using MidMarket.DataAccess.Interfaces;
 using MidMarket.Entities;
+using MidMarket.Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -180,6 +181,19 @@ namespace MidMarket.DataAccess.DAOs
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Password", password);
 
             _dataAccess.ExecuteNonQuery();
+        }
+
+        public List<CuentaDTO> GetCuentas()
+        {
+            _dataAccess.SelectCommandText = String.Format(Scripts.GET_ALL_CUENTAS);
+            DataSet ds = _dataAccess.ExecuteNonReader();
+
+            List<CuentaDTO> cuentas = new List<CuentaDTO>();
+
+            if (ds.Tables[0].Rows.Count > 0)
+                cuentas = ClienteFill.FillListCuentaDTO(ds);
+
+            return cuentas;
         }
     }
 }

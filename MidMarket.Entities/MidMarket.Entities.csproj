@@ -61,6 +61,7 @@
     <Compile Include="DTOs\ActivosVendidosDTO.cs" />
     <Compile Include="DTOs\BackupDTO.cs" />
     <Compile Include="DTOs\ClienteActivoDTO.cs" />
+    <Compile Include="DTOs\CuentaDTO.cs" />
     <Compile Include="DTOs\FamiliaPatenteDTO.cs" />
     <Compile Include="DTOs\PermisoDTO.cs" />
     <Compile Include="DTOs\TokenEmailDTO.cs" />

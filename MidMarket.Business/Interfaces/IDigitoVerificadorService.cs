@@ -9,5 +9,6 @@
         void RecalcularDigitosClienteActivo(ICompraService compraService);
         void RecalcularDigitosPermisoDTO(IPermisoService permisoService);
         void RecalcularDigitosFamiliaPatente(IPermisoService permisoService);
+        void RecalcularDigitosCuenta(IUsuarioService usuarioService);
     }
 }

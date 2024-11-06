@@ -115,6 +115,7 @@
     <Content Include="Scripts\Compra\INSERTAR_TRANSACCION_COMPRA.sql" />
     <Content Include="Scripts\Compra\INSERTAR_DETALLE_COMPRA.sql" />
     <Content Include="Scripts\Compra\INSERTAR_ACTIVO_CLIENTE.sql" />
+    <Content Include="Scripts\Cuenta\GET_ALL_CUENTAS.sql" />
     <Content Include="Scripts\Cuenta\CARGAR_SALDO.sql" />
     <Content Include="Scripts\Cuenta\OBTENER_ULTIMA_TRANSACCION.sql" />
     <Content Include="Scripts\Cuenta\OBTENER_TOTAL_INVERTIDO.sql" />

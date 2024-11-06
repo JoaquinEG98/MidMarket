@@ -231,6 +231,30 @@ namespace MidMarket.DataAccess.DAOs
                     }
 
                     break;
+
+                case "CUENTA":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITOS_HORIZONTALES, "Cuenta");
+                    ds = _dataAccess.ExecuteNonReader();
+
+                    DataTable dtCuenta = ds.Tables[0];
+                    if (dtCuenta.Rows.Count > 0)
+                    {
+                        foreach (DataRow rows in dtCuenta.Rows)
+                        {
+                            var cuenta = new CuentaDTO()
+                            {
+                                Id = Convert.ToInt32(rows["Id_Cuenta"].ToString()),
+                                Id_Cliente = Convert.ToInt32(rows["Id_Cliente"].ToString()),
+                                NumeroCuenta = Convert.ToInt64(rows["NumeroCuenta"].ToString()),
+                                Saldo = Convert.ToDecimal(rows["Saldo"].ToString()),
+                                DVH = Convert.ToString(rows["DVH"].ToString()),
+                            };
+
+                            dvhs.Add(cuenta.DVH);
+                        }
+                    }
+
+                    break;
             }
 
             return dvhs;
@@ -448,6 +472,30 @@ namespace MidMarket.DataAccess.DAOs
                     }
 
                     break;
+
+                case "CUENTA":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITOS_HORIZONTALES, "Cuenta");
+                    ds = _dataAccess.ExecuteNonReader();
+
+                    DataTable dtCuenta = ds.Tables[0];
+                    if (dtCuenta.Rows.Count > 0)
+                    {
+                        foreach (DataRow rows in dtCuenta.Rows)
+                        {
+                            var cuenta = new CuentaDTO()
+                            {
+                                Id = Convert.ToInt32(rows["Id"].ToString()),
+                                Id_Cliente = Convert.ToInt32(rows["Id_Cliente"].ToString()),
+                                NumeroCuenta = Convert.ToInt64(rows["NumeroCuenta"].ToString()),
+                                Saldo = Convert.ToDecimal(rows["Saldo"].ToString()),
+                                DVH = Convert.ToString(rows["DVH"].ToString()),
+                            };
+
+                            dvhs.Add(cuenta.DVH);
+                        }
+                    }
+
+                    break;
             }
 
             return dvhs;
@@ -498,6 +546,10 @@ namespace MidMarket.DataAccess.DAOs
                     _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Tabla", "FamiliaPatente");
                     return _dataAccess.ExecuteNonEscalar();
 
+                case "CUENTA":
+                    _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Tabla", "Cuenta");
+                    return _dataAccess.ExecuteNonEscalar();
+
                 default: return 0;
             }
         }
@@ -543,6 +595,10 @@ namespace MidMarket.DataAccess.DAOs
                 case "FAMILIAPATENTE":
                     _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITO_VERTICAL, "FamiliaPatente");
                     break;
+
+                case "CUENTA":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITO_VERTICAL, "Cuenta");
+                    break;
             }
 
             DataSet ds = _dataAccess.ExecuteNonReader();
@@ -584,6 +640,9 @@ namespace MidMarket.DataAccess.DAOs
 
             if (tabla.ToUpper() == "PERMISO")
                 _dataAccess.ExecuteCommandText = $"UPDATE {tabla} SET DVH = @parDVH OUTPUT inserted.Id_Permiso WHERE Id_Permiso = @parId";
+
+            if (tabla.ToUpper() == "CUENTA")
+                _dataAccess.ExecuteCommandText = $"UPDATE {tabla} SET DVH = @parDVH OUTPUT inserted.Id_Cuenta WHERE Id_Cuenta = @parId";
 
             _dataAccess.ExecuteParameters.Parameters.Clear();
 

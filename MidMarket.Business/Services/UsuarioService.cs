@@ -2,6 +2,7 @@
 using MidMarket.Business.Seguridad;
 using MidMarket.DataAccess.Interfaces;
 using MidMarket.Entities;
+using MidMarket.Entities.DTOs;
 using MidMarket.Entities.Enums;
 using MidMarket.Entities.Observer;
 using System;
@@ -278,6 +279,8 @@ namespace MidMarket.Business.Services
 
             var usuarioActualizado = GetCliente(clienteLogueado.Id);
             _sessionManager.Set("Usuario", usuarioActualizado);
+
+            _digitoVerificadorService.RecalcularDigitosCuenta(this);
         }
 
         public decimal ObtenerTotalInvertido()
@@ -301,6 +304,8 @@ namespace MidMarket.Business.Services
                 _sessionManager.Set("Usuario", usuarioActualizado);
 
                 _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) cargó (${saldo}) de saldo en su cuenta comitente: ({clienteLogueado.Cuenta.NumeroCuenta})", Criticidad.Media, clienteLogueado);
+
+                _digitoVerificadorService.RecalcularDigitosCuenta(this);
 
                 scope.Complete();
             }
@@ -372,6 +377,15 @@ namespace MidMarket.Business.Services
 
                 scope.Complete();
             }
+        }
+
+        public List<CuentaDTO> GetCuentas()
+        {
+            var cuentas = new List<CuentaDTO>();
+
+            cuentas = _usuarioDataAccess.GetCuentas();
+
+            return cuentas;
         }
     }
 }

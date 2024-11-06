@@ -336,6 +336,16 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SELECT Id_Cuenta, Id_Cliente, NumeroCuenta, Saldo, DVH
+        ///FROM Cuenta.
+        /// </summary>
+        internal static string GET_ALL_CUENTAS {
+            get {
+                return ResourceManager.GetString("GET_ALL_CUENTAS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SELECT Id_Padre, Id_Hijo, DVH
         ///FROM FamiliaPatente.
         /// </summary>

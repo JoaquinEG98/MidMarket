@@ -292,6 +292,28 @@ namespace MidMarket.Business.Services
             }
         }
 
+        private void ActualizarTablaDVH(List<CuentaDTO> cuentas)
+        {
+            using (TransactionScope scope = new TransactionScope())
+            {
+                foreach (var cuenta in cuentas)
+                {
+                    var cuentaDTO = new CuentaDTO()
+                    {
+                        Id = cuenta.Id,
+                        Id_Cliente = cuenta.Id_Cliente,
+                        NumeroCuenta = cuenta.NumeroCuenta,
+                        Saldo = cuenta.Saldo,
+                        DVH = cuenta.DVH,
+                    };
+                    cuentaDTO.DVH = DigitoVerificador.GenerarDVH(cuentaDTO);
+
+                    _digitoVerificadorDataAccess.ActualizarTablaDVH("Cuenta", cuentaDTO.DVH, cuentaDTO.Id);
+                }
+                scope.Complete();
+            }
+        }
+
         public void RecalcularTodosDigitosVerificadores(IUsuarioService usuarioService, IPermisoService permisoService, ICompraService compraService, IVentaService ventaService)
         {
             var clientes = usuarioService.GetClientesEncriptados();
@@ -329,6 +351,10 @@ namespace MidMarket.Business.Services
             var familiaPatente = permisoService.GetFamiliaPatenteDTO();
             ActualizarTablaDVH(familiaPatente);
             ActualizarDVV("FamiliaPatente");
+
+            var cuentas = usuarioService.GetCuentas();
+            ActualizarTablaDVH(cuentas);
+            ActualizarDVV("Cuenta");
         }
 
         public void RecalcularDigitosUsuario(IUsuarioService usuarioService, IPermisoService permisoService)
@@ -357,6 +383,13 @@ namespace MidMarket.Business.Services
             var familiaPatente = permisoService.GetFamiliaPatenteDTO();
             ActualizarTablaDVH(familiaPatente);
             ActualizarDVV("FamiliaPatente");
+        }
+
+        public void RecalcularDigitosCuenta(IUsuarioService usuarioService)
+        {
+            var cuentas = usuarioService.GetCuentas();
+            ActualizarTablaDVH(cuentas);
+            ActualizarDVV("Cuenta");
         }
     }
 }
