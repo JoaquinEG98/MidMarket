@@ -484,7 +484,7 @@ namespace MidMarket.DataAccess.DAOs
                         {
                             var cuenta = new CuentaDTO()
                             {
-                                Id = Convert.ToInt32(rows["Id"].ToString()),
+                                Id = Convert.ToInt32(rows["Id_Cuenta"].ToString()),
                                 Id_Cliente = Convert.ToInt32(rows["Id_Cliente"].ToString()),
                                 NumeroCuenta = Convert.ToInt64(rows["NumeroCuenta"].ToString()),
                                 Saldo = Convert.ToDecimal(rows["Saldo"].ToString()),

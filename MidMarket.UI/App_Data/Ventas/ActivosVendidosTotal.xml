@@ -7,6 +7,12 @@
     <Total>269500.0000</Total>
   </ActivosVendidosDTO>
   <ActivosVendidosDTO>
+    <Id>14</Id>
+    <Nombre>BPJ25</Nombre>
+    <Cantidad>1</Cantidad>
+    <Total>88400.0000</Total>
+  </ActivosVendidosDTO>
+  <ActivosVendidosDTO>
     <Id>9</Id>
     <Nombre>BONAR 2024</Nombre>
     <Cantidad>26</Cantidad>
@@ -23,11 +29,5 @@
     <Nombre>Cresud</Nombre>
     <Cantidad>12</Cantidad>
     <Total>47400.0000</Total>
-  </ActivosVendidosDTO>
-  <ActivosVendidosDTO>
-    <Id>1</Id>
-    <Nombre>YPF SA</Nombre>
-    <Cantidad>1</Cantidad>
-    <Total>35000.0000</Total>
   </ActivosVendidosDTO>
 </ArrayOfActivosVendidosDTO>

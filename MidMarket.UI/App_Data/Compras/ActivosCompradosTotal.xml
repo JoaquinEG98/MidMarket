@@ -3,8 +3,8 @@
   <ActivosCompradosDTO>
     <Id>2</Id>
     <Nombre>Banco Galicia</Nombre>
-    <Cantidad>31</Cantidad>
-    <Total>379750.0000</Total>
+    <Cantidad>32</Cantidad>
+    <Total>392000.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
     <Id>1</Id>
@@ -25,9 +25,9 @@
     <Total>134400.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
-    <Id>6</Id>
-    <Nombre>Cresud</Nombre>
-    <Cantidad>12</Cantidad>
-    <Total>47400.0000</Total>
+    <Id>14</Id>
+    <Nombre>BPJ25</Nombre>
+    <Cantidad>1</Cantidad>
+    <Total>88400.0000</Total>
   </ActivosCompradosDTO>
 </ArrayOfActivosCompradosDTO>

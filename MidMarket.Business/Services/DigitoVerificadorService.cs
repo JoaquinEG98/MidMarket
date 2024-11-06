@@ -104,8 +104,9 @@ namespace MidMarket.Business.Services
             bool detalleVenta = ValidarDigitosVerificadores("DetalleVenta");
             bool permisos = ValidarDigitosVerificadores("Permiso");
             bool familiaPatente = ValidarDigitosVerificadores("FamiliaPatente");
+            bool cuenta = ValidarDigitosVerificadores("Cuenta");
 
-            if (!cliente || !usuarioPermiso || !transaccionCompra || !detalleCompra || !clienteActivo || !transaccionVenta || !detalleVenta || !permisos || !familiaPatente)
+            if (!cliente || !usuarioPermiso || !transaccionCompra || !detalleCompra || !clienteActivo || !transaccionVenta || !detalleVenta || !permisos || !familiaPatente || !cuenta)
                 return false;
 
             else
