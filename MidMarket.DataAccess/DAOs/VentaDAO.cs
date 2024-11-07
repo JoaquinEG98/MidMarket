@@ -127,9 +127,9 @@ namespace MidMarket.DataAccess.DAOs
             return 0;
         }
 
-        public List<TransaccionVenta> GetAllVentas()
+        public List<TransaccionVentaDTO> GetAllVentas()
         {
-            var ventas = new List<TransaccionVenta>();
+            var ventas = new List<TransaccionVentaDTO>();
 
             _dataAccess.SelectCommandText = String.Format(Scripts.GET_ALL_VENTAS);
 
@@ -137,7 +137,7 @@ namespace MidMarket.DataAccess.DAOs
 
             if (ds.Tables[0].Rows.Count > 0)
             {
-                ventas = VentaFill.FillListTransaccionVenta(ds, null);
+                ventas = VentaFill.FillListTransaccionVentaDTO(ds);
             }
 
             return ventas;

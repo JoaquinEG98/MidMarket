@@ -72,6 +72,7 @@
     <Compile Include="DTOs\FamiliaPatenteDTO.cs" />
     <Compile Include="DTOs\PermisoDTO.cs" />
     <Compile Include="DTOs\TokenEmailDTO.cs" />
+    <Compile Include="DTOs\TransaccionVentaDTO.cs" />
     <Compile Include="DTOs\UsuarioPermisoDTO.cs" />
     <Compile Include="Enums\Criticidad.cs" />
     <Compile Include="Enums\Permiso.cs" />

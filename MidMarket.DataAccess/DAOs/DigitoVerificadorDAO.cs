@@ -180,8 +180,10 @@ namespace MidMarket.DataAccess.DAOs
                     {
                         foreach (DataRow rows in dtTransaccionVenta.Rows)
                         {
-                            var transaccionVenta = new TransaccionVenta()
+                            var transaccionVenta = new TransaccionVentaDTO()
                             {
+                                Id_Cliente = Convert.ToInt32(rows["Id_Cliente"].ToString()),
+                                Id_Cuenta = Convert.ToInt64(rows["Id_Cuenta"].ToString()),
                                 Fecha = Convert.ToDateTime(rows["Fecha"].ToString()),
                                 Total = Convert.ToDecimal(rows["Total"].ToString()),
                                 DVH = (rows["DVH"].ToString())
@@ -553,8 +555,10 @@ namespace MidMarket.DataAccess.DAOs
                     {
                         foreach (DataRow rows in dtTransaccionVenta.Rows)
                         {
-                            var transaccionVenta = new TransaccionVenta()
+                            var transaccionVenta = new TransaccionVentaDTO()
                             {
+                                Id_Cliente = Convert.ToInt32(rows["Id_Cliente"].ToString()),
+                                Id_Cuenta = Convert.ToInt64(rows["Id_Cliente"].ToString()),
                                 Fecha = Convert.ToDateTime(rows["Fecha"].ToString()),
                                 Total = Convert.ToDecimal(rows["Total"].ToString()),
                                 DVH = (rows["DVH"].ToString())

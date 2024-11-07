@@ -50,25 +50,11 @@ namespace MidMarket.Business.Services
                     Fecha = ClockWrapper.Now(),
                     Total = total
                 };
-                transaccionVenta.DVH = DigitoVerificador.GenerarDVH(transaccionVenta);
+                transaccionVenta.DVH = GenerarDVHTransaccionVenta(transaccionVenta);
 
                 int ventaId = _ventaDataAccess.InsertarTransaccionVenta(transaccionVenta);
 
-                //DetalleVenta detalle = new DetalleVenta()
-                //{
-                //    Activo = venta.Activo,
-                //    Cantidad = venta.Cantidad,
-                //};
-
-                //if (venta.Activo is Accion accion)
-                //{
-                //    detalle.Precio = accion.Precio;
-                //}
-                //else if (venta.Activo is Bono bono)
-                //{
-                //    detalle.Precio = bono.ValorNominal;
-                //}
-                venta.DVH = DigitoVerificador.GenerarDVH(venta);
+                venta.DVH = GenerarDVHDetalleVenta(venta, ventaId);
 
                 _ventaDataAccess.InsertarDetalleVenta(venta, ventaId);
 
@@ -84,6 +70,34 @@ namespace MidMarket.Business.Services
 
                 scope.Complete();
             }
+        }
+
+        private string GenerarDVHDetalleVenta(DetalleVenta venta, int ventaId)
+        {
+            DetalleVentaDTO detalle = new DetalleVentaDTO()
+            {
+                Id_Activo = venta.Activo.Id,
+                Cantidad = venta.Cantidad,
+                Id_Venta = ventaId,
+                Precio = venta.Precio,
+            };
+            detalle.DVH = DigitoVerificador.GenerarDVH(detalle);
+
+            return detalle.DVH;
+        }
+
+        private string GenerarDVHTransaccionVenta(TransaccionVenta venta)
+        {
+            TransaccionVentaDTO ventaDTO = new TransaccionVentaDTO()
+            {
+                Id_Cliente = venta.Cliente.Id,
+                Id_Cuenta = venta.Cuenta.Id,
+                Total = venta.Total,
+                Fecha = venta.Fecha,
+            };
+            ventaDTO.DVH = DigitoVerificador.GenerarDVH(ventaDTO);
+
+            return ventaDTO.DVH;
         }
 
         private void ValidarVenta(DetalleVenta venta, int idCliente)
@@ -115,9 +129,9 @@ namespace MidMarket.Business.Services
             return _ventaDataAccess.ObtenerCantidadRealCliente(activoId, idCliente);
         }
 
-        public List<TransaccionVenta> GetAllVentas()
+        public List<TransaccionVentaDTO> GetAllVentas()
         {
-            List<TransaccionVenta> ventas = _ventaDataAccess.GetAllVentas();
+            List<TransaccionVentaDTO> ventas = _ventaDataAccess.GetAllVentas();
 
             return ventas;
         }

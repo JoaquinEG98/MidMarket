@@ -96,22 +96,20 @@ namespace MidMarket.Business.Services
         public bool VerificarInconsistenciaTablas(out List<string> tablas)
         {
             tablas = new List<string>();
+            var nombresTablas = new[]
+            {
+                "Cliente", "UsuarioPermiso", "TransaccionCompra", "DetalleCompra", "ClienteActivo",
+                "TransaccionVenta", "DetalleVenta", "Permiso", "FamiliaPatente", "Cuenta",
+                "Carrito", "Bitacora", "Activo", "Accion", "Bono"
+            };
 
-            if (!ValidarDigitosVerificadores("Cliente")) tablas.Add("Cliente");
-            if (!ValidarDigitosVerificadores("UsuarioPermiso")) tablas.Add("UsuarioPermiso");
-            if (!ValidarDigitosVerificadores("TransaccionCompra")) tablas.Add("TransaccionCompra");
-            if (!ValidarDigitosVerificadores("DetalleCompra")) tablas.Add("DetalleCompra");
-            if (!ValidarDigitosVerificadores("ClienteActivo")) tablas.Add("ClienteActivo");
-            if (!ValidarDigitosVerificadores("TransaccionVenta")) tablas.Add("TransaccionVenta");
-            if (!ValidarDigitosVerificadores("DetalleVenta")) tablas.Add("DetalleVenta");
-            if (!ValidarDigitosVerificadores("Permiso")) tablas.Add("Permiso");
-            if (!ValidarDigitosVerificadores("FamiliaPatente")) tablas.Add("FamiliaPatente");
-            if (!ValidarDigitosVerificadores("Cuenta")) tablas.Add("Cuenta");
-            if (!ValidarDigitosVerificadores("Carrito")) tablas.Add("Carrito");
-            if (!ValidarDigitosVerificadores("Bitacora")) tablas.Add("Bitacora");
-            if (!ValidarDigitosVerificadores("Activo")) tablas.Add("Activo");
-            if (!ValidarDigitosVerificadores("Accion")) tablas.Add("Accion");
-            if (!ValidarDigitosVerificadores("Bono")) tablas.Add("Bono");
+            foreach (var nombreTabla in nombresTablas)
+            {
+                if (!ValidarDigitosVerificadores(nombreTabla))
+                {
+                    tablas.Add(nombreTabla);
+                }
+            }
 
             return tablas.Count == 0;
         }
@@ -218,15 +216,17 @@ namespace MidMarket.Business.Services
             }
         }
 
-        private void ActualizarTablaDVH(List<TransaccionVenta> ventas)
+        private void ActualizarTablaDVH(List<TransaccionVentaDTO> ventas)
         {
             using (TransactionScope scope = new TransactionScope())
             {
                 foreach (var venta in ventas)
                 {
-                    var ventaDTO = new TransaccionVenta()
+                    var ventaDTO = new TransaccionVentaDTO()
                     {
                         Id = venta.Id,
+                        Id_Cliente = venta.Id_Cliente,
+                        Id_Cuenta = venta.Id_Cuenta,
                         Fecha = venta.Fecha,
                         Total = venta.Total,
                     };

@@ -12,7 +12,7 @@ namespace MidMarket.DataAccess.Interfaces
         List<TransaccionVenta> GetVentas(Cliente cliente);
         decimal ObtenerUltimoPrecioActivo(int idActivo);
         int ObtenerCantidadRealCliente(int idActivo, int idCliente);
-        List<TransaccionVenta> GetAllVentas();
+        List<TransaccionVentaDTO> GetAllVentas();
         List<DetalleVentaDTO> GetAllVentasDetalle();
     }
 }
