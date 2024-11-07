@@ -17,8 +17,9 @@ namespace MidMarket.Business.Seguridad
 
             foreach (PropertyInfo propiedad in propiedades)
             {
-                if (propiedad.Name != "Id" && propiedad.Name != "DVH" && propiedad.Name != "Items" && propiedad.Name != "Permisos" && propiedad.GetValue(objeto) != null
-                    && !typeof(IEnumerable).IsAssignableFrom(propiedad.PropertyType))
+                if (propiedad.Name != "Id" && propiedad.Name != "DVH" && propiedad.Name != "Items" && propiedad.Name != "Permisos"
+                    && propiedad.GetValue(objeto) != null
+                    && (!typeof(IEnumerable).IsAssignableFrom(propiedad.PropertyType) || propiedad.PropertyType == typeof(string)))
                 {
                     if (propiedad.SetMethod.IsVirtual)
                     {

@@ -34,18 +34,30 @@ namespace MidMarket.Business.Services
                     Criticidad = criticidad,
                     Fecha = ClockWrapper.Now(),
                 };
-                bitacora.DVH = DigitoVerificador.GenerarDVH(bitacora);
+                bitacora.DVH = GenerarDVHBitacora(bitacora);
 
                 id = _bitacoraDAO.AltaBitacora(bitacora);
 
                 _digitoVerificadorService.ActualizarDVV("Bitacora");
 
-                //_digitoVerificadorService.RecalcularDigitosBitacora(this);
-
                 scope.Complete();
             }
 
             return id;
+        }
+
+        private string GenerarDVHBitacora(Bitacora bitacora)
+        {
+            BitacoraDTO bitacoraDTO = new BitacoraDTO()
+            {
+                Id_Cliente = bitacora.Cliente.Id,
+                Descripcion = bitacora.Descripcion,
+                Criticidad = bitacora.Criticidad,
+                Fecha = bitacora.Fecha,
+            };
+            bitacoraDTO.DVH = DigitoVerificador.GenerarDVH(bitacoraDTO);
+
+            return bitacoraDTO.DVH;
         }
 
         public List<Bitacora> ObtenerBitacora()
