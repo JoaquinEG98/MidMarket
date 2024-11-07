@@ -2,6 +2,7 @@
 using MidMarket.DataAccess.Helpers;
 using MidMarket.DataAccess.Interfaces;
 using MidMarket.Entities;
+using MidMarket.Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -142,9 +143,9 @@ namespace MidMarket.DataAccess.DAOs
             return ventas;
         }
 
-        public List<DetalleVenta> GetAllVentasDetalle()
+        public List<DetalleVentaDTO> GetAllVentasDetalle()
         {
-            var detalle = new List<DetalleVenta>();
+            var detalle = new List<DetalleVentaDTO>();
 
             _dataAccess.SelectCommandText = String.Format(Scripts.GET_ALL_VENTAS_DETALLE);
 
@@ -152,7 +153,7 @@ namespace MidMarket.DataAccess.DAOs
 
             if (ds.Tables[0].Rows.Count > 0)
             {
-                detalle = VentaFill.FillListDetalleVenta(ds);
+                detalle = VentaFill.FillListDetalleVentaDTO(ds);
             }
 
             return detalle;

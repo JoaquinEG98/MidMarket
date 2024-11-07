@@ -44,8 +44,8 @@ namespace MidMarket.DataAccess.Helpers
             if (dr.Table.Columns.Contains("Id_Bitacora") && !Convert.IsDBNull(dr["Id_Bitacora"]))
                 bitacora.Id = Convert.ToInt32(dr["Id_Bitacora"]);
 
-            //if (dr.Table.Columns.Contains("Id_Cliente") && !Convert.IsDBNull(dr["Id_Cliente"]))
-            //    bitacora.Id_Cliente = Convert.ToInt32(dr["Id_Cliente"]);
+            if (dr.Table.Columns.Contains("Id_Cliente") && !Convert.IsDBNull(dr["Id_Cliente"]))
+                bitacora.Id_Cliente = Convert.ToInt32(dr["Id_Cliente"]);
 
             if (dr.Table.Columns.Contains("Descripcion") && !Convert.IsDBNull(dr["Descripcion"]))
                 bitacora.Descripcion = Convert.ToString(dr["Descripcion"]);

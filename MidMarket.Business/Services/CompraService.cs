@@ -121,9 +121,9 @@ namespace MidMarket.Business.Services
             return compras;
         }
 
-        public List<DetalleCompra> GetAllComprasDetalle()
+        public List<DetalleCompraDTO> GetAllComprasDetalle()
         {
-            List<DetalleCompra> detalle = _compraDataAccess.GetAllComprasDetalle();
+            List<DetalleCompraDTO> detalle = _compraDataAccess.GetAllComprasDetalle();
 
             return detalle;
         }

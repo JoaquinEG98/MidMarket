@@ -1,4 +1,5 @@
 ﻿using MidMarket.Entities;
+using MidMarket.Entities.DTOs;
 using System.Collections.Generic;
 
 namespace MidMarket.Business.Interfaces
@@ -9,6 +10,6 @@ namespace MidMarket.Business.Interfaces
         List<TransaccionVenta> GetVentas();
         decimal ObtenerUltimoPrecioActivo(int idActivo);
         List<TransaccionVenta> GetAllVentas();
-        List<DetalleVenta> GetAllVentasDetalle();
+        List<DetalleVentaDTO> GetAllVentasDetalle();
     }
 }

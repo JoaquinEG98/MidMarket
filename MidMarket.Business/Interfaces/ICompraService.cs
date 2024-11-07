@@ -9,7 +9,7 @@ namespace MidMarket.Business.Interfaces
         void RealizarCompra(List<Carrito> carrito);
         List<TransaccionCompra> GetCompras(bool historico);
         List<TransaccionCompra> GetAllCompras();
-        List<DetalleCompra> GetAllComprasDetalle();
+        List<DetalleCompraDTO> GetAllComprasDetalle();
         List<ClienteActivoDTO> GetAllClienteActivo();
     }
 }

@@ -1,9 +1,11 @@
-﻿namespace MidMarket.Business.Interfaces
+﻿using System.Collections.Generic;
+
+namespace MidMarket.Business.Interfaces
 {
     public interface IDigitoVerificadorService
     {
         void ActualizarDVV(string tabla);
-        bool VerificarInconsistenciaTablas();
+        bool VerificarInconsistenciaTablas(out List<string> tablas);
         void RecalcularTodosDigitosVerificadores(IUsuarioService usuarioService, IPermisoService permisoService, ICompraService compraService, IVentaService ventaService, ICarritoService carritoService, IBitacoraService bitacoraService, IActivoService activoService);
         void RecalcularDigitosUsuario(IUsuarioService usuarioService, IPermisoService permisoService);
         void RecalcularDigitosClienteActivo(ICompraService compraService);

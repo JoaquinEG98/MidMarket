@@ -67,6 +67,8 @@
     <Compile Include="DTOs\CarritoDTO.cs" />
     <Compile Include="DTOs\ClienteActivoDTO.cs" />
     <Compile Include="DTOs\CuentaDTO.cs" />
+    <Compile Include="DTOs\DetalleCompraDTO.cs" />
+    <Compile Include="DTOs\DetalleVentaDTO.cs" />
     <Compile Include="DTOs\FamiliaPatenteDTO.cs" />
     <Compile Include="DTOs\PermisoDTO.cs" />
     <Compile Include="DTOs\TokenEmailDTO.cs" />

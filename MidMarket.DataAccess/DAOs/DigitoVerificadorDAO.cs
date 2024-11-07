@@ -64,8 +64,9 @@ namespace MidMarket.DataAccess.DAOs
                             {
                                 UsuarioId = Convert.ToInt32(rows["Id_Cliente"].ToString()),
                                 PermisoId = Convert.ToInt32(rows["Id_Patente"].ToString()),
-                                DVH = Convert.ToString(rows["DVH"].ToString())
+                                DVH = (rows["DVH"].ToString())
                             };
+                            usuarioPermiso.DVH = DigitoVerificador.GenerarDVH(usuarioPermiso);
 
                             dvhs.Add(usuarioPermiso.DVH);
                         }
@@ -82,12 +83,15 @@ namespace MidMarket.DataAccess.DAOs
                     {
                         foreach (DataRow rows in dtDetalleCompra.Rows)
                         {
-                            DetalleCompra detalleCompra = new DetalleCompra()
+                            var detalleCompra = new DetalleCompraDTO()
                             {
+                                Id_Activo = Convert.ToInt32(rows["Id_Activo"].ToString()),
+                                Id_Compra = Convert.ToInt32(rows["Id_Compra"].ToString()),
                                 Cantidad = Convert.ToInt32(rows["Cantidad"].ToString()),
                                 Precio = Convert.ToDecimal(rows["Precio"].ToString()),
-                                DVH = Convert.ToString(rows["DVH"].ToString())
+                                DVH = (rows["DVH"].ToString())
                             };
+                            detalleCompra.DVH = DigitoVerificador.GenerarDVH(detalleCompra);
 
                             dvhs.Add(detalleCompra.DVH);
                         }
@@ -108,8 +112,9 @@ namespace MidMarket.DataAccess.DAOs
                             {
                                 Fecha = Convert.ToDateTime(rows["Fecha"].ToString()),
                                 Total = Convert.ToDecimal(rows["Total"].ToString()),
-                                DVH = Convert.ToString(rows["DVH"].ToString())
+                                DVH = (rows["DVH"].ToString())
                             };
+                            transaccionCompra.DVH = DigitoVerificador.GenerarDVH(transaccionCompra);
 
                             dvhs.Add(transaccionCompra.DVH);
                         }
@@ -131,8 +136,9 @@ namespace MidMarket.DataAccess.DAOs
                                 Id_Cliente = Convert.ToInt32(rows["Id_Cliente"].ToString()),
                                 Id_Activo = Convert.ToInt32(rows["Id_Activo"].ToString()),
                                 Cantidad = Convert.ToInt32(rows["Cantidad"].ToString()),
-                                DVH = Convert.ToString(rows["DVH"].ToString())
+                                DVH = (rows["DVH"].ToString())
                             };
+                            clienteActivo.DVH = DigitoVerificador.GenerarDVH(clienteActivo);
 
                             dvhs.Add(clienteActivo.DVH);
                         }
@@ -149,12 +155,15 @@ namespace MidMarket.DataAccess.DAOs
                     {
                         foreach (DataRow rows in dtDetalleVenta.Rows)
                         {
-                            DetalleVenta detalleVenta = new DetalleVenta()
+                            var detalleVenta = new DetalleVentaDTO()
                             {
+                                Id_Activo = Convert.ToInt32(rows["Id_Activo"].ToString()),
+                                Id_Venta = Convert.ToInt32(rows["Id_Venta"].ToString()),
                                 Cantidad = Convert.ToInt32(rows["Cantidad"].ToString()),
                                 Precio = Convert.ToDecimal(rows["Precio"].ToString()),
-                                DVH = Convert.ToString(rows["DVH"].ToString())
+                                DVH = (rows["DVH"].ToString())
                             };
+                            detalleVenta.DVH = DigitoVerificador.GenerarDVH(detalleVenta);
 
                             dvhs.Add(detalleVenta.DVH);
                         }
@@ -175,8 +184,9 @@ namespace MidMarket.DataAccess.DAOs
                             {
                                 Fecha = Convert.ToDateTime(rows["Fecha"].ToString()),
                                 Total = Convert.ToDecimal(rows["Total"].ToString()),
-                                DVH = Convert.ToString(rows["DVH"].ToString())
+                                DVH = (rows["DVH"].ToString())
                             };
+                            transaccionVenta.DVH = DigitoVerificador.GenerarDVH(transaccionVenta);
 
                             dvhs.Add(transaccionVenta.DVH);
                         }
@@ -199,10 +209,11 @@ namespace MidMarket.DataAccess.DAOs
 
                             var permisoDTO = new PermisoDTO()
                             {
-                                Nombre = Convert.ToString(rows["Nombre"].ToString()),
+                                Nombre = (rows["Nombre"].ToString()),
                                 Permiso = permisoString != null ? (Permiso)Enum.Parse(typeof(Permiso), permisoString) : default(Permiso),
-                                DVH = Convert.ToString(rows["DVH"].ToString())
+                                DVH = (rows["DVH"].ToString())
                             };
+                            permisoDTO.DVH = DigitoVerificador.GenerarDVH(permisoDTO);
 
                             dvhs.Add(permisoDTO.DVH);
                         }
@@ -223,8 +234,9 @@ namespace MidMarket.DataAccess.DAOs
                             {
                                 Id_Padre = Convert.ToInt32(rows["Id_Padre"].ToString()),
                                 Id_Hijo = Convert.ToInt32(rows["Id_Hijo"].ToString()),
-                                DVH = Convert.ToString(rows["DVH"].ToString()),
+                                DVH = (rows["DVH"].ToString()),
                             };
+                            familiaPatenteDTO.DVH = DigitoVerificador.GenerarDVH(familiaPatenteDTO);
 
                             dvhs.Add(familiaPatenteDTO.DVH);
                         }
@@ -247,8 +259,9 @@ namespace MidMarket.DataAccess.DAOs
                                 Id_Cliente = Convert.ToInt32(rows["Id_Cliente"].ToString()),
                                 NumeroCuenta = Convert.ToInt64(rows["NumeroCuenta"].ToString()),
                                 Saldo = Convert.ToDecimal(rows["Saldo"].ToString()),
-                                DVH = Convert.ToString(rows["DVH"].ToString()),
+                                DVH = (rows["DVH"].ToString()),
                             };
+                            cuenta.DVH = DigitoVerificador.GenerarDVH(cuenta);
 
                             dvhs.Add(cuenta.DVH);
                         }
@@ -271,8 +284,9 @@ namespace MidMarket.DataAccess.DAOs
                                 Id_Activo = Convert.ToInt32(rows["Id_Activo"].ToString()),
                                 Id_Cliente = Convert.ToInt32(rows["Id_Cliente"].ToString()),
                                 Cantidad = Convert.ToInt32(rows["Cantidad"].ToString()),
-                                DVH = Convert.ToString(rows["DVH"].ToString()),
+                                DVH = (rows["DVH"].ToString()),
                             };
+                            carrito.DVH = DigitoVerificador.GenerarDVH(carrito);
 
                             dvhs.Add(carrito.DVH);
                         }
@@ -293,11 +307,12 @@ namespace MidMarket.DataAccess.DAOs
                             {
                                 Id = Convert.ToInt32(rows["Id_Bitacora"].ToString()),
                                 Id_Cliente = Convert.ToInt32(rows["Id_Cliente"].ToString()),
-                                Descripcion = Convert.ToString(rows["Descripcion"].ToString()),
+                                Descripcion = (rows["Descripcion"].ToString()),
                                 Criticidad = (Criticidad)(rows["Criticidad"]),
                                 Fecha = Convert.ToDateTime(rows["Fecha"].ToString()),
-                                DVH = Convert.ToString(rows["DVH"].ToString()),
+                                DVH = (rows["DVH"].ToString()),
                             };
+                            bitacora.DVH = DigitoVerificador.GenerarDVH(bitacora);
 
                             dvhs.Add(bitacora.DVH);
                         }
@@ -317,9 +332,10 @@ namespace MidMarket.DataAccess.DAOs
                             var activo = new ActivoDTO()
                             {
                                 Id = Convert.ToInt32(rows["Id_Activo"].ToString()),
-                                Nombre = Convert.ToString(rows["Nombre"].ToString()),
-                                DVH = Convert.ToString(rows["DVH"].ToString()),
+                                Nombre = (rows["Nombre"].ToString()),
+                                DVH = (rows["DVH"].ToString()),
                             };
+                            activo.DVH = DigitoVerificador.GenerarDVH(activo);
 
                             dvhs.Add(activo.DVH);
                         }
@@ -339,11 +355,12 @@ namespace MidMarket.DataAccess.DAOs
                             var accion = new AccionDTO()
                             {
                                 Id = Convert.ToInt32(rows["Id_Accion"].ToString()),
-                                Simbolo = Convert.ToString(rows["Simbolo"].ToString()),
+                                Simbolo = (rows["Simbolo"].ToString()),
                                 Precio = Convert.ToDecimal(rows["Precio"].ToString()),
                                 Id_Activo = Convert.ToInt32(rows["Id_Activo"].ToString()),
-                                DVH = Convert.ToString(rows["DVH"].ToString()),
+                                DVH = (rows["DVH"].ToString()),
                             };
+                            accion.DVH = DigitoVerificador.GenerarDVH(accion);
 
                             dvhs.Add(accion.DVH);
                         }
@@ -366,8 +383,9 @@ namespace MidMarket.DataAccess.DAOs
                                 ValorNominal = Convert.ToDecimal(rows["ValorNominal"].ToString()),
                                 TasaInteres = float.Parse(rows["TasaInteres"].ToString()),
                                 Id_Activo = Convert.ToInt32(rows["Id_Activo"].ToString()),
-                                DVH = Convert.ToString(rows["DVH"].ToString()),
+                                DVH = (rows["DVH"].ToString()),
                             };
+                            bono.DVH = DigitoVerificador.GenerarDVH(bono);
 
                             dvhs.Add(bono.DVH);
                         }
@@ -424,7 +442,7 @@ namespace MidMarket.DataAccess.DAOs
                             {
                                 UsuarioId = Convert.ToInt32(rows["Id_Cliente"].ToString()),
                                 PermisoId = Convert.ToInt32(rows["Id_Patente"].ToString()),
-                                DVH = Convert.ToString(rows["DVH"].ToString())
+                                DVH = (rows["DVH"].ToString())
                             };
 
                             dvhs.Add(usuarioPermiso.DVH);
@@ -442,11 +460,13 @@ namespace MidMarket.DataAccess.DAOs
                     {
                         foreach (DataRow rows in dtDetalleCompra.Rows)
                         {
-                            DetalleCompra detalleCompra = new DetalleCompra()
+                            var detalleCompra = new DetalleCompraDTO()
                             {
+                                Id_Activo = Convert.ToInt32(rows["Id_Activo"].ToString()),
+                                Id_Compra = Convert.ToInt32(rows["Id_Compra"].ToString()),
                                 Cantidad = Convert.ToInt32(rows["Cantidad"].ToString()),
                                 Precio = Convert.ToDecimal(rows["Precio"].ToString()),
-                                DVH = Convert.ToString(rows["DVH"].ToString())
+                                DVH = (rows["DVH"].ToString())
                             };
 
                             dvhs.Add(detalleCompra.DVH);
@@ -468,7 +488,7 @@ namespace MidMarket.DataAccess.DAOs
                             {
                                 Fecha = Convert.ToDateTime(rows["Fecha"].ToString()),
                                 Total = Convert.ToDecimal(rows["Total"].ToString()),
-                                DVH = Convert.ToString(rows["DVH"].ToString())
+                                DVH = (rows["DVH"].ToString())
                             };
 
                             dvhs.Add(transaccionCompra.DVH);
@@ -491,7 +511,7 @@ namespace MidMarket.DataAccess.DAOs
                                 Id_Cliente = Convert.ToInt32(rows["Id_Cliente"].ToString()),
                                 Id_Activo = Convert.ToInt32(rows["Id_Activo"].ToString()),
                                 Cantidad = Convert.ToInt32(rows["Cantidad"].ToString()),
-                                DVH = Convert.ToString(rows["DVH"].ToString())
+                                DVH = (rows["DVH"].ToString())
                             };
 
                             dvhs.Add(clienteActivo.DVH);
@@ -509,11 +529,13 @@ namespace MidMarket.DataAccess.DAOs
                     {
                         foreach (DataRow rows in dtDetalleVenta.Rows)
                         {
-                            var detalleVenta = new DetalleVenta()
+                            var detalleVenta = new DetalleVentaDTO()
                             {
+                                Id_Activo = Convert.ToInt32(rows["Id_Activo"].ToString()),
+                                Id_Venta = Convert.ToInt32(rows["Id_Venta"].ToString()),
                                 Cantidad = Convert.ToInt32(rows["Cantidad"].ToString()),
                                 Precio = Convert.ToDecimal(rows["Precio"].ToString()),
-                                DVH = Convert.ToString(rows["DVH"].ToString())
+                                DVH = (rows["DVH"].ToString())
                             };
 
                             dvhs.Add(detalleVenta.DVH);
@@ -535,7 +557,7 @@ namespace MidMarket.DataAccess.DAOs
                             {
                                 Fecha = Convert.ToDateTime(rows["Fecha"].ToString()),
                                 Total = Convert.ToDecimal(rows["Total"].ToString()),
-                                DVH = Convert.ToString(rows["DVH"].ToString())
+                                DVH = (rows["DVH"].ToString())
                             };
 
                             dvhs.Add(transaccionVenta.DVH);
@@ -559,9 +581,9 @@ namespace MidMarket.DataAccess.DAOs
 
                             var permisoDTO = new PermisoDTO()
                             {
-                                Nombre = Convert.ToString(rows["Nombre"].ToString()),
+                                Nombre = (rows["Nombre"].ToString()),
                                 Permiso = permisoString != null ? (Permiso)Enum.Parse(typeof(Permiso), permisoString) : default(Permiso),
-                                DVH = Convert.ToString(rows["DVH"].ToString())
+                                DVH = (rows["DVH"].ToString())
                             };
 
                             dvhs.Add(permisoDTO.DVH);
@@ -583,7 +605,7 @@ namespace MidMarket.DataAccess.DAOs
                             {
                                 Id_Padre = Convert.ToInt32(rows["Id_Padre"].ToString()),
                                 Id_Hijo = Convert.ToInt32(rows["Id_Hijo"].ToString()),
-                                DVH = Convert.ToString(rows["DVH"].ToString())
+                                DVH = (rows["DVH"].ToString())
                             };
 
                             dvhs.Add(familiaPatenteDTO.DVH);
@@ -607,7 +629,7 @@ namespace MidMarket.DataAccess.DAOs
                                 Id_Cliente = Convert.ToInt32(rows["Id_Cliente"].ToString()),
                                 NumeroCuenta = Convert.ToInt64(rows["NumeroCuenta"].ToString()),
                                 Saldo = Convert.ToDecimal(rows["Saldo"].ToString()),
-                                DVH = Convert.ToString(rows["DVH"].ToString()),
+                                DVH = (rows["DVH"].ToString()),
                             };
 
                             dvhs.Add(cuenta.DVH);
@@ -631,7 +653,7 @@ namespace MidMarket.DataAccess.DAOs
                                 Id_Activo = Convert.ToInt32(rows["Id_Activo"].ToString()),
                                 Id_Cliente = Convert.ToInt32(rows["Id_Cliente"].ToString()),
                                 Cantidad = Convert.ToInt32(rows["Cantidad"].ToString()),
-                                DVH = Convert.ToString(rows["DVH"].ToString()),
+                                DVH = (rows["DVH"].ToString()),
                             };
 
                             dvhs.Add(carrito.DVH);
@@ -653,10 +675,10 @@ namespace MidMarket.DataAccess.DAOs
                             {
                                 Id = Convert.ToInt32(rows["Id_Bitacora"].ToString()),
                                 Id_Cliente = Convert.ToInt32(rows["Id_Cliente"].ToString()),
-                                Descripcion = Convert.ToString(rows["Descripcion"].ToString()),
+                                Descripcion = (rows["Descripcion"].ToString()),
                                 Criticidad = (Criticidad)(rows["Criticidad"]),
                                 Fecha = Convert.ToDateTime(rows["Fecha"].ToString()),
-                                DVH = Convert.ToString(rows["DVH"].ToString()),
+                                DVH = (rows["DVH"].ToString()),
                             };
 
                             dvhs.Add(bitacora.DVH);
@@ -677,8 +699,8 @@ namespace MidMarket.DataAccess.DAOs
                             var activo = new ActivoDTO()
                             {
                                 Id = Convert.ToInt32(rows["Id_Activo"].ToString()),
-                                Nombre = Convert.ToString(rows["Nombre"].ToString()),
-                                DVH = Convert.ToString(rows["DVH"].ToString()),
+                                Nombre = (rows["Nombre"].ToString()),
+                                DVH = (rows["DVH"].ToString()),
                             };
 
                             dvhs.Add(activo.DVH);
@@ -699,10 +721,10 @@ namespace MidMarket.DataAccess.DAOs
                             var accion = new AccionDTO()
                             {
                                 Id = Convert.ToInt32(rows["Id_Accion"].ToString()),
-                                Simbolo = Convert.ToString(rows["Simbolo"].ToString()),
+                                Simbolo = (rows["Simbolo"].ToString()),
                                 Precio = Convert.ToDecimal(rows["Precio"].ToString()),
                                 Id_Activo = Convert.ToInt32(rows["Id_Activo"].ToString()),
-                                DVH = Convert.ToString(rows["DVH"].ToString()),
+                                DVH = (rows["DVH"].ToString()),
                             };
 
                             dvhs.Add(accion.DVH);
@@ -726,7 +748,7 @@ namespace MidMarket.DataAccess.DAOs
                                 ValorNominal = Convert.ToDecimal(rows["ValorNominal"].ToString()),
                                 TasaInteres = float.Parse(rows["TasaInteres"].ToString()),
                                 Id_Activo = Convert.ToInt32(rows["Id_Activo"].ToString()),
-                                DVH = Convert.ToString(rows["DVH"].ToString()),
+                                DVH = (rows["DVH"].ToString()),
                             };
 
                             dvhs.Add(bono.DVH);
@@ -927,7 +949,7 @@ namespace MidMarket.DataAccess.DAOs
                 _dataAccess.ExecuteCommandText = $"UPDATE {tabla} SET DVH = @parDVH OUTPUT inserted.Id_Carrito WHERE Id_Carrito = @parId";
 
             if (tabla.ToUpper() == "BITACORA")
-                _dataAccess.ExecuteCommandText = $"UPDATE {tabla} SET DVH = @parDVH OUTPUT inserted.Id_BItacora WHERE Id_Bitacora = @parId";
+                _dataAccess.ExecuteCommandText = $"UPDATE {tabla} SET DVH = @parDVH OUTPUT inserted.Id_Bitacora WHERE Id_Bitacora = @parId";
 
             if (tabla.ToUpper() == "ACTIVO")
                 _dataAccess.ExecuteCommandText = $"UPDATE {tabla} SET DVH = @parDVH OUTPUT inserted.Id_Activo WHERE Id_Activo = @parId";

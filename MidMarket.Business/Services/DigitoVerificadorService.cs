@@ -93,29 +93,27 @@ namespace MidMarket.Business.Services
             return false;
         }
 
-        public bool VerificarInconsistenciaTablas()
+        public bool VerificarInconsistenciaTablas(out List<string> tablas)
         {
-            bool cliente = ValidarDigitosVerificadores("Cliente");
-            bool usuarioPermiso = ValidarDigitosVerificadores("UsuarioPermiso");
-            bool transaccionCompra = ValidarDigitosVerificadores("TransaccionCompra");
-            bool detalleCompra = ValidarDigitosVerificadores("DetalleCompra");
-            bool clienteActivo = ValidarDigitosVerificadores("ClienteActivo");
-            bool transaccionVenta = ValidarDigitosVerificadores("TransaccionVenta");
-            bool detalleVenta = ValidarDigitosVerificadores("DetalleVenta");
-            bool permisos = ValidarDigitosVerificadores("Permiso");
-            bool familiaPatente = ValidarDigitosVerificadores("FamiliaPatente");
-            bool cuenta = ValidarDigitosVerificadores("Cuenta");
-            bool carrito = ValidarDigitosVerificadores("Carrito");
-            bool bitacora = ValidarDigitosVerificadores("Bitacora");
-            bool activos = ValidarDigitosVerificadores("Activo");
-            bool acciones = ValidarDigitosVerificadores("Accion");
-            bool bono = ValidarDigitosVerificadores("Bono");
+            tablas = new List<string>();
 
-            if (!cliente || !usuarioPermiso || !transaccionCompra || !detalleCompra || !clienteActivo || !transaccionVenta || !detalleVenta || !permisos || !familiaPatente || !cuenta || !carrito || !bitacora || !activos || !acciones || !bono)
-                return false;
+            if (!ValidarDigitosVerificadores("Cliente")) tablas.Add("Cliente");
+            if (!ValidarDigitosVerificadores("UsuarioPermiso")) tablas.Add("UsuarioPermiso");
+            if (!ValidarDigitosVerificadores("TransaccionCompra")) tablas.Add("TransaccionCompra");
+            if (!ValidarDigitosVerificadores("DetalleCompra")) tablas.Add("DetalleCompra");
+            if (!ValidarDigitosVerificadores("ClienteActivo")) tablas.Add("ClienteActivo");
+            if (!ValidarDigitosVerificadores("TransaccionVenta")) tablas.Add("TransaccionVenta");
+            if (!ValidarDigitosVerificadores("DetalleVenta")) tablas.Add("DetalleVenta");
+            if (!ValidarDigitosVerificadores("Permiso")) tablas.Add("Permiso");
+            if (!ValidarDigitosVerificadores("FamiliaPatente")) tablas.Add("FamiliaPatente");
+            if (!ValidarDigitosVerificadores("Cuenta")) tablas.Add("Cuenta");
+            if (!ValidarDigitosVerificadores("Carrito")) tablas.Add("Carrito");
+            if (!ValidarDigitosVerificadores("Bitacora")) tablas.Add("Bitacora");
+            if (!ValidarDigitosVerificadores("Activo")) tablas.Add("Activo");
+            if (!ValidarDigitosVerificadores("Accion")) tablas.Add("Accion");
+            if (!ValidarDigitosVerificadores("Bono")) tablas.Add("Bono");
 
-            else
-                return true;
+            return tablas.Count == 0;
         }
 
         private void ActualizarTablaDVH(List<Cliente> clientes)
@@ -177,15 +175,17 @@ namespace MidMarket.Business.Services
             }
         }
 
-        private void ActualizarTablaDVH(List<DetalleCompra> detalle)
+        private void ActualizarTablaDVH(List<DetalleCompraDTO> detalle)
         {
             using (TransactionScope scope = new TransactionScope())
             {
-                foreach (DetalleCompra item in detalle)
+                foreach (var item in detalle)
                 {
-                    var detalleDTO = new DetalleCompra()
+                    var detalleDTO = new DetalleCompraDTO()
                     {
                         Id = item.Id,
+                        Id_Activo = item.Id_Activo,
+                        Id_Compra = item.Id_Compra,
                         Cantidad = item.Cantidad,
                         Precio = item.Precio,
                     };
@@ -238,15 +238,17 @@ namespace MidMarket.Business.Services
             }
         }
 
-        private void ActualizarTablaDVH(List<DetalleVenta> detalle)
+        private void ActualizarTablaDVH(List<DetalleVentaDTO> detalle)
         {
             using (TransactionScope scope = new TransactionScope())
             {
                 foreach (var item in detalle)
                 {
-                    var detalleDTO = new DetalleVenta()
+                    var detalleDTO = new DetalleVentaDTO()
                     {
                         Id = item.Id,
+                        Id_Activo = item.Id_Activo,
+                        Id_Venta = item.Id_Venta,
                         Cantidad = item.Cantidad,
                         Precio = item.Precio,
                     };

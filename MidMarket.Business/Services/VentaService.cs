@@ -2,6 +2,7 @@
 using MidMarket.Business.Seguridad;
 using MidMarket.DataAccess.Interfaces;
 using MidMarket.Entities;
+using MidMarket.Entities.DTOs;
 using MidMarket.Entities.Enums;
 using MidMarket.Entities.Observer;
 using MidMarket.Seguridad;
@@ -121,9 +122,9 @@ namespace MidMarket.Business.Services
             return ventas;
         }
 
-        public List<DetalleVenta> GetAllVentasDetalle()
+        public List<DetalleVentaDTO> GetAllVentasDetalle()
         {
-            List<DetalleVenta> detalle = _ventaDataAccess.GetAllVentasDetalle();
+            List<DetalleVentaDTO> detalle = _ventaDataAccess.GetAllVentasDetalle();
 
             return detalle;
         }

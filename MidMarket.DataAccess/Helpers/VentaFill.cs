@@ -1,4 +1,5 @@
 ﻿using MidMarket.Entities;
+using MidMarket.Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -108,6 +109,34 @@ namespace MidMarket.DataAccess.Helpers
         public static List<DetalleVenta> FillListDetalleVenta(DataSet ds)
         {
             return ds.Tables[0].AsEnumerable().Select(dr => FillObjectDetalleVenta(dr)).ToList();
+        }
+
+        public static DetalleVentaDTO FillObjectDetalleVentaDTO(DataRow dr)
+        {
+            DetalleVentaDTO venta = new DetalleVentaDTO();
+
+
+            if (dr.Table.Columns.Contains("Id_Detalle") && !Convert.IsDBNull(dr["Id_Detalle"]))
+                venta.Id = Convert.ToInt32(dr["Id_Detalle"]);
+
+            if (dr.Table.Columns.Contains("Id_Activo") && !Convert.IsDBNull(dr["Id_Activo"]))
+                venta.Id_Activo = Convert.ToInt32(dr["Id_Activo"]);
+
+            if (dr.Table.Columns.Contains("Id_Venta") && !Convert.IsDBNull(dr["Id_Venta"]))
+                venta.Id_Venta = Convert.ToInt32(dr["Id_Venta"]);
+
+            if (dr.Table.Columns.Contains("Cantidad") && !Convert.IsDBNull(dr["Cantidad"]))
+                venta.Cantidad = Convert.ToInt32(dr["Cantidad"]);
+
+            if (dr.Table.Columns.Contains("Precio") && !Convert.IsDBNull(dr["Precio"]))
+                venta.Precio = Convert.ToDecimal(dr["Precio"]);
+
+            return venta;
+        }
+
+        public static List<DetalleVentaDTO> FillListDetalleVentaDTO(DataSet ds)
+        {
+            return ds.Tables[0].AsEnumerable().Select(dr => FillObjectDetalleVentaDTO(dr)).ToList();
         }
     }
 }

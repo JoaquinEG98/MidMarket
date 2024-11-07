@@ -11,7 +11,7 @@ namespace MidMarket.DataAccess.Interfaces
         int InsertarActivoCliente(ClienteActivoDTO clienteActivo);
         List<TransaccionCompra> GetCompras(Cliente cliente, bool historico);
         List<TransaccionCompra> GetAllCompras();
-        List<DetalleCompra> GetAllComprasDetalle();
+        List<DetalleCompraDTO> GetAllComprasDetalle();
         List<ClienteActivoDTO> GetAllClienteActivo();
     }
 }

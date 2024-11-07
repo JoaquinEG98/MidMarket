@@ -4,6 +4,7 @@ using MidMarket.Entities.Observer;
 using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
 using System;
+using System.Collections.Generic;
 using Unity;
 
 namespace MidMarket.UI
@@ -128,7 +129,8 @@ namespace MidMarket.UI
 
         private void CargarDV()
         {
-            bool consistencia = _digitoVerificadorService.VerificarInconsistenciaTablas();
+            var tablas = new List<string>();
+            bool consistencia = _digitoVerificadorService.VerificarInconsistenciaTablas(out tablas);
 
             if (!consistencia)
             {

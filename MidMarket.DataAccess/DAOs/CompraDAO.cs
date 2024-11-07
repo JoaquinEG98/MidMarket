@@ -112,9 +112,9 @@ namespace MidMarket.DataAccess.DAOs
             return compras;
         }
 
-        public List<DetalleCompra> GetAllComprasDetalle()
+        public List<DetalleCompraDTO> GetAllComprasDetalle()
         {
-            var detalle = new List<DetalleCompra>();
+            var detalle = new List<DetalleCompraDTO>();
 
             _dataAccess.SelectCommandText = String.Format(Scripts.GET_ALL_COMPRAS_DETALLE);
 
@@ -122,7 +122,7 @@ namespace MidMarket.DataAccess.DAOs
 
             if (ds.Tables[0].Rows.Count > 0)
             {
-                detalle = CompraFill.FillListDetalleCompra(ds);
+                detalle = CompraFill.FillListDetalleCompraDTO(ds);
             }
 
             return detalle;
