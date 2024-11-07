@@ -107,8 +107,11 @@ namespace MidMarket.Business.Services
             bool cuenta = ValidarDigitosVerificadores("Cuenta");
             bool carrito = ValidarDigitosVerificadores("Carrito");
             bool bitacora = ValidarDigitosVerificadores("Bitacora");
+            bool activos = ValidarDigitosVerificadores("Activo");
+            bool acciones = ValidarDigitosVerificadores("Accion");
+            bool bono = ValidarDigitosVerificadores("Bono");
 
-            if (!cliente || !usuarioPermiso || !transaccionCompra || !detalleCompra || !clienteActivo || !transaccionVenta || !detalleVenta || !permisos || !familiaPatente || !cuenta || !carrito || !bitacora)
+            if (!cliente || !usuarioPermiso || !transaccionCompra || !detalleCompra || !clienteActivo || !transaccionVenta || !detalleVenta || !permisos || !familiaPatente || !cuenta || !carrito || !bitacora || !activos || !acciones || !bono)
                 return false;
 
             else
@@ -362,7 +365,71 @@ namespace MidMarket.Business.Services
             }
         }
 
-        public void RecalcularTodosDigitosVerificadores(IUsuarioService usuarioService, IPermisoService permisoService, ICompraService compraService, IVentaService ventaService, ICarritoService carritoService, IBitacoraService bitacoraService)
+        private void ActualizarTablaDVH(List<ActivoDTO> activos)
+        {
+            using (TransactionScope scope = new TransactionScope())
+            {
+                foreach (var activo in activos)
+                {
+                    var activoDTO = new ActivoDTO()
+                    {
+                        Id = activo.Id,
+                        Nombre = activo.Nombre,
+                        DVH = activo.DVH,
+                    };
+                    activoDTO.DVH = DigitoVerificador.GenerarDVH(activoDTO);
+
+                    _digitoVerificadorDataAccess.ActualizarTablaDVH("Activo", activoDTO.DVH, activoDTO.Id);
+                }
+                scope.Complete();
+            }
+        }
+
+        private void ActualizarTablaDVH(List<AccionDTO> acciones)
+        {
+            using (TransactionScope scope = new TransactionScope())
+            {
+                foreach (var accion in acciones)
+                {
+                    var accionDTO = new AccionDTO()
+                    {
+                        Id = accion.Id,
+                        Simbolo = accion.Simbolo,
+                        Precio = accion.Precio,
+                        Id_Activo = accion.Id_Activo,
+                        DVH = accion.DVH,
+                    };
+                    accionDTO.DVH = DigitoVerificador.GenerarDVH(accionDTO);
+
+                    _digitoVerificadorDataAccess.ActualizarTablaDVH("Accion", accionDTO.DVH, accionDTO.Id);
+                }
+                scope.Complete();
+            }
+        }
+
+        private void ActualizarTablaDVH(List<BonoDTO> bonos)
+        {
+            using (TransactionScope scope = new TransactionScope())
+            {
+                foreach (var bono in bonos)
+                {
+                    var bonoDTO = new BonoDTO()
+                    {
+                        Id = bono.Id,
+                        ValorNominal = bono.ValorNominal,
+                        TasaInteres = bono.TasaInteres,
+                        Id_Activo = bono.Id_Activo,
+                        DVH = bono.DVH,
+                    };
+                    bonoDTO.DVH = DigitoVerificador.GenerarDVH(bonoDTO);
+
+                    _digitoVerificadorDataAccess.ActualizarTablaDVH("Bono", bonoDTO.DVH, bonoDTO.Id);
+                }
+                scope.Complete();
+            }
+        }
+
+        public void RecalcularTodosDigitosVerificadores(IUsuarioService usuarioService, IPermisoService permisoService, ICompraService compraService, IVentaService ventaService, ICarritoService carritoService, IBitacoraService bitacoraService, IActivoService activoService)
         {
             var clientes = usuarioService.GetClientesEncriptados();
             ActualizarTablaDVH(clientes);
@@ -411,6 +478,18 @@ namespace MidMarket.Business.Services
             var bitacora = bitacoraService.GetAllBitacora();
             ActualizarTablaDVH(bitacora);
             ActualizarDVV("Bitacora");
+
+            var activos = activoService.GetActivoDTO();
+            ActualizarTablaDVH(activos);
+            ActualizarDVV("Activo");
+
+            var acciones = activoService.GetAccionDTO();
+            ActualizarTablaDVH(acciones);
+            ActualizarDVV("Accion");
+
+            var bonos = activoService.GetBonoDTO();
+            ActualizarTablaDVH(bonos);
+            ActualizarDVV("Bono");
         }
 
         public void RecalcularDigitosUsuario(IUsuarioService usuarioService, IPermisoService permisoService)
@@ -460,6 +539,27 @@ namespace MidMarket.Business.Services
             var bitacora = bitacoraService.GetAllBitacora();
             ActualizarTablaDVH(bitacora);
             ActualizarDVV("Bitacora");
+        }
+
+        public void RecalcularDigitosActivo(IActivoService activoService)
+        {
+            var activos = activoService.GetActivoDTO();
+            ActualizarTablaDVH(activos);
+            ActualizarDVV("Activo");
+        }
+
+        public void RecalcularDigitosAcciones(IActivoService activoService)
+        {
+            var acciones = activoService.GetAccionDTO();
+            ActualizarTablaDVH(acciones);
+            ActualizarDVV("Accion");
+        }
+
+        public void RecalcularDigitosBono(IActivoService activoService)
+        {
+            var bonos = activoService.GetBonoDTO();
+            ActualizarTablaDVH(bonos);
+            ActualizarDVV("Bono");
         }
     }
 }

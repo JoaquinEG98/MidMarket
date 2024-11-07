@@ -304,6 +304,76 @@ namespace MidMarket.DataAccess.DAOs
                     }
 
                     break;
+
+                case "ACTIVO":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITOS_HORIZONTALES, "Activo");
+                    ds = _dataAccess.ExecuteNonReader();
+
+                    DataTable dtActivo = ds.Tables[0];
+                    if (dtActivo.Rows.Count > 0)
+                    {
+                        foreach (DataRow rows in dtActivo.Rows)
+                        {
+                            var activo = new ActivoDTO()
+                            {
+                                Id = Convert.ToInt32(rows["Id_Activo"].ToString()),
+                                Nombre = Convert.ToString(rows["Nombre"].ToString()),
+                                DVH = Convert.ToString(rows["DVH"].ToString()),
+                            };
+
+                            dvhs.Add(activo.DVH);
+                        }
+                    }
+
+                    break;
+
+                case "ACCION":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITOS_HORIZONTALES, "Accion");
+                    ds = _dataAccess.ExecuteNonReader();
+
+                    DataTable dtAccion = ds.Tables[0];
+                    if (dtAccion.Rows.Count > 0)
+                    {
+                        foreach (DataRow rows in dtAccion.Rows)
+                        {
+                            var accion = new AccionDTO()
+                            {
+                                Id = Convert.ToInt32(rows["Id_Accion"].ToString()),
+                                Simbolo = Convert.ToString(rows["Simbolo"].ToString()),
+                                Precio = Convert.ToDecimal(rows["Precio"].ToString()),
+                                Id_Activo = Convert.ToInt32(rows["Id_Activo"].ToString()),
+                                DVH = Convert.ToString(rows["DVH"].ToString()),
+                            };
+
+                            dvhs.Add(accion.DVH);
+                        }
+                    }
+
+                    break;
+
+                case "BONO":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITOS_HORIZONTALES, "Bono");
+                    ds = _dataAccess.ExecuteNonReader();
+
+                    DataTable dtBono = ds.Tables[0];
+                    if (dtBono.Rows.Count > 0)
+                    {
+                        foreach (DataRow rows in dtBono.Rows)
+                        {
+                            var bono = new BonoDTO()
+                            {
+                                Id = Convert.ToInt32(rows["Id_Bono"].ToString()),
+                                ValorNominal = Convert.ToDecimal(rows["ValorNominal"].ToString()),
+                                TasaInteres = float.Parse(rows["TasaInteres"].ToString()),
+                                Id_Activo = Convert.ToInt32(rows["Id_Activo"].ToString()),
+                                DVH = Convert.ToString(rows["DVH"].ToString()),
+                            };
+
+                            dvhs.Add(bono.DVH);
+                        }
+                    }
+
+                    break;
             }
 
             return dvhs;
@@ -594,6 +664,76 @@ namespace MidMarket.DataAccess.DAOs
                     }
 
                     break;
+
+                case "ACTIVO":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITOS_HORIZONTALES, "Activo");
+                    ds = _dataAccess.ExecuteNonReader();
+
+                    DataTable dtActivo = ds.Tables[0];
+                    if (dtActivo.Rows.Count > 0)
+                    {
+                        foreach (DataRow rows in dtActivo.Rows)
+                        {
+                            var activo = new ActivoDTO()
+                            {
+                                Id = Convert.ToInt32(rows["Id_Activo"].ToString()),
+                                Nombre = Convert.ToString(rows["Nombre"].ToString()),
+                                DVH = Convert.ToString(rows["DVH"].ToString()),
+                            };
+
+                            dvhs.Add(activo.DVH);
+                        }
+                    }
+
+                    break;
+
+                case "ACCION":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITOS_HORIZONTALES, "Accion");
+                    ds = _dataAccess.ExecuteNonReader();
+
+                    DataTable dtAccion = ds.Tables[0];
+                    if (dtAccion.Rows.Count > 0)
+                    {
+                        foreach (DataRow rows in dtAccion.Rows)
+                        {
+                            var accion = new AccionDTO()
+                            {
+                                Id = Convert.ToInt32(rows["Id_Accion"].ToString()),
+                                Simbolo = Convert.ToString(rows["Simbolo"].ToString()),
+                                Precio = Convert.ToDecimal(rows["Precio"].ToString()),
+                                Id_Activo = Convert.ToInt32(rows["Id_Activo"].ToString()),
+                                DVH = Convert.ToString(rows["DVH"].ToString()),
+                            };
+
+                            dvhs.Add(accion.DVH);
+                        }
+                    }
+
+                    break;
+
+                case "BONO":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITOS_HORIZONTALES, "Bono");
+                    ds = _dataAccess.ExecuteNonReader();
+
+                    DataTable dtBono = ds.Tables[0];
+                    if (dtBono.Rows.Count > 0)
+                    {
+                        foreach (DataRow rows in dtBono.Rows)
+                        {
+                            var bono = new BonoDTO()
+                            {
+                                Id = Convert.ToInt32(rows["Id_Bono"].ToString()),
+                                ValorNominal = Convert.ToDecimal(rows["ValorNominal"].ToString()),
+                                TasaInteres = float.Parse(rows["TasaInteres"].ToString()),
+                                Id_Activo = Convert.ToInt32(rows["Id_Activo"].ToString()),
+                                DVH = Convert.ToString(rows["DVH"].ToString()),
+                            };
+
+                            dvhs.Add(bono.DVH);
+                        }
+                    }
+
+                    break;
             }
 
             return dvhs;
@@ -656,6 +796,19 @@ namespace MidMarket.DataAccess.DAOs
                     _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Tabla", "Bitacora");
                     return _dataAccess.ExecuteNonEscalar();
 
+                case "ACTIVO":
+                    _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Tabla", "Activo");
+                    return _dataAccess.ExecuteNonEscalar();
+
+                case "ACCION":
+                    _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Tabla", "Accion");
+                    return _dataAccess.ExecuteNonEscalar();
+
+                case "BONO":
+                    _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Tabla", "Bono");
+                    return _dataAccess.ExecuteNonEscalar();
+
+
                 default: return 0;
             }
         }
@@ -713,6 +866,18 @@ namespace MidMarket.DataAccess.DAOs
                 case "BITACORA":
                     _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITO_VERTICAL, "Bitacora");
                     break;
+
+                case "ACTIVO":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITO_VERTICAL, "Activo");
+                    break;
+
+                case "ACCION":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITO_VERTICAL, "Accion");
+                    break;
+
+                case "BONO":
+                    _dataAccess.SelectCommandText = String.Format(Scripts.GET_DIGITO_VERTICAL, "Bono");
+                    break;
             }
 
             DataSet ds = _dataAccess.ExecuteNonReader();
@@ -763,6 +928,15 @@ namespace MidMarket.DataAccess.DAOs
 
             if (tabla.ToUpper() == "BITACORA")
                 _dataAccess.ExecuteCommandText = $"UPDATE {tabla} SET DVH = @parDVH OUTPUT inserted.Id_BItacora WHERE Id_Bitacora = @parId";
+
+            if (tabla.ToUpper() == "ACTIVO")
+                _dataAccess.ExecuteCommandText = $"UPDATE {tabla} SET DVH = @parDVH OUTPUT inserted.Id_Activo WHERE Id_Activo = @parId";
+
+            if (tabla.ToUpper() == "ACCION")
+                _dataAccess.ExecuteCommandText = $"UPDATE {tabla} SET DVH = @parDVH OUTPUT inserted.Id_Accion WHERE Id_Accion = @parId";
+
+            if (tabla.ToUpper() == "BONO")
+                _dataAccess.ExecuteCommandText = $"UPDATE {tabla} SET DVH = @parDVH OUTPUT inserted.Id_Bono WHERE Id_Bono = @parId";
 
             _dataAccess.ExecuteParameters.Parameters.Clear();
 

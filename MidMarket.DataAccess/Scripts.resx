@@ -169,11 +169,20 @@
   <data name="GET_ACCIONES" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\Activo\GET_ACCIONES.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="GET_ALL_ACCIONDTO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Scripts\Activo\GET_ALL_ACCIONDTO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="GET_ALL_ACTIVODTO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Scripts\Activo\GET_ALL_ACTIVODTO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="GET_ALL_ACTIVO_CLIENTE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\DigitoVerificador\DTOs\GET_ALL_ACTIVO_CLIENTE.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="GET_ALL_BITACORA" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\Bitacora\GET_ALL_BITACORA.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="GET_ALL_BONODTO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Scripts\Activo\GET_ALL_BONODTO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="GET_ALL_CARRITO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\Carrito\GET_ALL_CARRITO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>

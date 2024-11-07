@@ -20,6 +20,7 @@ namespace MidMarket.UI
         private readonly IVentaService _ventaService;
         private readonly ICarritoService _carritoService;
         private readonly IBitacoraService _bitacoraService;
+        private readonly IActivoService _activoService;
 
         public AdministracionBD()
         {
@@ -33,6 +34,7 @@ namespace MidMarket.UI
             _ventaService = Global.Container.Resolve<IVentaService>();
             _carritoService = Global.Container.Resolve<ICarritoService>();
             _bitacoraService = Global.Container.Resolve<IBitacoraService>();
+            _activoService = Global.Container.Resolve<IActivoService>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -112,7 +114,7 @@ namespace MidMarket.UI
 
             try
             {
-                _digitoVerificadorService.RecalcularTodosDigitosVerificadores(_usuarioService, _permisoService, _compraService, _ventaService, _carritoService, _bitacoraService);
+                _digitoVerificadorService.RecalcularTodosDigitosVerificadores(_usuarioService, _permisoService, _compraService, _ventaService, _carritoService, _bitacoraService, _activoService);
 
                 CargarDV();
 

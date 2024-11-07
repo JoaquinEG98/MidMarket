@@ -223,8 +223,8 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to INSERT INTO Bitacora (Id_Cliente, Descripcion, Criticidad, Fecha) 
-        ///OUTPUT inserted.Id_Bitacora VALUES (@ClienteId, @Descripcion, @Criticidad, @Fecha).
+        ///   Looks up a localized string similar to INSERT INTO Bitacora (Id_Cliente, Descripcion, Criticidad, Fecha, DVH) 
+        ///OUTPUT inserted.Id_Bitacora VALUES (@ClienteId, @Descripcion, @Criticidad, @Fecha, @DVH).
         /// </summary>
         internal static string ALTA_BITACORA {
             get {
@@ -306,6 +306,16 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SELECT Id_Accion, Simbolo, Precio, Id_Activo, DVH
+        ///FROM Accion.
+        /// </summary>
+        internal static string GET_ALL_ACCIONDTO {
+            get {
+                return ResourceManager.GetString("GET_ALL_ACCIONDTO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SELECT Id_Cliente_Activo, Id_Cliente, Id_Activo, Cantidad, DVH
         ///FROM Cliente_Activo.
         /// </summary>
@@ -316,12 +326,32 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SELECT Id_Activo, Nombre, DVH
+        ///FROM Activo.
+        /// </summary>
+        internal static string GET_ALL_ACTIVODTO {
+            get {
+                return ResourceManager.GetString("GET_ALL_ACTIVODTO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SELECT Id_Bitacora, Id_Cliente, Descripcion, Criticidad, Fecha 
         ///FROM Bitacora.
         /// </summary>
         internal static string GET_ALL_BITACORA {
             get {
                 return ResourceManager.GetString("GET_ALL_BITACORA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT Id_Bono, ValorNominal, TasaInteres, Id_Activo, DVH
+        ///FROM Bono.
+        /// </summary>
+        internal static string GET_ALL_BONODTO {
+            get {
+                return ResourceManager.GetString("GET_ALL_BONODTO", resourceCulture);
             }
         }
         

@@ -165,5 +165,44 @@ namespace MidMarket.DataAccess.DAOs
 
             return activos;
         }
+
+        public List<ActivoDTO> GetActivoDTO()
+        {
+            _dataAccess.SelectCommandText = String.Format(Scripts.GET_ALL_ACTIVODTO);
+            DataSet ds = _dataAccess.ExecuteNonReader();
+
+            List<ActivoDTO> activos = new List<ActivoDTO>();
+
+            if (ds.Tables[0].Rows.Count > 0)
+                activos = ActivoFill.FillListActivoDTO(ds);
+
+            return activos;
+        }
+
+        public List<AccionDTO> GetAccionDTO()
+        {
+            _dataAccess.SelectCommandText = String.Format(Scripts.GET_ALL_ACCIONDTO);
+            DataSet ds = _dataAccess.ExecuteNonReader();
+
+            List<AccionDTO> acciones = new List<AccionDTO>();
+
+            if (ds.Tables[0].Rows.Count > 0)
+                acciones = ActivoFill.FillListAccionDTO(ds);
+
+            return acciones;
+        }
+
+        public List<BonoDTO> GetBonoDTO()
+        {
+            _dataAccess.SelectCommandText = String.Format(Scripts.GET_ALL_BONODTO);
+            DataSet ds = _dataAccess.ExecuteNonReader();
+
+            List<BonoDTO> bonos = new List<BonoDTO>();
+
+            if (ds.Tables[0].Rows.Count > 0)
+                bonos = ActivoFill.FillListBonoDTO(ds);
+
+            return bonos;
+        }
     }
 }

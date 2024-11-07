@@ -88,6 +88,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Scripts\Activo\GET_ALL_BONODTO.sql" />
+    <Content Include="Scripts\Activo\GET_ALL_ACCIONDTO.sql" />
+    <Content Include="Scripts\Activo\GET_ALL_ACTIVODTO.sql" />
     <Content Include="Scripts\Activo\UPDATE_BONO.sql" />
     <Content Include="Scripts\Activo\UPDATE_ACCION.sql" />
     <Content Include="Scripts\Activo\GET_BONOS.sql" />
