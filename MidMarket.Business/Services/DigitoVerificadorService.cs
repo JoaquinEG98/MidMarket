@@ -153,15 +153,17 @@ namespace MidMarket.Business.Services
             }
         }
 
-        private void ActualizarTablaDVH(List<TransaccionCompra> compras)
+        private void ActualizarTablaDVH(List<TransaccionCompraDTO> compras)
         {
             using (TransactionScope scope = new TransactionScope())
             {
-                foreach (TransaccionCompra compra in compras)
+                foreach (TransaccionCompraDTO compra in compras)
                 {
-                    var compraDTO = new TransaccionCompra()
+                    var compraDTO = new TransaccionCompraDTO()
                     {
                         Id = compra.Id,
+                        Id_Cuenta = compra.Id_Cuenta,
+                        Id_Cliente = compra.Id_Cliente,
                         Fecha = compra.Fecha,
                         Total = compra.Total,
                     };
@@ -562,6 +564,13 @@ namespace MidMarket.Business.Services
             var bonos = activoService.GetBonoDTO();
             ActualizarTablaDVH(bonos);
             ActualizarDVV("Bono");
+        }
+
+        public void RecalcularDigitosTransaccionCompra(ICompraService compraService)
+        {
+            var compras = compraService.GetAllCompras();
+            ActualizarTablaDVH(compras);
+            ActualizarDVV("TransaccionCompra");
         }
     }
 }

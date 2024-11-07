@@ -3,8 +3,8 @@
   <ActivosCompradosDTO>
     <Id>9</Id>
     <Nombre>BONAR 2024</Nombre>
-    <Cantidad>125</Cantidad>
-    <Total>189500.0000</Total>
+    <Cantidad>134</Cantidad>
+    <Total>212000.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
     <Id>13</Id>
@@ -13,21 +13,21 @@
     <Total>9600.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
-    <Id>10</Id>
-    <Nombre>BPY26</Nombre>
-    <Cantidad>62</Cantidad>
-    <Total>6200.0000</Total>
-  </ActivosCompradosDTO>
-  <ActivosCompradosDTO>
     <Id>8</Id>
     <Nombre>BONCER 2024</Nombre>
-    <Cantidad>51</Cantidad>
-    <Total>51.0000</Total>
+    <Cantidad>69</Cantidad>
+    <Total>69.0000</Total>
+  </ActivosCompradosDTO>
+  <ActivosCompradosDTO>
+    <Id>10</Id>
+    <Nombre>BPY26</Nombre>
+    <Cantidad>69</Cantidad>
+    <Total>6900.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
     <Id>2</Id>
     <Nombre>Banco Galicia</Nombre>
-    <Cantidad>36</Cantidad>
-    <Total>441000.0000</Total>
+    <Cantidad>41</Cantidad>
+    <Total>502250.0000</Total>
   </ActivosCompradosDTO>
 </ArrayOfActivosCompradosDTO>

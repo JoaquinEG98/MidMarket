@@ -161,5 +161,32 @@ namespace MidMarket.DataAccess.Helpers
         {
             return ds.Tables[0].AsEnumerable().Select(dr => FillObjectDetalleCompraDTO(dr)).ToList();
         }
+
+        public static TransaccionCompraDTO FillObjectTransaccionCompraDTO(DataRow dr)
+        {
+            TransaccionCompraDTO compra = new TransaccionCompraDTO();
+
+            if (dr.Table.Columns.Contains("Id_Compra") && !Convert.IsDBNull(dr["Id_Compra"]))
+                compra.Id = Convert.ToInt32(dr["Id_Compra"]);
+
+            if (dr.Table.Columns.Contains("Id_Cuenta") && !Convert.IsDBNull(dr["Id_Cuenta"]))
+                compra.Id_Cuenta = Convert.ToInt64(dr["Id_Cuenta"]);
+
+            if (dr.Table.Columns.Contains("Id_Cliente") && !Convert.IsDBNull(dr["Id_Cliente"]))
+                compra.Id_Cliente = Convert.ToInt32(dr["Id_Cliente"]);
+
+            if (dr.Table.Columns.Contains("Fecha") && !Convert.IsDBNull(dr["Fecha"]))
+                compra.Fecha = Convert.ToDateTime(dr["Fecha"]);
+
+            if (dr.Table.Columns.Contains("Total") && !Convert.IsDBNull(dr["Total"]))
+                compra.Total = Convert.ToDecimal(dr["Total"]);
+
+            return compra;
+        }
+
+        public static List<TransaccionCompraDTO> FillListTransaccionCompraDTO(DataSet ds)
+        {
+            return ds.Tables[0].AsEnumerable().Select(dr => FillObjectTransaccionCompraDTO(dr)).ToList();
+        }
     }
 }

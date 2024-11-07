@@ -49,7 +49,7 @@ namespace MidMarket.Business.Services
                     Fecha = ClockWrapper.Now(),
                     Total = total
                 };
-                compra.DVH = DigitoVerificador.GenerarDVH(compra);
+                compra.DVH = GenerarDVHTransaccionCompra(compra);
 
                 int compraId = _compraDataAccess.InsertarTransaccionCompra(compra);
 
@@ -69,10 +69,9 @@ namespace MidMarket.Business.Services
                     {
                         detalle.Precio = bono.ValorNominal;
                     }
-                    detalle.DVH = DigitoVerificador.GenerarDVH(detalle);
+                    detalle.DVH = GenerarDVHDetalleCompra(detalle, compraId);
 
                     _compraDataAccess.InsertarDetalleCompra(detalle, compraId);
-
 
                     ClienteActivoDTO clienteActivo = new ClienteActivoDTO()
                     {
@@ -80,7 +79,6 @@ namespace MidMarket.Business.Services
                         Id_Activo = item.Activo.Id,
                         Cantidad = item.Cantidad
                     };
-                    clienteActivo.DVH = DigitoVerificador.GenerarDVH(clienteActivo);
 
                     _compraDataAccess.InsertarActivoCliente(clienteActivo);
                 }
@@ -90,11 +88,40 @@ namespace MidMarket.Business.Services
                 _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) realizó la Compra con Id: ({compraId}) por un total de (${total})", Criticidad.Media, clienteLogueado);
 
                 _digitoVerificadorService.ActualizarDVV("DetalleCompra");
-                _digitoVerificadorService.ActualizarDVV("TransaccionCompra");
-                _digitoVerificadorService.ActualizarDVV("ClienteActivo");
+                //_digitoVerificadorService.ActualizarDVV("TransaccionCompra");
+                _digitoVerificadorService.RecalcularDigitosTransaccionCompra(this);
+                _digitoVerificadorService.RecalcularDigitosClienteActivo(this);
 
                 scope.Complete();
             }
+        }
+
+        private string GenerarDVHTransaccionCompra(TransaccionCompra compra)
+        {
+            TransaccionCompraDTO compraDTO = new TransaccionCompraDTO()
+            {
+                Id_Cliente = compra.Cliente.Id,
+                Id_Cuenta = compra.Cuenta.Id,
+                Total = compra.Total,
+                Fecha = compra.Fecha,
+            };
+            compraDTO.DVH = DigitoVerificador.GenerarDVH(compraDTO);
+
+            return compraDTO.DVH;
+        }
+
+        private string GenerarDVHDetalleCompra(DetalleCompra detalle, int compraId)
+        {
+            var detalleDTO = new DetalleCompraDTO()
+            {
+                Id_Activo = detalle.Activo.Id,
+                Id_Compra = compraId,
+                Cantidad = detalle.Cantidad,
+                Precio = detalle.Precio,
+            };
+            detalleDTO.DVH = DigitoVerificador.GenerarDVH(detalleDTO);
+
+            return detalleDTO.DVH;
         }
 
         public void ValidarSaldo(decimal saldo, decimal total)
@@ -114,9 +141,9 @@ namespace MidMarket.Business.Services
             return compras;
         }
 
-        public List<TransaccionCompra> GetAllCompras()
+        public List<TransaccionCompraDTO> GetAllCompras()
         {
-            List<TransaccionCompra> compras = _compraDataAccess.GetAllCompras();
+            List<TransaccionCompraDTO> compras = _compraDataAccess.GetAllCompras();
 
             return compras;
         }

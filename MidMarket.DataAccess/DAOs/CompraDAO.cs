@@ -57,7 +57,6 @@ namespace MidMarket.DataAccess.DAOs
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Cliente", clienteActivo.Id_Cliente);
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Activo", clienteActivo.Id_Activo);
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Cantidad", clienteActivo.Cantidad);
-            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@DVH", clienteActivo.DVH);
 
             return _dataAccess.ExecuteNonEscalar();
         }
@@ -96,9 +95,9 @@ namespace MidMarket.DataAccess.DAOs
             return compras;
         }
 
-        public List<TransaccionCompra> GetAllCompras()
+        public List<TransaccionCompraDTO> GetAllCompras()
         {
-            var compras = new List<TransaccionCompra>();
+            var compras = new List<TransaccionCompraDTO>();
 
             _dataAccess.SelectCommandText = String.Format(Scripts.GET_ALL_COMPRAS);
 
@@ -106,7 +105,7 @@ namespace MidMarket.DataAccess.DAOs
 
             if (ds.Tables[0].Rows.Count > 0)
             {
-                compras = CompraFill.FillListTransaccionCompra(ds, null);
+                compras = CompraFill.FillListTransaccionCompraDTO(ds);
             }
 
             return compras;
