@@ -66,7 +66,7 @@ namespace MidMarket.UI
                 float tasaInteres = float.Parse(ValidarBonos.TasaInteres);
 
                 GuardarBono(nombreBono, valorNominal, tasaInteres);
-                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_27")}");
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_27")} {nombreBono}");
             }
             catch (Exception ex)
             {

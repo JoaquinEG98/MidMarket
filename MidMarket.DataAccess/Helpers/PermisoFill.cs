@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Reflection;
 
 namespace MidMarket.DataAccess.Helpers
 {
@@ -74,6 +73,45 @@ namespace MidMarket.DataAccess.Helpers
         public static List<UsuarioPermisoDTO> FillListUsuarioPermisoDTO(DataSet ds)
         {
             return ds.Tables[0].AsEnumerable().Select(dr => FillObjectUsuarioPermiso(dr)).ToList();
+        }
+
+        public static PermisoDTO FillObjectPermisoDTO(DataRow dr)
+        {
+            PermisoDTO permisoDTO = new PermisoDTO();
+
+            if (dr.Table.Columns.Contains("Id_Permiso") && !Convert.IsDBNull(dr["Id_Permiso"]))
+                permisoDTO.Id = Convert.ToInt32(dr["Id_Permiso"]);
+
+            if (dr.Table.Columns.Contains("Nombre") && !Convert.IsDBNull(dr["Nombre"]))
+                permisoDTO.Nombre = Convert.ToString(dr["Nombre"]);
+
+            if (dr.Table.Columns.Contains("Permiso") && !Convert.IsDBNull(dr["Permiso"]))
+                permisoDTO.Permiso = (Permiso)Enum.Parse(typeof(Permiso), dr["Permiso"].ToString());
+
+            return permisoDTO;
+        }
+
+        public static List<PermisoDTO> FillListPermisoDTO(DataSet ds)
+        {
+            return ds.Tables[0].AsEnumerable().Select(dr => FillObjectPermisoDTO(dr)).ToList();
+        }
+
+        public static FamiliaPatenteDTO FillObjectFamiliaPatenteDTO(DataRow dr)
+        {
+            FamiliaPatenteDTO familiaPatenteDTO = new FamiliaPatenteDTO();
+
+            if (dr.Table.Columns.Contains("Id_Padre") && !Convert.IsDBNull(dr["Id_Padre"]))
+                familiaPatenteDTO.Id_Padre = Convert.ToInt32(dr["Id_Padre"]);
+
+            if (dr.Table.Columns.Contains("Id_Hijo") && !Convert.IsDBNull(dr["Id_Hijo"]))
+                familiaPatenteDTO.Id_Hijo = Convert.ToInt32(dr["Id_Hijo"]);
+
+            return familiaPatenteDTO;
+        }
+
+        public static List<FamiliaPatenteDTO> FillListFamiliaPatenteDTO(DataSet ds)
+        {
+            return ds.Tables[0].AsEnumerable().Select(dr => FillObjectFamiliaPatenteDTO(dr)).ToList();
         }
     }
 }

@@ -4,7 +4,7 @@ using System;
 
 namespace MidMarket.Entities
 {
-    public class Bitacora
+    public class Bitacora : DigitoVerificadorHorizontal
     {
         public int Id { get; set; }
         public Cliente Cliente { get; set; }

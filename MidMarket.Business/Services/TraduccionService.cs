@@ -42,5 +42,10 @@ namespace MidMarket.Business.Services
 
             return mensaje;
         }
+
+        public void LimpiarCache()
+        {
+            _traduccionDataAccess.LimpiarCache();
+        }
     }
 }

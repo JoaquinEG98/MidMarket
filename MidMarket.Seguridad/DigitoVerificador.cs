@@ -1,7 +1,8 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections;
+using System.Linq;
 using System.Reflection;
 using System.Text;
-using System;
 
 namespace MidMarket.Business.Seguridad
 {
@@ -16,7 +17,9 @@ namespace MidMarket.Business.Seguridad
 
             foreach (PropertyInfo propiedad in propiedades)
             {
-                if (propiedad.Name != "Id" && propiedad.Name != "DVH" && propiedad.Name != "Items" && propiedad.Name != "Permisos" && propiedad.GetValue(objeto) != null)
+                if (propiedad.Name != "Id" && propiedad.Name != "DVH" && propiedad.Name != "Items" && propiedad.Name != "Permisos"
+                    && propiedad.GetValue(objeto) != null
+                    && (!typeof(IEnumerable).IsAssignableFrom(propiedad.PropertyType) || propiedad.PropertyType == typeof(string)))
                 {
                     if (propiedad.SetMethod.IsVirtual)
                     {

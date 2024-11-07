@@ -1,4 +1,5 @@
 ﻿using MidMarket.Entities;
+using MidMarket.Entities.DTOs;
 using System.Collections.Generic;
 
 namespace MidMarket.Business.Interfaces
@@ -18,5 +19,6 @@ namespace MidMarket.Business.Interfaces
         void CargarSaldo(decimal saldo, string numeroTarjeta, string DNI, string fechaVencimiento);
         decimal ObtenerUltimaTransaccion();
         void ReestablecerPassword(string email, string password);
+        List<CuentaDTO> GetCuentas();
     }
 }

@@ -1,11 +1,12 @@
-﻿using MidMarket.DataAccess.Conexion;
-using System;
-using MidMarket.Entities;
-using System.Collections.Generic;
-using System.Data;
+﻿using MidMarket.Business.Seguridad;
+using MidMarket.DataAccess.Conexion;
 using MidMarket.DataAccess.Helpers;
 using MidMarket.DataAccess.Interfaces;
-using MidMarket.Business.Seguridad;
+using MidMarket.Entities;
+using MidMarket.Entities.DTOs;
+using System;
+using System.Collections.Generic;
+using System.Data;
 
 namespace MidMarket.DataAccess.DAOs
 {
@@ -30,6 +31,7 @@ namespace MidMarket.DataAccess.DAOs
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Descripcion", bitacora.Descripcion);
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Criticidad", (int)bitacora.Criticidad);
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Fecha", bitacora.Fecha);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@DVH", bitacora.DVH);
 
             return _dataAccess.ExecuteNonEscalar();
         }
@@ -52,7 +54,7 @@ namespace MidMarket.DataAccess.DAOs
 
                 var clienteDesencriptado = new Cliente()
                 {
-                    Id  = cliente.Id,
+                    Id = cliente.Id,
                     Email = Encriptacion.DesencriptarAES(cliente.Email),
                     RazonSocial = Encriptacion.DesencriptarAES(cliente.RazonSocial),
                     CUIT = Encriptacion.DesencriptarAES(cliente.CUIT),
@@ -63,6 +65,21 @@ namespace MidMarket.DataAccess.DAOs
 
                 bitacoraFull.Add(bitacoraItem);
             }
+
+            return bitacora;
+        }
+
+        public List<BitacoraDTO> GetAllBitacora()
+        {
+            var bitacora = new List<BitacoraDTO>();
+
+            _dataAccess.SelectCommandText = String.Format(Scripts.GET_ALL_BITACORA);
+            DataSet ds = _dataAccess.ExecuteNonReader();
+
+            bitacora = new List<BitacoraDTO>();
+
+            if (ds.Tables[0].Rows.Count > 0)
+                bitacora = BitacoraFill.FillListBitacoraDTO(ds);
 
             return bitacora;
         }

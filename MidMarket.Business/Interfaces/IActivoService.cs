@@ -16,5 +16,8 @@ namespace MidMarket.Business.Interfaces
         List<ActivosCompradosDTO> GetActivosCompradosTotal();
         List<ActivosVendidosDTO> GetActivosVendidosCantidad();
         List<ActivosVendidosDTO> GetActivosVendidosTotal();
+        List<ActivoDTO> GetActivoDTO();
+        List<AccionDTO> GetAccionDTO();
+        List<BonoDTO> GetBonoDTO();
     }
 }

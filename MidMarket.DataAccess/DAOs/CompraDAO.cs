@@ -2,7 +2,7 @@
 using MidMarket.DataAccess.Helpers;
 using MidMarket.DataAccess.Interfaces;
 using MidMarket.Entities;
-using MidMarket.Seguridad;
+using MidMarket.Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -18,52 +18,45 @@ namespace MidMarket.DataAccess.DAOs
             _dataAccess = BBDD.GetInstance;
         }
 
-        public int InsertarDetalleCompra(Carrito carrito, int idCompra)
+        public int InsertarDetalleCompra(DetalleCompra detalle, int idCompra)
         {
             _dataAccess.ExecuteCommandText = Scripts.INSERTAR_DETALLE_COMPRA;
 
             _dataAccess.ExecuteParameters.Parameters.Clear();
 
-            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Activo", carrito.Activo.Id);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Activo", detalle.Activo.Id);
             _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Compra", idCompra);
-            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Cantidad", carrito.Cantidad);
-
-
-            if (carrito.Activo is Accion accion)
-            {
-                _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Precio", accion.Precio);
-            }
-            else if (carrito.Activo is Bono bono)
-            {
-                _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Precio", bono.ValorNominal);
-            }
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Cantidad", detalle.Cantidad);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Precio", detalle.Precio);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@DVH", detalle.DVH);
 
             return _dataAccess.ExecuteNonEscalar();
         }
 
-        public int InsertarTransaccionCompra(Cliente cliente, decimal total)
+        public int InsertarTransaccionCompra(TransaccionCompra compra)
         {
             _dataAccess.ExecuteCommandText = Scripts.INSERTAR_TRANSACCION_COMPRA;
 
             _dataAccess.ExecuteParameters.Parameters.Clear();
 
-            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Cuenta", cliente.Cuenta.Id);
-            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Cliente", cliente.Id);
-            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Fecha", ClockWrapper.Now());
-            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Total", total);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Cuenta", compra.Cuenta.Id);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Cliente", compra.Cliente.Id);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Fecha", compra.Fecha);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Total", compra.Total);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@DVH", compra.DVH);
 
             return _dataAccess.ExecuteNonEscalar();
         }
 
-        public int InsertarActivoCliente(Cliente cliente, Carrito carrito)
+        public int InsertarActivoCliente(ClienteActivoDTO clienteActivo)
         {
             _dataAccess.ExecuteCommandText = Scripts.INSERTAR_ACTIVO_CLIENTE;
 
             _dataAccess.ExecuteParameters.Parameters.Clear();
 
-            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Cliente", cliente.Id);
-            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Activo", carrito.Activo.Id);
-            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Cantidad", carrito.Cantidad);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Cliente", clienteActivo.Id_Cliente);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Id_Activo", clienteActivo.Id_Activo);
+            _dataAccess.ExecuteParameters.Parameters.AddWithValue("@Cantidad", clienteActivo.Cantidad);
 
             return _dataAccess.ExecuteNonEscalar();
         }
@@ -100,6 +93,54 @@ namespace MidMarket.DataAccess.DAOs
             }
 
             return compras;
+        }
+
+        public List<TransaccionCompraDTO> GetAllCompras()
+        {
+            var compras = new List<TransaccionCompraDTO>();
+
+            _dataAccess.SelectCommandText = String.Format(Scripts.GET_ALL_COMPRAS);
+
+            DataSet ds = _dataAccess.ExecuteNonReader();
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                compras = CompraFill.FillListTransaccionCompraDTO(ds);
+            }
+
+            return compras;
+        }
+
+        public List<DetalleCompraDTO> GetAllComprasDetalle()
+        {
+            var detalle = new List<DetalleCompraDTO>();
+
+            _dataAccess.SelectCommandText = String.Format(Scripts.GET_ALL_COMPRAS_DETALLE);
+
+            DataSet ds = _dataAccess.ExecuteNonReader();
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                detalle = CompraFill.FillListDetalleCompraDTO(ds);
+            }
+
+            return detalle;
+        }
+
+        public List<ClienteActivoDTO> GetAllClienteActivo()
+        {
+            var clienteActivo = new List<ClienteActivoDTO>();
+
+            _dataAccess.SelectCommandText = String.Format(Scripts.GET_ALL_ACTIVO_CLIENTE);
+
+            DataSet ds = _dataAccess.ExecuteNonReader();
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                clienteActivo = CompraFill.FillListClienteActivo(ds);
+            }
+
+            return clienteActivo;
         }
     }
 }

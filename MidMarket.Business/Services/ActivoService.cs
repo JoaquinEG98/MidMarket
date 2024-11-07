@@ -41,6 +41,9 @@ namespace MidMarket.Business.Services
                 var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
                 _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) dio de alta la Acción ({id} - {accion.Nombre})", Criticidad.Media, clienteLogueado);
 
+                _digitoVerificadorService.RecalcularDigitosAcciones(this);
+                _digitoVerificadorService.RecalcularDigitosActivo(this);
+
                 scope.Complete();
 
                 return id;
@@ -57,6 +60,9 @@ namespace MidMarket.Business.Services
 
                 var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
                 _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) dio de alta el Bono ({id} - {bono.Nombre})", Criticidad.Media, clienteLogueado);
+
+                _digitoVerificadorService.RecalcularDigitosBono(this);
+                _digitoVerificadorService.RecalcularDigitosActivo(this);
 
                 scope.Complete();
 
@@ -89,6 +95,9 @@ namespace MidMarket.Business.Services
                 var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
                 _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) modificó la Accion ({accion.Id_Accion} - {accion.Nombre})", Criticidad.Media, clienteLogueado);
 
+                _digitoVerificadorService.RecalcularDigitosAcciones(this);
+                _digitoVerificadorService.RecalcularDigitosActivo(this);
+
                 scope.Complete();
             }
         }
@@ -103,6 +112,9 @@ namespace MidMarket.Business.Services
 
                 var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
                 _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) modificó el Bono ({bono.Id_Bono} - {bono.Nombre})", Criticidad.Media, clienteLogueado);
+
+                _digitoVerificadorService.RecalcularDigitosBono(this);
+                _digitoVerificadorService.RecalcularDigitosActivo(this);
 
                 scope.Complete();
             }
@@ -150,6 +162,27 @@ namespace MidMarket.Business.Services
             List<ActivosVendidosDTO> activos = _activoDataAccess.GetActivosVendidosTotal();
 
             return activos;
+        }
+
+        public List<ActivoDTO> GetActivoDTO()
+        {
+            List<ActivoDTO> activos = _activoDataAccess.GetActivoDTO();
+
+            return activos;
+        }
+
+        public List<AccionDTO> GetAccionDTO()
+        {
+            List<AccionDTO> acciones = _activoDataAccess.GetAccionDTO();
+
+            return acciones;
+        }
+
+        public List<BonoDTO> GetBonoDTO()
+        {
+            List<BonoDTO> bonos = _activoDataAccess.GetBonoDTO();
+
+            return bonos;
         }
     }
 }

@@ -32,6 +32,7 @@ namespace MidMarket.Business
             Container.RegisterType<IUsuarioService, UsuarioService>();
             Container.RegisterType<IBitacoraService, BitacoraService>();
             Container.RegisterType<ITraduccionService, TraduccionService>();
+            Container.RegisterType<ICompraService, CompraService>();
         }
 
         public static T Resolve<T>()

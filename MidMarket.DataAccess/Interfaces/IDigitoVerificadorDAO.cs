@@ -9,5 +9,6 @@ namespace MidMarket.DataAccess.Interfaces
         int ActualizarDVV(string tabla, string nuevoDVV);
         string ObtenerDVV(string tabla);
         int ActualizarTablaDVH(string tabla, string nuevoDVH, int objetoId);
+        int ActualizarTablaDVHFamiliaPatente(string tabla, string nuevoDVH, int objetoId, int idSecundario);
     }
 }

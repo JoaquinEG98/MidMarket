@@ -1,4 +1,5 @@
 ﻿using MidMarket.Entities;
+using MidMarket.Entities.DTOs;
 using System.Collections.Generic;
 
 namespace MidMarket.DataAccess.Interfaces
@@ -7,5 +8,6 @@ namespace MidMarket.DataAccess.Interfaces
     {
         int AltaBitacora(Bitacora bitacora);
         List<Bitacora> ObtenerBitacora();
+        List<BitacoraDTO> GetAllBitacora();
     }
 }

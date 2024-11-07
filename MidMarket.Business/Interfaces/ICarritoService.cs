@@ -1,4 +1,5 @@
 ﻿using MidMarket.Entities;
+using MidMarket.Entities.DTOs;
 using System.Collections.Generic;
 
 namespace MidMarket.Business.Interfaces
@@ -10,5 +11,6 @@ namespace MidMarket.Business.Interfaces
         void ActualizarCarrito(Carrito carrito);
         void EliminarCarrito(int carritoId);
         void LimpiarCarrito(int carritoId);
+        List<CarritoDTO> GetCarritoDTO();
     }
 }

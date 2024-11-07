@@ -4,6 +4,7 @@ using MidMarket.Entities.Observer;
 using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
 using System;
+using System.Collections.Generic;
 using Unity;
 
 namespace MidMarket.UI
@@ -16,6 +17,11 @@ namespace MidMarket.UI
         private readonly IPermisoService _permisoService;
         private readonly ISessionManager _sessionManager;
         private readonly ITraduccionService _traduccionService;
+        private readonly ICompraService _compraService;
+        private readonly IVentaService _ventaService;
+        private readonly ICarritoService _carritoService;
+        private readonly IBitacoraService _bitacoraService;
+        private readonly IActivoService _activoService;
 
         public AdministracionBD()
         {
@@ -25,6 +31,11 @@ namespace MidMarket.UI
             _permisoService = Global.Container.Resolve<IPermisoService>();
             _sessionManager = Global.Container.Resolve<ISessionManager>();
             _traduccionService = Global.Container.Resolve<ITraduccionService>();
+            _compraService = Global.Container.Resolve<ICompraService>();
+            _ventaService = Global.Container.Resolve<IVentaService>();
+            _carritoService = Global.Container.Resolve<ICarritoService>();
+            _bitacoraService = Global.Container.Resolve<IBitacoraService>();
+            _activoService = Global.Container.Resolve<IActivoService>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -104,7 +115,7 @@ namespace MidMarket.UI
 
             try
             {
-                _digitoVerificadorService.RecalcularTodosDigitosVerificadores(_usuarioService, _permisoService);
+                _digitoVerificadorService.RecalcularTodosDigitosVerificadores(_usuarioService, _permisoService, _compraService, _ventaService, _carritoService, _bitacoraService, _activoService);
 
                 CargarDV();
 
@@ -118,15 +129,25 @@ namespace MidMarket.UI
 
         private void CargarDV()
         {
-            bool consistencia = _digitoVerificadorService.VerificarInconsistenciaTablas();
+            var tablas = new List<string>();
+            bool consistencia = _digitoVerificadorService.VerificarInconsistenciaTablas(out tablas);
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
 
             if (!consistencia)
             {
-                estadoDVLiteral.Text = "<span id='estadoDV' class='status-text incorrecto'>Estado: Incorrecto</span>";
+                if (tablas.Count == 1)
+                {
+                    estadoDVLiteral.Text = $"<span id='estadoDV' class='status-text incorrecto'>{_traduccionService.ObtenerMensaje(idioma, "MSJ_39")} - {tablas[0]}</span>";
+                }
+                else
+                {
+                    string tablasInconsistentes = string.Join(", ", tablas);
+                    estadoDVLiteral.Text = $"<span id='estadoDV' class='status-text incorrecto'>{_traduccionService.ObtenerMensaje(idioma, "MSJ_39")} - {tablasInconsistentes}</span>";
+                }
             }
             else
             {
-                estadoDVLiteral.Text = "<span id='estadoDV' class='status-text correcto'>Estado: Correcto</span>";
+                estadoDVLiteral.Text = $"<span id='estadoDV' class='status-text correcto'>{_traduccionService.ObtenerMensaje(idioma, "MSJ_38")}</span>";
             }
         }
     }

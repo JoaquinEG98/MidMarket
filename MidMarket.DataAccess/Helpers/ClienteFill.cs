@@ -1,4 +1,5 @@
 ﻿using MidMarket.Entities;
+using MidMarket.Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -51,6 +52,30 @@ namespace MidMarket.DataAccess.Helpers
         public static List<Cliente> FillListCliente(DataSet ds)
         {
             return ds.Tables[0].AsEnumerable().Select(dr => FillObjectCliente(dr)).ToList();
+        }
+
+        public static CuentaDTO FillObjectCuentaDTO(DataRow dr)
+        {
+            CuentaDTO cuenta = new CuentaDTO();
+
+            if (dr.Table.Columns.Contains("Id_Cuenta") && !Convert.IsDBNull(dr["Id_Cuenta"]))
+                cuenta.Id = Convert.ToInt32(dr["Id_Cuenta"]);
+
+            if (dr.Table.Columns.Contains("Id_Cliente") && !Convert.IsDBNull(dr["Id_Cliente"]))
+                cuenta.Id_Cliente = Convert.ToInt32(dr["Id_Cliente"]);
+
+            if (dr.Table.Columns.Contains("NumeroCuenta") && !Convert.IsDBNull(dr["NumeroCuenta"]))
+                cuenta.NumeroCuenta = Convert.ToInt64(dr["NumeroCuenta"]);
+
+            if (dr.Table.Columns.Contains("Saldo") && !Convert.IsDBNull(dr["Saldo"]))
+                cuenta.Saldo = Convert.ToDecimal(dr["Saldo"]);
+
+            return cuenta;
+        }
+
+        public static List<CuentaDTO> FillListCuentaDTO(DataSet ds)
+        {
+            return ds.Tables[0].AsEnumerable().Select(dr => FillObjectCuentaDTO(dr)).ToList();
         }
     }
 }

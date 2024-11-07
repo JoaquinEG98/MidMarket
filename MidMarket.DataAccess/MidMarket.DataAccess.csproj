@@ -88,6 +88,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Scripts\Activo\GET_ALL_BONODTO.sql" />
+    <Content Include="Scripts\Activo\GET_ALL_ACCIONDTO.sql" />
+    <Content Include="Scripts\Activo\GET_ALL_ACTIVODTO.sql" />
     <Content Include="Scripts\Activo\UPDATE_BONO.sql" />
     <Content Include="Scripts\Activo\UPDATE_ACCION.sql" />
     <Content Include="Scripts\Activo\GET_BONOS.sql" />
@@ -95,28 +98,36 @@
     <Content Include="Scripts\Activo\ADD_BONO.sql" />
     <Content Include="Scripts\Activo\ADD_ACCION.sql" />
     <Content Include="Scripts\Activo\ADD_ACTIVO.sql" />
+    <Content Include="Scripts\Bitacora\GET_ALL_BITACORA.sql" />
     <Content Include="Scripts\Bitacora\GET_BITACORA.sql" />
     <Content Include="Scripts\Bitacora\ALTA_BITACORA.sql" />
     <Content Include="Scripts\Calculo\ACTIVOS_MAS_VENDIDOS_TOTAL.sql" />
     <Content Include="Scripts\Calculo\ACTIVOS_MAS_VENDIDOS_CANTIDAD.sql" />
     <Content Include="Scripts\Calculo\ACTIVOS_MAS_COMPRADOS_TOTAL.sql" />
     <Content Include="Scripts\Calculo\ACTIVOS_MAS_COMPRADOS_CANTIDAD.sql" />
+    <Content Include="Scripts\Carrito\GET_ALL_CARRITO.sql" />
     <Content Include="Scripts\Carrito\LIMPIAR_CARRITO.sql" />
     <Content Include="Scripts\Carrito\ELIMINAR_CARRITO.sql" />
     <Content Include="Scripts\Carrito\UPDATE_CARRITO.sql" />
     <Content Include="Scripts\Carrito\GET_CARRITO.sql" />
     <Content Include="Scripts\Carrito\INSERTAR_CARRITO.sql" />
+    <Content Include="Scripts\Compra\GET_ALL_COMPRAS.sql" />
     <Content Include="Scripts\Compra\GET_COMPRAS_ACTIVAS.sql" />
+    <Content Include="Scripts\Compra\GET_ALL_COMPRAS_DETALLE.sql" />
     <Content Include="Scripts\Compra\GET_COMPRAS_DETALLE_ACTIVAS.sql" />
     <Content Include="Scripts\Compra\GET_COMPRAS_DETALLE.sql" />
     <Content Include="Scripts\Compra\GET_COMPRAS.sql" />
     <Content Include="Scripts\Compra\INSERTAR_TRANSACCION_COMPRA.sql" />
     <Content Include="Scripts\Compra\INSERTAR_DETALLE_COMPRA.sql" />
     <Content Include="Scripts\Compra\INSERTAR_ACTIVO_CLIENTE.sql" />
+    <Content Include="Scripts\Cuenta\GET_ALL_CUENTAS.sql" />
     <Content Include="Scripts\Cuenta\CARGAR_SALDO.sql" />
     <Content Include="Scripts\Cuenta\OBTENER_ULTIMA_TRANSACCION.sql" />
     <Content Include="Scripts\Cuenta\OBTENER_TOTAL_INVERTIDO.sql" />
+    <Content Include="Scripts\DigitoVerificador\DTOs\GET_ALL_ACTIVO_CLIENTE.sql" />
     <Content Include="Scripts\DigitoVerificador\GET_DIGITO_VERTICAL.sql" />
+    <Content Include="Scripts\Permiso\GET_ALL_FAMILIAPATENTEDTO.sql" />
+    <Content Include="Scripts\Permiso\GET_ALL_PERMISOSDTO.sql" />
     <Content Include="Scripts\Permiso\GET_USUARIOS_PERMISOS.sql" />
     <Content Include="Scripts\BkpRestore\REALIZAR_BACKUP.sql" />
     <Content Include="Scripts\Permiso\GET_PERMISOS_USUARIO.sql" />
@@ -145,6 +156,8 @@
     <Content Include="Scripts\Permiso\GUARDAR_COMPONENTE.sql" />
     <Content Include="Scripts\Usuario\REGISTRAR_USUARIO.sql" />
     <Content Include="Scripts\Venta\ACTUALIZAR_ACTIVO_CLIENTE.sql" />
+    <Content Include="Scripts\Venta\GET_ALL_VENTAS.sql" />
+    <Content Include="Scripts\Venta\GET_ALL_VENTAS_DETALLE.sql" />
     <Content Include="Scripts\Venta\OBTENER_CANTIDAD_REAL_CLIENTE.sql" />
     <Content Include="Scripts\Venta\OBTENER_PRECIO_ACTUAL.sql" />
     <Content Include="Scripts\Venta\GET_VENTAS.sql" />

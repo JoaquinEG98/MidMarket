@@ -9,5 +9,6 @@ namespace MidMarket.DataAccess.Interfaces
         IIdioma ObtenerIdiomaDefault();
         IDictionary<string, ITraduccion> ObtenerTraducciones(IIdioma idioma);
         string ObtenerMensaje(IIdioma idioma, string etiqueta);
+        void LimpiarCache();
     }
 }

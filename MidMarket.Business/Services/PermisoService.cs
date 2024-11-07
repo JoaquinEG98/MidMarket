@@ -29,20 +29,36 @@ namespace MidMarket.Business.Services
 
         public void GuardarFamiliaCreada(Familia familia)
         {
-            _permisoDataAccess.GuardarFamiliaCreada(familia);
+            using (TransactionScope scope = new TransactionScope())
+            {
+                _permisoDataAccess.GuardarFamiliaCreada(familia);
 
-            var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
-            _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) guardó la familia {familia.Id}", Criticidad.Alta, clienteLogueado);
+                var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+                _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) guardó la familia {familia.Id}", Criticidad.Alta, clienteLogueado);
+
+                _digitoVerificadorService.RecalcularDigitosPermisoDTO(this);
+                _digitoVerificadorService.RecalcularDigitosFamiliaPatente(this);
+
+                scope.Complete();
+            }
         }
 
         public int GuardarPatenteFamilia(Componente componente, bool familia)
         {
-            int id = _permisoDataAccess.GuardarPatenteFamilia(componente, familia);
+            using (TransactionScope scope = new TransactionScope())
+            {
+                int id = _permisoDataAccess.GuardarPatenteFamilia(componente, familia);
 
-            var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
-            _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) guardó la patente/familia {id}", Criticidad.Alta, clienteLogueado);
+                var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+                _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) guardó la patente/familia {id}", Criticidad.Alta, clienteLogueado);
 
-            return id;
+                _digitoVerificadorService.RecalcularDigitosPermisoDTO(this);
+                _digitoVerificadorService.RecalcularDigitosFamiliaPatente(this);
+
+                scope.Complete();
+
+                return id;
+            }
         }
 
         public void GuardarPermiso(Cliente cliente)
@@ -158,6 +174,18 @@ namespace MidMarket.Business.Services
         {
             List<UsuarioPermisoDTO> usuariosPermisos = _permisoDataAccess.GetUsuariosPermisos();
             return usuariosPermisos;
+        }
+
+        public List<PermisoDTO> GetPermisoDTO()
+        {
+            List<PermisoDTO> permisos = _permisoDataAccess.GetPermisosDTO();
+            return permisos;
+        }
+
+        public List<FamiliaPatenteDTO> GetFamiliaPatenteDTO()
+        {
+            List<FamiliaPatenteDTO> familiaPatente = _permisoDataAccess.GetFamiliaPatenteDTO();
+            return familiaPatente;
         }
     }
 }

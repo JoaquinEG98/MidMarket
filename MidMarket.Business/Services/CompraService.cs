@@ -1,8 +1,11 @@
 ﻿using MidMarket.Business.Interfaces;
+using MidMarket.Business.Seguridad;
 using MidMarket.DataAccess.Interfaces;
 using MidMarket.Entities;
+using MidMarket.Entities.DTOs;
 using MidMarket.Entities.Enums;
 using MidMarket.Entities.Observer;
+using MidMarket.Seguridad;
 using System.Collections.Generic;
 using System.Linq;
 using System.Transactions;
@@ -16,6 +19,7 @@ namespace MidMarket.Business.Services
         private readonly ICompraDAO _compraDataAccess;
         private readonly IUsuarioService _usuarioService;
         private readonly ITraduccionService _traduccionService;
+        private readonly IDigitoVerificadorService _digitoVerificadorService;
 
         public CompraService()
         {
@@ -24,6 +28,7 @@ namespace MidMarket.Business.Services
             _compraDataAccess = DependencyResolver.Resolve<ICompraDAO>();
             _usuarioService = DependencyResolver.Resolve<IUsuarioService>();
             _traduccionService = DependencyResolver.Resolve<ITraduccionService>();
+            _digitoVerificadorService = DependencyResolver.Resolve<IDigitoVerificadorService>();
         }
 
         public void RealizarCompra(List<Carrito> carrito)
@@ -37,20 +42,86 @@ namespace MidMarket.Business.Services
 
                 ValidarSaldo(saldoActual, total);
 
-                int compraId = _compraDataAccess.InsertarTransaccionCompra(clienteLogueado, total);
+                TransaccionCompra compra = new TransaccionCompra()
+                {
+                    Cuenta = clienteLogueado.Cuenta,
+                    Cliente = clienteLogueado,
+                    Fecha = ClockWrapper.Now(),
+                    Total = total
+                };
+                compra.DVH = GenerarDVHTransaccionCompra(compra);
+
+                int compraId = _compraDataAccess.InsertarTransaccionCompra(compra);
 
                 foreach (var item in carrito)
                 {
-                    _compraDataAccess.InsertarDetalleCompra(item, compraId);
-                    _compraDataAccess.InsertarActivoCliente(clienteLogueado, item);
+                    DetalleCompra detalle = new DetalleCompra()
+                    {
+                        Activo = item.Activo,
+                        Cantidad = item.Cantidad,
+                    };
+
+                    if (item.Activo is Accion accion)
+                    {
+                        detalle.Precio = accion.Precio;
+                    }
+                    else if (item.Activo is Bono bono)
+                    {
+                        detalle.Precio = bono.ValorNominal;
+                    }
+                    detalle.DVH = GenerarDVHDetalleCompra(detalle, compraId);
+
+                    _compraDataAccess.InsertarDetalleCompra(detalle, compraId);
+
+                    ClienteActivoDTO clienteActivo = new ClienteActivoDTO()
+                    {
+                        Id_Cliente = clienteLogueado.Id,
+                        Id_Activo = item.Activo.Id,
+                        Cantidad = item.Cantidad
+                    };
+
+                    _compraDataAccess.InsertarActivoCliente(clienteActivo);
                 }
 
                 _usuarioService.ActualizarSaldo(total, false);
 
                 _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) realizó la Compra con Id: ({compraId}) por un total de (${total})", Criticidad.Media, clienteLogueado);
 
+                _digitoVerificadorService.ActualizarDVV("DetalleCompra");
+                //_digitoVerificadorService.ActualizarDVV("TransaccionCompra");
+                _digitoVerificadorService.RecalcularDigitosTransaccionCompra(this);
+                _digitoVerificadorService.RecalcularDigitosClienteActivo(this);
+
                 scope.Complete();
             }
+        }
+
+        private string GenerarDVHTransaccionCompra(TransaccionCompra compra)
+        {
+            TransaccionCompraDTO compraDTO = new TransaccionCompraDTO()
+            {
+                Id_Cliente = compra.Cliente.Id,
+                Id_Cuenta = compra.Cuenta.Id,
+                Total = compra.Total,
+                Fecha = compra.Fecha,
+            };
+            compraDTO.DVH = DigitoVerificador.GenerarDVH(compraDTO);
+
+            return compraDTO.DVH;
+        }
+
+        private string GenerarDVHDetalleCompra(DetalleCompra detalle, int compraId)
+        {
+            var detalleDTO = new DetalleCompraDTO()
+            {
+                Id_Activo = detalle.Activo.Id,
+                Id_Compra = compraId,
+                Cantidad = detalle.Cantidad,
+                Precio = detalle.Precio,
+            };
+            detalleDTO.DVH = DigitoVerificador.GenerarDVH(detalleDTO);
+
+            return detalleDTO.DVH;
         }
 
         public void ValidarSaldo(decimal saldo, decimal total)
@@ -68,6 +139,27 @@ namespace MidMarket.Business.Services
             List<TransaccionCompra> compras = _compraDataAccess.GetCompras(clienteLogueado, historico);
 
             return compras;
+        }
+
+        public List<TransaccionCompraDTO> GetAllCompras()
+        {
+            List<TransaccionCompraDTO> compras = _compraDataAccess.GetAllCompras();
+
+            return compras;
+        }
+
+        public List<DetalleCompraDTO> GetAllComprasDetalle()
+        {
+            List<DetalleCompraDTO> detalle = _compraDataAccess.GetAllComprasDetalle();
+
+            return detalle;
+        }
+
+        public List<ClienteActivoDTO> GetAllClienteActivo()
+        {
+            List<ClienteActivoDTO> clienteActivo = _compraDataAccess.GetAllClienteActivo();
+
+            return clienteActivo;
         }
     }
 }

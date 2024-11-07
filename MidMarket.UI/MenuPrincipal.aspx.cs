@@ -71,7 +71,9 @@ namespace MidMarket.UI
 
         private void VerificarDV()
         {
-            bool consistencia = _digitoVerificadorService.VerificarInconsistenciaTablas();
+            var tablas = new List<string>();
+
+            bool consistencia = _digitoVerificadorService.VerificarInconsistenciaTablas(out tablas);
             bool esWebmaster = false;
 
             if (!consistencia)
@@ -84,11 +86,11 @@ namespace MidMarket.UI
                     }
                 }
 
-                VerificarWebmaster(esWebmaster);
+                VerificarWebmaster(esWebmaster, tablas);
             }
         }
 
-        private void VerificarWebmaster(bool esWebmaster)
+        private void VerificarWebmaster(bool esWebmaster, List<string> tablas)
         {
             var idioma = _sessionManager.Get<IIdioma>("Idioma");
 
@@ -98,7 +100,19 @@ namespace MidMarket.UI
             }
             else
             {
-                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_24")}");
+                string mensaje;
+
+                if (tablas.Count == 1)
+                {
+                    mensaje = $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_24")} {tablas[0]}";
+                }
+                else
+                {
+                    string tablasInconsistentes = string.Join(", ", tablas);
+                    mensaje = $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_24")} {tablasInconsistentes}";
+                }
+
+                AlertHelper.MostrarModal(this, mensaje);
             }
         }
 

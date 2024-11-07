@@ -1,4 +1,5 @@
 ﻿using MidMarket.Entities;
+using MidMarket.Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,7 +9,7 @@ namespace MidMarket.DataAccess.Helpers
 {
     public static class VentaFill
     {
-        public static TransaccionVenta FillObjectTransaccionVenta(DataRow dr, Cliente cliente)
+        public static TransaccionVenta FillObjectTransaccionVenta(DataRow dr, Cliente cliente = null)
         {
             TransaccionVenta venta = new TransaccionVenta();
             venta.Cliente = new Cliente();
@@ -17,9 +18,11 @@ namespace MidMarket.DataAccess.Helpers
             if (dr.Table.Columns.Contains("Id_Venta") && !Convert.IsDBNull(dr["Id_Venta"]))
                 venta.Id = Convert.ToInt32(dr["Id_Venta"]);
 
-            venta.Cuenta = cliente.Cuenta;
-
-            venta.Cliente = cliente;
+            if (cliente != null)
+            {
+                venta.Cuenta = cliente.Cuenta;
+                venta.Cliente = cliente;
+            }
 
             if (dr.Table.Columns.Contains("Fecha") && !Convert.IsDBNull(dr["Fecha"]))
                 venta.Fecha = Convert.ToDateTime(dr["Fecha"]);
@@ -106,6 +109,62 @@ namespace MidMarket.DataAccess.Helpers
         public static List<DetalleVenta> FillListDetalleVenta(DataSet ds)
         {
             return ds.Tables[0].AsEnumerable().Select(dr => FillObjectDetalleVenta(dr)).ToList();
+        }
+
+        public static DetalleVentaDTO FillObjectDetalleVentaDTO(DataRow dr)
+        {
+            DetalleVentaDTO venta = new DetalleVentaDTO();
+
+
+            if (dr.Table.Columns.Contains("Id_Detalle") && !Convert.IsDBNull(dr["Id_Detalle"]))
+                venta.Id = Convert.ToInt32(dr["Id_Detalle"]);
+
+            if (dr.Table.Columns.Contains("Id_Activo") && !Convert.IsDBNull(dr["Id_Activo"]))
+                venta.Id_Activo = Convert.ToInt32(dr["Id_Activo"]);
+
+            if (dr.Table.Columns.Contains("Id_Venta") && !Convert.IsDBNull(dr["Id_Venta"]))
+                venta.Id_Venta = Convert.ToInt32(dr["Id_Venta"]);
+
+            if (dr.Table.Columns.Contains("Cantidad") && !Convert.IsDBNull(dr["Cantidad"]))
+                venta.Cantidad = Convert.ToInt32(dr["Cantidad"]);
+
+            if (dr.Table.Columns.Contains("Precio") && !Convert.IsDBNull(dr["Precio"]))
+                venta.Precio = Convert.ToDecimal(dr["Precio"]);
+
+            return venta;
+        }
+
+        public static List<DetalleVentaDTO> FillListDetalleVentaDTO(DataSet ds)
+        {
+            return ds.Tables[0].AsEnumerable().Select(dr => FillObjectDetalleVentaDTO(dr)).ToList();
+        }
+
+        public static TransaccionVentaDTO FillObjectTransaccionVentaDTO(DataRow dr)
+        {
+            TransaccionVentaDTO venta = new TransaccionVentaDTO();
+
+
+            if (dr.Table.Columns.Contains("Id_Venta") && !Convert.IsDBNull(dr["Id_Venta"]))
+                venta.Id = Convert.ToInt32(dr["Id_Venta"]);
+
+            if (dr.Table.Columns.Contains("Id_Cuenta") && !Convert.IsDBNull(dr["Id_Cuenta"]))
+                venta.Id_Cuenta = Convert.ToInt64(dr["Id_Cuenta"]);
+
+            if (dr.Table.Columns.Contains("Id_Cliente") && !Convert.IsDBNull(dr["Id_Cliente"]))
+                venta.Id_Cliente = Convert.ToInt32(dr["Id_Cliente"]);
+
+            if (dr.Table.Columns.Contains("Fecha") && !Convert.IsDBNull(dr["Fecha"]))
+                venta.Fecha = Convert.ToDateTime(dr["Fecha"]);
+
+            if (dr.Table.Columns.Contains("Total") && !Convert.IsDBNull(dr["Total"]))
+                venta.Total = Convert.ToDecimal(dr["Total"]);
+
+            return venta;
+        }
+
+        public static List<TransaccionVentaDTO> FillListTransaccionVentaDTO(DataSet ds)
+        {
+            return ds.Tables[0].AsEnumerable().Select(dr => FillObjectTransaccionVentaDTO(dr)).ToList();
         }
     }
 }
