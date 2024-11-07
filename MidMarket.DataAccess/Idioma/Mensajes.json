@@ -718,5 +718,29 @@
     "IdiomaId": 2,
     "Etiqueta": "MSJ_37",
     "Texto": "A new password has been generated and sent to your email."
+  },
+  {
+    "Id": 121,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_38",
+    "Texto": "ESTADO: CORRECTO"
+  },
+  {
+    "Id": 122,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_38",
+    "Texto": "STATUS: OK"
+  },
+  {
+    "Id": 123,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_39",
+    "Texto": "ESTADO: INCORRECTO"
+  },
+  {
+    "Id": 124,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_39",
+    "Texto": "STATUS: INCORRECT"
   }
 ]

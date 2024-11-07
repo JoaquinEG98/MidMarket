@@ -131,14 +131,23 @@ namespace MidMarket.UI
         {
             var tablas = new List<string>();
             bool consistencia = _digitoVerificadorService.VerificarInconsistenciaTablas(out tablas);
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
 
             if (!consistencia)
             {
-                estadoDVLiteral.Text = "<span id='estadoDV' class='status-text incorrecto'>Estado: Incorrecto</span>";
+                if (tablas.Count == 1)
+                {
+                    estadoDVLiteral.Text = $"<span id='estadoDV' class='status-text incorrecto'>{_traduccionService.ObtenerMensaje(idioma, "MSJ_39")} - {tablas[0]}</span>";
+                }
+                else
+                {
+                    string tablasInconsistentes = string.Join(", ", tablas);
+                    estadoDVLiteral.Text = $"<span id='estadoDV' class='status-text incorrecto'>{_traduccionService.ObtenerMensaje(idioma, "MSJ_39")} - {tablasInconsistentes}</span>";
+                }
             }
             else
             {
-                estadoDVLiteral.Text = "<span id='estadoDV' class='status-text correcto'>Estado: Correcto</span>";
+                estadoDVLiteral.Text = $"<span id='estadoDV' class='status-text correcto'>{_traduccionService.ObtenerMensaje(idioma, "MSJ_38")}</span>";
             }
         }
     }
