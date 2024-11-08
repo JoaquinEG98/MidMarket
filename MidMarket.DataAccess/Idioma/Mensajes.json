@@ -742,5 +742,17 @@
     "IdiomaId": 2,
     "Etiqueta": "MSJ_39",
     "Texto": "STATUS: INCORRECT"
+  },
+  {
+    "Id": 125,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_40",
+    "Texto": "El email ya está registrado"
+  },
+  {
+    "Id": 126,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_40",
+    "Texto": "Email is already registered"
   }
 ]

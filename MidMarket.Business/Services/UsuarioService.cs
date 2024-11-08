@@ -8,6 +8,7 @@ using MidMarket.Entities.Observer;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using System.Text.RegularExpressions;
 using System.Transactions;
 
@@ -34,6 +35,7 @@ namespace MidMarket.Business.Services
 
         public int RegistrarUsuario(Cliente cliente)
         {
+            cliente.Email = cliente.Email.ToLower();
             ValidarUsuario(cliente, cliente.Password);
 
             using (TransactionScope scope = new TransactionScope())
@@ -48,6 +50,7 @@ namespace MidMarket.Business.Services
                 int id = _usuarioDataAccess.RegistrarUsuario(cliente);
 
                 _digitoVerificadorService.ActualizarDVV("Cliente");
+                _digitoVerificadorService.RecalcularDigitosCuenta(this);
 
                 scope.Complete();
 
@@ -57,6 +60,7 @@ namespace MidMarket.Business.Services
 
         public void ModificarUsuario(Cliente cliente)
         {
+            cliente.Email = cliente.Email.ToLower();
             ValidarUsuario(cliente, cliente.Password);
 
             using (TransactionScope scope = new TransactionScope())
@@ -80,6 +84,7 @@ namespace MidMarket.Business.Services
 
         public Cliente Login(string email, string password)
         {
+            email = email.ToLower();
             string emailEncriptado = Encriptacion.EncriptarAES(email);
 
             Cliente cliente = _usuarioDataAccess.Login(emailEncriptado);
@@ -140,6 +145,10 @@ namespace MidMarket.Business.Services
 
             if (cliente.Bloqueo >= 3)
                 throw new Exception($"{_traduccionService.ObtenerMensaje(idioma, "ERR_08")}");
+
+            var clientes = GetClientes();
+            if (cliente.Email == clientes.Where(x => x.Email == cliente.Email).Select(x => x.Email).FirstOrDefault())
+                throw new Exception($"{_traduccionService.ObtenerMensaje(idioma, "MSJ_40")}");
         }
 
         private bool ValidarFormatoPassword(string password)
