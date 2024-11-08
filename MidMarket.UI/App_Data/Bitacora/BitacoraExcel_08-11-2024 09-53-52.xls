@@ -1,0 +1,303 @@
+<table border='1'>
+<tr><th>Fecha</th><th>Usuario</th><th>Criticidad</th><th>Mensaje</th></tr>
+<tr>
+<td>08/11/2024 09:53</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/11/2024 09:47</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/11/2024 09:36</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) cambió los permisos de: Testeo (11007)</td>
+</tr>
+<tr>
+<td>08/11/2024 09:36</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) cambió los permisos de: Testeo (11007)</td>
+</tr>
+<tr>
+<td>08/11/2024 09:35</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/11/2024 09:33</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) cambió los permisos de: Testeo (11007)</td>
+</tr>
+<tr>
+<td>08/11/2024 09:32</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/11/2024 09:28</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/11/2024 09:20</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 21:25</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 21:25</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 21:25</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>CVSA (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 21:25</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>CVSA (3006) modificó el Bono (10 - DASDSA)</td>
+</tr>
+<tr>
+<td>07/11/2024 21:25</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>CVSA (3006) modificó la Accion (12 - TEST)</td>
+</tr>
+<tr>
+<td>07/11/2024 21:24</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>CVSA (3006) dio de alta el Bono (10 - bfdbfgdb)</td>
+</tr>
+<tr>
+<td>07/11/2024 21:24</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>CVSA (3006) dio de alta la Acción (12 - fdsfds)</td>
+</tr>
+<tr>
+<td>07/11/2024 21:24</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>CVSA (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 21:24</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 21:19</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 21:19</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 21:18</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) cambió los permisos de: Testeo (11007)</td>
+</tr>
+<tr>
+<td>07/11/2024 21:18</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) cambió los permisos de: Testeo (11007)</td>
+</tr>
+<tr>
+<td>07/11/2024 21:18</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 21:18</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Media</td>
+<td>MELI (7005) realizó la venta con Id: (8024) por un total de ($10000,0000)</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Media</td>
+<td>MELI (7005) realizó la venta con Id: (8023) por un total de ($3950,0000)</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Media</td>
+<td>MELI (7005) realizó la Compra con Id: (18037) por un total de ($51000,0000)</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:16</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:16</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:16</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:16</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:16</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:16</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+</table>

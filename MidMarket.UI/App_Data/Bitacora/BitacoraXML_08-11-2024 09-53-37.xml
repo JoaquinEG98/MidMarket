@@ -1,0 +1,1003 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ArrayOfBitacora xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bitacora>
+    <Id>97206</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) inició sesión correctamente</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-08T09:53:25.59</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>96206</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) inició sesión correctamente</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-08T09:47:47.107</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>95212</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) cambió los permisos de: Testeo (11007)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-11-08T09:36:26.903</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>95211</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) cambió los permisos de: Testeo (11007)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-11-08T09:36:12.943</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>95210</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) inició sesión correctamente</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-08T09:35:57.23</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>95209</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) cambió los permisos de: Testeo (11007)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-11-08T09:33:07.827</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>95208</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) inició sesión correctamente</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-08T09:32:38.557</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>95207</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) inició sesión correctamente</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-08T09:28:41.157</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>95206</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) inició sesión correctamente</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-08T09:20:04.873</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94258</Id>
+    <Cliente>
+      <Id>7005</Id>
+      <Email>cliente@midmarket.com.ar</Email>
+      <RazonSocial>MELI</RazonSocial>
+      <CUIT>309487542</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>6006</Id>
+        <NumeroCuenta>1556</NumeroCuenta>
+        <Saldo>42927.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>MELI (7005) cerró sesión</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-07T21:25:52.233</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94257</Id>
+    <Cliente>
+      <Id>7005</Id>
+      <Email>cliente@midmarket.com.ar</Email>
+      <RazonSocial>MELI</RazonSocial>
+      <CUIT>309487542</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>6006</Id>
+        <NumeroCuenta>1556</NumeroCuenta>
+        <Saldo>42927.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>MELI (7005) inició sesión correctamente</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-07T21:25:30.933</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94256</Id>
+    <Cliente>
+      <Id>3006</Id>
+      <Email>administrador@midmarket.com.ar</Email>
+      <RazonSocial>CVSA</RazonSocial>
+      <CUIT>12345678</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3006</Id>
+        <NumeroCuenta>1308</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>CVSA (3006) cerró sesión</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-07T21:25:24.883</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94255</Id>
+    <Cliente>
+      <Id>3006</Id>
+      <Email>administrador@midmarket.com.ar</Email>
+      <RazonSocial>CVSA</RazonSocial>
+      <CUIT>12345678</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3006</Id>
+        <NumeroCuenta>1308</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>CVSA (3006) modificó el Bono (10 - DASDSA)</Descripcion>
+    <Criticidad>Media</Criticidad>
+    <Fecha>2024-11-07T21:25:18.5</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94254</Id>
+    <Cliente>
+      <Id>3006</Id>
+      <Email>administrador@midmarket.com.ar</Email>
+      <RazonSocial>CVSA</RazonSocial>
+      <CUIT>12345678</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3006</Id>
+        <NumeroCuenta>1308</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>CVSA (3006) modificó la Accion (12 - TEST)</Descripcion>
+    <Criticidad>Media</Criticidad>
+    <Fecha>2024-11-07T21:25:08.87</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94253</Id>
+    <Cliente>
+      <Id>3006</Id>
+      <Email>administrador@midmarket.com.ar</Email>
+      <RazonSocial>CVSA</RazonSocial>
+      <CUIT>12345678</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3006</Id>
+        <NumeroCuenta>1308</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>CVSA (3006) dio de alta el Bono (10 - bfdbfgdb)</Descripcion>
+    <Criticidad>Media</Criticidad>
+    <Fecha>2024-11-07T21:24:59.107</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94252</Id>
+    <Cliente>
+      <Id>3006</Id>
+      <Email>administrador@midmarket.com.ar</Email>
+      <RazonSocial>CVSA</RazonSocial>
+      <CUIT>12345678</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3006</Id>
+        <NumeroCuenta>1308</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>CVSA (3006) dio de alta la Acción (12 - fdsfds)</Descripcion>
+    <Criticidad>Media</Criticidad>
+    <Fecha>2024-11-07T21:24:51.807</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94251</Id>
+    <Cliente>
+      <Id>3006</Id>
+      <Email>administrador@midmarket.com.ar</Email>
+      <RazonSocial>CVSA</RazonSocial>
+      <CUIT>12345678</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3006</Id>
+        <NumeroCuenta>1308</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>CVSA (3006) inició sesión correctamente</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-07T21:24:45.397</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94250</Id>
+    <Cliente>
+      <Id>8005</Id>
+      <Email>cliente2@midmarket.com.ar</Email>
+      <RazonSocial>Amazon</RazonSocial>
+      <CUIT>304958437</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>7006</Id>
+        <NumeroCuenta>1606</NumeroCuenta>
+        <Saldo>36162.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Amazon (8005) cerró sesión</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-07T21:24:39</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94249</Id>
+    <Cliente>
+      <Id>8005</Id>
+      <Email>cliente2@midmarket.com.ar</Email>
+      <RazonSocial>Amazon</RazonSocial>
+      <CUIT>304958437</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>7006</Id>
+        <NumeroCuenta>1606</NumeroCuenta>
+        <Saldo>36162.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Amazon (8005) inició sesión correctamente</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-07T21:19:07.947</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94248</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) cerró sesión</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-07T21:19:01.967</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94247</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) cambió los permisos de: Testeo (11007)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-11-07T21:18:34.377</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94246</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) cambió los permisos de: Testeo (11007)</Descripcion>
+    <Criticidad>Alta</Criticidad>
+    <Fecha>2024-11-07T21:18:24.893</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94245</Id>
+    <Cliente>
+      <Id>3005</Id>
+      <Email>webmaster@midmarket.com.ar</Email>
+      <RazonSocial>Joaquin</RazonSocial>
+      <CUIT>20202020</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>3005</Id>
+        <NumeroCuenta>1307</NumeroCuenta>
+        <Saldo>50000.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>Joaquin (3005) inició sesión correctamente</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-07T21:18:09.45</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94244</Id>
+    <Cliente>
+      <Id>7005</Id>
+      <Email>cliente@midmarket.com.ar</Email>
+      <RazonSocial>MELI</RazonSocial>
+      <CUIT>309487542</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>6006</Id>
+        <NumeroCuenta>1556</NumeroCuenta>
+        <Saldo>42927.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>MELI (7005) cerró sesión</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-07T21:18:04.35</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94243</Id>
+    <Cliente>
+      <Id>7005</Id>
+      <Email>cliente@midmarket.com.ar</Email>
+      <RazonSocial>MELI</RazonSocial>
+      <CUIT>309487542</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>6006</Id>
+        <NumeroCuenta>1556</NumeroCuenta>
+        <Saldo>42927.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>MELI (7005) realizó la venta con Id: (8024) por un total de ($10000,0000)</Descripcion>
+    <Criticidad>Media</Criticidad>
+    <Fecha>2024-11-07T21:17:21.147</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94242</Id>
+    <Cliente>
+      <Id>7005</Id>
+      <Email>cliente@midmarket.com.ar</Email>
+      <RazonSocial>MELI</RazonSocial>
+      <CUIT>309487542</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>6006</Id>
+        <NumeroCuenta>1556</NumeroCuenta>
+        <Saldo>42927.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>MELI (7005) realizó la venta con Id: (8023) por un total de ($3950,0000)</Descripcion>
+    <Criticidad>Media</Criticidad>
+    <Fecha>2024-11-07T21:17:18.05</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94241</Id>
+    <Cliente>
+      <Id>7005</Id>
+      <Email>cliente@midmarket.com.ar</Email>
+      <RazonSocial>MELI</RazonSocial>
+      <CUIT>309487542</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>6006</Id>
+        <NumeroCuenta>1556</NumeroCuenta>
+        <Saldo>42927.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>MELI (7005) realizó la Compra con Id: (18037) por un total de ($51000,0000)</Descripcion>
+    <Criticidad>Media</Criticidad>
+    <Fecha>2024-11-07T21:17:09.003</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94240</Id>
+    <Cliente>
+      <Id>7005</Id>
+      <Email>cliente@midmarket.com.ar</Email>
+      <RazonSocial>MELI</RazonSocial>
+      <CUIT>309487542</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>6006</Id>
+        <NumeroCuenta>1556</NumeroCuenta>
+        <Saldo>42927.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>MELI (7005) actualizó la cantidad del carrito del Activo: (9) al carrito</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-07T21:17:07.66</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94239</Id>
+    <Cliente>
+      <Id>7005</Id>
+      <Email>cliente@midmarket.com.ar</Email>
+      <RazonSocial>MELI</RazonSocial>
+      <CUIT>309487542</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>6006</Id>
+        <NumeroCuenta>1556</NumeroCuenta>
+        <Saldo>42927.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>MELI (7005) actualizó la cantidad del carrito del Activo: (9) al carrito</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-07T21:17:07.217</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94238</Id>
+    <Cliente>
+      <Id>7005</Id>
+      <Email>cliente@midmarket.com.ar</Email>
+      <RazonSocial>MELI</RazonSocial>
+      <CUIT>309487542</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>6006</Id>
+        <NumeroCuenta>1556</NumeroCuenta>
+        <Saldo>42927.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>MELI (7005) actualizó la cantidad del carrito del Activo: (9) al carrito</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-07T21:17:06.797</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94237</Id>
+    <Cliente>
+      <Id>7005</Id>
+      <Email>cliente@midmarket.com.ar</Email>
+      <RazonSocial>MELI</RazonSocial>
+      <CUIT>309487542</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>6006</Id>
+        <NumeroCuenta>1556</NumeroCuenta>
+        <Saldo>42927.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>MELI (7005) actualizó la cantidad del carrito del Activo: (9) al carrito</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-07T21:17:06.38</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94236</Id>
+    <Cliente>
+      <Id>7005</Id>
+      <Email>cliente@midmarket.com.ar</Email>
+      <RazonSocial>MELI</RazonSocial>
+      <CUIT>309487542</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>6006</Id>
+        <NumeroCuenta>1556</NumeroCuenta>
+        <Saldo>42927.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>MELI (7005) actualizó la cantidad del carrito del Activo: (9) al carrito</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-07T21:17:05.937</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94235</Id>
+    <Cliente>
+      <Id>7005</Id>
+      <Email>cliente@midmarket.com.ar</Email>
+      <RazonSocial>MELI</RazonSocial>
+      <CUIT>309487542</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>6006</Id>
+        <NumeroCuenta>1556</NumeroCuenta>
+        <Saldo>42927.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>MELI (7005) actualizó la cantidad del carrito del Activo: (9) al carrito</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-07T21:17:05.46</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94234</Id>
+    <Cliente>
+      <Id>7005</Id>
+      <Email>cliente@midmarket.com.ar</Email>
+      <RazonSocial>MELI</RazonSocial>
+      <CUIT>309487542</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>6006</Id>
+        <NumeroCuenta>1556</NumeroCuenta>
+        <Saldo>42927.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>MELI (7005) actualizó la cantidad del carrito del Activo: (9) al carrito</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-07T21:17:05.033</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94233</Id>
+    <Cliente>
+      <Id>7005</Id>
+      <Email>cliente@midmarket.com.ar</Email>
+      <RazonSocial>MELI</RazonSocial>
+      <CUIT>309487542</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>6006</Id>
+        <NumeroCuenta>1556</NumeroCuenta>
+        <Saldo>42927.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>MELI (7005) actualizó la cantidad del carrito del Activo: (9) al carrito</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-07T21:17:04.593</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94232</Id>
+    <Cliente>
+      <Id>7005</Id>
+      <Email>cliente@midmarket.com.ar</Email>
+      <RazonSocial>MELI</RazonSocial>
+      <CUIT>309487542</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>6006</Id>
+        <NumeroCuenta>1556</NumeroCuenta>
+        <Saldo>42927.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>MELI (7005) actualizó la cantidad del carrito del Activo: (9) al carrito</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-07T21:17:04.1</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94231</Id>
+    <Cliente>
+      <Id>7005</Id>
+      <Email>cliente@midmarket.com.ar</Email>
+      <RazonSocial>MELI</RazonSocial>
+      <CUIT>309487542</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>6006</Id>
+        <NumeroCuenta>1556</NumeroCuenta>
+        <Saldo>42927.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-07T21:17:03.557</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94230</Id>
+    <Cliente>
+      <Id>7005</Id>
+      <Email>cliente@midmarket.com.ar</Email>
+      <RazonSocial>MELI</RazonSocial>
+      <CUIT>309487542</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>6006</Id>
+        <NumeroCuenta>1556</NumeroCuenta>
+        <Saldo>42927.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-07T21:17:03.163</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94229</Id>
+    <Cliente>
+      <Id>7005</Id>
+      <Email>cliente@midmarket.com.ar</Email>
+      <RazonSocial>MELI</RazonSocial>
+      <CUIT>309487542</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>6006</Id>
+        <NumeroCuenta>1556</NumeroCuenta>
+        <Saldo>42927.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-07T21:17:02.71</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94228</Id>
+    <Cliente>
+      <Id>7005</Id>
+      <Email>cliente@midmarket.com.ar</Email>
+      <RazonSocial>MELI</RazonSocial>
+      <CUIT>309487542</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>6006</Id>
+        <NumeroCuenta>1556</NumeroCuenta>
+        <Saldo>42927.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-07T21:17:02.163</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94227</Id>
+    <Cliente>
+      <Id>7005</Id>
+      <Email>cliente@midmarket.com.ar</Email>
+      <RazonSocial>MELI</RazonSocial>
+      <CUIT>309487542</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>6006</Id>
+        <NumeroCuenta>1556</NumeroCuenta>
+        <Saldo>42927.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-07T21:17:01.623</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94226</Id>
+    <Cliente>
+      <Id>7005</Id>
+      <Email>cliente@midmarket.com.ar</Email>
+      <RazonSocial>MELI</RazonSocial>
+      <CUIT>309487542</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>6006</Id>
+        <NumeroCuenta>1556</NumeroCuenta>
+        <Saldo>42927.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-07T21:17:01.17</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94225</Id>
+    <Cliente>
+      <Id>7005</Id>
+      <Email>cliente@midmarket.com.ar</Email>
+      <RazonSocial>MELI</RazonSocial>
+      <CUIT>309487542</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>6006</Id>
+        <NumeroCuenta>1556</NumeroCuenta>
+        <Saldo>42927.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-07T21:17:00.677</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94224</Id>
+    <Cliente>
+      <Id>7005</Id>
+      <Email>cliente@midmarket.com.ar</Email>
+      <RazonSocial>MELI</RazonSocial>
+      <CUIT>309487542</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>6006</Id>
+        <NumeroCuenta>1556</NumeroCuenta>
+        <Saldo>42927.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-07T21:17:00.197</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94223</Id>
+    <Cliente>
+      <Id>7005</Id>
+      <Email>cliente@midmarket.com.ar</Email>
+      <RazonSocial>MELI</RazonSocial>
+      <CUIT>309487542</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>6006</Id>
+        <NumeroCuenta>1556</NumeroCuenta>
+        <Saldo>42927.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-07T21:16:59.703</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94222</Id>
+    <Cliente>
+      <Id>7005</Id>
+      <Email>cliente@midmarket.com.ar</Email>
+      <RazonSocial>MELI</RazonSocial>
+      <CUIT>309487542</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>6006</Id>
+        <NumeroCuenta>1556</NumeroCuenta>
+        <Saldo>42927.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-07T21:16:59.19</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94221</Id>
+    <Cliente>
+      <Id>7005</Id>
+      <Email>cliente@midmarket.com.ar</Email>
+      <RazonSocial>MELI</RazonSocial>
+      <CUIT>309487542</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>6006</Id>
+        <NumeroCuenta>1556</NumeroCuenta>
+        <Saldo>42927.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-07T21:16:58.653</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94220</Id>
+    <Cliente>
+      <Id>7005</Id>
+      <Email>cliente@midmarket.com.ar</Email>
+      <RazonSocial>MELI</RazonSocial>
+      <CUIT>309487542</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>6006</Id>
+        <NumeroCuenta>1556</NumeroCuenta>
+        <Saldo>42927.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-07T21:16:58.143</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94219</Id>
+    <Cliente>
+      <Id>7005</Id>
+      <Email>cliente@midmarket.com.ar</Email>
+      <RazonSocial>MELI</RazonSocial>
+      <CUIT>309487542</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>6006</Id>
+        <NumeroCuenta>1556</NumeroCuenta>
+        <Saldo>42927.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-07T21:16:57.46</Fecha>
+  </Bitacora>
+  <Bitacora>
+    <Id>94218</Id>
+    <Cliente>
+      <Id>7005</Id>
+      <Email>cliente@midmarket.com.ar</Email>
+      <RazonSocial>MELI</RazonSocial>
+      <CUIT>309487542</CUIT>
+      <Puntaje>0</Puntaje>
+      <Bloqueo>0</Bloqueo>
+      <Cuenta>
+        <Id>6006</Id>
+        <NumeroCuenta>1556</NumeroCuenta>
+        <Saldo>42927.0000</Saldo>
+      </Cuenta>
+      <Permisos />
+    </Cliente>
+    <Descripcion>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</Descripcion>
+    <Criticidad>Baja</Criticidad>
+    <Fecha>2024-11-07T21:16:57.093</Fecha>
+  </Bitacora>
+</ArrayOfBitacora>

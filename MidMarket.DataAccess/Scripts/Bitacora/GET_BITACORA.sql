@@ -1,1 +1,1 @@
-﻿SELECT Id_Bitacora, Id_Cliente, Descripcion, Criticidad, Fecha FROM Bitacora ORDER BY Fecha DESC
+﻿SELECT TOP 500 Id_Bitacora, Id_Cliente, Descripcion, Criticidad, Fecha FROM Bitacora ORDER BY Fecha DESC
