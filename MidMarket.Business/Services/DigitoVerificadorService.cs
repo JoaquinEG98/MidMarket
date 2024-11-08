@@ -12,13 +12,11 @@ namespace MidMarket.Business.Services
     {
         private readonly ISessionManager _sessionManager;
         private readonly IDigitoVerificadorDAO _digitoVerificadorDataAccess;
-        private readonly IBitacoraService _bitacoraService;
 
         public DigitoVerificadorService()
         {
             _sessionManager = DependencyResolver.Resolve<ISessionManager>();
             _digitoVerificadorDataAccess = DependencyResolver.Resolve<IDigitoVerificadorDAO>();
-            //_bitacoraService = DependencyResolver.Resolve<IBitacoraService>();
         }
 
         private string ObtenerDVVActual(string tabla)
@@ -93,7 +91,7 @@ namespace MidMarket.Business.Services
             return false;
         }
 
-        public bool VerificarInconsistenciaTablas(out List<string> tablas)
+        public bool VerificarInconsistenciaTablas(out List<string> tablas, IBitacoraService bitacoraService)
         {
             tablas = new List<string>();
             var nombresTablas = new[]
@@ -108,6 +106,21 @@ namespace MidMarket.Business.Services
                 if (!ValidarDigitosVerificadores(nombreTabla))
                 {
                     tablas.Add(nombreTabla);
+                }
+            }
+
+            if (tablas.Count > 0)
+            {
+                var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+
+                if (tablas.Count == 1)
+                {
+                    bitacoraService.AltaBitacora($"Se corrompieron registros de las Tablas: {tablas[0]}", Entities.Enums.Criticidad.Alta, clienteLogueado);
+                }
+                else
+                {
+                    string tablasInconsistentes = string.Join(", ", tablas);
+                    bitacoraService.AltaBitacora($"Se corrompieron registros de las Tablas: {tablasInconsistentes}", Entities.Enums.Criticidad.Alta, clienteLogueado);
                 }
             }
 

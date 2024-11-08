@@ -13,16 +13,16 @@
     <Total>88400.0000</Total>
   </ActivosVendidosDTO>
   <ActivosVendidosDTO>
+    <Id>9</Id>
+    <Nombre>BONAR 2024</Nombre>
+    <Cantidad>35</Cantidad>
+    <Total>85000.0000</Total>
+  </ActivosVendidosDTO>
+  <ActivosVendidosDTO>
     <Id>3</Id>
     <Nombre>Pampa Energía</Nombre>
     <Cantidad>5</Cantidad>
     <Total>84000.0000</Total>
-  </ActivosVendidosDTO>
-  <ActivosVendidosDTO>
-    <Id>9</Id>
-    <Nombre>BONAR 2024</Nombre>
-    <Cantidad>31</Cantidad>
-    <Total>75000.0000</Total>
   </ActivosVendidosDTO>
   <ActivosVendidosDTO>
     <Id>1</Id>

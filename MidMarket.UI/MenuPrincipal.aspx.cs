@@ -28,6 +28,7 @@ namespace MidMarket.UI
         private readonly ICompraService _compraService;
         private readonly IDigitoVerificadorService _digitoVerificadorService;
         private readonly ITraduccionService _traduccionService;
+        private readonly IBitacoraService _bitacoraService;
 
         public _Default()
         {
@@ -36,6 +37,7 @@ namespace MidMarket.UI
             _compraService = Global.Container.Resolve<ICompraService>();
             _digitoVerificadorService = Global.Container.Resolve<IDigitoVerificadorService>();
             _traduccionService = Global.Container.Resolve<ITraduccionService>();
+            _bitacoraService = Global.Container.Resolve<IBitacoraService>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -73,7 +75,7 @@ namespace MidMarket.UI
         {
             var tablas = new List<string>();
 
-            bool consistencia = _digitoVerificadorService.VerificarInconsistenciaTablas(out tablas);
+            bool consistencia = _digitoVerificadorService.VerificarInconsistenciaTablas(out tablas, _bitacoraService);
             bool esWebmaster = false;
 
             if (!consistencia)

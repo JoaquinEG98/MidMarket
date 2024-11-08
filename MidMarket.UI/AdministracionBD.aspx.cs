@@ -130,7 +130,7 @@ namespace MidMarket.UI
         private void CargarDV()
         {
             var tablas = new List<string>();
-            bool consistencia = _digitoVerificadorService.VerificarInconsistenciaTablas(out tablas);
+            bool consistencia = _digitoVerificadorService.VerificarInconsistenciaTablas(out tablas, _bitacoraService);
             var idioma = _sessionManager.Get<IIdioma>("Idioma");
 
             if (!consistencia)
