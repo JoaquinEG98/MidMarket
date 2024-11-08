@@ -6,6 +6,7 @@ using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using Unity;
 
 namespace MidMarket.UI
@@ -28,6 +29,7 @@ namespace MidMarket.UI
         protected void Page_Load(object sender, EventArgs e)
         {
             var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
 
             if (clienteLogueado == null || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.AltaFamilia))
                 Response.Redirect("Default.aspx");
@@ -35,6 +37,10 @@ namespace MidMarket.UI
             try
             {
                 Patentes = _permisoService.GetPatentes();
+            }
+            catch (SqlException)
+            {
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
             }
             catch (Exception ex)
             {
@@ -44,10 +50,10 @@ namespace MidMarket.UI
 
         protected void btnCrear_Click(object sender, EventArgs e)
         {
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             try
             {
-                var idioma = _sessionManager.Get<IIdioma>("Idioma");
-
                 string nombreFamilia = Request.Form["nombreFamilia"];
                 string patentesSeleccionadas = Request.Form["patentesSeleccionadas"];
 
@@ -64,11 +70,14 @@ namespace MidMarket.UI
                     AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_09")} {nombreFamilia}.");
                 }
             }
+            catch (SqlException)
+            {
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
+            }
             catch (Exception ex)
             {
                 AlertHelper.MostrarModal(this, $"{ex.Message}.");
             }
-
         }
 
         private void GuardarFamilia(string nombreFamilia, string[] patentesIds)

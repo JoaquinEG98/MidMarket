@@ -6,6 +6,7 @@ using MidMarket.UI.Helpers;
 using MidMarket.UI.WebServices;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Web.UI.WebControls;
 using Unity;
 
@@ -39,9 +40,15 @@ namespace MidMarket.UI
                 if (clienteLogueado == null || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.VenderAccion) || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.VenderBono))
                     Response.Redirect("Default.aspx");
 
+                var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
                 try
                 {
                     CargarComprasConsolidadas();
+                }
+                catch (SqlException)
+                {
+                    AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
                 }
                 catch (Exception ex)
                 {
@@ -53,6 +60,8 @@ namespace MidMarket.UI
 
         protected void VenderActivo_Click(object sender, EventArgs e)
         {
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             try
             {
                 var button = (Button)sender;
@@ -74,11 +83,13 @@ namespace MidMarket.UI
                 _ventaService.RealizarVenta(venta);
                 CargarComprasConsolidadas();
 
-                var idioma = _sessionManager.Get<IIdioma>("Idioma");
-
                 AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_32")}");
 
                 CalcularVentasWebService();
+            }
+            catch (SqlException)
+            {
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
             }
             catch (Exception ex)
             {

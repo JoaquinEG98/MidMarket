@@ -6,6 +6,7 @@ using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web.UI.WebControls;
 using Unity;
@@ -36,6 +37,7 @@ namespace MidMarket.UI
         protected void Page_Load(object sender, EventArgs e)
         {
             var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
 
             if (clienteLogueado == null || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.AsignarFamilias))
                 Response.Redirect("Default.aspx");
@@ -65,6 +67,10 @@ namespace MidMarket.UI
                     }
                 }
             }
+            catch (SqlException)
+            {
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
+            }
             catch (Exception ex)
             {
                 AlertHelper.MostrarModal(this, $"{ex.Message}.");
@@ -83,10 +89,10 @@ namespace MidMarket.UI
 
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             try
             {
-                var idioma = _sessionManager.Get<IIdioma>("Idioma");
-
                 var familiasSeleccionadas = Request.Form["familiasSeleccionadas"];
                 var familiasAsignadas = Request.Form["familiasAsignadas"];
 
@@ -104,6 +110,10 @@ namespace MidMarket.UI
                 CargarFamilias(ClienteSeleccionado.Id);
 
                 AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_11")}");
+            }
+            catch (SqlException)
+            {
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
             }
             catch (Exception ex)
             {

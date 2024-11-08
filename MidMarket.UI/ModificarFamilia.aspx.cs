@@ -6,6 +6,7 @@ using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web.UI.WebControls;
 using Unity;
@@ -37,10 +38,16 @@ namespace MidMarket.UI
             if (clienteLogueado == null || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.ModificarFamilia))
                 Response.Redirect("Default.aspx");
 
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             try
             {
                 _familiaId = int.Parse(Request.QueryString["id"]);
                 CargarFamiliasPatentes();
+            }
+            catch (SqlException)
+            {
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
             }
             catch (Exception ex)
             {
@@ -51,10 +58,10 @@ namespace MidMarket.UI
 
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             try
             {
-                var idioma = _sessionManager.Get<IIdioma>("Idioma");
-
                 string nombreFamilia = Request.Form["nombreFamilia"];
                 string patentesSeleccionadas = Request.Form["patentesSeleccionadas"];
 
@@ -71,6 +78,10 @@ namespace MidMarket.UI
                 {
                     AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_30")} {nombreFamilia}");
                 }
+            }
+            catch (SqlException)
+            {
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
             }
             catch (Exception ex)
             {

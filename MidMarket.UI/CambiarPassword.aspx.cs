@@ -3,6 +3,7 @@ using MidMarket.Entities;
 using MidMarket.Entities.Observer;
 using MidMarket.UI.Helpers;
 using System;
+using System.Data.SqlClient;
 using Unity;
 
 namespace MidMarket.UI
@@ -27,12 +28,13 @@ namespace MidMarket.UI
 
         protected void btnCambiar_Click(object sender, EventArgs e)
         {
+
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             try
             {
                 if (!Page.IsValid)
                     return;
-
-                var idioma = _sessionManager.Get<IIdioma>("Idioma");
 
                 var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
 
@@ -45,9 +47,13 @@ namespace MidMarket.UI
                 _usuarioService.CambiarPassword(cliente, ValidarPasswordControl.PasswordValue, confirmarPassword.Value);
                 AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_15")}");
             }
+            catch (SqlException)
+            {
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
+            }
             catch (Exception ex)
             {
-                AlertHelper.MostrarModal(this, $"{ex.Message}");
+                AlertHelper.MostrarModal(this, $"{ex.Message}.");
             }
         }
     }

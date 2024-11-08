@@ -1,10 +1,12 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
+using MidMarket.Entities.Observer;
 using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using Unity;
 
@@ -14,6 +16,7 @@ namespace MidMarket.UI
     {
         private readonly ICompraService _compraService;
         private readonly ISessionManager _sessionManager;
+        private readonly ITraduccionService _traduccionService;
 
         public decimal PesosDisponibles { get; set; }
         public List<TransaccionCompra> Compras { get; set; }
@@ -25,6 +28,7 @@ namespace MidMarket.UI
         {
             _compraService = Global.Container.Resolve<ICompraService>();
             _sessionManager = Global.Container.Resolve<ISessionManager>();
+            _traduccionService = Global.Container.Resolve<ITraduccionService>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -34,11 +38,17 @@ namespace MidMarket.UI
             if (clienteLogueado == null || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.VisualizarPortafolio))
                 Response.Redirect("Default.aspx");
 
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             try
             {
                 PesosDisponibles = clienteLogueado.Cuenta.Saldo;
                 CargarCompras();
                 CargarGraficos();
+            }
+            catch (SqlException)
+            {
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
             }
             catch (Exception ex)
             {

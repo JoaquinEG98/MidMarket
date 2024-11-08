@@ -4,6 +4,7 @@ using MidMarket.Entities.Observer;
 using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
 using System;
+using System.Data.SqlClient;
 using System.Linq;
 using Unity;
 
@@ -32,10 +33,16 @@ namespace MidMarket.UI
             if (clienteLogueado == null || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.ModificacionUsuario))
                 Response.Redirect("Default.aspx");
 
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             try
             {
                 _usuarioId = int.Parse(Request.QueryString["id"]);
                 CargarUsuario();
+            }
+            catch (SqlException)
+            {
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
             }
             catch (Exception ex)
             {
@@ -55,12 +62,12 @@ namespace MidMarket.UI
 
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             try
             {
                 if (!Page.IsValid)
                     return;
-
-                var idioma = _sessionManager.Get<IIdioma>("Idioma");
 
                 string emailUsuario = Request.Form["emailUsuario"];
                 string razonSocialUsuario = Request.Form["razonSocialUsuario"];
@@ -69,6 +76,10 @@ namespace MidMarket.UI
                 GuardarUsuario(emailUsuario, razonSocialUsuario, cuitUsuario);
                 AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_31")} {emailUsuario}");
                 CargarUsuario();
+            }
+            catch (SqlException)
+            {
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
             }
             catch (Exception ex)
             {

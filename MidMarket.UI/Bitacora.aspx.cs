@@ -6,6 +6,7 @@ using MidMarket.UI.Helpers;
 using MidMarket.XML;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web.UI.WebControls;
 using Unity;
@@ -70,21 +71,36 @@ namespace MidMarket.UI
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
 
-            if (clienteLogueado == null || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.VisualizarBitacora))
-                Response.Redirect("Default.aspx");
-
-            if (!IsPostBack)
+            try
             {
-                CargarClientes();
-                PaginaActual = 0;
-                ConsultarBitacora();
+                var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+
+                if (clienteLogueado == null || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.VisualizarBitacora))
+                    Response.Redirect("Default.aspx");
+
+                if (!IsPostBack)
+                {
+                    CargarClientes();
+                    PaginaActual = 0;
+                    ConsultarBitacora();
+                }
+            }
+            catch (SqlException)
+            {
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
+            }
+            catch (Exception ex)
+            {
+                AlertHelper.MostrarModal(this, $"{ex.Message}.");
             }
         }
 
         private void CargarClientes()
         {
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             try
             {
                 var clientes = _usuarioService.GetClientes();
@@ -96,6 +112,10 @@ namespace MidMarket.UI
                     ddlUsuario.Items.Add(new ListItem(cliente.RazonSocial, cliente.RazonSocial));
                 }
             }
+            catch (SqlException)
+            {
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
+            }
             catch (Exception ex)
             {
                 AlertHelper.MostrarModal(this, $"{ex.Message}.");
@@ -104,6 +124,8 @@ namespace MidMarket.UI
 
         private void ConsultarBitacora()
         {
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             try
             {
                 List<Entities.Bitacora> todosMovimientos = new List<Entities.Bitacora>();
@@ -147,9 +169,12 @@ namespace MidMarket.UI
 
                 DataBind();
             }
-            catch (Exception ex)
+            catch (SqlException)
             {
-                var idioma = _sessionManager.Get<IIdioma>("Idioma");
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
+            }
+            catch (Exception)
+            {
                 AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
                 Response.Redirect("Default.aspx");
             }
@@ -175,6 +200,8 @@ namespace MidMarket.UI
 
         protected void ConsultarBitacoraFiltro(object sender, EventArgs e)
         {
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             try
             {
                 ValidarFiltros();
@@ -182,6 +209,10 @@ namespace MidMarket.UI
 
                 _filtrado = true;
                 ConsultarBitacora();
+            }
+            catch (SqlException)
+            {
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
             }
             catch (Exception ex)
             {
@@ -196,7 +227,6 @@ namespace MidMarket.UI
 
                 DataBind();
             }
-
         }
 
         protected void ValidarFiltros()
@@ -213,15 +243,20 @@ namespace MidMarket.UI
 
         protected void ExportarXML_Click(object sender, EventArgs e)
         {
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
+
             try
             {
-                var idioma = _sessionManager.Get<IIdioma>("Idioma");
-
                 BitacoraXML.GenerarXMLBitacora(ObtenerMovimientosExportar());
 
                 AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_13")}");
 
                 ConsultarBitacora();
+            }
+            catch (SqlException)
+            {
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
             }
             catch (Exception ex)
             {
@@ -231,15 +266,19 @@ namespace MidMarket.UI
 
         protected void ExportarExcel_Click(object sender, EventArgs e)
         {
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             try
             {
-                var idioma = _sessionManager.Get<IIdioma>("Idioma");
-
                 BitacoraXML.GenerarExcelBitacora(ObtenerMovimientosExportar());
 
                 AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_14")}");
 
                 ConsultarBitacora();
+            }
+            catch (SqlException)
+            {
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
             }
             catch (Exception ex)
             {
@@ -249,10 +288,10 @@ namespace MidMarket.UI
 
         protected void LimpiarBitacora_Click(object sender, EventArgs e)
         {
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             try
             {
-                var idioma = _sessionManager.Get<IIdioma>("Idioma");
-
                 var limpiarBitacora = _bitacoraService.LimpiarBitacora();
 
                 BitacoraXML.GenerarXMLLimpiarBitacora(limpiarBitacora);
@@ -261,6 +300,10 @@ namespace MidMarket.UI
                 AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_41")}");
 
                 ConsultarBitacora();
+            }
+            catch (SqlException)
+            {
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
             }
             catch (Exception ex)
             {

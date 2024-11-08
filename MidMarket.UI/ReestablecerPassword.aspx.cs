@@ -6,6 +6,7 @@ using MidMarket.UI.Helpers;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -32,13 +33,27 @@ namespace MidMarket.UI
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            TraducirPagina();
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
 
-            string token = Request.QueryString["token"];
-            if (string.IsNullOrEmpty(token))
-                MostrarFormularioSolicitud();
-            else
-                ProcesarToken(token);
+            try
+            {
+                TraducirPagina();
+
+                string token = Request.QueryString["token"];
+                if (string.IsNullOrEmpty(token))
+                    MostrarFormularioSolicitud();
+                else
+                    ProcesarToken(token);
+            }
+            catch (SqlException)
+            {
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
+            }
+            catch (Exception ex)
+            {
+                AlertHelper.MostrarModal(this, $"{ex.Message}");
+                Response.Redirect("Default.aspx");
+            }
         }
 
         private void TraducirPagina()

@@ -4,6 +4,7 @@ using MidMarket.Entities.Observer;
 using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
 using System;
+using System.Data.SqlClient;
 using System.Linq;
 using Unity;
 
@@ -32,6 +33,8 @@ namespace MidMarket.UI
             if (clienteLogueado == null || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.ModificarAccion))
                 Response.Redirect("Default.aspx");
 
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             if (!IsPostBack)
             {
                 try
@@ -39,6 +42,10 @@ namespace MidMarket.UI
                     _accionId = int.Parse(Request.QueryString["id"]);
                     ViewState["AccionId"] = _accionId;
                     CargarAccion();
+                }
+                catch (SqlException)
+                {
+                    AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
                 }
                 catch (Exception ex)
                 {
@@ -68,6 +75,10 @@ namespace MidMarket.UI
                 GuardarAccion(nombreAccion, simboloAccion, precioAccion);
 
                 AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_25")} {nombreAccion}");
+            }
+            catch (SqlException)
+            {
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
             }
             catch (Exception ex)
             {

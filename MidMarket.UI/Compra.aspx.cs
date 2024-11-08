@@ -4,6 +4,7 @@ using MidMarket.Entities.Observer;
 using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
 using System;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web.UI.WebControls;
 using Unity;
@@ -28,6 +29,7 @@ namespace MidMarket.UI
         protected void Page_Load(object sender, EventArgs e)
         {
             var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
 
             if (clienteLogueado == null || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.ComprarAccion) || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.ComprarBono))
                 Response.Redirect("Default.aspx");
@@ -45,6 +47,10 @@ namespace MidMarket.UI
                     rptBonos.DataSource = bonos;
                     rptBonos.DataBind();
                 }
+                catch (SqlException)
+                {
+                    AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
+                }
                 catch (Exception ex)
                 {
                     AlertHelper.MostrarModal(this, $"{ex.Message}.");
@@ -54,10 +60,11 @@ namespace MidMarket.UI
 
         protected void AgregarAccionAlCarrito_Click(object sender, EventArgs e)
         {
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
+
             try
             {
-                var idioma = _sessionManager.Get<IIdioma>("Idioma");
-
                 var button = (Button)sender;
                 int accionId = int.Parse(button.CommandArgument);
 
@@ -69,6 +76,10 @@ namespace MidMarket.UI
                     AlertHelper.MostrarToast(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_19")} {accion.Nombre}");
                 }
             }
+            catch (SqlException)
+            {
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
+            }
             catch (Exception ex)
             {
                 AlertHelper.MostrarModal(this, $"{ex.Message}");
@@ -77,10 +88,10 @@ namespace MidMarket.UI
 
         protected void AgregarBonoAlCarrito_Click(object sender, EventArgs e)
         {
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             try
             {
-                var idioma = _sessionManager.Get<IIdioma>("Idioma");
-
                 var button = (Button)sender;
                 int bonoId = int.Parse(button.CommandArgument);
 
@@ -91,6 +102,10 @@ namespace MidMarket.UI
                     _carritoService.InsertarCarrito(bono);
                     AlertHelper.MostrarToast(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_20")} {bono.Nombre}");
                 }
+            }
+            catch (SqlException)
+            {
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
             }
             catch (Exception ex)
             {

@@ -4,6 +4,7 @@ using MidMarket.Entities.Observer;
 using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
 using System;
+using System.Data.SqlClient;
 using System.Linq;
 using Unity;
 
@@ -32,6 +33,8 @@ namespace MidMarket.UI
             if (clienteLogueado == null || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.ModificarBono))
                 Response.Redirect("Default.aspx");
 
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             if (!IsPostBack)
             {
                 try
@@ -39,6 +42,10 @@ namespace MidMarket.UI
                     _bonoId = int.Parse(Request.QueryString["id"]);
                     ViewState["BonoId"] = _bonoId;
                     CargarBono();
+                }
+                catch (SqlException)
+                {
+                    AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
                 }
                 catch (Exception ex)
                 {
@@ -57,16 +64,20 @@ namespace MidMarket.UI
             if (!Page.IsValid)
                 return;
 
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             try
             {
-                var idioma = _sessionManager.Get<IIdioma>("Idioma");
-
                 string nombreBono = ValidarBonos.Nombre;
                 decimal valorNominal = decimal.Parse(ValidarBonos.ValorNominal);
                 float tasaInteres = float.Parse(ValidarBonos.TasaInteres);
 
                 GuardarBono(nombreBono, valorNominal, tasaInteres);
                 AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_27")} {nombreBono}");
+            }
+            catch (SqlException)
+            {
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
             }
             catch (Exception ex)
             {

@@ -3,6 +3,7 @@ using MidMarket.Entities;
 using MidMarket.Entities.Observer;
 using MidMarket.UI.Helpers;
 using System;
+using System.Data.SqlClient;
 using Unity;
 
 namespace MidMarket.UI
@@ -35,6 +36,8 @@ namespace MidMarket.UI
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             try
             {
                 Cliente cliente = _usuarioService.Login(txtEmail.Value, txtPassword.Value);
@@ -43,6 +46,10 @@ namespace MidMarket.UI
 
                 Response.Redirect("MenuPrincipal.aspx", false);
                 Context.ApplicationInstance.CompleteRequest();
+            }
+            catch (SqlException)
+            {
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
             }
             catch (Exception ex)
             {

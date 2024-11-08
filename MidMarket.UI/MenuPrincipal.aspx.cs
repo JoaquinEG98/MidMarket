@@ -5,6 +5,7 @@ using MidMarket.UI.Helpers;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web.UI;
 using Unity;
@@ -64,7 +65,11 @@ namespace MidMarket.UI
 
                 LlenarFamiliaUsuario();
             }
-            catch (Exception ex)
+            catch (SqlException)
+            {
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
+            }
+            catch (Exception)
             {
                 AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_23")}", true);
                 _sessionManager.AbandonSession();

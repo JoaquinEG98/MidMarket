@@ -4,6 +4,7 @@ using MidMarket.Entities.Observer;
 using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
 using System;
+using System.Data.SqlClient;
 using Unity;
 
 namespace MidMarket.UI
@@ -34,10 +35,10 @@ namespace MidMarket.UI
             if (!Page.IsValid)
                 return;
 
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             try
             {
-                var idioma = _sessionManager.Get<IIdioma>("Idioma");
-
                 Bono bono = new Bono
                 {
                     Nombre = ValidarBonos.Nombre,
@@ -48,6 +49,10 @@ namespace MidMarket.UI
 
                 AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_07")}");
                 ValidarBonos.LimpiarCampos();
+            }
+            catch (SqlException)
+            {
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
             }
             catch (Exception ex)
             {

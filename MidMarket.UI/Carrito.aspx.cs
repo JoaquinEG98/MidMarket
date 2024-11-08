@@ -5,6 +5,7 @@ using MidMarket.UI.Helpers;
 using MidMarket.UI.WebServices;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Web.UI.WebControls;
 using Unity;
 
@@ -54,6 +55,8 @@ namespace MidMarket.UI
 
         private void CargarCarrito()
         {
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             try
             {
                 var cliente = _sessionManager.Get<Cliente>("Usuario");
@@ -82,6 +85,10 @@ namespace MidMarket.UI
                     rptCarrito.DataBind();
                 }
             }
+            catch (SqlException)
+            {
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
+            }
             catch (Exception ex)
             {
                 AlertHelper.MostrarModal(this, $"{ex.Message}.");
@@ -90,6 +97,8 @@ namespace MidMarket.UI
 
         protected void rptCarrito_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             try
             {
                 if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
@@ -113,6 +122,10 @@ namespace MidMarket.UI
                         }
                     }
                 }
+            }
+            catch (SqlException)
+            {
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
             }
             catch (Exception ex)
             {
@@ -163,10 +176,11 @@ namespace MidMarket.UI
 
         protected void btnConfirmarCompra_Click(object sender, EventArgs e)
         {
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
             try
             {
                 var cliente = _sessionManager.Get<Cliente>("Usuario");
-                var idioma = _sessionManager.Get<IIdioma>("Idioma");
 
                 if (MiCarrito == null || MiCarrito.Count == 0)
                 {
@@ -185,6 +199,10 @@ namespace MidMarket.UI
                 AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_18")}");
 
                 CalcularComprasWebService();
+            }
+            catch (SqlException)
+            {
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
             }
             catch (Exception ex)
             {

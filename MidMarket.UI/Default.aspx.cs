@@ -3,6 +3,7 @@ using MidMarket.Entities;
 using MidMarket.Entities.Observer;
 using MidMarket.UI.Helpers;
 using System;
+using System.Data.SqlClient;
 using System.Linq;
 using Unity;
 
@@ -21,32 +22,45 @@ namespace MidMarket.UI
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                var cliente = _sessionManager.Get<Cliente>("Usuario");
+            var idioma = _sessionManager.Get<IIdioma>("Idioma");
 
-                if (cliente != null)
+            try
+            {
+                if (!IsPostBack)
                 {
-                    Response.Redirect("MenuPrincipal.aspx");
+                    var cliente = _sessionManager.Get<Cliente>("Usuario");
+
+                    if (cliente != null)
+                    {
+                        Response.Redirect("MenuPrincipal.aspx");
+                    }
+                    else
+                    {
+                        CargarIdiomas();
+                        SuscribirClienteAIdioma();
+                    }
                 }
                 else
                 {
-                    CargarIdiomas();
-                    SuscribirClienteAIdioma();
+                    string eventTarget = Request["__EVENTTARGET"];
+                    string eventArgument = Request["__EVENTARGUMENT"];
+
+                    if (eventTarget == "ChangeLanguage" && int.TryParse(eventArgument, out int idiomaId))
+                    {
+                        CambiarIdioma(idiomaId);
+                    }
                 }
+
+                VerificarIdioma();
             }
-            else
+            catch (SqlException)
             {
-                string eventTarget = Request["__EVENTTARGET"];
-                string eventArgument = Request["__EVENTARGUMENT"];
-
-                if (eventTarget == "ChangeLanguage" && int.TryParse(eventArgument, out int idiomaId))
-                {
-                    CambiarIdioma(idiomaId);
-                }
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
             }
-
-            VerificarIdioma();
+            catch (Exception ex)
+            {
+                AlertHelper.MostrarModal(this, $"{ex.Message}");
+            }
         }
 
         private void CargarIdiomas()
