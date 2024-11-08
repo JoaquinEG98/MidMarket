@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-16"?>
 <ArrayOfActivosVendidosDTO xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ActivosVendidosDTO>
+    <Id>12</Id>
+    <Nombre>BPA7D</Nombre>
+    <Cantidad>27</Cantidad>
+    <Total>2600.0000</Total>
+  </ActivosVendidosDTO>
+  <ActivosVendidosDTO>
     <Id>9</Id>
     <Nombre>BONAR 2024</Nombre>
-    <Cantidad>23</Cantidad>
-    <Total>55000.0000</Total>
+    <Cantidad>25</Cantidad>
+    <Total>60000.0000</Total>
   </ActivosVendidosDTO>
   <ActivosVendidosDTO>
     <Id>11</Id>
@@ -23,11 +29,5 @@
     <Nombre>Banco Galicia</Nombre>
     <Cantidad>9</Cantidad>
     <Total>98000.0000</Total>
-  </ActivosVendidosDTO>
-  <ActivosVendidosDTO>
-    <Id>6</Id>
-    <Nombre>Cresud</Nombre>
-    <Cantidad>9</Cantidad>
-    <Total>35550.0000</Total>
   </ActivosVendidosDTO>
 </ArrayOfActivosVendidosDTO>

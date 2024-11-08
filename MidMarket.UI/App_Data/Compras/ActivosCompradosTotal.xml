@@ -13,21 +13,21 @@
     <Total>314500.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
+    <Id>14</Id>
+    <Nombre>BPJ25</Nombre>
+    <Cantidad>3</Cantidad>
+    <Total>265200.0000</Total>
+  </ActivosCompradosDTO>
+  <ActivosCompradosDTO>
     <Id>3</Id>
     <Nombre>Pampa Energía</Nombre>
-    <Cantidad>13</Cantidad>
-    <Total>218400.0000</Total>
+    <Cantidad>15</Cantidad>
+    <Total>252000.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
     <Id>9</Id>
     <Nombre>BONAR 2024</Nombre>
-    <Cantidad>132</Cantidad>
-    <Total>207000.0000</Total>
-  </ActivosCompradosDTO>
-  <ActivosCompradosDTO>
-    <Id>14</Id>
-    <Nombre>BPJ25</Nombre>
-    <Cantidad>2</Cantidad>
-    <Total>176800.0000</Total>
+    <Cantidad>135</Cantidad>
+    <Total>214500.0000</Total>
   </ActivosCompradosDTO>
 </ArrayOfActivosCompradosDTO>
