@@ -52,6 +52,13 @@ namespace MidMarket.Business.Services
                 _digitoVerificadorService.ActualizarDVV("Cliente");
                 _digitoVerificadorService.RecalcularDigitosCuenta(this);
 
+                cliente.Id = id;
+                var nuevasFamilias = _permisoService.GetFamilias().Where(x => x.Nombre == "Cliente").ToList();
+                cliente.Permisos.AddRange(nuevasFamilias);
+                _permisoService.GuardarPermiso(cliente);
+
+                _digitoVerificadorService.ActualizarDVV("UsuarioPermiso");
+
                 scope.Complete();
 
                 return id;

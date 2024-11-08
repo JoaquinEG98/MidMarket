@@ -3,14 +3,14 @@
   <ActivosCompradosDTO>
     <Id>9</Id>
     <Nombre>BONAR 2024</Nombre>
-    <Cantidad>144</Cantidad>
-    <Total>237000.0000</Total>
+    <Cantidad>132</Cantidad>
+    <Total>207000.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
-    <Id>13</Id>
-    <Nombre>BPJ5D</Nombre>
-    <Cantidad>96</Cantidad>
-    <Total>9600.0000</Total>
+    <Id>12</Id>
+    <Nombre>BPA7D</Nombre>
+    <Cantidad>70</Cantidad>
+    <Total>7000.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
     <Id>8</Id>
@@ -19,15 +19,15 @@
     <Total>69.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
-    <Id>10</Id>
-    <Nombre>BPY26</Nombre>
-    <Cantidad>69</Cantidad>
-    <Total>6900.0000</Total>
+    <Id>13</Id>
+    <Nombre>BPJ5D</Nombre>
+    <Cantidad>56</Cantidad>
+    <Total>5600.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
-    <Id>12</Id>
-    <Nombre>BPA7D</Nombre>
-    <Cantidad>45</Cantidad>
-    <Total>4500.0000</Total>
+    <Id>10</Id>
+    <Nombre>BPY26</Nombre>
+    <Cantidad>29</Cantidad>
+    <Total>2900.0000</Total>
   </ActivosCompradosDTO>
 </ArrayOfActivosCompradosDTO>
