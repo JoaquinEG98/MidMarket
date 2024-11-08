@@ -46,11 +46,8 @@
                 <p><strong data-etiqueta="modal_NumeroCuenta">- Número de Cuenta:</strong> <span id="detalleNumeroCuenta"></span></p>
                 <p><strong data-etiqueta="modal_Saldo">- Saldo:</strong> $<span id="detalleSaldo"></span></p>
                 <div class="seguridad-container">
-                    <p><strong data-etiqueta="modal_Familia">- Familia:</strong> <span id="detalleFamilia"></span></p>
-                    <p>
-                        <strong data-etiqueta="modal_PatentesAsignadas">- Patentes Asignadas:</strong>
-                        <ul id="detallePatentes"></ul>
-                    </p>
+                    <p><strong data-etiqueta="modal_Familias">- Familias y Patentes:</strong></p>
+                    <div id="detalleFamilias"></div>
                 </div>
             </div>
         </div>
@@ -72,15 +69,52 @@
             document.getElementById('detalleCuit').textContent = cliente.CUIT;
             document.getElementById('detalleNumeroCuenta').textContent = cliente.Cuenta.NumeroCuenta;
             document.getElementById('detalleSaldo').textContent = cliente.Cuenta.Saldo;
-            document.getElementById('detalleFamilia').textContent = cliente.Permisos[0].Nombre;
 
-            var listaPatentes = document.getElementById('detallePatentes');
-            listaPatentes.innerHTML = '';
-            cliente.Permisos[0].Hijos.forEach(function (patente) {
-                var li = document.createElement('li');
-                li.textContent = patente.Nombre;
-                listaPatentes.appendChild(li);
+            var detalleFamilias = document.getElementById('detalleFamilias');
+            detalleFamilias.innerHTML = '';
+
+            cliente.Permisos.forEach(function (familia) {
+                if (familia.Permiso === 0) {
+                    var familiaContainer = document.createElement('div');
+                    familiaContainer.className = 'familia-container';
+
+                    var familiaTitle = document.createElement('p');
+                    familiaTitle.innerHTML = `<strong>${familia.Nombre}</strong>`;
+                    familiaContainer.appendChild(familiaTitle);
+
+                    var patentesList = document.createElement('ul');
+                    familia.Hijos.forEach(function (patente) {
+                        if (patente.Permiso !== 0) {
+                            var patenteItem = document.createElement('li');
+                            patenteItem.textContent = patente.Nombre;
+                            patentesList.appendChild(patenteItem);
+                        }
+                    });
+
+                    familiaContainer.appendChild(patentesList);
+                    detalleFamilias.appendChild(familiaContainer);
+                }
             });
+
+            var permisosSueltos = cliente.Permisos.filter(p => p.Permiso !== 0);
+            if (permisosSueltos.length > 0) {
+                var sueltosContainer = document.createElement('div');
+                sueltosContainer.className = 'familia-container';
+
+                var sueltosTitle = document.createElement('p');
+                sueltosTitle.innerHTML = `<strong>Patentes Sueltas</strong>`;
+                sueltosContainer.appendChild(sueltosTitle);
+
+                var sueltosList = document.createElement('ul');
+                permisosSueltos.forEach(function (patente) {
+                    var patenteItem = document.createElement('li');
+                    patenteItem.textContent = patente.Nombre;
+                    sueltosList.appendChild(patenteItem);
+                });
+
+                sueltosContainer.appendChild(sueltosList);
+                detalleFamilias.appendChild(sueltosContainer);
+            }
 
             document.getElementById('usuariosModal').style.display = 'block';
         }
