@@ -3100,5 +3100,17 @@
     "IdiomaId": 2,
     "Etiqueta": "validate_EmailFormatoInvalido",
     "Texto": "Invalid email format"
+  },
+  {
+    "Id": 556,
+    "IdiomaId": 1,
+    "Etiqueta": "btn_LimpiarBitacora",
+    "Texto": "Limpiar"
+  },
+  {
+    "Id": 557,
+    "IdiomaId": 2,
+    "Etiqueta": "btn_LimpiarBitacora",
+    "Texto": "Clean"
   }
 ]

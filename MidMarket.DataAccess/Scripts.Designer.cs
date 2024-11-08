@@ -223,8 +223,8 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to INSERT INTO Bitacora (Id_Cliente, Descripcion, Criticidad, Fecha, DVH) 
-        ///OUTPUT inserted.Id_Bitacora VALUES (@ClienteId, @Descripcion, @Criticidad, @Fecha, @DVH).
+        ///   Looks up a localized string similar to INSERT INTO Bitacora (Id_Cliente, Descripcion, Criticidad, Fecha, Baja, DVH) 
+        ///OUTPUT inserted.Id_Bitacora VALUES (@ClienteId, @Descripcion, @Criticidad, @Fecha, 0, @DVH).
         /// </summary>
         internal static string ALTA_BITACORA {
             get {
@@ -336,7 +336,7 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SELECT Id_Bitacora, Id_Cliente, Descripcion, Criticidad, Fecha 
+        ///   Looks up a localized string similar to SELECT Id_Bitacora, Id_Cliente, Descripcion, Criticidad, Fecha, Baja
         ///FROM Bitacora.
         /// </summary>
         internal static string GET_ALL_BITACORA {
@@ -436,7 +436,10 @@ namespace MidMarket.DataAccess {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SELECT Id_Bitacora, Id_Cliente, Descripcion, Criticidad, Fecha FROM Bitacora ORDER BY Fecha DESC.
+        ///   Looks up a localized string similar to SELECT TOP 500 Id_Bitacora, Id_Cliente, Descripcion, Criticidad, Fecha, Baja 
+        ///FROM Bitacora 
+        ///WHERE Baja = 0
+        ///ORDER BY Fecha DESC.
         /// </summary>
         internal static string GET_BITACORA {
             get {
@@ -781,15 +784,15 @@ namespace MidMarket.DataAccess {
         ///   Looks up a localized string similar to IF EXISTS (SELECT 1 FROM Cliente_Activo WHERE Id_Cliente = @Id_Cliente AND Id_Activo = @Id_Activo)
         ///BEGIN
         ///    UPDATE Cliente_Activo
-        ///    SET Cantidad = Cantidad + @Cantidad, DVH = @DVH
+        ///    SET Cantidad = Cantidad + @Cantidad
         ///    OUTPUT inserted.Id_Cliente_Activo
         ///    WHERE Id_Cliente = @Id_Cliente AND Id_Activo = @Id_Activo;
         ///END
         ///ELSE
         ///BEGIN
-        ///    INSERT INTO Cliente_Activo (Id_Cliente, Id_Activo, Cantidad, DVH)
+        ///    INSERT INTO Cliente_Activo (Id_Cliente, Id_Activo, Cantidad)
         ///    OUTPUT inserted.Id_Cliente_Activo
-        ///    VALUES (@Id_Cliente, @Id_Activo, @Cantidad, @DVH);
+        ///    VALUES (@Id_Cliente, @Id_Activo, @Cantidad);
         ///END
         ///.
         /// </summary>
@@ -859,6 +862,27 @@ namespace MidMarket.DataAccess {
         internal static string INSERTAR_TRANSACCION_VENTA {
             get {
                 return ResourceManager.GetString("INSERTAR_TRANSACCION_VENTA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT TOP 100 Id_Bitacora, Id_Cliente, Descripcion, Criticidad, Fecha
+        ///INTO #Ultimos100
+        ///FROM Bitacora
+        ///WHERE Baja = 0
+        ///ORDER BY Id_Bitacora;
+        ///
+        ///UPDATE Bitacora
+        ///SET Baja = 1
+        ///WHERE Id_Bitacora IN (SELECT Id_Bitacora FROM #Ultimos100);
+        ///
+        ///SELECT * FROM #Ultimos100;
+        ///
+        ///DROP TABLE #Ultimos100;.
+        /// </summary>
+        internal static string LIMPIAR_BITACORA {
+            get {
+                return ResourceManager.GetString("LIMPIAR_BITACORA", resourceCulture);
             }
         }
         

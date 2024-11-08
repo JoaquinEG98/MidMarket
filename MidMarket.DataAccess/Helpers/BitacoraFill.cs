@@ -29,6 +29,10 @@ namespace MidMarket.DataAccess.Helpers
 
             if (dr.Table.Columns.Contains("Fecha") && !Convert.IsDBNull(dr["Fecha"]))
                 bitacora.Fecha = Convert.ToDateTime(dr["Fecha"]);
+
+            if (dr.Table.Columns.Contains("Baja") && !Convert.IsDBNull(dr["Baja"]))
+                bitacora.Baja = Convert.ToBoolean(dr["Baja"]);
+
             return bitacora;
         }
 
@@ -55,6 +59,9 @@ namespace MidMarket.DataAccess.Helpers
 
             if (dr.Table.Columns.Contains("Fecha") && !Convert.IsDBNull(dr["Fecha"]))
                 bitacora.Fecha = Convert.ToDateTime(dr["Fecha"]);
+
+            if (dr.Table.Columns.Contains("Baja") && !Convert.IsDBNull(dr["Baja"]))
+                bitacora.Baja = Convert.ToBoolean(dr["Baja"]);
 
             return bitacora;
         }

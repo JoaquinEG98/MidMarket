@@ -754,5 +754,17 @@
     "IdiomaId": 2,
     "Etiqueta": "MSJ_40",
     "Texto": "Email is already registered"
+  },
+  {
+    "Id": 127,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_41",
+    "Texto": "Se limpió la Bitácora y se exportó a XML y Excel"
+  },
+  {
+    "Id": 126,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_41",
+    "Texto": "The Log was cleaned and exported to XML and Excel"
   }
 ]

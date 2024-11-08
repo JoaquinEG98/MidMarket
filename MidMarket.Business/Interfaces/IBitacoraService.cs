@@ -10,5 +10,6 @@ namespace MidMarket.Business.Interfaces
         int AltaBitacora(string descripcion, Criticidad criticidad, Cliente cliente);
         List<Bitacora> ObtenerBitacora();
         List<BitacoraDTO> GetAllBitacora();
+        List<Bitacora> LimpiarBitacora();
     }
 }

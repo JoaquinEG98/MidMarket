@@ -314,6 +314,7 @@ namespace MidMarket.DataAccess.DAOs
                                 Descripcion = (rows["Descripcion"].ToString()),
                                 Criticidad = (Criticidad)(rows["Criticidad"]),
                                 Fecha = Convert.ToDateTime(rows["Fecha"].ToString()),
+                                Baja = Convert.ToBoolean(rows["Baja"].ToString()),
                                 DVH = (rows["DVH"].ToString()),
                             };
                             bitacora.DVH = DigitoVerificador.GenerarDVH(bitacora);
@@ -686,6 +687,7 @@ namespace MidMarket.DataAccess.DAOs
                                 Descripcion = (rows["Descripcion"].ToString()),
                                 Criticidad = (Criticidad)(rows["Criticidad"]),
                                 Fecha = Convert.ToDateTime(rows["Fecha"].ToString()),
+                                Baja = Convert.ToBoolean(rows["Baja"].ToString()),
                                 DVH = (rows["DVH"].ToString()),
                             };
 

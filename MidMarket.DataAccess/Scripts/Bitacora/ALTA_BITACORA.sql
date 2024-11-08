@@ -1,2 +1,2 @@
-﻿INSERT INTO Bitacora (Id_Cliente, Descripcion, Criticidad, Fecha, DVH) 
-OUTPUT inserted.Id_Bitacora VALUES (@ClienteId, @Descripcion, @Criticidad, @Fecha, @DVH)
+﻿INSERT INTO Bitacora (Id_Cliente, Descripcion, Criticidad, Fecha, Baja, DVH) 
+OUTPUT inserted.Id_Bitacora VALUES (@ClienteId, @Descripcion, @Criticidad, @Fecha, 0, @DVH)

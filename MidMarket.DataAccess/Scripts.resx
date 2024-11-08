@@ -298,6 +298,9 @@
   <data name="INSERTAR_TRANSACCION_VENTA" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\Venta\INSERTAR_TRANSACCION_VENTA.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="LIMPIAR_BITACORA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Scripts\Bitacora\LIMPIAR_BITACORA.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="LIMPIAR_CARRITO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Scripts\Carrito\LIMPIAR_CARRITO.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>

@@ -83,5 +83,39 @@ namespace MidMarket.DataAccess.DAOs
 
             return bitacora;
         }
+
+        public List<Bitacora> LimpiarBitacora()
+        {
+            _dataAccess.SelectCommandText = String.Format(Scripts.LIMPIAR_BITACORA);
+            DataSet ds = _dataAccess.ExecuteNonReader();
+
+            List<Bitacora> bitacora = new List<Bitacora>();
+            List<Bitacora> bitacoraFull = new List<Bitacora>();
+
+            if (ds.Tables[0].Rows.Count > 0)
+                bitacora = BitacoraFill.FillListBitacora(ds);
+
+            foreach (var item in bitacora)
+            {
+                Bitacora bitacoraItem = item;
+                var cliente = _usuarioDataAccess.GetCliente(item.Cliente.Id);
+
+                var clienteDesencriptado = new Cliente()
+                {
+                    Id = cliente.Id,
+                    Email = Encriptacion.DesencriptarAES(cliente.Email),
+                    RazonSocial = Encriptacion.DesencriptarAES(cliente.RazonSocial),
+                    CUIT = Encriptacion.DesencriptarAES(cliente.CUIT),
+                    Puntaje = cliente.Puntaje,
+                    Cuenta = cliente.Cuenta,
+                };
+                bitacoraItem.Cliente = clienteDesencriptado;
+
+                bitacoraFull.Add(bitacoraItem);
+            }
+
+            return bitacora;
+        }
+
     }
 }

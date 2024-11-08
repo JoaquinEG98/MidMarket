@@ -11,5 +11,6 @@ namespace MidMarket.Entities
         public string Descripcion { get; set; }
         public Criticidad Criticidad { get; set; }
         public DateTime Fecha { get; set; }
+        public bool Baja { get; set; }
     }
 }

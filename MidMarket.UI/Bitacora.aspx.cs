@@ -247,6 +247,27 @@ namespace MidMarket.UI
             }
         }
 
+        protected void LimpiarBitacora_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var idioma = _sessionManager.Get<IIdioma>("Idioma");
+
+                var limpiarBitacora = _bitacoraService.LimpiarBitacora();
+
+                BitacoraXML.GenerarXMLLimpiarBitacora(limpiarBitacora);
+                BitacoraXML.GenerarExcelLimpiarBitacora(limpiarBitacora);
+
+                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_41")}");
+
+                ConsultarBitacora();
+            }
+            catch (Exception ex)
+            {
+                AlertHelper.MostrarModal(this, $"{ex.Message}");
+            }
+        }
+
         private List<Entities.Bitacora> ObtenerMovimientosExportar()
         {
             List<Entities.Bitacora> todosMovimientos = _bitacoraService.ObtenerBitacora();

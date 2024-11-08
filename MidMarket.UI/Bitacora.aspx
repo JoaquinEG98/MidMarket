@@ -36,6 +36,7 @@
             <div class="export-buttons">
                 <asp:Button ID="btnExportarXML" runat="server" Text="Exportar a XML" CssClass="submit-btn" OnClick="ExportarXML_Click" data-etiqueta="btn_ExportToXML" />
                 <asp:Button ID="btnExportarExcel" runat="server" Text="Exportar a Excel" CssClass="submit-btn" OnClick="ExportarExcel_Click" data-etiqueta="btn_ExportToExcel" />
+                <asp:Button ID="btnLimpiarBitacora" runat="server" Text="Limpiar" CssClass="submit-btn" OnClick="LimpiarBitacora_Click" data-etiqueta="btn_LimpiarBitacora" />
             </div>
         </div>
 

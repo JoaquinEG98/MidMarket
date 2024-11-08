@@ -9,5 +9,6 @@ namespace MidMarket.DataAccess.Interfaces
         int AltaBitacora(Bitacora bitacora);
         List<Bitacora> ObtenerBitacora();
         List<BitacoraDTO> GetAllBitacora();
+        List<Bitacora> LimpiarBitacora();
     }
 }

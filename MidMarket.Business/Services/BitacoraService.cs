@@ -33,6 +33,7 @@ namespace MidMarket.Business.Services
                     Descripcion = descripcion,
                     Criticidad = criticidad,
                     Fecha = ClockWrapper.Now(),
+                    Baja = false
                 };
                 bitacora.DVH = GenerarDVHBitacora(bitacora);
 
@@ -54,6 +55,7 @@ namespace MidMarket.Business.Services
                 Descripcion = bitacora.Descripcion,
                 Criticidad = bitacora.Criticidad,
                 Fecha = bitacora.Fecha,
+                Baja = bitacora.Baja,
             };
             bitacoraDTO.DVH = DigitoVerificador.GenerarDVH(bitacoraDTO);
 
@@ -70,6 +72,15 @@ namespace MidMarket.Business.Services
         public List<BitacoraDTO> GetAllBitacora()
         {
             List<BitacoraDTO> bitacora = _bitacoraDAO.GetAllBitacora();
+
+            return bitacora;
+        }
+
+        public List<Bitacora> LimpiarBitacora()
+        {
+            List<Bitacora> bitacora = _bitacoraDAO.LimpiarBitacora();
+
+            _digitoVerificadorService.RecalcularDigitosBitacora(this);
 
             return bitacora;
         }

@@ -372,6 +372,7 @@ namespace MidMarket.Business.Services
                         Descripcion = item.Descripcion,
                         Criticidad = item.Criticidad,
                         Fecha = item.Fecha,
+                        Baja = item.Baja,
                         DVH = item.DVH,
                     };
                     bitacoraDTO.DVH = DigitoVerificador.GenerarDVH(bitacoraDTO);
