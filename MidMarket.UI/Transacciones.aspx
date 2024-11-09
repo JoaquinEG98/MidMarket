@@ -14,7 +14,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <% foreach (var compra in Compras) { %>
+                    <% foreach (var compra in Compras)
+                        { %>
                     <tr>
                         <td><%= compra.Id %></td>
                         <td><%= compra.Fecha.ToString("dd/MM/yyyy HH:mm:ss") %></td>
@@ -41,7 +42,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <% foreach (var venta in Ventas) { %>
+                    <% foreach (var venta in Ventas)
+                        { %>
                     <tr>
                         <td><%= venta.Id %></td>
                         <td><%= venta.Fecha.ToString("dd/MM/yyyy HH:mm:ss") %></td>
@@ -229,27 +231,27 @@
                 if (esAccion) {
                     tieneAcciones = true;
                     var rowHtmlAccion = `
-                        <tr>
-                            <td>${detalle.Activo.Nombre || 'N/A'}</td>
-                            <td>${detalle.Activo.Simbolo || 'N/A'}</td>
-                            <td>${detalle.Cantidad || 'N/A'}</td>
-                            <td>$${detalle.Precio.toLocaleString('es-AR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
-                            <td>$${(detalle.Precio * detalle.Cantidad).toLocaleString('es-AR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
-                        </tr>
-                    `;
+            <tr>
+                <td>${detalle.Activo.Nombre || 'N/A'}</td>
+                <td>${detalle.Activo.Simbolo || 'N/A'}</td>
+                <td>${detalle.Cantidad || 'N/A'}</td>
+                <td>$${detalle.Activo.Precio.toLocaleString('es-AR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
+                <td>$${(detalle.Activo.Precio * detalle.Cantidad).toLocaleString('es-AR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
+            </tr>
+        `;
                     detalleAccionesContainer.innerHTML += rowHtmlAccion;
                 } else if (esBono) {
                     tieneBonos = true;
                     var rowHtmlBono = `
-                        <tr>
-                            <td>${detalle.Activo.Nombre || 'N/A'}</td>
-                            <td>$${detalle.Activo.ValorNominal.toLocaleString('es-AR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
-                            <td>${detalle.Activo.TasaInteres !== undefined ? detalle.Activo.TasaInteres.toLocaleString('es-AR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '%' : 'N/A'}</td>
-                            <td>${detalle.Cantidad || 'N/A'}</td>
-                            <td>$${detalle.Precio.toLocaleString('es-AR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
-                            <td>$${(detalle.Precio * detalle.Cantidad).toLocaleString('es-AR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
-                        </tr>
-                    `;
+            <tr>
+                <td>${detalle.Activo.Nombre || 'N/A'}</td>
+                <td>$${detalle.Activo.ValorNominal.toLocaleString('es-AR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
+                <td>${detalle.Activo.TasaInteres !== undefined ? detalle.Activo.TasaInteres.toLocaleString('es-AR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '%' : 'N/A'}</td>
+                <td>${detalle.Cantidad || 'N/A'}</td>
+                <td>$${detalle.Activo.ValorNominal.toLocaleString('es-AR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
+                <td>$${(detalle.Activo.ValorNominal * detalle.Cantidad).toLocaleString('es-AR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
+            </tr>
+        `;
                     detalleBonosContainer.innerHTML += rowHtmlBono;
                 }
             });
