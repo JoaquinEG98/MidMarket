@@ -68,7 +68,7 @@ namespace MidMarket.Business.Services
         public void ModificarUsuario(Cliente cliente)
         {
             cliente.Email = cliente.Email.ToLower();
-            ValidarUsuario(cliente, cliente.Password);
+            ValidarUsuario(cliente, cliente.Password, true);
 
             using (TransactionScope scope = new TransactionScope())
             {
@@ -140,7 +140,7 @@ namespace MidMarket.Business.Services
             }
         }
 
-        private void ValidarUsuario(Cliente cliente, string password)
+        private void ValidarUsuario(Cliente cliente, string password, bool modificacion = false)
         {
             var idioma = _sessionManager.Get<IIdioma>("Idioma");
 
@@ -154,6 +154,13 @@ namespace MidMarket.Business.Services
                 throw new Exception($"{_traduccionService.ObtenerMensaje(idioma, "ERR_08")}");
 
             var clientes = GetClientes();
+            if (modificacion)
+            {
+                var clienteActual = clientes.Where(x => x.Id == cliente.Id).FirstOrDefault();
+                if (cliente.Email == clienteActual.Email)
+                    return;
+            }
+
             if (cliente.Email == clientes.Where(x => x.Email == cliente.Email).Select(x => x.Email).FirstOrDefault())
                 throw new Exception($"{_traduccionService.ObtenerMensaje(idioma, "MSJ_40")}");
         }
