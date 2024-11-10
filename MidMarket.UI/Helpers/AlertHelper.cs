@@ -13,26 +13,29 @@ namespace MidMarket.UI.Helpers
 
         public static void MostrarModal(Page page, string mensaje, bool redirigir = false)
         {
-            var modalControl = (Modal)page.Master.FindControl("globalModalControl");
-            if (modalControl != null)
+            if (page.Master != null)
             {
-                var literalMensaje = (Literal)modalControl.FindControl("modalMessageLiteral");
-                if (literalMensaje != null)
+                var modalControl = (Modal)page.Master.FindControl("globalModalControl");
+                if (modalControl != null)
                 {
-                    literalMensaje.Text = mensaje;
-                }
+                    var literalMensaje = (Literal)modalControl.FindControl("modalMessageLiteral");
+                    if (literalMensaje != null)
+                    {
+                        literalMensaje.Text = mensaje;
+                    }
 
-                var hfShowModal = (HiddenField)modalControl.FindControl("hfShowModal");
-                var hfRedirigir = (HiddenField)modalControl.FindControl("hfRedirigir");
+                    var hfShowModal = (HiddenField)modalControl.FindControl("hfShowModal");
+                    var hfRedirigir = (HiddenField)modalControl.FindControl("hfRedirigir");
 
-                if (hfShowModal != null)
-                {
-                    hfShowModal.Value = "true";
-                }
+                    if (hfShowModal != null)
+                    {
+                        hfShowModal.Value = "true";
+                    }
 
-                if (redirigir && hfRedirigir != null)
-                {
-                    hfRedirigir.Value = "true";
+                    if (redirigir && hfRedirigir != null)
+                    {
+                        hfRedirigir.Value = "true";
+                    }
                 }
             }
         }
