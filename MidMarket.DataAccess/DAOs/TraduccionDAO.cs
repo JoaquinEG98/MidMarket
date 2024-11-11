@@ -16,7 +16,7 @@ namespace MidMarket.DataAccess.DAOs
         private const string _cacheIdiomasKey = "Idiomas";
         private const string _cacheTraduccionesKey = "Traducciones";
         private const string _cacheMensajesKey = "Mensajes";
-        private readonly DateTimeOffset _tiempoCache = DateTimeOffset.Now.AddHours(1);
+        private readonly DateTimeOffset _tiempoCache = DateTimeOffset.Now.AddHours(2);
 
         public IList<Idioma> ObtenerIdiomas()
         {
