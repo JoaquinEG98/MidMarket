@@ -14,22 +14,25 @@ namespace MidMarket.UI.Helpers
         {
             TraducirNombres(sessionManager, traducciones);
 
-            var traduccionesTextos = traducciones.ToDictionary(t => t.Key, t => t.Value.Texto);
-            var traduccionesJson = JsonConvert.SerializeObject(traduccionesTextos);
+            if (traducciones != null)
+            {
+                var traduccionesTextos = traducciones.ToDictionary(t => t.Key, t => t.Value.Texto);
+                var traduccionesJson = JsonConvert.SerializeObject(traduccionesTextos);
 
-            page.ClientScript.RegisterStartupScript(
-                page.GetType(),
-                "SetTranslations",
-                $"var traducciones = {traduccionesJson};",
-                true
-            );
+                page.ClientScript.RegisterStartupScript(
+                    page.GetType(),
+                    "SetTranslations",
+                    $"var traducciones = {traduccionesJson};",
+                    true
+                );
+            }
         }
 
         private static void TraducirNombres(ISessionManager sessionManager, IDictionary<string, ITraduccion> traducciones)
         {
             var cliente = sessionManager.Get<Cliente>("Usuario");
 
-            if (cliente != null && traducciones.ContainsKey("texto_Hola"))
+            if (cliente != null && traducciones != null && traducciones.ContainsKey("texto_Hola"))
             {
                 string familia = string.Empty;
 

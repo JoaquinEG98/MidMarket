@@ -3,14 +3,14 @@
   <ActivosVendidosDTO>
     <Id>9</Id>
     <Nombre>BONAR 2024</Nombre>
-    <Cantidad>28</Cantidad>
-    <Total>67500.0000</Total>
+    <Cantidad>49</Cantidad>
+    <Total>120000.0000</Total>
   </ActivosVendidosDTO>
   <ActivosVendidosDTO>
-    <Id>2</Id>
-    <Nombre>Banco Galicia</Nombre>
-    <Cantidad>17</Cantidad>
-    <Total>196000.0000</Total>
+    <Id>12</Id>
+    <Nombre>BPA7D</Nombre>
+    <Cantidad>29</Cantidad>
+    <Total>2800.0000</Total>
   </ActivosVendidosDTO>
   <ActivosVendidosDTO>
     <Id>11</Id>
@@ -19,15 +19,15 @@
     <Total>1500.0000</Total>
   </ActivosVendidosDTO>
   <ActivosVendidosDTO>
+    <Id>2</Id>
+    <Nombre>Banco Galicia</Nombre>
+    <Cantidad>14</Cantidad>
+    <Total>159250.0000</Total>
+  </ActivosVendidosDTO>
+  <ActivosVendidosDTO>
     <Id>10</Id>
     <Nombre>BPY26</Nombre>
     <Cantidad>12</Cantidad>
     <Total>1200.0000</Total>
-  </ActivosVendidosDTO>
-  <ActivosVendidosDTO>
-    <Id>6</Id>
-    <Nombre>Cresud</Nombre>
-    <Cantidad>9</Cantidad>
-    <Total>35550.0000</Total>
   </ActivosVendidosDTO>
 </ArrayOfActivosVendidosDTO>
