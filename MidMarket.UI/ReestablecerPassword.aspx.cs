@@ -3,14 +3,13 @@ using MidMarket.Business.Seguridad;
 using MidMarket.Entities.DTOs;
 using MidMarket.Entities.Observer;
 using MidMarket.UI.Helpers;
+using MidMarket.UI.WebServices;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
-using System.Net;
-using System.Net.Mail;
 using Unity;
 
 namespace MidMarket.UI
@@ -20,6 +19,7 @@ namespace MidMarket.UI
         private readonly IUsuarioService _usuarioService;
         private readonly ISessionManager _sessionManager;
         private readonly ITraduccionService _traduccionService;
+        private readonly EnvioEmail _emailService;
 
         private const string TokenPath = "~/App_Data/tokens.json";
         private const string UrlSitio = "https://localhost:44339";
@@ -29,6 +29,7 @@ namespace MidMarket.UI
             _usuarioService = Global.Container.Resolve<IUsuarioService>();
             _sessionManager = Global.Container.Resolve<ISessionManager>();
             _traduccionService = Global.Container.Resolve<ITraduccionService>();
+            _emailService = new EnvioEmail();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -79,7 +80,7 @@ namespace MidMarket.UI
             string nuevaPassword = Encriptacion.GenerarPasswordRandom();
 
             ActualizarPassword(email, nuevaPassword);
-            EnviarCorreo(email, "MidMarket - Nueva contraseña generada", $"Tu nueva contraseña es: {nuevaPassword}");
+            _emailService.RealizarEnvioEmail(email, "MidMarket - Nueva contraseña generada", $"Tu nueva contraseña es: {nuevaPassword}");
 
             EliminarToken(token);
             MostrarMensaje($"{_traduccionService.ObtenerMensaje(idioma, "MSJ_37")}");
@@ -94,7 +95,7 @@ namespace MidMarket.UI
             string email = ValidarEmailControl.Email;
             string token = GenerarToken();
             GuardarToken(new TokenEmailDTO { Email = email, Token = token, FechaExpiracion = DateTime.Now.AddMinutes(15) });
-            EnviarCorreo(email, "MidMarket - Restauración de Contraseña", $"{UrlSitio}/ReestablecerPassword.aspx?token={token}");
+            _emailService.RealizarEnvioEmail(email, "MidMarket - Restauración de Contraseña", $"{UrlSitio}/ReestablecerPassword.aspx?token={token}");
 
             MostrarMensaje($"{_traduccionService.ObtenerMensaje(idioma, "MSJ_35")}");
             ValidarEmailControl.Email = string.Empty;
@@ -105,20 +106,6 @@ namespace MidMarket.UI
             var tokens = LeerTokensJson();
             tokens.Add(tokenInfo);
             GuardarTokensJson(tokens);
-        }
-
-        private void EnviarCorreo(string destinatario, string asunto, string mensaje)
-        {
-            using (var mail = new MailMessage("hello@demomailtrap.com", "joaquinezequielgonzalez98@gmail.com", asunto, mensaje))
-            {
-                mail.IsBodyHtml = false;
-                using (var smtp = new SmtpClient("live.smtp.mailtrap.io", 587))
-                {
-                    smtp.Credentials = new NetworkCredential("smtp@mailtrap.io", "85c0349a01d11fd5d4230fbef10c1454");
-                    smtp.EnableSsl = true;
-                    smtp.Send(mail);
-                }
-            }
         }
 
         private bool EsTokenValido(string token)

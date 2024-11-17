@@ -7,6 +7,7 @@ using MidMarket.UI.WebServices;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Web.UI.WebControls;
 using Unity;
 
@@ -19,6 +20,8 @@ namespace MidMarket.UI
         private readonly ISessionManager _sessionManager;
         private readonly EstadisticaActivos _estadisticaActivosService;
         private readonly ITraduccionService _traduccionService;
+        private readonly GeneradorPdf _pdfService;
+        private readonly EnvioEmail _emailService;
 
         public List<TransaccionCompra> Compras { get; set; }
 
@@ -29,6 +32,8 @@ namespace MidMarket.UI
             _sessionManager = Global.Container.Resolve<ISessionManager>();
             _estadisticaActivosService = new EstadisticaActivos();
             _traduccionService = Global.Container.Resolve<ITraduccionService>();
+            _pdfService = new GeneradorPdf();
+            _emailService = new EnvioEmail();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -80,12 +85,14 @@ namespace MidMarket.UI
                     Precio = _ventaService.ObtenerUltimoPrecioActivo(activoId)
                 };
 
-                _ventaService.RealizarVenta(venta);
+                int ventaId = _ventaService.RealizarVenta(venta);
                 CargarComprasConsolidadas();
 
                 AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_32")}");
 
                 CalcularVentasWebService();
+
+                EnviarMailFactura(ventaId);
             }
             catch (SqlException)
             {
@@ -201,6 +208,16 @@ namespace MidMarket.UI
         {
             _estadisticaActivosService.CalcularActivosMasVendidosCantidad();
             _estadisticaActivosService.CalcularActivosMasVendidosTotal();
+        }
+
+        private void EnviarMailFactura(int ventaId)
+        {
+            var cliente = _sessionManager.Get<Cliente>("Usuario");
+
+            var venta = _ventaService.GetVentas().Where(x => x.Id == ventaId).FirstOrDefault();
+            var bytes = _pdfService.GenerarPdfVenta(venta);
+
+            _emailService.RealizarEnvioEmailConAdjunto(cliente.Email, "MidMarket - Factura de Venta", "Acá está tu factura de venta.", bytes, $"Factura_Venta_{ventaId}.pdf");
         }
     }
 }

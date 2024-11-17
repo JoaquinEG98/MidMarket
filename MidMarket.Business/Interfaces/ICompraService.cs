@@ -6,7 +6,7 @@ namespace MidMarket.Business.Interfaces
 {
     public interface ICompraService
     {
-        void RealizarCompra(List<Carrito> carrito);
+        int RealizarCompra(List<Carrito> carrito);
         List<TransaccionCompra> GetCompras(bool historico);
         List<TransaccionCompraDTO> GetAllCompras();
         List<DetalleCompraDTO> GetAllComprasDetalle();

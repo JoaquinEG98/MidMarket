@@ -217,6 +217,7 @@
     <Content Include="Styles\venta.css" />
     <Content Include="Venta.aspx" />
     <Content Include="WebServices\CalcularCarrito.asmx" />
+    <Content Include="WebServices\EnvioEmail.asmx" />
     <Content Include="WebServices\EstadisticaActivos.asmx" />
     <Content Include="WebServices\GeneradorPdf.asmx" />
     <None Include="Properties\PublishProfiles\joaquing88-001-site1 - FTP.pubxml" />
@@ -579,6 +580,10 @@
     </Compile>
     <Compile Include="WebServices\CalcularCarrito.asmx.cs">
       <DependentUpon>CalcularCarrito.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebServices\EnvioEmail.asmx.cs">
+      <DependentUpon>EnvioEmail.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="WebServices\EstadisticaActivos.asmx.cs">

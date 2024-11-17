@@ -31,7 +31,7 @@ namespace MidMarket.Business.Services
             _digitoVerificadorService = DependencyResolver.Resolve<IDigitoVerificadorService>();
         }
 
-        public void RealizarCompra(List<Carrito> carrito)
+        public int RealizarCompra(List<Carrito> carrito)
         {
             using (TransactionScope scope = new TransactionScope())
             {
@@ -93,6 +93,8 @@ namespace MidMarket.Business.Services
                 _digitoVerificadorService.RecalcularDigitosClienteActivo(this);
 
                 scope.Complete();
+
+                return compraId;
             }
         }
 

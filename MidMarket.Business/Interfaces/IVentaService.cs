@@ -6,7 +6,7 @@ namespace MidMarket.Business.Interfaces
 {
     public interface IVentaService
     {
-        void RealizarVenta(DetalleVenta venta);
+        int RealizarVenta(DetalleVenta venta);
         List<TransaccionVenta> GetVentas();
         decimal ObtenerUltimoPrecioActivo(int idActivo);
         List<TransaccionVentaDTO> GetAllVentas();

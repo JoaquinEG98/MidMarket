@@ -6,6 +6,7 @@ using MidMarket.UI.WebServices;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Web.UI.WebControls;
 using Unity;
 
@@ -33,7 +34,8 @@ namespace MidMarket.UI
         private readonly CalcularCarrito _calcularCarritoService;
         private readonly EstadisticaActivos _estadisticaActivosService;
         private readonly ITraduccionService _traduccionService;
-
+        private readonly GeneradorPdf _pdfService;
+        private readonly EnvioEmail _emailService;
 
         public Carrito()
         {
@@ -43,6 +45,8 @@ namespace MidMarket.UI
             _calcularCarritoService = new CalcularCarrito();
             _estadisticaActivosService = new EstadisticaActivos();
             _traduccionService = Global.Container.Resolve<ITraduccionService>();
+            _pdfService = new GeneradorPdf();
+            _emailService = new EnvioEmail();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -188,7 +192,7 @@ namespace MidMarket.UI
                     return;
                 }
 
-                _compraService.RealizarCompra(MiCarrito);
+                int compraId = _compraService.RealizarCompra(MiCarrito);
 
                 MiCarrito.Clear();
                 _carritoService.LimpiarCarrito(cliente.Id);
@@ -199,6 +203,8 @@ namespace MidMarket.UI
                 AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_18")}");
 
                 CalcularComprasWebService();
+
+                EnviarMailFactura(compraId);
             }
             catch (SqlException)
             {
@@ -214,6 +220,16 @@ namespace MidMarket.UI
         {
             _estadisticaActivosService.CalcularActivosMasCompradosCantidad();
             _estadisticaActivosService.CalcularActivosMasCompradosTotal();
+        }
+
+        private void EnviarMailFactura(int compraId)
+        {
+            var cliente = _sessionManager.Get<Cliente>("Usuario");
+
+            var compra = _compraService.GetCompras(true).Where(x => x.Id == compraId).FirstOrDefault();
+            var bytes = _pdfService.GenerarPdfCompra(compra);
+
+            _emailService.RealizarEnvioEmailConAdjunto(cliente.Email, "MidMarket - Factura de Compra", "Acá está tu factura de compra.", bytes, $"Factura_Compra_{compraId}.pdf");
         }
     }
 }

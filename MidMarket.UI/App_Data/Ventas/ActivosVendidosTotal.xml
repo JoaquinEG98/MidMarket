@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-16"?>
 <ArrayOfActivosVendidosDTO xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ActivosVendidosDTO>
-    <Id>14</Id>
-    <Nombre>BPJ25</Nombre>
-    <Cantidad>3</Cantidad>
-    <Total>265200.0000</Total>
-  </ActivosVendidosDTO>
-  <ActivosVendidosDTO>
     <Id>2</Id>
     <Nombre>Banco Galicia</Nombre>
-    <Cantidad>14</Cantidad>
-    <Total>159250.0000</Total>
+    <Cantidad>15</Cantidad>
+    <Total>171500.0000</Total>
   </ActivosVendidosDTO>
   <ActivosVendidosDTO>
-    <Id>3</Id>
-    <Nombre>Pampa Energía</Nombre>
-    <Cantidad>9</Cantidad>
-    <Total>151200.0000</Total>
-  </ActivosVendidosDTO>
-  <ActivosVendidosDTO>
-    <Id>15</Id>
-    <Nombre>sdafasdf</Nombre>
+    <Id>14</Id>
+    <Nombre>BPJ25</Nombre>
     <Cantidad>1</Cantidad>
-    <Total>124214.0000</Total>
+    <Total>88400.0000</Total>
   </ActivosVendidosDTO>
   <ActivosVendidosDTO>
     <Id>9</Id>
     <Nombre>BONAR 2024</Nombre>
-    <Cantidad>49</Cantidad>
-    <Total>120000.0000</Total>
+    <Cantidad>34</Cantidad>
+    <Total>82500.0000</Total>
+  </ActivosVendidosDTO>
+  <ActivosVendidosDTO>
+    <Id>1</Id>
+    <Nombre>YPF SA</Nombre>
+    <Cantidad>2</Cantidad>
+    <Total>70000.0000</Total>
+  </ActivosVendidosDTO>
+  <ActivosVendidosDTO>
+    <Id>3</Id>
+    <Nombre>Pampa Energía</Nombre>
+    <Cantidad>3</Cantidad>
+    <Total>50400.0000</Total>
   </ActivosVendidosDTO>
 </ArrayOfActivosVendidosDTO>

@@ -32,7 +32,7 @@ namespace MidMarket.Business.Services
             _compraService = DependencyResolver.Resolve<ICompraService>();
         }
 
-        public void RealizarVenta(DetalleVenta venta)
+        public int RealizarVenta(DetalleVenta venta)
         {
             using (TransactionScope scope = new TransactionScope())
             {
@@ -69,6 +69,8 @@ namespace MidMarket.Business.Services
                 _digitoVerificadorService.RecalcularDigitosClienteActivo(_compraService);
 
                 scope.Complete();
+
+                return ventaId;
             }
         }
 

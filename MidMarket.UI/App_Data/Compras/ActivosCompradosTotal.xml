@@ -1,22 +1,16 @@
 <?xml version="1.0" encoding="utf-16"?>
 <ArrayOfActivosCompradosDTO xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ActivosCompradosDTO>
-    <Id>14</Id>
-    <Nombre>BPJ25</Nombre>
-    <Cantidad>5</Cantidad>
-    <Total>442000.0000</Total>
-  </ActivosCompradosDTO>
-  <ActivosCompradosDTO>
     <Id>2</Id>
     <Nombre>Banco Galicia</Nombre>
-    <Cantidad>31</Cantidad>
-    <Total>379750.0000</Total>
+    <Cantidad>35</Cantidad>
+    <Total>428750.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
     <Id>3</Id>
     <Nombre>Pampa Energía</Nombre>
-    <Cantidad>21</Cantidad>
-    <Total>352800.0000</Total>
+    <Cantidad>19</Cantidad>
+    <Total>319200.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
     <Id>1</Id>
@@ -27,7 +21,13 @@
   <ActivosCompradosDTO>
     <Id>9</Id>
     <Nombre>BONAR 2024</Nombre>
-    <Cantidad>164</Cantidad>
-    <Total>287000.0000</Total>
+    <Cantidad>160</Cantidad>
+    <Total>277000.0000</Total>
+  </ActivosCompradosDTO>
+  <ActivosCompradosDTO>
+    <Id>14</Id>
+    <Nombre>BPJ25</Nombre>
+    <Cantidad>3</Cantidad>
+    <Total>265200.0000</Total>
   </ActivosCompradosDTO>
 </ArrayOfActivosCompradosDTO>
