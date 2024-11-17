@@ -3,7 +3,6 @@ using iTextSharp.text.pdf;
 using MidMarket.Entities;
 using System;
 using System.IO;
-using System.Linq;
 using System.Web.Services;
 
 namespace MidMarket.UI.WebServices
@@ -109,11 +108,20 @@ namespace MidMarket.UI.WebServices
                     detalleTabla.AddCell(new PdfPCell(new Phrase(producto.Id.ToString(), celdaFuente)) { HorizontalAlignment = Element.ALIGN_CENTER });
                     detalleTabla.AddCell(new PdfPCell(new Phrase(producto.Nombre, celdaFuente)) { HorizontalAlignment = Element.ALIGN_LEFT });
                     detalleTabla.AddCell(new PdfPCell(new Phrase(detalle.Cantidad.ToString(), celdaFuente)) { HorizontalAlignment = Element.ALIGN_CENTER });
-                    detalleTabla.AddCell(new PdfPCell(new Phrase($"${detalle.Precio:N2}", celdaFuente)) { HorizontalAlignment = Element.ALIGN_RIGHT });
-                    detalleTabla.AddCell(new PdfPCell(new Phrase($"${(detalle.Cantidad * detalle.Precio):N2}", celdaFuente)) { HorizontalAlignment = Element.ALIGN_RIGHT });
+
+                    if (detalle.Activo is Accion accion)
+                    {
+                        detalleTabla.AddCell(new PdfPCell(new Phrase($"${accion.Precio:N2}", celdaFuente)) { HorizontalAlignment = Element.ALIGN_RIGHT });
+                        detalleTabla.AddCell(new PdfPCell(new Phrase($"${(detalle.Cantidad * accion.Precio):N2}", celdaFuente)) { HorizontalAlignment = Element.ALIGN_RIGHT });
+                    }
+                    else if (detalle.Activo is Bono bono)
+                    {
+                        detalleTabla.AddCell(new PdfPCell(new Phrase($"${bono.ValorNominal:N2}", celdaFuente)) { HorizontalAlignment = Element.ALIGN_RIGHT });
+                        detalleTabla.AddCell(new PdfPCell(new Phrase($"${(detalle.Cantidad * bono.ValorNominal):N2}", celdaFuente)) { HorizontalAlignment = Element.ALIGN_RIGHT });
+                    }
                 }
 
-                detalleTabla.AddCell(new PdfPCell(new Phrase($"Importe Total: ${compra.Detalle.Sum(d => d.Cantidad * d.Precio):N2}", headerFuente))
+                detalleTabla.AddCell(new PdfPCell(new Phrase($"Importe Total: ${compra.Total:N2}", headerFuente))
                 {
                     HorizontalAlignment = Element.ALIGN_RIGHT,
                     Border = Rectangle.TOP_BORDER,
@@ -139,7 +147,7 @@ namespace MidMarket.UI.WebServices
                     Border = Rectangle.NO_BORDER,
                     HorizontalAlignment = Element.ALIGN_RIGHT
                 });
-                contenidoPie.AddCell(new PdfPCell(new Phrase($"El total de este comprobante está expresado en moneda de curso legal. Importe final ${compra.Detalle.Sum(d => d.Cantidad * d.Precio):N2}", smallFont))
+                contenidoPie.AddCell(new PdfPCell(new Phrase($"El total de este comprobante está expresado en moneda de curso legal. Importe final ${compra.Total:N2}", smallFont))
                 {
                     Border = Rectangle.NO_BORDER,
                     HorizontalAlignment = Element.ALIGN_CENTER,
@@ -257,11 +265,20 @@ namespace MidMarket.UI.WebServices
                     detalleTabla.AddCell(new PdfPCell(new Phrase(producto.Id.ToString(), celdaFuente)) { HorizontalAlignment = Element.ALIGN_CENTER });
                     detalleTabla.AddCell(new PdfPCell(new Phrase(producto.Nombre, celdaFuente)) { HorizontalAlignment = Element.ALIGN_LEFT });
                     detalleTabla.AddCell(new PdfPCell(new Phrase(detalle.Cantidad.ToString(), celdaFuente)) { HorizontalAlignment = Element.ALIGN_CENTER });
-                    detalleTabla.AddCell(new PdfPCell(new Phrase($"${detalle.Precio:N2}", celdaFuente)) { HorizontalAlignment = Element.ALIGN_RIGHT });
-                    detalleTabla.AddCell(new PdfPCell(new Phrase($"${(detalle.Cantidad * detalle.Precio):N2}", celdaFuente)) { HorizontalAlignment = Element.ALIGN_RIGHT });
+
+                    if (detalle.Activo is Accion accion)
+                    {
+                        detalleTabla.AddCell(new PdfPCell(new Phrase($"${accion.Precio:N2}", celdaFuente)) { HorizontalAlignment = Element.ALIGN_RIGHT });
+                        detalleTabla.AddCell(new PdfPCell(new Phrase($"${(detalle.Cantidad * accion.Precio):N2}", celdaFuente)) { HorizontalAlignment = Element.ALIGN_RIGHT });
+                    }
+                    else if (detalle.Activo is Bono bono)
+                    {
+                        detalleTabla.AddCell(new PdfPCell(new Phrase($"${bono.ValorNominal:N2}", celdaFuente)) { HorizontalAlignment = Element.ALIGN_RIGHT });
+                        detalleTabla.AddCell(new PdfPCell(new Phrase($"${(detalle.Cantidad * bono.ValorNominal):N2}", celdaFuente)) { HorizontalAlignment = Element.ALIGN_RIGHT });
+                    }
                 }
 
-                detalleTabla.AddCell(new PdfPCell(new Phrase($"Importe Total: ${venta.Detalle.Sum(d => d.Cantidad * d.Precio):N2}", headerFuente))
+                detalleTabla.AddCell(new PdfPCell(new Phrase($"Importe Total: ${venta.Total:N2}", headerFuente))
                 {
                     HorizontalAlignment = Element.ALIGN_RIGHT,
                     Border = Rectangle.TOP_BORDER,
@@ -287,7 +304,7 @@ namespace MidMarket.UI.WebServices
                     Border = Rectangle.NO_BORDER,
                     HorizontalAlignment = Element.ALIGN_RIGHT
                 });
-                contenidoPie.AddCell(new PdfPCell(new Phrase($"El total de este comprobante está expresado en moneda de curso legal. Importe final ${venta.Detalle.Sum(d => d.Cantidad * d.Precio):N2}", smallFont))
+                contenidoPie.AddCell(new PdfPCell(new Phrase($"El total de este comprobante está expresado en moneda de curso legal. Importe final ${venta.Total:N2}", smallFont))
                 {
                     Border = Rectangle.NO_BORDER,
                     HorizontalAlignment = Element.ALIGN_CENTER,
