@@ -22,17 +22,22 @@ namespace MidMarket.UI.WebServices
                 PdfWriter writer = PdfWriter.GetInstance(doc, memoryStream);
                 doc.Open();
 
-                // Fuentes
+                Font tituloGrandeFuente = FontFactory.GetFont("Arial", 24, Font.BOLD, BaseColor.BLACK);
                 Font tituloFuente = FontFactory.GetFont("Arial", 16, Font.BOLD, BaseColor.BLACK);
                 Font headerFuente = FontFactory.GetFont("Arial", 12, Font.BOLD, BaseColor.BLACK);
                 Font celdaBoldFuente = FontFactory.GetFont("Arial", 10, Font.BOLD, BaseColor.BLACK);
                 Font celdaFuente = FontFactory.GetFont("Arial", 10, BaseColor.BLACK);
                 Font smallFont = FontFactory.GetFont("Arial", 8, BaseColor.BLACK);
 
-                // Espaciado
                 var espaciado = new Paragraph(" ") { SpacingBefore = 10, SpacingAfter = 10 };
 
-                // Encabezado principal con "ORIGINAL A"
+                Paragraph tituloPrincipal = new Paragraph("MIDMARKET", tituloGrandeFuente)
+                {
+                    Alignment = Element.ALIGN_CENTER,
+                    SpacingAfter = 20
+                };
+                doc.Add(tituloPrincipal);
+
                 PdfPTable encabezado = new PdfPTable(3) { WidthPercentage = 100 };
                 encabezado.SetWidths(new float[] { 1f, 2f, 1f });
 
@@ -55,7 +60,6 @@ namespace MidMarket.UI.WebServices
                 doc.Add(encabezado);
                 doc.Add(espaciado);
 
-                // Información principal (MidMarket) enmarcada
                 PdfPTable datosPrincipales = new PdfPTable(2) { WidthPercentage = 100 };
                 datosPrincipales.SetWidths(new float[] { 1.5f, 3.5f });
 
@@ -89,13 +93,12 @@ namespace MidMarket.UI.WebServices
                 doc.Add(datosWrapper);
                 doc.Add(espaciado);
 
-                // Tabla de productos
                 PdfPTable detalleTabla = new PdfPTable(5) { WidthPercentage = 100 };
                 detalleTabla.SetWidths(new float[] { 1f, 3f, 1f, 1f, 1f });
 
                 BaseColor grisEncabezado = new BaseColor(224, 224, 224);
                 detalleTabla.AddCell(new PdfPCell(new Phrase("Código", headerFuente)) { HorizontalAlignment = Element.ALIGN_CENTER, BackgroundColor = grisEncabezado });
-                detalleTabla.AddCell(new PdfPCell(new Phrase("Producto/Servicio", headerFuente)) { HorizontalAlignment = Element.ALIGN_CENTER, BackgroundColor = grisEncabezado });
+                detalleTabla.AddCell(new PdfPCell(new Phrase("Activo", headerFuente)) { HorizontalAlignment = Element.ALIGN_CENTER, BackgroundColor = grisEncabezado });
                 detalleTabla.AddCell(new PdfPCell(new Phrase("Cantidad", headerFuente)) { HorizontalAlignment = Element.ALIGN_CENTER, BackgroundColor = grisEncabezado });
                 detalleTabla.AddCell(new PdfPCell(new Phrase("Precio Unit.", headerFuente)) { HorizontalAlignment = Element.ALIGN_CENTER, BackgroundColor = grisEncabezado });
                 detalleTabla.AddCell(new PdfPCell(new Phrase("Subtotal", headerFuente)) { HorizontalAlignment = Element.ALIGN_CENTER, BackgroundColor = grisEncabezado });
@@ -128,7 +131,6 @@ namespace MidMarket.UI.WebServices
                 doc.Add(tablaWrapper);
                 doc.Add(espaciado);
 
-                // Pie de página
                 PdfPTable piePagina = new PdfPTable(1) { WidthPercentage = 100 };
                 PdfPTable contenidoPie = new PdfPTable(1) { WidthPercentage = 100 };
 
@@ -137,7 +139,7 @@ namespace MidMarket.UI.WebServices
                     Border = Rectangle.NO_BORDER,
                     HorizontalAlignment = Element.ALIGN_RIGHT
                 });
-                contenidoPie.AddCell(new PdfPCell(new Phrase($"El total de este comprobante está expresado en moneda de curso legal. Importe final: ${compra.Detalle.Sum(d => d.Cantidad * d.Precio):N2}", smallFont))
+                contenidoPie.AddCell(new PdfPCell(new Phrase($"El total de este comprobante está expresado en moneda de curso legal. Importe final ${compra.Detalle.Sum(d => d.Cantidad * d.Precio):N2}", smallFont))
                 {
                     Border = Rectangle.NO_BORDER,
                     HorizontalAlignment = Element.ALIGN_CENTER,
@@ -150,7 +152,7 @@ namespace MidMarket.UI.WebServices
                     Padding = 10
                 });
 
-                doc.Add(new Paragraph(" ") { SpacingBefore = 300 }); // Empujar hacia abajo
+                doc.Add(new Paragraph(" ") { SpacingBefore = 200 });
                 doc.Add(piePagina);
 
                 doc.Close();
@@ -158,8 +160,6 @@ namespace MidMarket.UI.WebServices
                 return memoryStream.ToArray();
             }
         }
-
-
 
         [WebMethod]
         public byte[] GenerarPdfVenta(TransaccionVenta venta)
