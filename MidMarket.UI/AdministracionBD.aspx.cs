@@ -44,12 +44,15 @@ namespace MidMarket.UI
             var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
             var idioma = _sessionManager.Get<IIdioma>("Idioma");
 
-            if (clienteLogueado == null || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.AdministracionBaseDeDatos))
+            if (clienteLogueado == null
+                || (!clienteLogueado.Debug
+                && !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.AdministracionBaseDeDatos)))
                 Response.Redirect("Default.aspx");
 
             try
             {
-                CargarDV();
+                if (!clienteLogueado.Debug)
+                    CargarDV();
             }
             catch (SqlException)
             {
@@ -109,7 +112,18 @@ namespace MidMarket.UI
 
                 _backupService.RealizarRestore(rutaBackup);
 
-                CargarDV();
+                var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+                if (clienteLogueado.Debug)
+                {
+                    _traduccionService.LimpiarCache();
+                    _sessionManager.Remove("Usuario");
+                    _sessionManager.AbandonSession();
+                    Response.Redirect("Login.aspx");
+                }
+                else
+                {
+                    CargarDV();
+                }
 
                 AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_04")}");
             }
@@ -131,7 +145,18 @@ namespace MidMarket.UI
             {
                 _digitoVerificadorService.RecalcularTodosDigitosVerificadores(_usuarioService, _permisoService, _compraService, _ventaService, _carritoService, _bitacoraService, _activoService);
 
-                CargarDV();
+                var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+                if (clienteLogueado.Debug)
+                {
+                    _traduccionService.LimpiarCache();
+                    _sessionManager.Remove("Usuario");
+                    _sessionManager.AbandonSession();
+                    Response.Redirect("Login.aspx");
+                }
+                else
+                {
+                    CargarDV();
+                }
 
                 AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_05")}");
             }

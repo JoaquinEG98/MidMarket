@@ -3,6 +3,7 @@ using MidMarket.Entities;
 using MidMarket.Entities.Observer;
 using MidMarket.UI.Helpers;
 using System;
+using System.Configuration;
 using System.Data.SqlClient;
 using Unity;
 
@@ -13,12 +14,14 @@ namespace MidMarket.UI
         private readonly ISessionManager _sessionManager;
         private readonly IUsuarioService _usuarioService;
         private readonly ITraduccionService _traduccionService;
+        private readonly IDigitoVerificadorService _digitoVerificadorService;
 
         public Login()
         {
             _sessionManager = Global.Container.Resolve<ISessionManager>();
             _usuarioService = Global.Container.Resolve<IUsuarioService>();
             _traduccionService = Global.Container.Resolve<ITraduccionService>();
+            _digitoVerificadorService = Global.Container.Resolve<IDigitoVerificadorService>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -40,16 +43,45 @@ namespace MidMarket.UI
 
             try
             {
-                Cliente cliente = _usuarioService.Login(txtEmail.Value, txtPassword.Value);
+                if (_digitoVerificadorService.ValidarDigitosVerificadores("Cliente"))
+                {
+                    Cliente cliente = _usuarioService.Login(txtEmail.Value, txtPassword.Value);
 
-                _sessionManager.Set("Usuario", cliente);
+                    _sessionManager.Set("Usuario", cliente);
 
-                Response.Redirect("MenuPrincipal.aspx", false);
-                Context.ApplicationInstance.CompleteRequest();
+                    Response.Redirect("MenuPrincipal.aspx", false);
+                    Context.ApplicationInstance.CompleteRequest();
+                }
+                else
+                {
+                    var usuario = ConfigurationManager.AppSettings["usuario"];
+                    var password = ConfigurationManager.AppSettings["password"];
+
+                    if (txtEmail.Value == usuario && txtPassword.Value == password)
+                    {
+                        var cliente = new Cliente()
+                        {
+                            Debug = true,
+                            RazonSocial = "Webmaster DEBUG",
+                        };
+
+                        _sessionManager.Set("Usuario", cliente);
+
+                        Response.Redirect("MenuPrincipal.aspx", false);
+                        Context.ApplicationInstance.CompleteRequest();
+                    }
+                    else
+                    {
+                        lblError.Text = $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_42")}";
+                        lblError.Visible = true;
+                    }
+
+                }
             }
             catch (SqlException)
             {
-                AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}");
+                lblError.Text = $"{_traduccionService.ObtenerMensaje(idioma, "ERR_03")}";
+                lblError.Visible = true;
             }
             catch (Exception ex)
             {

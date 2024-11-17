@@ -48,6 +48,9 @@ namespace MidMarket.UI
             if (Cliente == null)
                 Response.Redirect("Default.aspx");
 
+            if (Cliente.Debug)
+                Response.Redirect("AdministracionBD.aspx");
+
             var idioma = _sessionManager.Get<IIdioma>("Idioma");
 
             try

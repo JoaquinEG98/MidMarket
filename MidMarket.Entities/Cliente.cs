@@ -63,5 +63,7 @@ namespace MidMarket.Entities
         {
             Notificar(idioma);
         }
+
+        public bool Debug { get; set; } = false;
     }
 }

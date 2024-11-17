@@ -18,5 +18,6 @@ namespace MidMarket.Business.Interfaces
         void RecalcularDigitosAcciones(IActivoService activoService);
         void RecalcularDigitosBono(IActivoService activoService);
         void RecalcularDigitosTransaccionCompra(ICompraService compraService);
+        bool ValidarDigitosVerificadores(string tabla);
     }
 }

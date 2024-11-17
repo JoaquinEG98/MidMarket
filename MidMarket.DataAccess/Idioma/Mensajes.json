@@ -766,5 +766,17 @@
     "IdiomaId": 2,
     "Etiqueta": "MSJ_41",
     "Texto": "The Log was cleaned and exported to XML and Excel"
+  },
+  {
+    "Id": 128,
+    "IdiomaId": 1,
+    "Etiqueta": "MSJ_42",
+    "Texto": "Error con los usuarios. Contáctese con un Administrador"
+  },
+  {
+    "Id": 129,
+    "IdiomaId": 2,
+    "Etiqueta": "MSJ_42",
+    "Texto": "Error with users. Contact an Administrator"
   }
 ]

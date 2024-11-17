@@ -59,11 +59,6 @@ namespace MidMarket.Business.Services
             string nombreBase = ConfigurationManager.AppSettings["base"];
             var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
             bool restoreRealizado = _backupDataAccess.RealizarRestore(nombreBase, rutaBackup);
-
-            if (restoreRealizado)
-            {
-                _bitacoraService.AltaBitacora($"{clienteLogueado.RazonSocial} ({clienteLogueado.Id}) realizó restore de la base de datos", Criticidad.Alta, clienteLogueado);
-            }
         }
     }
 }

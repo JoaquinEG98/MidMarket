@@ -1,0 +1,2913 @@
+<table border='1'>
+<tr><th>Fecha</th><th>Usuario</th><th>Criticidad</th><th>Mensaje</th></tr>
+<tr>
+<td>06/11/2024 20:01</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>06/11/2024 20:01</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>06/11/2024 20:01</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>06/11/2024 20:01</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>06/11/2024 20:04</td>
+<td>Joaquin</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 3005</td>
+</tr>
+<tr>
+<td>06/11/2024 20:04</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>06/11/2024 20:04</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>06/11/2024 20:04</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>06/11/2024 20:06</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>06/11/2024 20:06</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>06/11/2024 20:06</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>06/11/2024 20:07</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>06/11/2024 20:07</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>06/11/2024 20:07</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>06/11/2024 20:08</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) agregó Activo (2) al carrito</td>
+</tr>
+<tr>
+<td>06/11/2024 20:08</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) agregó Activo (3) al carrito</td>
+</tr>
+<tr>
+<td>06/11/2024 20:08</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (2) al carrito</td>
+</tr>
+<tr>
+<td>06/11/2024 20:08</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (2) al carrito</td>
+</tr>
+<tr>
+<td>06/11/2024 20:08</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (3) al carrito</td>
+</tr>
+<tr>
+<td>06/11/2024 20:08</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (3) al carrito</td>
+</tr>
+<tr>
+<td>06/11/2024 20:08</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) eliminó Activo del carrito</td>
+</tr>
+<tr>
+<td>06/11/2024 20:08</td>
+<td>MELI</td>
+<td>Media</td>
+<td>MELI (7005) realizó la Compra con Id: (17025) por un total de ($36750,0000)</td>
+</tr>
+<tr>
+<td>06/11/2024 20:09</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>06/11/2024 20:09</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) cerró sesión</td>
+</tr>
+<tr>
+<td>06/11/2024 20:09</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>06/11/2024 20:09</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) cerró sesión</td>
+</tr>
+<tr>
+<td>06/11/2024 20:09</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>06/11/2024 20:09</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>06/11/2024 20:09</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>06/11/2024 20:09</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) agregó Activo (3) al carrito</td>
+</tr>
+<tr>
+<td>06/11/2024 20:09</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) agregó Activo (3) al carrito</td>
+</tr>
+<tr>
+<td>06/11/2024 20:09</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 09:34</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 09:36</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 09:36</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 09:36</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>CVSA (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 09:37</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>CVSA (3006) dio de alta la Acción (8 - asdfdasf)</td>
+</tr>
+<tr>
+<td>07/11/2024 09:37</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>CVSA (3006) modificó la Accion (8 - dbdbbdfb)</td>
+</tr>
+<tr>
+<td>07/11/2024 09:37</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>CVSA (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 09:37</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 09:37</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 09:39</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 09:40</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 09:40</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>CVSA (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 09:40</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>CVSA (3006) dio de alta la Acción (9 - sdgsadg)</td>
+</tr>
+<tr>
+<td>07/11/2024 09:41</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>CVSA (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 09:41</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 09:42</td>
+<td>Joaquin</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 3005</td>
+</tr>
+<tr>
+<td>07/11/2024 09:42</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 09:42</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 09:42</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 09:42</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 09:43</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 09:43</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>CVSA (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 09:43</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>CVSA (3006) modificó la Accion (9 - xxxcvx)</td>
+</tr>
+<tr>
+<td>07/11/2024 09:43</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>CVSA (3006) dio de alta la Acción (10 - gdaswgf)</td>
+</tr>
+<tr>
+<td>07/11/2024 09:44</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>CVSA (3006) dio de alta el Bono (9 - sagsdag)</td>
+</tr>
+<tr>
+<td>07/11/2024 09:44</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>CVSA (3006) modificó el Bono (9 - sagsdag)</td>
+</tr>
+<tr>
+<td>07/11/2024 09:44</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>CVSA (3006) modificó el Bono (9 - sagsdag)</td>
+</tr>
+<tr>
+<td>07/11/2024 09:45</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>CVSA (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 09:59</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 10:00</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (3) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 10:00</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (3) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 10:00</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) agregó Activo (3) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 10:00</td>
+<td>MELI</td>
+<td>Media</td>
+<td>MELI (7005) realizó la venta con Id: (8018) por un total de ($200,0000)</td>
+</tr>
+<tr>
+<td>07/11/2024 10:00</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 10:04</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 10:04</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 10:15</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 11:55</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) realizó restore de la base de datos</td>
+</tr>
+<tr>
+<td>07/11/2024 11:55</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 11:55</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 11:55</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) agregó Activo (2) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 11:55</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (2) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 11:55</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (2) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 11:55</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (2) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 11:57</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 11:57</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 11:57</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) agregó Activo (2) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 11:57</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (3) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 11:57</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (3) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 11:57</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (3) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 11:57</td>
+<td>MELI</td>
+<td>Media</td>
+<td>MELI (7005) realizó la venta con Id: (8019) por un total de ($12500,0000)</td>
+</tr>
+<tr>
+<td>07/11/2024 11:57</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 11:58</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 11:59</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>CVSA (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 11:59</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>CVSA (3006) dio de alta la Acción (11 - fasfdsa)</td>
+</tr>
+<tr>
+<td>07/11/2024 11:59</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>CVSA (3006) modificó la Accion (11 - vxcv)</td>
+</tr>
+<tr>
+<td>07/11/2024 12:00</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>CVSA (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 12:00</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 12:00</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (3) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 12:00</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (3) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 12:00</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (3) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 12:00</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (3) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 12:00</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (3) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 12:01</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 15:00</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 15:00</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 15:00</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 15:00</td>
+<td>MELI</td>
+<td>Media</td>
+<td>MELI (7005) realizó la venta con Id: (8020) por un total de ($35000,0000)</td>
+</tr>
+<tr>
+<td>07/11/2024 15:00</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 15:01</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 15:15</td>
+<td>Joaquin</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 3005</td>
+</tr>
+<tr>
+<td>07/11/2024 15:15</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 15:15</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 15:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 15:17</td>
+<td>MELI</td>
+<td>Media</td>
+<td>MELI (7005) realizó la venta con Id: (8021) por un total de ($33600,0000)</td>
+</tr>
+<tr>
+<td>07/11/2024 15:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) agregó Activo (2) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 15:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) agregó Activo (9) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 15:18</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) eliminó Activo del carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 15:18</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) eliminó Activo del carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 15:18</td>
+<td>MELI</td>
+<td>Media</td>
+<td>MELI (7005) realizó la Compra con Id: (18025) por un total de ($2500)</td>
+</tr>
+<tr>
+<td>07/11/2024 15:18</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 18:45</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 18:45</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 18:45</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 18:45</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) agregó Activo (2) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 18:45</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) agregó Activo (9) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 18:47</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 18:47</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 18:47</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 18:47</td>
+<td>Amazon</td>
+<td>Media</td>
+<td>Amazon (8005) realizó la Compra con Id: (18028) por un total de ($14750)</td>
+</tr>
+<tr>
+<td>07/11/2024 18:47</td>
+<td>Joaquin</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 3005</td>
+</tr>
+<tr>
+<td>07/11/2024 18:47</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 18:50</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 18:54</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 18:55</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 18:56</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) agregó Activo (2) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 18:56</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) eliminó Activo del carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 18:56</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) agregó Activo (8) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 18:56</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) actualizó la cantidad del carrito del Activo: (8) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 18:56</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) actualizó la cantidad del carrito del Activo: (8) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 18:56</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) actualizó la cantidad del carrito del Activo: (8) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 18:56</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) actualizó la cantidad del carrito del Activo: (8) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 18:56</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) actualizó la cantidad del carrito del Activo: (8) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 18:56</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) actualizó la cantidad del carrito del Activo: (8) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 18:56</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) actualizó la cantidad del carrito del Activo: (8) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 18:56</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) actualizó la cantidad del carrito del Activo: (8) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 18:56</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) actualizó la cantidad del carrito del Activo: (8) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 18:56</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) actualizó la cantidad del carrito del Activo: (8) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 18:56</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) actualizó la cantidad del carrito del Activo: (8) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 18:56</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) actualizó la cantidad del carrito del Activo: (8) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 18:56</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) actualizó la cantidad del carrito del Activo: (8) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 18:56</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) actualizó la cantidad del carrito del Activo: (8) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 18:56</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) actualizó la cantidad del carrito del Activo: (8) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 18:56</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) actualizó la cantidad del carrito del Activo: (8) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 18:56</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) actualizó la cantidad del carrito del Activo: (8) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 18:56</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) agregó Activo (9) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 18:56</td>
+<td>Amazon</td>
+<td>Media</td>
+<td>Amazon (8005) realizó la Compra con Id: (18029) por un total de ($2518)</td>
+</tr>
+<tr>
+<td>07/11/2024 18:57</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 18:57</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 18:57</td>
+<td>Amazon</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 8005</td>
+</tr>
+<tr>
+<td>07/11/2024 18:57</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 18:57</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) agregó Activo (2) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 18:57</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) agregó Activo (9) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 18:57</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) eliminó Activo del carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 18:58</td>
+<td>Amazon</td>
+<td>Media</td>
+<td>Amazon (8005) cargó ($100000) de saldo en su cuenta comitente: (1606)</td>
+</tr>
+<tr>
+<td>07/11/2024 18:58</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 18:58</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 18:58</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 18:58</td>
+<td>Amazon</td>
+<td>Media</td>
+<td>Amazon (8005) realizó la Compra con Id: (18030) por un total de ($10000,0000)</td>
+</tr>
+<tr>
+<td>07/11/2024 18:59</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) agregó Activo (2) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 18:59</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) agregó Activo (9) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 18:59</td>
+<td>Amazon</td>
+<td>Media</td>
+<td>Amazon (8005) realizó la Compra con Id: (18031) por un total de ($14750)</td>
+</tr>
+<tr>
+<td>07/11/2024 19:00</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 19:05</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 19:05</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 19:06</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 19:06</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 19:06</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) agregó Activo (2) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 19:06</td>
+<td>Amazon</td>
+<td>Media</td>
+<td>Amazon (8005) realizó la Compra con Id: (18032) por un total de ($12250)</td>
+</tr>
+<tr>
+<td>07/11/2024 19:06</td>
+<td>Joaquin</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 3005</td>
+</tr>
+<tr>
+<td>07/11/2024 19:06</td>
+<td>Joaquin</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 3005</td>
+</tr>
+<tr>
+<td>07/11/2024 19:06</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 19:06</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 19:06</td>
+<td>Shell</td>
+<td>Baja</td>
+<td>Shell (9005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 19:06</td>
+<td>Shell</td>
+<td>Baja</td>
+<td>Shell (9005) agregó Activo (9) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 19:06</td>
+<td>Shell</td>
+<td>Media</td>
+<td>Shell (9005) realizó la Compra con Id: (18033) por un total de ($2500)</td>
+</tr>
+<tr>
+<td>07/11/2024 19:10</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 19:10</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 19:10</td>
+<td>MELI</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 7005</td>
+</tr>
+<tr>
+<td>07/11/2024 19:10</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 19:10</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) agregó Activo (6) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 19:10</td>
+<td>MELI</td>
+<td>Media</td>
+<td>MELI (7005) realizó la Compra con Id: (18034) por un total de ($3950)</td>
+</tr>
+<tr>
+<td>07/11/2024 19:17</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 19:17</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 19:17</td>
+<td>Amazon</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 8005</td>
+</tr>
+<tr>
+<td>07/11/2024 19:17</td>
+<td>Amazon</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 8005</td>
+</tr>
+<tr>
+<td>07/11/2024 19:17</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 19:17</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) agregó Activo (2) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 19:17</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) agregó Activo (9) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 19:17</td>
+<td>Amazon</td>
+<td>Media</td>
+<td>Amazon (8005) realizó la Compra con Id: (18035) por un total de ($14750)</td>
+</tr>
+<tr>
+<td>07/11/2024 19:17</td>
+<td>Joaquin</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 3005</td>
+</tr>
+<tr>
+<td>07/11/2024 19:17</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 19:19</td>
+<td>Amazon</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 8005</td>
+</tr>
+<tr>
+<td>07/11/2024 19:19</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 19:19</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) agregó Activo (2) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 19:19</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) agregó Activo (10) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 19:19</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) actualizó la cantidad del carrito del Activo: (10) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 19:19</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) actualizó la cantidad del carrito del Activo: (10) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 19:19</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) actualizó la cantidad del carrito del Activo: (10) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 19:19</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) actualizó la cantidad del carrito del Activo: (10) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 19:19</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) actualizó la cantidad del carrito del Activo: (10) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 19:19</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) actualizó la cantidad del carrito del Activo: (10) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 19:19</td>
+<td>Amazon</td>
+<td>Media</td>
+<td>Amazon (8005) realizó la Compra con Id: (18036) por un total de ($12950,0000)</td>
+</tr>
+<tr>
+<td>07/11/2024 19:20</td>
+<td>Amazon</td>
+<td>Media</td>
+<td>Amazon (8005) realizó la venta con Id: (8022) por un total de ($1,0000)</td>
+</tr>
+<tr>
+<td>07/11/2024 19:20</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 19:26</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 19:27</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 21:15</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) realizó restore de la base de datos</td>
+</tr>
+<tr>
+<td>07/11/2024 21:15</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 21:15</td>
+<td>MELI</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 7005</td>
+</tr>
+<tr>
+<td>07/11/2024 21:15</td>
+<td>MELI</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 7005</td>
+</tr>
+<tr>
+<td>07/11/2024 21:15</td>
+<td>MELI</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 7005</td>
+</tr>
+<tr>
+<td>07/11/2024 21:15</td>
+<td>MELI</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 7005</td>
+</tr>
+<tr>
+<td>07/11/2024 21:16</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 21:16</td>
+<td>MELI</td>
+<td>Alta</td>
+<td>MELI (7005) cambió su contraseña</td>
+</tr>
+<tr>
+<td>07/11/2024 21:16</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) agregó Activo (9) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:16</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) agregó Activo (12) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:16</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) agregó Activo (2) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:16</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (2) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:16</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:16</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:16</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:16</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:16</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:16</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Media</td>
+<td>MELI (7005) realizó la Compra con Id: (18037) por un total de ($51000,0000)</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Media</td>
+<td>MELI (7005) realizó la venta con Id: (8023) por un total de ($3950,0000)</td>
+</tr>
+<tr>
+<td>07/11/2024 21:17</td>
+<td>MELI</td>
+<td>Media</td>
+<td>MELI (7005) realizó la venta con Id: (8024) por un total de ($10000,0000)</td>
+</tr>
+<tr>
+<td>07/11/2024 21:18</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 21:18</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 21:18</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) cambió los permisos de: Testeo (11007)</td>
+</tr>
+<tr>
+<td>07/11/2024 21:18</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) cambió los permisos de: Testeo (11007)</td>
+</tr>
+<tr>
+<td>07/11/2024 21:19</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 21:19</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 21:24</td>
+<td>Amazon</td>
+<td>Baja</td>
+<td>Amazon (8005) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 21:24</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>CVSA (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 21:24</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>CVSA (3006) dio de alta la Acción (12 - fdsfds)</td>
+</tr>
+<tr>
+<td>07/11/2024 21:24</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>CVSA (3006) dio de alta el Bono (10 - bfdbfgdb)</td>
+</tr>
+<tr>
+<td>07/11/2024 21:25</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>CVSA (3006) modificó la Accion (12 - TEST)</td>
+</tr>
+<tr>
+<td>07/11/2024 21:25</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>CVSA (3006) modificó el Bono (10 - DASDSA)</td>
+</tr>
+<tr>
+<td>07/11/2024 21:25</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>CVSA (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>07/11/2024 21:25</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>07/11/2024 21:25</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) cerró sesión</td>
+</tr>
+<tr>
+<td>08/11/2024 09:20</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/11/2024 09:28</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/11/2024 09:32</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/11/2024 09:33</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) cambió los permisos de: Testeo (11007)</td>
+</tr>
+<tr>
+<td>08/11/2024 09:35</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/11/2024 09:36</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) cambió los permisos de: Testeo (11007)</td>
+</tr>
+<tr>
+<td>08/11/2024 09:36</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) cambió los permisos de: Testeo (11007)</td>
+</tr>
+<tr>
+<td>08/11/2024 09:47</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/11/2024 09:53</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/11/2024 09:58</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) cambió los permisos de: Testetoteote (12007)</td>
+</tr>
+<tr>
+<td>08/11/2024 09:58</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) cambió los permisos de: Testetoteote (12007)</td>
+</tr>
+<tr>
+<td>08/11/2024 09:58</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) cambió los permisos de: Testetoteote (12007)</td>
+</tr>
+<tr>
+<td>08/11/2024 09:58</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Se corrompieron registros de las Tablas: Cuenta</td>
+</tr>
+<tr>
+<td>08/11/2024 09:59</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Se corrompieron registros de las Tablas: Cuenta</td>
+</tr>
+<tr>
+<td>08/11/2024 09:59</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Se corrompieron registros de las Tablas: Cuenta</td>
+</tr>
+<tr>
+<td>08/11/2024 09:59</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Se corrompieron registros de las Tablas: Cuenta</td>
+</tr>
+<tr>
+<td>08/11/2024 09:59</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Se corrompieron registros de las Tablas: Cuenta</td>
+</tr>
+<tr>
+<td>08/11/2024 09:59</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Se corrompieron registros de las Tablas: Cuenta</td>
+</tr>
+<tr>
+<td>08/11/2024 10:14</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/11/2024 10:14</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) cambió los permisos de: sdafdsaffdas (12008)</td>
+</tr>
+<tr>
+<td>08/11/2024 10:17</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/11/2024 10:18</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>08/11/2024 10:20</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/11/2024 10:21</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) cambió los permisos de: rd625p6hN8uSd3iGLaUnPQ== (13008)</td>
+</tr>
+<tr>
+<td>08/11/2024 10:27</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Se corrompieron registros de las Tablas: Cliente, UsuarioPermiso, TransaccionCompra, DetalleCompra, ClienteActivo, TransaccionVenta, DetalleVenta, Cuenta, Bitacora</td>
+</tr>
+<tr>
+<td>08/11/2024 10:27</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Se corrompieron registros de las Tablas: Cliente, UsuarioPermiso, TransaccionCompra, DetalleCompra, ClienteActivo, TransaccionVenta, DetalleVenta, Cuenta</td>
+</tr>
+<tr>
+<td>08/11/2024 10:27</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Se corrompieron registros de las Tablas: Cliente, UsuarioPermiso, TransaccionCompra, DetalleCompra, ClienteActivo, TransaccionVenta, DetalleVenta, Cuenta</td>
+</tr>
+<tr>
+<td>08/11/2024 10:28</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) cambió los permisos de: 73XsrQkoakRnWmz7yD4/fQ== (13009)</td>
+</tr>
+<tr>
+<td>08/11/2024 10:28</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>08/11/2024 10:28</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/11/2024 10:28</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) agregó Activo (1) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 10:28</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) agregó Activo (9) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 10:28</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) agregó Activo (12) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 10:28</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 10:28</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 10:28</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 10:28</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 10:28</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 10:28</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 10:28</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 10:28</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 10:28</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 10:28</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 10:29</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 10:29</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 10:29</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 10:29</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 10:29</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 10:29</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 10:29</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 10:29</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 10:29</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 10:29</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 10:29</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 10:29</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 10:29</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 10:29</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 10:29</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 10:29</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 10:29</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 10:29</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (12) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 10:29</td>
+<td>eBay</td>
+<td>Media</td>
+<td>eBay (13009) realizó la Compra con Id: (19037) por un total de ($50000,0000)</td>
+</tr>
+<tr>
+<td>08/11/2024 10:29</td>
+<td>eBay</td>
+<td>Media</td>
+<td>eBay (13009) cargó ($100000) de saldo en su cuenta comitente: (1102)</td>
+</tr>
+<tr>
+<td>08/11/2024 10:29</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) agregó Activo (3) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 10:29</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) agregó Activo (7) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 10:30</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) agregó Activo (14) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 10:30</td>
+<td>eBay</td>
+<td>Media</td>
+<td>eBay (13009) cargó ($100000) de saldo en su cuenta comitente: (1102)</td>
+</tr>
+<tr>
+<td>08/11/2024 10:30</td>
+<td>eBay</td>
+<td>Media</td>
+<td>eBay (13009) realizó la Compra con Id: (19038) por un total de ($113350)</td>
+</tr>
+<tr>
+<td>08/11/2024 10:30</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) cerró sesión</td>
+</tr>
+<tr>
+<td>08/11/2024 10:35</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/11/2024 10:35</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Se corrompieron registros de las Tablas: Activo, Accion, Bono</td>
+</tr>
+<tr>
+<td>08/11/2024 10:35</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Se corrompieron registros de las Tablas: Activo, Accion, Bono</td>
+</tr>
+<tr>
+<td>08/11/2024 10:35</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Se corrompieron registros de las Tablas: Activo, Accion, Bono</td>
+</tr>
+<tr>
+<td>08/11/2024 10:35</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>08/11/2024 10:43</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/11/2024 10:43</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) cerró sesión</td>
+</tr>
+<tr>
+<td>08/11/2024 10:47</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/11/2024 10:49</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Se corrompieron registros de las Tablas: Permiso, FamiliaPatente</td>
+</tr>
+<tr>
+<td>08/11/2024 10:49</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Se corrompieron registros de las Tablas: Permiso, FamiliaPatente</td>
+</tr>
+<tr>
+<td>08/11/2024 10:49</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>08/11/2024 10:50</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/11/2024 10:50</td>
+<td>Joaquin</td>
+<td>Media</td>
+<td>Joaquin (3005) realizó backup de la base de datos</td>
+</tr>
+<tr>
+<td>08/11/2024 10:50</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>08/11/2024 11:49</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/11/2024 11:50</td>
+<td>eBay</td>
+<td>Media</td>
+<td>eBay (13009) realizó la venta con Id: (9023) por un total de ($300,0000)</td>
+</tr>
+<tr>
+<td>08/11/2024 11:50</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) cerró sesión</td>
+</tr>
+<tr>
+<td>08/11/2024 13:57</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/11/2024 13:57</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Se corrompieron registros de las Tablas: Bitacora</td>
+</tr>
+<tr>
+<td>08/11/2024 13:57</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Se corrompieron registros de las Tablas: Bitacora</td>
+</tr>
+<tr>
+<td>08/11/2024 13:57</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Se corrompieron registros de las Tablas: Bitacora</td>
+</tr>
+<tr>
+<td>08/11/2024 13:57</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>08/11/2024 13:57</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/11/2024 13:57</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) agregó Activo (2) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 13:57</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) cerró sesión</td>
+</tr>
+<tr>
+<td>08/11/2024 14:14</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/11/2024 14:16</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/11/2024 14:16</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Se corrompieron registros de las Tablas: Bitacora</td>
+</tr>
+<tr>
+<td>08/11/2024 14:16</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Se corrompieron registros de las Tablas: Bitacora</td>
+</tr>
+<tr>
+<td>08/11/2024 14:16</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Se corrompieron registros de las Tablas: Bitacora</td>
+</tr>
+<tr>
+<td>08/11/2024 14:16</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/11/2024 14:17</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>08/11/2024 14:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/11/2024 14:17</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) cerró sesión</td>
+</tr>
+<tr>
+<td>09/11/2024 13:31</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>CVSA (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>09/11/2024 14:35</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>CVSA (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>09/11/2024 14:35</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>09/11/2024 14:43</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) cerró sesión</td>
+</tr>
+<tr>
+<td>09/11/2024 14:43</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>CVSA (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>09/11/2024 15:00</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>CVSA (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>09/11/2024 15:00</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>09/11/2024 15:27</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) cerró sesión</td>
+</tr>
+<tr>
+<td>09/11/2024 15:27</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>CVSA (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>09/11/2024 15:31</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>CVSA (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>09/11/2024 15:34</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>CVSA (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>09/11/2024 15:41</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>CVSA (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>09/11/2024 15:41</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>09/11/2024 15:45</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>09/11/2024 15:45</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>CVSA (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>09/11/2024 15:50</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>CVSA (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>09/11/2024 15:50</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>CVSA (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>09/11/2024 15:50</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>CVSA (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>09/11/2024 15:50</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>09/11/2024 16:26</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>09/11/2024 16:49</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>09/11/2024 16:49</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>CVSA (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>09/11/2024 16:55</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>CVSA (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>09/11/2024 16:55</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>09/11/2024 17:37</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) cambió los permisos de: eBay (13009)</td>
+</tr>
+<tr>
+<td>09/11/2024 18:03</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>09/11/2024 18:26</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>09/11/2024 18:29</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>09/11/2024 18:30</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>CVSA (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>09/11/2024 18:33</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>CVSA (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>09/11/2024 18:33</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>09/11/2024 18:35</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>09/11/2024 18:35</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>CVSA (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>09/11/2024 18:41</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>CVSA (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>09/11/2024 18:41</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>09/11/2024 18:46</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>09/11/2024 18:46</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>09/11/2024 18:47</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) cerró sesión</td>
+</tr>
+<tr>
+<td>09/11/2024 18:47</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>CVSA (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>11/11/2024 11:43</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>11/11/2024 13:22</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>11/11/2024 15:48</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>11/11/2024 15:49</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) agregó Activo (2) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:49</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) agregó Activo (3) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:49</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) agregó Activo (9) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:49</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:49</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:49</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:49</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:49</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:49</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (3) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:49</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:49</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:49</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:49</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:49</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (2) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:49</td>
+<td>eBay</td>
+<td>Media</td>
+<td>eBay (13009) realizó la Compra con Id: (19039) por un total de ($83100,0000)</td>
+</tr>
+<tr>
+<td>11/11/2024 15:49</td>
+<td>eBay</td>
+<td>Alta</td>
+<td>Se corrompieron registros de las Tablas: Bitacora</td>
+</tr>
+<tr>
+<td>11/11/2024 15:49</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>11/11/2024 15:49</td>
+<td>eBay</td>
+<td>Alta</td>
+<td>Se corrompieron registros de las Tablas: Bitacora</td>
+</tr>
+<tr>
+<td>11/11/2024 15:49</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>11/11/2024 15:49</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Se corrompieron registros de las Tablas: Bitacora</td>
+</tr>
+<tr>
+<td>11/11/2024 15:50</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Se corrompieron registros de las Tablas: Bitacora</td>
+</tr>
+<tr>
+<td>11/11/2024 15:50</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Se corrompieron registros de las Tablas: Bitacora</td>
+</tr>
+<tr>
+<td>11/11/2024 15:50</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>11/11/2024 15:50</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>11/11/2024 15:50</td>
+<td>eBay</td>
+<td>Media</td>
+<td>eBay (13009) cargó ($150000) de saldo en su cuenta comitente: (1102)</td>
+</tr>
+<tr>
+<td>11/11/2024 15:51</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) agregó Activo (14) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:51</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) agregó Activo (2) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:51</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (14) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:51</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (14) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:51</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (2) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:51</td>
+<td>eBay</td>
+<td>Media</td>
+<td>eBay (13009) realizó la Compra con Id: (19040) por un total de ($112900,0000)</td>
+</tr>
+<tr>
+<td>11/11/2024 15:51</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) cerró sesión</td>
+</tr>
+<tr>
+<td>11/11/2024 15:51</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>11/11/2024 15:51</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) cambió los permisos de: eBay (13009)</td>
+</tr>
+<tr>
+<td>11/11/2024 15:52</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>11/11/2024 15:52</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>11/11/2024 15:52</td>
+<td>eBay</td>
+<td>Media</td>
+<td>eBay (13009) cargó ($150000) de saldo en su cuenta comitente: (1102)</td>
+</tr>
+<tr>
+<td>11/11/2024 15:52</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) agregó Activo (3) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:52</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) agregó Activo (9) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:53</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:53</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:53</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:53</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:53</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:53</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:53</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:53</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:53</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (3) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:53</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (9) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:53</td>
+<td>eBay</td>
+<td>Media</td>
+<td>eBay (13009) realizó la Compra con Id: (19041) por un total de ($58600)</td>
+</tr>
+<tr>
+<td>11/11/2024 15:53</td>
+<td>eBay</td>
+<td>Media</td>
+<td>eBay (13009) realizó la venta con Id: (9024) por un total de ($200,0000)</td>
+</tr>
+<tr>
+<td>11/11/2024 15:53</td>
+<td>eBay</td>
+<td>Media</td>
+<td>eBay (13009) realizó la venta con Id: (9025) por un total de ($12500,0000)</td>
+</tr>
+<tr>
+<td>11/11/2024 15:54</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) agregó Activo (3) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:54</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) agregó Activo (4) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:54</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) agregó Activo (7) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:54</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) agregó Activo (9) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 15:54</td>
+<td>eBay</td>
+<td>Media</td>
+<td>eBay (13009) realizó la Compra con Id: (19042) por un total de ($34170)</td>
+</tr>
+<tr>
+<td>11/11/2024 15:56</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) cerró sesión</td>
+</tr>
+<tr>
+<td>11/11/2024 16:05</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>11/11/2024 16:07</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>11/11/2024 18:50</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>11/11/2024 18:55</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) realizó restore de la base de datos</td>
+</tr>
+<tr>
+<td>11/11/2024 18:55</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>11/11/2024 18:55</td>
+<td>MELI</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 7005</td>
+</tr>
+<tr>
+<td>11/11/2024 18:55</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>11/11/2024 18:56</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) cerró sesión</td>
+</tr>
+<tr>
+<td>11/11/2024 18:56</td>
+<td>MELI</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 7005</td>
+</tr>
+<tr>
+<td>11/11/2024 18:56</td>
+<td>MELI</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 7005</td>
+</tr>
+<tr>
+<td>11/11/2024 18:56</td>
+<td>MELI</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 7005</td>
+</tr>
+<tr>
+<td>11/11/2024 18:56</td>
+<td>MELI</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 7005</td>
+</tr>
+<tr>
+<td>11/11/2024 18:56</td>
+<td>MELI</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 7005</td>
+</tr>
+<tr>
+<td>11/11/2024 18:56</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>11/11/2024 18:56</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) agregó Activo (3) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 18:56</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) agregó Activo (9) al carrito</td>
+</tr>
+<tr>
+<td>11/11/2024 18:56</td>
+<td>MELI</td>
+<td>Media</td>
+<td>MELI (7005) realizó la Compra con Id: (19043) por un total de ($31550)</td>
+</tr>
+<tr>
+<td>11/11/2024 18:57</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) cerró sesión</td>
+</tr>
+<tr>
+<td>11/11/2024 18:57</td>
+<td>Joaquin</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 3005</td>
+</tr>
+<tr>
+<td>11/11/2024 18:57</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+</table>
