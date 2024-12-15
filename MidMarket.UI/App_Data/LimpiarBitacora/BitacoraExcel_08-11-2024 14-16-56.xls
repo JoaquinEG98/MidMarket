@@ -1,0 +1,3003 @@
+<table border='1'>
+<tr><th>Fecha</th><th>Usuario</th><th>Criticidad</th><th>Mensaje</th></tr>
+<tr>
+<td>28/10/2024 20:23</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) modificó el usuario: (3006)</td>
+</tr>
+<tr>
+<td>28/10/2024 20:23</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) modificó el usuario: (6005)</td>
+</tr>
+<tr>
+<td>28/10/2024 20:24</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) modificó el usuario: (7005)</td>
+</tr>
+<tr>
+<td>28/10/2024 20:24</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) modificó el usuario: (8005)</td>
+</tr>
+<tr>
+<td>28/10/2024 20:24</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) modificó el usuario: (9005)</td>
+</tr>
+<tr>
+<td>28/10/2024 20:24</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>28/10/2024 20:25</td>
+<td>Joaquin</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 3005</td>
+</tr>
+<tr>
+<td>28/10/2024 20:25</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>28/10/2024 20:26</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>03/09/2024 16:54</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>03/09/2024 16:56</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>03/09/2024 16:56</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>03/09/2024 16:57</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>03/09/2024 16:58</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>03/09/2024 17:01</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>03/09/2024 17:02</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) guardó la patente/familia 3013</td>
+</tr>
+<tr>
+<td>03/09/2024 17:02</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) guardó la familia 3013</td>
+</tr>
+<tr>
+<td>03/09/2024 17:02</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) guardó la patente/familia 3014</td>
+</tr>
+<tr>
+<td>03/09/2024 17:02</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) guardó la familia 3014</td>
+</tr>
+<tr>
+<td>03/09/2024 17:02</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) guardó la patente/familia 3015</td>
+</tr>
+<tr>
+<td>03/09/2024 17:02</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) guardó la familia 3015</td>
+</tr>
+<tr>
+<td>03/09/2024 17:02</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) cambió los permisos de: Joaquin (3005)</td>
+</tr>
+<tr>
+<td>03/09/2024 17:02</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) recalculó los Digitos Verificadores Verticales de la Tabla: UsuarioPermiso</td>
+</tr>
+<tr>
+<td>03/09/2024 17:02</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>03/09/2024 17:03</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>03/09/2024 17:04</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>03/09/2024 17:04</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>03/09/2024 17:05</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>03/09/2024 17:05</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) cambió los permisos de: Joaquin Administrador (3006)</td>
+</tr>
+<tr>
+<td>03/09/2024 17:05</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) recalculó los Digitos Verificadores Verticales de la Tabla: UsuarioPermiso</td>
+</tr>
+<tr>
+<td>03/09/2024 17:05</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) cambió los permisos de: Joaquin Cliente (3007)</td>
+</tr>
+<tr>
+<td>03/09/2024 17:05</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) recalculó los Digitos Verificadores Verticales de la Tabla: UsuarioPermiso</td>
+</tr>
+<tr>
+<td>03/09/2024 17:06</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>03/09/2024 17:06</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>03/09/2024 17:06</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>03/09/2024 17:06</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>03/09/2024 17:06</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>03/09/2024 17:06</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>03/09/2024 17:06</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>03/09/2024 19:38</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>03/09/2024 19:38</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>03/09/2024 19:38</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>03/09/2024 19:39</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>03/09/2024 21:32</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>03/09/2024 21:32</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>04/09/2024 17:32</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>04/09/2024 17:32</td>
+<td>Joaquin</td>
+<td>Media</td>
+<td>Joaquin (3005) realizó backup de la base de datos</td>
+</tr>
+<tr>
+<td>08/09/2024 13:01</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/09/2024 13:01</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>08/09/2024 13:06</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/09/2024 13:06</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) recalculó los Digitos Verificadores Verticales de la Tabla: Cliente</td>
+</tr>
+<tr>
+<td>08/09/2024 13:06</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) recalculó los Digitos Verificadores Verticales de la Tabla: UsuarioPermiso</td>
+</tr>
+<tr>
+<td>08/09/2024 13:06</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>08/09/2024 13:06</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/09/2024 13:16</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/09/2024 13:16</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>08/09/2024 13:17</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/09/2024 13:17</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>08/09/2024 13:17</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/09/2024 13:17</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) recalculó los Digitos Verificadores Verticales de la Tabla: Cliente</td>
+</tr>
+<tr>
+<td>08/09/2024 13:17</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) recalculó los Digitos Verificadores Verticales de la Tabla: UsuarioPermiso</td>
+</tr>
+<tr>
+<td>08/09/2024 13:19</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/09/2024 13:25</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/09/2024 13:25</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>08/09/2024 15:38</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/09/2024 15:39</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>08/09/2024 15:39</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/09/2024 15:39</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>08/09/2024 15:39</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/09/2024 15:39</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>08/09/2024 15:40</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/09/2024 15:40</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>08/09/2024 15:40</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/09/2024 15:40</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>08/09/2024 15:40</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/09/2024 15:40</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/09/2024 15:40</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>08/09/2024 15:40</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/09/2024 15:40</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>08/09/2024 15:48</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/09/2024 15:48</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/09/2024 15:52</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/09/2024 15:53</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>08/09/2024 15:53</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/09/2024 15:53</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>20/09/2024 15:50</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/09/2024 16:29</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/09/2024 16:33</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/09/2024 16:40</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/09/2024 16:40</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/09/2024 20:11</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/09/2024 20:12</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/09/2024 20:13</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/09/2024 20:15</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/09/2024 20:20</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/09/2024 20:22</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/09/2024 11:09</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/09/2024 11:15</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/09/2024 11:18</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/09/2024 11:18</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>21/09/2024 11:18</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/09/2024 11:19</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/09/2024 11:20</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>21/09/2024 11:22</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/09/2024 11:22</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>21/09/2024 11:23</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/09/2024 11:23</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>21/09/2024 11:26</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/09/2024 11:26</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>21/09/2024 11:26</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/09/2024 11:26</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>21/09/2024 11:28</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/09/2024 11:28</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/09/2024 11:30</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/09/2024 11:31</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/09/2024 11:34</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/09/2024 11:35</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/09/2024 11:35</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/09/2024 11:38</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/09/2024 11:40</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/09/2024 11:41</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/09/2024 11:42</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/09/2024 11:53</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/09/2024 11:54</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/09/2024 11:56</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/09/2024 11:57</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/09/2024 11:57</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>21/09/2024 11:58</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/09/2024 11:58</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>21/09/2024 12:07</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/09/2024 12:07</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>21/09/2024 12:07</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/09/2024 12:07</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>23/09/2024 19:41</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>23/09/2024 19:41</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>23/09/2024 19:41</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>23/09/2024 19:41</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>24/09/2024 14:27</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>24/09/2024 14:27</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>24/09/2024 14:28</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>24/09/2024 14:28</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>24/09/2024 14:30</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>24/09/2024 14:36</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>24/09/2024 14:40</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>24/09/2024 14:45</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>24/09/2024 14:48</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>24/09/2024 14:52</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>24/09/2024 14:55</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>24/09/2024 14:56</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>24/09/2024 14:56</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>24/09/2024 14:57</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>24/09/2024 15:00</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>24/09/2024 15:13</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>24/09/2024 15:13</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>24/09/2024 15:13</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>24/09/2024 15:13</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>24/09/2024 15:15</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>24/09/2024 15:15</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>27/09/2024 17:15</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>27/09/2024 17:15</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>27/09/2024 20:46</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>27/09/2024 20:46</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>27/09/2024 20:47</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>27/09/2024 20:47</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>27/09/2024 20:54</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>27/09/2024 20:57</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>27/09/2024 21:00</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>27/09/2024 21:01</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>27/09/2024 21:20</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>27/09/2024 21:20</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>27/09/2024 21:20</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>28/09/2024 16:58</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>28/09/2024 17:03</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>28/09/2024 17:03</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>28/09/2024 17:05</td>
+<td>Joaquin</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 3005</td>
+</tr>
+<tr>
+<td>28/09/2024 17:05</td>
+<td>Joaquin</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 3005</td>
+</tr>
+<tr>
+<td>28/09/2024 17:06</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>28/09/2024 17:07</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>28/09/2024 17:07</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>28/09/2024 17:07</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 3006</td>
+</tr>
+<tr>
+<td>28/09/2024 17:07</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 3006</td>
+</tr>
+<tr>
+<td>28/09/2024 17:08</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 3006</td>
+</tr>
+<tr>
+<td>28/09/2024 17:08</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 3006</td>
+</tr>
+<tr>
+<td>28/09/2024 17:08</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>28/09/2024 17:08</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>28/09/2024 17:09</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>28/09/2024 17:10</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>28/09/2024 17:10</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>28/09/2024 17:11</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>28/09/2024 17:12</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>28/09/2024 17:13</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>28/09/2024 17:13</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>28/09/2024 17:13</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>28/09/2024 17:24</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>29/09/2024 12:12</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>29/09/2024 12:13</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>29/09/2024 12:14</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>29/09/2024 12:14</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>29/09/2024 12:14</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 3006</td>
+</tr>
+<tr>
+<td>29/09/2024 12:14</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>29/09/2024 12:14</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>29/09/2024 12:15</td>
+<td>Joaquin</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 3005</td>
+</tr>
+<tr>
+<td>29/09/2024 12:15</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>29/09/2024 12:16</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>29/09/2024 12:20</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>29/09/2024 12:20</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>29/09/2024 12:20</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>29/09/2024 16:19</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>29/09/2024 16:20</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>29/09/2024 16:22</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>29/09/2024 16:24</td>
+<td>Joaquin</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 3005</td>
+</tr>
+<tr>
+<td>29/09/2024 16:24</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>29/09/2024 16:27</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>29/09/2024 16:29</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>29/09/2024 16:30</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>29/09/2024 16:30</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>29/09/2024 16:32</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>29/09/2024 16:33</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>29/09/2024 16:34</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>02/10/2024 16:16</td>
+<td>Joaquin</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 3005</td>
+</tr>
+<tr>
+<td>02/10/2024 16:16</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>02/10/2024 16:17</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>02/10/2024 16:17</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>02/10/2024 16:17</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>15/10/2024 19:18</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>15/10/2024 19:18</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>15/10/2024 19:18</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>15/10/2024 19:21</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>15/10/2024 19:50</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>15/10/2024 19:51</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>15/10/2024 19:54</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>15/10/2024 19:54</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>15/10/2024 19:57</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>15/10/2024 19:59</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>15/10/2024 20:00</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) realizó restore de la base de datos</td>
+</tr>
+<tr>
+<td>15/10/2024 20:20</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) realizó restore de la base de datos</td>
+</tr>
+<tr>
+<td>15/10/2024 20:20</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>15/10/2024 20:20</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>15/10/2024 20:20</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>15/10/2024 20:20</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>15/10/2024 20:20</td>
+<td>Joaquin</td>
+<td>Media</td>
+<td>Joaquin (3005) realizó backup de la base de datos</td>
+</tr>
+<tr>
+<td>15/10/2024 20:20</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>20/10/2024 19:18</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/10/2024 19:33</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/10/2024 19:41</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/10/2024 19:43</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/10/2024 19:44</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/10/2024 19:50</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/10/2024 19:51</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/10/2024 20:09</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/10/2024 20:13</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/10/2024 20:28</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/10/2024 20:30</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/10/2024 20:32</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/10/2024 20:36</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/10/2024 20:40</td>
+<td>Joaquin</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 3005</td>
+</tr>
+<tr>
+<td>20/10/2024 20:40</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/10/2024 20:41</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/10/2024 20:47</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/10/2024 20:51</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/10/2024 20:52</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/10/2024 20:58</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/10/2024 21:01</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/10/2024 21:02</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/10/2024 21:03</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/10/2024 21:06</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/10/2024 21:08</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/10/2024 21:12</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/10/2024 21:14</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/10/2024 21:17</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/10/2024 21:19</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/10/2024 21:21</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>20/10/2024 21:21</td>
+<td>Joaquin</td>
+<td>Media</td>
+<td>Joaquin (3005) realizó backup de la base de datos</td>
+</tr>
+<tr>
+<td>21/10/2024 09:17</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 09:21</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 09:25</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 09:25</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Joaquin Administrador (3006) dio de alta el Bono (0 - MELI)</td>
+</tr>
+<tr>
+<td>21/10/2024 09:25</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Joaquin Administrador (3006) modificó el Bono (4 - MELI)</td>
+</tr>
+<tr>
+<td>21/10/2024 09:26</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Joaquin Administrador (3006) dio de alta el Bono (0 - Accion)</td>
+</tr>
+<tr>
+<td>21/10/2024 09:26</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Joaquin Administrador (3006) modificó la Accion (7 - Accion)</td>
+</tr>
+<tr>
+<td>21/10/2024 09:26</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>21/10/2024 09:26</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 09:27</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 09:27</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Joaquin Administrador (3006) modificó la Accion (11 - Accion)</td>
+</tr>
+<tr>
+<td>21/10/2024 09:27</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Joaquin Administrador (3006) modificó el Bono (10 - MELI)</td>
+</tr>
+<tr>
+<td>21/10/2024 09:27</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>21/10/2024 09:27</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 10:53</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 10:53</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>21/10/2024 10:53</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 14:21</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 14:34</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 14:34</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 14:39</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 14:40</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 14:42</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 14:44</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 14:48</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 14:52</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 14:54</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 14:56</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 14:58</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 15:01</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 15:05</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 15:07</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 15:13</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 15:14</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 15:17</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 15:27</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 15:27</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 15:29</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 15:32</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 15:33</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 15:50</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 15:51</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 15:51</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>21/10/2024 15:51</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 15:52</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>21/10/2024 18:58</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 19:00</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 19:05</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 19:07</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 19:08</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>21/10/2024 19:16</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 19:17</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 19:23</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 19:26</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 19:29</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 19:32</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 19:35</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 19:38</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 19:40</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 19:43</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 19:45</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 19:48</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 19:55</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 19:58</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 19:58</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) cambió los permisos de: Cambiando Empresa123 (4006)</td>
+</tr>
+<tr>
+<td>21/10/2024 20:02</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 20:02</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) cambió los permisos de: Cambiando Empresa123 (4006)</td>
+</tr>
+<tr>
+<td>21/10/2024 20:06</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 20:07</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 20:10</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 20:11</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 20:12</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 20:14</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 20:16</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 20:20</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 20:20</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 20:27</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 20:29</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 20:29</td>
+<td>Joaquin</td>
+<td>Media</td>
+<td>Joaquin (3005) realizó backup de la base de datos</td>
+</tr>
+<tr>
+<td>21/10/2024 20:30</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) cambió los permisos de: 123213213 (5005)</td>
+</tr>
+<tr>
+<td>21/10/2024 20:31</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) cambió los permisos de: probando (5005)</td>
+</tr>
+<tr>
+<td>21/10/2024 20:31</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) cambió los permisos de: probando (5005)</td>
+</tr>
+<tr>
+<td>21/10/2024 20:32</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 20:32</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>21/10/2024 20:33</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 20:33</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>21/10/2024 20:33</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 20:33</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Joaquin Administrador (3006) modificó la Accion (11 - Accion)</td>
+</tr>
+<tr>
+<td>21/10/2024 20:33</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Joaquin Administrador (3006) dio de alta el Bono (0 - ACY)</td>
+</tr>
+<tr>
+<td>21/10/2024 20:33</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Joaquin Administrador (3006) dio de alta el Bono (0 - ACY)</td>
+</tr>
+<tr>
+<td>21/10/2024 20:33</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Joaquin Administrador (3006) modificó el Bono (1009 - ACTY)</td>
+</tr>
+<tr>
+<td>21/10/2024 20:34</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>21/10/2024 20:34</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 20:34</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>21/10/2024 20:34</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 20:35</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 20:35</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>21/10/2024 20:35</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 20:35</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Joaquin Administrador (3006) dio de alta la Acción (1007 - HUI)</td>
+</tr>
+<tr>
+<td>21/10/2024 20:35</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Joaquin Administrador (3006) modificó la Accion (1010 - HUI)</td>
+</tr>
+<tr>
+<td>21/10/2024 20:36</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Joaquin Administrador (3006) dio de alta el Bono (1004 - jkl)</td>
+</tr>
+<tr>
+<td>21/10/2024 20:36</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Joaquin Administrador (3006) modificó el Bono (1011 - JKL)</td>
+</tr>
+<tr>
+<td>21/10/2024 20:36</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>21/10/2024 20:36</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 20:37</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 20:37</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Joaquin Administrador (3006) dio de alta la Acción (1008 - Te)</td>
+</tr>
+<tr>
+<td>21/10/2024 20:37</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Joaquin Administrador (3006) modificó la Accion (1008 - TE)</td>
+</tr>
+<tr>
+<td>21/10/2024 20:37</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Joaquin Administrador (3006) dio de alta el Bono (1005 - BN)</td>
+</tr>
+<tr>
+<td>21/10/2024 20:37</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Joaquin Administrador (3006) modificó el Bono (1005 - BN2)</td>
+</tr>
+<tr>
+<td>21/10/2024 20:37</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>21/10/2024 20:38</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 20:39</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>21/10/2024 20:39</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) modificó el usuario: 5005</td>
+</tr>
+<tr>
+<td>22/10/2024 09:16</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>22/10/2024 09:16</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>22/10/2024 09:16</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>22/10/2024 09:20</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>22/10/2024 09:25</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>22/10/2024 09:37</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>22/10/2024 09:37</td>
+<td>Joaquin</td>
+<td>Media</td>
+<td>Joaquin (3005) realizó backup de la base de datos</td>
+</tr>
+<tr>
+<td>22/10/2024 09:39</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>22/10/2024 09:41</td>
+<td>Joaquin</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 3005</td>
+</tr>
+<tr>
+<td>22/10/2024 09:41</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>22/10/2024 09:42</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>22/10/2024 09:43</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) cambió su contraseña</td>
+</tr>
+<tr>
+<td>22/10/2024 09:43</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>22/10/2024 09:43</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>22/10/2024 09:43</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>22/10/2024 09:43</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>22/10/2024 09:43</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) cambió su contraseña</td>
+</tr>
+<tr>
+<td>22/10/2024 09:43</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>22/10/2024 09:44</td>
+<td>Joaquin</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 3005</td>
+</tr>
+<tr>
+<td>22/10/2024 09:44</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>22/10/2024 09:44</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>22/10/2024 09:44</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>22/10/2024 09:44</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>22/10/2024 09:44</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>22/10/2024 09:46</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>22/10/2024 11:05</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>22/10/2024 11:16</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>22/10/2024 12:00</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>22/10/2024 12:00</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>22/10/2024 12:00</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>22/10/2024 12:01</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>22/10/2024 19:56</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>22/10/2024 19:56</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>22/10/2024 20:03</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>22/10/2024 20:03</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>22/10/2024 20:49</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>22/10/2024 20:51</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Joaquin Administrador (3006) dio de alta la Acción (1 - YPF S.A)</td>
+</tr>
+<tr>
+<td>22/10/2024 20:51</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Joaquin Administrador (3006) dio de alta la Acción (2 - Banco Galicia)</td>
+</tr>
+<tr>
+<td>22/10/2024 20:52</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Joaquin Administrador (3006) dio de alta la Acción (3 - Pampa Energía)</td>
+</tr>
+<tr>
+<td>22/10/2024 20:52</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Joaquin Administrador (3006) dio de alta la Acción (4 - Telecom Argentina)</td>
+</tr>
+<tr>
+<td>22/10/2024 20:52</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Joaquin Administrador (3006) dio de alta la Acción (5 - Grupo Financiero Galicia)</td>
+</tr>
+<tr>
+<td>22/10/2024 20:52</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Joaquin Administrador (3006) dio de alta la Acción (6 - Cresud)</td>
+</tr>
+<tr>
+<td>22/10/2024 20:52</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Joaquin Administrador (3006) dio de alta la Acción (7 - Ternium Argentina)</td>
+</tr>
+<tr>
+<td>22/10/2024 20:52</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Joaquin Administrador (3006) dio de alta el Bono (1 - BONCER 2024)</td>
+</tr>
+<tr>
+<td>22/10/2024 20:53</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Joaquin Administrador (3006) dio de alta el Bono (2 - BONAR 2024 (AY24))</td>
+</tr>
+<tr>
+<td>22/10/2024 20:53</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Joaquin Administrador (3006) dio de alta el Bono (3 - BPY26)</td>
+</tr>
+<tr>
+<td>22/10/2024 20:53</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Joaquin Administrador (3006) dio de alta el Bono (4 - BNA26)</td>
+</tr>
+<tr>
+<td>22/10/2024 20:53</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Joaquin Administrador (3006) dio de alta el Bono (5 - BPA7D)</td>
+</tr>
+<tr>
+<td>22/10/2024 20:54</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Joaquin Administrador (3006) dio de alta el Bono (6 - BPJ5D)</td>
+</tr>
+<tr>
+<td>22/10/2024 20:54</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Joaquin Administrador (3006) dio de alta el Bono (7 - BPJ25)</td>
+</tr>
+<tr>
+<td>22/10/2024 20:54</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>Joaquin Administrador (3006) dio de alta el Bono (8 - BPOD7)</td>
+</tr>
+<tr>
+<td>22/10/2024 20:54</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>Joaquin Administrador (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>22/10/2024 20:55</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>22/10/2024 20:55</td>
+<td>Joaquin</td>
+<td>Media</td>
+<td>Joaquin (3005) realizó backup de la base de datos</td>
+</tr>
+<tr>
+<td>22/10/2024 20:55</td>
+<td>Joaquin</td>
+<td>Media</td>
+<td>Joaquin (3005) realizó backup de la base de datos</td>
+</tr>
+<tr>
+<td>22/10/2024 21:09</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>22/10/2024 21:10</td>
+<td>Joaquin</td>
+<td>Media</td>
+<td>Joaquin (3005) realizó backup de la base de datos</td>
+</tr>
+<tr>
+<td>22/10/2024 21:10</td>
+<td>Joaquin</td>
+<td>Media</td>
+<td>Joaquin (3005) realizó backup de la base de datos</td>
+</tr>
+<tr>
+<td>22/10/2024 21:10</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>22/10/2024 21:11</td>
+<td>Joaquin</td>
+<td>Media</td>
+<td>Joaquin (3005) realizó backup de la base de datos</td>
+</tr>
+<tr>
+<td>22/10/2024 21:11</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>22/10/2024 21:13</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>22/10/2024 21:13</td>
+<td>Joaquin</td>
+<td>Media</td>
+<td>Joaquin (3005) realizó backup de la base de datos</td>
+</tr>
+<tr>
+<td>22/10/2024 21:14</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>22/10/2024 21:14</td>
+<td>Joaquin</td>
+<td>Media</td>
+<td>Joaquin (3005) realizó backup de la base de datos</td>
+</tr>
+<tr>
+<td>22/10/2024 21:14</td>
+<td>Joaquin</td>
+<td>Media</td>
+<td>Joaquin (3005) realizó backup de la base de datos</td>
+</tr>
+<tr>
+<td>22/10/2024 21:14</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>22/10/2024 21:15</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>22/10/2024 21:16</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) cambió los permisos de: YPF (6005)</td>
+</tr>
+<tr>
+<td>22/10/2024 21:16</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>22/10/2024 21:17</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>22/10/2024 21:18</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>23/10/2024 11:08</td>
+<td>Joaquin</td>
+<td>Media</td>
+<td>Intento de login incorrecto para el usuario: 3005</td>
+</tr>
+<tr>
+<td>23/10/2024 11:08</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>23/10/2024 14:29</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>23/10/2024 15:46</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>23/10/2024 16:08</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>23/10/2024 16:08</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>23/10/2024 16:08</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>23/10/2024 16:10</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>23/10/2024 16:10</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>23/10/2024 16:38</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>23/10/2024 16:39</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) cambió los permisos de: MELI (7005)</td>
+</tr>
+<tr>
+<td>23/10/2024 16:39</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>23/10/2024 16:39</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>23/10/2024 16:39</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) agregó Activo (7) al carrito</td>
+</tr>
+<tr>
+<td>23/10/2024 16:39</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) agregó Activo (6) al carrito</td>
+</tr>
+<tr>
+<td>23/10/2024 16:39</td>
+<td>MELI</td>
+<td>Media</td>
+<td>MELI (7005) realizó la Compra con Id: (12100) por un total de ($12100)</td>
+</tr>
+<tr>
+<td>23/10/2024 16:39</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) agregó Activo (6) al carrito</td>
+</tr>
+<tr>
+<td>23/10/2024 16:39</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) agregó Activo (7) al carrito</td>
+</tr>
+<tr>
+<td>23/10/2024 16:39</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (6) al carrito</td>
+</tr>
+<tr>
+<td>23/10/2024 16:39</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (6) al carrito</td>
+</tr>
+<tr>
+<td>23/10/2024 16:39</td>
+<td>MELI</td>
+<td>Media</td>
+<td>MELI (7005) realizó la Compra con Id: (20000,0000) por un total de ($20000,0000)</td>
+</tr>
+<tr>
+<td>23/10/2024 16:40</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) agregó Activo (7) al carrito</td>
+</tr>
+<tr>
+<td>23/10/2024 16:40</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (7) al carrito</td>
+</tr>
+<tr>
+<td>23/10/2024 16:40</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (7) al carrito</td>
+</tr>
+<tr>
+<td>23/10/2024 16:40</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (7) al carrito</td>
+</tr>
+<tr>
+<td>23/10/2024 16:40</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (7) al carrito</td>
+</tr>
+<tr>
+<td>23/10/2024 16:40</td>
+<td>MELI</td>
+<td>Media</td>
+<td>MELI (7005) realizó la Compra con Id: (8150,0000) por un total de ($8150,0000)</td>
+</tr>
+<tr>
+<td>23/10/2024 16:40</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) cerró sesión</td>
+</tr>
+<tr>
+<td>23/10/2024 16:40</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>23/10/2024 16:41</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>23/10/2024 16:41</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>23/10/2024 16:41</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) cerró sesión</td>
+</tr>
+<tr>
+<td>23/10/2024 18:30</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>23/10/2024 18:31</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) realizó restore de la base de datos</td>
+</tr>
+<tr>
+<td>23/10/2024 18:31</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>23/10/2024 18:31</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>23/10/2024 18:32</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) agregó Activo (8) al carrito</td>
+</tr>
+<tr>
+<td>23/10/2024 18:32</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) agregó Activo (12) al carrito</td>
+</tr>
+<tr>
+<td>23/10/2024 18:32</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (8) al carrito</td>
+</tr>
+<tr>
+<td>23/10/2024 18:32</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (8) al carrito</td>
+</tr>
+<tr>
+<td>23/10/2024 18:32</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (8) al carrito</td>
+</tr>
+<tr>
+<td>23/10/2024 18:32</td>
+<td>MELI</td>
+<td>Baja</td>
+<td>MELI (7005) actualizó la cantidad del carrito del Activo: (8) al carrito</td>
+</tr>
+</table>

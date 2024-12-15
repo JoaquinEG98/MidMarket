@@ -1,0 +1,63 @@
+<table border='1'>
+<tr><th>Fecha</th><th>Usuario</th><th>Criticidad</th><th>Mensaje</th></tr>
+<tr>
+<td>02/11/2024 18:33</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) cambió los permisos de: TEST (11006)</td>
+</tr>
+<tr>
+<td>01/11/2024 21:00</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) cambió los permisos de: asdasd (10006)</td>
+</tr>
+<tr>
+<td>29/10/2024 20:33</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) modificó el usuario: (9006)</td>
+</tr>
+<tr>
+<td>29/10/2024 20:33</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) modificó el usuario: (9005)</td>
+</tr>
+<tr>
+<td>29/10/2024 20:33</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) modificó el usuario: (8005)</td>
+</tr>
+<tr>
+<td>29/10/2024 20:32</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) modificó el usuario: (7005)</td>
+</tr>
+<tr>
+<td>29/10/2024 20:32</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) modificó el usuario: (7005)</td>
+</tr>
+<tr>
+<td>29/10/2024 15:19</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) cambió los permisos de: COTO (9006)</td>
+</tr>
+<tr>
+<td>28/10/2024 20:24</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) modificó el usuario: (9005)</td>
+</tr>
+<tr>
+<td>28/10/2024 20:24</td>
+<td>Joaquin</td>
+<td>Alta</td>
+<td>Joaquin (3005) modificó el usuario: (8005)</td>
+</tr>
+</table>

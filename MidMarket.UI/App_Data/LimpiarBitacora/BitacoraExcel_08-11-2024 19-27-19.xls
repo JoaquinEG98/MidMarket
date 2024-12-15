@@ -1,0 +1,201 @@
+<table border='1'>
+<tr><th>Fecha</th><th>Usuario</th><th>Criticidad</th><th>Mensaje</th></tr>
+<tr>
+<td>08/11/2024 19:19</td>
+<td>Joaquin</td>
+<td>Media</td>
+<td>Joaquin (3005) realizó backup de la base de datos</td>
+</tr>
+<tr>
+<td>08/11/2024 19:22</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) cerró sesión</td>
+</tr>
+<tr>
+<td>08/11/2024 19:22</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>CVSA (3006) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/11/2024 19:22</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>CVSA (3006) dio de alta la Acción (1013 - sadfsdafdsa)</td>
+</tr>
+<tr>
+<td>08/11/2024 19:22</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>CVSA (3006) modificó la Accion (1013 - sadfsdafdsa)</td>
+</tr>
+<tr>
+<td>08/11/2024 19:22</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>CVSA (3006) dio de alta el Bono (1010 - sagsag)</td>
+</tr>
+<tr>
+<td>08/11/2024 19:22</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>CVSA (3006) modificó el Bono (1010 - sagsag)</td>
+</tr>
+<tr>
+<td>08/11/2024 19:23</td>
+<td>CVSA</td>
+<td>Media</td>
+<td>CVSA (3006) modificó el Bono (1010 - asdsa)</td>
+</tr>
+<tr>
+<td>08/11/2024 19:23</td>
+<td>CVSA</td>
+<td>Baja</td>
+<td>CVSA (3006) cerró sesión</td>
+</tr>
+<tr>
+<td>08/11/2024 19:23</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) inició sesión correctamente</td>
+</tr>
+<tr>
+<td>08/11/2024 19:24</td>
+<td>eBay</td>
+<td>Media</td>
+<td>eBay (13009) realizó la venta con Id: (9024) por un total de ($2000,0000)</td>
+</tr>
+<tr>
+<td>08/11/2024 19:24</td>
+<td>eBay</td>
+<td>Media</td>
+<td>eBay (13009) realizó la venta con Id: (9025) por un total de ($5000,0000)</td>
+</tr>
+<tr>
+<td>08/11/2024 19:24</td>
+<td>eBay</td>
+<td>Media</td>
+<td>eBay (13009) realizó la venta con Id: (9026) por un total de ($88400,0000)</td>
+</tr>
+<tr>
+<td>08/11/2024 19:24</td>
+<td>eBay</td>
+<td>Media</td>
+<td>eBay (13009) realizó la venta con Id: (9027) por un total de ($8150,0000)</td>
+</tr>
+<tr>
+<td>08/11/2024 19:24</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) agregó Activo (3) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 19:24</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) agregó Activo (14) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 19:24</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (3) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 19:24</td>
+<td>eBay</td>
+<td>Media</td>
+<td>eBay (13009) realizó la Compra con Id: (19040) por un total de ($122000,0000)</td>
+</tr>
+<tr>
+<td>08/11/2024 19:25</td>
+<td>eBay</td>
+<td>Media</td>
+<td>eBay (13009) realizó la venta con Id: (9028) por un total de ($88400,0000)</td>
+</tr>
+<tr>
+<td>08/11/2024 19:25</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) agregó Activo (15) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 19:25</td>
+<td>eBay</td>
+<td>Media</td>
+<td>eBay (13009) realizó la Compra con Id: (19041) por un total de ($101000)</td>
+</tr>
+<tr>
+<td>08/11/2024 19:26</td>
+<td>eBay</td>
+<td>Media</td>
+<td>eBay (13009) cargó ($50000) de saldo en su cuenta comitente: (1102)</td>
+</tr>
+<tr>
+<td>08/11/2024 19:26</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) agregó Activo (1022) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 19:26</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) agregó Activo (7) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 19:26</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (7) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 19:26</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (7) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 19:26</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (1022) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 19:26</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (1022) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 19:26</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (1022) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 19:26</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) actualizó la cantidad del carrito del Activo: (1022) al carrito</td>
+</tr>
+<tr>
+<td>08/11/2024 19:26</td>
+<td>eBay</td>
+<td>Media</td>
+<td>eBay (13009) realizó la Compra con Id: (19042) por un total de ($46675,0000)</td>
+</tr>
+<tr>
+<td>08/11/2024 19:27</td>
+<td>eBay</td>
+<td>Baja</td>
+<td>eBay (13009) cerró sesión</td>
+</tr>
+<tr>
+<td>08/11/2024 19:27</td>
+<td>Joaquin</td>
+<td>Baja</td>
+<td>Joaquin (3005) inició sesión correctamente</td>
+</tr>
+</table>
