@@ -4,7 +4,7 @@
     <label for="txtNombre" data-etiqueta="label_Nombre">Nombre</label>
     <asp:TextBox ID="txtNombre" runat="server" MaxLength="20" CssClass="form-control"></asp:TextBox>
     <asp:RequiredFieldValidator ID="rfvNombre" runat="server" ControlToValidate="txtNombre" ErrorMessage="El nombre es requerido." Display="Dynamic" CssClass="text-danger" data-etiqueta="error_NombreRequerido" />
-    <asp:RegularExpressionValidator ID="revNombre" runat="server" ControlToValidate="txtNombre" ValidationExpression="^[a-zA-Z\s]{1,20}$" ErrorMessage="El nombre no debe exceder 20 caracteres." Display="Dynamic" CssClass="text-danger" data-etiqueta="error_NombreLongitud" />
+    <asp:RegularExpressionValidator ID="revNombre" runat="server" ControlToValidate="txtNombre" ValidationExpression="^[a-zA-Z0-9\s]{1,20}$" ErrorMessage="El nombre no debe exceder 20 caracteres." Display="Dynamic" CssClass="text-danger" data-etiqueta="error_NombreLongitud" />
 </div>
 
 <div class="form-group-acciones">
