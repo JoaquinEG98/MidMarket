@@ -3,31 +3,31 @@
   <ActivosCompradosDTO>
     <Id>9</Id>
     <Nombre>BONAR 2024</Nombre>
-    <Cantidad>166</Cantidad>
-    <Total>292000.0000</Total>
+    <Cantidad>42</Cantidad>
+    <Total>105000.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
     <Id>12</Id>
     <Nombre>BPA7D</Nombre>
-    <Cantidad>70</Cantidad>
-    <Total>7000.0000</Total>
-  </ActivosCompradosDTO>
-  <ActivosCompradosDTO>
-    <Id>8</Id>
-    <Nombre>BONCER 2024</Nombre>
-    <Cantidad>69</Cantidad>
-    <Total>69.0000</Total>
-  </ActivosCompradosDTO>
-  <ActivosCompradosDTO>
-    <Id>13</Id>
-    <Nombre>BPJ5D</Nombre>
-    <Cantidad>56</Cantidad>
-    <Total>5600.0000</Total>
+    <Cantidad>15</Cantidad>
+    <Total>1500.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
     <Id>2</Id>
     <Nombre>Banco Galicia</Nombre>
-    <Cantidad>37</Cantidad>
-    <Total>453250.0000</Total>
+    <Cantidad>9</Cantidad>
+    <Total>110250.0000</Total>
+  </ActivosCompradosDTO>
+  <ActivosCompradosDTO>
+    <Id>7</Id>
+    <Nombre>Ternium Argentina</Nombre>
+    <Cantidad>6</Cantidad>
+    <Total>48900.0000</Total>
+  </ActivosCompradosDTO>
+  <ActivosCompradosDTO>
+    <Id>1</Id>
+    <Nombre>YPF SA</Nombre>
+    <Cantidad>4</Cantidad>
+    <Total>140000.0000</Total>
   </ActivosCompradosDTO>
 </ArrayOfActivosCompradosDTO>

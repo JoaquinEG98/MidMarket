@@ -14,12 +14,13 @@ namespace MidMarket.UI.WebServices
         [WebMethod]
         public void RealizarEnvioEmail(string destinatario, string asunto, string mensaje)
         {
-            using (var mail = new MailMessage("hello@demomailtrap.com", "joaquinezequielgonzalez98@gmail.com", asunto, mensaje))
+            using (var mail = new MailMessage("hello@demomailtrap.com", "midmarket.tfi@gmail.com", asunto, mensaje))
             {
                 mail.IsBodyHtml = false;
                 using (var smtp = new SmtpClient("live.smtp.mailtrap.io", 587))
                 {
-                    smtp.Credentials = new NetworkCredential("smtp@mailtrap.io", "85c0349a01d11fd5d4230fbef10c1454");
+                    //smtp.Credentials = new NetworkCredential("smtp@mailtrap.io", "85c0349a01d11fd5d4230fbef10c1454");
+                    smtp.Credentials = new NetworkCredential("smtp@mailtrap.io", "e0142dc5f5221194f6224fe6480f762f");
                     smtp.EnableSsl = true;
                     smtp.Send(mail);
                 }
@@ -29,7 +30,7 @@ namespace MidMarket.UI.WebServices
         [WebMethod]
         public void RealizarEnvioEmailConAdjunto(string destinatario, string asunto, string mensaje, byte[] archivoAdjunto, string nombreArchivo)
         {
-            using (var mail = new MailMessage("hello@demomailtrap.com", "joaquinezequielgonzalez98@gmail.com", asunto, mensaje))
+            using (var mail = new MailMessage("hello@demomailtrap.com", "midmarket.tfi@gmail.com", asunto, mensaje))
             {
                 mail.IsBodyHtml = false;
 
@@ -41,7 +42,8 @@ namespace MidMarket.UI.WebServices
 
                 using (var smtp = new SmtpClient("live.smtp.mailtrap.io", 587))
                 {
-                    smtp.Credentials = new NetworkCredential("smtp@mailtrap.io", "85c0349a01d11fd5d4230fbef10c1454");
+                    //smtp.Credentials = new NetworkCredential("smtp@mailtrap.io", "85c0349a01d11fd5d4230fbef10c1454");
+                    smtp.Credentials = new NetworkCredential("smtp@mailtrap.io", "e0142dc5f5221194f6224fe6480f762f");
                     smtp.EnableSsl = true;
                     smtp.Send(mail);
                 }
