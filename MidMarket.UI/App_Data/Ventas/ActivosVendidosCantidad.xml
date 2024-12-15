@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ArrayOfActivosVendidosDTO xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ActivosVendidosDTO>
+    <Id>2</Id>
+    <Nombre>Banco Galicia</Nombre>
+    <Cantidad>5</Cantidad>
+    <Total>61250.0000</Total>
+  </ActivosVendidosDTO>
+  <ActivosVendidosDTO>
+    <Id>3</Id>
+    <Nombre>Pampa Energía</Nombre>
+    <Cantidad>2</Cantidad>
+    <Total>33600.0000</Total>
+  </ActivosVendidosDTO>
+  <ActivosVendidosDTO>
+    <Id>14</Id>
+    <Nombre>BPJ25</Nombre>
+    <Cantidad>1</Cantidad>
+    <Total>88400.0000</Total>
+  </ActivosVendidosDTO>
+  <ActivosVendidosDTO>
+    <Id>1</Id>
+    <Nombre>YPF SA</Nombre>
+    <Cantidad>1</Cantidad>
+    <Total>35000.0000</Total>
+  </ActivosVendidosDTO>
+</ArrayOfActivosVendidosDTO>

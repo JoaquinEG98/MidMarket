@@ -1,5 +1,6 @@
 ﻿using MidMarket.Business.Interfaces;
 using MidMarket.Entities;
+using MidMarket.Seguridad;
 using MidMarket.UI.Helpers;
 using MidMarket.UI.WebServices;
 using Newtonsoft.Json;
@@ -15,6 +16,8 @@ namespace MidMarket.UI
         private readonly ICompraService _compraService;
         private readonly IVentaService _ventaService;
         private readonly GeneradorPdf _generadorPdfService;
+        private readonly ISessionManager _sessionManager;
+
 
         public IList<TransaccionCompra> Compras { get; set; }
         public IList<TransaccionVenta> Ventas { get; set; }
@@ -45,12 +48,19 @@ namespace MidMarket.UI
             _compraService = Global.Container.Resolve<ICompraService>();
             _ventaService = Global.Container.Resolve<IVentaService>();
             _generadorPdfService = new GeneradorPdf();
+            _sessionManager = Global.Container.Resolve<ISessionManager>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
+                var clienteLogueado = _sessionManager.Get<Cliente>("Usuario");
+
+                if (clienteLogueado == null || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.ComprarAccion) || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.ComprarBono)
+                    || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.VenderAccion) || !PermisoCheck.VerificarPermiso(clienteLogueado.Permisos, Entities.Enums.Permiso.VenderBono))
+                    Response.Redirect("Default.aspx");
+
                 CargarCompras();
                 CargarVentas();
 
