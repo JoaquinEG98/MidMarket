@@ -2,9 +2,9 @@
 
 <div class="form-group-bonos">
     <label for="txtNombreBono" data-etiqueta="label_NombreBono">Nombre</label>
-    <asp:TextBox ID="txtNombreBono" runat="server" MaxLength="30" CssClass="form-control"></asp:TextBox>
+    <asp:TextBox ID="txtNombreBono" runat="server" MaxLength="20" CssClass="form-control"></asp:TextBox>
     <asp:RequiredFieldValidator ID="rfvNombreBono" runat="server" ControlToValidate="txtNombreBono" ErrorMessage="El nombre es requerido." Display="Dynamic" CssClass="text-danger" data-etiqueta="error_NombreBonoRequerido" />
-    <asp:RegularExpressionValidator ID="revNombreBono" runat="server" ControlToValidate="txtNombreBono" ValidationExpression="^[a-zA-Z0-9\s]{1,30}$" ErrorMessage="El nombre no debe exceder 30 caracteres." Display="Dynamic" CssClass="text-danger" data-etiqueta="error_NombreBonoLongitud" />
+    <asp:RegularExpressionValidator ID="revNombreBono" runat="server" ControlToValidate="txtNombreBono" ValidationExpression="^[a-zA-Z0-9\s]{1,20}$" ErrorMessage="El nombre no debe exceder 20 caracteres." Display="Dynamic" CssClass="text-danger" data-etiqueta="error_NombreBonoLongitud" />
 </div>
 
 <div class="form-group-bonos">
