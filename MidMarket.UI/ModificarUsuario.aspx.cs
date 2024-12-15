@@ -38,7 +38,11 @@ namespace MidMarket.UI
             try
             {
                 _usuarioId = int.Parse(Request.QueryString["id"]);
-                CargarUsuario();
+
+                if (!IsPostBack)
+                {
+                    CargarUsuario();
+                }
             }
             catch (SqlException)
             {
@@ -57,7 +61,14 @@ namespace MidMarket.UI
             if (Usuario == null)
             {
                 Response.Redirect("Usuarios.aspx");
+                return;
             }
+
+            ValidarUsuarioControl.EmailValue = Usuario.Email;
+            ValidarUsuarioControl.RazonSocialValue = Usuario.RazonSocial;
+            ValidarUsuarioControl.CUITValue = Usuario.CUIT;
+
+            ValidarUsuarioControl.MostrarPassword(false);
         }
 
         protected void btnGuardar_Click(object sender, EventArgs e)
@@ -69,9 +80,9 @@ namespace MidMarket.UI
                 if (!Page.IsValid)
                     return;
 
-                string emailUsuario = Request.Form["emailUsuario"];
-                string razonSocialUsuario = Request.Form["razonSocialUsuario"];
-                string cuitUsuario = Request.Form["cuitUsuario"];
+                string emailUsuario = ValidarUsuarioControl.EmailValue;
+                string razonSocialUsuario = ValidarUsuarioControl.RazonSocialValue;
+                string cuitUsuario = ValidarUsuarioControl.CUITValue;
 
                 GuardarUsuario(emailUsuario, razonSocialUsuario, cuitUsuario);
                 AlertHelper.MostrarModal(this, $"{_traduccionService.ObtenerMensaje(idioma, "MSJ_31")} {emailUsuario}");
@@ -89,6 +100,8 @@ namespace MidMarket.UI
 
         private void GuardarUsuario(string email, string razonSocial, string cuit)
         {
+            Usuario = _usuarioService.GetClientes().FirstOrDefault(x => x.Id == _usuarioId);
+
             var usuario = new Cliente()
             {
                 Id = Usuario.Id,

@@ -43,7 +43,12 @@ namespace MidMarket.UI
 
             try
             {
-                if (_digitoVerificadorService.ValidarDigitosVerificadores("Cliente"))
+                bool loginValido = _digitoVerificadorService.ValidarDigitosVerificadores("Cliente") &&
+                    _digitoVerificadorService.ValidarDigitosVerificadores("UsuarioPermiso") &&
+                    _digitoVerificadorService.ValidarDigitosVerificadores("FamiliaPatente") &&
+                    _digitoVerificadorService.ValidarDigitosVerificadores("Permiso");
+
+                if (loginValido)
                 {
                     Cliente cliente = _usuarioService.Login(txtEmail.Value, txtPassword.Value);
 

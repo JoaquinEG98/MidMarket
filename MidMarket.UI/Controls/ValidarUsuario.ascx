@@ -9,7 +9,7 @@
 </div>
 
 <div class="form-group-usuarios">
-    <label for="txtPasswordUsuario" data-etiqueta="label_Password">Password</label>
+    <asp:Label ID="lblPassword" runat="server" for="txtPasswordUsuario" data-etiqueta="label_Password">Password</asp:Label>
     <asp:TextBox ID="txtPasswordUsuario" runat="server" CssClass="usuario-input form-group-usuarios" TextMode="Password"></asp:TextBox>
     <asp:CustomValidator ID="cvPassword" runat="server" ControlToValidate="txtPasswordUsuario" 
         ErrorMessage="La contraseña debe tener al menos 8 caracteres, una mayúscula, una minúscula y un carácter especial."

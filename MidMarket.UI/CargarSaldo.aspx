@@ -36,13 +36,13 @@
 
             <div class="form-group-saldo">
                 <label for="codigoSeguridad" data-etiqueta="label_CodigoSeguridad">Código de Seguridad (CVV)</label>
-                <asp:TextBox ID="codigoSeguridad" runat="server" ClientIDMode="Static" CssClass="form-control" MaxLength="4" autocomplete="off" />
+                <asp:TextBox ID="codigoSeguridad" runat="server" ClientIDMode="Static" CssClass="form-control" MaxLength="4" autocomplete="off" oninput="soloNumeros()" />
                 <asp:RequiredFieldValidator ID="rfvCodigoSeguridad" runat="server" ControlToValidate="codigoSeguridad" ErrorMessage="El código de seguridad es obligatorio" CssClass="dni-validacion-label" Display="Dynamic" data-etiqueta="validate_CodigoSeguridad" />
             </div>
 
             <div class="form-group-saldo">
                 <label for="monto" data-etiqueta="label_MontoCargar">Monto a Cargar</label>
-                <asp:TextBox ID="monto" runat="server" ClientIDMode="Static" CssClass="form-control" autocomplete="off" />
+                <asp:TextBox ID="monto" runat="server" ClientIDMode="Static" CssClass="form-control" autocomplete="off" MaxLength="10" oninput="soloSaldo()" />
                 <asp:RequiredFieldValidator ID="rfvMonto" runat="server" ControlToValidate="monto" ErrorMessage="El monto a cargar es obligatorio" CssClass="dni-validacion-label" Display="Dynamic" data-etiqueta="validate_MontoInvalido" />
             </div>
 
@@ -101,6 +101,20 @@
 
             fechaInput.value = fecha;
         }
+
+        function soloNumeros() {
+            var input = document.getElementById("<%= codigoSeguridad.ClientID %>");
+            var value = input.value;
+
+            input.value = value.replace(/[^0-9]/g, '');
+        }
+
+        function soloSaldo() {
+            var input = document.getElementById("<%= monto.ClientID %>");
+                    var value = input.value;
+
+                    input.value = value.replace(/[^0-9]/g, '');
+                }
 
         function validarDNI() {
             var dni = document.getElementById("<%= dniTitular.ClientID %>").value;

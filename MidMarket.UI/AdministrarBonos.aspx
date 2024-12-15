@@ -53,6 +53,7 @@
                 const nombreBono = seleccionado.parentElement.nextElementSibling.textContent;
                 const confirmar = confirm(traducciones["confirm_EliminarBono"].replace("{NombreBono}", nombreBono));
                 if (confirmar) {
+                    seleccionado.closest('tr').remove();
                     alert(traducciones["alert_BonoEliminado"].replace("{NombreBono}", nombreBono));
                 }
             } else {
