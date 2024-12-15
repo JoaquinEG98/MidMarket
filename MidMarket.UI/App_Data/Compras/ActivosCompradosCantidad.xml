@@ -15,8 +15,8 @@
   <ActivosCompradosDTO>
     <Id>2</Id>
     <Nombre>Banco Galicia</Nombre>
-    <Cantidad>10</Cantidad>
-    <Total>122500.0000</Total>
+    <Cantidad>11</Cantidad>
+    <Total>134750.0000</Total>
   </ActivosCompradosDTO>
   <ActivosCompradosDTO>
     <Id>7</Id>

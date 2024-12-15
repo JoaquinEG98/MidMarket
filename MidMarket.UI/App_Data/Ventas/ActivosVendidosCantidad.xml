@@ -3,8 +3,8 @@
   <ActivosVendidosDTO>
     <Id>2</Id>
     <Nombre>Banco Galicia</Nombre>
-    <Cantidad>5</Cantidad>
-    <Total>61250.0000</Total>
+    <Cantidad>6</Cantidad>
+    <Total>73500.0000</Total>
   </ActivosVendidosDTO>
   <ActivosVendidosDTO>
     <Id>3</Id>

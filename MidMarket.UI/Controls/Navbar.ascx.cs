@@ -33,6 +33,7 @@ namespace MidMarket.UI
             if (!IsPostBack)
             {
                 OcultarMenu();
+
                 AsignarMenuPermisos(cliente);
 
                 var idiomas = _traduccionService.ObtenerIdiomas();
@@ -40,7 +41,7 @@ namespace MidMarket.UI
                 idiomaRepeater.DataBind();
 
                 var esAdmin = cliente.Permisos.Any(permiso => permiso.Nombre == "Webmaster" || permiso.Nombre == "Administrador Financiero");
-                if (esAdmin)
+                if (cliente.Debug || esAdmin)
                 {
                     carritoDropdown.Visible = false;
                     misTransaccionesDropdown.Visible = false;
