@@ -7,6 +7,7 @@ using MidMarket.UI.WebServices;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
@@ -22,7 +23,7 @@ namespace MidMarket.UI
         private readonly EnvioEmail _emailService;
 
         private const string TokenPath = "~/App_Data/tokens.json";
-        private const string UrlSitio = "https://localhost:44339";
+        private readonly string UrlSitio = ConfigurationManager.AppSettings["UrlSitio"];
 
         public ReestablecerPassword()
         {
