@@ -16,7 +16,7 @@
 
 <div class="form-group-acciones">
     <label for="txtPrecio" data-etiqueta="label_Precio">Precio</label>
-    <asp:TextBox ID="txtPrecio" runat="server" CssClass="form-control"></asp:TextBox>
+    <asp:TextBox ID="txtPrecio" runat="server" MaxLength="10" CssClass="form-control"></asp:TextBox>
     <asp:RequiredFieldValidator ID="rfvPrecio" runat="server" ControlToValidate="txtPrecio" ErrorMessage="El precio es requerido." Display="Dynamic" CssClass="text-danger" data-etiqueta="error_PrecioRequerido" />
     <asp:RegularExpressionValidator ID="revPrecio" runat="server" ControlToValidate="txtPrecio" ValidationExpression="^\d+([.,]\d{1,2})?$" ErrorMessage="Formato de precio incorrecto." Display="Dynamic" CssClass="text-danger" data-etiqueta="error_FormatoPrecio" />
 </div>

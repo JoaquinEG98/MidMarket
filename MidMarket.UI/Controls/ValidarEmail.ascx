@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ValidarEmail.ascx.cs" Inherits="MidMarket.UI.ValidarEmail" %>
 
-<asp:TextBox ID="txtEmail" runat="server" CssClass="form-group input" />
+<asp:TextBox ID="txtEmail" runat="server" MaxLength="30" CssClass="form-group input" />
 
 <asp:RequiredFieldValidator 
     ID="rfvEmail" 

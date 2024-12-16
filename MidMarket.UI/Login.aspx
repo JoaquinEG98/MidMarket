@@ -14,11 +14,11 @@
             <h2 data-etiqueta="titulo_IniciarSesion">Iniciar sesión</h2>
             <div class="form-group">
                 <label for="txtEmail" data-etiqueta="lbl_Email">Email</label>
-                <input type="email" id="txtEmail" name="correo" autocomplete="off" required runat="server">
+                <input type="email" maxlength="30" id="txtEmail" name="correo" autocomplete="off" required runat="server">
             </div>
             <div class="form-group">
                 <label for="txtPassword" data-etiqueta="lbl_Password">Password</label>
-                <input type="password" id="txtPassword" name="password" required runat="server">
+                <input type="password" maxlength="30" id="txtPassword" name="password" required runat="server">
             </div>
             <asp:Button type="submit" id="btnLogin" class="submit-btn" runat="server" Text="Login" OnClick="btnLogin_Click" data-etiqueta="btn_Login"></asp:Button>
 

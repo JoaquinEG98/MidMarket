@@ -9,14 +9,14 @@
 
 <div class="form-group-bonos">
     <label for="txtValorNominal" data-etiqueta="label_ValorNominal">Valor Nominal</label>
-    <asp:TextBox ID="txtValorNominal" runat="server" CssClass="form-control"></asp:TextBox>
+    <asp:TextBox ID="txtValorNominal" runat="server" MaxLength="10" CssClass="form-control"></asp:TextBox>
     <asp:RequiredFieldValidator ID="rfvValorNominal" runat="server" ControlToValidate="txtValorNominal" ErrorMessage="El valor nominal es requerido." Display="Dynamic" CssClass="text-danger" data-etiqueta="error_ValorNominalRequerido" />
     <asp:RegularExpressionValidator ID="revValorNominal" runat="server" ControlToValidate="txtValorNominal" ValidationExpression="^\d+([.,]\d{1,2})?$" ErrorMessage="Formato de valor nominal incorrecto." Display="Dynamic" CssClass="text-danger" data-etiqueta="error_FormatoValorNominal" />
 </div>
 
 <div class="form-group-bonos">
     <label for="txtTasaInteres" data-etiqueta="label_TasaInteres">Tasa de Interés (%)</label>
-    <asp:TextBox ID="txtTasaInteres" runat="server" CssClass="form-control"></asp:TextBox>
+    <asp:TextBox ID="txtTasaInteres" runat="server" MaxLength="10" CssClass="form-control"></asp:TextBox>
     <asp:RequiredFieldValidator ID="rfvTasaInteres" runat="server" ControlToValidate="txtTasaInteres" ErrorMessage="La tasa de interés es requerida." Display="Dynamic" CssClass="text-danger" data-etiqueta="error_TasaInteresRequerido" />
     <asp:RegularExpressionValidator ID="revTasaInteres" runat="server" ControlToValidate="txtTasaInteres" ValidationExpression="^\d+([.,]\d{1,2})?$" ErrorMessage="Formato de tasa de interés incorrecto." Display="Dynamic" CssClass="text-danger" data-etiqueta="error_FormatoTasaInteres" />
 </div>
